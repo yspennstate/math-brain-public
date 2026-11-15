@@ -1,5 +1,5 @@
 """test_precision_gate.py - the reflex hook stops steering by a precision table it cannot date or that is a week old
-(29 Sep 2026).
+(29 Sep 2026, an agent; scheduled audit account04/B04 r7, B04-R43-FRESHNESS-WATCH-NOT-GATE).
 
     python test_precision_gate.py [--module INSTINCT_PRIME.py] [--old OLD_INSTINCT_PRIME.py]
 
@@ -11,12 +11,6 @@ A throwaway table and gate file.
  P5 stamped in the future: ignored
 With --old, the hook given must still read P3's table (N1; the check can fail).
 """
-
-import sys
-if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:]):
-    print(__doc__ or "No command-line options.")
-    raise SystemExit(0)
-
 import importlib.machinery
 import importlib.util
 import json
@@ -96,7 +90,4 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     sys.exit(main())

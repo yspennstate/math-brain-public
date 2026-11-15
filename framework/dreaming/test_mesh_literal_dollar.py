@@ -1,12 +1,12 @@
 """danger_mode refuses a mesh claim, assert or release whose resource would reach the mesh as a literal "$name".
 
-    python test_mesh_literal_dollar.py            the danger_mode.py beside this file
+    python test_mesh_literal_dollar.py            the live danger_mode.py
     DANGER_MODE_UNDER_TEST=<path> python ...      another copy (a candidate, or the copy before the guard)
 
 The Bash tool turns each double backslash into one before bash runs, and bash reads backslash-dollar inside double
 quotes (or bare) as an escaped dollar; inside single quotes nothing expands. So a claim written as
-"C:\\...\\notes\\$f" leases the literal text '...notes$f' and covers no file, with exit code 0. That happened three
-times in one month. The commands below are the text the hook receives, before the Bash tool halves anything.
+"C:\\...\\memory\\$f" leases the literal text '...memory$f' and covers no file, with exit code 0. That happened on 14
+Sep, on 27 Sep and on 30 Sep. The commands below are the text the hook receives, before the Bash tool halves anything.
 """
 import importlib.util
 import json
@@ -16,37 +16,37 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PATH = os.environ.get("DANGER_MODE_UNDER_TEST") or os.path.join(HERE, "danger_mode.py")
-MESH = "python C:/Users/you/brain/mesh/agent_mesh.py"
+MESH = "python ~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py"
 
 REFUSE = {
     # the 30 Sep command, as typed: two backslashes before the variable
-    "P1 the 30 Sep claim": MESH + r' claim --agent a --resource "C:\\Users\\you\\notes\\$f" --mode write --purpose p',
-    "P2 one backslash": MESH + r' claim --agent a --resource "C:\Users\you\notes\$f" --purpose p',
-    "P3 single quotes never expand": MESH + r" claim --agent a --resource 'C:\Users\you\notes\$f' --purpose p",
-    "P4 braces, equals form": MESH + r' claim --agent a --resource="C:\\Users\\you\\${name}.py" --purpose p',
-    "P5 assert": MESH + r' assert --agent a --resource "C:\\Users\\you\\dreaming\\$n.py"',
-    "P6 release": MESH + r' release --agent a --resource "C:\\Users\\you\\dreaming\\$n.py"',
+    "P1 the 30 Sep claim": MESH + r' claim --agent a --resource "~\\memory\\$f" --mode write --purpose p',
+    "P2 one backslash": MESH + r' claim --agent a --resource "~\memory\$f" --purpose p',
+    "P3 single quotes never expand": MESH + r" claim --agent a --resource '~\memory\$f' --purpose p",
+    "P4 braces, equals form": MESH + r' claim --agent a --resource="~\\${name}.py" --purpose p',
+    "P5 assert": MESH + r' assert --agent a --resource "~\\dreaming\\$n.py"',
+    "P6 release": MESH + r' release --agent a --resource "~\\dreaming\\$n.py"',
     "P7 --json first, quoted script path": r'python "C:/x/agent_mesh.py" --json claim --agent a --resource "C:\\x\\$f"',
     "P8 bare, in a loop": "for f in a b; do " + MESH + r" claim --agent a --resource C:\\x\\$f --purpose p; done",
     "P9 second resource of two": MESH + r' claim --agent a --resource "C:/ok/file.py" --resource "C:\\x\\$f"',
     # 2 Oct: the path went into a variable first, then the variable was the resource
-    "P10 assigned in the command, 2 Oct": (r'for S in a b; do W="C:\\Users\\you\\notes\\$S.md"; ' + MESH +
+    "P10 assigned in the command, 2 Oct": (r'for S in a b; do W="~\\memory\\$S.md"; ' + MESH +
                                             r' claim --agent a --resource "$W" --mode write --purpose p; done'),
     "P11 braces both sides, assert": r'R="C:\\x\\${f}.py"; ' + MESH + r' assert --agent a --resource "${R}"',
     "P12 single-quoted assignment": r"W='C:\x\$f.md'; " + MESH + r' release --agent a --resource "$W"',
 }
 PASS = {
-    "N1 forward slashes": MESH + ' claim --agent a --resource "C:/Users/you/notes/$f" --purpose p',
+    "N1 forward slashes": MESH + ' claim --agent a --resource "~/memory/$f" --purpose p',
     "N2 the whole path in the variable": MESH + ' claim --agent a --resource "$RES" --purpose p',
-    "N3 a logical resource": MESH + ' claim --agent a --resource "notes:$slug" --purpose p',
+    "N3 a logical resource": MESH + ' claim --agent a --resource "memory:$slug" --purpose p',
     "N4 four backslashes leave one and expand": MESH + r' claim --agent a --resource "C:\\\\x\\\\$f" --purpose p',
     "N5 not a mesh command": r'echo "costs \$5 and \$HOME"',
     "N6 a mesh command that takes no resource": MESH + r' pulse --agent a --task "path C:\\x\\$f"',
-    "N7 no dollar": MESH + r" claim --agent a --resource 'C:\Users\you\file.py' --purpose p",
+    "N7 no dollar": MESH + r" claim --agent a --resource '~\file.py' --purpose p",
     "N8 a dollar that names no variable": MESH + r" claim --agent a --resource 'C:\share\C$\x' --purpose p",
     "N9 command substitution": MESH + r' claim --agent a --resource "C:/x/$(date +%F).log" --purpose p',
-    "N10 assigned with forward slashes": r'W="C:/Users/you/notes/$S.md"; ' + MESH + r' claim --agent a --resource "$W"',
-    "N11 assigned with no variable inside": (r'W="C:\\Users\\you\\notes\\file.md"; ' + MESH +
+    "N10 assigned with forward slashes": r'W="~/memory/$S.md"; ' + MESH + r' claim --agent a --resource "$W"',
+    "N11 assigned with no variable inside": (r'W="~\\memory\\file.md"; ' + MESH +
                                              r' claim --agent a --resource "$W" --purpose p'),
     "N12 the bad assignment is another variable": (r'X="C:\\x\\$f"; W="C:/ok/$f"; ' + MESH +
                                                    r' claim --agent a --resource "$W" --purpose p'),
@@ -96,7 +96,4 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     sys.exit(main())

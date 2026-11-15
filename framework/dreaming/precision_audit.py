@@ -10,12 +10,12 @@ DOMAIN-INVERTED when it over-concentrates on the brain's own surfaces (where its
 vocabulary lives as text) and fails to concentrate on the domain it exists for:
 
     brainsys_ratio = share(fires on self-referential surface) / exposure share  >= ~2
-    domain_ratio   = share(fires on market surface) / exposure share          <= ~1
+    domain_ratio   = share(fires on trading surface) / exposure share          <= ~1
 
 First measurement (2026-07-16, whole log, exposure n=2208 over 60 transcripts:
-self-ref 21%, market 8%):
-    sim_flatters      56% self-ref (2.7x)   8% market (1.0x)   INVERTED
-    risk_vs_measured_record  47% (2.2x)            6% (0.8x)           INVERTED
+self-ref 21%, trading 8%):
+    sim_flatters      56% self-ref (2.7x)   8% trading (1.0x)   INVERTED
+    risk_vs_his_book  47% (2.2x)            6% (0.8x)           INVERTED
     ib_marks          46% (2.2x)            4% (0.5x)           INVERTED
     lookahead         46% (2.2x)            4% (0.5x)           INVERTED (safety-floored)
     his_never_is_mach 45% (2.1x)            4% (0.5x)           INVERTED (never-suppress)
@@ -35,10 +35,10 @@ from fire_surface import classify, SELF_REFERENTIAL
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIRELOG = os.path.join(HERE, "instinct_fires.tsv")
-PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 EXPOSURE_CACHE = os.path.join(HERE, "exposure_scan_cache.json")
 
-JUDGMENT = ["sim_flatters", "risk_vs_measured_record", "his_never_is_machinery", "ib_marks",
+JUDGMENT = ["sim_flatters", "risk_vs_his_book", "his_never_is_machinery", "ib_marks",
             "lookahead", "sim_sign_vs_lived_nav", "vxn_long_tenor_state",
             "stale_mark_banks", "check_the_brain_first"]
 MECHANICAL = ["ps1_hook_edit", "utf8_text_surgery", "secrets_in_git", "windows_backslash_path"]
@@ -207,9 +207,6 @@ def fire_counts(days=None, claude_backed_only=False):
             have[sid] = bool(glob.glob(os.path.join(PROJ, sid[:8] + "*.jsonl")))
         return have[sid]
 
-    if not os.path.exists(FIRELOG):
-        # A new brain has no fire log until its first reflex fires; that is zero fires, not an error.
-        return per
     with io.open(FIRELOG, encoding="utf-8", errors="replace") as f:
         for ln in f:
             p = ln.rstrip("\n").split("\t")
@@ -241,12 +238,11 @@ def main():
     if a.by_mechanism:
         # per-layer view: which mechanism produces each reflex's fires (rows before the
         # column exist are labeled pre-column). The full-text audit found ib_marks mostly
-        # graph-fired while risk_vs_measured_record was mostly regex-fired - opposite repair
+        # graph-fired while risk_vs_his_book was mostly regex-fired - opposite repair
         # paths; this makes that visible per night without a corpus build.
         per_m = collections.defaultdict(collections.Counter)
         cutoff = 0 if a.all else time.time() - a.days * 86400
-        with io.open(FIRELOG if os.path.exists(FIRELOG) else os.devnull,
-                     encoding="utf-8", errors="replace") as f:
+        with io.open(FIRELOG, encoding="utf-8", errors="replace") as f:
             for ln in f:
                 p = ln.rstrip("\n").split("\t")
                 if len(p) < 6:
@@ -277,11 +273,11 @@ def main():
 
     def selfshare(c):
         n = sum(c.values())
-        return (sum(c[k] for k in SELF_REFERENTIAL) / n, c["market"] / n, n)
+        return (sum(c[k] for k in SELF_REFERENTIAL) / n, c["trading"] / n, n)
 
     def report(names, label):
         print("== %s ==" % label)
-        cols = ["brain_write", "brain_sys", "mesh_cmd", "market", "prose_write",
+        cols = ["brain_write", "brain_sys", "mesh_cmd", "trading", "prose_write",
                 "code_write", "sim_cmd", "other_cmd", "unknown"]
         for rid in names:
             c = per.get(rid)
@@ -292,18 +288,18 @@ def main():
             extra = ""
             if base:
                 bs = sum(base[k] for k in SELF_REFERENTIAL) / base_tot
-                bt = base["market"] / base_tot
+                bt = base["trading"] / base_tot
                 extra = "  [x%.1f self, x%.1f domain]" % (sref / bs if bs else 0, trad / bt if bt else 0)
             parts = " ".join("%s=%d" % (k, c[k]) for k in cols if c[k])
-            print("  %-26s n=%-5d self-ref=%3.0f%% market=%3.0f%%%s  %s"
+            print("  %-26s n=%-5d self-ref=%3.0f%% trading=%3.0f%%%s  %s"
                   % (rid, n, 100 * sref, 100 * trad, extra, parts))
 
     span = "whole log" if a.all else "last %dd" % a.days
     print("precision_audit over %s (act/write fires, real sessions only)" % span)
     if base:
         bs = sum(base[k] for k in SELF_REFERENTIAL) / base_tot
-        print("exposure control: n=%d, self-ref=%.0f%% market=%.1f%%"
-              % (base_tot, 100 * bs, 100 * base["market"] / base_tot))
+        print("exposure control: n=%d, self-ref=%.0f%% trading=%.1f%%"
+              % (base_tot, 100 * bs, 100 * base["trading"] / base_tot))
     report(JUDGMENT, "judgment reflexes (pilot trio first)")
     report(MECHANICAL, "mechanical reflexes (contrast)")
 

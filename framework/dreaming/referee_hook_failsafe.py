@@ -8,16 +8,9 @@ fires - nothing mutates the shared RESUME.md / work clock / conscience / registr
 """
 import subprocess, sys, os
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 PY = sys.executable
-D = os.path.expanduser(r"~/.claude/dreaming")
-MESH = os.path.expanduser(r"~/brain-repo/12_cognitive_architecture/agent_mesh/mesh_hook.py")
+D = os.path.expanduser(r"~\.claude\dreaming")
+MESH = os.path.expanduser(r"~\brain-repo\12_cognitive_architecture\agent_mesh\mesh_hook.py")
 
 # (label, argv) for each wired Stop hook (from settings.json)
 HOOKS = [

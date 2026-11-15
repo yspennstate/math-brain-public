@@ -517,7 +517,7 @@ def main():
                 raise
             made = subprocess.run(
                 ["cmd.exe", "/d", "/c", "mklink", "/J", alias_dir, real_dir],
-                capture_output=True, text=True, creationflags=(subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0),
+                capture_output=True, text=True, creationflags=subprocess.CREATE_NO_WINDOW,
                 check=False,
             )
             if made.returncode:

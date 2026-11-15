@@ -24,7 +24,7 @@ Usage: python eval_fok_abstention.py
 import os, io, re, random
 
 DR = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
 MIN_CLUSTER = 3   # must match fok_probe.MIN_CLUSTER
 STOP = set(("the a an and or of to in for on with is are was were be this that it its as at by from into "
             "over per not no new one two use used using via etc when then than but our we you your i me my "
@@ -163,7 +163,7 @@ def main():
           "voids); the live scatter rule fires when no memory carries the query squarely. Keep it only "
           "while its false-abstention stays near the FoK miss floor.")
 
-    # --- TYPO arm (2026-07-09): the owner types heavy deliberate typos ('memeory'), and fok matches
+    # --- TYPO arm (2026-07-09): the author types heavy deliberate typos ('memeory'), and fok matches
     # exact words - a typo'd claim-check can FALSE-VOID (FoNK says "you hold nothing" about something
     # held). bm25.QueryNormalizer fixes OOV tokens (edit1, df>=2) and is already live in the seeder;
     # this measures whether wiring it into fok_probe (a) recovers typo'd knows-rate, (b) does NOT raise

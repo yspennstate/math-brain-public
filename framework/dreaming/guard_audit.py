@@ -23,7 +23,7 @@ import os, io, time, json
 
 HOME = os.path.expanduser("~")
 DR = os.path.join(HOME, ".claude", "dreaming")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 BRAIN = os.path.join(HOME, "brain-repo", "01_ai_consciousness", "brain")
 
 # each guard: (name, guards_against, self_exposed, artifact, fixture_tested, meta_guard)

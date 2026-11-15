@@ -1,5 +1,6 @@
 """test_supersession_identity.py - the supersession cache knows a replaced file, a directory is never a memory, and a
-target renamed only in case keeps its route where the file system ignores case (29 Sep 2026).
+target renamed only in case keeps its route where the file system ignores case (29 Sep 2026, an agent; scheduled
+audits account03/B19 r75 and account02/B11 auto46).
 
     python test_supersession_identity.py [--module SUPERSESSION.py] [--old OLD_SUPERSESSION.py]
 
@@ -77,6 +78,7 @@ def cases(path, tag):
         cache_home = os.path.join(td, "cache")
         os.makedirs(cache_home)
         m.HERE = cache_home
+        m._FM_OTHER_MIN = 0   # lever 17: a small folder reads uncached unless told; these controls test the cache
         mem = os.path.join(td, "memory")
         os.makedirs(mem)
         idx = os.path.join(td, "no_index.tsv")

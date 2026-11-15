@@ -35,13 +35,12 @@ Read-only.
 import sys, os, io, json, re, argparse, statistics
 from collections import defaultdict
 
-# The math package and its store; set MATH_BRAIN_SRC / MATH_BRAIN_STORE when they live elsewhere.
-sys.path.insert(0, os.environ.get("MATH_BRAIN_SRC") or os.path.expanduser("~/math-brain-build/src"))
+sys.path.insert(0, "~/math-brain-build/src")
 from math_brain.retrieval import retrieve
 from math_brain.store import ResearchStore
 
 SET = os.path.expanduser("~/.claude/dreaming/state/math_answerable_set.jsonl")
-STORE = os.environ.get("MATH_BRAIN_STORE") or os.path.expanduser("~/math-brain-build/local/population/brain.sqlite3")
+STORE = "~/math-brain-build/local/population/brain.sqlite3"
 GENERIC = {"theorem", "lemma", "formula", "identity", "process", "space", "spaces", "inequality",
            "theorems", "number", "numbers", "system", "linear", "real", "finite", "graph", "matrix",
            "map", "maps", "sequence", "conditions", "convergence", "point", "points", "what", "does",

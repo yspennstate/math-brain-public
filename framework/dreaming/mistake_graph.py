@@ -9,7 +9,7 @@ be MEASURED on the graph, not eyeballed.
 This reads the corrections corpus (MISTAKES.md, which schema_extract.py and the association graph both
 deliberately EXCLUDE, so it has never been graph-mined) and builds a mistake graph:
 
-  * nodes    = individual corrections (each time the owner told an agent it was wrong)
+  * nodes    = individual corrections (each time the author told an agent it was wrong)
   * edges    = structural similarity: shared reflex id, shared cited scar ([[backlink]]), and
                salient-token overlap of the (what-went-wrong + lesson) text - "same failure shape"
 
@@ -44,12 +44,21 @@ from append_journal import exclusive_append_lock
 
 HOME = os.path.expanduser("~")
 DR = os.path.join(HOME, ".claude", "dreaming")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 MISTAKES = os.path.join(MEM, "MISTAKES.md")
 INSTINCTS = os.path.join(DR, "instincts.tsv")
 OUT = os.path.join(DR, "mistake_families.json")
 SNAP = os.path.join(DR, ".mistake_graph_snapshot.json")   # --watch diffs against this to fire on recurrence
 STATUS = os.path.join(DR, ".mistake_graph_status.json")
+# id -> stem of every correction the watch has published. An id is a hash of the whole entry, so an entry annotated in
+# place ("now covered - <reflex>") comes back under a new id; the stem (a hash of how the entry starts) says it is the
+# same entry. Without this the watch read nine annotated entries as nine removals and refused every run from 14 Oct to
+# 10 Nov 2026. Advisory: a missing or unreadable file only means no edit is recognised, and the removal guard decides.
+STEMS = os.path.join(DR, ".mistake_graph_stems.json")
+STEMS_SCHEMA = "mistake-graph-stems/v1"
+STEMS_MAX_BYTES = 8 * 1024 * 1024
+STEMS_MAX_IDS = 50000
+STEM_CHARS = 160
 
 SNAPSHOT_MAX_BYTES = 4 * 1024 * 1024
 ARTIFACT_MAX_BYTES = 16 * 1024 * 1024
@@ -165,9 +174,9 @@ WRONG_MARK = re.compile(r"wrong:\s*", re.I)
 LESSON_MARK = re.compile(r"lesson:\s*", re.I)
 REFLEX_MARK = re.compile(r"reflex:\s*", re.I)
 HEADER = re.compile(r"^\s*-\s*\*\*(?P<hdr>.+?)\*\*(?P<rest>.*)$", re.S)
-# Since August the corrections are dated prose bullets - "- 2026-09-27 05:2x (agent, topic): what happened ...
+# Since August the corrections are dated prose bullets - "- 2026-09-27 05:2x local time (agent, topic): what happened ...
 # Rule: what to do next time" - not the bold wrong:/lesson: form, and until 27 Sep this parser saw none of them (175
-# bullets, 172 of them from September). The header ends at the first colon followed by a
+# bullets, 172 of them from September; scheduled audit account02/B13). The header ends at the first colon followed by a
 # space, so a clock like 05:2x stays in it; the lesson starts at a rule-like marker, and a bullet without one is all
 # 'wrong' with an empty lesson - still a correction, still tokens for the families.
 DATED = re.compile(r"^\s*-\s*(?P<hdr>20\d\d-\d\d-\d\d.{0,200}?):\s(?P<rest>.*)$", re.S)
@@ -403,6 +412,76 @@ def norm_date(hdr, body):
     return 0
 
 
+def _stem(bullet):
+    """How an entry starts, hashed: the same for an entry before and after someone adds a note further down it."""
+    head = re.sub(r"\s+", " ", bullet).strip()[:STEM_CHARS]
+    return "s_" + hashlib.sha1(head.encode("utf-8", "replace")).hexdigest()[:12]
+
+
+def load_stems(path=STEMS):
+    """The published id -> stem map; {} when the file is absent, unreadable or not the expected shape."""
+    try:
+        with open(path, "rb") as fh:
+            raw = fh.read(STEMS_MAX_BYTES + 1)
+        if len(raw) > STEMS_MAX_BYTES:
+            return {}
+        payload = json.loads(raw.decode("utf-8"))
+        stems = payload.get("stems") if isinstance(payload, dict) else None
+        if payload.get("schema") != STEMS_SCHEMA or not isinstance(stems, dict):
+            return {}
+        return {k: v for k, v in stems.items()
+                if isinstance(k, str) and isinstance(v, str) and k.startswith("c_") and v.startswith("s_")}
+    except Exception:
+        return {}
+
+
+def edited_in_place_map(prior_stems, recs):
+    """old id -> new id for every published entry that is still in the corpus under a new content id.
+
+    An old id qualifies only when it is gone from today's ids and exactly one of today's entries starts the same way.
+    Two entries of today that start alike are left out, so a real removal is never hidden behind a look-alike.
+    """
+    by_stem, twice = {}, set()
+    for r in recs:
+        if r["stem"] in by_stem:
+            twice.add(r["stem"])
+        by_stem[r["stem"]] = r["id"]
+    current = {r["id"] for r in recs}
+    out = {}
+    for old, stem in prior_stems.items():
+        if old in current or stem in twice:
+            continue
+        new = by_stem.get(stem)
+        if new and new != old:
+            out[old] = new
+    return out
+
+
+def save_stems(recs, prior_stems, generation, path=STEMS):
+    """Publish today's id -> stem map on top of the old one (grow-only up to a bound). Returns True when written."""
+    merged = dict(prior_stems)
+    merged.update({r["id"]: r["stem"] for r in recs})
+    if len(merged) > STEMS_MAX_IDS:
+        keep = {r["id"] for r in recs}
+        merged = {k: v for k, v in merged.items() if k in keep}
+    raw = (json.dumps({"schema": STEMS_SCHEMA, "generation": generation, "stems": merged},
+                      ensure_ascii=True, sort_keys=True) + "\n").encode("ascii")
+    if len(raw) > STEMS_MAX_BYTES:
+        return False
+    with exclusive_append_lock(path, timeout=SNAPSHOT_LOCK_SECONDS):
+        _atomic_replace_bytes(path, raw)
+    return True
+
+
+def _prior_through_edits(prior, edited):
+    """The prior snapshot with each edited entry under its new id; the old ids stay in the seen history."""
+    out = dict(prior)
+    out["all_ids"] = sorted({edited.get(i, i) for i in prior["all_ids"]})
+    out["singletons"] = sorted({edited.get(i, i) for i in prior["singletons"]})
+    out["seen_ids"] = sorted(set(prior["seen_ids"]) | set(edited.values()))
+    return out
+
+
 def parse_corrections(reflex_ids, raw=None):
     """Parse MISTAKES.md into correction records. Robust/fail-open per bullet."""
     if raw is None:
@@ -490,7 +569,7 @@ def parse_corrections(reflex_ids, raw=None):
         # (an index shifts the moment a correction is inserted/reordered, which would break every diff).
         rid = "c_" + hashlib.sha1(b.encode("utf-8", "replace")).hexdigest()[:10]
         recs.append({
-            "id": rid, "header": re.sub(r"\s+", " ", hdr)[:60], "date": date,
+            "id": rid, "stem": _stem(b), "header": re.sub(r"\s+", " ", hdr)[:60], "date": date,
             "wrong": wrong[:400], "lesson": lesson[:400],
             "named_reflexes": named, "candidates": candidates, "says_none": says_none,
             "covered": bool(named), "backlinks": backlinks, "tokens": body_toks,
@@ -534,7 +613,7 @@ def similarity(a, b, use_reflex=True):
 
 
 EDGE_THRESHOLD = 0.30   # min combined weight to draw an edge (tuned so token-only noise doesn't over-link)
-CATALOG_RES = 1.4       # Louvain resolution for the actionable family catalog (finer than 1.0 so the domain
+CATALOG_RES = 1.4       # Louvain resolution for the actionable family catalog (finer than 1.0 so the trading
                         # corrections don't collapse into one coarse blob). Significance test stays at 1.0.
 SIG_RES = 1.0           # resolution for the observed-vs-null significance test (apples-to-apples baseline)
 
@@ -564,7 +643,7 @@ def build_graph(recs, use_reflex=True):
 def communities(recs, edges, resolution=1.0):
     """Louvain communities if networkx is present; else connected components. Returns list of member-id sets.
 
-    resolution>1 yields FINER communities: domain tokens over-connect same-domain corrections
+    resolution>1 yields FINER communities: domain tokens (grid/sim/book) over-connect the trading corrections
     into one coarse blob at resolution 1.0, so the catalog uses a higher resolution for actionable sub-families.
     The significance test (null) is run at a fixed resolution so observed and null are apples-to-apples."""
     idset = [r["id"] for r in recs]
@@ -1176,7 +1255,8 @@ def _deliver_watch_block(stream, block):
 
 
 def _watch_snapshot_transaction(payload, path=SNAP, renderer=None, stream=None,
-                                allow_removals=False, status_path=None):
+                                allow_removals=False, status_path=None,
+                                edited_in_place=None, edits_applied=None):
     """Strictly load and monotonically publish one watch observation.
 
     The stable path lock covers the final prior read, the generation decision,
@@ -1242,6 +1322,23 @@ def _watch_snapshot_transaction(payload, path=SNAP, renderer=None, stream=None,
                 status = "unchanged"
                 next_state = prior
             else:
+                # An entry annotated in place is the same correction under a new content id. Read the prior
+                # through the caller's old-id -> new-id map, so the removal guard, the status and the verdict
+                # all see one entry and not a removal plus a new correction. A pair counts only when the old
+                # id is in the prior and gone today, the new id is here today and was not in the prior, and
+                # no two old ids claim the same new one.
+                if edited_in_place:
+                    prior_all = set(prior["all_ids"])
+                    incoming_all = set(incoming["all_ids"])
+                    pairs = {old: new for old, new in edited_in_place.items()
+                             if old in prior_all and old not in incoming_all
+                             and new in incoming_all and new not in prior_all}
+                    claimed = Counter(pairs.values())
+                    pairs = {old: new for old, new in pairs.items() if claimed[new] == 1}
+                    if pairs:
+                        prior = _prior_through_edits(prior, pairs)
+                        if edits_applied is not None:
+                            edits_applied.update(pairs)
                 removed = set(prior["all_ids"]) - set(incoming["all_ids"])
                 if removed and not allow_removals:
                     raise SnapshotStateError(
@@ -1328,7 +1425,7 @@ def _write_json_artifact(path, payload, indent=1):
 
 
 def _render_watch_block(previous, status, all_ids, singleton_ids, in_family,
-                        override_reflexes, recs_by_id):
+                        override_reflexes, recs_by_id, edited_count=0):
     """Derive one complete recurrence verdict from the locked prior."""
     lines = ["", "=" * 74, " RECURRENCE WATCH  (change since last snapshot)", "=" * 74]
     if status == "baseline":
@@ -1368,6 +1465,11 @@ def _render_watch_block(previous, status, all_ids, singleton_ids, in_family,
         if not (newly_recurring or brand_new or new_ovr):
             lines.append(
                 "  no new warning: no brand-new correction, no one-off became recurring, no new override."
+            )
+        if edited_count:
+            lines.append(
+                "  %d correction(s) were edited in place since the last snapshot (same entry, new content id); "
+                "counted as neither new nor removed." % edited_count
             )
         if removed:
             lines.append(
@@ -1452,14 +1554,6 @@ def main():
     except SourceStateError as exc:
         _report_watch_failure("CORRECTION SOURCE FAILED - no watch or artifact state advanced", exc)
         return 1
-    if len(recs) < 10 and not os.path.exists(SNAP):
-        # A young brain has only a handful of corrections, too few to mine into families, and
-        # it has never written a snapshot. That is not a broken source: there is nothing to
-        # watch yet. Once a snapshot exists, falling under ten means corrections went missing,
-        # and that still fails below.
-        print("mistake graph: %d structured corrections so far, fewer than 10; nothing to mine yet"
-              % len(recs))
-        return 0
     if len(recs) < 10:
         _report_watch_failure(
             "CORRECTION SOURCE FAILED - too few structured corrections; no state advanced",
@@ -1604,10 +1698,14 @@ def main():
     override_reflexes = sorted({r for f in ovr_fams for r in f["covering_reflexes"]})
     watch_state = None
     if watch:
+        prior_stems = load_stems(STEMS)
+        edited_map = edited_in_place_map(prior_stems, recs)
+        edits_applied = {}
+
         def render_watch(previous, status):
             return _render_watch_block(
                 previous, status, all_ids, singleton_ids, in_family,
-                override_reflexes, recs_by_id,
+                override_reflexes, recs_by_id, edited_count=len(edits_applied),
             )
 
         try:
@@ -1620,7 +1718,14 @@ def main():
                 stream=sys.stdout,
                 allow_removals=allow_removals,
                 status_path=STATUS,
+                edited_in_place=edited_map,
+                edits_applied=edits_applied,
             )
+            if watch_state != "stale":
+                try:
+                    save_stems(recs, prior_stems, run_observed_at_ns, path=STEMS)
+                except Exception as exc:   # advisory file: the watch itself has already published
+                    _report_watch_failure("STEM MAP NOT WRITTEN - the next in-place edit may read as a removal", exc)
         except SnapshotPublicationError as exc:
             _report_watch_failure(
                 "WATCH PUBLICATION FAILED AFTER VERDICT DELIVERY - prior preserved; recurrence remains retryable",

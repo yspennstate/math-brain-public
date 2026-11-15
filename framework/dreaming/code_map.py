@@ -1,12 +1,13 @@
 """code_map.py - where in the brain's code does X live: a symbol map with a token-budgeted answer.
 
 WHY: brain.py recall indexes memories, not code. A question like "which hook refuses a push that
-would start billed CI" is answered by a file name and a function, and memory recall missed two of
-the first five such questions it was given. The idea comes from Graphify (safishamsi/graphify): parse
-the code, keep every function and class with its docstring and what it calls, then answer with the matching symbols and their one-hop neighbours, cut to a token
+would start billed CI" is answered by a file name and a function, and recall missed two of the first
+five such questions on 5 Nov 2026. The idea comes from Graphify (safishamsi/graphify, audited in
+reelrepo_agent/AUDIT.md): parse the code, keep every function and class with its docstring and
+what it calls, then answer with the matching symbols and their one-hop neighbours, cut to a token
 budget. Nothing is imported from Graphify; this uses the standard library's ast only.
 
-  python code_map.py build [--root DIR ...]      parse *.py under each root (default: this folder)
+  python code_map.py build [--root DIR ...]      parse *.py under each root (default ~/.claude/dreaming)
   python code_map.py query "question" [--budget 800] [--files 5] [--meaning]
   python code_map.py stats
 
@@ -26,7 +27,7 @@ warnings.simplefilter("ignore", SyntaxWarning)  # other files' escape warnings a
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MAP = os.environ.get("CODE_MAP_PATH") or os.path.join(HERE, "code_map.json")
-DEFAULT_ROOTS = [HERE]
+DEFAULT_ROOTS = [os.path.expanduser("~/.claude/dreaming")]
 EMB = (MAP[:-5] if MAP.endswith(".json") else MAP) + "_emb.npz"  # one bge-small vector per file
 VERSION = 1
 

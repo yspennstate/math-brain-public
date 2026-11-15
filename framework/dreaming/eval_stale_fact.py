@@ -19,39 +19,9 @@ Usage: python eval_stale_fact.py
 """
 import os, io, re, sys
 from collections import Counter
-
-
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
 DR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DR)
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
-MEM = os.environ.get("BRAIN_MEM_DIR", os.path.join(os.path.expanduser("~"), ".claude", "projects", _BRAIN_SLUG, "memory"))
+MEM = os.environ.get("BRAIN_MEM_DIR", os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory"))
 
 
 def read(fn):
@@ -119,7 +89,7 @@ def main():
 
     collisions = stale_first = fixed_by_demote = 0
     # PREMISE-AWARENESS (LongMemEval-V2, the eval-suite's other named gap next to workflow): when a query
-    # ASSERTS the stale premise (phrased in the OLD memory's own words - the owner asking about/assuming
+    # ASSERTS the stale premise (phrased in the OLD memory's own words - the author asking about/assuming
     # the superseded fact), does the CORRECTION still reach the candidate pool so the system can flag the
     # false premise (via the demotion swap)? Distinct from the topic-query collision above: here the stale
     # memory ranks #1 BY CONSTRUCTION (it's the query's own words), so the question is whether the

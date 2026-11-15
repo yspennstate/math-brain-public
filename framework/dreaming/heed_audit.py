@@ -43,7 +43,7 @@ import calendar
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIRELOG = os.path.join(HERE, "instinct_fires.tsv")
-PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 
 COMPLY = {
     "ps1_hook_edit": re.compile(r"ParseFile|ascii_lint", re.I),
@@ -60,9 +60,6 @@ def load_fires(days, until=None):
     until = until or time.time()
     cutoff = until - days * 86400
     out = []
-    if not os.path.exists(FIRELOG):
-        # A new brain has no fire log until its first reflex fires; that is zero fires, not an error.
-        return out
     with io.open(FIRELOG, encoding="utf-8", errors="replace") as f:
         for ln in f:
             p = ln.rstrip("\n").split("\t")
@@ -89,8 +86,49 @@ def _iso_epoch(s):
         return None
 
 
-def load_session_tools(session_id):
-    """Time-ordered [(epoch, tool_name, compact_text)] for one session's tool calls."""
+_TS = re.compile(rb'"timestamp"\s*:\s*"(\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)')
+
+
+def _line_epoch(fh, off):
+    """Epoch of the first timestamped line starting after byte `off` (the line `off` falls inside is skipped), or
+    None at end of file. Reads a line at a time; a transcript line can run to megabytes."""
+    fh.seek(off)
+    if off:
+        fh.readline()
+    for _ in range(200):
+        ln = fh.readline()
+        if not ln:
+            return None
+        m = _TS.search(ln[:4096]) or _TS.search(ln)
+        if m:
+            return calendar.timegm(time.strptime(m.group(1).decode("ascii"), "%Y-%m-%dT%H:%M:%S"))
+    return None
+
+
+def _seek_offset(path, since):
+    """A byte offset at or before the first line stamped >= `since`, by bisection on the stamps (a transcript is
+    appended in time order). 0 when unsure. 7 Nov 2026 (an agent): a --days 1 run read 19 transcripts of
+    33.7 GB whole and hit the dream's 45-minute cap on 5, 6 and 7 Nov without writing its row."""
+    try:
+        with open(path, "rb") as fh:
+            lo, hi = 0, os.path.getsize(path)
+            for _ in range(64):
+                if hi - lo < (1 << 20):
+                    break
+                mid = (lo + hi) // 2
+                ep = _line_epoch(fh, mid)
+                if ep is None or ep >= since:
+                    hi = mid
+                else:
+                    lo = mid
+            return lo
+    except Exception:
+        return 0
+
+
+def load_session_tools(session_id, since=None):
+    """Time-ordered [(epoch, tool_name, compact_text)] for one session's tool calls; with `since`, only the part of
+    the transcript from about that epoch on (the file is entered by bisection, and calls before `since` dropped)."""
     path = None
     for c in glob.glob(os.path.join(PROJ, session_id[:8] + "*.jsonl")):
         path = c
@@ -98,7 +136,11 @@ def load_session_tools(session_id):
     if not path:
         return []
     tools = []
+    off = _seek_offset(path, since) if since is not None else 0
     with io.open(path, encoding="utf-8", errors="replace") as f:
+        if off:
+            f.buffer.seek(off)
+            f.buffer.readline()
         for ln in f:
             if '"tool_use"' not in ln:
                 continue
@@ -121,6 +163,8 @@ def load_session_tools(session_id):
                     except Exception:
                         txt = ""
                     tools.append((ep, b.get("name", ""), txt))
+    if since is not None:
+        tools = [t for t in tools if t[0] >= since]
     tools.sort(key=lambda t: t[0])
     return tools
 
@@ -145,6 +189,8 @@ def main():
                     help="window end: ISO (2026-07-15T00:00:00, local) or epoch; default now")
     ap.add_argument("--jsonl", default=None, metavar="PATH",
                     help="append one machine-readable result row to PATH")
+    ap.add_argument("--full-sessions", action="store_true",
+                    help="read each transcript whole and draw controls from the whole session (before 7 Nov 2026)")
     a = ap.parse_args()
 
     until = None
@@ -155,6 +201,9 @@ def main():
             until = time.mktime(time.strptime(a.until[:19], "%Y-%m-%dT%H:%M:%S"))
 
     fires = load_fires(a.days, until)
+    # the transcripts are entered an hour before the first possible fire; the fire windows (minutes after each fire)
+    # all lie inside what is read
+    since = None if a.full_sessions else (until or time.time()) - a.days * 86400 - 3600
     if not fires:
         print("heed_audit: no qualifying act/write fires in the window")
         return 0
@@ -164,7 +213,7 @@ def main():
 
     stats = {rid: {"fired": 0, "heeded": 0, "ctrl_n": 0, "ctrl_hit": 0} for rid in COMPLY}
     for sid in sessions:
-        tools = cache.setdefault(sid, load_session_tools(sid))
+        tools = cache.setdefault(sid, load_session_tools(sid, since))
         if not tools:
             continue
         sess_fires = [(ts, rid) for ts, rid, s in fires if s == sid]
@@ -222,6 +271,9 @@ def main():
                    "until": until or time.time(), "days": a.days,
                    "window": a.window, "minutes": a.minutes,
                    "n_fires": len(fires), "n_sessions": len(sessions),
+                   # 7 Nov 2026: controls are drawn from the audit window (plus an hour before it), not the whole
+                   # session; "session" is the old behaviour (--full-sessions)
+                   "control_scope": "session" if since is None else "window",
                    # 2026-08-22: the caveat travels IN THE ROW, not only in stdout. These rows are
                    # sampled by the dreams, and a sampled row that carries rates without its
                    # denominator reads as a population rate. Additive key only - nothing existing

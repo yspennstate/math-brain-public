@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """graph_lane.py - the use-grown graph as a lane of brain.py recall, behind one dial.
 
-Built 26 Sep 2026: the edge and diffusion part, with a parameter that tunes it against the simple lexical
-recall. The edges are graph_store.py's store (built over the capture of every touch agents
+His order, 26 Sep 2026 04:28: build the edge and diffusion part now, with a parameter that tunes it against the simple
+recall that works today. The edges are an agent's store (graph_store.py over the capture of every touch agents
 make: words, tools, files, folders, memories read and written, notes served, reflexes, errors); the diffusion is
 diffusion.py's personalised PageRank over them, seeded by the query's words and, with prf > 0, by lexical search's
 top memories (what agents read together with what bm25 already found).
@@ -13,11 +13,6 @@ Defaults for both, and for the walk's own parameters, are in brain_graph_dial.js
 
     python graph_lane.py "a question"      # the graph's own top memories for a question, and the dial in force
 """
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import json
 import os
 import sys
@@ -41,7 +36,7 @@ def dial():
         pass
     if os.environ.get("BRAIN_GRAPH_STORE", "").strip():
         d["store"] = os.environ["BRAIN_GRAPH_STORE"].strip()
-    # a measurement sets the use/link mixture per run (27 Sep: which walk carries the signal)
+    # a measurement sets the use/link mixture per run (27 Sep, the fleet's R7: which walk carries the signal)
     try:
         if os.environ.get("BRAIN_GRAPH_MIX", "").strip():
             d["mix_links"] = min(1.0, max(0.0, float(os.environ["BRAIN_GRAPH_MIX"])))
@@ -57,11 +52,12 @@ def _generation(path):
     a new write time and counter, so either one makes a new key. The counter tells apart two commits inside one tick of
     the file clock (about 15 ms here), which size and write time cannot; it moves in rollback-journal mode, the
     sidecar's, and not in WAL mode. Any other file adds a hash of its last 64 KB: an npz ends in its zip directory, which
-    carries every member's CRC-32, so a same-size rewrite in place that restores the write time still makes a new key"""
+    carries every member's CRC-32, so a same-size rewrite in place that restores the write time still makes a new key
+    (1000-page report D05-T04)."""
     import hashlib
     # abspath, and realpath only for a link: realpath opens the file to ask for its final name, and on the live
     # sidecar (held open by the capture and many readers) that took 20-330 ms in half the calls and 12.5 s of one
-    # 38 s recall (30 Oct). The key's file id, size and write time still tell two files apart; a path
+    # 38 s recall (30 Oct, lead 6). The key's file id, size and write time still tell two files apart; a path
     # through a junction now keys on the junction's spelling (one cache miss, never a wrong hit).
     real = os.path.abspath(path)
     if os.path.islink(real):
@@ -98,7 +94,7 @@ def _graph(d, build=False):
     """The prebuilt walk for the dial's store, or None. Recall never builds it (minutes under load): the store's
     rebuild job, or `python graph_lane.py --build`, does. Keyed by the generation of the store's edges as well as its
     path, as the walk's disk cache already is: until 30 Sep a process kept the first walk it loaded for a path after
-    the store was rebuilt there."""
+    the store was rebuilt there (interactive audit B100-03)."""
     key = (d["store"], d["co_w"], d["cap"], d["alpha"]) + _generation(os.path.join(d["store"], "edges.npz"))
     if _G.get(key) is None:
         sys.path.insert(0, HERE)
@@ -110,10 +106,10 @@ def _graph(d, build=False):
 
 def ranked(query, allowed=None, lex_top=(), depth=200, d=None):
     """[(slug, score)] best first from the walk; [] when the store is missing or no seed is a node."""
+    import numpy as np
     d = d or dial()
     if not d.get("store") or not os.path.exists(os.path.join(d["store"], "edges.npz")):
         return []
-    import numpy as np
     g = _graph(d)
     if g is None:
         print("  [graph lane] no prebuilt walk for %s - run: python graph_lane.py --build" % d["store"])
@@ -131,13 +127,16 @@ def ranked(query, allowed=None, lex_top=(), depth=200, d=None):
     if S.sum() <= 0:
         return []
     # 16 walk steps, not the cache's 20 (residual 0.7^16 = 3e-3): the served recall answers were the same, word for
-    # word, on all 22 seed questions at 16 and at 14, the 200-deep graph list the same on 10 of 13 walks with the
-    # same memories on all 13; ppr median 175 -> 154 ms. Set here, never in the dial: the iteration count is part
-    # of the walk cache's name. BRAIN_PPR_ITERS=20 restores the old walk.
+    # word, on all 22 seed questions at 16 and at 14 (4 Nov 2026, an agent), the 200-deep graph list the same on
+    # 10 of 13 walks with the same memories on all 13; ppr median 175 -> 154 ms. Set here, never in the dial: the
+    # iteration count is part of the walk cache's name. BRAIN_PPR_ITERS=20 restores the old walk.
+    # 8 since 10 Nov 2026 (an agent): served answers identical on all 22 seed questions at 10 and at 8 against
+    # 16, noise floor 22/22; on 40 bank questions the gold rank was the same at 8 and 16 and the walk took 0.13 s
+    # against 0.25 s (an agent). BRAIN_PPR_ITERS=16 restores the 4 Nov walk.
     try:
-        iters = int(os.environ.get("BRAIN_PPR_ITERS", "16"))
+        iters = int(os.environ.get("BRAIN_PPR_ITERS", "8"))
     except ValueError:
-        iters = 16
+        iters = 8
     R = g.ppr(S, iters=iters)
     return g.ranked_memories(R, gamma=d["gamma"], allowed=allowed, depth=depth, with_scores=True)[0]
 
@@ -152,7 +151,7 @@ def _link_graph():
     sidecar generation: {slug: [(slug, weight)]} both directions, and each node's total out-weight.
 
     Until 30 Sep the cache had one key for the whole process, so a process that switched BRAIN_GRAPH_SIDECAR, or that
-    outlived a rebuild of the live sidecar, kept serving the first graph it had read. recall
+    outlived a rebuild of the live sidecar, kept serving the first graph it had read (interactive audit B100-03). recall
     runs one process per question and the evaluations pin the sidecar in fresh processes, so no measurement so far read
     a stale graph; a long-lived reader or two arms in one interpreter would have."""
     import sqlite3
@@ -188,6 +187,18 @@ class _LazyLinks:
         import sqlite3
         self.db = sqlite3.connect("file:%s?mode=ro" % path.replace("\\", "/"), uri=True, timeout=5,
                                   isolation_level=None)
+        # 8 Nov 2026 (an agent): read the sidecar through a memory map. Each walk opens a fresh connection, so
+        # SQLite's page cache starts empty and the 110-180 index-plus-row lookups of one walk (580-1,160 memories) went
+        # through thousands of read calls: 40-73 MB a served recall, median 54 MB, about nine tenths of all its reads.
+        # Mapped: median 5.7 MB a recall, recall output equal 16/16 across separate processes; an 800-memory walk alone
+        # 0.135 -> 0.070 s median, while whole-recall wall time stayed within noise on the loaded laptop. The map is
+        # file-backed (no commit charge) and closes with the connection; no writer truncates the live sidecar, and a
+        # full rebuild replaces it by rename with retries. BRAIN_LINK_MMAP=0 restores plain reads.
+        if os.environ.get("BRAIN_LINK_MMAP", "1") != "0":
+            try:
+                self.db.execute("PRAGMA mmap_size=1073741824")
+            except Exception:
+                pass
         self.db.execute("BEGIN")
         self.nbr, self.out = {}, {}
 
@@ -241,13 +252,63 @@ class _LazyLinks:
         self.db.close()
 
 
-# Lever 9: a long-lived process (brain_recall_server sets this on) keeps the neighbour lists the lazy walk has read,
-# keyed by the sidecar's generation (file id, size, write time, SQLite change counter). The key is taken AFTER this
-# call's read transaction holds its shared lock, so no writer can commit between the key and the reads (the
-# sidecar runs in rollback-journal mode); lists read under one key come from one version of the file. A rewrite
-# makes a new key and the walk starts empty again. Off by default: a one-shot process runs exactly the old code.
+# Lever 9 (3 Nov 2026, an agent): a long-lived process (brain_recall_server sets this on) keeps the neighbour
+# lists the lazy walk has read, keyed by the sidecar's generation (file id, size, write time, SQLite change counter).
+# The key is taken AFTER this call's read transaction holds its shared lock, so no writer can commit between the key
+# and the reads (the sidecar runs in rollback-journal mode); lists read under one key come from one version of the
+# file. A rewrite (the capture's 15-minute refresh) makes a new key and the walk starts empty again. Off by default:
+# a one-shot process runs exactly the old code.
 LAZY_RESIDENT = False
 _LAZY_RES = {}
+# 13 Nov 2026 (an agent): in that long-lived process, read EVERY memory's list once per generation on a side
+# thread, so later walks find their nodes cached. A walk paid ~0.3 ms per memory it had not seen under the current key
+# (cold 93-661 ms against 4-9 ms warm on eight live seed sets; the 15-minute refresh starts each key empty), which made
+# the link walk half of served sub:bm.graph. The whole table (345k rows) reads in about 1-2 s under one shared lock,
+# taken before the key exactly as in _link_ranked_lazy, and the lists follow _LazyLinks.get's rule (rowid order, both
+# directions, the largest positive weight per pair, first appearance), so a list is the one a lazy read of the same
+# version gives. The refresh's writer waits up to 30 s for that lock. BRAIN_LINK_PRELOAD=0 off.
+_PRELOAD_STARTED = set()
+
+
+def _preload_links(path, gen):
+    try:
+        g = _LazyLinks(path)
+        try:
+            g.db.execute("SELECT rowid FROM link LIMIT 1").fetchall()
+            if _generation(path) != gen:
+                return
+            best = {}
+            for s, d, w in g.db.execute("SELECT src, dst, w FROM link ORDER BY rowid"):
+                for x, b in ((s, d), (d, s)):
+                    bx = best.get(x)
+                    if bx is None:
+                        bx = best[x] = {}
+                    if w > bx.get(b, 0.0):
+                        bx[b] = w
+            nbr, out = {}, {}
+            for n, bx in best.items():
+                lst = nbr[n] = list(bx.items())
+                o = 0.0
+                for _, w in lst:
+                    o = o + w
+                out[n] = o
+        finally:
+            g.close()
+        if _generation(path) == gen:
+            _keep(_LAZY_RES, gen, (nbr, out), 1)
+    except Exception:
+        pass
+
+
+def _start_preload(path, gen):
+    if gen in _PRELOAD_STARTED or os.environ.get("BRAIN_LINK_PRELOAD", "1") == "0":
+        return
+    _PRELOAD_STARTED.add(gen)
+    if len(_PRELOAD_STARTED) > 64:
+        _PRELOAD_STARTED.clear()
+        _PRELOAD_STARTED.add(gen)
+    import threading
+    threading.Thread(target=_preload_links, args=(path, gen), name="link-preload", daemon=True).start()
 
 
 def _link_ranked_lazy(lex_top, n_seeds, alpha, eps, depth):
@@ -266,6 +327,8 @@ def _link_ranked_lazy(lex_top, n_seeds, alpha, eps, depth):
                 gen = None       # in WAL mode commits move neither the counter nor the file: no safe key
             elif gen in _LAZY_RES:
                 g.nbr, g.out = _LAZY_RES[gen]
+            else:
+                _start_preload(path, gen)
         except Exception:
             gen = None
     try:
@@ -354,7 +417,7 @@ def combine(use, links, mix=0.5):
     none. A list whose scores are all equal (one item, or one score throughout) normalizes to 1, as fuse_scores does.
     Until 29 Sep both rules differed: an inactive source's candidates joined at score 0, a constant list normalized to
     0, and fuse_scores then gave an all-zero graph list full credit, so adding a zero-weight source changed the winner
-   . Live recall runs at mix 0.5; the endpoints are the mixture ablations."""
+    (interactive audit BM-20260929-01). Live recall runs at mix 0.5; the endpoints are the mixture ablations."""
     def norm(xs):
         if not xs:
             return {}
@@ -372,7 +435,7 @@ def combine(use, links, mix=0.5):
     f = {s: (1 - mix) * u.get(s, 0.0) + mix * l.get(s, 0.0) for s in set(u) | set(l)}
     # equal scores in name order: the dict is built over a set, whose order follows string hashes, which Python
     # randomises per process - sorted by score alone, two recalls of one question showed tied memories in either
-    # order (27 Sep, a replay control: 2 of 1,632)
+    # order (27 Sep, the R7 replay control's 2 of 1,632)
     return sorted(f.items(), key=lambda kv: (-kv[1], kv[0]))
 
 
@@ -386,13 +449,13 @@ def log_recall(query, lam, body, graph, shown, extra=None):
         import time
         os.makedirs(LIVE, exist_ok=True)
         # BRAIN_RECALL_LOG_FULL=1 (evaluations only) logs the whole body and graph lists: fuse() scales each list by
-        # its own minimum, so a replay from the first 30 cannot reproduce a longer list's order (27 Sep, replay)
+        # its own minimum, so a replay from the first 30 cannot reproduce a longer list's order (27 Sep, R7 replay)
         # 100 since 29 Sep (30 before): the learner may use a replay only when no item cut from a list could have
-        # changed the opened memory's rank, and with 30 kept that held for 32-69 percent of the
+        # changed the opened memory's rank (interactive audit G02), and with 30 kept that held for 32-69 percent of the
         # last 500 recalls' top three; "n" below says whether a list was cut at all
         cap = None if os.environ.get("BRAIN_RECALL_LOG_FULL") == "1" else 100
         # ...and at full precision: four places made two near-equal scores (2.3e-5 apart) replay in the other order
-        # (27 Sep); the live log keeps four places, which graph_learn replays with the rounded bounds
+        # (27 Sep, R7); the live log keeps four places, which graph_learn replays with the rounded bounds
         nd = None if cap is None else 4
         rnd = (lambda v: float(v)) if nd is None else (lambda v: round(float(v), nd))
         rec = {"t": round(time.time(), 1), "q": str(query)[:200], "lam": lam,
@@ -405,8 +468,9 @@ def log_recall(query, lam, body, graph, shown, extra=None):
             # rounded as the items are (4 places), so a replay fuses exactly the numbers it reads
             rec["bounds"] = [rnd(min(v for _, v in body)), rnd(max(v for _, v in body)),
                              rnd(min(v for _, v in graph)), rnd(max(v for _, v in graph))]
-        # Which session searched, and whether it was a person's session or a headless worker (27 Sep): without it the learner and the evaluations joined a search to a session by a +-90 s
-        # overlap of shown slugs, and a headless script's searches could not be told from interactive sessions'. A Claude Code
+        # Which session searched, and whether it was a person's session or a headless worker (27 Sep, scheduled audit
+        # account01/B05 R6): without it the learner and the evaluations joined a search to a session by a +-90 s
+        # overlap of shown slugs, and a headless script's searches could not be told from his sessions'. A Claude Code
         # tool call carries CLAUDE_CODE_SESSION_ID and CLAUDE_CODE_ENTRYPOINT (cli = interactive, sdk-cli = headless).
         _sid = os.environ.get("CLAUDE_CODE_SESSION_ID") or os.environ.get("CODEX_SESSION_ID")
         if _sid:
@@ -426,10 +490,12 @@ def log_recall(query, lam, body, graph, shown, extra=None):
 def fuse_scores(body, graph, lam, how="convex", bounds=None):
     """The fusion itself: [(slug, fused score)], best first, equal scores in name order. Recall (fuse, below) and the
     learner's replay (graph_learn.fuse) both run this one function, so a replay ranks what recall ranked; until 29 Sep
-    the learner kept its own copy, which ordered ties by hash and so differently in 8 of 16 processes. bounds (lo, hi, glo, ghi): each whole list's lowest and highest score, for a replay of lists the recall log
+    the learner kept its own copy, which ordered ties by hash and so differently in 8 of 16 processes (interactive audit
+    G03). bounds (lo, hi, glo, ghi): each whole list's lowest and highest score, for a replay of lists the recall log
     cut to 30. A list whose scores are all equal (one item, or one score throughout) normalizes to 1, its own top: until
-    29 Sep it normalized to 0, and a one-item lexical body gave the order to the graph at lambda 0.1.
-    Two properties of min-max scaling, measured 30 Sep: a list's lowest
+    29 Sep it normalized to 0, and a one-item lexical body gave the order to the graph at lambda 0.1 (account01/B03,
+    B03-R7-BODY-SINGLETON-LAMBDA-COLLAPSE-026).
+    Two properties of min-max scaling, measured 30 Sep (the 1000-page report's D05-T01 and D05-T05): a list's lowest
     candidate scores 0, the same as a slug the list does not hold, so the graph's weakest pick gets no lift; and one
     extreme score squeezes the rest, one graph score ten times the others leaving them the bottom 6 pct of the range
     (1 of 105 pairs swapped at lambda 0.1, 19 at 0.5; "rrf" swaps none). Live recalls show no such collapse: over 1,412

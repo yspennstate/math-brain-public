@@ -16,17 +16,10 @@ Exit 0 = all controls pass. Anything else = do not wire it in.
 """
 import json, os, subprocess, sys, time, uuid
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import hook_dispatch as HD
 
-CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
+CREATE_NO_WINDOW = 0x08000000
 EVENTS = [("PreToolUse", "Bash"), ("PostToolUse", "Bash"), ("UserPromptSubmit", ""), ("PreToolUse", "Edit"),
           # 2026-09-17 09:4x: the Stop chain (14 hooks a turn, two of them gates that block a stop with exit 2) and the
           # PostToolUse Read/Edit arms, so the dispatcher can be wired for those events on the same evidence as the first two
@@ -34,8 +27,8 @@ EVENTS = [("PreToolUse", "Bash"), ("PostToolUse", "Bash"), ("UserPromptSubmit", 
 
 
 def payload(event, tool, sid):
-    d = {"session_id": sid, "hook_event_name": event, "cwd": os.path.expanduser("~"),
-         "transcript_path": os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/%s.jsonl") % sid}
+    d = {"session_id": sid, "hook_event_name": event, "cwd": r"~",
+         "transcript_path": r"~\.claude\projects\{{BRAIN_SLUG}}\%s.jsonl" % sid}
     if tool:
         d["tool_name"] = tool
         d["tool_input"] = {"command": "echo hi"} if tool in ("Bash", "PowerShell") else {"file_path": r"C:\tmp\x.txt", "old_string": "a", "new_string": "b"}
@@ -47,12 +40,6 @@ def payload(event, tool, sid):
     if event == "Stop":
         d["stop_hook_active"] = False
     return json.dumps(d)
-
-
-# Hooks whose output legitimately differs between two identical calls (29 Oct, a re-run of
-# hook_dispatch_control: waste_sense prints a live process census, owner_board_hook posts once per interval). A mismatch on
-# one of these alone removed the whole allowlist, so every hook in every session ran as its own process.
-STATEFUL_TOLERATED = {"waste_sense.py", "owner_board_hook.py"}
 
 
 def shape(rc, out):
@@ -110,11 +97,6 @@ def control_a():
             else:
                 ok = shape(rc3, o3) == shape(rc1, o1) or shape(rc3, o3) == shape(rc2, o2)
                 why = "shape"
-            if not ok and label.lower() in STATEFUL_TOLERATED:
-                # 29 Oct: its output is meant to change between two identical calls, so a mismatch says nothing about
-                # the dispatcher. It stays off the fast path (never added to passed) instead of voiding the allowlist.
-                print("     %-34s %-5s TOLERATED (stateful; stays in its own process)" % (label[:34], why))
-                continue
             if not ok:
                 bad.append((event, label, why, (rc1, shape(rc1, o1)), (rc3, shape(rc3, o3))))
             elif path and why == "exact":
@@ -126,7 +108,14 @@ def control_a():
     # a hook that mismatched anywhere is excluded everywhere, even if it matched under another event
     for _, lbl, _, _, _ in bad:
         passed.discard(lbl.lower())
-    return (not bad), passed
+    # EXCLUSION, NOT A VETO (2026-09-23, round 5). This returned (not bad): ONE mismatching hook failed the whole
+    # control and removed the allowlist, so every hook spawned. On 09-23 waste_sense.py (its census differs by the
+    # process that runs it) and owner_board_hook.py (hourly, state-dependent) mismatched - neither was on the 09-20
+    # list either - and 63 other runs passed. The docstring always meant what this now does: a mismatching hook does
+    # not join the list and keeps its own process; the list it leaves behind contains only exact matches.
+    if bad:
+        print("  excluded (they keep their own process): %s" % ", ".join(sorted({b[1] for b in bad})))
+    return True, passed
 
 
 def control_b():
@@ -180,38 +169,30 @@ def control_b():
     return ok
 
 
-def control_c(passed=None):
-    """Times the CANDIDATE list, not whatever allowlist is on disk. 29 Oct: with the file removed, dispatch() spawned
-    every hook and could never beat the one-by-one run, so a lost allowlist failed this control forever (0.8x)."""
+def control_c(candidates=None):
+    """Time the dispatcher WITH THE LIST THIS RUN WOULD WRITE. It used to time HD.dispatch under the currently signed
+    list, and a list that is stale or removed is empty - every hook spawns and 'dispatched' costs the same as
+    'separate' - so once the list lapsed the cost control could never pass again and the list could never be
+    re-signed (stale 09-21 17:56 -> 09-23, prompt hooks at 45-65 s). 2026-09-23, round 5."""
     print("== C. COST on the same payload, same minute")
     saved = []
-    real_allow, tmp = HD.ALLOW, None
-    if passed is not None:
-        import tempfile
-        fd, tmp = tempfile.mkstemp(prefix="ctl_allow_", suffix=".json")
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump({"in_process_ok": sorted(passed)}, f)
-        HD.ALLOW = tmp
+    real_allowlist = HD._allowlist
+    if candidates is not None:
+        HD._allowlist = lambda: set(candidates)
     try:
-        return _control_c_timed(saved)
+        for event, tool in [("PreToolUse", "Bash"), ("PostToolUse", "Bash")]:
+            entries = HD.hook_entries(event, tool)
+            t = time.perf_counter()
+            for cmd, args in entries:
+                run_sub(cmd, args, payload(event, tool, "ctlC1-" + uuid.uuid4().hex[:8]))
+            one_by_one = time.perf_counter() - t
+            t = time.perf_counter()
+            HD.dispatch(event, payload(event, tool, "ctlC2-" + uuid.uuid4().hex[:8]), tool)
+            dispatched = time.perf_counter() - t
+            print("   %-12s %2d hooks: separate %6.2fs -> dispatched %6.2fs  (%.1fx)" % (event, len(entries), one_by_one, dispatched, one_by_one / max(dispatched, 1e-6)))
+            saved.append(one_by_one - dispatched)
     finally:
-        HD.ALLOW = real_allow
-        if tmp:
-            os.remove(tmp)
-
-
-def _control_c_timed(saved):
-    for event, tool in [("PreToolUse", "Bash"), ("PostToolUse", "Bash")]:
-        entries = HD.hook_entries(event, tool)
-        t = time.perf_counter()
-        for cmd, args in entries:
-            run_sub(cmd, args, payload(event, tool, "ctlC1-" + uuid.uuid4().hex[:8]))
-        one_by_one = time.perf_counter() - t
-        t = time.perf_counter()
-        HD.dispatch(event, payload(event, tool, "ctlC2-" + uuid.uuid4().hex[:8]), tool)
-        dispatched = time.perf_counter() - t
-        print("   %-12s %2d hooks: separate %6.2fs -> dispatched %6.2fs  (%.1fx)" % (event, len(entries), one_by_one, dispatched, one_by_one / max(dispatched, 1e-6)))
-        saved.append(one_by_one - dispatched)
+        HD._allowlist = real_allowlist
     return sum(saved) > 0
 
 

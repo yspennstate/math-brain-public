@@ -17,11 +17,10 @@ emb = (idx_e, mat, bias); vector = mat[idx_e[slug]]; unit-normalized). Writes no
 """
 
 from __future__ import annotations
-import os
 
 import sys
 
-sys.path.insert(0, os.path.expanduser("~/.claude/dreaming"))
+sys.path.insert(0, r"~/.claude/dreaming")
 import numpy as np
 import brain as B
 import spread_recall as sr

@@ -2,7 +2,7 @@
 """reality_monitor.py - source/reality monitoring at the end of a turn (Johnson & Raye 1981; Johnson,
 Hashtroudi & Lindsay 1993).
 
-The owner's single most frequent correction is "you said it's done / it works / it's deployed - and it
+The the author's single most frequent correction is "you said it's done / it works / it's deployed - and it
 wasn't." At its root that is a source-monitoring error: mistaking an INFERRED or INTENDED state for an
 OBSERVED one. Reality monitoring is the faculty that tells "I actually saw this happen" from "I assume
 it did." The gut's `he_will_look` reflex fires BEFORE acting; this is the end-of-turn half - the only
@@ -10,7 +10,7 @@ place the brain can inspect its own outgoing CLAIM, because hooks see tool I/O, 
 (the Stop hook gets the transcript, so it can).
 
 What it does: when the turn ends on a strong RUNTIME-SUCCESS claim (works / deployed / tests pass / live)
-but no verifying OBSERVATION happened in the turn (no run, no read of what the owner will actually see),
+but no verifying OBSERVATION happened in the turn (no run, no read of what the author will actually see),
 it blocks exactly once - "take one concrete look before you sign off." Everything else passes. It also
 logs every runtime claim (grounded or not) to reality_log.jsonl so the dream can learn whether
 claimed-done matched reality over time.
@@ -88,11 +88,6 @@ def _name_the_look(text):
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Walk the math store's links: a compact map of what lies around a card, and which way to step (
+"""Walk the math store's links: a compact map of what lies around a card, and which way to step (an agent-f04,
 12 Oct 2026, his 11 Oct 21:5x question: if the agent can walk along edges, with diffusion, and knows how diffusion and the
 brain work, can it find the information faster and cheaper?).
 
@@ -52,8 +52,8 @@ import re
 import sys
 from collections import defaultdict
 
-BUILD_SRC = os.environ.get("MATHBRAIN_BUILD_SRC", "")
-STORE_PATH = os.environ.get("MATHBRAIN_STORE", "")
+BUILD_SRC = os.environ.get("MATHBRAIN_BUILD_SRC", r"~\math-brain-build\src")
+STORE_PATH = os.environ.get("MATHBRAIN_STORE", r"~\math-brain-build\local\population\brain.sqlite3")
 DREAMING = os.path.join(os.path.expanduser("~"), ".claude", "dreaming")   # query_embed.py, the ONNX bge-small query encoder
 DECAY = 0.55        # retrieve()'s spreading decay per link
 NEAR = 0.015        # weight of log(nearness) beside meaning; dev plateau 0.01-0.02 (E7, E8)

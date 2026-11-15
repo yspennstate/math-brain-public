@@ -89,11 +89,6 @@ def load_failures():
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     trigs = load_triggers()
     fails = load_failures()
     if not fails:

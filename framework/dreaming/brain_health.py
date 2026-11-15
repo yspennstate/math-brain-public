@@ -56,12 +56,7 @@ import time
 
 # Corpus location: --mem wins, then BRAIN_MEMORY_DIR, then the usual local layout. Kept configurable
 # so this runs against any brain, not only the one it was written on.
-try:
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    import spread_recall as _sr
-    _DEFAULT_MEM = _sr.MEM
-except Exception:
-    _DEFAULT_MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects", "default", "memory")
+_DEFAULT_MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 MEM = os.environ.get("BRAIN_MEMORY_DIR", _DEFAULT_MEM)
 BRAIN = os.environ.get(
     "BRAIN_CLI", os.path.join(os.path.dirname(os.path.abspath(__file__)), "brain.py"))

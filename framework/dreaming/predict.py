@@ -21,38 +21,8 @@ Pure read-only over the memory dir. Usage: python predict.py [memory_dir]
 import argparse, os, re, io, math, sys
 from collections import defaultdict
 
-
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
-
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
-MEM_DEFAULT = os.path.join(os.path.expanduser("~"), ".claude", "projects", _BRAIN_SLUG, "memory")
-BRAIN_DEFAULT = os.path.expanduser(r"~/brain-repo/01_ai_consciousness/brain")
+MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+BRAIN_DEFAULT = os.path.expanduser(r"~\brain-repo\01_ai_consciousness\brain")
 DREAMING = os.path.dirname(os.path.abspath(__file__))
 
 LINE = re.compile(r"^- \[( |x)\]\s*(.+)$")
@@ -296,11 +266,6 @@ def write_outputs(bets, cal, problems=None, dreaming=DREAMING, brain=BRAIN_DEFAU
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     # A REAL PARSER, added 2026-08-22 after the SIXTH recurrence of the same defect.
     # `sys.argv[1]` swallowed ANY token as the memory directory, so `predict.py --help`
     # looked for "--help/PREDICTIONS.md", found no bets, and REWROTE both derived

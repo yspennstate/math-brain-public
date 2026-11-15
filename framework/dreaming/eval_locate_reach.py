@@ -27,13 +27,6 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, "state")
 DEFAULT_BANK = os.path.join(STATE, "locate_reach_bank_20260911.json")

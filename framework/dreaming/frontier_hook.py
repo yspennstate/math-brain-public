@@ -1,5 +1,5 @@
 """frontier_hook.py - deliver the math brain's frontier on an open problem to the agent working it, on the agent's
-own turns (PreToolUse), not only on the owner's prompts.
+own turns (PreToolUse), not only on the author's prompts.
 
 Why: the math hook runs on UserPromptSubmit, so research sessions driven by a goal received almost nothing (4 cards in
 28 hours for the quadratic-form session, 1 in 21 for FEI; memory the_math_brain_barely_reaches_the_research_agents_
@@ -11,11 +11,6 @@ repository, or when the session's own task line on the agent mesh names the prog
 gives the program's frontier once and, at most hourly after that, only what was added since. Otherwise silent, and
 silent on any error. Standard library only; the math store and the mesh are opened read-only.
 State: one small JSON per session under frontier_hook_state/ beside this file."""
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import json
 import os
 import re
@@ -82,7 +77,7 @@ def _touch_text(data):
     return " ".join(parts)
 
 
-# THE RECEIVER, NOT THE SESSION (30 Sep 2026; the 1000-page report's D12-T01, second channel). A
+# THE RECEIVER, NOT THE SESSION (30 Sep 2026, an agent; the 1000-page report's D12-T01, second channel). A
 # subagent's tool step carries its parent's session_id and its own agent_id, so the state below was shared with the
 # parent: a research subagent working the program's folder got nothing for an hour after its parent had touched the
 # folder, and the child that does the proof work is the one that needs the frontier. State is now kept per receiver,
@@ -148,13 +143,13 @@ def _log(now, session8, programs, chars, trigger):
         pass
 
 
-# THE TOP-200 ROWS (14 Oct 2026; the goal: agents do not spend
-# time resolving the same things twice, and push forward through the frontier framework). A call that touches a
+# THE TOP-200 ROWS (14 Oct 2026 23:5x, an agent; his 23:25 order, T-20261014-145: "i don't want agents wasting
+# time resolving the same stuff ... push forward like this, with the frontier framework"). A call that touches a
 # folder STAFF.json assigns to a row, or the row's own folder under frontier/rows, gets that row's short brief (failure
 # point, obstruction, targets, the routes not to redo, how the row is scored) once, and again only when the brief has
 # changed, at most hourly. Read-only; silent on any error.
 TOP200_ROOT = os.environ.get("FRONTIER_TOP200_ROOT",
-                             "C:/Users/me/brain-repo/06_math_research/frontier")
+                             "~/brain-repo/06_math_research/frontier")
 _top200_cache = {"mtime": None, "rx": []}
 
 
@@ -219,6 +214,15 @@ def _top200_part(text, task, st, now, brief_fn=None):
     return "\n\n".join(out)[:9000]
 
 
+def _digest_sig():
+    """frontier_digest.py's size and mtime, the key the quiet-call shortcut in decide() trusts; None when unreadable."""
+    try:
+        s = os.stat(os.path.join(HERE, "frontier_digest.py"))
+        return "%d:%d" % (s.st_size, s.st_mtime_ns)
+    except OSError:
+        return None
+
+
 def decide(data, now=None, digest_mod=None):
     """Return the text to deliver ('' for nothing). Pure apart from the state file and read-only stores."""
     now = time.time() if now is None else now
@@ -237,11 +241,21 @@ def decide(data, now=None, digest_mod=None):
         _save(receiver, st)
         _log(now, receiver, ["top200"], len(top), "folder")
         return top
+    touched = [p for p, rx in FOLDERS.items() if rx.search(text)]
+    mesh = st.get("mesh") or {}
+    # Quiet-call shortcut (11 Nov 2026, an agent): importing frontier_digest (sqlite3, datetime and about 150
+    # regexes) cost most of this hook's 39 ms on every tool call, though nearly every call ends in silence. When no
+    # folder is touched, the mesh task is not due for a re-read, and the programs that task names were already
+    # computed for this exact task text and this exact frontier_digest.py (programs_of is a pure match against its
+    # PROGRAMS table), the answer is the stored one; an empty answer returns here exactly as the full path would.
+    sig = _digest_sig() if digest_mod is None else None
+    pc = mesh.get("programs_for")
+    if (sig and not touched and now - float(mesh.get("checked", 0)) < MESH_EVERY_S and isinstance(pc, dict)
+            and pc.get("sig") == sig and pc.get("task") == (mesh.get("task") or "") and pc.get("programs") == []):
+        return ""
     fd = digest_mod
     if fd is None:
         import frontier_digest as fd
-    touched = [p for p, rx in FOLDERS.items() if rx.search(text)]
-    mesh = st.get("mesh") or {}
     if now - float(mesh.get("checked", 0)) >= MESH_EVERY_S:
         runtime = "codex" if "codex" in str(data.get("transcript_path") or "").lower() else "claude"
         mesh = {"checked": now, "task": fd.mesh_task(session8, runtime)}
@@ -250,6 +264,12 @@ def decide(data, now=None, digest_mod=None):
     else:
         dirty = False
     named = fd.programs_of([mesh.get("task") or ""])
+    if sig:
+        entry = {"sig": sig, "task": mesh.get("task") or "", "programs": list(named)}
+        if mesh.get("programs_for") != entry:
+            mesh["programs_for"] = entry
+            st["mesh"] = mesh
+            dirty = True
     programs = sorted(set(touched) | set(named))
     if not programs:
         if dirty:

@@ -2,7 +2,7 @@
 """fired_vs_shipped.py - did the engine fire BEFORE a real owner correction? The mid-session HEEDING test.
 
 The ultimate test of the pre-mistake system: not "would a guard fire on a curated mistake string" but "did
-it fire on the actual assistant prose that the owner then corrected, in a real session." Spec + the two v1
+it fire on the actual assistant prose that the author then corrected, in a real session." Spec + the two v1
 flaws to avoid are from claude:0c44dd79-fleetgraph (whose v1 flattered to a bogus 100%):
 
   FLAW 1 - counting system messages (system-reminders, tool-results, hook injections, slash commands) as
@@ -24,7 +24,7 @@ sys.path.insert(0, HERE)
 import pre_report
 import mistake_graph as _mg    # the corpus half of the mistake->reflex map (correction wrong/lesson -> reflex)
 
-PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 
 # genuine owner pushback - the shapes he actually corrects with. NOT a generic "no" inside a longer neutral
 # sentence: anchor to correction openings / "you were wrong" / "are you sure" / "did not work/fill".
@@ -38,10 +38,10 @@ PUSHBACK = re.compile(
 
 SYS_MARK = re.compile(r"<system-reminder>|<command-(name|message)>|\[SYSTEM|hookSpecificOutput|"
                       r"tool_use_id|stdout|hook_event_name|<local-command|"
-                      # hook-injected user-role messages are NOT the owner (this was the flaw-1 leak: a
+                      # hook-injected user-role messages are NOT the author (this was the flaw-1 leak: a
                       # "Stop hook feedback: [work-session]..." message matched pushback via "^stop\b")
                       r"hook feedback|hook additional context|hook is now active|\[work-session\]|\[agent-mesh|\[unconscious\]|"
-                      r"\[metamemory|\[protected-health|\[compute|\[association\]|\[goal|UserPromptSubmit|"
+                      r"\[metamemory|\[trading-health|\[compute|\[association\]|\[goal|UserPromptSubmit|"
                       r"SessionStart|PreToolUse|PostToolUse|\[reminder\]|instinct surfacing", re.I)
 
 
@@ -160,7 +160,7 @@ def main():
         print("no transcripts matched", pats)
         return
     print("=" * 76)
-    print(" FIRED-vs-SHIPPED  -  did the engine fire on the prose the owner then corrected?")
+    print(" FIRED-vs-SHIPPED  -  did the engine fire on the prose the author then corrected?")
     print("=" * 76)
     # Two honest cuts. (a) HEEDING: would-BLOCK vs surface vs blind - "fired SOMETHING" is not a catch
     # (gfcore trips on incidental tokens, flaw 2), so BLOCK is the honest force-a-stop signal. (b) RIGHT-
@@ -211,7 +211,7 @@ def main():
                      tot["miss_exp"], 100.0*tot["miss_exp"]/mt))
             print("  (%d/%d corrections had no confident corpus match - unmapped, honestly not scored.)" % (n - mt, n))
             print("  CAVEAT (eyeballed): the expected-reflex is a TOKEN-OVERLAP nearest-neighbor to the corpus,")
-            print("  which returns SPURIOUS matches (a 'forget the mouse' scope correction matched risk_vs_measured_record).")
+            print("  which returns SPURIOUS matches (a 'forget the mouse' scope correction matched risk_vs_his_book).")
             print("  So this cut is DIRECTIONAL - it confirms 'surfaced' != 'right reflex' (flaw 2 is real) but the")
             print("  RATE is not trustworthy. A reliable mistake->reflex map needs semantic embeddings or hand-labels,")
             print("  not token overlap - that is genuinely the hard part fleetgraph flagged. Trust the HEEDING cut.")

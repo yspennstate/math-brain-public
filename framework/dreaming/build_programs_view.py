@@ -5,7 +5,7 @@ TOPICS.md groups by topic, TIMELINE.md by date - but neither shows the brain's c
 43-memory arnold_diffusion proof, the builder/rmt/cast/options research runs, the W80 directive set. A
 program is a series of memos sharing a stem (the prefix before a trailing cycle/round/W-number). This
 writes a concise PROGRAMS.md nav view: each substantive program with its size, date span, and an anchor
-summary - so the owner and a waking session can see the big work bodies at a glance and jump into one.
+summary - so the author and a waking session can see the big work bodies at a glance and jump into one.
 
 Reuses build_series_edges' detection (same stem/noise/substance rules) so the map matches what the
 navigability edges connect. Read-only over the memory dir; writes one nav file. Wired into the nightly.
@@ -16,7 +16,7 @@ from collections import defaultdict
 
 HOME = os.path.expanduser("~")
 DR = os.path.join(HOME, ".claude", "dreaming")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 BRAIN = os.path.join(HOME, "brain-repo", "01_ai_consciousness", "brain")
 OUT = os.path.join(BRAIN, "PROGRAMS.md")
 sys.path.insert(0, DR)

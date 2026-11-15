@@ -17,7 +17,7 @@ import os, io, json, glob, time, calendar, sys
 
 HOME = os.path.expanduser("~")
 REG = os.path.join(HOME, ".claude", "fleet", "registry")
-PROJ = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}")
+PROJ = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 
 RECENT_S = 2 * 3600     # only judge sessions whose last TURN is within 2h (else dead/long-idle, not a live failure)
 LAG_S = 900             # a Stop landed >15min after the checkpoint last updated = refresh falling behind
@@ -126,8 +126,12 @@ def check(reg_dir=None, proj_dir=None):
             lag = (turn - upd) / 60      # how far the last STOP is ahead of the last refresh
             if lag * 60 > LAG_S:
                 state = "FLAG: last turn %.0fm ahead of checkpoint" % lag
-                flags.append("%s: a Stop landed %.0fm after the checkpoint last updated - registry_refresh "
-                             "ran and did not take (silent no-op?)" % (sid[:8], lag))
+                # 2026-10-17: worded as the TURN, not a Stop. The turn time is the transcript's last entry, which
+                # a session in one long turn (a 20h goal riding background waits) keeps writing with no Stop at
+                # all; the old "a Stop landed ... did not take" wording sent readers hunting a refresh no-op that
+                # was not there (agent, agent: one turn since 16 Oct 14:50).
+                flags.append("%s: last turn %.0fm after the checkpoint last updated - either no Stop since "
+                             "(one long turn) or registry_refresh did not take" % (sid[:8], lag))
             else:
                 state = "ok (turn %.0fm, lag %.0fm)" % (turn_age, lag)
         rows.append((sid[:8], state, len(ck)))

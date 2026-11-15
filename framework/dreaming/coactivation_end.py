@@ -122,7 +122,7 @@ def _load_decayed_weights(path, now=None):
     """Validate the complete prior graph, then return time-decayed weights and applied receipts.
 
     A link whose decayed weight is below MIN_KEEP is left out here, before this fold's increments, not only when the
-    table is written (29 Sep, found by a scheduled audit).
+    table is written (29 Sep, scheduled audit account01/B10 R45, B10-R45-COACTIVATION-PRUNING-PARTITION-DEPENDENCE-01).
     Decay only shrinks a weight, so a link below the floor now crossed it at some moment since the last rewrite and has
     been gone since then. Before, it kept its residual until some fold rewrote the table, so whether a later co-read
     started from that residual or from nothing depended on when unrelated sessions ended: a 0.51 link co-read once 14 days
@@ -171,7 +171,8 @@ def _load_decayed_weights(path, now=None):
 def _atomic_write_weights(path, weights, applied, mtime=None):
     """Durably stage and atomically promote weights and their exactly-once receipts.
 
-    FULL PRECISION AND THE DECAY'S OWN INSTANT (2026-09-28, found by a scheduled audit). Weights used to be written as %.3f, and the table's mtime was the
+    FULL PRECISION AND THE DECAY'S OWN INSTANT (2026-09-28, scheduled audit account04/B20 R12,
+    B20-R12-DECAY-QUANTIZATION-20260928). Weights used to be written as %.3f, and the table's mtime was the
     moment of the write. A fold less than about 14.5 minutes after the previous one decays a 1.0 weight by
     less than 0.0005, so the rounding put it back at 1.000, fold after fold: with folds every ten minutes an
     unreinforced link never faded, while the same fortnight in one fold halved it. The time between the
@@ -354,11 +355,6 @@ def _set_aside(logf):
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
@@ -368,7 +364,11 @@ def main():
         own = os.path.join(LOGDIR, sess + ".log") if sess else None
         now = time.time()
         targets = []
-        if own and os.path.exists(own):
+        # The Stop hook fires after every turn, and the keep-working gate makes that every job, so a turn's log
+        # usually holds one memory. Folding it then deletes it, and co-reads spread over turns never pair
+        # (1 Nov: 1 of 40 folds since 29 Oct had a pair). A log with fewer than two memories stays to grow;
+        # the orphan sweep below folds it once it has sat ORPHAN_H hours.
+        if own and os.path.exists(own) and len((_read_slugs(own) or ([], None))[0]) >= 2:
             targets.append(own)
         try:
             for f in glob.glob(os.path.join(LOGDIR, "*.log")):

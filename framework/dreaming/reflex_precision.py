@@ -2,7 +2,7 @@
 """reflex_precision.py - one number per reflex for "how often was this fire on-domain when a judge looked",
 from the nightly judged log, so the priming hook can fire less and say how confident each fire is.
 
-Source: judged_nightly.jsonl - the five target reflexes since 07-16 and, since 2026-09-02, the
+Source: judged_nightly.jsonl - the five target trading reflexes since 07-16 and, since 2026-09-02, the
 firehose stratum (six of the day's top firers a night, plus a 30-case hand-judged sample). A row's
 domain_at_play is yes / no / unclear; precision counts yes over (yes + no), unclear abstains. Laplace-
 smoothed so a reflex with two judged rows does not read as 0 or 1. Reflexes with fewer than MIN_N judged
@@ -19,13 +19,6 @@ import json
 import os
 import sys
 import time
-
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOG = os.path.join(HERE, "judged_nightly.jsonl")
@@ -44,7 +37,7 @@ def _rewrites():
         return {}
 MIN_N = 4
 # the routes a fire can come by (the fire log's column 7: regex, graph, ff; hook for the Codex path). A judged row's
-# `path` outside these is no route: the hand sheet of 2 Sep (session 5e55000f) wrote its source there (27 Sep).
+# `path` outside these is no route: the hand sheet of 2 Sep (session agent) wrote its source there (27 Sep).
 KNOWN_PATHS = ("regex", "graph", "ff", "hook")
 
 

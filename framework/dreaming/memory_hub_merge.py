@@ -1,21 +1,11 @@
-"""Merge another computer's copy of a journal hub into the live one by item, keeping each file's order.
-usage: memory_hub_merge.py <live.md> <origin.md> [--apply]   (a backup goes to ~/.claude/brain_graph/memory_sync_backups_<date>)
+"""Merge the mirror's journal hubs into the live ones by item, keeping each file's order.
+usage: memory_hub_merge.py <live.md> <origin.md> [--apply]  (backup to ~/.claude/brain_graph/memory_sync_backups_<date>)
 
-Journal hubs (OPEN_QUESTIONS, PREDICTIONS, STATE_OF_MIND, MISTAKES) are appended to on every computer, so a plain
-file copy in either direction loses the other side's entries. Here an item is a top-level line plus its indented
-continuation lines. An item only the origin has goes in after the item that precedes it in the origin; a checkbox
-closed in the origin (`- [x]`) over the same open item here (`- [ ]`) takes the origin's version, because it was
-resolved on the other computer. A line the live file has is never dropped. Nothing is written without --apply.
+An item is a top-level line plus its indented continuation lines. An origin-only item goes in after the item that
+precedes it in origin; a checkbox [x] in origin over the same item [ ] here takes origin's version (resolved on the
+other machine). memory_twoway_sync.py imports merge_items() for OPEN_QUESTIONS / PREDICTIONS / STATE_OF_MIND / MISTAKES.
 """
-if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-    raise SystemExit(0)
-import datetime
-import difflib
-import os
-import re
-import shutil
-import sys
+import datetime, difflib, os, re, shutil, sys
 
 PRED = re.compile(r"^- \[([ x])\] (p\d+) \|")
 CHK = re.compile(r"^(\s*- \[)([ x])\] (.*)$")
@@ -85,43 +75,30 @@ def merge_items(lv, og):
     return out, added, lost, replaced
 
 
-def backup_dir():
-    return os.path.join(os.path.expanduser("~"), ".claude", "brain_graph",
-                        "memory_sync_backups_" + datetime.date.today().strftime("%Y%m%d"))
-
-
-def main(argv=None):
-    argv = sys.argv[1:] if argv is None else argv
-    if len(argv) < 2:
-        print(__doc__)
-        return 2
-    live_p, orig_p = argv[0], argv[1]
-    with open(live_p, "rb") as fh:
-        raw = fh.read()
+def main():
+    live_p, orig_p = sys.argv[1], sys.argv[2]
+    raw = open(live_p, "rb").read()
     crlf = b"\r\n" in raw
     lv = raw.decode("utf-8", "replace").replace("\r", "").split("\n")
-    with open(orig_p, "rb") as fh:
-        og = fh.read().decode("utf-8", "replace").replace("\r", "").split("\n")
+    og = open(orig_p, "rb").read().decode("utf-8", "replace").replace("\r", "").split("\n")
     out, added, lost, replaced = merge_items(lv, og)
-    print("%s: live %d -> %d lines; added %d (replaced %d); origin lines not kept %d" % (
+    print("%s: live %d -> %d lines; added %d (replaced %d); mirror lines not kept %d" % (
         os.path.basename(live_p), len(lv), len(out), len(added), len(replaced), len(lost)))
     for x in added:
         print("  + " + x[:150])
     for x in lost:
         print("  - " + x[:150])
-    if "--apply" in argv:
-        bk = backup_dir()
+    if "--apply" in sys.argv:
+        bk = os.path.expanduser(r"~\.claude\brain_graph\memory_sync_backups_" + datetime.date.today().strftime("%Y%m%d"))
         os.makedirs(bk, exist_ok=True)
         shutil.copy2(live_p, os.path.join(bk, os.path.basename(live_p) + ".prehub"))
         t = "\n".join(out)
         if crlf:
             t = t.replace("\n", "\r\n")
-        with open(live_p + ".hubtmp", "w", encoding="utf-8", newline="") as fh:
-            fh.write(t)
+        open(live_p + ".hubtmp", "w", encoding="utf-8", newline="").write(t)
         os.replace(live_p + ".hubtmp", live_p)
         print("applied")
-    return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

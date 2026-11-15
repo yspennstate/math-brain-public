@@ -20,6 +20,8 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
+from quarantine_rows import keep_old  # noqa: E402  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep; account03/B01 auto31): brain data is never deleted, and an overwrite deletes
 import eval_prompt_recall_fullstack as em  # noqa: E402
 import eval_fusion_live as fl  # noqa: E402
 import spread_recall as sr  # noqa: E402
@@ -73,7 +75,7 @@ def main():
     worse = sum(1 for p in per if p["rr_nolift"] < p["rr_live"])
     print("no-lift vs live per episode: better %d, worse %d, same %d" % (better, worse, len(per) - better - worse))
     print("seconds", round(time.time() - t0, 1))
-    with io.open(a.out, "w", encoding="utf-8") as f:
+    with io.open(keep_old(a.out), "w", encoding="utf-8") as f:
         json.dump({"when": time.strftime("%Y-%m-%d %H:%M"), "episodes": len(eps), "arms": rec,
                    "nolift_vs_live": {"better": better, "worse": worse}, "per_episode": per}, f, indent=1)
     return 0

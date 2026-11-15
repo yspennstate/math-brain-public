@@ -1,4 +1,4 @@
-"""Meaning vectors for the memories the sidecar does not cover yet (R13, 13 Oct 2026).
+"""Meaning vectors for the memories the sidecar does not cover yet (R13, an agent, 13 Oct 2026).
 
 The sidecar (memory_embeddings.npz) is rebuilt every three hours by BrainEmbeddingRefresh. A memory written in
 between has no current row, so brain.py's query-meaning lane scores it on its words alone, and its own session's
@@ -12,16 +12,7 @@ A row the next sidecar covers drops out of the next overlay; an unchanged row ke
     python fresh_vectors.py               write the overlay (task BrainFreshVectors15m, windowless, BelowNormal)
     python fresh_vectors.py --dry         count what it would encode; write nothing
     python fresh_vectors.py --out PATH    write somewhere else (tests)
-
-The Mac has no 15-minute task: on 30 Oct the overlay last ran at 19:47 and 26 memories filed by 20:44 had no vector, so
-the meaning lane could not see them (a recall check found 1 of 10 at the top five before a hand run, 2 of 10 after). brain.py remember() now
-calls spawn_detached() after each write. A run holds LOCK while it works; a spawn finding a live holder returns its pid,
-and a run reads the folder again before it exits, so a memory written during a run is picked up by a second pass.
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import io
 import os
 import sys
@@ -37,15 +28,11 @@ MIN_TEXT = 40        # embedding_row_current's own floor
 BUDGET_S = 480       # stop encoding here and write what is done (run_bounded kills the task at 600 s)
 CHUNK = 4
 SCHEMA = 1
-LOCK = OUT + ".lock"
-LOCK_STALE_S = BUDGET_S + 120
-_HOLDING = False     # set by run_locked; a --out or --dry run holds no lock and checks none
 
 
 def log(msg):
     line = "%s %s" % (time.strftime("%Y-%m-%d %H:%M:%S"), msg)
     try:
-        os.makedirs(os.path.dirname(LOG), exist_ok=True)     # the Mac has no embedding_refresh folder of its own
         with io.open(LOG, "a", encoding="utf-8") as fh:
             fh.write(line + "\n")
     except OSError:
@@ -75,14 +62,10 @@ CHECK_MARK = os.path.join(D, "embedding_refresh", "fresh_vectors_check.json")
 
 def _check_key(reb, sr):
     """What the 3-row check depends on: the ONNX files, the live sidecar's sha256 (from the authority pointer, not
-    sr.EMB, which is an old fixed name), the model id and onnxruntime's version. An encoder source without an ONNX
-    export (LocalEncoder) has no ONNX_DIR: no key, and the check runs every time."""
+    sr.EMB, which is an old fixed name), the model id and onnxruntime's version."""
     import json
-    onnx_dir = getattr(reb, "ONNX_DIR", None)
-    if not onnx_dir:
-        raise OSError("no ONNX export to key the check on")
     key = {"model": sr.EXPECTED_EMB_MODEL}
-    for name, p in (("onnx", os.path.join(onnx_dir, "model.onnx")), ("tok", os.path.join(onnx_dir, "tokenizer.json"))):
+    for name, p in (("onnx", os.path.join(reb.ONNX_DIR, "model.onnx")), ("tok", os.path.join(reb.ONNX_DIR, "tokenizer.json"))):
         st = os.stat(p)
         key[name] = [st.st_size, st.st_mtime_ns]
     try:
@@ -101,7 +84,7 @@ def _check_key(reb, sr):
 def checked_encoder(emb, mem, builder, reb, sr):
     """The refresh's ONNX encoder, after it reproduces three of the sidecar's own rows; else None.
 
-    The check runs once per model file and sidecar file (31 Oct 2026): on a starved box the encoder's
+    The check runs once per model file and sidecar file (an agent, 31 Oct 2026): on a starved box the encoder's
     load and check took 170-233 s of the 480 s budget, and the same encoder on the same sidecar gives the same answer,
     so a passed check is kept in fresh_vectors_check.json and a run whose key matches skips it. A new sidecar (every
     three hours), a new export or a new onnxruntime changes the key and the check runs again.
@@ -110,7 +93,7 @@ def checked_encoder(emb, mem, builder, reb, sr):
     enc = reb._onnx_encoder()
     try:
         key = _check_key(reb, sr)
-    except (OSError, AttributeError):    # LocalEncoder has no ONNX files to key on: check every run
+    except OSError:
         key = None
     mark = {}
     try:
@@ -149,29 +132,6 @@ def checked_encoder(emb, mem, builder, reb, sr):
     return enc, "onnx export, checked on 3 sidecar rows (worst cosine %.7f)" % worst, row_s
 
 
-class LocalEncoder:
-    """The sidecar builder's own sentence-transformers model, for an install without an ONNX export.
-
-    The faster encoder lives in embedding_refresh/refresh_embeddings_box.py, which is specific to the machine that
-    builds the reference sidecar and is not shipped. Without it this run uses the same model the sidecar was built
-    with (build_memory_embeddings._box_encoder_factory). checked_encoder still requires it to reproduce three
-    sidecar rows to cosine 0.9999 before anything is written, so a different model or version is refused."""
-
-    def __init__(self, builder, model_name):
-        self.builder, self.model_name = builder, model_name
-
-    def _onnx_encoder(self):
-        return self.builder._box_encoder_factory(self.model_name)
-
-
-def pick_encoder_source(builder, model_name):
-    """refresh_embeddings_box when it is installed, else the local sentence-transformers model."""
-    try:
-        return __import__("refresh_embeddings_box")
-    except ImportError:
-        return LocalEncoder(builder, model_name)
-
-
 def main():
     dry = "--dry" in sys.argv
     out = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else OUT
@@ -197,7 +157,7 @@ def main():
                 todo.append((e.stat().st_mtime_ns, e.name[:-3]))
             except OSError:
                 continue
-    # Ordinary memories first, newest first within each class (31 Oct 2026). On a loaded box a run
+    # Ordinary memories first, newest first within each class (an agent, 31 Oct 2026). On a loaded box a run
     # encodes 4 to 12 rows while about 20 arrive, most of them compaction anchors, so newest-first left the older
     # ordinary memories dark until the three-hourly sidecar caught up: at 20:1x, 45 of 59 waiting memories had no
     # current vector. Agents recall memories far more than compaction anchors, so those go first.
@@ -227,12 +187,9 @@ def main():
         log("dry: " + msg)
         return 0
     if need:
-        reb = pick_encoder_source(builder, sr.EXPECTED_EMB_MODEL)
+        reb = __import__("refresh_embeddings_box")
         t_enc0 = time.time()
-        try:
-            enc, why, row_s = checked_encoder(emb, sr.MEM, builder, reb, sr)
-        except builder.EncoderUnavailable as exc:
-            enc, why, row_s = None, str(exc), None
+        enc, why, row_s = checked_encoder(emb, sr.MEM, builder, reb, sr)
         t_enc = time.time() - t_enc0
         if enc is None:
             log("encoder unusable (%s); overlay left as it is. %s" % (why, msg))
@@ -261,7 +218,6 @@ def main():
                 n = 0
             if n < 1:
                 break
-            touch_lock()
             part = idx[j:j + n]
             j += n
             tc = time.time()
@@ -291,149 +247,7 @@ def write_overlay(out, rows, emb, sr, ea, np):
     np.savez(buf, slugs=np.array([r[0] for r in rows], dtype="U"), text_sha256=np.array([r[1] for r in rows], dtype="U64"),
              vectors=mat, model=np.array(sr.EXPECTED_EMB_MODEL), schema=np.array(SCHEMA),
              written_at=np.array(time.strftime("%Y-%m-%dT%H:%M:%S%z")))
-    if not still_mine():
-        log("lock now held by pid %s; this run's %d rows were listed before it lost the lock, so the overlay is left to "
-            "the holder (%.1fs)" % (holder(), len(rows), time.time() - T_START))
-        return 0
     ea.atomic_replace_bytes(out, buf.getvalue())
-
-
-def _alive(pid):
-    if os.name == "nt":
-        # os.kill(pid, 0) on Windows is TerminateProcess(pid, 0): it would end the holder, not test it. Ask for the
-        # exit code instead; STILL_ACTIVE (259) means running, and a handle that cannot be opened means gone.
-        import ctypes
-        k32 = ctypes.WinDLL("kernel32", use_last_error=True)
-        k32.OpenProcess.restype = ctypes.c_void_p
-        h = k32.OpenProcess(0x1000, False, int(pid))      # PROCESS_QUERY_LIMITED_INFORMATION
-        if not h:
-            return ctypes.get_last_error() == 5           # access denied: it exists
-        try:
-            code = ctypes.c_ulong(0)
-            return bool(k32.GetExitCodeProcess(ctypes.c_void_p(h), ctypes.byref(code))) and code.value == 259
-        finally:
-            k32.CloseHandle(ctypes.c_void_p(h))
-    try:
-        os.kill(pid, 0)
-        return True
-    except PermissionError:
-        return True
-    except OSError:
-        return False
-
-
-def holder():
-    """The pid of a run holding LOCK now, else None (a dead or stale holder counts as none)."""
-    try:
-        if time.time() - os.stat(LOCK).st_mtime > LOCK_STALE_S:
-            return None
-        with io.open(LOCK, encoding="utf-8") as fh:
-            pid = int(fh.read().split()[0])
-        return pid if pid != os.getpid() and _alive(pid) else None
-    except (OSError, ValueError, IndexError):
-        return None
-
-
-def take_lock():
-    for _ in range(2):
-        try:
-            fd = os.open(LOCK, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
-        except FileExistsError:
-            if holder():
-                return False
-            try:
-                os.remove(LOCK)            # stale or dead holder
-            except OSError:
-                pass
-            continue
-        with os.fdopen(fd, "w") as fh:
-            fh.write("%d %.0f\n" % (os.getpid(), time.time()))
-        return True
-    return False
-
-
-def still_mine():
-    """False only when this run took LOCK and LOCK now names another pid or is gone. The lock goes stale by age, so a
-    run paged out past LOCK_STALE_S loses it to the next spawn while it is still alive (3 Nov 04:23-04:44: pid 75819
-    sat 21 min in swap, woke and wrote a list taken before two newer runs, and the overlay fell from 390 rows to 383)."""
-    if not _HOLDING:
-        return True
-    try:
-        with io.open(LOCK, encoding="utf-8") as fh:
-            return int(fh.read().split()[0]) == os.getpid()
-    except (OSError, ValueError, IndexError):
-        return False
-
-
-def touch_lock():
-    """Keep a working run's lock fresh, so a slow but live run is not judged stale between chunks."""
-    if _HOLDING and still_mine():
-        try:
-            os.utime(LOCK)
-        except OSError:
-            pass
-
-
-def newest_memory_mtime():
-    import spread_recall as sr
-    best = 0
-    with os.scandir(sr.MEM) as it:
-        for e in it:
-            if e.name.endswith(".md"):
-                try:
-                    best = max(best, e.stat().st_mtime_ns)
-                except OSError:
-                    pass
-    return best
-
-
-def run_locked():
-    """main() under LOCK, again while memories newer than the last pass's start keep arriving (three passes at most)."""
-    if "--out" in sys.argv or "--dry" in sys.argv:
-        return main()
-    global _HOLDING
-    if not take_lock():
-        log("another run holds the lock (pid %s); left to it" % holder())
-        return 0
-    _HOLDING = True
-    try:
-        for _ in range(3):
-            start = time.time_ns()
-            rc = main()
-            if rc != 0 or not still_mine() or newest_memory_mtime() < start:
-                return rc
-        return rc
-    finally:
-        if still_mine():     # a run that lost the lock must not delete the new holder's
-            try:
-                os.remove(LOCK)
-            except OSError:
-                pass
-
-
-def spawn_detached():
-    """Start a windowless, single-flight run and return at once: the live holder's pid when one is running, else the new
-    child's pid, or None on any failure (the memory is saved either way). The child runs without -s, since the encoder
-    lives in the user site-packages."""
-    import subprocess
-    running = holder()
-    if running:
-        return running
-    try:
-        logf = io.open(os.path.join(D, "embedding_refresh", "fresh_vectors.spawn.log"), "a", encoding="utf-8")
-        p = subprocess.Popen([sys.executable, "-B", os.path.abspath(__file__)], cwd=D, stdin=subprocess.DEVNULL,
-                             stdout=logf, stderr=subprocess.STDOUT, close_fds=True, start_new_session=True)
-        # Write the child's pid into LOCK now: a second spawn a moment later would otherwise see no holder before the
-        # child takes the lock itself (30 Oct, two pids). The child finds its own pid there and takes the lock over.
-        try:
-            fd = os.open(LOCK, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
-            with os.fdopen(fd, "w") as fh:
-                fh.write("%d %.0f" % (p.pid, time.time()))
-        except OSError:
-            pass
-        return p.pid
-    except Exception:
-        return None
 
 
 if __name__ == "__main__":
@@ -441,8 +255,5 @@ if __name__ == "__main__":
         import psutil
         psutil.Process().nice(psutil.BELOW_NORMAL_PRIORITY_CLASS)
     except Exception:
-        try:
-            os.nice(10)      # no Windows priority class on macOS
-        except Exception:
-            pass
-    sys.exit(run_locked())
+        pass
+    sys.exit(main())

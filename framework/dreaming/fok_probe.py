@@ -15,30 +15,54 @@ nothing when a memory existed, and scanning the whole index when nothing is ther
 Fail-safe silent on any error. Reads stdin (UserPromptSubmit JSON), writes injection JSON to stdout.
 """
 import sys, os, io, json, re, time
-
-# 5 Nov 2026: the resident spread_server.py hosts this hook too. Its time is the bm25 and
-# supersession imports plus the scoring, which the server keeps loaded: 30 of 30 outputs byte-identical (29 of them
-# non-empty), 134 -> 86 ms a fresh-process call. On None (no server,
-# busy, declined, any error) the hook runs cold exactly as before. SPREAD_SERVER=0 turns it off.
-if __name__ == "__main__" and os.environ.get("SPREAD_SERVER", "1") != "0" and not os.environ.get("SPREAD_SERVER_CHILD") \
-        and not any(a in ("-h", "--help") for a in sys.argv[1:]):
-    _raw = sys.stdin.read()
-    sys.stdin = io.StringIO(_raw)
-    _served = None
-    try:
-        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        import spread_client as _spread_client
-        _served = _spread_client.serve(_raw, "fok_probe")
-    except Exception:
-        _served = None
-    if _served is not None:
-        sys.stdout.write(_served)
-        raise SystemExit(0)
-
-from supersession import active_supersessions
+from supersession import active_supersessions, load_map, resolve
 
 HOME = os.path.expanduser("~")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
+
+
+class _LazySupersessions:
+    """active_supersessions(MEM).get(slug, slug), resolved only for the slugs asked about.
+
+    10 Nov 2026 (an agent): the full map lists every memory file (55k, 1.6 s of a 5 s fire on the loaded
+    laptop) only to learn which route ends exist. Here a slug is looked up in superseded.tsv's routes and, when it
+    has one, walked with resolve(); a slug counts as known when its file exists, checked once per slug and kept.
+    Same answers as the full map for every route key (checked on the live folder at landing). BRAIN_FOK_LAZY_SUP=0
+    goes back to the full listing."""
+
+    def __init__(self, memory_dir):
+        self.dir = memory_dir
+        self.routes = load_map(memory_dir)
+        self._known = {}
+        self._out = {}
+        outer = self
+
+        class _Known(object):
+            def __contains__(self, slug):
+                return outer._exists(slug)
+        self._known_view = _Known()
+
+    def _exists(self, slug):
+        v = self._known.get(slug)
+        if v is None:
+            v = self._known[slug] = os.path.isfile(os.path.join(self.dir, slug + ".md"))
+        return v
+
+    def get(self, slug, default=None):
+        if slug in self._out:
+            r = self._out[slug]
+        elif slug not in self.routes or not self._exists(slug):
+            r = self._out[slug] = None
+        else:
+            end = resolve(slug, self.routes, known_slugs=self._known_view)
+            r = self._out[slug] = (end if end != slug else None)
+        return default if r is None else r
+
+
+def _supersessions():
+    if os.environ.get("BRAIN_FOK_LAZY_SUP", "1") == "0":
+        return active_supersessions(MEM)
+    return _LazySupersessions(MEM)
 SAL = os.path.join(HOME, ".claude", "dreaming", "salience.tsv")
 STOP = set(("the a an and or of to in for on with is are was were be this that it its as at by from into "
             "over per not no new one two use used using via etc when then than but our we you your i me my "
@@ -47,7 +71,7 @@ STOP = set(("the a an and or of to in for on with is are was were be this that i
             "now today about into onto out up down let me a is it to do i").split())
 MIN_CLUSTER = 3   # fire only when the brain genuinely holds a cluster on this; else stay quiet
 # the negative half: only speak "you don't know this" when the prompt actually ASKS for a definite answer
-# (a fact / number / decision to verify). Most of the user's prompts are directives, so this stays quiet in
+# (a fact / number / decision to verify). Most of his prompts are directives, so this stays quiet in
 # normal work and fires only when a claim-check lands on an empty brain.
 CLAIM_RE = (r"\b(is it true|are you sure|what'?s the|what is the|how (much|many|long|big|far)|verify|"
             r"confirm|double.?check|calculat|comput|exact(ly)?|is this (right|correct)|which is|what value|"
@@ -84,11 +108,11 @@ def _distinctive_words(words, limit=12):
     return set(sorted(set(words), key=lambda w: (-len(w), w))[:limit])
 
 
-# ---- v2 (2026-09-24): the feeling of knowing read off the brain's own lexical retrieval ------------
+# ---- v2 (2026-09-24, an agent): the feeling of knowing read off the brain's own lexical retrieval ------------
 # WHY. v1 (below, kept behind FOK_LEGACY=1) counted how many of the prompt's twelve LONGEST words appear in memory
 # FILENAMES and the NEWEST index lines. On a research question the harness text crowded the mathematics out of those
 # twelve words, most memories were never looked at, and "computations" in a test's rules tripped the definite-answer
-# test. Measured on a brain-on/brain-off study's own streams: "feeling-of-NOT-knowing ... you'll be reasoning from scratch" reached
+# test. Measured on the ab30 study's own streams: "feeling-of-NOT-knowing ... you'll be reasoning from scratch" reached
 # the model in 26 of 30 round-1 brain-on runs and 40 of 40 in rounds 2-3 - on every house-result question, whose answer
 # brain.py recall ranks first - and the "you know this" line never fired once. The brain told its research agents it
 # knew nothing, and they consulted it in 2 of 30 runs.
@@ -101,12 +125,65 @@ def _distinctive_words(words, limit=12):
 # question itself (harness removed) asks for a definite answer; otherwise silent. Thresholds fitted on calibration sets
 # only (T14 named/midwork/absent, round 1's house questions, 20 short voids, 20 long arXiv proofs no memory holds):
 # 0 false "knowing" on the 50 voids, 0 false "not-knowing" on 90 house questions (v1: nearly all), knowing on 40/40
-# named questions; held out, the 14 research questions of that study's fourth round: knowing 11, silent 3, not-knowing 0. On the user's last
+# named questions; held out, the 14 ab30 round-4 research questions: knowing 11, silent 3, not-knowing 0. On his last
 # 400 prompts: knowing 78 (v1 81), not-knowing 8 (v1 20); the named memory relevant in about 20 of 25 sampled.
 S1_MIN, CONC_MIN, RARE_MIN, VOID_MAX, RARE_K = 30.0, 1.9, 0.6, 25.0, 8
 _HARNESS_CUT = re.compile(r"This is one item of a timed|Rules for this session:|Finish your reply with exactly", re.I)
 _HARNESS_HEAD = re.compile(r"^\s*\[headless-worker\][^\n]*\n", re.I)
 KNOW_STATE = os.path.join(HOME, ".claude", "dreaming", ".fok_knowing_fired.json")
+
+# THE SEARCH IS KEPT FOR A REPEATED PROMPT (11 Nov 2026, an agent). A loop prompt repeats his ask word for word
+# every few minutes in many sessions, and each time v2 ran the same BM25 search (280-375 ms of CPU on the 48-word loop
+# prompt, most of this hook's 650 ms median) to reach, after the first fire, a memory _fresh_knowing then keeps silent.
+# The raw (slug, score) list is kept in a small file named by a hash of the query; the key is the full query text, topk
+# and the live postings header (signature, n, avgdl), so a rebuilt index searches again and a hit returns exactly what
+# the search would. Everything after the search (supersession, the tests, the fresh-knowing gate) still runs each time.
+# No postings sidecar: no memo. Files older than FOK_MEMO_TTL go when a miss writes. BRAIN_FOK_MEMO=0 turns it off.
+FOK_MEMO_DIR = os.path.join(HOME, ".claude", "dreaming", "fok_memo")
+FOK_MEMO_TTL = 7200
+
+
+def _memo_score(b, q, topk):
+    sc = b.__dict__.get("_sc")
+    if sc is None or os.environ.get("BRAIN_FOK_MEMO", "1") != "1":
+        return b.score(q, topk=topk)
+    try:
+        import hashlib
+        h = dict(sc[0].execute("select k,v from hdr"))
+        key = [str(h.get("signature", "")), float(sc[1]), float(sc[2]), int(topk), q]
+        path = os.path.join(FOK_MEMO_DIR, hashlib.sha1(q.encode("utf-8", "replace")).hexdigest()[:24] + ".json")
+    except Exception:
+        return b.score(q, topk=topk)
+    try:
+        with io.open(path, encoding="utf-8") as f:
+            kept = json.load(f)
+        if kept[0] == key:
+            return [(str(sl), float(v)) for sl, v in kept[1]]
+    except Exception:
+        pass
+    hits = b.score(q, topk=topk)
+    tmp = None
+    try:
+        os.makedirs(FOK_MEMO_DIR, exist_ok=True)
+        now = time.time()
+        with os.scandir(FOK_MEMO_DIR) as it:
+            for e in it:
+                try:
+                    if now - e.stat().st_mtime > FOK_MEMO_TTL:
+                        os.remove(e.path)
+                except OSError:
+                    pass
+        tmp = "%s.%d.tmp" % (path, os.getpid())
+        with io.open(tmp, "w", encoding="utf-8") as f:
+            json.dump([key, [[str(sl), float(v)] for sl, v in hits]], f)
+        os.replace(tmp, path)
+    except Exception:
+        try:
+            if tmp:
+                os.remove(tmp)
+        except OSError:
+            pass
+    return hits
 
 
 def _strip_harness(prompt):
@@ -128,11 +205,9 @@ def _front(slug):
     return desc, status, t
 
 
-def _fresh_knowing(sess, slug, window=43200):
-    """Name the same memory to the same session once per context: again only after a compaction or 12 h.
-    (Was 30 min. 30 Oct: repeats earned 0 uses, so 12 h; 4 Nov, on the other machine: a looped session got
-    the same 600-char note every half hour, 87 pct repeats, and a compaction empties the context, so the
-    note may go again after one.)"""
+def _fresh_knowing(sess, slug, window=3 * 3600):
+    """Name the same memory to the same session once per context: again only after a compaction or 3 h.
+    (2026-11-04: was 30 min; a looped session got the same 600-char note every half hour, 87 pct repeats.)"""
     if not sess:
         return True
     now = time.time()
@@ -146,7 +221,6 @@ def _fresh_knowing(sess, slug, window=43200):
     comp = 0
     if last:
         try:
-            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
             from once_per_context import last_compaction_at
             comp = last_compaction_at(sess) or 0
         except Exception:
@@ -161,14 +235,14 @@ def _fresh_knowing(sess, slug, window=43200):
     return True
 
 
-# v2.2 (2026-09-24): the IDENTIFIER channel. A question that names a published problem ("Aldous and Fill
+# v2.2 (2026-09-24, an agent): the IDENTIFIER channel. A question that names a published problem ("Aldous and Fill
 # ... their Open Problem 7.27") can have its answer memory at rank 1 and still fall short of both tests, because sibling
 # memories on the same source score almost as high (conc 1.59 < 1.9) and its rarest words are notation the memory does
 # not repeat (rare share 0). What marks the answer memory is that it names the same problem: its slug or its first 4,000
 # characters carry the same dotted or two-digit number AND a name from the 80 characters before the label. A number
 # alone is not enough (every source has a Problem 4.2), a name alone is not enough (every Aldous-Fill memory says
-# Aldous). Measured offline before landing: +1 held answer (the 7.27
-# question), no change on the near-miss and void sets, and not one of the user's last 400 prompts reads differently.
+# Aldous). Measured offline before landing (ab30 quarantine fok_rules.py / fok_eval_v22.py): +1 held answer (the 7.27
+# question), no change on the near-miss and void sets, and not one of his last 400 prompts reads differently.
 _ID_LABEL = re.compile(r"\b(?:Open\s+Problem|Problem|Question|Conjecture|Remark|Exercise|Ansatz|Lemma|Theorem|"
                        r"Proposition|Hypothesis)s?\s+(\d{1,3}(?:\.\d{1,3}){0,2})\b")
 _ID_STRONG = re.compile(r"^(?:\d{1,3}\.\d{1,3}(?:\.\d{1,3})?|\d{2,3})$")
@@ -216,53 +290,26 @@ def _v2(data):
     q = _strip_harness(data.get("prompt", ""))[:3000]
     if len(q.strip()) < 12:
         return
-    # Under the dispatcher numpy is already loaded: score through the exact numpy lever (same scores bit for bit,
-    # 72 -> 12 ms median on real prompts, 5 Nov). Fail-open to the plain loop.
-    try:
-        import recall_levers
-        recall_levers.install_bm25()
-    except Exception:
-        pass
     b = BM25()
-    superseded = active_supersessions(MEM)
-    # a session's own compaction nodes quote its prompts back to it: 62 of the 74 fok fires in the 24 h to 30 Oct 14:40
-    # named the asking session's own summary, which it already holds; skip them (other sessions' summaries stay)
-    own = "_%s_" % (data.get("session_id") or "")[:8] if re.match(r"^[0-9a-f]{8}", data.get("session_id") or "") else None
+    superseded = _supersessions()
     top, seen = [], set()
-    for s, v in b.score(q, topk=16):
+    for s, v in _memo_score(b, q, 12):
         s2 = superseded.get(s, s)
-        if own and s2.startswith("compaction_") and own in s2:
-            continue
-        if s2 not in seen and len(top) < 12:
+        if s2 not in seen:
             seen.add(s2)
             top.append((s2, v))
     s1 = top[0][1] if top else 0.0
-    # strength sidecar (1000-ways D6 #14/#40, 3 Nov): surfaced.tsv keeps no strength, so FOK gamma and any
-    # quality weighting had no data. One row per scored prompt, fired or not: ts, session, top slug, s1, conc,
-    # rare_share, fired. Slugs and numbers only, never prompt text.
-    _sg = {"conc": "", "rare": "", "fired": 0}
-
-    def _log_strength():
-        _sess = data.get("session_id") or ""
-        if top and re.match(r"^[0-9a-f]{8}-", _sess):
-            try:
-                with io.open(os.path.join(HOME, ".claude", "dreaming", "fok_strength.tsv"), "a",
-                             encoding="utf-8") as _sf:
-                    _sf.write("%.0f\t%s\t%s\t%.2f\t%s\t%s\t%d\n" % (time.time(), _sess[:12], top[0][0], s1,
-                                                                 _sg["conc"], _sg["rare"], _sg["fired"]))
-            except Exception:
-                pass
     if top and s1 >= S1_MIN:
         s10 = top[min(9, len(top) - 1)][1]
         conc = s1 / s10 if s10 > 0 else 99.0
-        df, n = b.df, b.n
+        # df_view: the sidecar's per-term table, not the 590k-term vocabulary unpickle (0.46 s of every prompt, 10 Nov 2026; same counts)
+        df, n = (b.df_view() if hasattr(b, "df_view") else b.df), b.n
         qt = sorted(set(t for t in tokens(q) if t in df))
         idf = {t: math.log(1.0 + (n - df[t] + 0.5) / (df[t] + 0.5)) for t in qt}
         rare = sorted(qt, key=lambda t: (-idf[t], t))[:RARE_K]
         desc, status, text = _front(top[0][0])
         toks = set(tokens(text))
         rare_share = sum(1 for t in rare if t in toks) / max(1, len(rare))
-        _sg["conc"], _sg["rare"] = "%.2f" % min(conc, 99.0), "%.2f" % rare_share
         if conc >= CONC_MIN or rare_share >= RARE_MIN or _id_match(q, top[0][0], text):
             slug = top[0][0]
             # a correction recorded only in the memory's own frontmatter (superseded_by:) is not in the supersession
@@ -273,8 +320,6 @@ def _v2(data):
                 slug = nxt.group(1)
                 desc, status, _ = _front(slug)
             if not _fresh_knowing(data.get("session_id") or "", slug):
-                _sg["fired"] = 2  # passed the gate, held back as already shown to this session
-                _log_strength()
                 return
             hint = {"verified": "verified", "provisional": "provisional - unverified",
                     "withdrawn": "WITHDRAWN - read its correction"}.get(status, status or "status not recorded")
@@ -294,10 +339,7 @@ def _v2(data):
                         _sf.write("%.0f\t%s\t%s\tfok\n" % (time.time(), _sess[:12], slug))
                 except Exception:
                     pass
-            _sg["fired"] = 1
-            _log_strength()
             return
-    _log_strength()
     if s1 < VOID_MAX and len(set(tokens(q))) >= 3 and re.search(CLAIM_RE, q, re.I) and \
             _fresh_fonk(data.get("session_id") or ""):
         ctx = ("[metamemory] feeling-of-NOT-knowing: no stored memory lands on this and it asks for a definite "
@@ -308,11 +350,6 @@ def _v2(data):
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
@@ -339,13 +376,14 @@ def main():
             return
         # spell-normalize OUT-OF-VOCAB words against the corpus vocabulary (bm25.QueryNormalizer:
         # edit1-only, df>=2, in-vocab words untouched - a clean prompt is identical). Measured
-        # 2026-07-09 in eval_fok_abstention's typo arm: the user's typos HALVE the knows-rate
+        # 2026-07-09 in eval_fok_abstention's typo arm: owner-style typos HALVE the knows-rate
         # (0.82 -> 0.31, a false-void on things the brain holds); per-token correction restores 0.82
         # with chimera false-recall and true-void catch UNCHANGED (0 nonsense repairs over 6 seeds).
         # Fail-open: no index -> words unchanged.
         try:
             from bm25 import BM25, QueryNormalizer
-            _qn = QueryNormalizer(BM25().df)
+            _b = BM25()
+            _qn = QueryNormalizer(_b.df_view() if hasattr(_b, "df_view") else _b.df)
             words = set(_qn._correct(w) for w in words)
         except Exception:
             pass
@@ -367,7 +405,7 @@ def main():
                             pass
         except Exception:
             pass
-        superseded = active_supersessions(MEM)
+        superseded = _supersessions()
         best = {}     # slug -> rank score (overlap + salience tiebreak) - for NAMING the strongest
         best_ov = {}  # slug -> INTEGER overlap - all threshold tests run on this (the 0.01*salience
                       # bump reaches 1.0 at salience 100, enough to fake a 3-overlap; found 2026-07-09)

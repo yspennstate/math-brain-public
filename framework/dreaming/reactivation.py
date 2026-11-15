@@ -26,7 +26,7 @@ import os, io, re, sys
 from collections import defaultdict
 
 HOME = os.path.expanduser("~")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 DR = os.path.join(HOME, ".claude", "dreaming")
 
 

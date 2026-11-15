@@ -2,7 +2,7 @@
 """heed_weekly_report.py - warning-interaction telemetry, delivered on a cadence.
 
 The 07-28 finding behind this: every heeding metric already existed (ack_log, heed_log,
-heed_trend, the report-gate shadow rows) and none of them reached the owner - "a fire-rate
+heed_trend, the report-gate shadow rows) and none of them reached the author - "a fire-rate
 dashboard can look healthy while every fire gets skimmed" cuts both ways: a heed record
 nobody reads changes nothing. This writes a short dated report with mechanically
 defensible layers: unique deny keys, matching token-registration receipts,
@@ -23,40 +23,10 @@ import subprocess
 import sys
 import time
 
-
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
-
 D = os.path.dirname(os.path.abspath(__file__))
 GF = os.path.join(D, "graph_fire")
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
-MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects", _BRAIN_SLUG, "memory")
-OUT_DIR = os.path.expanduser(r"~/Downloads")
+MEM = r"~\.claude\projects\{{BRAIN_SLUG}}\memory"
+OUT_DIR = r"~\Downloads"
 WINDOW_S = 7 * 86400
 
 
@@ -171,10 +141,12 @@ def section_corrections(now):
     try:
         t = io.open(os.path.join(MEM, "MISTAKES.md"), encoding="utf-8", errors="replace").read()
         cutoff = time.localtime(now - WINDOW_S)
-        recent = 0
-        for m in re.finditer(r"\*\*(2026-\d\d-\d\d)", t):
-            if time.strptime(m.group(1), "%Y-%m-%d") >= cutoff:
-                recent += 1
+        # Two entry forms: the bold one ("- **2026-08-12 ...**") and, since mid-August, a dated line at
+        # column 0 ("- 2026-09-27 05:2x local time (...): ..."). Counting only the bold form read 0 in
+        # weeks when every correction was written the second way (27 Sep: 0 against 62).
+        dates = [m.group(1) for m in re.finditer(r"\*\*(2026-\d\d-\d\d)", t)]
+        dates += re.findall(r"(?m)^-[ \t]*(2026-\d\d-\d\d)", t)
+        recent = sum(1 for d in dates if time.strptime(d, "%Y-%m-%d") >= cutoff)
         lines = [
             "Durable MISTAKES.md entries dated in the last 7d: %d (ledger count only;" % recent,
             "correction-ingestion and runtime coverage are not established by this number).",

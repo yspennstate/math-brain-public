@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Compact a session when it finishes a task (9 Oct 2026).
+"""Compact a session when it finishes a task (an agent, 9 Oct 2026; the user's words 22:4x: "no make a hook that compacts
+agents when they finish a task").
 
 Why a hook cannot just call /compact: Claude Code takes /compact only as typed input. Its hook outputs are decision,
 reason, stopReason, terminalSequence (OSC titles and bells only), additionalContext and the like; none compacts (read
@@ -14,7 +15,7 @@ writes to the session while it waits (he may be typing) or it is not idle within
 Idle means: the transcript quiet IDLE_S, the last turn ended and no queue-operation or loop fire since (a new turn shows
 as a queue-operation before its user record is written), and no keyboard or mouse input for OWNER_STILL_S.
 
-Proven 10 Oct on one session: the keys typed at 00:56:16 entered that session's queue (queue-operation enqueue
+Proven 10 Oct on an agent: the keys typed at 00:56:16 entered that session's queue (queue-operation enqueue
 "/compact" at 21:56:16Z), and Claude Code ran /compact when the turn that had started 16 s earlier ended (22:03:02Z).
 That turn was the reason for the 7-minute delay; the idle rule above now waits for such a turn to finish.
 
@@ -22,10 +23,6 @@ That turn was the reason for the 7-minute delay; the idle rule above now waits f
     helper (started by the hook):    pythonw compact_on_task_end.py --inject PID TRANSCRIPT SESSION
     test the decision offline:       python compact_on_task_end.py --selftest
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import json
 import os
 import re
@@ -80,7 +77,7 @@ def is_prompt(r, notifications=True):
     (an attachment of type queued_command; tool results come back as lists). Task notifications wake a turn too."""
     if r.get("type") == "user" and isinstance((r.get("message") or {}).get("content"), str):
         # Stop-hook feedback and scheduled loop prompts are isMeta records: a turn boundary, but not him typing (the
-        # 00:02 10 Oct helper for 5e550009 gave up 4 s in because the summary hook's feedback looked like his prompt)
+        # 00:02 10 Oct helper for agent gave up 4 s in because the summary hook's feedback looked like his prompt)
         return notifications or not r.get("isMeta")
     a = r.get("attachment") or {}
     if r.get("type") == "attachment" and a.get("type") == "queued_command":
@@ -159,13 +156,20 @@ def session_process():
 
 def is_claude(pid):
     """A live Claude Code process. A long-running session's binary is often renamed by an update while it runs
-    (claude.exe.old.<stamp>.<pid>; 5e55000a's was on 9 Oct), so the name only has to start with claude.exe."""
-    return os.path.basename(process_image(pid)).startswith("claude.exe")
+    (claude.exe.old.<stamp>.<pid>; agent's was on 9 Oct), so the name only has to start with claude.exe."""
+    name = os.path.basename(process_image(pid))
+    return name.startswith("claude.exe") if os.name == "nt" else name.startswith("claude")
 
 
 def process_image(pid):
     """The full image path of a live process, lower-cased, or '' (OpenProcess + QueryFullProcessImageNameW: no psutil,
     and never os.kill, which on Windows terminates the process)."""
+    if os.name != "nt":   # 29 Oct (Mac): ps, not the Windows API (ctypes.WinDLL raised on every task end here)
+        try:
+            return subprocess.run(["ps", "-o", "comm=", "-p", str(int(pid))], capture_output=True, text=True,
+                                  timeout=10).stdout.strip().lower()
+        except (OSError, ValueError, subprocess.SubprocessError):
+            return ""
     import ctypes
     from ctypes import wintypes
     k32 = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -187,8 +191,6 @@ def process_image(pid):
 
 
 def hook():
-    if sys.platform != "win32":  # the console injection is Win32 only
-        return 0
     try:
         raw = sys.stdin.buffer.read().decode("utf-8", "replace")
     except AttributeError:  # in-process under hook_dispatch the stdin is a StringIO, already text
@@ -224,7 +226,7 @@ def hook():
         pass
     pyw = os.path.join(os.path.dirname(sys.executable), "pythonw.exe")
     subprocess.Popen([pyw if os.path.exists(pyw) else sys.executable, os.path.abspath(__file__), "--inject", str(pid), path,
-                      sid], creationflags=(0x08000000 | 0x00000008 | 0x00000200 if os.name == "nt" else 0), stdin=subprocess.DEVNULL,
+                      sid], creationflags=0x08000000 | 0x00000008 | 0x00000200, stdin=subprocess.DEVNULL,
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, close_fds=True)
     log("%s: %s; helper started for claude.exe %d" % (sid[:8], why, pid))
     print("[compact-on-task-end] a task closed at a large context: this session will compact itself once it is idle "
@@ -233,6 +235,11 @@ def hook():
 
 
 def type_into_console(pid, text):
+    if os.name != "nt":
+        # 29 Oct (Mac): no typing here. A hook's children have no controlling terminal (TIOCSTI refused), and typing
+        # into a Terminal tab by AppleScript is a terminal-driving action that waits on the author's approval; the
+        # typer is staged in ~/brain/porting/compact_task_end/. The 300k autoCompactWindow does the compacting here.
+        return "not typed: macOS typing is off until the author approves it"
     import ctypes
     from ctypes import wintypes
     k32 = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -368,7 +375,7 @@ def selftest():
         content = [{"type": "text", "text": "Done." + (" (This was your 21:40 ask: build it.)" if end_line else "")}]
         if done:
             content.append({"type": "tool_use", "name": "Bash",
-                            "input": {"command": "python checklist.py done T-20990101-128 \"ok\""}})
+                            "input": {"command": "python checklist.py done T-20261009-128 \"ok\""}})
         recs.append({"type": "assistant", "message": {"content": content, "stop_reason": "end_turn",
                                                        "usage": {"input_tokens": 10, "cache_read_input_tokens": tokens}}})
         return recs
@@ -379,7 +386,7 @@ def selftest():
     later = turn() + [{"type": "user", "message": {"content": "new ask"}}]    # a later prompt opens a new turn
     ok &= decide(later, "s", state={})[0] is False
     written = turn() ; written[1]["message"]["content"] = [{"type": "tool_use", "name": "Write",
-                       "input": {"content": "python checklist.py done T-20990101-128"}}]
+                       "input": {"content": "python checklist.py done T-20261009-128"}}]
     ok &= decide(written, "s", state={})[0] is False                         # a file's text is not a closed task
     queued = turn() + [{"type": "attachment", "attachment": {"type": "queued_command", "prompt": "next ask"}}]
     ok &= decide(queued, "s", state={})[0] is False                          # a queued prompt opens a new turn

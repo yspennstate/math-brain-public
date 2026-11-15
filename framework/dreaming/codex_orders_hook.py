@@ -1,20 +1,16 @@
-"""codex_orders_hook.py - his standing orders for Codex sessions.
+"""codex_orders_hook.py - his standing orders for Codex sessions (27 Sep, an agent).
 
 Codex sessions run no membrane (~/.codex/hooks.json carries the reflexes, his prompts, the checklist and the math notes),
 so the part of the brain that holds his orders never reached them. This is the standing-orders channel of
-live_membrane.py for Codex: on his prompt it keeps his words, on the tool calls it keeps the words of what the session
+live_membrane.py for Codex: on his prompt it keeps the user's words, on the tool calls it keeps the words of what the session
 touches (the command and paths in the tool input, ten minutes back), and every fourth call or two minutes it runs the
-word index over his words plus those, over his stored orders only (owner_* memories and memories marked owner-stated).
+word index over the user's words plus those, over his stored orders only (owner_* memories and memories marked owner-stated).
 A line is served only when the same order leads two evaluations running, clears the bar, and has not been served to
 this session in two hours: policy.json serve_orders_codex, orders_min, orders_stable. Every evaluation is one line of
 live/codex_orders.jsonl, served or not. Never raises; prints nothing unless it serves.
 
 Output (Codex takes JSON only): {"hookSpecificOutput": {"hookEventName": ..., "additionalContext": ...}}
 """
-if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
-    print((__doc__ or "").strip() or "run with no arguments")
-    raise SystemExit(0)
-
 import json
 import os
 import sys
@@ -76,7 +72,10 @@ def _classify(payload, scan=None):
     next time) or "response_before_meta" (a response came first, which Codex itself refuses as a rollout header).
     `scan` is the previous call's record for the file (path, offset and line count reached, size and mtime, status):
     a file that has only grown is read on from where the last call stopped, and one unchanged since a call that found
-    nothing is not read at all."""
+    nothing is not read at all. Until 28 Sep all three were False and kept for the session's life (account01/B05 r70,
+    B05-R17-CODEX-INTERACTIVE-FALSE-STICKY-26); until 29 Sep only the first eight lines were read, so a header on line
+    nine stayed None and was read again at every evaluation (account02/B05 r72, B05-R55-FIRST8-META-CUTOFF-39), and only
+    source "cli" counted as his."""
     path = str(payload.get("transcript_path") or "")
     if not path:
         return None, "no_transcript_path", None
@@ -134,8 +133,8 @@ def _interactive(payload):
 
 def _log_error(kind, exc, payload):
     """One line per failure (the hook still exits 0 so Codex is never broken). Past 2 MB the file is set aside whole
-    under a dated name and a fresh one begins, so no failure is dropped.
-    Nothing here is ever deleted."""
+    under a dated name and a fresh one begins, so no failure is dropped: the first version stopped writing at the cap,
+    and a flood of failures past it read as silence (account01/B20 R17, 27 Sep). Nothing here is ever deleted."""
     try:
         if os.path.exists(ERRLOG) and os.path.getsize(ERRLOG) > 2 * 1024 * 1024:
             base, ext = os.path.splitext(ERRLOG)
@@ -163,8 +162,6 @@ def run(payload, now=None):
         return None
     sys.path.insert(0, BIN)
     import live_membrane as LM
-    if not os.path.exists(LM.SIDECAR):
-        return None                     # a fresh install: no graph is built yet, so there is nothing to serve
     pol = LM.policy()
     os.makedirs(STATE_DIR, exist_ok=True)
     p = _state_path(sid)
@@ -210,7 +207,7 @@ def run(payload, now=None):
         if not (st.get("ia_status") in FINAL and st.get("ia_v") == IA_VERSION and scan is not None
                 and (not tpath or scan.get("path") == tpath)):
             # an answer is kept only when this version read it from the rollout now in use (its header, or a response
-            # before any header); anything else, including a state an older version wrote, is asked again, and the
+            # before any header); anything else, including a state written before 29 Sep, is asked again, and the
             # scan record lets the next evaluation read on from where this one stopped
             value, status, rec = _classify(payload, scan)
             st["interactive"], st["ia_status"], st["ia_v"] = value, status, IA_VERSION

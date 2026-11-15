@@ -20,10 +20,6 @@ Compactions are read from the tail of ~/.claude/brain_graph/compactions/INDEX.js
 compaction, compact_nodes.py); a full text older than the oldest row in the tail is treated as possibly compacted away.
 Test seams: HOOK_SEEN_STATE (state folder), HOOK_SEEN_INDEX (compaction index). Selftest: python hook_seen.py --selftest
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import datetime as _dt
 import hashlib
 import io

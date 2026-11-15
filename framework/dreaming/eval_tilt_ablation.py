@@ -19,6 +19,8 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
+from quarantine_rows import keep_old  # noqa: E402  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep; account03/B01 auto31): brain data is never deleted, and an overwrite deletes
 import eval_prompt_recall_fullstack as em  # noqa: E402
 import eval_fusion_live as fl  # noqa: E402
 import spread_recall as sr  # noqa: E402
@@ -70,7 +72,7 @@ def main():
     gap_off = sum(1 for p in per if p["rr_off"] < p["rr_bm25"])
     print("episodes where live trails bm25: usage on %d, usage off %d" % (gap_on, gap_off))
     print("seconds", round(time.time() - t0, 1))
-    with io.open(a.out, "w", encoding="utf-8") as f:
+    with io.open(keep_old(a.out), "w", encoding="utf-8") as f:
         json.dump({"when": time.strftime("%Y-%m-%d %H:%M"), "episodes": len(eps), "arms": rec,
                    "off_vs_on": {"better": better, "worse": worse}, "trails_bm25": {"on": gap_on, "off": gap_off},
                    "per_episode": per}, f, indent=1)

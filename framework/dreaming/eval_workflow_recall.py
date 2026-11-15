@@ -4,7 +4,7 @@
 LongMemEval-V2 names WORKFLOW KNOWLEDGE (recall the multi-step procedure for a task) as a memory
 competency distinct from static fact recall - and this brain's other recall evals average over both, so
 a weakness in procedural recall would hide inside a healthy overall number. This isolates it: on sessions
-where the owner issued a PROCEDURAL prompt (a run/improve/prove ask - "restart the observers", "push to
+where the author issued a PROCEDURAL prompt (a run/improve/prove ask - "restart the observers", "push to
 github", "run the backtest") and then read a PROCEDURE memory (method_/reference_/feedback_ = how-to
 knowledge), does the recall stack surface that procedure memory for that prompt? And critically, does
 procedural recall LAG factual recall (a non-procedural prompt -> any memory the session read)?
@@ -23,7 +23,7 @@ import sys
 sys.path.insert(0, DR)
 from bm25 import BM25, tokens, SKIP_FILES
 
-MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
 TRACE = os.path.join(DR, "retrievals.tsv")
 LEDGER = os.path.join(MEM, "prompts", "PROMPTS.jsonl")
 MAXSESS = 25
@@ -100,7 +100,7 @@ def main():
     if gap > 0.15:
         print("  GAP %.2f: procedural recall LAGS factual - workflow knowledge is a weak spot. DRIVER "
               "(diagnosed 2026-07-09 via eval_fuzzy_recall): procedural prompts are short, directive, and "
-              "TYPO-laden (owner's deliberate typos), so word-BM25 tokenizes 'memeory'!='memory' and "
+              "TYPO-laden (the author's deliberate typos), so word-BM25 tokenizes 'memeory'!='memory' and "
               "surfaces nothing. char-3gram matching rescues these (procedural hit@10 0.12->0.38) but "
               "isn't cleanly wireable yet (see that eval's verdict); re-gate as procedural episodes grow." % gap)
     elif gap < -0.15:
@@ -113,9 +113,9 @@ def main():
           "metric OVERSTATES the real weakness. Procedural relevance is DIFFUSE - a task prompt has many "
           "valid how-to memories, so hitting the one the trace happened to log is harder than for a "
           "specific fact. Run through the LIVE stack (bm25+spell+graph+semantic bge), the 8 procedural "
-          "prompts surface USEFUL procedural memories ('run the workflow'->example_workflow_overhaul, "
-          "'audit workers'->example_stack_consolidation) - just not always the labeled target. So the "
-          "owner's actual recall experience is better than 0.12/0.25; the honest weakness is narrower.")
+          "prompts surface USEFUL procedural memories ('place an order'->grid_control_2_overhaul, "
+          "'audit observers'->observer_stack_consolidation) - just not always the labeled target. So the "
+          "the author's actual recall experience is better than 0.12/0.25; the honest weakness is narrower.")
 
 
 if __name__ == "__main__":

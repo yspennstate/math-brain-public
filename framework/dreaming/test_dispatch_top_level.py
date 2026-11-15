@@ -1,4 +1,5 @@
-"""test_dispatch_top_level.py - the hook dispatcher keeps a hook's top-level control fields at the top (28 Sep 2026).
+"""test_dispatch_top_level.py - the hook dispatcher keeps a hook's top-level control fields at the top (28 Sep 2026,
+an agent; interactive audit IA-20260928-07).
 
     python test_dispatch_top_level.py [--module HOOK_DISPATCH.py] [--old OLD_HOOK_DISPATCH.py]
 
@@ -57,10 +58,10 @@ def cases(m):
                "T2 two Stop blocks: %s" % (json.dumps(o)[:160],))
     ok3, shown = True, []
     for order in ((0, 1), (1, 0)):
-        hooks = [("stopper", 0, json.dumps({"continue": False, "stopReason": "stop requested"}), ""),
+        hooks = [("stopper", 0, json.dumps({"continue": False, "stopReason": "owner stop"}), ""),
                  ("goer", 0, json.dumps({"continue": True}), "")]
         rc, o, _ = out_of(m, [hooks[i] for i in order], "Stop")
-        ok3 &= o is not None and o.get("continue") is False and o.get("stopReason") == "stop requested"
+        ok3 &= o is not None and o.get("continue") is False and o.get("stopReason") == "owner stop"
         shown.append(json.dumps(o)[:80])
     r["T3"] = (ok3, "T3 continue:false wins in both orders: %s" % shown)
     rc, o, _ = out_of(m, [("a", 0, json.dumps({"systemMessage": "one"}), ""),

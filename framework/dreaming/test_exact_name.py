@@ -1,13 +1,5 @@
 """The exact-name trigger (owner, 6 Oct 2026 13:3x): controls both ways, in a sandbox that writes no live state.
 Run: python test_exact_name.py"""
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
-if __name__ != "__main__":
-    # a script, not a pytest module: collection imports it, and its checks run only when it is executed
-    import pytest
-    pytest.skip("run as a script: python test_exact_name.py", allow_module_level=True)
 import importlib.util
 import os
 import sys

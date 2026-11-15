@@ -424,7 +424,7 @@ def _advisory(source: Any, event: str) -> Optional[dict[str, Any]]:
 
 # A picture-maker work order is a fully specified image job for a headless Codex worker. Over the week to 2026-09-24,
 # 1,080 reflex notes landed on these prompts from 58 reflexes, two of them about pictures; the rest were prose-voice,
-# recall and verification scars. The worker's brief comes from the agent that wrote it; the brain adds nothing.
+# recall, verification and trading scars. The worker's brief comes from the agent that wrote it; the brain adds nothing.
 _IMAGE_WORK_ORDER = re.compile(r"^\s*(?:\[headless-worker\]\s*)?You are (?:a|the) picture maker\b", re.I)
 # A picture worker's own image calls (tools.image_gen__imagegen({prompt}) inside its exec code) reach this hook as
 # PreToolUse with the picture's description as input; no reflex can help a description, and 56 of 444 fires in the
@@ -490,7 +490,7 @@ def process(payload: Mapping[str, Any]) -> Optional[dict[str, Any]]:
     # The association/topic lane is a SEPARATE hook for Claude sessions, so bridging only the
     # reflex engine left Codex agents without it - measured: a topic-naming Codex prompt drew
     # no context at all. They work the same corpus and hit the same scars, so they get the same
-    # recall, including the owner-vocabulary 3x lane. Fail-open and additive: any error, or no
+    # recall, including the author-vocabulary 3x lane. Fail-open and additive: any error, or no
     # association to offer, leaves the reflex result exactly as it was.
     try:
         import spread_recall
@@ -644,7 +644,7 @@ def _selftest() -> int:
         ok = ok and _help_guard(nested_payload) is None
     # 2026-09-24: the shell as it runs, and the image work orders that get no reflexes
     wake = {"hook_event_name": "PreToolUse", "tool_name": "Bash",
-            "tool_input": {"command": r'C:\Python314\python.exe -B os.path.expanduser(r"~/.claude/dreaming/codex_wake.py")'}}
+            "tool_input": {"command": r'C:\Python314\python.exe -B "~\.claude\dreaming\codex_wake.py"'}}
     ok = ok and (_as_run(wake).get("tool_name") == ("PowerShell" if os.name == "nt" else "Bash"))
     ok = ok and wake["tool_name"] == "Bash"                     # the caller's payload is not mutated
     ok = ok and _as_run({"tool_name": "Edit"}).get("tool_name") == "Edit"

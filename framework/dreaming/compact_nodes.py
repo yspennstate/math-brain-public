@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-"""Every compaction becomes its own brain node, connected to the nodes it relates to (9 Oct 2026: every compaction is saved as
-its own node with edges to the other compactions and to the nodes it relates to, and the method is checked to be
-doing that).
+"""Every compaction becomes its own brain node, connected to the nodes it relates to (owner, 9 Oct 2026 17:0x-17:2x:
+"save all of the compact information as a node", "every single compact should be saved as its own node and connected
+to other compact stuff", "every single compacting should be turned into a node and connected to relevant nodes"; and
+19:0x: "make sure that the compact methodology we developed is working and turning the compact files into nodes with
+edges").
 
 Claude Code runs this on two hook events (settings.json "PreCompact" / "PostCompact"):
 - PreCompact (input: trigger, custom_instructions): prints instructions that Claude Code hands to the summarizer, so
@@ -28,16 +30,11 @@ A subagent's compaction reaches the hook with its parent's session and no agent_
 agent's own compact record can land in its transcript after PostCompact fires; so the sweep also runs attribute(), which
 finds each unattributed row's summary in the session's agent transcripts, files the row under that agent and re-chains
 `previous` within each identity (12 Oct). `--attribute [--days N] [--dry]` runs that pass alone; `--refresh-gists
-[--stale] [--dry]` rewrites the anchors whose description ended in a bare <summary> tag (the gist before 12 Oct), and with
---stale every anchor whose description lacks the gist the current rule gives.
+[--dry]` rewrites the anchors whose description ended in a bare <summary> tag (the gist before 12 Oct).
 
 The compactions tree is brain data under the 26 Sep law: never deleted. A hook must never break a compaction, so every
 error is swallowed and logged to compactions/errors.log. COMPACT_NODES_ROOT overrides the store and COMPACT_ANCHOR_DIR
 the anchor folder (tests); COMPACT_NO_RECALL=1 skips the recall call."""
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import datetime as _dt
 import glob
 import hashlib
@@ -58,13 +55,13 @@ except Exception:
 HOME = os.environ.get("COMPACT_HOME") or os.path.expanduser("~")
 ROOT = os.environ.get("COMPACT_NODES_ROOT") or os.path.join(HOME, ".claude", "brain_graph", "compactions")
 MEM = os.environ.get("COMPACT_ANCHOR_DIR") or (os.path.join(ROOT, "anchors") if os.environ.get("COMPACT_NODES_ROOT")
-                                                else os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory"))
+                                                else os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory"))
 INDEX = os.path.join(ROOT, "INDEX.jsonl")
 STATE = os.path.join(ROOT, "sweep_state.json")
 HUB = "compaction_hub_how_we_compact_and_where_it_is_kept_2026_10_09"
 CHECKLIST = os.path.join(HOME, "brain-repo", "12_cognitive_architecture", "task_checklist", "state.json")
 BRAIN = os.path.join(HOME, ".claude", "dreaming", "brain.py")
-KEEP = ("Compacting: keep in the summary, word for word where they appear: the owner's open asks with their times and "
+KEEP = ("Compacting: keep in the summary, word for word where they appear: the author's open asks with their times and "
         "task ids (T-...); every id, commit hash, sha, file path and card or item id the work depends on; what is done and "
         "verified versus still open; the NEXT line if one was written; mesh claims held and peer messages owed an answer; "
         "the agent's own id. Drop finished subjects' tool output and anything already saved to a file, a memory or a "
@@ -73,7 +70,7 @@ KEEP = ("Compacting: keep in the summary, word for word where they appear: the o
 # test material never reaches a memory file (a memory can be pushed; test items, keys and questions stay on this computer):
 # a summary that mentions the test bank keeps its full text in the local node and gives its anchor no excerpt
 TEST_RX = re.compile(r"test_v\d|[/\\]items[/\\]|keys?_quarantine|answer key|key\.quote|blind_solves|plit_keys|bank_\w+_keys"
-                     # item files, per-item slices and answer-key fields written by a test factory
+                     # the 15 Oct factory (test_factory_1014) wrote item details into anchors the old pattern missed
                      r"|ITEMS\.jsonl|__by_[a-z]+\d+|SLICE\d+(_\w+)?\.tsv|grader.note"
                      r"|key\.(answer|accept|witness|status_quote|solution_steps)",
                      re.I)
@@ -103,7 +100,7 @@ RECALL_DEPTH = int(os.environ.get("COMPACT_RECALL_DEPTH") or 150)
 # lex2 (14 Oct 14:3x): the gate reads the words of the whole link source, not the excerpt, and needs 0.08. Under lex1
 # (excerpt words, 0.03) 23 anchors kept no link: an excerpt of 36-132 words shares too few rare words with any memory.
 # On 33 nodes judged blind (23 of those, 10 linked controls; 220 picks, judgments_1410.tsv in
-# crash_recovery_20261014/work_5e550004): controls 27 on topic, 8 weak, 2 off against lex1's 15, 9, 6; the 23 empty
+# crash_recovery_20261014/work_agent): controls 27 on topic, 8 weak, 2 off against lex1's 15, 9, 6; the 23 empty
 # ones 19 linked, 22 on, 11 weak, 10 off. Below 0.08 the whole-text score stops separating (0.05-0.08: 13 on, 28 off).
 MEM_DF = os.path.join(ROOT, "mem_df.json")
 REGATE_LOG = INDEX + ".regated"
@@ -134,28 +131,66 @@ def _append(path, row):
         fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
-def _index_rows():
-    rows = []
+_JSONL_CACHE = {}
+
+
+def _jsonl_rows(path):
+    """Rows of an append-only JSONL ledger, parsing only the bytes appended since this process last read it.
+
+    Until 14 Nov 2026 every save_node re-parsed all of INDEX.jsonl (22 MB, 27k rows, about half a second of CPU), so a
+    sweep paid that once per compaction it looked at; at BelowNormal on a loaded laptop the 21:37 sweep of 13 Nov had
+    used 21 s of CPU in 3.5 h and still held sweep.lock, refusing every later sweep. A rewrite (os.replace, a new file
+    id) or any change to the bytes already read means a full re-parse."""
     try:
-        with io.open(INDEX, encoding="utf-8", errors="replace") as fh:
-            for line in fh:
-                try:
-                    rows.append(json.loads(line))
-                except ValueError:
-                    pass
+        st = os.stat(path)
     except OSError:
-        pass
+        return []
+    c = _JSONL_CACHE.get(path)
+    if c and (c["ino"], c["size"], c["mtime"]) == (st.st_ino, st.st_size, st.st_mtime_ns):
+        return [dict(r) for r in c["rows"]]
+    start, rows = 0, []
+    try:
+        with io.open(path, "rb") as fh:
+            if c and c["ino"] == st.st_ino and st.st_size > c["size"] and c["tail"]:
+                fh.seek(c["size"] - len(c["tail"]))
+                if fh.read(len(c["tail"])) == c["tail"]:
+                    start, rows = c["size"], list(c["rows"])
+            fh.seek(start)
+            data = fh.read()
+    except OSError:
+        return []
+    cut = data.rfind(b"\n") + 1          # a line still being written is parsed for this call but not kept as read
+
+    def parse(chunk):
+        out = []
+        for line in chunk.decode("utf-8", "replace").splitlines():
+            try:
+                r = json.loads(line)
+            except ValueError:
+                continue
+            if isinstance(r, dict):
+                out.append(r)
+        return out
+
+    rows.extend(parse(data[:cut]))
+    extra = parse(data[cut:])
+    consumed = start + cut
+    try:
+        with io.open(path, "rb") as fh:
+            fh.seek(max(0, consumed - 64))
+            tail = fh.read(min(64, consumed))
+    except OSError:
+        tail = b""
+    _JSONL_CACHE[path] = {"ino": st.st_ino, "size": consumed, "mtime": st.st_mtime_ns if consumed == st.st_size else -1,
+                          "tail": tail, "rows": rows}
+    return [dict(r) for r in rows + extra]
+
+
+def _index_rows():
+    rows = _jsonl_rows(INDEX)
     # Manual checkpoints use a separate ledger so a live historical backfill
     # never competes with their writer. They participate in the same graph.
-    try:
-        with io.open(os.path.join(ROOT, "MANUAL_INDEX.jsonl"), encoding="utf-8") as fh:
-            for line in fh:
-                try:
-                    rows.append(json.loads(line))
-                except ValueError:
-                    pass
-    except OSError:
-        pass
+    rows.extend(_jsonl_rows(os.path.join(ROOT, "MANUAL_INDEX.jsonl")))
     return rows
 
 
@@ -167,7 +202,9 @@ def _open_tasks(session_id, runtime="claude", extra_agent=None):
     try:
         with _open_shared_ro(CHECKLIST) as fh:
             st = json.load(fh)
-    except (OSError, ValueError):
+    except (OSError, ValueError, MemoryError):
+        # MemoryError: the checklist state is 16.6 MB (14 Nov) and on 6 Nov 03:53, under commit pressure, loading it
+        # killed the PreCompact hook, so that compaction got no node. The task list is an extra; the node is not.
         return []
     items = st.get("entries") if isinstance(st, dict) else st
     vals = items.values() if isinstance(items, dict) else items if isinstance(items, list) else []
@@ -205,7 +242,7 @@ def _node_body(path):
 
 def build_query_common(share=0.20, quote_min=10, min_nodes=50):
     """Write QUERY_COMMON: the words found in over `share` of the node bodies, and the keys of the quotes found in at
-    least `quote_min` of them (the harness reminders, commit trailers, the worker contract, the standing rules that
+    least `quote_min` of them (the harness reminders, commit trailers, the worker contract, his standing rules that
     every summary quotes). Returns the number of nodes read, or 0 (nothing written) when the store is too small to say
     what is common. About 18 s on 2,296 nodes (14 Oct)."""
     from collections import Counter
@@ -358,7 +395,7 @@ def _related_query(text, words=80):
 
     Until 14 Oct 03:22 the query was the summary's first 60 words - the preface, the agent id and the mesh claims every
     summary opens with - so 377 of the 777 nodes written 13-14 Oct got no related memory and many of the rest an
-    unrelated one (the same standing-orders memory on 158 of them). The 03:22 query still led with the scratchpad
+    unrelated one (his_standing_film_orders_2026_09_23 on 158 of them). The 03:22 query still led with the scratchpad
     path and the environment lines a custom summary opens with: 66 of the 227 nodes saved after it got nothing, and for
     8 recent such nodes every one of recall's top 25 rows was a compaction record. On 12 real nodes (14 Oct 07:00)
     quotes first, then the excerpt's words, brought on-topic memories for most of them.
@@ -486,21 +523,6 @@ _ASK_LINE = re.compile(r"^(?:#{1,6}\s*)?(?:\d{1,2}[.)]\s*)?[*_]*Primary Request 
 _SECTION_TITLES = frozenset(("primary request and intent", "key technical concepts", "files and code sections",
                              "errors and fixes", "problem solving", "all user messages", "pending tasks", "current work",
                              "optional next step", "summary"))
-# Custom-format summaries put the ask under their own headings, and open with machine notes. On 30 Oct 74 of 137
-# gists were a line like "Python is python3. There is no timeout and no PowerShell." and only 68 were distinct; a loop
-# session repeats its ask in every compaction, so the first NEXT/in-progress line is added to tell them apart
-# (ask + next: 113 distinct, 0 plumbing, 88 naming the ask or a task id).
-_WHO = r"(?:owner|user)'?s?"   # who the asks belong to, as summaries name them
-_ASK_HEAD = re.compile(r"\b(?:primary request|open asks?|" + _WHO + r" asks?|the asks?|open " + _WHO + r" asks?|"
-                       r"what i was told|the request|current task)\b", re.I)
-_ASK_INLINE = re.compile(r"^(?:task|the ask|ask|" + _WHO + r" ask|the " + _WHO + r" asked)\s*[:(]", re.I)
-_ORDER_HEAD = re.compile(r"\b(?:" + _WHO + r" orders?|orders in force|open tasks?|pending tasks?)\b", re.I)
-_NOW_HEAD = re.compile(r"^(?:next\b|.*\bnext line\b|in progress\b|current work\b|running now\b|last tick\b|"
-                       r"optional next step\b)", re.I)
-_NEXT_HEAD = re.compile(r"^(?:next\b|.*\bnext line\b|optional next step\b)", re.I)   # wins over 'last tick' etc.
-_PLUMBING = re.compile(r"^(?:python3?\b|python:|there is no\b|no powershell|mesh (?:tool|cli)\b|local (?:clock|time)\b|"
-                       r"machine:|use /usr/bin|zsh\b|the shell\b|s = |scratchpad\b|environment\b|github: logged\b|"
-                       r"always stamp\b|stamp times\b|the hook refuses\b)", re.I)
 
 # The text the linker reads (14 Oct, LINK_VERSION x1). A summary opens its ask with session plumbing - who the agent
 # is, the clock, the crash, the keeper and its resume prompt, the contract, the mesh claims, the standing rules - and
@@ -548,7 +570,7 @@ def _num_head(m):
 
 
 def _is_plumbing(title, head):
-    """A block heading names session plumbing, read without its parentheses ('NEXT (06:20 his clock)' is work): a
+    """A block heading names session plumbing, read without its parentheses ('NEXT (06:20 local time)' is work): a
     phrase only plumbing uses, or a word work can use too among the heading's first two words (or in a heading of at
     most four) with a session marker in the block's first lines. A heading that names a checklist task (his standing
     order T-...) is never plumbing, and a path counts by its file name ('.../crash_recovery_20261014/work_x/NEXT.md')."""
@@ -605,8 +627,8 @@ def _link_source(summary):
     out = []
     for line in _drop_plumbing(text.split("\n"), _SUB_HEAD_RX, stop_rx=SECTION_RX):
         if _ID_LINE.search(line):
-            # an agent-id line keeps only the quoted passages that name no agent: 'I am claude-1234abcd. His words:
-            # "..."' keeps his words; a launcher prompt quoted with its mesh id ('"You are helperB of claude-...')
+            # an agent-id line keeps only the quoted passages that name no agent: 'I am an agent. the user's words:
+            # "..."' keeps the user's words; a launcher prompt quoted with its mesh id ('"You are helperB of claude-...')
             # goes with the line
             line = " ".join(m.group(0) for m in _QUOTE_RX.finditer(line) if not _QUOTE_ID_RX.search(m.group(0)))
             if not line:
@@ -656,40 +678,25 @@ def _summary_part(summary):
     return m.group(1) if m and m.group(1).strip() else summary
 
 
-def _gist_line(line):
-    g = re.sub(r"^(?:[-*+]|\d{1,2}[.)])\s+", "", line)
-    return re.sub(r"\s+", " ", re.sub(r"[*_`\"\[\]<>]", "", g)).strip()
-
-
-def _first_under(lines, head_ok, inline_ask=False):
-    """The first line of substance (not machine plumbing) under the first heading head_ok accepts."""
-    for i, line in enumerate(lines):
-        m = _ASK_LINE.match(line) if inline_ask else None
-        if m or (_is_heading(line) and head_ok(_core(line))):
-            rest = m.group(1).strip() if m else ""
-            pick = next((c for c in ([rest] if len(rest) >= 20 else []) + lines[i + 1:i + 8]
-                         if _substance(c) and not _PLUMBING.match(_core(c))), "")
-            if pick:
-                return pick
-    return ""
-
-
 def _gist(summary):
     """One line that tells a compaction from its neighbours: the ask when the summary names it ("Primary Request and
-    Intent", "Open asks", any markdown), else the orders section, else its first line of substance - never a bare
-    tag, a heading, the transcript's preface, an identity line or machine plumbing - then '; next: ' and the first line
-    of its NEXT / in-progress section when it has one."""
+    Intent", any markdown), else its first line of substance - never a bare tag, a heading, the transcript's preface or
+    an identity line."""
     lines = [l.strip() for l in _summary_part(summary).splitlines() if l.strip() and not _TAG_LINE.match(l)]
-    pick = (_first_under(lines, _ASK_HEAD.search, inline_ask=True)
-            or next((l for l in lines if _ASK_INLINE.match(_core(l)) and len(_core(l)) >= 30), "")
-            or _first_under(lines, _ORDER_HEAD.search)
-            or next((l for l in lines if _substance(l) and not _PLUMBING.match(_core(l))), "")
-            or next((l for l in lines if _substance(l)), "") or next(iter(lines), ""))
-    ask = _gist_line(pick)
-    now = _gist_line(_first_under(lines, _NEXT_HEAD.match) or _first_under(lines, _NOW_HEAD.match))
-    if now and now != ask:
-        return (ask[:90].rstrip() + (" ... next: " if len(ask) > 90 else "; next: ") + now)[:200]
-    return ask[:150] or "summary text not parsed"
+    pick = ""
+    for i, line in enumerate(lines):
+        m = _ASK_LINE.match(line)
+        if m:
+            rest = m.group(1).strip()
+            pick = next((c for c in ([rest] if len(rest) >= 20 else []) + lines[i + 1:i + 8] if _substance(c)), "")
+            break
+    if not pick:
+        pick = next((l for l in lines if _substance(l)), "")
+    if not pick:
+        pick = next(iter(lines), "")
+    g = re.sub(r"^(?:[-*+]|\d{1,2}[.)])\s+", "", pick)
+    g = re.sub(r"\s+", " ", re.sub(r"[*_`\"\[\]<>]", "", g)).strip()
+    return g[:150] or "summary text not parsed"
 
 
 _AGENT_ID_RX = re.compile(r"^[A-Za-z0-9_-]{4,64}$")
@@ -703,7 +710,7 @@ def agent_identity(agent_id, agent_type="", session_id="", transcript_path=""):
     PreCompact/PostCompact arrive with no agent_id (measured 12 Oct 15:18: recovery agents s03 and s04 compacted and
     both payloads lacked it). This function uses agent_id when a payload carries one; agent_from_transcripts() finds
     the agent when it does not. Before 12 Oct this file did neither, so twenty FEI stream agents' compactions were filed
-    under their coordinator's session (5e550005). The agent's description and transcript sit beside the parent's
+    under their coordinator's session (agent). The agent's description and transcript sit beside the parent's
     transcript, in <session>/subagents/**/agent-<id>.meta.json. Returns {} for the main thread."""
     agent_id = str(agent_id or "").strip()
     if agent_id.startswith("agent-"):
@@ -799,7 +806,7 @@ def agent_from_transcripts(summary, session_id="", transcript_path="", window_s=
 
 
 def _agent_label(runtime, session_id, agent=None):
-    """'claude session 5e550005', or for a subagent 'claude workflow-subagent B04 ... (agent 5e550006, session 5e550005)'."""
+    """'claude session agent', or for a subagent 'claude workflow-subagent B04 ... (agent a19d5a05, session agent)'."""
     sid8 = (session_id or "unknown")[:8]
     if not agent or not agent.get("agent_id"):
         return "%s session %s" % (runtime, sid8)
@@ -947,12 +954,12 @@ def save_node(summary, runtime, session_id, trigger, source_path="", when=None, 
         # Backfill only: the same compaction the hook saved, whose text the transcript wraps in a preface and a tail.
         # Until 14 Oct any row of the session and agent within window_s counted as this compaction, so a session that
         # compacts every few minutes lost the next one (the 24 h to 14 Oct 07:50: 112 of 1,154 main-thread compactions
-        # had no node, all in headless sessions; 5e550007 lost 18 of 71). A row is now this compaction only when the
+        # had no node, all in headless sessions; e7253a64 lost 18 of 71). A row is now this compaction only when the
         # hook saved it (a backfilled one is matched by its sha above) and its summary is this text, measured both ways
         # (_same_compaction). Any agent: the hook files a subagent's compaction under its parent with no agent_id until
         # attribute() finds the agent. The sweep's window is 120 s from the compaction's boundary: a hook row lands 5 s
         # before to 47 s after it (1,067 rows, 48 h to 14 Oct 08:5x). Wider is not safer: two compactions of one
-        # session can share most of their text (5e550008 at 07:34:46 and 07:41:10 on 14 Oct share 0.86-0.91).
+        # session can share most of their text (9643c560 at 07:34:46 and 07:41:10 on 14 Oct share 0.86-0.91).
         flat = _WS_RX.sub(" ", summary)
         for r in rows:
             try:
@@ -1041,28 +1048,7 @@ def save_node(summary, runtime, session_id, trigger, source_path="", when=None, 
     if math_draft:
         row["math_draft"] = math_draft
     _append(INDEX, row)
-    _overlay_vectors()
     return path
-
-
-def _overlay_vectors():
-    """Start the fresh-vector overlay for the anchor just written, as brain.py remember() does for its memories. On a
-    macOS machine (6 Nov 2026) the overlay ran only from remember(), so compaction anchors (35 of 253 rows that day) waited for
-    the next remember to get a vector: 20 memories had none for 1.5 h. Single-flight and detached; never in a test
-    folder (COMPACT_NODES_ROOT or COMPACT_ANCHOR_DIR set). COMPACT_NO_VECTORS=1 turns it off. POSIX only: on Windows
-    this would be a new spawn site from the PostCompact hook, and remember() still covers it there."""
-    if os.name == "nt" or os.environ.get("COMPACT_ANCHOR_DIR") or os.environ.get("COMPACT_NODES_ROOT") \
-            or os.environ.get("COMPACT_NO_VECTORS"):
-        return
-    try:
-        import importlib.util
-        spec = importlib.util.spec_from_file_location(
-            "fresh_vectors", os.path.join(os.path.dirname(os.path.abspath(__file__)), "fresh_vectors.py"))
-        fv = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(fv)
-        fv.spawn_detached()
-    except Exception:
-        pass
 
 
 def _stage_math_draft(extra, name, runtime, session_id, source_path):
@@ -1141,7 +1127,7 @@ def ensure_anchors():
 def ensure_orphan_nodes(days=2, min_age_s=300, dry=False):
     """Give an INDEX row and an anchor to a node file that has neither. save_node writes the node, then the anchor, then
     the row; a PostCompact hook cut off between them (a second compaction of the same session 54-97 s later, 3 of 1,137
-    in two days of use) leaves a node that ensure_anchors cannot see, because it walks INDEX rows only.
+    on 2-3 Nov, found by an agent) leaves a node that ensure_anchors cannot see, because it walks INDEX rows only.
     Walks the last `days` date folders, skips files younger than `min_age_s` (a live writer may be between its steps),
     rebuilds anchor and row from the node's own frontmatter. Never deletes; returns the names repaired."""
     known = {r.get("name") for r in _index_rows()}
@@ -1425,10 +1411,10 @@ def _codex_capture_scope(identity):
     actor = os.path.basename(os.path.normpath(cwd))
     if re.fullmatch(r"w[0-9]+", actor) and norm(cwd) == norm(os.path.join(HOME, "brain_workers", actor)):
         return "pool_worker_cwd"
-    # A worker fleet (29 Oct) runs each worker in ~/codex_fleet/<run>/workers/<name>; until then every one was withheld
+    # The Mac fleet (29 Oct) runs each worker in ~/codex_fleet/<run>/workers/<name>; until then every one was withheld
     fleet = os.path.relpath(norm(cwd), norm(os.path.join(HOME, "codex_fleet"))).split(os.sep)
     if len(fleet) == 3 and fleet[1] == "workers" and fleet[0] != "..":
-        return "fleet_worker_cwd"
+        return "mac_fleet_worker_cwd"
     # A single-worker lane runs in ~/codex_fleet/<lane> itself, launched by a script that writes launch.json there
     # (recall_warm, 30 Oct: both its compactions were withheld as scope_not_allowed)
     if len(fleet) == 1 and fleet[0] not in ("..", ".") and os.path.isfile(os.path.join(cwd, "launch.json")):
@@ -1579,6 +1565,31 @@ def _spawn_late_attribution(delay=45):
     return None
 
 
+def _pid_alive(pid):
+    """Is this pid a running process? No psutil needed; an answer we cannot get counts as alive."""
+    try:
+        if os.name != "nt":
+            os.kill(int(pid), 0)
+            return True
+        import ctypes
+        k32 = ctypes.windll.kernel32
+        k32.OpenProcess.restype = ctypes.c_void_p
+        h = k32.OpenProcess(0x1000, False, int(pid))   # PROCESS_QUERY_LIMITED_INFORMATION
+        if not h:
+            return k32.GetLastError() == 5             # access denied: it exists; anything else: it does not
+        try:
+            code = ctypes.c_ulong(0)
+            if not k32.GetExitCodeProcess(ctypes.c_void_p(h), ctypes.byref(code)):
+                return True
+            return code.value == 259                   # STILL_ACTIVE
+        finally:
+            k32.CloseHandle(ctypes.c_void_p(h))
+    except ProcessLookupError:
+        return False
+    except Exception:  # noqa: BLE001
+        return True
+
+
 def _lock():
     """One sweep at a time (the background backfill and the periodic sweep would race on INDEX.jsonl)."""
     path = os.path.join(ROOT, "sweep.lock")
@@ -1589,13 +1600,29 @@ def _lock():
         old = 0
     if old and old != os.getpid():
         try:
+            try:
+                # psutil lives in the user site, which `python -s` hides (the compaction hooks run that way). Until
+                # 10 Nov 2026 the failed import was read as "a sweep is running", so under -s a dead holder's
+                # lock was never taken over.
+                import _usersite  # noqa: F401
+            except Exception:  # noqa: BLE001
+                pass
             import psutil
             if psutil.pid_exists(old) and "compact_nodes" in " ".join(psutil.Process(old).cmdline()):
                 return None
+        except ImportError:
+            if _pid_alive(old):   # no psutil at all: a live pid keeps the lock, a dead one loses it
+                return None
         except Exception:  # noqa: BLE001
             return None
-    with io.open(path, "w") as fh:
-        fh.write(str(os.getpid()))
+    # A sharing violation (another sweep writing or removing the lock this instant) reads as "held": the callers
+    # already wait and retry. On 12 Nov 2026 16:41 it surfaced as an uncaught PermissionError instead and killed
+    # an --attribute pass outright (errors.log).
+    try:
+        with io.open(path, "w") as fh:
+            fh.write(str(os.getpid()))
+    except PermissionError:
+        return None
     return path
 
 
@@ -1854,13 +1881,11 @@ def attribute(days=1.0, state=None, settle_s=1800, dry=False):
     return n
 
 
-def refresh_gists(dry=False, stale=False):
-    """Rewrite every anchor whose description ended in a bare <summary>/<analysis> tag (the gist before 12 Oct); with
-    stale, also every anchor whose description does not carry the gist _gist now gives its summary (30 Oct rule)."""
+def refresh_gists(dry=False):
+    """Rewrite every anchor whose description ended in a bare <summary>/<analysis> tag (the gist before 12 Oct)."""
     n = 0
     for r in _index_rows():
-        if r.get("capture_kind") in ("manual_checkpoint", "codex_boundary_metadata") or not r.get("name") \
-                or not r.get("node"):
+        if r.get("capture_kind") == "manual_checkpoint" or not r.get("name") or not r.get("node"):
             continue
         apath = os.path.join(MEM, r["name"] + ".md")
         try:
@@ -1868,13 +1893,7 @@ def refresh_gists(dry=False, stale=False):
                 desc = next((ln for ln in fh if ln.startswith("description:")), "")
         except OSError:
             continue
-        redo = BARE_DESC_RX.search(desc.rstrip("\n"))
-        if not redo and stale and "content withheld" not in desc:
-            try:
-                redo = _gist(_node_parts(r["node"])[1].strip()).replace("\"", "'") not in desc
-            except OSError:
-                redo = False
-        if redo:
+        if BARE_DESC_RX.search(desc.rstrip("\n")):
             if dry:
                 n += 1
                 continue
@@ -2238,9 +2257,7 @@ def main():
                 if not dry:
                     _save_state(st)
             if "--refresh-gists" in sys.argv:
-                stale = "--stale" in sys.argv
-                print("anchors with a %s gist %s:" % ("stale" if stale else "bare-tag", "to rewrite" if dry else "rewritten"),
-                      refresh_gists(dry, stale))
+                print("anchors with a bare-tag gist %s:" % ("to rewrite" if dry else "rewritten"), refresh_gists(dry))
         finally:
             try:
                 os.remove(lock)
@@ -2283,7 +2300,7 @@ def main():
                          **({"agent_id": agent["agent_id"]} if agent else {})))
     if path:
         print("compaction summary saved as its own brain node: %s" % path.replace(os.sep, "/"))
-    try:   # an earlier PostCompact cut off between node and row is repaired by the next one
+    try:   # an earlier PostCompact cut off between node and row is repaired by the next one (3 Nov)
         ensure_orphan_nodes()
     except Exception:  # noqa: BLE001 - repair must never fail the hook
         pass
@@ -2297,7 +2314,7 @@ if __name__ == "__main__":
         main()
     except Exception as exc:
         try:
-            import traceback
+            import traceback   # 29 Oct: a bare IndexError row (11:41) could not be traced to a mode or a line
             _append(os.path.join(ROOT, "errors.log"), {"at": _now().isoformat(timespec="seconds"), "error": _clean(repr(exc))[:500],
                                                       "argv": sys.argv[1:6], "where": _clean(traceback.format_exc()[-900:])})
         except Exception:

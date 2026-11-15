@@ -3,20 +3,16 @@
 Same guarantee as safe_push.py (nothing pushes unless every byte of the range
 scanned clean), sliced commit-by-commit so the scanner's per-run size bound is
 respected instead of exceeded. Endpoints pinned once up front; the push targets
-the exact scanned tip. Fails closed on any slice not printing the clean line."""
+the exact scanned tip. Fails closed on any slice not printing the clean line.
+The lower bound comes from a fetch made here, the tip must be a fast-forward of it, and the push holds the remote to
+it (--force-with-lease): before 28 Sep the base was whatever the tracking ref last saw, and after a rewind of the
+remote a push from it made commits reachable that no slice had scanned (account02/B06 r63/r64)."""
 import os
 import subprocess
 import sys
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
-REPO = os.path.expanduser(r"~/brain-repo")
-SCANNER = os.path.expanduser(r"~/.claude/dreaming/scan_secrets.py")
+REPO = r"~\brain-repo"
+SCANNER = r"~\.claude\dreaming\scan_secrets.py"
 os.environ["GIT_TERMINAL_PROMPT"] = "0"
 os.environ["GCM_INTERACTIVE"] = "never"
 os.chdir(REPO)
@@ -28,8 +24,12 @@ def git(*args):
         sys.exit(3)
     return p.stdout.strip()
 
+git("fetch", "-q", "origin", "main")
 base = git("rev-parse", "origin/main")
 tip = git("rev-parse", "main")
+if subprocess.run(["git", "merge-base", "--is-ancestor", base, tip]).returncode != 0:
+    print("origin/main is not an ancestor of main - rebase first; nothing pushed")
+    sys.exit(3)
 commits = git("rev-list", "--reverse", "%s..%s" % (base, tip)).split()
 print("pinned base %s tip %s | %d commits" % (base[:10], tip[:10], len(commits)))
 
@@ -51,8 +51,8 @@ if prev != tip:
     print("slice walk did not end at the pinned tip - refusing.")
     sys.exit(2)
 
-p = subprocess.run(["git", "push", "origin", "%s:refs/heads/main" % tip],
-                   capture_output=True, text=True)
+p = subprocess.run(["git", "push", "--force-with-lease=refs/heads/main:%s" % base, "origin",
+                    "%s:refs/heads/main" % tip], capture_output=True, text=True)
 print((p.stdout + p.stderr).strip()[-400:])
 if p.returncode:
     print("PUSH FAILED")

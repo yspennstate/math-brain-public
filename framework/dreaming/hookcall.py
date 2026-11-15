@@ -5,13 +5,13 @@
     if r.timed_out: ...          # both tries ran past the cap: record the row as timed out, not as a miss
     r.stdout, r.stderr, r.returncode, r.attempts, r.seconds, r.cap
 
-The cap follows the hook's own clock instead of a number fixed in each evaluator. A rehearsal may give the math hook
-MATHBRAIN_TIME_BUDGET_S=300 and MATHBRAIN_INTEGRITY_GRACE_S=60; an evaluator with a fixed 90 or 180 s cap then kills slow
-but legitimate calls on a loaded machine. Where the evaluator catches the timeout the row reads as a miss, and where it
-does not the whole bench dies. The cap is the hook's budget plus its integrity grace plus a margin for interpreter start
-and the store load, never under a floor. The defaults when the env says nothing are the math hook's: 30 s and 2 s for an
-interactive prompt, and 50 s and 8 s for a prompt opening with the headless-worker marker (MATHBRAIN_HEADLESS_BUDGET_S,
-MATHBRAIN_HEADLESS_GRACE_S).
+The cap follows the hook's own clock instead of a number fixed in each evaluator. A rehearsal gives the math hook
+MATHBRAIN_TIME_BUDGET_S=300 and MATHBRAIN_INTEGRITY_GRACE_S=60; evaluators capped at 90, 180 or 240 s killed slow but
+legitimate calls on a loaded laptop. Where the evaluator caught the timeout the row read as a miss (27 and 21 rows of two
+arms on 25 Sep; paired re-runs of those rows differed on none), and where it did not the whole bench died (the pitfall bench,
+twice on cand70, 26 Sep). The cap is the hook's budget plus its integrity grace plus a margin for interpreter start and the
+store load, never under a floor. The hook's own defaults when the env says nothing: 30 s and 2 s for an interactive prompt,
+50 s and 8 s for one opening with the headless-worker marker (math_sense.py, _headless_budget).
 
 A call past the cap is asked once more (a transient stall on a busy machine is the usual cause); when the second call also
 runs past it the result says so, and the caller writes the row as timed out so a scorer can leave it out of both arms instead

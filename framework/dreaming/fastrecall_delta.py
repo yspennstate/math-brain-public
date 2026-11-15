@@ -1,6 +1,6 @@
 """Cards added to the math store since a prepared recall state was built, indexed into that state in memory.
 
-RECALL-10X lead 2 (29 Oct 2026). fastrecall.open_prepared serves a state up to STALE_S seconds
+RECALL-10X lead 2 (an agent, 29 Oct 2026). fastrecall.open_prepared serves a state up to STALE_S seconds
 behind the store, so a card ingested a minute ago is not findable until the next prebuild (hours on a starved disk);
 asking for it with STALE_S=0 costs a live read of the whole store (30-97 s a call on 29 Oct, one over 900 s).
 
@@ -26,7 +26,7 @@ MAX_CARDS = int(os.environ.get("MATH_RECALL_DELTA_MAX", "5000") or 5000)
 def _connect(store_path):
     uri = "file:%s?mode=ro" % os.path.abspath(store_path).replace("\\", "/")
     con = sqlite3.connect(uri, uri=True, timeout=30)
-    # One read transaction per reader, so the new cards, the retracted set and the new links come
+    # RECALL-10X lead 3: one read transaction per reader, so the new cards, the retracted set and the new links come
     # from one version of the store (as separate statements a write landing between them mixed two versions).
     con.execute("BEGIN")
     return con

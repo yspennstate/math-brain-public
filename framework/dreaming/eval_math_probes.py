@@ -34,14 +34,19 @@ import time
 import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STATE = os.environ.get("MATHBRAIN_PROBES", os.path.join(HERE, "state"))
-BUILD_SRC = os.environ.get("MATHBRAIN_SRC", os.path.join(HERE, "..", "mathbrain", "src"))
-STORE = os.environ.get("MATHBRAIN_STORE", "")
+STATE = os.path.join(HERE, "state")
+BUILD_SRC = r"~/math-brain-build/src"
+STORE = r"~/math-brain-build/local/population/brain.sqlite3"
 SETS = {
     "tier1": "math_probe_gold.jsonl",
     "tier2": "math_probe_gold_tier2.jsonl",
     "unanswerable": "math_probe_unanswerable.jsonl",
 }
+
+
+import os as _ko_os, sys as _ko_sys  # noqa: E402
+_ko_sys.path.insert(0, _ko_os.path.join(_ko_os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
+from quarantine_rows import keep_old  # noqa: E402  a rerun keeps the previous output (R13 trap 1, 27 Sep): brain data is never deleted
 
 
 def _rows(path):
@@ -244,7 +249,7 @@ def main():
             rows = rows[: args.sample]
         results.extend(score_set(name, rows, ms, retrieve, nodes, edges, ms.CANDIDATE_POOL, stems=stems))
         print(f"  {name}: {len(rows)} probes done at {time.time()-t0:.0f}s", flush=True)
-    with io.open(args.out, "w", encoding="utf-8") as handle:
+    with io.open(keep_old(args.out), "w", encoding="utf-8") as handle:
         for r in results:
             handle.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(summarize(results))

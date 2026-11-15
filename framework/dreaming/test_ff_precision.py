@@ -1,8 +1,8 @@
 """test_ff_precision.py - a forward-feed fire is selected by its own judged route record, and every fire's hint names
-the route it came through (27 Sep 2026, from a scheduled audit). Its acceptance test: synthetic low-precision ff
-evidence changes ff selection and leaves regex selection for the same id alone.
+the route it came through (27 Sep, an agent; scheduled audit account01/B04 auto11, F158 and F159). The acceptance
+B04 wrote: synthetic low-precision ff evidence changes ff selection and leaves regex selection for the same id alone.
 
-    python test_ff_precision.py [PATH_TO_instinct_prime.py]     (default: the copy beside this file)
+    python test_ff_precision.py [PATH_TO_instinct_prime.py]
 
 Controls (synthetic precision; fake gfcore and forward_feed modules; the fire and suppression logs sent to temp files):
  1. ff judged 1 of 10: the ff fire is not added, and a 'precision_ff' suppression is recorded
@@ -13,18 +13,15 @@ Controls (synthetic precision; fake gfcore and forward_feed modules; the fire an
  6. the hint of an ff fire quotes the ff record ('1 of 10 ... forward feed'); a regex fire quotes the pooled record
     ('6 of 20'); an ff fire with no ff record falls back to the pooled one
 """
-if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-    raise SystemExit(0)
 import importlib.util
 import os
 import sys
 import tempfile
 import types
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-IP = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "instinct_prime.py")
-sys.path.insert(0, HERE)
+H = os.path.expanduser("~")
+IP = sys.argv[1] if len(sys.argv) > 1 else os.path.join(H, ".claude", "dreaming", "instinct_prime.py")
+sys.path.insert(0, os.path.join(H, ".claude", "dreaming"))
 spec = importlib.util.spec_from_file_location("ip_under_test", IP)
 ip = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ip)

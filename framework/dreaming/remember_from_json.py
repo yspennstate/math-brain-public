@@ -19,13 +19,6 @@ look like a slug all stop before brain.py is called.
 """
 import json, os, subprocess, sys, tempfile
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 BRAIN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "brain.py")
 NEEDED = ("slug", "type", "desc", "body")
 TYPES = ("project", "feedback", "user", "reference")
@@ -74,7 +67,7 @@ def main():
         return r.returncode
 
     # read the memory BACK and prove the fields survived, because that is the failure this tool exists for
-    path = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}", "memory", slug + ".md")
+    path = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory", slug + ".md")
     try:
         saved = open(path, encoding="utf-8").read()
     except Exception as e:

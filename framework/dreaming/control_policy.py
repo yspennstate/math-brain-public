@@ -25,7 +25,7 @@ The policy:
      confidence, read live from PREDICTIONS.md. Overconfident domain -> confidence comes down before the
      decision. Too few resolved bets -> a conservative default haircut, labelled provisional.
   2. threshold against the stakes - low stakes: a low bar, act and move; high stakes (money, a secret,
-     irreversible, deploy-to-live, the owner's phone): a high bar, and a miss routes to ASK, never a
+     irreversible, deploy-to-live, the author's phone): a high bar, and a miss routes to ASK, never a
      silent guess.
 
   python control_policy.py                     # show the policy + the domains' live haircuts
@@ -92,7 +92,7 @@ def decide(confidence, domain, stakes, cal=None):
         why = "in the middle band - take one concrete observation on the real target before you act or claim"
     elif stakes == "high":
         dec = "ASK"
-        why = "below the bar and the stakes are high - surface it to the owner, do not act on a guess"
+        why = "below the bar and the stakes are high - surface it to the author, do not act on a guess"
     else:
         dec = "ABSTAIN"
         why = "below the bar and low/medium stakes - don't assert it; hedge or drop it rather than guess"

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """eval_bhat_flag.py - calibrate and gate the B_hat thin-evidence flag (diffusion iteration 5).
 
-THE OBJECT. a finite-sample ratio decomposition proves the exact finite-p identity
+THE OBJECT. Chapter 7 of the path-convergence paper proves the exact finite-p identity
 m_p - m_inf = n_hat / B_hat: retrieval error is a centered fluctuation over the empirical
 evidence-mass denominator. The principled thin-evidence flag is therefore "B_hat small at the
 query" - not the sqrt(d_eff/n_eff) initial-slope heuristic (that survives only as a secondary
-diagnostic; the growing-dimensional interior law is open, so no retrieval-error
+diagnostic; chapter 16 lists the growing-dimensional interior law as OPEN, so no retrieval-error
 law is claimed for it). Implementation (brain._semantic_scores diag):
     B_hat = (sum of live seed strengths) * ||strength-weighted mean of unit seed vectors||
           = evidence mass x seed-cloud coherence
@@ -42,7 +42,7 @@ HOME = os.path.expanduser("~")
 DR = os.path.join(HOME, ".claude", "dreaming")
 sys.path.insert(0, DR)
 ARCHIVE = os.path.join(HOME, "brain-repo", "11_raw_session_transcripts",
-                       "claude_projects", "{{BRAIN_SLUG}}")
+                       "claude_projects", os.environ.get("BRAIN_SLUG", "default"))
 
 try:
     import ctypes
@@ -60,7 +60,7 @@ except Exception:
 
 CONFIDENT = [
     "flashing terminal windows scheduled task",
-    "never start the local protected production stack",
+    "never start the local unrelated systems",
     "grid harvest one second data only",
     "roll cadence gamma replenishment puts",
     "research writing human voice no AI tells",
@@ -98,7 +98,7 @@ def mine_queries(cap=300):
     except Exception:
         return []
     rows.sort(reverse=True)
-    roots = [os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}"), ARCHIVE,
+    roots = [os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default")), ARCHIVE,
              os.path.join(HOME, ".codex", "sessions")]
     by_artifact = {}
     for _, art, line_no in rows:

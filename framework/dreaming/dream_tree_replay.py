@@ -1,62 +1,60 @@
-"""dream_tree_replay.py - replay the local commits of a brain repo onto the advertised main without a worktree.
+"""dream_tree_replay.py - replay the local commits of the brain repo onto the advertised main without a worktree.
 
     python dream_tree_replay.py <repo> <onto_oid> [<memory_dir> [<mirror_prefix>]]
 
 Exit 0 and print the new head sha when every commit in <onto>..HEAD replays with `git merge-tree --write-tree` (a
-commit that becomes empty against the new base is dropped, as `git rebase` drops it, and a commit whose patch is
-already upstream is skipped). Exit 3 on a conflict it cannot settle, a merge commit, a signed or re-encoded commit, or
-a git error, so the caller can fall back to an ordinary rebase. It writes only objects: no ref, no working tree, and
-only a private temporary index. Moving the branch to the printed sha is the caller's job.
+commit that becomes empty against the new base is dropped, as `git rebase` drops it). A conflict on a memory-mirror
+path (<mirror_prefix>, default 01_ai_consciousness/claude/memory/) is resolved with the live memory file from
+<memory_dir>, exactly as the worktree rebase in dream_git_sync.ps1 resolves it; that is done only when a memory_dir is
+given, every conflicted path is such a mirror, and each has a live file. Exit 3 on any other conflict, a merge commit,
+a signed or re-encoded commit, or a git error, so the caller falls back to the worktree rebase it has always used.
+Writes only objects: no ref, no working tree, and only a private temporary index.
 
-Why: rebasing local commits in a temporary worktree checks out every file of the repo. A brain repo holds hundreds of
-thousands of small files, and on a slow disk that checkout alone can take a quarter of an hour to replay one commit.
-merge-tree computes the same merge from the object database in seconds.
-
-A conflicted path is settled only when the answer already exists byte for byte; nothing new is ever written:
-- MEMORY MIRROR: a path under <mirror_prefix> (default `memory/`, or DREAM_SYNC_MEMORY_PREFIX) that ends in .md takes
-  the live memory file from <memory_dir>, when one is given and the file exists. The live memory folder is the
-  source the mirror copies, so its bytes are the right answer.
-- OTHER MIRRORS: paths that copy a live file outside the memory folder, given by the caller in DREAM_SYNC_MIRRORS as
-  JSON {"prefixes": {repo_prefix: live_dir}, "files": {repo_path: live_file}}. Such a path takes its live file only
-  when that file equals one of the two sides, so the result is always a version that exists.
-- CHECKOUT: a path whose copy in the repo's own working tree equals the new base's side takes that side; the checkout
-  had already moved on from the local commit's version, so nothing it holds is lost.
-- GENERATED: a path under the generated-views prefix (default `brain/`, or DREAM_SYNC_GENERATED_PREFIX), which every
-  dream rebuilds from the memories, takes the local commit's side.
-Any other conflict declines.
+Why (2026-09-23): dream_git_sync.ps1 rebased local commits in a DETACHED TEMPORARY WORKTREE, and creating it checked
+out every one of the repo's ~244,000 files. On this disk-bound machine the 22:46 sync spent more than 15 minutes in
+`git worktree add` + `reset --hard` to replay one commit another session had made in the shared checkout. merge-tree
+computes the same ort merge from the object database alone, in seconds. Mirror conflicts (2026-09-24): a dream's own
+commit carries the memory index, which other sessions push too, so the replay of a dream commit conflicts there more
+often than not; declining sent the sync back to the half-hour worktree.
 """
-if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-    raise SystemExit(0)
-import json
+import hashlib
 import os
 import subprocess
 import sys
 import tempfile
+import time
 
 NOWIN = 0x08000000 if os.name == "nt" else 0
-MIRROR_PREFIX = os.environ.get("DREAM_SYNC_MEMORY_PREFIX", "memory/")
-GENERATED_PREFIX = os.environ.get("DREAM_SYNC_GENERATED_PREFIX", "brain/")
+MIRROR_PREFIX = "01_ai_consciousness/claude/memory/"
 
 
+# OTHER MIRRORS (2026-09-24). From 06:12 to 17:0x on 09-24 every sync declined, and then the worktree rebase aborted, on
+# 01_ai_consciousness/claude/movie_sentinel/movie_alert_hook.py: a film agent had committed the hook's mirror in the shared
+# checkout and pushed the same change another way, so both sides changed it and eight commits sat local for eleven hours
+# (memory the_dreams_sync_refused_edited_copies_and_could_skip_a_commit_2026_09_23, fourth instance). A conflict on a path
+# that mirrors a live file outside the memory corpus is now resolved - but only when the live file is byte-identical to
+# one of the two sides, so the resolution picks a version that exists and never writes a third. The table comes from the
+# caller (dream_git_sync.ps1 sets DREAM_SYNC_MIRRORS as JSON {"prefixes": {repo_prefix: live_dir}, "files": {repo_path:
+# live_file}}); without it, the defaults below.
 def _mirror_table():
+    import json
     raw = os.environ.get("DREAM_SYNC_MIRRORS", "")
-    if not raw:
-        return {}, {}
-    try:
-        t = json.loads(raw)
-        return dict(t.get("prefixes") or {}), dict(t.get("files") or {})
-    except Exception:
-        return {}, {}
-
-
-def _safe(path):
-    return not ("~" in path or ".." in path.split("/") or path.startswith("/"))
+    if raw:
+        try:
+            t = json.loads(raw)
+            return dict(t.get("prefixes") or {}), dict(t.get("files") or {})
+        except Exception:
+            return {}, {}
+    home = os.path.expanduser("~")
+    return ({"12_cognitive_architecture/dreaming/": os.path.join(home, ".claude", "dreaming"),
+             "01_ai_consciousness/claude/movie_sentinel/": os.path.join(home, ".claude", "movie_sentinel")},
+            {"01_ai_consciousness/claude/CLAUDE.md": os.path.join(home, ".claude", "CLAUDE.md"),
+             "01_ai_consciousness/codex/AGENTS.md": os.path.join(home, ".codex", "AGENTS.md")})
 
 
 def other_mirror_live(path):
     """The live file a non-memory mirror path copies, if it exists; None otherwise."""
-    if not _safe(path):
+    if "~" in path or ".." in path.split("/"):
         return None
     prefixes, files = _mirror_table()
     live = files.get(path)
@@ -68,9 +66,22 @@ def other_mirror_live(path):
     return live if live and os.path.isfile(live) else None
 
 
+# TWO MORE RULES (2026-10-06). From 5 Oct 03:12 to 6 Oct 23:16Z ten commits stayed local (memory
+# the_dreams_sync_refused_edited_copies_and_could_skip_a_commit_2026_09_23, fifth instance). A session had committed
+# campaign files in the shared checkout, its push failed, and it then pushed newer versions of the same files through
+# a private index; and the dream's own brain views, regenerated by four local consolidations, had also been landed by
+# hand upstream. Both are now resolved without inventing content:
+# - CHECKOUT: a conflicted path whose copy in the shared checkout is byte-identical to the new base's side takes that
+#   side. The checkout itself already moved on from the local commit's version, so nothing the checkout holds is lost.
+#   A copy equal to the local commit's side, or to neither, still declines.
+# - GENERATED: a conflict under 01_ai_consciousness/brain/ (views every dream rebuilds from the memories) takes the
+#   local commit's side, so the replayed tip carries the newest local generation; the persist step rebuilds them anyway.
+GENERATED_PREFIX = "01_ai_consciousness/brain/"
+
+
 def checkout_copy(repo, path):
-    """The working tree's own copy of a conflicted path, if it is a plain file inside the repo; None otherwise."""
-    if not _safe(path):
+    """The shared checkout's own copy of a conflicted path, if it is a plain file inside the repo; None otherwise."""
+    if "~" in path or ".." in path.split("/") or path.startswith("/"):
         return None
     f = os.path.join(repo, *path.split("/"))
     return f if os.path.isfile(f) else None
@@ -83,7 +94,7 @@ def git(repo, *args, inp=None, env=None):
 
 
 def live_path(memory_dir, prefix, path):
-    if not memory_dir or not path.startswith(prefix) or not _safe(path) or not path.endswith(".md"):
+    if not memory_dir or not path.startswith(prefix) or "~" in path or not path.endswith(".md"):
         return None
     live = os.path.join(memory_dir, *path[len(prefix):].split("/"))
     return live if os.path.isfile(live) else None
@@ -94,15 +105,199 @@ def _blob(repo, rev, path):
     return out.decode("ascii", "replace").strip() if rc == 0 else None
 
 
-def _hash(repo, path, f):
-    rc, sha, _ = git(repo, "hash-object", "--path", path, "--", f)
-    return sha.decode("ascii", "replace").strip() if rc == 0 else None
+CARRY_PREFIX = "12_cognitive_architecture/sync_carried/"
+CARRY_README = "\n".join((
+    "# sync_carried",
+    "",
+    "Local versions of files that the nightly sync could not merge.",
+    "",
+    "A commit made in the laptop's shared checkout edited a file that GitHub's main had also edited, and the local",
+    "bytes were never on main at that path. The sync keeps main's version at the path and puts the local version",
+    "here, under the first ten characters of the local commit and then the file's own path, so neither is lost.",
+    "Compare the two, fold in what matters, then this copy can go.",
+    "",
+    "A .jsonl log is carried only when it has a line that no file here or beside the original holds, and an older",
+    "carried copy of the same log goes when a newer one holds every line of it.",
+    ""))
+_UPSTREAM = {"range": None, "cache": {}}
+_LINES = {}
+
+
+def _line_set(repo, blob):
+    """Digests of the non-blank lines of a blob already in the object store, or None. Never fetches."""
+    if blob not in _LINES:
+        rc, out, _ = git(repo, "cat-file", "blob", blob, env=dict(os.environ, GIT_NO_LAZY_FETCH="1"))
+        _LINES[blob] = None if rc != 0 else frozenset(
+            hashlib.blake2b(l.rstrip(b"\r"), digest_size=16).digest() for l in out.split(b"\n") if l.strip())
+    return _LINES[blob]
+
+
+def _held_log(repo, base, path, blob):
+    """(held, older) for a .jsonl line-record log whose local version would be carried.
+
+    held  - every non-blank line of the local blob is in a file of the new base that stays: a .jsonl of the same stem
+            in the path's folder (PROMPTS_2026-10.p01.jsonl beside PROMPTS_2026-10.jsonl, and the path itself) or a
+            carried copy of the path. Carrying it would add nothing but bytes.
+    older - carried copies of the path in the new base whose every line is in the local blob; the new carried copy
+            replaces them.
+    A blob that cannot be read without a fetch counts as holding nothing, so the doubt always ends in a carry.
+
+    Why (2026-11-10): seven local commits had each snapshotted two monthly prompt logs, and the replay carried all
+    seven: 195 MB, of which 162.5 MB was lines the tree already held."""
+    mine = _line_set(repo, blob)
+    if not mine:
+        return False, []
+    folder, _, name = path.rpartition("/")
+    stem = name.split(".")[0]
+    found = []
+    rc, out, _ = git(repo, *(["ls-tree", "-z", base] + (["--", folder + "/"] if folder else [])))
+    if rc != 0:
+        return False, []
+    for rec in out.split(b"\0"):
+        head, _, nm = rec.partition(b"\t")
+        f = head.decode("ascii", "replace").split()
+        n = nm.decode("utf-8", "surrogateescape")
+        if len(f) == 3 and f[1] == "blob" and n.endswith(".jsonl") and n.rpartition("/")[2].split(".")[0] == stem:
+            found.append((None, f[2]))
+    rc, out, _ = git(repo, "ls-tree", "-r", "-z", base, "--", CARRY_PREFIX)
+    if rc != 0:
+        return False, []
+    for rec in out.split(b"\0"):
+        head, _, nm = rec.partition(b"\t")
+        f = head.decode("ascii", "replace").split()
+        n = nm.decode("utf-8", "surrogateescape")
+        if len(f) == 3 and f[1] == "blob" and n[len(CARRY_PREFIX):].partition("/")[2] == path:
+            found.append((n, f[2]))
+    pool, older = set(), []
+    for carried_name, b in found:
+        s = _line_set(repo, b)
+        if s is None:
+            continue
+        pool |= s
+        if carried_name is not None and s <= mine:
+            older.append(carried_name)
+    if mine <= pool:
+        return True, []
+    return False, older
+
+
+def _entry(repo, rev, path):
+    """(mode, blob) of a regular file or symlink at rev:path, else None."""
+    rc, out, _ = git(repo, "ls-tree", "-z", rev, "--", path)
+    if rc != 0:
+        return None
+    for rec in out.split(b"\0"):
+        head, _, name = rec.partition(b"\t")
+        f = head.decode("ascii", "replace").split()
+        if len(f) == 3 and f[1] == "blob" and name.decode("utf-8", "surrogateescape") == path:
+            return f[0], f[2]
+    return None
+
+
+def _upstream_blobs(repo, paths):
+    """{path: set of blob ids main wrote at that path since the merge base}; one tree walk per 40 paths, cached."""
+    cache = _UPSTREAM["cache"]
+    need = [p for p in paths if p not in cache]
+    if need and not _UPSTREAM["range"]:
+        return None
+    for i in range(0, len(need), 40):
+        chunk = need[i:i + 40]
+        rc, out, _ = git(repo, "-c", "core.quotepath=false", "log", "--format=", "--raw", "-z", "--no-abbrev",
+                         "--no-renames", _UPSTREAM["range"], "--", *[":(literal)" + p for p in chunk])
+        if rc != 0:
+            return None
+        for p in chunk:
+            cache[p] = set()
+        parts = out.split(b"\0")
+        j = 0
+        while j + 1 < len(parts):
+            meta = parts[j].strip()
+            if not meta.startswith(b":"):
+                j += 1
+                continue
+            f = meta[1:].decode("ascii", "replace").split()
+            name = parts[j + 1].decode("utf-8", "surrogateescape")
+            if len(f) == 5 and name in cache:
+                cache[name].add(f[3])
+            j += 2
+    return dict((p, cache.get(p, set())) for p in paths)
+
+
+_CONVERTING_ATTRS = ("text", "eol", "filter", "ident", "working-tree-encoding")
+
+
+def _plain_paths(repo, paths):
+    """The paths whose stored bytes are exactly the file's bytes: core.autocrlf is off and no attribute that converts
+    on add is set for the path. An empty set when either cannot be read, so the caller keeps the per-path call."""
+    rc, out, _ = git(repo, "config", "--get", "core.autocrlf")
+    if rc not in (0, 1) or (rc == 0 and out.strip().lower() not in (b"false", b"")):
+        return set()
+    inp = b"".join(p.encode("utf-8", "surrogateescape") + b"\0" for p in paths)
+    rc, out, _ = git(repo, "check-attr", "-z", "--stdin", *_CONVERTING_ATTRS, inp=inp)
+    if rc != 0:
+        return set()
+    parts = out.split(b"\0")
+    seen, converting = set(), set()
+    for i in range(0, len(parts) - 2, 3):
+        name = parts[i].decode("utf-8", "surrogateescape")
+        seen.add(name)
+        if parts[i + 2] != b"unspecified":
+            converting.add(name)
+    return set(p for p in paths if p in seen and p not in converting)
+
+
+def _hash_live(repo, lives):
+    """{path: blob id} for the live files, each written to the object store as the blob `git add` would store at that
+    path. Paths that need no conversion go through one `hash-object --no-filters --stdin-paths`; the first two are
+    hashed the per-path way as well, and a difference sends every path back to the per-path call. None on failure."""
+    out = {}
+    plain = [p for p in lives if "\n" not in lives[p] and "\r" not in lives[p]]
+    if len(plain) > 2:
+        ok = _plain_paths(repo, plain)
+        plain = [p for p in plain if p in ok]
+    else:
+        plain = []
+    if plain:
+        inp = "".join(lives[p] + "\n" for p in plain).encode("utf-8", "surrogateescape")
+        rc, o, _ = git(repo, "hash-object", "-w", "--no-filters", "--stdin-paths", inp=inp)
+        shas = o.decode("ascii", "replace").split()
+        if rc == 0 and len(shas) == len(plain):
+            out = dict(zip(plain, shas))
+            for p in plain[:2]:
+                rc, one, _ = git(repo, "hash-object", "-w", "--path", p, "--", lives[p])
+                if rc != 0 or one.decode("ascii", "replace").strip() != out[p]:
+                    out = {}
+                    break
+    for p, live in lives.items():
+        if p in out:
+            continue
+        rc, blob, _ = git(repo, "hash-object", "-w", "--path", p, "--", live)
+        if rc != 0:
+            return None
+        out[p] = blob.decode("ascii").strip()
+    return out
+
+
+def _progress(text):
+    """Append one line to the file named by DREAM_REPLAY_PROGRESS, if set. Never raises."""
+    path = os.environ.get("DREAM_REPLAY_PROGRESS")
+    if not path:
+        return
+    try:
+        with open(path, "a", encoding="utf-8", newline="\n") as fh:
+            fh.write("%s %s\n" % (time.strftime("%H:%M:%S"), text))
+    except OSError:
+        pass
 
 
 def resolve_from_live(repo, tree, paths, memory_dir, prefix, sides=(), other=None, rules=None):
-    """Return the tree with each conflicted path settled, or None. sides = (new base, local commit). `other`, if a
-    list, collects the non-memory mirror paths settled; `rules`, if a dict, collects {path: "checkout" | "generated"}."""
+    """Return the tree with each conflicted path resolved, or None. A memory mirror takes its live memory file; another
+    mirror takes its live file only when that file equals one side (sides = the two revs being merged: the new base,
+    then the local commit). Any other path takes the base's side when the shared checkout's copy equals it, or, under
+    01_ai_consciousness/brain/, the local commit's side. `other`, if a list, collects the non-memory mirror paths
+    resolved; `rules`, if a dict, collects {path: "checkout" | "generated"} for the two newer rules."""
     lives, blobs = {}, {}
+    pending, modes, removals, carry = [], {}, [], {}
     for p in paths:
         live = live_path(memory_dir, prefix, p)
         if live is None:
@@ -110,7 +305,7 @@ def resolve_from_live(repo, tree, paths, memory_dir, prefix, sides=(), other=Non
             if live is None:
                 if len(sides) != 2:
                     return None
-                if GENERATED_PREFIX and p.startswith(GENERATED_PREFIX):
+                if p.startswith(GENERATED_PREFIX):
                     blob = _blob(repo, sides[1], p)
                     if blob is None:
                         return None
@@ -120,19 +315,79 @@ def resolve_from_live(repo, tree, paths, memory_dir, prefix, sides=(), other=Non
                     continue
                 cc = checkout_copy(repo, p)
                 base_blob = _blob(repo, sides[0], p)
-                if cc is None or base_blob is None or _hash(repo, p, cc) != base_blob:
+                if cc is not None and base_blob is not None:
+                    rc, sha, _ = git(repo, "hash-object", "--path", p, "--", cc)
+                    if rc == 0 and sha.decode("ascii", "replace").strip() == base_blob:
+                        blobs[p] = base_blob
+                        if rules is not None:
+                            rules[p] = "checkout"
+                        continue
+                pending.append(p)
+                continue
+            rc, sha, _ = git(repo, "hash-object", "--path", p, "--", live)
+            if rc != 0:
+                return None
+            if sha.decode("ascii", "replace").strip() not in [b for b in (_blob(repo, s, p) for s in sides) if b]:
+                # MIRROR MOVED ON (2026-11-10). The live file equals neither side: it was edited again after both
+                # copies were made. The path keeps the new base's bytes, so the replay leaves that file on the remote
+                # exactly as it is and writes no third version; the local commit's copy is an older copy of a live
+                # file that still exists, and whatever publishes the mirror next carries the live bytes. Declining
+                # here kept 86 commits local from 21 Oct to 10 Nov: commit 185d93e253 conflicted on three hook-mirror
+                # files, the worktree rebase behind it was refused by its disk and file-count gates every night, and
+                # the persist's staged set then outgrew the secret scanner's bounds. A path the new base does not
+                # have still declines.
+                base_blob = _blob(repo, sides[0], p) if len(sides) == 2 else None
+                if base_blob is None:
                     return None
                 blobs[p] = base_blob
                 if rules is not None:
-                    rules[p] = "checkout"
+                    rules[p] = "mirrorbase"
                 continue
-            if _hash(repo, p, live) not in [b for b in (_blob(repo, s, p) for s in sides) if b]:
-                return None
             if other is not None:
                 other.append(p)
         lives[p] = live
     if not paths:
         return None
+    # PUBLISHED and CARRIED (2026-11-10). An ordinary path both sides edited, where the shared checkout does not hold
+    # the new base's bytes. Either way the path keeps the new base's version, so main is never rewound:
+    #   published - the local commit's bytes are in main's own history of that path (a session committed here and pushed
+    #               the same file through plumbing, and main moved on), or the local commit deleted the path; nothing
+    #               local is lost by keeping main's version;
+    #   carried   - the local bytes were never on main at that path: they are added to the same tree under
+    #               sync_carried/<commit>/<path>, so both versions reach GitHub and a session folds them later.
+    # Before this the replay declined on the first such path. On 10 Nov that kept 86 commits local: 81 ordinary paths
+    # differed from main, 40 of them already published there, and the rest had no rule at all.
+    if pending:
+        up = _upstream_blobs(repo, pending)
+        if up is None:
+            return None
+        for p in pending:
+            local, basee = _entry(repo, sides[1], p), _entry(repo, sides[0], p)
+            if local is None and basee is None:
+                return None
+            if basee is not None:
+                blobs[p], modes[p] = basee[1], basee[0]
+            else:
+                removals.append(p)
+            if local is None or local[1] in up.get(p, ()):
+                if rules is not None:
+                    rules[p] = "published"
+                continue
+            if p.endswith(".jsonl"):
+                held, older = _held_log(repo, sides[0], p, local[1])
+                if held:
+                    if rules is not None:
+                        rules[p] = "held"
+                    continue
+                removals.extend(older)
+            carry[CARRY_PREFIX + sides[1][:10] + "/" + p] = local
+            if rules is not None:
+                rules[p] = "carried"
+        if carry and _blob(repo, sides[0], CARRY_PREFIX + "README.md") is None:
+            rc, out, _ = git(repo, "hash-object", "-w", "--stdin", inp=CARRY_README.encode("ascii"))
+            if rc != 0:
+                return None
+            carry[CARRY_PREFIX + "README.md"] = ("100644", out.decode("ascii").strip())
     fd, idx = tempfile.mkstemp(prefix="tree_replay_idx_")
     os.close(fd)
     os.remove(idx)
@@ -140,16 +395,22 @@ def resolve_from_live(repo, tree, paths, memory_dir, prefix, sides=(), other=Non
     try:
         if git(repo, "read-tree", tree, env=env)[0] != 0:
             return None
-        for p, live in lives.items():
-            rc, blob, _ = git(repo, "hash-object", "-w", "--path", p, "--", live)
-            if rc != 0:
+        # ONE INDEX WRITE (2026-11-10). Each path used to get its own `update-index --cacheinfo`, and every such call
+        # rewrites the whole index: 50 MB on the brain repo. A dream commit that conflicted on a few thousand memory
+        # files took over an hour that way (11 of 86 commits in 95 minutes, then stopped). All entries now go in
+        # through one `update-index --index-info`, and the live files are hashed in one call where that is exact.
+        hashed = _hash_live(repo, lives)
+        if hashed is None:
+            return None
+        recs = ["100644 %s\t%s" % (hashed[p], p) for p in lives]
+        recs += ["%s %s\t%s" % (modes.get(p, "100644"), blob, p) for p, blob in blobs.items()]
+        recs += ["0 %s\t%s" % ("0" * 40, p) for p in removals]
+        recs += ["%s %s\t%s" % (mode, blob, p) for p, (mode, blob) in carry.items()]
+        if recs:
+            inp = b"".join(r.encode("utf-8", "surrogateescape") + b"\0" for r in recs)
+            if git(repo, "update-index", "-z", "--index-info", inp=inp, env=env)[0] != 0:
                 return None
-            blobs[p] = blob.decode("ascii").strip()
-        for p, blob in blobs.items():
-            rc, _, _ = git(repo, "update-index", "--add", "--cacheinfo", "100644,%s,%s" % (blob, p), env=env)
-            if rc != 0:
-                return None
-        rc, out, _ = git(repo, "write-tree", "--missing-ok", env=env)   # a blob:none clone: no lazy fetch
+        rc, out, _ = git(repo, "write-tree", "--missing-ok", env=env)  # blob:none clone: no lazy fetch (2 Nov)
         return out.decode("ascii").strip() if rc == 0 else None
     finally:
         if os.path.exists(idx):
@@ -157,25 +418,52 @@ def resolve_from_live(repo, tree, paths, memory_dir, prefix, sides=(), other=Non
 
 
 def replay(repo, onto, memory_dir=None, prefix=MIRROR_PREFIX):
-    replay.skipped = 0
     rc, out, _ = git(repo, "config", "--get", "commit.gpgsign")
     if rc == 0 and out.strip().lower() in (b"true", b"1", b"yes", b"on"):
         return None, "commit signing is configured", []
-    rc, merges, _ = git(repo, "rev-list", "--merges", onto + "..HEAD")
+    # CATCH-UP (2026-11-13): with DREAM_REPLAY_SINCE=<oid> (and DREAM_REPLAY_HEAD=<oid>, default HEAD) only the commits
+    # of <since>..<head> are replayed onto <onto>. The sync calls it for commits that sessions made in the shared
+    # checkout while its first replay ran: at 06:21 on 13 Nov it moved main to a head built from the HEAD it had read
+    # twenty minutes earlier, and three commits made meanwhile fell off main and their files went back.
+    since = os.environ.get("DREAM_REPLAY_SINCE", "").strip()
+    tip = (os.environ.get("DREAM_REPLAY_HEAD", "").strip() or "HEAD") if since else "HEAD"
+    if since:
+        def full(s):
+            return len(s) == 40 and all(ch in "0123456789abcdef" for ch in s)
+        if not full(since) or not (tip == "HEAD" or full(tip)):
+            return None, "catch-up range is not given as full commit ids", []
+        if git(repo, "merge-base", "--is-ancestor", since, tip)[0] != 0:
+            return None, "catch-up: %s is not an ancestor of %s" % (since[:10], tip[:10]), []
+    local = (since or onto) + ".." + tip
+    rc, merges, _ = git(repo, "rev-list", "--merges", local)
     if rc != 0 or merges.strip():
         return None, "a merge commit is in the range", []
-    # A local commit whose patch is already upstream is skipped, as `git rebase` skips it: a change committed locally
-    # and also pushed another way would otherwise conflict once the file moved again upstream.
-    rc, out, _ = git(repo, "rev-list", "--reverse", "--right-only", "--cherry-pick", "--no-merges", onto + "...HEAD")
-    if rc != 0:
-        return None, "rev-list failed", []
-    rc, every, _ = git(repo, "rev-list", onto + "..HEAD")
+    # A local commit whose patch is already upstream is skipped, as `git rebase` skips it (2026-09-25). Sessions commit in
+    # the shared checkout and push the same change through plumbing, then someone edits the file again upstream; replaying
+    # the old commit on top conflicts on a file that is not a mirror, and the replay declined. At 05:07 on 09-25 three of
+    # the four local commits were such copies; the decline sent the 03:30 dream to the worktree rebase, which ran 34
+    # minutes and dropped them anyway.
+    if since:
+        # a catch-up replays every commit of its range; one that adds nothing to the new base drops out below
+        rc, out, _ = git(repo, "rev-list", "--reverse", "--no-merges", local)
+        every = out
+    else:
+        rc, out, _ = git(repo, "rev-list", "--reverse", "--right-only", "--cherry-pick", "--no-merges", onto + "...HEAD")
+        if rc != 0:
+            return None, "rev-list failed", []
+        rc, every, _ = git(repo, "rev-list", onto + "..HEAD")
     if rc != 0:
         return None, "rev-list failed", []
     replay.skipped = len(every.split()) - len(out.split())
+    rc, mbase, _ = git(repo, "merge-base", onto, tip)
+    _UPSTREAM["range"] = (mbase.decode("ascii").strip() + ".." + onto) if rc == 0 and mbase.strip() else None
+    _UPSTREAM["cache"] = {}
     base = onto
     resolved = []
-    for c in out.decode("ascii", "replace").split():
+    todo = out.decode("ascii", "replace").split()
+    for k, c in enumerate(todo, 1):
+        _progress("%d/%d %s on %s (%d conflicted path(s) resolved so far)" % (k, len(todo), c[:10], base[:10],
+                                                                              len(resolved)))
         rc, raw, _ = git(repo, "cat-file", "commit", c)
         if rc != 0:
             return None, "cat-file failed on " + c, []
@@ -191,14 +479,16 @@ def replay(repo, onto, memory_dir=None, prefix=MIRROR_PREFIX):
                 extra.append(key.decode())
         if len(parents) != 1 or author is None or extra:
             return None, "commit %s is not a plain single-parent commit (%s)" % (c[:10], ",".join(extra) or "parents"), []
-        rc, mt, _ = git(repo, "merge-tree", "--write-tree", "--name-only", "--no-messages",
-                        "--merge-base=" + parents[0], base, c)
-        lines = [l for l in mt.decode("utf-8", "replace").split("\n") if l.strip()]
+        # -z (2026-11-10): without it git quotes a name that holds a non-ASCII byte ("caf\303\251.md"), the quoted
+        # name matches no live file, and one such memory file among the conflicts declined the whole replay.
+        rc, mt, err = git(repo, "merge-tree", "--write-tree", "--name-only", "--no-messages", "-z",
+                          "--merge-base=" + parents[0], base, c)
+        lines = [l for l in mt.decode("utf-8", "surrogateescape").split("\0") if l.strip()]
         if rc == 1 and lines:
             conflicted = lines[1:]
             other, rules = [], {}
-            tree = resolve_from_live(repo, lines[0].strip(), conflicted, memory_dir, prefix, sides=(base, c),
-                                     other=other, rules=rules)
+            tree = resolve_from_live(repo, lines[0].strip(), conflicted, memory_dir, prefix, sides=(base, c), other=other,
+                                     rules=rules)
             if tree is None:
                 return None, "merge-tree %s on %s conflicted on %s" % (c[:10], base[:10], ", ".join(conflicted[:3])), []
             resolved.extend((rules[p] + ":" + p) if p in rules else ("other:" + p) if p in other else p
@@ -223,29 +513,51 @@ def replay(repo, onto, memory_dir=None, prefix=MIRROR_PREFIX):
     return base, "ok", resolved
 
 
-def main(argv=None):
-    argv = sys.argv[1:] if argv is None else argv
-    if len(argv) not in (2, 3, 4):
+def main():
+    if len(sys.argv) not in (3, 4, 5):
         print("usage: dream_tree_replay.py <repo> <onto_oid> [<memory_dir> [<mirror_prefix>]]")
         return 2
-    memory_dir = argv[2] if len(argv) > 2 else None
-    prefix = argv[3] if len(argv) > 3 else MIRROR_PREFIX
-    head, why, resolved = replay(argv[0], argv[1], memory_dir, prefix)
+    memory_dir = sys.argv[3] if len(sys.argv) > 3 else None
+    prefix = sys.argv[4] if len(sys.argv) > 4 else MIRROR_PREFIX
+    head, why, resolved = replay(sys.argv[1], sys.argv[2], memory_dir, prefix)
     if head is None:
         print("declined: " + why)
         return 3
-    if replay.skipped:
+    if getattr(replay, "skipped", 0):
         print("skipped %d local commit(s) already upstream as identical patches" % replay.skipped)
-    for tag, what in (("checkout:", "to the new base, whose bytes the working tree already holds"),
-                      ("generated:", "with the local commit's regenerated view"),
-                      ("other:", "from a live file equal to one side")):
-        got = [p[len(tag):] for p in resolved if p.startswith(tag)]
-        if got:
-            print("resolved %d conflict(s) %s: %s" % (len(got), what, ", ".join(p.rsplit("/", 1)[-1] for p in got[:6])))
-    mem = [p for p in resolved if not p.startswith(("other:", "checkout:", "generated:"))]
+    tagged = ("other:", "checkout:", "generated:", "mirrorbase:", "published:", "carried:", "held:")
+    hel = [p[len("held:"):] for p in resolved if p.startswith("held:")]
+    if hel:
+        print("kept main's copy of %d log(s) whose every local line the tree already holds: %s" % (
+            len(hel), ", ".join(p.rsplit("/", 1)[-1] for p in hel[:6])))
+    pub = [p[len("published:"):] for p in resolved if p.startswith("published:")]
+    car = [p[len("carried:"):] for p in resolved if p.startswith("carried:")]
+    if pub:
+        print("kept main's copy of %d path(s) whose local bytes main already published, or that the local commit "
+              "deleted: %s" % (len(pub), ", ".join(p.rsplit("/", 1)[-1] for p in pub[:6])))
+    if car:
+        print("kept main's copy of %d path(s) and carried the local version to %s<commit>/: %s" % (
+            len(car), CARRY_PREFIX, ", ".join(p.rsplit("/", 1)[-1] for p in car[:6])))
+    mb = [p[len("mirrorbase:"):] for p in resolved if p.startswith("mirrorbase:")]
+    if mb:
+        print("kept the new base's copy of %d mirror path(s) whose live file has moved past both sides: %s" % (
+            len(mb), ", ".join(p.rsplit("/", 1)[-1] for p in mb[:6])))
+    mem = [p for p in resolved if not p.startswith(tagged)]
+    oth = [p[len("other:"):] for p in resolved if p.startswith("other:")]
+    chk = [p[len("checkout:"):] for p in resolved if p.startswith("checkout:")]
+    gen = [p[len("generated:"):] for p in resolved if p.startswith("generated:")]
+    if chk:
+        print("resolved %d conflict(s) to the new base, whose bytes the shared checkout already holds: %s" % (
+            len(chk), ", ".join(p.rsplit("/", 1)[-1] for p in chk[:6])))
+    if gen:
+        print("resolved %d generated-view conflict(s) with the local commit's regeneration: %s" % (
+            len(gen), ", ".join(p.rsplit("/", 1)[-1] for p in gen[:6])))
     if mem:
-        print("resolved %d memory-mirror conflict(s) from the live files: %s" % (
-            len(mem), ", ".join(p.rsplit("/", 1)[-1] for p in mem[:6])))
+        print("resolved %d memory-mirror conflict(s) from the live files: %s" % (len(mem), ", ".join(
+            p.rsplit("/", 1)[-1] for p in mem[:6])))
+    if oth:
+        print("resolved %d other mirror conflict(s), the live file equal to one side: %s" % (len(oth), ", ".join(
+            p.rsplit("/", 1)[-1] for p in oth[:6])))
     print(head)
     return 0
 

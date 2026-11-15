@@ -20,13 +20,6 @@ import sys
 import threading
 import time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 EVID = os.path.join(HERE, "state", "no_flash_certificates")
 

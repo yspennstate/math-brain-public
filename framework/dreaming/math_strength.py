@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Link strengths in the math store that grow from use (12 Oct 2026; his 06:17 order: "edges should get
+"""Link strengths in the math store that grow from use (an agent-s03, 12 Oct 2026; his 06:17 order: "edges should get
 stronger as nodes that are similar are used at similar times, that strength should become automatic and agents should be
 able to see the strength between nodes and use that to find information").
 
@@ -66,7 +66,7 @@ LOG = os.environ.get("MATH_STRENGTH_LOG") or os.path.join(LIVE, "math_couse.json
 STATE = os.environ.get("MATH_STRENGTH_STATE") or (os.path.splitext(LOG)[0] + "_state.json")
 FETCHES = os.environ.get("MATH_STRENGTH_FETCHES") or os.path.join(HOME, ".claude", "dreaming", "mathbrain_fetches.tsv")
 KINDS_CACHE = os.environ.get("MATH_STRENGTH_KINDS") or os.path.join(LIVE, "session_kinds.json")
-LIVE_STORE = os.environ.get("MATHBRAIN_STORE", "")  # deployment-specific: point MATHBRAIN_STORE at your population db
+LIVE_STORE = r"~\math-brain-build\local\population\brain.sqlite3"
 VECS = os.environ.get("MATH_BRAIN_CLAIM_VECS") or os.path.join(os.path.dirname(LIVE_STORE), "claim_embeddings.npz")
 
 WINDOW = 30 * 60.0            # seconds: "used at similar times"
@@ -91,7 +91,7 @@ def _now():
 
 
 def _norm(p):
-    return os.path.normcase(os.path.abspath(p or "")).replace("/", os.sep)
+    return os.path.normcase(os.path.abspath(p or "")).replace("/", "\\")
 
 
 # ---------------------------------------------------------------- writing (the tools call log_use)
@@ -599,7 +599,7 @@ def for_tools(linked=None):
 
 def _store_maps(store_path):
     """Titles, a typed-link test and the kinds between pairs, from the store (read-only)."""
-    sys.path.insert(0, os.environ.get("MATHBRAIN_BUILD_SRC", ""))
+    sys.path.insert(0, os.environ.get("MATHBRAIN_BUILD_SRC", r"~\math-brain-build\src"))
     from math_brain.store import ResearchStore
     with ResearchStore.open_read_only(store_path) as st:
         nodes = list(st.iter_nodes())

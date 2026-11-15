@@ -6,7 +6,7 @@ walk-reach protocol as eval_orphan_edges. Read-only. Usage: python eval_keyword_
 import io, itertools, os, re, sys
 from collections import defaultdict
 HOME = os.path.expanduser("~"); DR = os.path.join(HOME, ".claude", "dreaming")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 sys.path.insert(0, DR)
 import spread_recall as sr
 import build_keyword_edges as bke
@@ -97,6 +97,6 @@ def main():
         h10b, h25b, mrb, _ = ev_reach(adjB, degB, sess)
         print(f"  split {split:.2f} ({len(sess)} sess, {nt} tgt):  A @10 {h10a:.3f} @25 {h25a:.3f} MRR {mra:.3f} "
               f"| B(+kw) d10 {h10b-h10a:+.3f} d25 {h25b-h25a:+.3f} dMRR {mrb-mra:+.3f}")
-    print("  GATE: deltas ~0 to wire. The value is associative reach for the owner's isolated feedback.")
+    print("  GATE: deltas ~0 to wire. The value is associative reach for the author's isolated feedback.")
 if __name__ == "__main__":
     main()

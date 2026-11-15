@@ -42,6 +42,11 @@ except Exception:
 BAD_STARTS = ("[", "<", "Stop hook", "Caveat", "API Error", "This session is being continued")
 
 
+import os as _ko_os, sys as _ko_sys  # noqa: E402
+_ko_sys.path.insert(0, _ko_os.path.join(_ko_os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
+from quarantine_rows import keep_old  # noqa: E402  a rerun keeps the previous output (R13 trap 1, 27 Sep): brain data is never deleted
+
+
 def harvest(n_files=25, lo=25, hi=600):
     files = sorted(glob.glob(os.path.join(HOME, r".claude\projects\{{BRAIN_SLUG}}\*.jsonl")),
                    key=os.path.getmtime)
@@ -155,12 +160,12 @@ def main():
     print("fire counts:", fired, "of", len(prompts))
     diff = [r for r in rows if len({r[a] for a in ARMS}) > 1]
     print("prompts where arms disagree: %d" % len(diff))
-    json.dump(rows, io.open(os.path.join(SCRATCH, "replay_fires.json"), "w", encoding="utf-8"))
+    json.dump(rows, io.open(keep_old(os.path.join(SCRATCH, "replay_fires.json")), "w", encoding="utf-8"))
     # judging sheet: every distinct (prompt, slug) pair, arm labels hidden, shuffled deterministically
     pairs = sorted({(r["prompt"], r[a]) for r in rows for a in ARMS if r[a]})
     import random
     random.Random(5).shuffle(pairs)
-    with io.open(os.path.join(SCRATCH, "judge_sheet.md"), "w", encoding="utf-8") as f:
+    with io.open(keep_old(os.path.join(SCRATCH, "judge_sheet.md")), "w", encoding="utf-8") as f:
         f.write("# Blind judging sheet - is the fired memory HELPFUL for this prompt?\n"
                 "# (helpful = reading it would materially inform the turn; tangential; wrong)\n\n")
         for k, (p, s) in enumerate(pairs):

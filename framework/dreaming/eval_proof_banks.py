@@ -28,15 +28,15 @@ from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 HOOK = os.path.join(HERE, "math_sense.py")
-LIVE_STORE = os.path.join(os.path.expanduser("~"), r"math-brain-build\local\population\brain.sqlite3")
+LIVE_STORE = r"~\math-brain-build\local\population\brain.sqlite3"
 BANKS = [("named", os.path.join(HERE, "state", "bank_named_proofs_v1.json")),
          ("qform", os.path.join(HERE, "state", "bank_qform_proofs_v1.json")),
          # 2026-09-25 (campaign mb10d): 24 proofs of 24 papers neither bank above used, keyed by a dictionary written before any of
          # them was read (named_proofs_v2) - the out-of-sample check on the reviewed-name rules
          ("heldout", os.path.join(HERE, "state", "bank_named_proofs_v2.json"))]
 TITLE_RE = re.compile(r"^- (.+?) \[[^\]]{1,60}\]:", re.M)
-_PV = (os.path.join(os.path.expanduser("~"), r"brain-repo\12_cognitive_architecture\brain_improvement"
-       r"\campaign_2026-09-12_opus_1k\tools\eval_pivot_reach.py"))
+_PV = (r"~\brain-repo\12_cognitive_architecture\brain_improvement"
+       r"\campaign_2026-09-12_opus_1k\tools\eval_pivot_reach.py")
 
 
 import os as _ko_os, sys as _ko_sys  # noqa: E402
@@ -54,7 +54,8 @@ def _named_in():
 def run_hook(hook, store, prompt, sess):
     """(block, seconds, invalid). invalid is '' for a clean call, else why its output is not a measurement: a hook that
     exited nonzero, timed out or printed something other than its JSON delivers nothing in a session, so its titles are
-    never scored. Until 30 Sep a call that exited nonzero with output was parsed and scored like a clean one."""
+    never scored. Until 30 Sep a call that exited nonzero with output was parsed and scored like a clean one (account03/B01,
+    B01-R79-GATE-PROOFBANK-VIB-FAILED-HOOK-OUTPUT-SCORED-20260929)."""
     env = dict(os.environ, PYTHONIOENCODING="utf-8", MATHBRAIN_STORE=store, CLAUDE_SESSION_ID=sess)
     t0 = time.time()
     try:

@@ -23,7 +23,7 @@ import claim_check                     # dreaming/claim_check.py
 import retraction_guard                # dreaming/retraction_guard.py
 import pre_report                      # graph_fire/pre_report.py (the live check)
 
-PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 
 
 def _ascii(s):
@@ -60,7 +60,7 @@ def iter_assistant_texts(max_files, max_msgs):
                 else:
                     txt = ""
                 txt = txt.strip()
-                if len(txt) < 40:            # tool-call-only / trivial turns are not "reported to the owner"
+                if len(txt) < 40:            # tool-call-only / trivial turns are not "reported to the author"
                     continue
                 yield os.path.basename(fp)[:8], txt
                 n += 1

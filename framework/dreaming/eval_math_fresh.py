@@ -1,6 +1,6 @@
 """Score the math brain on the FRESH bank (state/math_probe_fresh_<date>.json) through the hook's own path.
 
-The owner's ask, 2026-09-03 18:5x: "i want another test to see how it is doing". The 22 August bank had been
+The the author's ask, 2026-09-03 18:5x: "i want another test to see how it is doing". The 22 August bank had been
 the only instrument, its tier-1 was tuned on, and its labels name single nodes. This bank is new: 90 theorem
 targets the store holds (checked by title stem before authoring, none of the 08-22 gold keys), each asked two
 ways - q_content, the question a working mathematician asks mid-proof without naming the result, and q_hinted,
@@ -29,11 +29,14 @@ import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, "state")
-# Framework deployment: the mathbrain package is vendored beside this hook and the store location is
-# deployment-specific - point MATHBRAIN_SRC / MATHBRAIN_STORE at yours.
-BUILD_SRC = os.environ.get("MATHBRAIN_SRC", os.path.join(HERE, "..", "mathbrain", "src"))
-STORE = os.environ.get("MATHBRAIN_STORE", "")
+BUILD_SRC = r"~/math-brain-build/src"
+STORE = r"~/math-brain-build/local/population/brain.sqlite3"
 BANK = os.path.join(STATE, "math_probe_fresh_20260903.json")
+
+
+import os as _ko_os, sys as _ko_sys  # noqa: E402
+_ko_sys.path.insert(0, _ko_os.path.join(_ko_os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
+from quarantine_rows import keep_old  # noqa: E402  a rerun keeps the previous output (R13 trap 1, 27 Sep): brain data is never deleted
 
 
 def _below_normal():
@@ -141,7 +144,7 @@ def main():
             "served_heads": [" ".join((h.node.body or "").split())[:220] for h in chosen],
         })
     print(f"  unanswerable: {len(unans)} targets at {time.time()-t0:.0f}s", flush=True)
-    with io.open(args.out, "w", encoding="utf-8") as fh:
+    with io.open(keep_old(args.out), "w", encoding="utf-8") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
 

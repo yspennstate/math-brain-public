@@ -27,7 +27,7 @@ import re
 import sys
 from pathlib import Path
 
-MEM = Path(__file__).resolve().parent.parent / "projects" / "{{BRAIN_SLUG}}" / "memory"
+MEM = Path(__file__).resolve().parent.parent / "projects" / os.environ.get("BRAIN_SLUG", "default") / "memory"
 INDEX = MEM / "MEMORY.md"
 DESC_RE = re.compile(r"^description:\s*(.+?)\s*$", re.M)
 ROW_RE = re.compile(r"^- \[(?P<name>[^\]]+\.md)\]\((?P=name)\) - (?P<desc>.*)$")

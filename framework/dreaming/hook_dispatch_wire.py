@@ -13,16 +13,9 @@ do not run at all. --on creates the flag; --off removes it.
 """
 import json, os, shutil, sys, time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
-SETTINGS = os.path.expanduser(r"~/.claude/settings.json")
-LIST = os.path.expanduser(r"~/.claude/dreaming/hook_dispatch_list.json")
-ENABLED = os.path.expanduser(r"~/.claude/dreaming/HOOK_DISPATCH_ENABLED")
+SETTINGS = r"~\.claude\settings.json"
+LIST = r"~\.claude\dreaming\hook_dispatch_list.json"
+ENABLED = r"~\.claude\dreaming\HOOK_DISPATCH_ENABLED"
 DISPATCH_CMD = "python -s ~/.claude/dreaming/hook_dispatch.py"
 
 

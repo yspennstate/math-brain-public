@@ -10,14 +10,7 @@ Run nightly by the dream (low contention). Reads/writes fresh to minimize races.
 import io, os, re, sys
 from index_text import frontmatter_description, shorten_index_text, index_row_text
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
-MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM = r"~\.claude\projects\{{BRAIN_SLUG}}\memory"
 IDX = os.path.join(MEM, "MEMORY.md")
 ARC = os.path.join(MEM, "INDEX_ARCHIVE.md")
 APPLY = len(sys.argv) > 1 and sys.argv[1] == "apply"
@@ -73,8 +66,13 @@ def _memory_write_lock(timeout=20.0):
             time.sleep(0.05)
 
 
-_lock = _memory_write_lock() if APPLY else None
-if APPLY and _lock is None:
+# brain.py remember runs this script while it HOLDS memory_write.lock (_maybe_compact_index). A second
+# lock call from the child can never succeed there: it waited the full 20 s, printed SKIPPED, and every
+# remember on an oversized index held the lock 20 s longer while the index never shrank (7 Nov, MEMORY.md
+# 37.8 KB). The parent passes its pid; only that exact parent is trusted to hold the lock for us.
+_PARENT_HOLDS = os.environ.get("BRAIN_WRITE_LOCK_HELD_BY") == str(os.getppid())
+_lock = _memory_write_lock() if APPLY and not _PARENT_HOLDS else None
+if APPLY and _lock is None and not _PARENT_HOLDS:
     print("SKIPPED: the shared memory write lock stayed busy for 20 s; nothing written")
     raise SystemExit(0)
 

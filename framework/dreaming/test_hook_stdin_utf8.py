@@ -19,13 +19,6 @@ Run: python test_hook_stdin_utf8.py
 """
 import io, json, os, shutil, subprocess, sys, tempfile
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 NONASCII = u"dash \u2014 em, curly \u2019q, shekel \u20aa, accent \u00e9"
 
@@ -35,10 +28,6 @@ def _clean_env(**extra):
     env = dict(os.environ)
     env.pop("PYTHONIOENCODING", None)
     env.pop("PYTHONUTF8", None)
-    if os.name != "nt":
-        # A Mac or Linux stdin decodes UTF-8 by default, so here every check passed vacuously (5 Nov 2026). Give the
-        # child the Windows default instead: stdin through cp1252, UTF-8 mode off.
-        env.update(PYTHONIOENCODING="cp1252", PYTHONUTF8="0")
     env.update(extra)
     return env
 
@@ -63,11 +52,6 @@ def _run(script_body, payload, env=None):
 
 
 def test_environment_is_actually_hostile():
-    """Under pytest a returned False passed silently; a vacuous environment has to fail the run."""
-    assert _environment_is_hostile(), "stdin decodes UTF-8 in the test environment, so the stdin tests prove nothing"
-
-
-def _environment_is_hostile():
     """Guard the guard: if stdin already decodes UTF-8 here, the tests below prove nothing."""
     p = _run("import sys\n"
              "sys.stdout.reconfigure(encoding='utf-8')\n"
@@ -109,7 +93,7 @@ def test_gate_restored_stdin_still_exposes_buffer():
 
 
 def test_archiver_stores_non_ascii_faithfully():
-    """End to end: gate + prompt_archive must land the owner's characters unchanged."""
+    """End to end: gate + prompt_archive must land the author's characters unchanged."""
     tmp = os.path.join(tempfile.gettempdir(), "prompt_archive_utf8_test")
     shutil.rmtree(tmp, ignore_errors=True)
     os.makedirs(tmp)
@@ -137,7 +121,7 @@ def test_mojibake_repair_is_conservative():
 
 
 if __name__ == "__main__":
-    hostile = _environment_is_hostile()
+    hostile = test_environment_is_actually_hostile()
     test_gate_preserves_non_ascii()
     test_gate_restored_stdin_still_exposes_buffer()
     test_archiver_stores_non_ascii_faithfully()

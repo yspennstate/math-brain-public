@@ -1,5 +1,5 @@
 """test_reflex_commit_after_emit.py - a reflex counts as fired, and enters its session backoff, only once its context
-has been written.
+has been written (28 Sep 2026, an agent; scheduled audit account04/B04 r4, the phantom fire).
 
     python test_reflex_commit_after_emit.py [--module INSTINCT_PRIME.py] [--old OLD_INSTINCT_PRIME.py]
 

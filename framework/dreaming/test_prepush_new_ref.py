@@ -1,5 +1,7 @@
 """test_prepush_new_ref.py - the pre-push secret gate certifies every commit a push makes reachable, new refs included
-(28 Sep 2026).
+(28 Sep 2026, an agent; scheduled audits account02/B06 r65, R24-B06-PREPUSH-NEW-REF-FALLBACK-CAN-NARROW-20260928;
+account03/B19 r69, B19-R51-FRESH-BASE-REPLACE-REF-GRAPH-MISMATCH-20260928; account02/B19 auto43,
+B19-R51-NEWREF-TEST-UNPINNED-SCANNER-20260928; account02/B06 r68, R51-B06-NEWREF-WITNESS-DELETE-CUSTOMREF-20260928).
 
     python test_prepush_new_ref.py [GATE.py] [--scanner SCAN_SECRETS.py] [--old GATE_BEFORE.py] [--older GATE_OLDER.py]
 
@@ -19,10 +21,10 @@ grafts, as the scanner reads them. A push that succeeded with a newly reachable 
  G6 a new tag in G1's state: A and B certified, as for a branch
  G7 the remote's only ref is a commit this clone lacks (rewritten from R by another clone): refused
  G8 the remote's only ref is X, unrelated to R <- A <- B, and a local replace ref puts Y (parent A) in place of X: refused
-    as unrelated, or R, A and B all certified
+    as unrelated, or R, A and B all certified (B19 r69's fixture)
  G9 the same with a graft line "X A" in place of the replace ref: nothing newly reachable goes uncertified
  G10 the remote has main at R and w at A; w is deleted while the first range is scanned: the gate scans again from R,
-    so A and B are both certified (a witness deletion)
+    so A and B are both certified (B06 r68's witness deletion)
 With --old (the gate before 28 Sep 20:5x) G8 and G10 must fail; with --older (before 28 Sep 16:4x) G1, G6 and G7 must
 fail (the checks can fail).
 """
@@ -254,7 +256,7 @@ def run_all(gate, tag):
         res["G7"] = (p["rc"] != 0 and not p["moved"],
                      "%s G7 remote main rewritten to a commit this clone lacks (R <- X): rc %d, remote moved %s, missed %s"
                      % (tag, p["rc"], p["moved"], short(p["missed"])))
-        # G8 a local replace ref grafts the remote's unrelated X onto A
+        # G8 a local replace ref grafts the remote's unrelated X onto A (B19 r69)
         f = Fixture(td, "g8", gate)
         r, a, b = base_state(f)
         x = unrelated_remote_main(f, td, "g8")
@@ -275,7 +277,7 @@ def run_all(gate, tag):
         res["G9"] = (not p["missed"],
                      "%s G9 graft X -> A, remote main X unrelated: rc %d, newly reachable %s, certified %s, missed %s" % (
                          tag, p["rc"], short(p["newly"]), short(p["certified"]), short(p["missed"])))
-        # G10 the witness is deleted while the first range is scanned
+        # G10 the witness is deleted while the first range is scanned (B06 r68)
         f = Fixture(td, "g10", gate)
         r, a, b = base_state(f)
         git(f.remote, "update-ref", "refs/heads/w", a)

@@ -5,7 +5,7 @@ This is an isolated, read-only-by-default bridge between three streams the brain
 
   * retrievals.tsv: a memory became active because a session read it;
   * outcomes.jsonl: an error-related-negativity (ERN) event arrived later;
-  * prompts/PROMPTS.jsonl: the owner task in which both happened.
+  * prompts/PROMPTS.jsonl: the author task in which both happened.
 
 The neuroscience analogy is a three-factor eligibility trace: recent activation leaves a decaying
 tag, and a later error/surprise signal makes that tag eligible for learning. Owner prompts and prior
@@ -55,7 +55,7 @@ except Exception:  # pragma: no cover - Python 3.9+ has it; fallback keeps the t
 
 HOME = os.path.expanduser("~")
 HERE = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 DEFAULT_OUTCOMES = os.environ.get("ELIGIBILITY_OUTCOMES", os.path.join(HERE, "outcomes.jsonl"))
 DEFAULT_RETRIEVALS = os.environ.get("ELIGIBILITY_RETRIEVALS", os.path.join(HERE, "retrievals.tsv"))
 DEFAULT_PROMPTS = os.environ.get(
@@ -118,7 +118,7 @@ SAFE_SEVERITIES = {"low", "medium", "high", "critical", "unknown"}
 
 def _prompt_timezone():
     """PROMPTS.jsonl hook timestamps are local and naive; transcripts/outcomes are UTC epochs."""
-    name = os.environ.get("ELIGIBILITY_PROMPT_TZ", "UTC")
+    name = os.environ.get("ELIGIBILITY_PROMPT_TZ", "Asia/Jerusalem")
     if ZoneInfo is not None:
         try:
             return ZoneInfo(name)

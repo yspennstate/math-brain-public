@@ -1,9 +1,9 @@
 """Find hook scripts wired more than once under the same event and matcher in hook_dispatch_list.json.
 
-WHY (1 Nov 2026). The 28 Oct 17:13 film-hook landing added a second full copy of the 221-hook film
+WHY (1 Nov 2026, an agent). The 28 Oct 17:13 film-hook landing added a second full copy of the 221-hook film
 group instead of appending one hook. For four days every film hook ran twice on every prompt and every Bash/Edit call
 in every Claude session: PreToolUse went from 259 hooks to 481, every fire was printed twice, and the film group's
-dispatch took a median 8.5 s wall against 4.5 s with one copy on a loaded machine. Nothing flagged
+dispatch took a median 8.5 s wall against 4.5 s with one copy on the loaded box (op/hookdup/ab.jsonl). Nothing flagged
 it. hook_liveness.py calls double_wired() and reports any count above one.
 
 A script wired under two DIFFERENT matchers (Bash in one group, Edit in another) is not a double; the same script

@@ -13,7 +13,7 @@ from collections import defaultdict
 
 HOME = os.path.expanduser("~")
 DR = os.path.join(HOME, ".claude", "dreaming")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 sys.path.insert(0, DR)
 import spread_recall as sr
 import build_series_edges as bse

@@ -30,7 +30,8 @@ HOME = os.path.expanduser("~")
 POINTER = os.path.join(HERE, ".embedding_current.json")
 _BRAIN_SLUG = HOME.replace(":", "-").replace("\\", "-").replace("/", "-")
 MEM = os.environ.get("BRAIN_MEM_DIR") or os.path.join(HOME, ".claude", "projects", _BRAIN_SLUG, "memory")
-VIEWS = os.environ.get("BRAIN_VIEWS_DIR") or os.path.join(HOME, ".brain", "views")
+VIEWS = os.environ.get("BRAIN_VIEWS_DIR") or os.path.join(
+    HOME, "brain-repo", "01_ai_consciousness", "brain")
 DATE_RE = re.compile(r"(20\d\d)[_-](\d\d)[_-](\d\d)")
 
 

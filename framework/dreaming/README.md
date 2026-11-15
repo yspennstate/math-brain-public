@@ -1,112 +1,38 @@
-# Dreaming
+# The brain's working scripts
 
-The dream is the brain's offline pass. While no one is working, it reads what the day added, files it into the
-store's existing structure, links what should be linked, turns repeated mistakes into reflexes, and grades how
-well yesterday's reflexes fired. Agents working in the day write records quickly and in pieces; the dream is what
-keeps those pieces from becoming a pile.
+These are the scripts the brain runs day to day: the recall path, the hooks that surface a note while an
+agent works, the nightly consolidation, and the evaluations that decided which changes were kept. They are
+copied as they run, with private paths replaced by placeholders. The set is partial. Some scripts import
+modules that are not here (`brain.py`, the reflex engine `instinct_prime.py`), because those carry private
+material and are not published. Read the scripts for the method; they will not all run as a package.
 
-This folder is the full version, taken from a working system. A smaller version that needs only Python and any
-agent command-line tool is in [`examples/field_brain_starter/dream/`](../../examples/field_brain_starter/dream/README.md);
-start there, and come here when the starter's six agenda sections are no longer enough.
+## What is here
 
-## The two halves
+- Recall. `bm25_append.py` and `bm25_refresh_if_stale.py` keep the lexical index current within seconds of a
+  write. `fastrecall_delta.py`, `query_embed.py` and `fresh_vectors.py` serve the semantic lane.
+  `graph_lane.py` and `math_walk.py` walk the association graph. `recall_protocol.py` states how an agent
+  should ask.
+- Hooks. `hook_dispatch.py` runs every hook under one time budget and falls back to its last known good copy
+  (`hook_dispatch.lkg.py`) when an edit breaks it. `hook_dispatch_deadman.py` and `hook_reaper.py` catch a
+  hook that hangs. `frontier_hook.py`, `graph_membrane_hook.py`, `proof_deny_hook.py` and
+  `codex_reflex_hook.py` are the notes an agent sees mid-work. `gap_watch_hook.py` flags a silent gap in a
+  log.
+- Compaction. `compact_nodes.py` saves each context compaction as its own node in the graph and links it to
+  the session's earlier compactions and to the memories nearest it. `compact_math.py` does the same for
+  mathematical work, and `keep_working_after_compact.py` hands the open task back after a compaction.
+- Proof discipline. `proof_receipt.py` ties a claim to the hash of the file that was checked. `proof_sense.py`
+  and `proof_deny_hook.py` refuse a report that names a result without a receipt. `lean_check.py` and
+  `lean_process.py` run Lean on a stated lemma.
+- Judging the brain's own notes. `fire_judge_*.py` sample the notes the hooks surfaced, have them judged as
+  on-domain or not, and feed the precision back so that a note judged wrong most of the time stops firing.
+  `reflex_precision.py`, `heed_audit.py` and `shadow_deny_status.py` report it.
+- Consolidation. `reconsolidate.py`, `mistake_graph.py`, `dream_mistakes.py` and `incubate.py` are parts of
+  the nightly pass that merges, links and retires memories.
+- Evaluations. The `eval_*.py` files are the measurements behind each change. Each one names what it compared
+  and what was kept. The question banks and answer keys they read are not published.
 
-A dream has a mechanical half and a model half.
+## Credit
 
-**The agenda.** `dream.py` scans the memory corpus with no model call and writes `DREAM_AGENDA.md`: what tonight's
-session should look at. Its choices imitate sleep pressure: recent records, pairs that look related but have no
-link, beliefs that a newer record may have overtaken, links that point at records nobody wrote, and a random draw
-of old and unlinked records so that each night differs. The sections it writes are:
-
-| section | what it holds | what the dreaming agent does with it |
-|---|---|---|
-| A | recent records that may tell one story | writes one consolidated summary and links the sources; sources are kept |
-| B | pairs that look related but are not linked | links them with a clause saying why, or skips a false echo |
-| C | beliefs a newer record may have overtaken | appends a `superseded:` note pointing at the current fact; never deletes |
-| D | records the corpus keeps linking to but nobody wrote | writes them from what the corpus already knows, or repoints the links |
-| E | a random replay of old and unlinked records | wires in the ones that still matter |
-| F | one painful record and one good one, by salience | for a mistake with no reflex yet, walks back from the bad outcome to the step that caused it and drafts that step as a reflex |
-| G | two vivid records from distant corners | tries a real analogy; most nights the answer is no |
-| H | the archive of the requests the agents were given | checks every request was saved and classified |
-| I | predictions whose date has passed | marks each hit or miss |
-| J | yesterday's reflex fires, and stale-fact pairs | judges a sample of fires on-domain or off; resolves the pairs |
-| M | a rotating sample of corrections | about a third of the night: is each lesson learned, does it recur, is there a reflex |
-
-**The session.** `run_dream.ps1` builds the agenda, starts one headless agent session with a prompt, watches it with
-a hard timeout, and then runs the mechanical tail: it compiles the reflexes (`instincts.py`), rebuilds the search
-index (`bm25.py`) and the link files, refreshes the views the wake step reads, measures the reflexes' precision from
-the night's judgments, and runs `hook_liveness.py`, which reports any part of the brain that has stopped firing.
-Every step runs with its own time limit and its exit code checked, because a step that hangs holds the dream's
-lock and cancels the next dream, and a step that fails in silence is a step nobody notices for days.
-
-On a new install `hook_liveness.py` prints a long list of files marked MISSING and ends with ATTENTION. That
-is expected. Each MISSING line names the hook or dream step that writes the file, and the file appears once that
-hook has fired in a session or the first dream has run. The dream-commit lines read UNKNOWN until the brain
-folder is a git repository with a remote, and the dispatcher line names the command that signs its allowlist.
-A Stop-order failure is different: it means the hooks are not wired, and running `framework/bootstrap/install.py` again
-with `--merge-settings` added wires them. Run the check again after the first week; a file still
-MISSING then belongs to a part that has stopped firing.
-
-## Three kinds of dream
-
-The runner picks the kind from the hour (before 09:00 a filing dream, 09:00 to 16:00 a nap, after 16:00 a
-connecting dream), each with its own prompt:
-
-- **Filing** (`dream_prompt_sws.md`), early morning. Sections A to D: consolidate, link, mark what was superseded,
-  rescue important records that have gone unread, repair dangling links. Tidy work that has to be reliable.
-- **Connecting** (`dream_prompt_rem.md`), evening. Sections E to H and the mistakes: replay, the walk back from a
-  bad outcome, the distant analogy, and parked questions that a newer record may answer. Most of the night's new
-  reflexes come from here.
-- **Nap** (`dream_prompt_nap.md`), midday. A few minutes: at most one summary, resolve due predictions, judge the
-  fires the gates silenced. Light upkeep so the evening dream does not start from a full day.
-
-`dream_prompt.md` holds the discipline every kind shares: refresh the state notes the wake step reads, keep the
-predictions ledger, check the writing voice, and write a journal entry. The filing and connecting split follows
-the sleep literature cited in the prompts (slow-wave sleep for consolidation, REM for recombination); in practice
-its value is that the reliable work is never crowded out by the creative work.
-
-## Rules the dream keeps
-
-- It adds and annotates; it never deletes a record. A wrong record is marked superseded and linked to its
-  correction, because the next agent needs to know the old answer was tried.
-- It does not push to any repository; the runner commits after the session exits, so a session that dies leaves
-  nothing half-written in the history.
-- It runs windowless (`launch_dream.vbs` on Windows) at low priority, and a file named `STOP` ends it.
-- A note it writes carries a status (`verified` or `provisional`) and the measurement behind it, so the agent that
-  reads it later knows how far to trust it.
-
-## Guards on the way out
-
-A brain that publishes needs a check at the last door, because the dream and the agents write fast and nobody
-rereads every line before a push. Two scripts here sit in a clone's `pre-push` hook:
-
-- `github_push_cost_guard.py` refuses a push that would start billed GitHub Actions on a private repository
-  unless the head commit says `[skip ci]`, refuses a push that would leave a repository nearly empty, and, on the
-  repositories you list in `BRAIN_PRIVATE_TEXT_REPOS`, refuses added lines that match your private-text patterns
-  (one regular expression per line in the file named by `BRAIN_PRIVATE_TEXT_PATTERNS`; without it, home-directory
-  paths and email addresses). Put the names of people, clients, private repositories and internal projects in
-  that file before you make a public copy of a brain. Install with
-  `python github_push_cost_guard.py --install <clone>` and run `--selftest` first.
-- `paper_release_guard.py` runs from the same hook when it sits beside it, and refuses a paper pushed to a public
-  repository without its funding, competing-interest and AI declarations, or with a line running into the
-  margin. Finished grant numbers that must never be listed again go in `BRAIN_FINISHED_GRANTS`.
-
-Both log every decision. The push guard's three refusals each have a one-variable override (`ALLOW_PRIVATE_TEXT=1`,
-`ALLOW_CI_PUSH=1`, `ALLOW_MASS_DELETE=1`) for a push someone has read and decided on; the paper guard has none, and
-the fix is to the paper.
-
-## Schedule it
-
-On Windows, point a scheduled task at `wscript.exe //B launch_dream.vbs` three times a day (for example 03:30,
-11:30 and 19:30), set to run only when the user is logged on and to not start a second copy. The starter's
-`dream/README.md` has the equivalent lines for cron and launchd. Read the dream log for the first week. The two
-ways this system decays without anyone noticing are a dream that stops committing its results and a part that
-stops firing; the log and `hook_liveness.py` are where both show up.
-
-## Make it fit your field
-
-The sections are general; what changes is what counts as a mistake and what counts as evidence. A company brain
-might give section C the policies a later decision replaced and section M the incidents that recurred. A film
-studio might add a section for renders that failed review twice for the same reason. A lab might add one for
-results that were never reproduced. Add a section to `dream.py` when you can say what the agent should do with
-each item in it, and add a line for it to the prompt of the kind of dream that should work it.
+The lexical lane is Okapi BM25 (Robertson and coworkers). The graph walk is a personalised PageRank in the
+sense of Jeh and Widom. The precision feedback on the hooks follows the signal-detection framing of Green and
+Swets. Lean is the theorem prover of de Moura and coworkers.

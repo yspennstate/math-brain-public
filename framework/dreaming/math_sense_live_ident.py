@@ -32,9 +32,9 @@ import unicodedata   # 2026-09-13: two helpers here fold accents; without this t
 # swallowed except, which silently skipped the WHOLE on-topic gate - a behaviour change that reads as a result.
 
 HOME = os.path.expanduser("~")
-BUILD_SRC = os.path.expanduser(r"~/math-brain-build/src")
+BUILD_SRC = r"~\math-brain-build\src"
 STORE_PATH = os.environ.get(
-    "MATHBRAIN_STORE", os.path.expanduser(r"~/math-brain-build/local/population/brain.sqlite3")
+    "MATHBRAIN_STORE", r"~\math-brain-build\local\population\brain.sqlite3"
 )
 # 2026-09-11: 1400 held THREE clipped cards until 2026-09-08, when cards started going out whole (the 560-char clip
 # was a Codex finding); a whole card is ~600 chars and the hint header ~560, so 1400 held ONE card - measured on the
@@ -47,7 +47,7 @@ STORE_PATH = os.environ.get(
 MAX_BLOCK_CHARS = int(os.environ.get("MATHBRAIN_MAX_BLOCK_CHARS", "3000"))
 MAX_STATEMENT_CHARS = int(os.environ.get("MATHBRAIN_MAX_STATEMENT_CHARS", "480"))
 TIME_BUDGET_S = float(os.environ.get("MATHBRAIN_TIME_BUDGET_S", "30"))   # was 2.5 until 2026-09-07: under load the
-                          # store load alone passed it and the lane abstained silently; the owner's order is that
+                          # store load alone passed it and the lane abstained silently; the author's order is that
                           # the brain always goes in, so the lane now waits (the hook's own timeout is the ceiling)
 PREFILTER_K = int(os.environ.get("MATHBRAIN_PREFILTER_K", "300"))
 GATE_FLOOR = float(os.environ.get("MATHBRAIN_GATE_FLOOR", "25"))     # on-topic gate, 2026-09-07 (see the block after _select)
@@ -93,7 +93,7 @@ GRAPH_WEIGHT = 1.0        # RE-MEASURED 2026-09-01 on the post-rs store: source-
 SYMBOL_WEIGHT = 0.1       # scales the channel's own 1.35, giving an effective 0.135
 # The two abstention thresholds. Both are now readable from the environment SO THEY CAN BE MEASURED, with the
 # defaults byte-for-byte the standing values - unset, the hook behaves exactly as before (2026-09-13). The near-tie
-# margin is on the owner's own do-not-land list, so this is a measurement door, not a change: it lets a paired run
+# margin is on the author's own do-not-land list, so this is a measurement door, not a change: it lets a paired run
 # say what a different margin would cost and buy before he rules on it. Never ship a non-default value in a launcher.
 MIN_SUPPORT = float(os.environ.get("MATHBRAIN_MIN_SUPPORT", "0.5"))   # re-applied to the re-ranked order
 MIN_MARGIN = float(os.environ.get("MATHBRAIN_MIN_MARGIN", "0.1"))
@@ -265,11 +265,11 @@ EXTRA_ANCHORS = re.compile(
 # because on THIS machine most of the alphabet is not mathematics:
 #
 #   all 21 names          +21.95pp, 6,171 new fires - alpha, beta, gamma, delta, theta, rho,
-#                         sigma and vega are names the non-math work uses and saturate its
+#                         sigma and vega are the options Greeks and saturate the trading
 #                         traffic; the new fires were loop ticks and sleep instructions
-#   minus those Greeks   +0.25pp, 70 new fires - still bad, and for a reason no
+#   minus options Greeks   +0.25pp, 70 new fires - still bad, and for a reason no
 #                         hand-written negative would produce: "eta" matches ETA, so a
-#                         customer-support assistant prompt lit the gate 21 times. "nu" and
+#                         food-delivery assistant prompt lit the gate 21 times. "nu" and
 #                         "xi" fired on non-ASCII table text rather than on mathematics.
 #   this set              +0.078pp, 22 new fires, ALL of them mathematical - his own
 #                         math-brain loop prompts, an RMT bibliography check, an RMT
@@ -388,7 +388,7 @@ def _trust_tag(meta, read=None):
     read was a human's, in which case it reads 'provisional'; the store promotes to verified only on a
     second, independent route.
 
-    TERSE SINCE 2026-09-13, and deliberately back to his own words. The owner's 09-02 order describes
+    TERSE SINCE 2026-09-13, and deliberately back to his own words. The the author's 09-02 order describes
     this line as saying "what kind of thing it is (theorem with a proof text, concept lead, harvested
     draft, unreviewed)" - a kind-tag. It had grown into a caution paragraph averaging 160 characters a
     card, and the caution it carried ("read the full source and assumptions before applying") already
@@ -1083,7 +1083,7 @@ HARVEST_CAP = os.environ.get("MATHBRAIN_HARVEST_CAP", "1") == "1"   # see _is_ca
 # ranks 4-13 (a rooted-NAE question: three concept notes at prefilter 15-19 against a floor of 19.2, the two notes
 # carrying the value at 21.6 ranked 11th and 13th), so the block went out empty; on another the prefilter's favourite
 # at 72.8 ranked 4th and lost its slot to two cards the gate then removed. Flag until measured on every bank.
-# DEFAULT 3 since 2026-09-12 03:4x (his clock). Measured the same hour on every bank against the mode-0 base (unnamed
+# DEFAULT 3 since 2026-09-12 03:4x (local time). Measured the same hour on every bank against the mode-0 base (unnamed
 # 69/89 served, absent 27/40, campaign value-in-block 12/20): mode 1 -> 72 / 28 / 14 plus a third-slot fill on 24 of 40
 # open-problem questions; mode 2 -> 73 / 31 / 17 (the empty-block rescue fires where the abstention lives); mode 3 ->
 # 71 / 27 / 15, named path and reach unchanged, health 11/6. Modes 1 and 2 stay available for his decision.
@@ -1786,7 +1786,7 @@ def main():
         # first card carries at least this share of the prompt's rare-word (idf) weight. Measured on the fresh bank's
         # served first cards: AUC 0.913 for true hits (154) against absent-target fires (23); at 0.35 it silences 11 of
         # the 23 fires and 4 of 10 wrong serves and loses 9 of 154 true hits (all unnamed questions). A trade, not a free
-        # cut - left OFF for the owner's decision. Pinned citations and enumeration questions are exempt.
+        # cut - left OFF for the author's decision. Pinned citations and enumeration questions are exempt.
         try:
             _ccm = float(os.environ.get("MATHBRAIN_CARDCOV_MIN", "0") or 0)
         except Exception:
@@ -1795,7 +1795,7 @@ def main():
         # tiny by construction, so the gate silences the proof audits it should help - measured at CARDCOV_MIN=0.2,
         # pivot reach 59 -> 13 of 77 items and 2.8 -> 0.6 cards, while absent-target fires did not move (28/40 both
         # ways). The gate is a lookup-question instrument; on lookups 0.3 cuts absent fires 28 -> 22 of 40 for 7 of 89
-        # unnamed theorems - still a trade for the owner, but no longer one that breaks proofs.
+        # unnamed theorems - still a trade for the author, but no longer one that breaks proofs.
         if (_ccm > 0 and prefilter_ids is not None and not pinned_ids and not ENUMERATION_ANCHORS.search(prompt)
                 and not ARGUMENT_SHAPE.search(prompt)):
             try:

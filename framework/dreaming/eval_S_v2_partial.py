@@ -15,11 +15,12 @@ Writes eval_S_rows.npy only.
 """
 
 from __future__ import annotations
-import os
 
 import sys
 
-sys.path.insert(0, os.path.expanduser("~/.claude/dreaming"))
+sys.path.insert(0, r"~/.claude/dreaming")
+sys.path.insert(0, r"~/.claude/brain_graph/bin")
+from quarantine_rows import keep_old  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep; account03/B01 auto31): brain data is never deleted, and an overwrite deletes
 import numpy as np
 import brain as B
 import spread_recall as sr
@@ -77,7 +78,7 @@ def main() -> int:
         print("too few scored pairs"); return 0
 
     arr = np.array(rows, dtype=float)
-    np.save(os.path.expanduser("~/.claude/dreaming/eval_S_rows.npy"), arr)
+    np.save(keep_old(r"~/.claude/dreaming/eval_S_rows.npy"), arr)
     print("saved raw rows -> eval_S_rows.npy", flush=True)
 
     nonseed = arr[arr[:, 3] == 0]

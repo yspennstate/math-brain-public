@@ -21,7 +21,7 @@ import os, io, re, sys, time
 from collections import defaultdict
 
 HOME = os.path.expanduser("~")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 OQ = os.path.join(MEM, "OPEN_QUESTIONS.md")
 OQA = os.path.join(MEM, "OPEN_QUESTIONS_ANSWERED.md")
 

@@ -1,4 +1,4 @@
-"""Extend the dispatcher's in-process list with hooks proven equivalent; never removes a name (13 Oct 2026).
+"""Extend the dispatcher's in-process list with hooks proven equivalent; never removes a name (an agent, 13 Oct 2026).
 
 WHY. hook_dispatch.py runs a hook in its own process unless hook_dispatch_allow.json names it, and only
 hook_dispatch_control.py wrote that file: a full run over every hook of seven events, which deletes the list when a
@@ -33,11 +33,19 @@ USE. Claim hook_dispatch_allow.json on the mesh, then:
     --allow PATH   work on a copy of the list instead of the live one (tests)
     --only A.py,B.py   test only these unlisted hooks;  --rounds N   a hook must be exact in all N rounds
     --help             print the options and stop
+A HOOK THAT RUNS BESIDE THE OTHERS IS LEFT ALONE (12 Nov 2026, an agent). On the events in
+hook_dispatch.PARALLEL_SUBPROC_EVENTS (prompt, stop, start) the dispatcher starts the own-process hooks first and
+collects them after the in-process ones, so a hook wired only there adds no wait where it is: on 5,597 profiled
+prompts the in-process hooks took a median 2.1 s and the slowest child 0.6 s. Moved in-process it joins that line
+with its whole tail (waste_sense.py ran over 5 s 51 times as a child). A run that names no hook used to test and
+add such a hook with the rest; it now names it and leaves it, and --only NAME still tests it. --film is unchanged:
+film hooks of the canonical shape share one cheap code path.
 An argument that is not one of these is refused before anything is tested or changed. Until 13 Oct 2026 it was ignored:
 a session that asked for --help got a full pass over every unlisted hook and one hook added to the live list.
 The film hooks are silent on the control's payloads ("echo hi", C:\\tmp\\x.txt, a non-film prompt) and write nothing.
 """
 import ast
+import hashlib
 import io as _io
 import json
 import os
@@ -74,9 +82,39 @@ class _Probe(_io.StringIO):
         raise AttributeError(name)
 
 
+def unguarded_reconfigure(path):
+    """'' or why the hook's own source rules it out: sys.stdout/stderr.reconfigure(...) outside a try block.
+
+    In-process those streams are io.StringIO, which has no reconfigure, so the call raises. Hooks make it just before
+    they print, on the path where they have something to say, which the control's payloads ("echo hi", a non-film
+    prompt) never reach: google_movie_money_hook.py and owner_last300_hook.py passed the exact test on 12 Nov 2026 and
+    in-process returned rc 1 with no output on every payload that made them speak (390 and 578 characters as a
+    subprocess). The source is read because the runs cannot show it (an agent)."""
+    try:
+        tree = ast.parse(open(path, encoding="utf-8", errors="replace").read())
+    except Exception:  # noqa: BLE001 - an unparsable file fails elsewhere
+        return ""
+    guarded = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Try):
+            for stmt in node.body:
+                guarded.update(id(x) for x in ast.walk(stmt))
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Attribute) and node.attr == "reconfigure" and id(node) not in guarded \
+                and isinstance(node.value, ast.Attribute) and node.value.attr in ("stdout", "stderr") \
+                and isinstance(node.value.value, ast.Name) and node.value.value.id == "sys":
+            return ("STDOUT-RECONFIGURE: line %d calls sys.%s.reconfigure outside a try; the in-process stream has none "
+                    "and the hook dies where it would print" % (node.lineno, node.value.attr))
+    return ""
+
+
 def run_in_process_probed(path, payload, tail):
     """The dispatcher's own run_in_process, with its io.StringIO swapped for _Probe for the length of one call.
     Returns (rc, stdout, why); why is '' or the reason the in-process run cannot be trusted."""
+    static = unguarded_reconfigure(path)
+    if static:
+        rc, out, _ = HD.run_in_process(path, payload, tail)
+        return rc, out, static
     shim = types.ModuleType("io")
     shim.__dict__.update(_io.__dict__)
     shim.StringIO = _Probe
@@ -115,6 +153,7 @@ FLAGS = ("--film", "--dry-run")                 # options that stand alone
 VALUED = ("--allow", "--only", "--rounds")      # options followed by one value
 USAGE = """usage: python -X utf8 hook_dispatch_extend.py [--film] [--dry-run] [--only A.py,B.py] [--rounds N] [--allow PATH]
     (no option)        test every wired hook that is not on the in-process list and add the ones that pass
+                       (a hook wired only on prompt, stop and start events is left alone: name it with --only)
     --film             only film hooks of the canonical shape
     --dry-run          test, add nothing
     --only A.py,B.py   only these unlisted hooks
@@ -202,6 +241,13 @@ def candidates(allow, film_only):
     return out, skipped
 
 
+def runs_beside(rows):
+    """True when every event the hook is wired to is one whose own-process hooks the dispatcher starts first and
+    collects after the in-process ones: there the hook adds no wait as it is, and would add its own in-process."""
+    par = getattr(HD, "PARALLEL_SUBPROC_EVENTS", None) or ()
+    return bool(rows) and all(r[0] in par for r in rows)
+
+
 def unlisted_film_hooks():
     """Wired film hooks of the canonical shape that the live list does not hold ([] when none); None when the list is
     stale or missing (the wake check reports that case on its own line). Reads only; for hook_liveness.py."""
@@ -209,6 +255,67 @@ def unlisted_film_hooks():
     if HD._ALLOW_STALE[0] or not allow:
         return None
     return sorted(candidates(allow, True)[0])
+
+
+# THE HOOKS THAT WERE TESTED AND COULD NOT JOIN (10 Nov 2026). Four hooks wired 5-9 Nov were never tested for the list
+# and carried 81 pct of the PreToolUse hook time (dispatcher median 1.63 s -> 0.45 s a tool call once they joined);
+# the wake check named film hooks only. It now names every wired hook the list does not hold, and this record is what
+# keeps it quiet about a hook that was tested and refused: the hook is named again when its file changes.
+def _tested_path():
+    """Beside whichever list is in use, so a run on a copy (--allow) keeps its record beside the copy."""
+    return os.path.splitext(HD.ALLOW)[0] + "_tested.json"
+
+
+def _sha16(path):
+    try:
+        with open(path, "rb") as f:
+            return hashlib.sha256(f.read()).hexdigest()[:16]
+    except OSError:
+        return ""
+
+
+def _tested():
+    try:
+        with open(_tested_path(), encoding="utf-8") as f:
+            d = json.load(f)
+        return d if isinstance(d, dict) else {}
+    except Exception:
+        return {}
+
+
+def record_tested(cands, passed, failed, rows):
+    """After a real run: a hook that failed is recorded with its file's hash and verdicts, one that passed is dropped."""
+    d = _tested()
+    for base in passed:
+        d.pop(base, None)
+    for base in failed:
+        verdicts = []
+        for r in rows:
+            r = r.split(": ", 1)[1] if r.startswith("round ") else r
+            if r.startswith(base + " ") and r[len(base) + 1:] not in verdicts:
+                verdicts.append(r[len(base) + 1:])
+        d[base] = {"sha": _sha16(cands[base][0][4]), "at": time.strftime("%Y-%m-%d %H:%M:%S"), "verdict": verdicts}
+    tmp = _tested_path() + ".%d.tmp" % os.getpid()
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(d, f, indent=1, sort_keys=True)
+    os.replace(tmp, _tested_path())
+
+
+def unlisted_wired_hooks():
+    """(waiting, known) for the wired hooks that are not film-shaped, not on the live list and not forced into their
+    own process: waiting = never tested, or changed since the test that refused it; known = tested, refused, unchanged.
+    None when the list is stale or missing. Reads only; for hook_liveness.py."""
+    allow = HD._allowlist()
+    if HD._ALLOW_STALE[0] or not allow:
+        return None
+    film = set(candidates(allow, True)[0])
+    rec, waiting, known = _tested(), [], []
+    for base, rows in sorted(candidates(allow, False)[0].items()):
+        if base in film:
+            continue
+        sha = (rec.get(base) or {}).get("sha") if isinstance(rec.get(base), dict) else None
+        (known if sha and sha == _sha16(rows[0][4]) else waiting).append(base)
+    return waiting, known
 
 
 def test(cands):
@@ -288,8 +395,17 @@ def main():
     only = {x.strip().lower() for x in (_arg("--only") or "").split(",") if x.strip()}
     if only:                            # a named subset, e.g. leaving out a hook seen NOT-DETERMINISTIC before
         cands = {k: v for k, v in cands.items() if k in only}
+    beside = [] if film_only else sorted(k for k, v in cands.items() if runs_beside(v))
+    if beside and not only:             # not named, so not moved: see the docstring
+        cands = {k: v for k, v in cands.items() if k not in beside}
     print("list: %d names; unlisted %s hooks wired: %d%s" % (len(allow), "film" if film_only else "", len(cands),
           ("; not the film shape, left alone: " + ", ".join("%s (%s)" % kv for kv in sorted(skipped.items()))) if skipped else ""))
+    if beside:
+        print(("named with --only, so tested, though wired only on prompt, stop and start events, where an own-process"
+               " hook adds no wait and an in-process one adds its own: %s" if only else
+               "left in their own process: %s - wired only on prompt, stop and start events, where an own-process hook"
+               " runs beside the in-process ones and adds no wait. To test one anyway: --only NAME")
+              % ", ".join(beside))
     if not cands:
         return 0
     lk = None if dry else _lock(HD.ALLOW)
@@ -310,6 +426,11 @@ def main():
             print("   " + r)
         print("tested %d in %.0f s: %d pass, %d fail%s" % (len(cands), time.perf_counter() - t0, len(passed), len(failed),
               (" (" + ", ".join(failed) + ")") if failed else ""))
+        if not dry:
+            try:
+                record_tested(cands, passed, failed, rows)
+            except Exception as exc:
+                print("the refused hooks were not recorded: %r" % (exc,))
         if dry or not passed:
             return 0 if not failed else 1
         HD._ALLOW_STALE[0] = False

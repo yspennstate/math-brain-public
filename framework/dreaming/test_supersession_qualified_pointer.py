@@ -1,17 +1,13 @@
 """A superseded_by pointer its author narrowed is a PART supersession for every reader (4 Oct 2026).
 
 dot 125873D4 found that spread_recall's hint cut the first token of "slug # only its third section" and told the reader
-to read the successor instead; claude:5e550011 found the same in the route map's lenient lead (which caught only '#')
+to read the successor instead; claude:agent found the same in the route map's lenient lead (which caught only '#')
 and in live_sidecar, on a live memory whose qualifier is a parenthesis ("slug (the half-real part only, ...; the
 75-percent picture count stands)"). supersession.pointer_scope is the one classification; this checks it, the route map,
 and the recall hint, in a throwaway memory folder with the module caches pointed there too.
 
     python test_supersession_qualified_pointer.py [--module supersession.py] [--recall spread_recall.py]
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import importlib.machinery
 import importlib.util
 import os
@@ -62,6 +58,7 @@ def main():
         cache_home = os.path.join(td, "cache")
         os.makedirs(cache_home)
         ss.HERE = cache_home
+        ss._FM_OTHER_MIN = 0   # lever 17: a small folder reads uncached unless told; these controls test the cache
         mem = os.path.join(td, "memory")
         os.makedirs(mem)
 

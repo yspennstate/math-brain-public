@@ -22,7 +22,7 @@ Usage:  python reconsolidate.py          # routing recommendations for the open 
 import os, io, re, time, sys
 
 HOME = os.path.expanduser("~")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 DREAMING = os.path.join(HOME, ".claude", "dreaming")
 sys.path.insert(0, DREAMING)
 from memory_date import age_days as md_age

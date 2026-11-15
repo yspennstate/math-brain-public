@@ -6,7 +6,7 @@ never fires / writes unconditionally") about a checkable artifact INTO a durable
 send/handoff, a brain memory, a memory-dir write) with NO fresh observation of that artifact in the recent
 tool window. Demonstrated three times on 2026-07-12 (I broadcast 'the error-graph hook is dead' from a
 stale/reconstructed read; it was live) - and no reflex fired at the assert/broadcast moment.
-GAP B (peer_broadcast_wrong): a mesh send/handoff carrying a claim the owner-guard (pre_report) would
+GAP B (peer_broadcast_wrong): a mesh send/handoff carrying a claim the author-guard (pre_report) would
 BLOCK reaches PEERS from the command surface, unguarded. Reuses the exact ~0.04%-false-block machinery.
 
 SURFACE-ONLY: emits additionalContext, NEVER a deny/block - it cannot cause a healer-is-the-outage. Gated

@@ -1,11 +1,11 @@
 """keyword_corpus_cache.py - incremental inputs for build_keyword_nodes.py.
 
-Why: the dream's keyword step re-read and re-tokenized every memory file (first 4,000 chars each) and
-re-parsed the whole PROMPTS.jsonl every run. On a large brain (~49k memories, a 200 MB prompt log) that is
-~15 s of CPU when the machine is idle, but the dream runs at BelowNormal priority and a BelowNormal job on a
-busy machine gets almost no CPU: the step can hit its time cap and be killed, leaving the keyword layer a
-generation behind. A day adds a few thousand memory files and edits a handful, so almost all of that work
-repeats yesterday's.
+Why (2026-11-03, an agent): the dream's keyword step re-read and re-tokenized all ~49k memory files
+(first 4,000 chars each) and re-parsed the whole 200 MB PROMPTS.jsonl every run. Warm and unstarved that is
+~15 s of CPU (11-02 12:02 run), but the dream runs BelowNormal while the author is present and a BelowNormal
+job on a full box gets almost no CPU: the step hit its 2700 s cap on 10-31 and 11-03 and was killed, leaving
+the keyword layer a generation behind. A day adds ~5,750 memory files and edits ~5 (measured 11-03), so
+almost all of that work repeats yesterday's.
 
 What this keeps, under ~/.claude/dreaming/cache/keyword_nodes/:
   corpus.sqlite   one row per memory file: path, mtime_ns, size, its search text, its token counts
@@ -16,7 +16,7 @@ What this keeps, under ~/.claude/dreaming/cache/keyword_nodes/:
 
 Results are bit-identical to the full read: `python build_keyword_nodes.py --verify` builds both ways and
 compares the digests that go into the generation's source manifest. Any doubt (version change, a corrupt
-cache, a failed check) falls back to the full read, which is the original code path unchanged.
+cache, a failed check) falls back to the full read, which is the old code path unchanged.
 """
 import hashlib
 import io

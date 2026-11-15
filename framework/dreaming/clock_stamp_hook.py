@@ -16,17 +16,13 @@ quoted peer stamp). Log: ~/.claude/compute/clock_stamp_hook.log.
     check(text, now) -> [{"stamp": "17:4x", "ahead_min": 18, "context": "..."}]
     python clock_stamp_hook.py --selftest
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import datetime as dt
 import json
 import os
 import re
 import sys
 
-LOG = os.path.expanduser("~/.claude/compute/clock_stamp_hook.log")
+LOG = r"~\.claude\compute\clock_stamp_hook.log"
 
 SLACK_MIN = 5
 HORIZON_MIN = 180          # a stamp dated today
@@ -150,11 +146,11 @@ def _selftest():
         ("\n17:4x  Dream sync, the durable half", 1), ("## LANDED 2026-09-24 17:4x: a mirror conflict", 1),
         ("## DEVIATION 2 (17:3x, after pair 1 finished", 1), ("measured 17:58 on the box", 1),
         ("\n17:2x  Brain wake flagged", 0), ("written 17:15 from the file times", 0),
-        ("the 19:3x dream will push it", 0), ("First real run: 19:30.", 0), ("until 18:30 his clock", 0),
+        ("the 19:3x dream will push it", 0), ("First real run: 19:30.", 0), ("until 18:30 local time", 0),
         ("his 23:4x follow-up yesterday", 0), ("## 2026-09-23 18:4x: yesterday's entry", 0),
-        ("pushed 15:2x (09-23)", 0), ("OWNER ORDER 2026-09-21 20:5x, relayed", 0), ("measured 14:40Z", 1), ("measured 14:10Z", 0), ("tonight's 19:30 dream", 0), ("RUN_TIME=15:45:00", 0), ("run at 15:45 his clock", 0),
-        ("clock 18:50 while the log says", 0), ("(17:5x his clock)", 1), ("24 Sep 17:5x his clock", 1),
-        ("23 Sep 17:5x his clock", 0), ("expected by 17:4x", 0), ("from 17:3x to 17:5x", 0),
+        ("pushed 15:2x (09-23)", 0), ("OWNER ORDER 2026-09-21 20:5x, relayed", 0), ("measured 14:40Z", 1), ("measured 14:10Z", 0), ("tonight's 19:30 dream", 0), ("REBAL_TIME=15:45:00", 0), ("rebalance at 15:45 local time", 0),
+        ("clock 18:50 while the log says", 0), ("(17:5x local time)", 1), ("24 Sep 17:5x local time", 1),
+        ("23 Sep 17:5x local time", 0), ("expected by 17:4x", 0), ("from 17:3x to 17:5x", 0),
         # v2, from the replay's misses: a bus id, a search pattern, talk about a stamp, a plan word hidden by a date,
         # an undated stamp far ahead (more often last night); a dated-today stamp far ahead still fires
         ("GPUs 0 (17:50.0) and 3", 0), ('grep -c "17:4x\\|17:5x" LEDGER.md', 0),
@@ -166,12 +162,12 @@ def _selftest():
         # v4 (2 Oct): 'observed' marks a record; a range's far end carries the zone and is checked itself
         ("observed 17:58 on the laptop", 1), ("observed 17:10 on the laptop", 0),
         ("observed 2 Oct 14:35-14:39Z", 0), ("observed 14:35-14:39Z", 1), ("observed 14:05-14:10Z", 0),
-        ("checked 14:10-14:35Z", 1), ("checked 14:10-14:15Z", 0), ("(17:0x-17:4x his clock)", 1),
+        ("checked 14:10-14:35Z", 1), ("checked 14:10-14:15Z", 0), ("(17:0x-17:4x local time)", 1),
         ("from 14:10 to 14:35Z", 0), ("window 17:30-17:45", 0),
         # v5 (1 Nov): a dated exact stamp anywhere, and a compact UTC run id
         ("Mac mini, 24 Sep 2026 17:40 +03, claude-x.", 1), ("Measured 24 Sep 17:40 by claude-x", 1),
         ("checked on 2026-09-24 17:45, all", 1), ("registered 24 Sep 17:10 before the run", 0),
-        ("bets resolve by 24 Sep 17:50", 0), ("23 Sep 17:50 his clock", 0), ("at 2026-09-24T17:40:11Z", 0),
+        ("bets resolve by 24 Sep 17:50", 0), ("23 Sep 17:50 local time", 0), ("at 2026-09-24T17:40:11Z", 0),
         ("runs/M01/20260924T1440Z_M01_REVIEW", 1), ("runs/M01/20260924T1410Z_M01_REVIEW", 0),
         ("runs/M01/20260923T1440Z_M01_REVIEW", 0),
         ("sed -i '' 's/24 Sep 17:40 by/24 Sep 17:12 by/' x.md", 0), ("sed 's#runs/20260924T1440Z_A#runs/B#'", 0),
@@ -242,11 +238,11 @@ def main():
             if h["stamp"] not in [u["stamp"] for u in uniq]:
                 uniq.append(h)
         shown = ", ".join("'%s' is %d min ahead" % (h["stamp"], h["ahead_min"]) for h in uniq[:2])
-        # the machine's own offset: this said UTC+03:00 as a constant, and the Mac runs at +04:00
-        off = now.astimezone().strftime("%z") or "+0000"
-        ctx = ("[clock] %s of the real clock (now %s local, UTC%s:%s). Nothing already done can be stamped in the "
+        off = dt.datetime.now().astimezone().strftime("%z")  # the real offset; it was hard-coded +03:00 and went wrong at the DST change
+        off = "UTC%s:%s" % (off[:3], off[3:]) if len(off) == 5 else "local"
+        ctx = ("[clock] %s of the real clock (now %s local, %s). Nothing already done can be stamped in the "
                "future: the inner clock runs fast. Put the time a shell printed (date), or drop the stamp. If it names a "
-               "plan or another day, ignore this." % (shown, now.strftime("%H:%M:%S"), off[:3], off[3:5]))
+               "plan or another day, ignore this." % (shown, now.strftime("%H:%M:%S"), off))
         if not os.environ.get("CLOCK_STAMP_HOOK_NOLOG"):
             try:
                 with open(LOG, "a", encoding="utf-8") as f:

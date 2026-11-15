@@ -1,6 +1,6 @@
-"""The exact-name trigger for the main brain (6 Oct 2026): when an agent's prompt or command names
-something the brain holds a specific card for, push that one card - a memory's name, a file with a scar, a
-command that failed before in the same way, or one of the agent's own results.
+"""The exact-name trigger for the main brain (owner, 6 Oct 2026 13:3x local time: "When an agent's prompt or command names
+something the brain holds a specific card for, push that one card. That covers a memory's name, a file with a scar, a
+command that failed before in the same way, or one of your results.")
 
 Version 1 is the file half. A scar card (a feedback card, or one whose description reads as a mistake) indexes a file
 only when the card is ABOUT that file: the file is named in the card's description, or the card names at most
@@ -18,10 +18,6 @@ Show-or-hold from day one: per (session, card) one in HOLD_EVERY held by sha256(
 law, rule or order card; both arms are written to exact_name_ab.tsv (time, session, name, slug, arm) before the context
 goes out, and either arm spends the card for the session. Registered outcome: a tool error within the next five calls
 of that session on a command naming the same file, read from the outcome log, in both arms the same way."""
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import hashlib
 import json
 import os
@@ -30,7 +26,7 @@ import sys
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.expanduser("~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM = os.path.expanduser("~/.claude/projects/" + os.environ.get("BRAIN_SLUG", "default") + "/memory")
 LIVE = os.path.expanduser("~/.claude/brain_graph/live")
 INDEX = os.path.join(LIVE, "exact_names.json")
 CACHE = os.path.join(LIVE, "exact_names_cache.json")
@@ -45,6 +41,30 @@ NAME_RE = re.compile(r"(?<![\w.-])([A-Za-z0-9_][\w.-]{2,80}\.(?:%s))(?![\w-])" %
 GENERIC = set(("readme.md memory.md skill.md mistakes.md agents.md claude.md index.md notes.md todo.md changelog.md "
                "license.md __init__.py main.py test.py run.py setup.py utils.py util.py app.py config.py config.json "
                "settings.json package.json index.html requirements.txt").split())
+# A role name is a basename the brain repo holds with ROLE_MIN or more distinct contents (moves.jsonl in 253 frontier rows,
+# dossier.md, review.md, check.py, plan.md): naming one names no particular file, so it indexes nothing. A real file copied
+# into mirrors keeps a handful of versions (the hooks here 5-13 on 11 Nov), so mirrors stay indexed. Read from origin/main's
+# tree at build time (about 1 s); if git fails, only GENERIC applies.
+REPO = os.path.expanduser("~/brain-repo")
+ROLE_MIN = 15
+
+
+def _role_names():
+    try:
+        import subprocess
+        out = subprocess.run(["git", "-C", REPO, "ls-tree", "-r", "origin/main"], capture_output=True, timeout=120,
+                             creationflags=0x08000000 if os.name == "nt" else 0).stdout.decode("utf-8", "replace")
+    except Exception:
+        return set()
+    blobs = {}
+    for ln in out.splitlines():
+        meta, _, p = ln.partition("\t")
+        parts = meta.split()
+        if len(parts) == 3 and parts[1] == "blob" and "/" in p:
+            blobs.setdefault(p.rsplit("/", 1)[1].lower(), set()).add(parts[2])
+    return set(b for b, s in blobs.items() if len(s) >= ROLE_MIN)
+
+
 SCAR_RE = re.compile(r"\b(mistake|scar|broke|broken|wrong|bug|fail|failed|failure|refus|lost|leak|stale|never|must not|"
                      r"do not|don't|crash|froze|silently)", re.IGNORECASE)
 LAW_RE = re.compile(r"^owner_(law|rule|order)_")
@@ -98,6 +118,7 @@ def build():
     with open(CACHE + ".tmp", "w", encoding="utf-8") as f:
         json.dump(new, f)
     os.replace(CACHE + ".tmp", CACHE)
+    role = _role_names()
     by = {}
     for key, (_mt, typ, desc, sup, names) in new.items():
         if sup or not names or not (typ == "feedback" or SCAR_RE.search(desc)):
@@ -105,7 +126,7 @@ def build():
         dl = desc.lower()
         for n in names:
             about = n in dl
-            if n not in GENERIC and (about or len(names) <= FOCUSED):
+            if n not in GENERIC and n.lower() not in role and (about or len(names) <= FOCUSED):
                 by.setdefault(n, []).append((key[:-3], desc, typ, len(names), about))
     idx = {}
     for n, cards in by.items():
@@ -113,9 +134,10 @@ def build():
             best = sorted(cards, key=_rank)[0]
             idx[n] = [best[0], best[1][:260], len(cards)]
     with open(INDEX + ".tmp", "w", encoding="utf-8") as f:
-        json.dump({"built": time.time(), "cards": len(new), "read": read, "names": idx}, f)
+        json.dump({"built": time.time(), "cards": len(new), "read": read, "role_names": len(role), "names": idx}, f)
     os.replace(INDEX + ".tmp", INDEX)
-    return {"cards": len(new), "read": read, "names": len(idx), "seconds": round(time.time() - t0, 1)}
+    return {"cards": len(new), "read": read, "names": len(idx), "role_names": len(role),
+            "seconds": round(time.time() - t0, 1)}
 
 
 def _rebuild_in_background():
@@ -129,7 +151,7 @@ def _rebuild_in_background():
         import subprocess   # only here: a rebuild is rare, and the hook path should not pay for the module
         subprocess.Popen([exe, os.path.abspath(__file__), "build", "--unlock"], cwd=HERE, close_fds=True,
                          stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                         creationflags=(0x08000000 | 0x00000008 if os.name == "nt" else 0))   # CREATE_NO_WINDOW | DETACHED_PROCESS
+                         creationflags=0x08000000 | 0x00000008)   # CREATE_NO_WINDOW | DETACHED_PROCESS
     except Exception:
         pass
 

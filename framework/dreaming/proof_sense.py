@@ -10,7 +10,7 @@ then Lean against the local Mathlib through lean_check.py). It is general: writt
 can carry, never from any test item, so it applies to any argument in any paper.
 
 Why a separate lane (2026-09-07): the general gut caps at two fires ranked by scar charge, so on a proof the
-domain scars and the exact-clauses reflex won the slots and told the solver to copy steps verbatim; measured
+trading scars and the exact-clauses reflex won the slots and told the solver to copy steps verbatim; measured
 on the probability bank the brain arm then called flawed proofs valid MORE often than a sterile solver. A
 proof needs the opposite posture, and this lane gives it without competing with the scars.
 
@@ -20,111 +20,54 @@ Reads stdin (hook JSON), writes injection JSON to stdout. Pure ASCII.
 """
 import io, json, os, re, sys, time
 
+
+_re_compile = re.compile
+
+
+class _lazy_re(object):
+    """A pattern compiled the first time it is used (11 Nov 2026, an agent): compiling all of this file's
+    patterns at import cost about 120 ms of every prompt's in-process hook chain, while a non-mathematical prompt
+    uses only a few of them. Every attribute goes to the compiled pattern, so a call behaves exactly as before."""
+    __slots__ = ("_a", "_p")
+
+    def __init__(self, pattern, flags=0):
+        self._a, self._p = (pattern._c() if isinstance(pattern, _lazy_re) else pattern, flags), None
+
+    def _c(self):
+        if self._p is None:
+            self._p = _re_compile(*self._a)
+        return self._p
+
+    def __getattr__(self, name):
+        return getattr(self._c(), name)
+
 HOME = os.path.expanduser("~")
 STATE = os.path.join(HOME, ".claude", "dreaming", "proof_sense_state.json")
 REFIRE_S = 600
 MAX_CHECKS = 3
 
-# THE SILENT-VERDICT CACHE (6 Nov 2026). The lane is silent on almost every prompt, yet it paid about 28 ms cold to
-# compile the 337 patterns below before it could say so, and the prompts repeat (the loop sessions send the same tick:
-# 2,120 prompts from 4 to 6 Nov held 42 distinct texts). Silence is decided by is_math_argument alone, a pure function
-# of the prompt and of the code in this file and math_sense.py (its strong anchors), and a silent run writes nothing.
-# So a prompt found silent is kept under its sha256, valid while both files keep their mtime, size and inode; a repeat
-# exits here, before the compiles. Only silence is kept: a firing prompt runs in full every time (the knowledge file,
-# the Lean hint and the once-per-10-minutes state stay live). Stored only for a uuid session, only if neither file
-# moved during the run, at most 400 entries. PROOF_SENSE_SILENT_CACHE=0 turns it off (or names another file).
-_SC = os.environ.get("PROOF_SENSE_SILENT_CACHE") or os.path.join(HOME, ".claude", "dreaming", "proof_sense_silent_cache.json")
-_SC_KEEP = 400
-_SC_DATA = None        # the hook payload, read here once; main() uses it rather than reading stdin again
-_SC_IDENT = None
-
-
-def _sc_ident():
-    here = os.path.dirname(os.path.abspath(__file__))
-    out = []
-    for p in (os.path.abspath(__file__), os.path.join(here, "math_sense.py")):
-        st = os.stat(p)
-        out.append([p, st.st_mtime_ns, st.st_size, st.st_ino])
-    return out
-
-
-def _sc_key(prompt):
-    import hashlib
-    return hashlib.sha256(prompt.encode("utf-8", "replace")).hexdigest()
-
-
-def _sc_load(ident):
-    try:
-        with io.open(_SC, encoding="utf-8") as f:
-            d = json.load(f)
-        if isinstance(d, dict) and d.get("ident") == ident and isinstance(d.get("silent"), list):
-            return d["silent"]
-    except Exception:
-        pass
-    return []
-
-
-def _sc_store(prompt, session, ident):
-    """Keep this prompt as silent. Never raises."""
-    tmp = None
-    try:
-        if _SC == "0" or ident is None:
-            return
-        if not re.match(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", session):
-            return
-        if _sc_ident() != ident:
-            return
-        key = _sc_key(prompt)
-        keep = [k for k in _sc_load(ident) if k != key][-(_SC_KEEP - 1):] + [key]
-        tmp = "%s.tmp.%d" % (_SC, os.getpid())
-        with io.open(tmp, "w", encoding="utf-8") as f:
-            json.dump({"ident": ident, "silent": keep}, f)
-        os.replace(tmp, _SC)
-    except Exception:
-        try:
-            if tmp:
-                os.remove(tmp)
-        except Exception:
-            pass
-
-
-if __name__ == "__main__" and len(sys.argv) == 1:
-    try:
-        _SC_DATA = json.load(sys.stdin)
-    except Exception:
-        raise SystemExit(0)            # what main() does with a payload it cannot read: nothing
-    if _SC != "0":
-        try:
-            _SC_IDENT = _sc_ident()
-            if _sc_key((_SC_DATA.get("prompt") or "")[:20000]) in set(_sc_load(_SC_IDENT)):
-                raise SystemExit(0)
-        except SystemExit:
-            raise
-        except Exception:
-            _SC_IDENT = None
-
-MATH_TOKEN = re.compile(r"\$[^$]{1,400}\$|\\\[|\\begin\{|\\(?:frac|sum|int|mathbb|mathcal|leq|geq|le|ge|infty|lim|sup|inf|alpha|beta|lambda|sigma|varepsilon|epsilon|mu|nu|rho|theta|omega)\b")
-STEP_LINE = re.compile(r"(?m)^\s*(?:\[step\s+)?\d{1,3}[.)\]]\s+\S")  # v7: three-digit step ids (a step 100 was silently invisible)
-PROOF_WORD = re.compile(r"\b(proof|lemma|theorem|proposition|corollary|argument|derivation|inequality|almost surely|martingale|measure)\b", re.I)
+MATH_TOKEN = _lazy_re(r"\$[^$]{1,400}\$|\\\[|\\begin\{|\\(?:frac|sum|int|mathbb|mathcal|leq|geq|le|ge|infty|lim|sup|inf|alpha|beta|lambda|sigma|varepsilon|epsilon|mu|nu|rho|theta|omega)\b")
+STEP_LINE = _lazy_re(r"(?m)^\s*(?:\[step\s+)?\d{1,3}[.)\]]\s+\S")  # v7: three-digit step ids (a step 100 was silently invisible)
+PROOF_WORD = _lazy_re(r"\b(proof|lemma|theorem|proposition|corollary|argument|derivation|inequality|almost surely|martingale|measure)\b", re.I)
 
 CHECKS = [
     ("named_result_hypotheses_direction_rate",
-     re.compile(r"\b(Chernoff|Hoeffding|Chebyshev|Markov'?s?\s+inequality|Jensen|Cauchy[- ]Schwarz|H[o\u00f6]lder|Doob|Azuma|McDiarmid|Borel[- ]Cantelli|BK\s+inequality|van den Berg|Harris|FKG|Fatou|dominated convergence|monotone convergence|Fubini|Tonelli|Portmanteau|Slutsky|Girsanov|It[o\u00f4]'?s?\s+(formula|lemma)|Kolmogorov|Pinsker|Gr[o\u00f6]nwall|Talagrand|Bernstein|Stein'?s?\s+(method|lemma|identity)|Lindeberg|Lyapunov|Cram[e\u00e9]r|optional stopping|Arzel[a\u00e0]|Prokhorov|Skorokhod|Burkholder|Minkowski|Young'?s?\s+inequality|Poincar[e\u00e9]|log-Sobolev|Lebesgue|Radon[- ]Nikodym|Kantorovich|Strassen|Le Cam|Poissonization|reflection principle|union bound)\b", re.I),
+     _lazy_re(r"\b(Chernoff|Hoeffding|Chebyshev|Markov'?s?\s+inequality|Jensen|Cauchy[- ]Schwarz|H[o\u00f6]lder|Doob|Azuma|McDiarmid|Borel[- ]Cantelli|BK\s+inequality|van den Berg|Harris|FKG|Fatou|dominated convergence|monotone convergence|Fubini|Tonelli|Portmanteau|Slutsky|Girsanov|It[o\u00f4]'?s?\s+(formula|lemma)|Kolmogorov|Pinsker|Gr[o\u00f6]nwall|Talagrand|Bernstein|Stein'?s?\s+(method|lemma|identity)|Lindeberg|Lyapunov|Cram[e\u00e9]r|optional stopping|Arzel[a\u00e0]|Prokhorov|Skorokhod|Burkholder|Minkowski|Young'?s?\s+inequality|Poincar[e\u00e9]|log-Sobolev|Lebesgue|Radon[- ]Nikodym|Kantorovich|Strassen|Le Cam|Poissonization|reflection principle|union bound)\b", re.I),
      "A named result is a claim about HYPOTHESES, a DIRECTION and a RATE. For each named theorem or inequality in the argument, say what it needs (nonnegativity, independence, a dominator, C^2, uniform integrability, p > 1, a finite exponential moment), which side it bounds, and the rate it gives (exponential against polynomial). The commonest wrong step names a neighbour with the wrong hypothesis or direction: Chebyshev where the rate is Chernoff's, Harris for an upper bound that is BK's, Markov for a norm-of-integral bound that is Jensen's, dominated convergence with no dominator where the sequence is monotone."),
     ("inequality_chain_direction",
-     re.compile(r"\\(?:leq|geq|le|ge|lesssim|gtrsim|ll|gg)\b|<=|>=|\u2264|\u2265|\\neq|\\lneq"),
+     _lazy_re(r"\\(?:leq|geq|le|ge|lesssim|gtrsim|ll|gg)\b|<=|>=|\u2264|\u2265|\\neq|\\lneq"),
      "In every chain, check each relation symbol against the operation that produced it: a decreasing map, a negative factor, a reciprocal, or a complement REVERSES it; an '=' inside a chain of '<=' is a separate claim (a triangle split, a subinterval integral, an upper bound are not equalities); a bound is only as strong as its weakest link, so find the one link you cannot re-derive."),
     ("paired_operator_swap",
-     re.compile(r"\\(?:limsup|liminf|sup|inf|max|min|cup|cap|bigcup|bigcap|subset|supset|subseteq|supseteq|forall|exists)\b|\b(limsup|liminf|supremum|infimum|union|intersection|for all|there exists)\b", re.I),
+     _lazy_re(r"\\(?:limsup|liminf|sup|inf|max|min|cup|cap|bigcup|bigcap|subset|supset|subseteq|supseteq|forall|exists)\b|\b(limsup|liminf|supremum|infimum|union|intersection|for all|there exists)\b", re.I),
      "sup/inf, limsup/liminf, max/min, union/intersection, subset/superset, for-all/there-exists come in PAIRS; preserve each one's direction and scope. For each occurrence ask which member the inequality direction and the later use require: an upper bound on a sup needs uniformity, a lower bound on a sup needs one point or arbitrarily close approximations (a sup need not be attained); limsup a_n <= B means a_n <= B + eps eventually and does not need convergence; replacing a limsup by a liminf on the LARGER side of an inequality strengthens it and needs its own justification (convergence suffices but is not necessary); a 'for all' cannot be concluded from a 'there exists'; a function in C^2 union C is not in C^2 intersect C."),
     ("index_and_constant_arithmetic",
-     re.compile(r"\b[nkmijlNKM]\s*[+-]\s*1\b|\^\{?\s*-?\d|\\frac\{\s*\d|\b\d+\s*/\s*\d+\b|\b(?:2|3|4)\s*\\?(?:pi|cdot)|\\sqrt", re.I),
+     _lazy_re(r"\b[nkmijlNKM]\s*[+-]\s*1\b|\^\{?\s*-?\d|\\frac\{\s*\d|\b\d+\s*/\s*\d+\b|\b(?:2|3|4)\s*\\?(?:pi|cdot)|\\sqrt", re.I),
      "Re-derive every n+1 / n-1 / k-1 from the definition that produced it ('largest m such that' forces the next one to fail, 'smallest k such that' forces the previous one to fail; a sum from 0 to k-1 has k terms), and carry every constant and exponent both to the line before and to the claim (an interval in a case split must cover the statement's; sizes that add to a total must be consistent with it; an integrability exponent cannot rise for free; a larger threshold proves a weaker statement). When a step IS wrong the fault is often a single digit or sign, but do not assume a fault exists: re-derive, then judge."),
     ("load_bearing_hypothesis_words",
-     re.compile(r"\b(independent|independence|bounded|uniformly|continuous|continuity|compact|closed|finite|integrable|measurable|Lipschitz|monotone|increasing|decreasing|convex|concave|nonnegative|non-negative|positive|centered|centred|i\.i\.d\.|iid|martingale|supermartingale|exchangeable|stationary|ergodic|absolutely continuous)\b", re.I),
+     _lazy_re(r"\b(independent|independence|bounded|uniformly|continuous|continuity|compact|closed|finite|integrable|measurable|Lipschitz|monotone|increasing|decreasing|convex|concave|nonnegative|non-negative|positive|centered|centred|i\.i\.d\.|iid|martingale|supermartingale|exchangeable|stationary|ergodic|absolutely continuous)\b", re.I),
      "Each hypothesis word is either load-bearing or decoration; decide which, per step. For every step that uses one, ask what breaks if it were the weaker neighbour (measurable for continuous, closed for compact, bounded for uniformly bounded, uncorrelated for independent, C^1 for C^2) or were missing, and whether the claim or an EARLIER step already granted it (then the drop changes nothing). 'Independent' is what lets probabilities multiply; 'bounded' or 'dominated' is what lets a limit pass an expectation; 'finite' is what makes a sum finite; 'uniformly' is the gap between pointwise and uniform."),
     ("limit_target",
-     re.compile(r"\\(?:to|rightarrow|longrightarrow|xrightarrow)\s*\{?\s*(?:0|\\infty|infty|\+\\infty|-\\infty)|\\lim(?:sup|inf)?_\{[^}]{1,30}\\to|\bas\s+[a-zA-Z]\s*(?:\\to|->|tends to|goes to)\s*(?:0|\\infty|infinity)", re.I),
+     _lazy_re(r"\\(?:to|rightarrow|longrightarrow|xrightarrow)\s*\{?\s*(?:0|\\infty|infty|\+\\infty|-\\infty)|\\lim(?:sup|inf)?_\{[^}]{1,30}\\to|\bas\s+[a-zA-Z]\s*(?:\\to|->|tends to|goes to)\s*(?:0|\\infty|infinity)", re.I),
      "Check every limit's TARGET against the regime of the statement and of the lines around it: an integer index runs to infinity, never to zero; t -> 0 reads off an initial value while a long-run moment needs t -> infinity; a subsequence must have indices going to infinity; 'sending n -> 0' next to 'lim_{n -> infinity}' is a contradiction. One wrong endpoint invalidates the step even when the displayed formula is right."),
 ]
 
@@ -156,7 +99,7 @@ POSTURE = (
 # at least three numbered steps. Generic words such as bounded, normal,
 # compact, measure, and proof do not count as technical concepts by themselves.
 # Administrative task lists stay out even when they name mathematical topics.
-PROSE_MATH_CUES = tuple((name, re.compile(pattern, re.I)) for name, pattern in (
+PROSE_MATH_CUES = tuple((name, _lazy_re(pattern, re.I)) for name, pattern in (
     ("linear_space", r"\b(?:Hilbert|Banach|normed vector|inner product)\s+spaces?\b"),
     ("linear_operator", r"\b(?:bounded\s+|compact\s+)?linear\s+operators?\b|\boperator\s+norms?\b"),
     ("norm_geometry", r"\b(?:unit\s+balls?|(?:finite\s+)?(?:epsilon|delta)[- ]nets?|norm\s+convergence)\b"),
@@ -175,12 +118,12 @@ PROSE_MATH_CUES = tuple((name, re.compile(pattern, re.I)) for name, pattern in (
     ("homomorphism", r"\b(?:group\s+)?homomorphisms?\b"),
     ("coset", r"\bcosets?\b"),
 ))
-PROSE_ARGUMENT_INTRO = re.compile(
+PROSE_ARGUMENT_INTRO = _lazy_re(
     r"\b(?:claim|proof|argument|theorem|lemma|proposition|corollary)\s*:"
     r"|\b(?:let|suppose|assume)\s+(?:[A-Za-z](?:_[A-Za-z0-9]+)?|mu|nu)\s+(?:be|and|denote|have|satisfy)\b",
     re.I,
 )
-PROSE_TASK_LINE = re.compile(
+PROSE_TASK_LINE = _lazy_re(
     r"(?m)^\s*(?:\[step\s+)?\d{1,3}[.)\]]\s+"
     r"(?:(?:please|first|next|then|finally)[,:]?\s+)*"
     r"(?:(?:could|would|can)\s+you\s+(?:please\s+)?)?"
@@ -195,7 +138,7 @@ PROSE_TASK_LINE = re.compile(
 # mathematical topic names anywhere in an administrative request. These are
 # recognition cues, not correctness tests. The existing LaTeX branches precede
 # this extension unchanged, including their 200-character floor.
-ASCII_PROSE_DOMAIN = re.compile(
+ASCII_PROSE_DOMAIN = _lazy_re(
     r"\b(?:prime numbers?|primes|divisors?|integers?|remainders?|divisible|modulo|"
     r"vertices|vertex|undirected graphs?|odd[- ]degree|even[- ]degree|"
     r"probability spaces?|probability measures?|random variables?|"
@@ -206,15 +149,15 @@ ASCII_PROSE_DOMAIN = re.compile(
     r"triangles?|interior angles?|derivative of|differentiable|integrals?|"
     r"convergent sequences?|real sequences?|real numbers?|nonnegative|"
     r"operator norms?|vector norms?|normed spaces?|eigenvalues?|matrices|supremum|infimum|subspaces?|vector spaces?|vectors?|linear combinations?)\b", re.I)
-ASCII_PROSE_INFERENCE = re.compile(
+ASCII_PROSE_INFERENCE = _lazy_re(
     r"\b(?:definition|monotonicity|since|because|therefore|hence|thus|consequently|implies?|"
     r"contradiction|induction|it follows|this proves|yields?|gives?|"
     r"preserves?|identifies?|by definition|by linearity|dividing|"
     r"multiplying|subtracting|adding|taking expectations|so)\b", re.I)
-ASCII_PROSE_RELATION = re.compile(
+ASCII_PROSE_RELATION = _lazy_re(
     r"(?<![A-Za-z0-9_])(?:[A-Za-z](?:_[A-Za-z0-9]+|[0-9]+)?|[0-9]+)"
     r"(?:\([^()\n]{1,30}\))?\s*(?:<=|>=|!=|=(?!=)|[<>])\s*(?:-?[0-9]|[A-Za-z])")
-ASCII_PROSE_DOCUMENT = re.compile(
+ASCII_PROSE_DOCUMENT = _lazy_re(
     r"\b(?:files?|folders?|repositories|repository|chapters?|documents?|"
     r"slides?|filenames?|editors?|typograph\w*|deploy\w*|meetings?|"
     r"deadlines?|bibliograph\w*|uploads?|downloads?|schedules?|"
@@ -255,7 +198,7 @@ def _ascii_numbered_reasoning(text):
 # 100 mdlit prompts 99 -> 99, and on 25,860 archived prompts of 200+ chars it adds 375 fires (+1.45 pp), the sample
 # read by hand all mathematical (past bank-serving prompts "You are auditing a numbered mathematical argument",
 # paper-polish and math-audit briefs). Refire is still once per session per 10 min, so the cost is bounded.
-ASCII_MATH_TOKEN = re.compile(
+ASCII_MATH_TOKEN = _lazy_re(
     r"\b[A-Za-z]\^\{?[-0-9nkpqdm]\}?|\b[A-Za-z]_\{?[0-9nkijmpt]\}?\b|\b[A-Za-z]\([A-Za-z0-9 ,+\-]{1,12}\)|"
     r"\|[^|\n]{1,30}\||<=|>=|\bE\[|\bP\(|\bsum_|\bint_|\blim_|\bsup_|\binf_|\bsqrt\(|\bexp\(|\blog\(|"
     r"\b(?:pi|infty|infinity|epsilon|eps|delta|lambda|sigma|omega|theta|alpha|beta|gamma)\b|->|\bmod\b")
@@ -271,7 +214,7 @@ def _ascii_math_argument(text):
     return len(ASCII_MATH_TOKEN.findall(text)) >= ASCII_MATH_MIN
 
 
-_FLEET_WORDS = re.compile(
+_FLEET_WORDS = _lazy_re(
     r"\b(fleet|box(?:es)? ?[0-9]|lane|queue|simulation|backtest|deploy|ssh|systemd|github|push|commit|render|movie)\b", re.I)
 
 
@@ -376,259 +319,259 @@ def _recently_fired(session):
 KNOWLEDGE = os.path.join(HOME, ".claude", "dreaming", "proof_audit_knowledge.json")
 # a named result in the argument -> the knowledge node that states its hypotheses, direction and rate
 NAMED = [
-    (re.compile('\\b(Chernoff|Hoeffding|Chebyshev)\\b', re.I), 'Chernoff bound vs Chebyshev bound'),
-    (re.compile("\\bMarkov'?s?\\s+inequality\\b", re.I), "Markov's inequality"),
-    (re.compile('\\b(strong\\s+)?Markov\\s+property\\b|\\bstrong\\s+Markov\\b', re.I), 'Markov property vs strong Markov'),
-    (re.compile('\\bJensen\\b', re.I), "Jensen's inequality"),
-    (re.compile("\\b(Cauchy[-\\s\\u2010-\\u2015]+Schwar[tz]z?|H[o\\u00f6]lder(?!(?:['\\u2019]s)?\\s*(?:continu|regular|semi|space|norm|exponent)))\\b", re.I), 'Cauchy-Schwarz and Holder'),
-    (re.compile("\\bYoung'?s?\\s+inequality\\b", re.I), "Young's inequality"),
-    (re.compile("\\b(BK\\s+inequality|van den Berg|Harris(?!(?:['\\u2019]s)?\\s+(?:recurren|chain|ergodic|theorem))|FKG|disjoint(?:ly)? occur)", re.I), 'FKG / Harris inequality vs BK'),
-    (re.compile("\\bunion bound\\b|\\bBoole'?s?\\b|\\bBonferroni\\b", re.I), 'Union bound'),
-    (re.compile('\\bBorel[- ]Cantelli\\b', re.I), 'Borel-Cantelli'),
-    (re.compile('\\b(Vitali convergence|uniformly integrable|uniform integrability|u\\.i\\.|equi-?integrab)', re.I), 'Vitali convergence theorem: uniform integrability plus tightness replaces a dominating function'),
-    (re.compile('\\bmonotone convergence\\b', re.I), 'Monotone convergence theorem'),
-    (re.compile('\\bFatou\\b', re.I), "Fatou's lemma"),
-    (re.compile('\\b(Fubini|Tonelli)\\b', re.I), 'Fubini vs Tonelli'),
-    (re.compile('\\buniform(ly)? integrab', re.I), 'Uniform integrability'),
-    (re.compile('\\boptional (stopping|sampling)\\b', re.I), 'Optional stopping theorem'),
-    (re.compile('\\bmartingale convergence\\b|\\bsupermartingale converge', re.I), 'Martingale convergence theorems'),
-    (re.compile("\\bDoob'?s?\\s+(maximal|inequalit|L\\^?p)", re.I), "Doob's inequalities"),
-    (re.compile('\\bVille\\b', re.I), "Ville's inequality"),
-    (re.compile('\\b(Azuma|McDiarmid|bounded differences)\\b', re.I), 'Azuma-Hoeffding and McDiarmid'),
-    (re.compile("\\bIt[o\\u00f4]'?s?\\s+(formula|lemma|isometry)\\b|\\bIt[o\\u00f4] formula\\b", re.I), "Ito's formula"),
-    (re.compile('\\b(Girsanov|Novikov)\\b', re.I), "Girsanov's theorem and Novikov"),
-    (re.compile('\\b(Burkholder|BDG)\\b', re.I), 'Burkholder-Davis-Gundy'),
-    (re.compile("\\bDynkin'?s?\\s+formula\\b", re.I), "Dynkin's formula"),
-    (re.compile("(\\bpi-lambda\\b|\\\\pi\\$?[- ]\\$?\\\\lambda|\\bmonotone class\\b|\\bDynkin'?s?\\s+(?:theorem|lemma|system)\\b)", re.I), "Monotone class and Dynkin's pi-lambda"),
-    (re.compile('\\b(Portmanteau|weak(ly)? converge)', re.I), 'Portmanteau theorem'),
-    (re.compile('\\bSlutsky\\b', re.I), "Slutsky's theorem"),
-    (re.compile('\\bProkhorov\\b|\\btightness\\b', re.I), "Prokhorov's theorem"),
-    (re.compile('\\bSkorokhod\\b', re.I), 'Skorokhod representation'),
-    (re.compile("\\b(L[e\\u00e9]vy(?:['\\u2019]s)?\\s+continuity|continuity theorem|Cram[e\\u00e9]r[-\\s\\u2010-\\u2015]+Wold|characteristic functions?(?!\\s+of\\s+(?:(?:the|a|an|measurable|Borel|open|closed)\\s+)*(?:sets?|events?|indicators?)\\b))\\b", re.I), "Levy's continuity theorem"),
-    (re.compile('\\\\limsup|\\\\liminf|\\blimsup\\b|\\bliminf\\b', re.I), 'limsup and liminf'),
-    (re.compile("\\b(Stein'?s?\\s+(method|kernel|identity|equation)|Stein kernel)\\b", re.I), "Stein's method"),
-    (re.compile('\\bBerry[- ]Esseen\\b', re.I), 'Berry-Esseen theorem'),
-    (re.compile("\\b(Lindeberg|Lyapunov'?s?\\s+condition|central limit)\\b", re.I), 'Lyapunov and Lindeberg conditions'),
-    (re.compile('\\bDonsker\\b|\\binvariance principle\\b', re.I), "Donsker's invariance principle"),
-    (re.compile('\\b(Cram[e\\u00e9]r(?![-\\s\\u2010-\\u2015]+(?:Rao|Wold))|large deviation|rate function|Varadhan)\\b', re.I), "Cramer's theorem and large deviations"),
-    (re.compile('\\bSanov\\b|\\brelative entropy\\b', re.I), "Sanov's theorem"),
-    (re.compile("\\b(three-series|Kolmogorov'?s?\\s+(inequality|criterion|continuity)|Kolmogorov[- ]Chentsov|Etemadi)\\b", re.I), "Kolmogorov's inequalities and criteria"),
-    (re.compile('\\b(total variation|Pinsker|Hellinger)\\b', re.I), "Pinsker's inequality"),
-    (re.compile('\\b(Wasserstein|Kantorovich|Rubinstein|optimal transport|transport(ation)? (distance|cost|plan))\\b', re.I), 'Kantorovich-Rubinstein duality'),
-    (re.compile('\\b(heat kernel|Ricci|Li[- ]Yau)\\b', re.I), 'Gradient and heat-kernel estimates'),
-    (re.compile('\\b(Arzel[a\\u00e0]|equicontinu|Banach fixed|contraction mapping|Hahn[- ]Banach)', re.I), 'Arzela-Ascoli, Banach fixed point'),
-    (re.compile('\\b(Poincar[e\\u00e9]|log-Sobolev|hypercontractiv|Sobolev|Bakry)', re.I), 'Sobolev, Poincare and log-Sobolev'),
-    (re.compile('\\b(stochastic(ally)? dominat|convex order|Strassen)\\b', re.I), 'Convex ordering and stochastic domination'),
-    (re.compile('\\b(Le Cam|Poissoniz|Poisson approximation)\\b', re.I), 'Poisson approximation and Le Cam'),
-    (re.compile('\\bexchangeab|\\bde Finetti\\b|\\bHewitt[- ]Savage\\b|\\bzero[- ]one law\\b|\\b0-1 law\\b|\\btail (event|sigma)', re.I), 'Hewitt-Savage and Kolmogorov zero-one laws'),
-    (re.compile('\\bStirling\\b', re.I), "Stirling's formula"),
-    (re.compile("\\bTaylor('?s)?\\s+(theorem|expansion|formula)\\b|\\bTaylor expan", re.I), "Taylor's theorem"),
-    (re.compile('\\bMinkowski\\b', re.I), "Minkowski's inequality"),
-    (re.compile('\\bGr[o\\u00f6]nwall\\b', re.I), "Gronwall's inequality"),
-    (re.compile('\\bLeibniz\\b|\\bdifferentiat\\w+ under the integral\\b', re.I), 'Leibniz integral rule'),
-    (re.compile("\\bBernstein'?s?\\s+inequality\\b", re.I), "Bernstein's inequality"),
-    (re.compile('\\bRiesz\\b', re.I), 'Riesz representation'),
-    (re.compile('\\b(Karamata|Potter|regularly varying|slowly varying|regular variation)\\b', re.I), "Karamata's theorem and Potter's bounds"),
-    (re.compile('\\bPaley[- ]Zygmund\\b|\\bsecond[- ]moment method\\b', re.I), 'Paley-Zygmund inequality'),
-    (re.compile("\\bLaplace('?s)?\\s+method\\b|\\bsaddle[- ]point\\b", re.I), "Laplace's method"),
-    (re.compile('\\bDini\\b', re.I), "Dini's theorem"),
-    (re.compile('\\bDuhamel\\b|\\bvariation of constants\\b|\\bmild solution\\b', re.I), "Duhamel's formula"),
-    (re.compile("\\b(Russo(?:['\\u2019]s)?\\s+formula|Margulis[-\\s\\u2010-\\u2015]+Russo|pivotal (?:edge|site|coordinate|bond)|is pivotal|pivotality of|total influence)\\b", re.I), "Russo's formula"),
-    (re.compile("\\bWald'?s?\\s+(identit|equation|lemma)", re.I), "Wald's identities"),
-    (re.compile('\\bRadon[- ]Nikodym\\b|\\bLebesgue decomposition\\b', re.I), 'Radon-Nikodym theorem'),
-    (re.compile('\\b(Campbell|Mecke|Slivnyak|Palm\\s+(?:measure|calculus|distribution|version|expectation|theory))\\b', re.I), 'Campbell, Mecke and Slivnyak'),
-    (re.compile('\\b(Kingman|subadditive|Fekete|superadditive)\\b', re.I), "Kingman's subadditive ergodic theorem"),
-    (re.compile('\\bBirkhoff\\b|\\bergodic theorem\\b', re.I), "Birkhoff's ergodic theorem"),
-    (re.compile('\\b(Abel|Tauberian|Hardy[- ]Littlewood(?!\\s+maximal)|summation by parts)\\b', re.I), 'Abel and Dirichlet tests'),
-    (re.compile('\\bPeierls\\b|\\bcontour argument\\b', re.I), 'Peierls argument'),
-    (re.compile('\\b(Egorov|Lusin|Scheff[e\\u00e9])\\b', re.I), "Egorov's, Lusin's and Scheffe's theorems"),
-    (re.compile('\\b(Perron[- ]Frobenius|Feller property|Feller process|irreducib|aperiodic)', re.I), 'Feller property, Perron-Frobenius'),
-    (re.compile('\\b(Talagrand|Efron[- ]Stein|convex distance)\\b', re.I), "Talagrand's and Efron-Stein"),
-    (re.compile('\\b(Vitali(?:\\x27s)? (?:covering|cover)|Lebesgue differentiation|Hardy[- ]Littlewood maximal|maximal function)\\b', re.I), 'Vitali covering, Lebesgue differentiation'),
-    (re.compile('\\b(Doob[- ]Meyer|compensator|Doob decomposition|predictable quadratic)\\b', re.I), 'Doob decomposition, Doob-Meyer'),
-    (re.compile('\\buncorrelated\\b|\\bpairwise independen', re.I), 'Independence vs uncorrelated'),
-    (re.compile('\\b(in probability|almost surely|in distribution|in law|in L\\^?\\s*[1p2])\\b', re.I), 'Convergence modes'),
-    (re.compile('\\bFeynman[- ]Kac\\b', re.I), 'Feynman-Kac formula'),
-    (re.compile('\\b(Foster|Lyapunov function|drift condition|drift inequality|geometric(ally)? ergodic|petite set|small set)\\b', re.I), 'Foster-Lyapunov drift conditions'),
-    (re.compile('\\b(spectral gap|mixing time|relaxation time|Cheeger|conductance|bottleneck ratio)\\b', re.I), 'Spectral gap, mixing time and Cheeger'),
-    (re.compile('\\b(Doeblin|minori[sz]ation|coupling time|coupling inequality)\\b', re.I), "Doeblin's condition, minorisation and coupling"),
-    (re.compile("\\b(Kolmogorov('?s)? extension|Carath[e\\u00e9]odory|consistent family|finite[- ]dimensional distributions)\\b", re.I), 'Kolmogorov extension and Caratheodory'),
-    (re.compile('\\b(Glivenko|Kolmogorov[- ]Smirnov|Dvoretzky|DKW|empirical (distribution|process))\\b', re.I), 'Kolmogorov-Smirnov, Glivenko-Cantelli and DKW'),
-    (re.compile('\\b(Borell|Tsirelson|Slepian|Sudakov|Fernique|Gaussian concentration)\\b', re.I), 'Gaussian concentration (Borell-TIS'),
-    (re.compile('\\b(Dudley|chaining|entropy integral|covering number|metric entropy)\\b', re.I), "Dudley's entropy bound and chaining"),
-    (re.compile('\\b(Rosenthal|Marcinkiewicz|Khintchine[- ]Kahane|Kahane|von Bahr)\\b', re.I), 'Rosenthal, Marcinkiewicz-Zygmund and Khintchine-Kahane'),
-    (re.compile('\\b(Bennett|Freedman|matrix Bernstein|Tropp)\\b', re.I), 'Bennett, Freedman and the matrix Bernstein'),
-    (re.compile('\\b(L[e\\u00e9]vy[- ]Khintchine|L[e\\u00e9]vy measure|L[e\\u00e9]vy process|subordinator|infinitely divisible|characteristic exponent)\\b', re.I), 'Levy processes and the Levy-Khintchine formula'),
-    (re.compile('\\b(iterated logarithm|LIL|strong law of large numbers|SLLN)\\b', re.I), "Khintchine's law of the iterated logarithm"),
-    (re.compile('\\b(Harnack|Nash inequality|heat kernel bound|Gaussian (upper|lower) bound|volume doubling)\\b', re.I), 'Harnack inequalities and Nash'),
-    (re.compile('\\b(Bochner|Plancherel|Parseval|Fourier inversion|inversion formula|positive definite)\\b', re.I), 'Bochner, Parseval-Plancherel and Fourier inversion'),
-    (re.compile('\\b(Hille[- ]Yosida|Trotter|Kurtz|Lumer|core of the generator|a core for)\\b', re.I), 'Hille-Yosida, Trotter-Kurtz'),
-    (re.compile('\\b(Aldous|Meyer[- ]Zheng|C-tight|J1 topology|Skorokhod (space|topology))\\b', re.I), "Aldous' tightness criterion and Meyer-Zheng"),
-    (re.compile('\\b(coupling from the past|Propp[- ]Wilson|Dobrushin)\\b', re.I), 'Coupling from the past and Dobrushin'),
-    (re.compile('\\b(Kesten|critical probability|p_c\\b|infinite cluster|Burton[- ]Keane|Menshikov)', re.I), "Kesten's theorem and the critical probability"),
-    (re.compile('\\b(reflection principle|running maximum|hitting time of (a )?level|first passage)\\b', re.I), 'The reflection principle and the running maximum'),
-    (re.compile('\\b(strong(ly)? mixing|weak(ly)? mixing|mixing coefficient|alpha-mixing|beta-mixing|phi-mixing|\\\\alpha-mixing|\\\\beta-mixing)\\b', re.I), 'Ergodicity, mixing and the invariant'),
-    (re.compile('(\\binfinitely often\\b|\\bi\\.o\\.|\\bfinitely often\\b|\\beventually\\b)', re.I), 'Almost sure vs in probability vs eventually'),
-    (re.compile('\\b(tower property|conditional expectation|conditional Jensen|conditional variance|taking out what is known)\\b', re.I), 'Conditional expectation: tower property'),
-    (re.compile('\\b(stopping time|optional time|F_\\\\?tau|debut)\\b', re.I), 'Stopping times and the optional sigma-algebra'),
-    (re.compile('\\b(covariance|\\\\mathrm\\{Cov\\}|\\\\operatorname\\{Cov\\}|\\\\mathrm\\{Var\\}|\\\\operatorname\\{Var\\}|sample mean|sample variance)\\b', re.I), 'Variance, covariance and correlation bookkeeping'),
-    (re.compile('\\b(moment generating function|cumulant|Legendre|exponential tilt|tilted (law|measure)|log-moment)\\b', re.I), 'Exponential families, moment generating functions'),
-    (re.compile('\\b(Poisson process|thinning|superposition|memoryless|inter-?arrival|order statistics property)\\b', re.I), 'Poisson processes: superposition, thinning'),
-    (re.compile('\\b(P[o\\u00f3]lya|ballot theorem|arcsine|simple random walk|return probability|Chung[- ]Fuchs)\\b', re.I), 'Random walks: recurrence by dimension'),
-    (re.compile('\\b(Galton[- ]Watson|branching process|extinction probability|Kesten[- ]Stigum|Yaglom|offspring)\\b', re.I), 'Branching processes: extinction'),
-    (re.compile('\\b(Gibbs measure|DLR|phase transition|Griffiths|GKS|GHS|Onsager|pure phase)\\b', re.I), 'Gibbs measures, DLR equations'),
-    (re.compile('\\b(Ricci|curvature|Bakry[- ][E\\u00c9]mery|CD\\(|Ollivier|reflection coupling|Wasserstein contraction)', re.I), 'Wasserstein contraction, Ricci curvature'),
-    (re.compile('\\b(Yamada[-\\s\\u2010-\\u2015]+Watanabe|pathwise uniqueness|strong solution|weak solution|comparison theorem|linear growth|locally Lipschitz)\\b', re.I), 'Stochastic differential equations: existence'),
-    (re.compile('\\b(Kullback|KL divergence|mutual information|data[- ]processing|f-divergence|entropy inequality)\\b', re.I), 'Kullback-Leibler divergence, entropy and mutual information'),
-    (re.compile("\\b(Weyl(?:['\\u2019]s)?\\s+inequality|Courant[-\\s\\u2010-\\u2015]+Fischer|Hoffman[-\\s\\u2010-\\u2015]+Wielandt|(?:min[-\\s\\u2010-\\u2015]+max|max[-\\s\\u2010-\\u2015]+min)\\s+(?:principle|characteri[sz]ation|formula|theorem for eigenvalues)|Rayleigh quotient|Schatten|Frobenius norm|operator norm)\\b", re.I), 'Matrix and operator inequalities'),
-    (re.compile('\\b(Wigner|semicircle|Marchenko|Marcenko|Pastur|Tracy[- ]Widom|empirical spectral)\\b', re.I), "Wigner's semicircle law"),
-    (re.compile('\\b(symmetri[sz]ation|Rademacher (?:complexity|average|process|signs?|sequence)|contraction principle|Massart|VC dimension|Ledoux)\\b', re.I), 'Symmetrisation, contraction and the Rademacher'),
-    (re.compile("\\b(Kac('?s)? (formula|lemma)|return time|renewal|Blackwell|residual life|inspection paradox|size-biased)\\b", re.I), "Kac's formula, return times and the renewal"),
-    (re.compile('\\b(regenerat|Harris recurren|split chain|Nummelin|atom of the chain|positive recurren)', re.I), 'Regeneration, Harris recurrence and the split chain'),
-    (re.compile('\\b(class\\s+DL|class\\s+D\\b|uniformly integrable (?:local )?(?:martingale|submartingale)|closed martingale)\\b', re.I), 'Class D and class DL: which uniform integrability upgrades a local martingale'),
-    (re.compile("\\b(Burkholder|Burkholder[-\\s]Davis[-\\s]Gundy|BDG|Davis(?:'s|s')? inequality|square function)\\b", re.I), 'Burkholder-Davis-Gundy: the exponent is p/2 and the bracket is the optional one'),
-    (re.compile("\\b(Dubins[-\\s]Schwarz|time[-\\s]chang(?:e|ed|ing)|Knight(?:'s|s')? theorem|random time change)\\b", re.I), 'Dubins-Schwarz: a continuous local martingale is Brownian motion on its own clock'),
-    (re.compile('\\b(strict local martingale|(?:nonnegative|non-negative|positive) local martingale|localizing sequence|reducing sequence|only a supermartingale|local martingale (?:but|which is|that is) not a (?:true |uniformly integrable )?martingale)\\b', re.I), 'Strict local martingales: a nonnegative local martingale is only a supermartingale'),
-    (re.compile('\\b(Novikov|Kazamaki|Girsanov|exponential (?:local )?martingale|change of measure)\\b', re.I), 'Novikov and Kazamaki: which bracket goes with which criterion, and the constant 1/2'),
-    (re.compile('\\b(Lenglart|domination inequality|dominated by an increasing process|weak[-\\s]type inequality)\\b', re.I), "Lenglart's domination inequality: domination at stopping times, and a weak-type conclusion"),
-    (re.compile('\\b(Kunita[-\\s]Watanabe|mutual (?:bracket|variation)|cross[-\\s]variation|bracket <M,\\s*N>)\\b', re.I), 'Kunita-Watanabe: a pathwise Cauchy-Schwarz with square roots on both brackets'),
-    (re.compile("\\b(compensator|counting process|Doob[-\\s]Meyer|stochastic intensity|point process|Watanabe(?:'s|s')? characteri[sz]ation)\\b", re.I), 'Compensator of a counting process: predictability is what makes it unique, and <M> is not [M]'),
-    (re.compile('\\b(optional projection|predictable projection|dual predictable projection|predictable time|totally inaccessible|announc(?:ing|eable))\\b', re.I), 'Optional versus predictable projection: F_T with stopping times, F_{T-} with predictable times'),
-    (re.compile('\\b(maximal identity|last[-\\s]passage time|Az[eé]ma[-\\s]Yor|Az[eé]ma supermartingale|honest time|Skorokhod embedding)\\b', re.I), "Doob's maximal identity and last passage: the ratio is start over level, x/a"),
-    (re.compile("\\b(stochastic integral|It[oô](?:'s|s')? isometry|predictable integrand|integral against a (?:local )?martingale)\\b", re.I), 'Stochastic integrals against local martingales: predictable integrands, and only a local martingale'),
-    (re.compile('\\b(Dol[eé]ans[-\\s]Dade|stochastic exponential|exponential (?:local )?martingale|E\\(M\\)|Novikov)\\b', re.I), 'Doleans-Dade exponential: the bracket correction is subtracted, with coefficient one half'),
-    (re.compile("\\b(It[o\\u00f4\\u014d](?:['\\u2019]s)?\\s+isometry|isometry of the stochastic integral|predictable integrand|progressively measurable|square[- ]integrable integrand)\\b", re.I), 'Ito isometry: equality holds only under the L^2 hypothesis, and against d<M>, not ds'),
-    (re.compile("\\b(It[oôō]'?s? (formula|lemma)|change of variables? formula|second[- ]order term|semimartingale)\\b", re.I), "Ito's formula: the one half, the second derivative, and the bracket it is integrated against"),
-    (re.compile('\\b(integration by parts for (?:a |the )?semimartingales?|semimartingale product rule|quadratic (?:co)?variation|covariation|polari[sz]ation identity|predictable bracket|X_\\{s-\\}|left limits?)\\b', re.I), 'Integration by parts for semimartingales: the covariation term is added and the integrands are left limits'),
-    (re.compile('\\b(Tanaka|local time|occupation (density|times) formula|sgn\\(|It[oôō][- ]Tanaka|L_t\\^?\\{?0)\\b', re.I), "Tanaka's formula and local time: which version carries the one half and how the sgn convention is fixed"),
-    (re.compile("\\b(L[eé]vy'?s? (characteri[sz]ation|theorem)|characteri[sz]ation of Brownian motion|continuous local martingale)\\b", re.I), "Levy's characterisation of Brownian motion: continuity plus bracket exactly t, for all t and all components"),
-    (re.compile('\\b(Novikov|Kazamaki|Dol[eé]ans|stochastic exponential|exponential (local )?martingale|uniformly integrable martingale)\\b', re.I), 'Stochastic exponentials, Novikov and Kazamaki: the minus one half, and which criterion reads which process'),
-    (re.compile('\\b(Girsanov|change of measure|equivalent (probability )?measure|Radon[- ]Nikod[yý]m derivative|remove the drift)\\b', re.I), "Girsanov's theorem: the drift is subtracted, and the density must be a true martingale"),
-    (re.compile('\\b(Stratonovich|Fisk[- ]Stratonovich|Wong[- ]Zakai|conversion (term|formula)|circ ?d[XW])\\b', re.I), 'Stratonovich versus Ito: the conversion term is plus one half the covariation of integrand with integrator'),
-    (re.compile('\\b(Dambis|Dubins[- ]Schwarz|DDS|time[- ]chang(e|ed)|random time change|inverse of the quadratic variation)\\b', re.I), 'Dambis-Dubins-Schwarz: the time change runs one way, and the bracket must exhaust infinity'),
-    (re.compile('\\b(martingale representation|predictable representation|Brownian filtration|representation theorem|generated by the Brownian)\\b', re.I), 'Martingale representation: the filtration must be the Brownian one, and there is no drift term'),
-    (re.compile("\\b(Burkholder|Davis[- ]Gundy|BDG|maximal inequality|Doob'?s (L\\^?p )?inequality|running maximum)\\b", re.I), 'Burkholder-Davis-Gundy: the bracket enters at exponent p/2, and both directions hold'),
-    (re.compile('\\b(Malliavin|Clark[- ]Ocone|Skorokhod integral|divergence operator|integration by parts formula|D_t ?F)\\b', re.I), 'Malliavin integration by parts: which operator is the adjoint, and the conditional expectation in Clark-Ocone'),
-    (re.compile('\\b(Hille[-\\s]?Yosida|Lumer[-\\s]?Phillips|dissipativ\\w*|resolvent|contraction semigroup|C_?0[-\\s]?semigroup|positive maximum principle)\\b', re.I), 'Hille-Yosida and the resolvent bound: which way the dissipativity inequality runs and that ||R_lambda|| <= 1/lambda'),
-    (re.compile('\\b(core for (?:the|a) (?:generator|operator)|is a core|essential(?:ly)? self[-\\s]?adjoint|graph norm|domain of the generator|closure of the (?:generator|operator))\\b', re.I), 'Cores for a generator: dense in the graph norm, not merely dense in the Banach space'),
-    (re.compile("\\b(Dynkin'?s? formula|martingale problem|well[- ]posed martingale problem|generator of the (?:process|diffusion|semigroup)|A ?f\\(X_s\\)|in D\\(A\\))\\b", re.I), "Dynkin's formula and the martingale problem: the compensator is subtracted, and the stopping time needs an integrability hypothesis"),
-    (re.compile('\\b(detailed balance|reversib(?:le|ility)|self[-\\s]?adjoint (?:on|in|with respect to) L\\^?2|Peskun|electrical network|conductance c\\(x,y\\))\\b', re.I), 'Detailed balance and reversibility: it implies stationarity but not conversely, and both measures must be indexed correctly'),
-    (re.compile('\\b(Dirichlet form|spectral gap|Rayleigh quotient|variational characteri[sz]ation|canonical paths|energy form)\\b', re.I), 'Dirichlet form and the variational spectral gap: an infimum over centred test functions, with the factor 1/2'),
-    (re.compile('\\b(Poincar[eé] inequality|spectral gap|exponential ergodicity|chi[-\\s]?square distance|L\\^?2 (?:decay|contraction)|relaxation)\\b', re.I), 'Poincare inequality for a Markov semigroup: gap in the denominator, and the exponent 2 gap for the variance'),
-    (re.compile('\\b(relaxation time|mixing time|t_?\\{?mix|t_?\\{?rel|absolute spectral gap|second[-\\s]?largest eigenvalue|hitting time of a set)\\b', re.I), 'Relaxation, mixing and hitting times: the absolute gap, and the two-sided bound with log(1/pi_min)'),
-    (re.compile('\\b(ergodic theorem|aperiodic\\w*|period(?:ic|icity) of the chain|irreducib\\w+|positive recurrent|null recurrent|Harris recurren\\w+|Ces[aà]ro average)\\b', re.I), 'Ergodic theorem for Markov chains: the law of large numbers needs no aperiodicity, convergence of the n-step law does'),
-    (re.compile('\\b(coupling (?:inequality|argument|time)|maximal coupling|coalesc\\w+|total variation distance|TV distance|in total variation|submultiplicativ\\w+)\\b', re.I), 'Coupling inequality and total variation: the 1/2 sits with the L^1 sum, and the coupling gives an upper bound only'),
-    (re.compile('\\b(strong stationary time|separation distance|sep\\(|randomi[sz]ed stopping time|stationary time)\\b', re.I), 'Strong stationary times: independence of position and time, and that they bound separation rather than total variation'),
-    (re.compile('\\b(cutoff(?: phenomenon| window)?|pre[-\\s]?cutoff|product condition|birth[-\\s]?and[-\\s]?death chain)\\b', re.I), 'Cutoff and the product condition: necessary for reversible chains, not sufficient'),
-    (re.compile("\\b(harmonic function|Dirichlet problem|hitting probabilit\\w+|hitting time|escape probability|effective resistance|Kac'?s formula|return time|tau_?[A-Za-z]?\\^?\\+)\\b", re.I), "Harmonic functions, hitting probabilities and Kac's formula: uniqueness needs almost sure absorption, and the return time is 1/pi(x)"),
-    (re.compile("\\b(sub[- ]?[Gg]aussian|Hoeffding'?s? (lemma|inequality)|variance proxy|psi[-_ ]?2 norm|Orlicz norm)\\b", re.I), "Sub-Gaussian variables and Hoeffding's inequality: which constant sits under the square"),
-    (re.compile("\\b(sub[- ]?exponential|psi[-_ ]?1 norm|Bernstein'?s? (moment )?condition|Orlicz|sub[- ]?gamma)\\b", re.I), 'Sub-exponential and psi_1 norms: the moment generating function only exists near zero'),
-    (re.compile("\\b(Bernstein'?s? inequality|Bennett'?s? inequality|Bernstein[- ]type (bound|inequality)|Bennett[- ]type)\\b", re.I), "Bernstein's and Bennett's inequalities: the variance, not the range, sets the Gaussian regime"),
-    (re.compile('\\b(Efron[-\\s]?Stein|jackknife|tensoriz\\w+ of (the )?variance|independent copy of)\\b', re.I), 'Efron-Stein inequality: it bounds the variance from above, and the 1/2 belongs to the resampled form'),
-    (re.compile('(\\bEnt\\b|\\bsubadditivity of (the )?entropy\\b|\\bentropy method\\b|\\bmodified log[-\\s]?Sobolev\\b|\\bexponential Efron[-\\s]?Stein\\b)', re.I), 'Subadditivity of entropy and the modified log-Sobolev bound: it is the entropy of the exponential'),
-    (re.compile("\\b(Herbst'?s? (argument|method)|Herbst)\\b", re.I), 'Herbst argument: the boundary value as lambda goes to zero is E[Z], not zero'),
-    (re.compile('\\b(log(arithmic)?[-\\s]?Sobolev|Borell[-\\s]?TIS|Borell[-\\s]?Tsirelson|Gaussian concentration|Lipschitz function of a Gaussian|Poincar[eé] inequality)\\b', re.I), 'Gaussian log-Sobolev and Lipschitz concentration: the constant is dimension free and sigma^2 is pointwise'),
-    (re.compile('\\b(McDiarmid|bounded[-\\s]differences?|Azuma[-\\s]?Hoeffding)\\b', re.I), "McDiarmid's bounded differences inequality: sum of squared constants, with a 2 in the numerator"),
-    (re.compile('\\b(self[-\\s]?bounding|configuration function|sub[-\\s]?Poissonian)\\b', re.I), 'Self-bounding functions: the t/3 correction belongs to the upper tail only'),
-    (re.compile("\\b(Talagrand'?s? (convex distance|inequality)|convex distance|convex[-\\s]distance inequality)\\b", re.I), "Talagrand's convex distance inequality: the exponent carries a 4 and the sup sits outside the inf"),
-    (re.compile('\\b(negativ\\w+ (associat\\w+|dependen\\w+)|without replacement|hypergeometric|Serfling|permutation distribution|balls[-\\s]in[-\\s]bins)\\b', re.I), 'Negative association and sampling without replacement: Chernoff bounds transfer, and never get worse'),
-    (re.compile("\\b(transport(ation)?[-\\s]cost|Marton|Bobkov[-\\s]?G[oö]tze|Pinsker'?s? inequality|Wasserstein|T_2 inequality|Otto[-\\s]?Villani)\\b", re.I), 'Transportation-cost inequalities: entropy bounds transport, and T_2 is strictly stronger than T_1'),
-    (re.compile("\\b(Lindeberg[-\\s]?Feller|Lindeberg(?:'s)? condition|triangular array|uniformly asymptotically negligible|asymptotic negligibility)\\b", re.I), 'Lindeberg-Feller CLT: the truncation runs over the large values, for every epsilon'),
-    (re.compile("\\b(Lyapunov(?:'s)?\\s+(?:condition|criterion|CLT|ratio)|(?:two|2)\\s*\\+\\s*\\\\?delta(?:\\s+moment)?)\\b", re.I), 'Lyapunov condition: the moment exponent is 2+delta on top and s_n^{2+delta} below'),
-    (re.compile('\\b(Lindeberg (?:replacement|swapping|exchange)|swapping (?:method|argument)|replac(?:e|ing) one (?:summand|variable|coordinate) at a time|telescop\\w+ sum of Gaussians)\\b', re.I), 'Lindeberg swapping method: two moments matched, third derivative, remainder constant 1/6'),
-    (re.compile("\\b(Berry[-\\s]?Esseen|Esseen(?:'s)? (?:bound|inequality|estimate)|uniform (?:rate|bound) (?:of|in) (?:the )?(?:normal approximation|CLT))\\b", re.I), 'Berry-Esseen bound: rate n^{-1/2}, third absolute moment over sigma^3'),
-    (re.compile('\\b(martingale (?:central limit theorem|CLT|difference array)|martingale differences?|Hall[-\\s]?Heyde|McLeish|predictable quadratic variation)\\b', re.I), 'Martingale CLT: conditional variances converge in probability plus conditional Lindeberg'),
-    (re.compile('\\b(conditional Lindeberg|conditional Lyapunov|asymptotic(?:ally)? negligib\\w+|infinitesimal array|uniformly negligible summands)\\b', re.I), 'Conditional Lindeberg and negligibility: what may replace it and what it forces'),
-    (re.compile('\\b((?:strong|alpha|phi|uniform)(?:ly)?[-\\s]?mixing (?:sequence|array|CLT|process|central limit)|Ibragimov|long[-\\s]?run variance|asymptotic variance series)\\b', re.I), 'CLT for stationary mixing sequences: the variance series is Var(X_0) + 2 sum_{k>=1} Cov(X_0,X_k)'),
-    (re.compile("\\b(delta method|second[-\\s]?order delta method|Taylor expan\\w+ (?:of|about) (?:the estimator|\\\\?theta)|g'\\(\\\\?theta\\))", re.I), 'Delta method: differentiability at the point, and the derivative enters squared'),
-    (re.compile('\\b(Anscombe|random(?:ly)? (?:index|indices|number of (?:summands|terms))|randomly stopped sum|random time change in the CLT)\\b', re.I), "Anscombe's theorem: random indices need N_n/n -> c and uniform continuity in probability"),
-    (re.compile('\\b(Cram(?:e|é)r[-\\s]?Wold|linear combinations? of the components|one[-\\s]?dimensional projections|multivariate (?:CLT|central limit theorem))\\b', re.I), 'Cramer-Wold device: every linear combination, and only for convergence in distribution'),
-    (re.compile('\\b(stable (law|laws|distribution|limit)|alpha[- ]stable|α-stable|(?<!max[- ])(?<!maximum )domain of attraction|non[- ]normal domain of attraction)\\b', re.I), 'Stable limits and domains of attraction: tail index alpha, scaling n^{1/alpha}, tail balance'),
-    (re.compile("\\b(Edgeworth (?:expansion|correction)|Cram(?:e|é)r(?:'s)? condition|lattice (?:span|distribution) correction|skewness correction term|cumulant expansion of the distribution function)\\b", re.I), "Edgeworth expansion: Cramer's condition, the order of the remainder, and the lattice exception"),
-    (re.compile('\\b(contraction principle|push(-|\\s)?forward of the (LDP|large deviation)|rate function of the image|inf\\s*\\{?\\s*I\\(x\\)\\s*:\\s*f\\(x\\)\\s*=)\\b', re.I), 'Contraction principle: the map must be continuous, and the rate infimum runs over the preimage'),
-    (re.compile('\\b(G(ä|a)rtner[- ]Ellis|essentially smooth|steepness|Legendre[- ]Fenchel|limiting (log[- ])?(cumulant|moment) generating function|Lambda\\^?\\*)\\b', re.I), 'Gartner-Ellis: the limiting log-mgf must be essentially smooth and lower semicontinuous, and only then is the closed-set bound available'),
-    (re.compile('\\b(exponential(ly)? tight(ness)?|weak (LDP|large deviation principle)|upper bound (on|over) compact|good rate function)\\b', re.I), 'Upper bound on compacts versus on closed sets: only exponential tightness closes the gap'),
-    (re.compile("\\b(Varadhan('s)? (integral )?lemma|Laplace principle)\\b|sup_?\\{?x\\}?\\s*\\(?\\s*F\\(x\\)\\s*-\\s*I\\(x\\)", re.I), "Varadhan's integral lemma: the exponential moment condition and why it is a sup minus the rate"),
-    (re.compile("\\b(Bryc('s)? (inverse )?lemma|inverse (of )?Varadhan|Laplace[- ]principle equivalence)\\b", re.I), "Bryc's inverse lemma: the limit must exist for all bounded continuous F, and tightness is not optional"),
-    (re.compile('\\b(Freidlin[- ]Wentzell|small[- ]noise (diffusion|limit)|Schilder|quasi(-|\\s)?potential|action functional)\\b', re.I), 'Freidlin-Wentzell: the small-noise rate is the energy with a 1/2 and the inverse diffusion matrix, at speed epsilon^{-2}'),
-    (re.compile('\\b(moderate deviations?|moderate[- ]deviation (principle|regime)|between the (CLT|central limit theorem) and (Cram(é|e)r|large deviations))\\b', re.I), 'Moderate deviations: the scaling window between the CLT and Cramer, and why the rate is always Gaussian'),
-    (re.compile('\\b(liminf.{0,40}open|limsup.{0,40}closed|I[- ]continuity set|lower bound (over|on) open sets|upper bound (over|on) closed sets|both bounds of the (LDP|large deviation principle))\\b', re.I), 'Laplace-Varadhan matching: the LDP is two inequalities in opposite directions over different set classes'),
-    (re.compile('\\b(exponential(ly)? (good )?(equivalen(t|ce)|approximations?)|extended contraction principle|uniformly on sublevel sets)\\b', re.I), 'Exponentially good approximations: the extended contraction principle needs a uniform-on-sublevel-sets limit'),
-    (re.compile("\\b(Legendre transform|convex conjugate|Cram(é|e)r('s)? theorem|log[- ]moment generating function|rate function .{0,20}sup_)\\b", re.I), "Legendre transform of the log-mgf: convexity, the direction of the duality, and where Cramer's rate is finite"),
-    (re.compile("\\b(exponential Chebyshev|exponential Markov inequality|Markov('s)? inequality.{0,40}exp|union bound.{0,60}(exponential|large deviation|rate function)|finite cover.{0,30}compact)\\b", re.I), 'Exponential Chebyshev and the union bound: the two inequalities every LDP upper bound is built from'),
-    (re.compile('\\b(speed (of the )?(LDP|large deviation)|at speed \\\\?[a-z]_n|scale a_n|normali[sz]ation of the (rate|deviation))\\b', re.I), 'Speed and the change-of-speed trap: rate functions only compare at the same normalisation'),
-    (re.compile("\\b(Harris(?:'s)?[- ]?FKG|FKG inequality|Harris inequality|positively correlated|positive(ly)? associat)", re.I), 'Harris-FKG inequality: both events increasing, and which way the correlation runs'),
-    (re.compile('\\b(FKG lattice condition|strong FKG|random[- ]cluster|Fortuin[- ]Kasteleyn|distributive lattice|comparison inequalit)', re.I), 'FKG lattice condition: what positive association needs beyond a product measure'),
-    (re.compile("\\b(van den Berg[- ]Kesten|BK inequality|BK[- ]Reimer|Reimer'?s|disjoint occurrence|disjointly (occur|open)|edge[- ]disjoint (open )?paths)", re.I), 'BK-Reimer inequality: disjoint occurrence, and the direction opposite to FKG'),
-    (re.compile("\\b(Russo'?s formula|Margulis[- ]Russo|pivotal(ity)?|pivotal (edge|site|coordinate|bond)|total influence)", re.I), "Russo's formula: the derivative is a sum of pivotal probabilities, for increasing events"),
-    (re.compile('\\b(Russo[- ]Seymour[- ]Welsh|\\bRSW\\b|box[- ]crossing|crossing probabilit|left[- ]right crossing|arm (event|exponent)s?)', re.I), 'Russo-Seymour-Welsh box crossings: bounded away from 0 AND from 1, uniformly in the scale'),
-    (re.compile('\\b(sharp threshold|coarse threshold|threshold window|Friedgut[- ]Kalai|Kahn[- ]Kalai[- ]Linial|\\bKKL\\b|Bourgain[- ]Kalai|influence of (a |the )?(variable|coordinate))', re.I), 'Friedgut-Kalai and KKL: sharp thresholds need transitivity, and the width is absolute'),
-    (re.compile('\\b(OSSS|revealment|randomized (decision tree|algorithm)|decision tree algorithm|Duminil[- ]Copin.{0,20}Raoufi.{0,20}Tassion)', re.I), 'OSSS inequality: variance bounded by revealment times influence, summed'),
-    (re.compile('\\b(giant component|Erd[oő]s[-– ]R[eé]nyi|G\\(n, ?p\\)|branching process (approximation|comparison|coupling)|survival probability|exploration process)', re.I), 'Erdos-Renyi giant component: the survival equation and the c > 1 hypothesis'),
-    (re.compile('(critical window|scaling window|barely (sub|super)critical|multiplicative coalescent|n\\^\\{?-?4/3\\}?|n\\^\\{?2/3\\}?)', re.I), 'The critical window of G(n,p): n^(-4/3) in p, n^(2/3) in component size'),
-    (re.compile('\\b(copies of H|subgraph counts?|balanced (?:graph|subgraph)|densest subgraph|m\\(H\\)|second[- ]moment method.{0,40}(?:copies|subgraph|G\\(n)|threshold for containing)\\b', re.I), 'Second-moment threshold for subgraph containment: m(H) is a maximum over subgraphs'),
-    (re.compile('\\b(connectivity threshold|connected with high probability|isolated vert(ex|ices)|coupon collector|minimum degree (reaches|is at least)|hitting time (for|of) (connectivity|Hamiltonicity))\\b', re.I), 'Connectivity threshold of G(n,p): (log n + c)/n and the double-exponential limit'),
-    (re.compile('\\b(increasing event|decreasing event|monotone (event|property|graph property)|non-?monotone|upward[- ]closed|stochastic(ally)? dominat|monotone coupling)', re.I), 'Monotone versus non-monotone events: which percolation tool is licensed'),
-    (re.compile('\\b(Laplace functional|probability generating functional|generating functional|characteristic functional|Poisson random measure)\\b', re.I), 'Laplace functional of a Poisson process: the exponent is -int (1 - e^{-f}) dLambda'),
-    (re.compile('\\b(Mecke (equation|formula|identity)|multivariate Mecke|Slivnyak[- ]Mecke)\\b', re.I), 'Mecke equation: the right-hand side evaluates the functional at the configuration with the point added'),
-    (re.compile('\\b(Papangelou|Georgii[- ]Nguyen[- ]Zessin|GNZ (equation|formula)|conditional intensity|Gibbs point process)\\b', re.I), 'GNZ equation and the Papangelou intensity: kappa is evaluated without the point, f with it'),
-    (re.compile("\\b(Campbell(\\'s)? (theorem|formula)|refined Campbell|Campbell[- ]Mecke|Palm (distribution|measure|version|expectation)|reduced Palm|Slivnyak)\\b", re.I), 'Campbell formula, Palm distributions and Slivnyak: reduced versus unreduced Palm'),
-    (re.compile("\\b(Palm inversion( formula)?|Neveu('s)? exchange formula|exchange formula|Palm (calculus|distribution|measure|version|expectation)|reduced Palm|typical (point|cell)|inspection paradox|length[- ]bias\\w*)\\b", re.I), 'Palm inversion formula: the prefactor is lambda and the typical cell has mean volume 1/lambda'),
-    (re.compile('\\b(factorial moment (measure|density|expansion)|(second|k[- ]?th|kth)[- ]order (moment|product|correlation) (measure|density|function)|pair correlation|Ripley|correlation function(s)? rho)\\b', re.I), 'Factorial moment measures: the distinct-tuple sum and the missing diagonal term'),
-    (re.compile('\\b(determinantal|Macchi|Soshnikov|projection kernel|det\\(K|correlation kernel)\\b', re.I), 'Determinantal point processes: spectrum in [0,1], and rho_2 subtracts |K(x,y)|^2'),
-    (re.compile('\\b(permanental|permanent of the (matrix|kernel)|per\\(K|boson(ic)? (process|point process)|alpha[- ](determinantal|permanental))\\b', re.I), 'Permanental processes: every determinantal sign is reversed and the spectral bound is not needed'),
-    (re.compile('\\b(Chen[- ]Stein|Stein[- ]Chen|Poisson approximation|dependency (graph|neighbou?rhood)|Arratia|total variation distance.{0,30}Poisson)\\b', re.I), 'Chen-Stein with a dependency graph: b1 keeps the diagonal, b2 drops it, and the Stein factor falls with lambda'),
-    (re.compile('\\b(thinn(ing|ed|s)|p-thinning|retention probability|independently (retain|delete|keep)s? each point)\\b', re.I), 'Thinning theorem: retained and discarded parts of a Poisson process are independent Poisson'),
-    (re.compile('\\b(marking theorem|displacement theorem|mapping theorem[^.\\n]{0,80}\\b(?:Poisson|point process)|(?:Poisson|point process)[^.\\n]{0,80}\\bmapping theorem|independently (?:marked|displaced)|marked point process|push[- ]?forward of the intensity)\\b', re.I), 'Marking, displacement and mapping theorems: the kernel is integrated against Lambda in the first variable'),
-    (re.compile("\\b(void probabilit|avoidance function|Renyi(\\'s)? theorem|Rényi(\\'s)? theorem|complete(ly)? independen(t|ce)|simple point process|no fixed atoms)\\b", re.I), "Void probabilities and Renyi's theorem: the conclusion needs the process to be simple"),
-    (re.compile('\\b(Stieltjes transform|Cauchy transform|Stieltjes inversion|inversion formula|upper half[- ]plane|resolvent trace)\\b', re.I), 'Stieltjes transform and its inversion: which sign convention, and the 1/pi in the density'),
-    (re.compile('\\b(semi-?circle law|semi-?circular|Wigner (matrix|matrices|law|ensemble)|self-consistent equation)\\b', re.I), 'Semicircle law and its self-consistent equation: m^2 + z m + 1 = 0 and the branch at infinity'),
-    (re.compile('\\b(Marchenko[- ]?Pastur|MP law|sample covariance matri|Wishart|aspect ratio|singular values of X)\\b', re.I), 'Marchenko-Pastur law: the edges are (1 +/- sqrt(y))^2 and the atom has mass 1 - 1/y'),
-    (re.compile("\\b(local law|local semi-?circle law|isotropic (?:local )?law|resolvent (?:entries|of (?:H|the matrix|a Wigner|the random matrix))|Green(?:['\\u2019]s)?\\s+function (?:of|for) (?:H|the matrix|(?:a |the )?(?:Wigner|random) matrix)|spectral parameter)\\b", re.I), 'Local law for random matrices: eta >> 1/n, and the averaged rate is one power better than the entrywise one'),
-    (re.compile('\\b(rigidity|classical location|classical eigenvalue location|quantile of the (semi-?circle|limiting)|eigenvalue location)\\b', re.I), 'Eigenvalue rigidity: the n^{-2/3} edge scale, n^{-1} in the bulk, and the min(i, n+1-i) factor'),
-    (re.compile('\\b(Tracy[- ]?Widom|soft edge|Airy kernel|edge fluctuation|GOE|GUE|largest eigenvalue distribution)\\b', re.I), 'Tracy-Widom at the soft edge: the n^{-2/3} scale, and which tail has exponent 3/2'),
-    (re.compile('\\b(BBP|Baik[- ]Ben ?Arous[- ]Pech|spiked (model|covariance|matrix)|outlier eigenvalue|deformed Wigner|rank[- ]one spike)\\b', re.I), 'BBP transition for spiked models: threshold sqrt(y) for covariance, 1 for additive, and the outlier formula'),
-    (re.compile("\\b(Weyl'?s? inequalit|Lidskii|Hoffman[- ]?Wielandt|Ky Fan|eigenvalue perturbation|unitarily invariant norm)\\b", re.I), 'Weyl, Lidskii and Hoffman-Wielandt: eigenvalue perturbation needs Hermitian matrices and matched order'),
-    (re.compile('\\b(interlac(e|es|ing)|Cauchy interlacing|principal submatrix|rank[- ]one (perturbation|update)|rank inequality|low[- ]rank perturbation)\\b', re.I), 'Cauchy interlacing and the rank inequality: the index shifts by exactly one per unit of rank'),
-    (re.compile('\\b(Bai(?:[-\\s\\u2010-\\u2015]+)?Yin|Davidson[-\\s\\u2010-\\u2015]+Szarek|(?:operator|spectral) norm of (?:a|an|the) [^.\\n]{0,60}\\bGaussian matrix|(?:operator|spectral) norm of (?:a|the) (?:random|m x n) matrix|largest singular value|smallest singular value|sqrt\\(m\\) ?\\+ ?sqrt\\(n\\))\\b', re.I), 'Operator norm of a Gaussian matrix: sqrt(m) + sqrt(n), the 2 sqrt(n) symmetric edge, and dimension-free concentration'),
-    (re.compile("\\b(Chevet|Gordon'?s? (inequality|minimax|comparison|theorem)|Slepian|Sudakov[- ]Fernique|Gaussian width|Gaussian comparison)\\b", re.I), 'Chevet, Slepian and Sudakov-Fernique: both cross terms, and which side of the comparison the maximum sits on'),
-    (re.compile('\\b(universality of (?:the )?local|sine kernel|Airy kernel|four[- ]moment (?:theorem|matching)|local eigenvalue statistics|Dyson Brownian motion|bulk (?:universality|statistics))\\b', re.I), 'Universality of local eigenvalue statistics: sine kernel in the bulk, Airy at the edge, and what is not universal'),
-    (re.compile("\\b(Birkhoff(?:'s)?(?:\\s+pointwise)?\\s+ergodic theorem|pointwise ergodic theorem|ergodic averages?|Birkhoff averages?|time averages? converge)\\b", re.I), 'Birkhoff pointwise ergodic theorem: the limit is E[f | invariant sigma-field], constant only under ergodicity'),
-    (re.compile("\\b(von Neumann(?:'s)?(?:\\s+mean)? ergodic theorem|mean ergodic theorem|Koopman operator|projection onto the (?:space of )?invariant (?:functions|vectors))\\b", re.I), 'Von Neumann mean ergodic theorem: norm convergence to the projection on the fixed subspace, not pointwise'),
-    (re.compile("\\b(maximal ergodic theorem|Hopf(?:'s)? maximal|ergodic maximal (?:inequality|function)|dominated ergodic theorem|weak[- ]type \\(1, ?1\\))\\b", re.I), 'Maximal ergodic theorem and the ergodic maximal inequality: which side is nonnegative, and where the constant lives'),
-    (re.compile("\\b(Poincar[eé] recurrence|Kac(?:'s)? (?:lemma|formula)|first return time|return time to A|mean recurrence time)\\b", re.I), "Poincare recurrence and Kac's lemma: the mean return time is 1/mu(A), not mu(A)"),
-    (re.compile('\\b(weak(?:ly)? mixing|mild(?:ly)? mixing|strong(?:ly)? mixing|mixing implies ergodic|ergodic but not mixing|T x T is ergodic)\\b', re.I), 'The mixing hierarchy: mixing implies mild implies weak implies ergodic, each strictly, and the absolute values matter'),
-    (re.compile('\\b(stationary Gaussian (?:process|sequence|field)|Gaussian (?:process|shift) is (?:ergodic|mixing)|spectral measure (?:is continuous|has no atoms)|Maruyama|Rajchman|Kolmogorov[-–]Rozanov)\\b', re.I), 'Spectral criterion for a stationary Gaussian process: atomless gives ergodic, r(n) -> 0 gives mixing'),
-    (re.compile("\\b(Kingman(?:'s)?|sub(?:-)?additive ergodic theorem|super(?:-)?additive ergodic theorem|Fekete(?:'s)? lemma|subadditive sequence)\\b", re.I), "Kingman's subadditive ergodic theorem: the constant is the infimum of E[X_{0,n}]/n, and subadditivity points one way"),
-    (re.compile('\\b(Shannon[-–]McMillan[-–]Breiman|SMB theorem|entropy rate|asymptotic equipartition|typical set|-\\(1/n\\) ?\\\\?log p)\\b', re.I), 'Shannon-McMillan-Breiman: the a.s. limit is the entropy rate, which is an infimum and a conditional entropy'),
-    (re.compile('\\b(Kolmogorov[-–]Sinai|measure[- ]theoretic entropy|entropy of the (?:shift|transformation|system)|generating partition|generator of the sigma[- ]field|Ornstein isomorphism)\\b', re.I), 'Kolmogorov-Sinai entropy: a sup over partitions, attained at any generator, with h(T^k) = |k| h(T)'),
-    (re.compile('\\b(invariant sigma[- ]?(?:field|algebra)|ergodic decomposition|extreme points of the set of invariant measures|stationary but not ergodic|tail sigma[- ]?(?:field|algebra)|mixed normal)\\b', re.I), 'The invariant sigma-field and ergodic decomposition: what a non-ergodic stationary limit theorem actually says'),
-    (re.compile('\\b(subshift|shift of finite type|specification property|topological(?:ly)? (?:mixing|entropy)|variational principle|equilibrium state|measure of maximal entropy|Perron root)\\b', re.I), 'Subshifts, specification and the variational principle: topological entropy is a supremum over invariant measures'),
-    (re.compile('\\b(alpha[- ]mixing|strong(?:ly)? mixing coefficient|beta[- ]mixing|phi[- ]mixing|rho[- ]mixing|absolutely regular|maximal correlation|covariance inequality|Davydov|Ibragimov)\\b', re.I), 'Mixing coefficients for stationary sequences: alpha is the weakest, and the covariance bound carries the exponent 1/r'),
-    (re.compile('\\b(Vitali convergence|uniformly integrable|uniform integrability|[Uu]\\.?[Ii]\\.?\\b|equi-?integrab)', re.I), 'Vitali convergence theorem: uniform integrability plus tightness replaces a dominating function'),
-    (re.compile('\\b(dominated convergence|DCT|dominating function|bounded convergence theorem)\\b', re.I), 'Dominated convergence theorem: one fixed integrable dominating function, not an n-dependent bound'),
-    (re.compile("\\b(Fatou'?s? lemma|Fatou|reverse Fatou)\\b", re.I), "Fatou's lemma: liminf on the inside is <= liminf on the outside, and only for nonnegative or bounded-below sequences"),
-    (re.compile('\\b(layer[- ]cake|distribution function formula|E\\[X\\] *= *\\\\?int_?0\\^\\\\?infty|integrating the tail|tail integral)', re.I), 'Layer-cake formula: the tail is integrated in t from 0 to infinity, with the p t^{p-1} weight'),
-    (re.compile("\\b(Markov'?s? inequality|Chebyshev'?s? inequality|Bienaym(e|é)\\w*)\\b", re.I), 'Markov and Chebyshev inequalities: which side of t, which power, and where the moment sits'),
-    (re.compile('\\b(absolute(ly)? continu(ity|ous) of the integral|uniform(ly)? absolutely continuous|small(ness)? on sets of small measure|int_A \\|f\\|)', re.I), 'Absolute continuity of the integral: small sets carry small integral, uniformly only for a UI family'),
-    (re.compile('\\b(Fubini|Tonelli|iterated integral|product measur(e|able|ability)|interchange the order of integration)\\b', re.I), 'Fubini and Tonelli: nonnegativity or integrability of the double integral, and joint measurability first'),
-    (re.compile("\\b(Egoro[fv]|Egorov'?s theorem|Lusin|almost uniform convergence)\\b", re.I), "Egorov's theorem: finite measure, a.e. convergence, and uniform convergence off a small set (not off a null set)"),
-    (re.compile('\\b(Riesz[- ]Fischer|L\\^?p is complete|completeness of L\\^?p|Banach space L\\^?p|essential sup(remum)?)\\b', re.I), 'Riesz-Fischer: L^p is complete for 1 <= p <= infinity, and convergence in L^p gives only a subsequence a.e.'),
-    (re.compile('\\b(weak[- ]?\\*|weak-?star|weakly (convergen|compact)|Dunford[- ]Pettis|Banach[- ]Alaoglu|conjugate exponent|dual of L\\^?p)', re.I), 'Weak versus weak-star convergence in L^p: which duality holds, and what compactness it buys'),
-    (re.compile("\\b(Minkowski('s)? inequality|conjugate exponents?|H(o|ö)lder'?s? inequality with exponents?|which exponent)\\b", re.I), 'Holder, Minkowski and Jensen: which exponent goes on which factor and which way the convexity runs'),
-    (re.compile('\\b(completion of the sigma[- ]algebra|complete(d)? filtration|usual conditions|null sets? (are )?(adjoined|added)|indistinguishab\\w*|(measurable |continuous )?modification of (the|a) process|version of (the|a) (process|random variable|conditional expectation|density))\\b', re.I), "Completion of a sigma-algebra and a.e. statements: null sets, versions, and where 'for all omega' is not available"),
-    (re.compile('\\b(regular(ly)? var(iation|ying)|slow(ly)? var(iation|ying)|uniform convergence theorem|index of regular variation)\\b', re.I), 'Regular variation: which index carries the minus sign, and how uniform the limit is'),
-    (re.compile('\\b(Karamata|truncated (second )?moment|integrat(e|ing|ion of) (a )?regularly varying)\\b', re.I), "Karamata's theorem: the integral is x f(x) over the distance of the index from -1"),
-    (re.compile("\\b(Potter'?s? (bound|bounds|inequality)|Karamata representation|representation theorem for slowly varying)\\b", re.I), 'Karamata representation and Potter bounds: a max of two powers, valid only past a threshold'),
-    (re.compile("\\b(Tauberian|Abelian theorem|Laplace[- ]Stieltjes transform|Karamata'?s Tauberian)\\b", re.I), "Karamata's Tauberian theorem: infinity for the function, zero for the transform, and the gamma factor"),
-    (re.compile('\\b(Fisher[- ]Tippett|Gnedenko|generali[sz]ed extreme value|extreme value (index|distribution|law)|GEV|Fr[eé]chet|Gumbel)\\b', re.I), 'Fisher-Tippett-Gnedenko: the GEV exponent is -1/xi and the sign of xi picks the type'),
-    (re.compile('\\b(max[- ]domain of attraction|maximum domain of attraction|von Mises condition|norming constants|MDA)\\b', re.I), 'Max-domains of attraction: n times the tail converges, and the limit is exp(-tau)'),
-    (re.compile("\\b(subexponential|one[- ]big[- ]jump|max[- ]sum equivalence|Kesten'?s bound|convolution tail)\\b", re.I), 'Subexponentiality: the two-fold convolution tail is twice the tail, and one big jump does it'),
-    (re.compile('\\b(long[- ]tailed|regularly varying .{0,30}subexponential|subexponential .{0,30}(regularly varying|long[- ]tailed|heavy[- ]tailed)|tail[- ]equivalen\\w+|closed under convolution)\\b', re.I), 'Regularly varying versus subexponential: strict inclusions and which tail survives a sum'),
-    (re.compile("\\bBreiman'?s (lemma|theorem)\\b", re.I), "Breiman's lemma: the constant is E[Y^alpha] and the moment must reach strictly past alpha"),
-    (re.compile('\\b(stable (law|laws|distribution|limit)|alpha[- ]stable|α-stable|domain of attraction|non[- ]normal domain of attraction)\\b', re.I), 'Stable limits: norming is n^{1/alpha}, tail balance is a hypothesis, and alpha = 2 is not a power tail'),
-    (re.compile('\\b(Pickands|Balkema|generali[sz]ed Pareto|GPD|excess distribution|mean excess|peaks over threshold)\\b', re.I), 'Pickands-Balkema-de Haan: the excess law is generalised Pareto with the same xi as the maximum'),
-    (re.compile('\\b(Hill estimator|Hill plot|tail index estimat\\w+|second[- ]order (regular variation|condition))\\b', re.I), 'The Hill estimator: it estimates 1/alpha, and k must go to infinity with k/n going to zero'),
+    (_lazy_re('\\b(Chernoff|Hoeffding|Chebyshev)\\b', re.I), 'Chernoff bound vs Chebyshev bound'),
+    (_lazy_re("\\bMarkov'?s?\\s+inequality\\b", re.I), "Markov's inequality"),
+    (_lazy_re('\\b(strong\\s+)?Markov\\s+property\\b|\\bstrong\\s+Markov\\b', re.I), 'Markov property vs strong Markov'),
+    (_lazy_re('\\bJensen\\b', re.I), "Jensen's inequality"),
+    (_lazy_re("\\b(Cauchy[-\\s\\u2010-\\u2015]+Schwar[tz]z?|H[o\\u00f6]lder(?!(?:['\\u2019]s)?\\s*(?:continu|regular|semi|space|norm|exponent)))\\b", re.I), 'Cauchy-Schwarz and Holder'),
+    (_lazy_re("\\bYoung'?s?\\s+inequality\\b", re.I), "Young's inequality"),
+    (_lazy_re("\\b(BK\\s+inequality|van den Berg|Harris(?!(?:['\\u2019]s)?\\s+(?:recurren|chain|ergodic|theorem))|FKG|disjoint(?:ly)? occur)", re.I), 'FKG / Harris inequality vs BK'),
+    (_lazy_re("\\bunion bound\\b|\\bBoole'?s?\\b|\\bBonferroni\\b", re.I), 'Union bound'),
+    (_lazy_re('\\bBorel[- ]Cantelli\\b', re.I), 'Borel-Cantelli'),
+    (_lazy_re('\\b(Vitali convergence|uniformly integrable|uniform integrability|u\\.i\\.|equi-?integrab)', re.I), 'Vitali convergence theorem: uniform integrability plus tightness replaces a dominating function'),
+    (_lazy_re('\\bmonotone convergence\\b', re.I), 'Monotone convergence theorem'),
+    (_lazy_re('\\bFatou\\b', re.I), "Fatou's lemma"),
+    (_lazy_re('\\b(Fubini|Tonelli)\\b', re.I), 'Fubini vs Tonelli'),
+    (_lazy_re('\\buniform(ly)? integrab', re.I), 'Uniform integrability'),
+    (_lazy_re('\\boptional (stopping|sampling)\\b', re.I), 'Optional stopping theorem'),
+    (_lazy_re('\\bmartingale convergence\\b|\\bsupermartingale converge', re.I), 'Martingale convergence theorems'),
+    (_lazy_re("\\bDoob'?s?\\s+(maximal|inequalit|L\\^?p)", re.I), "Doob's inequalities"),
+    (_lazy_re('\\bVille\\b', re.I), "Ville's inequality"),
+    (_lazy_re('\\b(Azuma|McDiarmid|bounded differences)\\b', re.I), 'Azuma-Hoeffding and McDiarmid'),
+    (_lazy_re("\\bIt[o\\u00f4]'?s?\\s+(formula|lemma|isometry)\\b|\\bIt[o\\u00f4] formula\\b", re.I), "Ito's formula"),
+    (_lazy_re('\\b(Girsanov|Novikov)\\b', re.I), "Girsanov's theorem and Novikov"),
+    (_lazy_re('\\b(Burkholder|BDG)\\b', re.I), 'Burkholder-Davis-Gundy'),
+    (_lazy_re("\\bDynkin'?s?\\s+formula\\b", re.I), "Dynkin's formula"),
+    (_lazy_re("(\\bpi-lambda\\b|\\\\pi\\$?[- ]\\$?\\\\lambda|\\bmonotone class\\b|\\bDynkin'?s?\\s+(?:theorem|lemma|system)\\b)", re.I), "Monotone class and Dynkin's pi-lambda"),
+    (_lazy_re('\\b(Portmanteau|weak(ly)? converge)', re.I), 'Portmanteau theorem'),
+    (_lazy_re('\\bSlutsky\\b', re.I), "Slutsky's theorem"),
+    (_lazy_re('\\bProkhorov\\b|\\btightness\\b', re.I), "Prokhorov's theorem"),
+    (_lazy_re('\\bSkorokhod\\b', re.I), 'Skorokhod representation'),
+    (_lazy_re("\\b(L[e\\u00e9]vy(?:['\\u2019]s)?\\s+continuity|continuity theorem|Cram[e\\u00e9]r[-\\s\\u2010-\\u2015]+Wold|characteristic functions?(?!\\s+of\\s+(?:(?:the|a|an|measurable|Borel|open|closed)\\s+)*(?:sets?|events?|indicators?)\\b))\\b", re.I), "Levy's continuity theorem"),
+    (_lazy_re('\\\\limsup|\\\\liminf|\\blimsup\\b|\\bliminf\\b', re.I), 'limsup and liminf'),
+    (_lazy_re("\\b(Stein'?s?\\s+(method|kernel|identity|equation)|Stein kernel)\\b", re.I), "Stein's method"),
+    (_lazy_re('\\bBerry[- ]Esseen\\b', re.I), 'Berry-Esseen theorem'),
+    (_lazy_re("\\b(Lindeberg|Lyapunov'?s?\\s+condition|central limit)\\b", re.I), 'Lyapunov and Lindeberg conditions'),
+    (_lazy_re('\\bDonsker\\b|\\binvariance principle\\b', re.I), "Donsker's invariance principle"),
+    (_lazy_re('\\b(Cram[e\\u00e9]r(?![-\\s\\u2010-\\u2015]+(?:Rao|Wold))|large deviation|rate function|Varadhan)\\b', re.I), "Cramer's theorem and large deviations"),
+    (_lazy_re('\\bSanov\\b|\\brelative entropy\\b', re.I), "Sanov's theorem"),
+    (_lazy_re("\\b(three-series|Kolmogorov'?s?\\s+(inequality|criterion|continuity)|Kolmogorov[- ]Chentsov|Etemadi)\\b", re.I), "Kolmogorov's inequalities and criteria"),
+    (_lazy_re('\\b(total variation|Pinsker|Hellinger)\\b', re.I), "Pinsker's inequality"),
+    (_lazy_re('\\b(Wasserstein|Kantorovich|Rubinstein|optimal transport|transport(ation)? (distance|cost|plan))\\b', re.I), 'Kantorovich-Rubinstein duality'),
+    (_lazy_re('\\b(heat kernel|Ricci|Li[- ]Yau)\\b', re.I), 'Gradient and heat-kernel estimates'),
+    (_lazy_re('\\b(Arzel[a\\u00e0]|equicontinu|Banach fixed|contraction mapping|Hahn[- ]Banach)', re.I), 'Arzela-Ascoli, Banach fixed point'),
+    (_lazy_re('\\b(Poincar[e\\u00e9]|log-Sobolev|hypercontractiv|Sobolev|Bakry)', re.I), 'Sobolev, Poincare and log-Sobolev'),
+    (_lazy_re('\\b(stochastic(ally)? dominat|convex order|Strassen)\\b', re.I), 'Convex ordering and stochastic domination'),
+    (_lazy_re('\\b(Le Cam|Poissoniz|Poisson approximation)\\b', re.I), 'Poisson approximation and Le Cam'),
+    (_lazy_re('\\bexchangeab|\\bde Finetti\\b|\\bHewitt[- ]Savage\\b|\\bzero[- ]one law\\b|\\b0-1 law\\b|\\btail (event|sigma)', re.I), 'Hewitt-Savage and Kolmogorov zero-one laws'),
+    (_lazy_re('\\bStirling\\b', re.I), "Stirling's formula"),
+    (_lazy_re("\\bTaylor('?s)?\\s+(theorem|expansion|formula)\\b|\\bTaylor expan", re.I), "Taylor's theorem"),
+    (_lazy_re('\\bMinkowski\\b', re.I), "Minkowski's inequality"),
+    (_lazy_re('\\bGr[o\\u00f6]nwall\\b', re.I), "Gronwall's inequality"),
+    (_lazy_re('\\bLeibniz\\b|\\bdifferentiat\\w+ under the integral\\b', re.I), 'Leibniz integral rule'),
+    (_lazy_re("\\bBernstein'?s?\\s+inequality\\b", re.I), "Bernstein's inequality"),
+    (_lazy_re('\\bRiesz\\b', re.I), 'Riesz representation'),
+    (_lazy_re('\\b(Karamata|Potter|regularly varying|slowly varying|regular variation)\\b', re.I), "Karamata's theorem and Potter's bounds"),
+    (_lazy_re('\\bPaley[- ]Zygmund\\b|\\bsecond[- ]moment method\\b', re.I), 'Paley-Zygmund inequality'),
+    (_lazy_re("\\bLaplace('?s)?\\s+method\\b|\\bsaddle[- ]point\\b", re.I), "Laplace's method"),
+    (_lazy_re('\\bDini\\b', re.I), "Dini's theorem"),
+    (_lazy_re('\\bDuhamel\\b|\\bvariation of constants\\b|\\bmild solution\\b', re.I), "Duhamel's formula"),
+    (_lazy_re("\\b(Russo(?:['\\u2019]s)?\\s+formula|Margulis[-\\s\\u2010-\\u2015]+Russo|pivotal (?:edge|site|coordinate|bond)|is pivotal|pivotality of|total influence)\\b", re.I), "Russo's formula"),
+    (_lazy_re("\\bWald'?s?\\s+(identit|equation|lemma)", re.I), "Wald's identities"),
+    (_lazy_re('\\bRadon[- ]Nikodym\\b|\\bLebesgue decomposition\\b', re.I), 'Radon-Nikodym theorem'),
+    (_lazy_re('\\b(Campbell|Mecke|Slivnyak|Palm\\s+(?:measure|calculus|distribution|version|expectation|theory))\\b', re.I), 'Campbell, Mecke and Slivnyak'),
+    (_lazy_re('\\b(Kingman|subadditive|Fekete|superadditive)\\b', re.I), "Kingman's subadditive ergodic theorem"),
+    (_lazy_re('\\bBirkhoff\\b|\\bergodic theorem\\b', re.I), "Birkhoff's ergodic theorem"),
+    (_lazy_re('\\b(Abel|Tauberian|Hardy[- ]Littlewood(?!\\s+maximal)|summation by parts)\\b', re.I), 'Abel and Dirichlet tests'),
+    (_lazy_re('\\bPeierls\\b|\\bcontour argument\\b', re.I), 'Peierls argument'),
+    (_lazy_re('\\b(Egorov|Lusin|Scheff[e\\u00e9])\\b', re.I), "Egorov's, Lusin's and Scheffe's theorems"),
+    (_lazy_re('\\b(Perron[- ]Frobenius|Feller property|Feller process|irreducib|aperiodic)', re.I), 'Feller property, Perron-Frobenius'),
+    (_lazy_re('\\b(Talagrand|Efron[- ]Stein|convex distance)\\b', re.I), "Talagrand's and Efron-Stein"),
+    (_lazy_re('\\b(Vitali(?:\\x27s)? (?:covering|cover)|Lebesgue differentiation|Hardy[- ]Littlewood maximal|maximal function)\\b', re.I), 'Vitali covering, Lebesgue differentiation'),
+    (_lazy_re('\\b(Doob[- ]Meyer|compensator|Doob decomposition|predictable quadratic)\\b', re.I), 'Doob decomposition, Doob-Meyer'),
+    (_lazy_re('\\buncorrelated\\b|\\bpairwise independen', re.I), 'Independence vs uncorrelated'),
+    (_lazy_re('\\b(in probability|almost surely|in distribution|in law|in L\\^?\\s*[1p2])\\b', re.I), 'Convergence modes'),
+    (_lazy_re('\\bFeynman[- ]Kac\\b', re.I), 'Feynman-Kac formula'),
+    (_lazy_re('\\b(Foster|Lyapunov function|drift condition|drift inequality|geometric(ally)? ergodic|petite set|small set)\\b', re.I), 'Foster-Lyapunov drift conditions'),
+    (_lazy_re('\\b(spectral gap|mixing time|relaxation time|Cheeger|conductance|bottleneck ratio)\\b', re.I), 'Spectral gap, mixing time and Cheeger'),
+    (_lazy_re('\\b(Doeblin|minori[sz]ation|coupling time|coupling inequality)\\b', re.I), "Doeblin's condition, minorisation and coupling"),
+    (_lazy_re("\\b(Kolmogorov('?s)? extension|Carath[e\\u00e9]odory|consistent family|finite[- ]dimensional distributions)\\b", re.I), 'Kolmogorov extension and Caratheodory'),
+    (_lazy_re('\\b(Glivenko|Kolmogorov[- ]Smirnov|Dvoretzky|DKW|empirical (distribution|process))\\b', re.I), 'Kolmogorov-Smirnov, Glivenko-Cantelli and DKW'),
+    (_lazy_re('\\b(Borell|Tsirelson|Slepian|Sudakov|Fernique|Gaussian concentration)\\b', re.I), 'Gaussian concentration (Borell-TIS'),
+    (_lazy_re('\\b(Dudley|chaining|entropy integral|covering number|metric entropy)\\b', re.I), "Dudley's entropy bound and chaining"),
+    (_lazy_re('\\b(Rosenthal|Marcinkiewicz|Khintchine[- ]Kahane|Kahane|von Bahr)\\b', re.I), 'Rosenthal, Marcinkiewicz-Zygmund and Khintchine-Kahane'),
+    (_lazy_re('\\b(Bennett|Freedman|matrix Bernstein|Tropp)\\b', re.I), 'Bennett, Freedman and the matrix Bernstein'),
+    (_lazy_re('\\b(L[e\\u00e9]vy[- ]Khintchine|L[e\\u00e9]vy measure|L[e\\u00e9]vy process|subordinator|infinitely divisible|characteristic exponent)\\b', re.I), 'Levy processes and the Levy-Khintchine formula'),
+    (_lazy_re('\\b(iterated logarithm|LIL|strong law of large numbers|SLLN)\\b', re.I), "Khintchine's law of the iterated logarithm"),
+    (_lazy_re('\\b(Harnack|Nash inequality|heat kernel bound|Gaussian (upper|lower) bound|volume doubling)\\b', re.I), 'Harnack inequalities and Nash'),
+    (_lazy_re('\\b(Bochner|Plancherel|Parseval|Fourier inversion|inversion formula|positive definite)\\b', re.I), 'Bochner, Parseval-Plancherel and Fourier inversion'),
+    (_lazy_re('\\b(Hille[- ]Yosida|Trotter|Kurtz|Lumer|core of the generator|a core for)\\b', re.I), 'Hille-Yosida, Trotter-Kurtz'),
+    (_lazy_re('\\b(Aldous|Meyer[- ]Zheng|C-tight|J1 topology|Skorokhod (space|topology))\\b', re.I), "Aldous' tightness criterion and Meyer-Zheng"),
+    (_lazy_re('\\b(coupling from the past|Propp[- ]Wilson|Dobrushin)\\b', re.I), 'Coupling from the past and Dobrushin'),
+    (_lazy_re('\\b(Kesten|critical probability|p_c\\b|infinite cluster|Burton[- ]Keane|Menshikov)', re.I), "Kesten's theorem and the critical probability"),
+    (_lazy_re('\\b(reflection principle|running maximum|hitting time of (a )?level|first passage)\\b', re.I), 'The reflection principle and the running maximum'),
+    (_lazy_re('\\b(strong(ly)? mixing|weak(ly)? mixing|mixing coefficient|alpha-mixing|beta-mixing|phi-mixing|\\\\alpha-mixing|\\\\beta-mixing)\\b', re.I), 'Ergodicity, mixing and the invariant'),
+    (_lazy_re('(\\binfinitely often\\b|\\bi\\.o\\.|\\bfinitely often\\b|\\beventually\\b)', re.I), 'Almost sure vs in probability vs eventually'),
+    (_lazy_re('\\b(tower property|conditional expectation|conditional Jensen|conditional variance|taking out what is known)\\b', re.I), 'Conditional expectation: tower property'),
+    (_lazy_re('\\b(stopping time|optional time|F_\\\\?tau|debut)\\b', re.I), 'Stopping times and the optional sigma-algebra'),
+    (_lazy_re('\\b(covariance|\\\\mathrm\\{Cov\\}|\\\\operatorname\\{Cov\\}|\\\\mathrm\\{Var\\}|\\\\operatorname\\{Var\\}|sample mean|sample variance)\\b', re.I), 'Variance, covariance and correlation bookkeeping'),
+    (_lazy_re('\\b(moment generating function|cumulant|Legendre|exponential tilt|tilted (law|measure)|log-moment)\\b', re.I), 'Exponential families, moment generating functions'),
+    (_lazy_re('\\b(Poisson process|thinning|superposition|memoryless|inter-?arrival|order statistics property)\\b', re.I), 'Poisson processes: superposition, thinning'),
+    (_lazy_re('\\b(P[o\\u00f3]lya|ballot theorem|arcsine|simple random walk|return probability|Chung[- ]Fuchs)\\b', re.I), 'Random walks: recurrence by dimension'),
+    (_lazy_re('\\b(Galton[- ]Watson|branching process|extinction probability|Kesten[- ]Stigum|Yaglom|offspring)\\b', re.I), 'Branching processes: extinction'),
+    (_lazy_re('\\b(Gibbs measure|DLR|phase transition|Griffiths|GKS|GHS|Onsager|pure phase)\\b', re.I), 'Gibbs measures, DLR equations'),
+    (_lazy_re('\\b(Ricci|curvature|Bakry[- ][E\\u00c9]mery|CD\\(|Ollivier|reflection coupling|Wasserstein contraction)', re.I), 'Wasserstein contraction, Ricci curvature'),
+    (_lazy_re('\\b(Yamada[-\\s\\u2010-\\u2015]+Watanabe|pathwise uniqueness|strong solution|weak solution|comparison theorem|linear growth|locally Lipschitz)\\b', re.I), 'Stochastic differential equations: existence'),
+    (_lazy_re('\\b(Kullback|KL divergence|mutual information|data[- ]processing|f-divergence|entropy inequality)\\b', re.I), 'Kullback-Leibler divergence, entropy and mutual information'),
+    (_lazy_re("\\b(Weyl(?:['\\u2019]s)?\\s+inequality|Courant[-\\s\\u2010-\\u2015]+Fischer|Hoffman[-\\s\\u2010-\\u2015]+Wielandt|(?:min[-\\s\\u2010-\\u2015]+max|max[-\\s\\u2010-\\u2015]+min)\\s+(?:principle|characteri[sz]ation|formula|theorem for eigenvalues)|Rayleigh quotient|Schatten|Frobenius norm|operator norm)\\b", re.I), 'Matrix and operator inequalities'),
+    (_lazy_re('\\b(Wigner|semicircle|Marchenko|Marcenko|Pastur|Tracy[- ]Widom|empirical spectral)\\b', re.I), "Wigner's semicircle law"),
+    (_lazy_re('\\b(symmetri[sz]ation|Rademacher (?:complexity|average|process|signs?|sequence)|contraction principle|Massart|VC dimension|Ledoux)\\b', re.I), 'Symmetrisation, contraction and the Rademacher'),
+    (_lazy_re("\\b(Kac('?s)? (formula|lemma)|return time|renewal|Blackwell|residual life|inspection paradox|size-biased)\\b", re.I), "Kac's formula, return times and the renewal"),
+    (_lazy_re('\\b(regenerat|Harris recurren|split chain|Nummelin|atom of the chain|positive recurren)', re.I), 'Regeneration, Harris recurrence and the split chain'),
+    (_lazy_re('\\b(class\\s+DL|class\\s+D\\b|uniformly integrable (?:local )?(?:martingale|submartingale)|closed martingale)\\b', re.I), 'Class D and class DL: which uniform integrability upgrades a local martingale'),
+    (_lazy_re("\\b(Burkholder|Burkholder[-\\s]Davis[-\\s]Gundy|BDG|Davis(?:'s|s')? inequality|square function)\\b", re.I), 'Burkholder-Davis-Gundy: the exponent is p/2 and the bracket is the optional one'),
+    (_lazy_re("\\b(Dubins[-\\s]Schwarz|time[-\\s]chang(?:e|ed|ing)|Knight(?:'s|s')? theorem|random time change)\\b", re.I), 'Dubins-Schwarz: a continuous local martingale is Brownian motion on its own clock'),
+    (_lazy_re('\\b(strict local martingale|(?:nonnegative|non-negative|positive) local martingale|localizing sequence|reducing sequence|only a supermartingale|local martingale (?:but|which is|that is) not a (?:true |uniformly integrable )?martingale)\\b', re.I), 'Strict local martingales: a nonnegative local martingale is only a supermartingale'),
+    (_lazy_re('\\b(Novikov|Kazamaki|Girsanov|exponential (?:local )?martingale|change of measure)\\b', re.I), 'Novikov and Kazamaki: which bracket goes with which criterion, and the constant 1/2'),
+    (_lazy_re('\\b(Lenglart|domination inequality|dominated by an increasing process|weak[-\\s]type inequality)\\b', re.I), "Lenglart's domination inequality: domination at stopping times, and a weak-type conclusion"),
+    (_lazy_re('\\b(Kunita[-\\s]Watanabe|mutual (?:bracket|variation)|cross[-\\s]variation|bracket <M,\\s*N>)\\b', re.I), 'Kunita-Watanabe: a pathwise Cauchy-Schwarz with square roots on both brackets'),
+    (_lazy_re("\\b(compensator|counting process|Doob[-\\s]Meyer|stochastic intensity|point process|Watanabe(?:'s|s')? characteri[sz]ation)\\b", re.I), 'Compensator of a counting process: predictability is what makes it unique, and <M> is not [M]'),
+    (_lazy_re('\\b(optional projection|predictable projection|dual predictable projection|predictable time|totally inaccessible|announc(?:ing|eable))\\b', re.I), 'Optional versus predictable projection: F_T with stopping times, F_{T-} with predictable times'),
+    (_lazy_re('\\b(maximal identity|last[-\\s]passage time|Az[eé]ma[-\\s]Yor|Az[eé]ma supermartingale|honest time|Skorokhod embedding)\\b', re.I), "Doob's maximal identity and last passage: the ratio is start over level, x/a"),
+    (_lazy_re("\\b(stochastic integral|It[oô](?:'s|s')? isometry|predictable integrand|integral against a (?:local )?martingale)\\b", re.I), 'Stochastic integrals against local martingales: predictable integrands, and only a local martingale'),
+    (_lazy_re('\\b(Dol[eé]ans[-\\s]Dade|stochastic exponential|exponential (?:local )?martingale|E\\(M\\)|Novikov)\\b', re.I), 'Doleans-Dade exponential: the bracket correction is subtracted, with coefficient one half'),
+    (_lazy_re("\\b(It[o\\u00f4\\u014d](?:['\\u2019]s)?\\s+isometry|isometry of the stochastic integral|predictable integrand|progressively measurable|square[- ]integrable integrand)\\b", re.I), 'Ito isometry: equality holds only under the L^2 hypothesis, and against d<M>, not ds'),
+    (_lazy_re("\\b(It[oôō]'?s? (formula|lemma)|change of variables? formula|second[- ]order term|semimartingale)\\b", re.I), "Ito's formula: the one half, the second derivative, and the bracket it is integrated against"),
+    (_lazy_re('\\b(integration by parts for (?:a |the )?semimartingales?|semimartingale product rule|quadratic (?:co)?variation|covariation|polari[sz]ation identity|predictable bracket|X_\\{s-\\}|left limits?)\\b', re.I), 'Integration by parts for semimartingales: the covariation term is added and the integrands are left limits'),
+    (_lazy_re('\\b(Tanaka|local time|occupation (density|times) formula|sgn\\(|It[oôō][- ]Tanaka|L_t\\^?\\{?0)\\b', re.I), "Tanaka's formula and local time: which version carries the one half and how the sgn convention is fixed"),
+    (_lazy_re("\\b(L[eé]vy'?s? (characteri[sz]ation|theorem)|characteri[sz]ation of Brownian motion|continuous local martingale)\\b", re.I), "Levy's characterisation of Brownian motion: continuity plus bracket exactly t, for all t and all components"),
+    (_lazy_re('\\b(Novikov|Kazamaki|Dol[eé]ans|stochastic exponential|exponential (local )?martingale|uniformly integrable martingale)\\b', re.I), 'Stochastic exponentials, Novikov and Kazamaki: the minus one half, and which criterion reads which process'),
+    (_lazy_re('\\b(Girsanov|change of measure|equivalent (probability )?measure|Radon[- ]Nikod[yý]m derivative|remove the drift)\\b', re.I), "Girsanov's theorem: the drift is subtracted, and the density must be a true martingale"),
+    (_lazy_re('\\b(Stratonovich|Fisk[- ]Stratonovich|Wong[- ]Zakai|conversion (term|formula)|circ ?d[XW])\\b', re.I), 'Stratonovich versus Ito: the conversion term is plus one half the covariation of integrand with integrator'),
+    (_lazy_re('\\b(Dambis|Dubins[- ]Schwarz|DDS|time[- ]chang(e|ed)|random time change|inverse of the quadratic variation)\\b', re.I), 'Dambis-Dubins-Schwarz: the time change runs one way, and the bracket must exhaust infinity'),
+    (_lazy_re('\\b(martingale representation|predictable representation|Brownian filtration|representation theorem|generated by the Brownian)\\b', re.I), 'Martingale representation: the filtration must be the Brownian one, and there is no drift term'),
+    (_lazy_re("\\b(Burkholder|Davis[- ]Gundy|BDG|maximal inequality|Doob'?s (L\\^?p )?inequality|running maximum)\\b", re.I), 'Burkholder-Davis-Gundy: the bracket enters at exponent p/2, and both directions hold'),
+    (_lazy_re('\\b(Malliavin|Clark[- ]Ocone|Skorokhod integral|divergence operator|integration by parts formula|D_t ?F)\\b', re.I), 'Malliavin integration by parts: which operator is the adjoint, and the conditional expectation in Clark-Ocone'),
+    (_lazy_re('\\b(Hille[-\\s]?Yosida|Lumer[-\\s]?Phillips|dissipativ\\w*|resolvent|contraction semigroup|C_?0[-\\s]?semigroup|positive maximum principle)\\b', re.I), 'Hille-Yosida and the resolvent bound: which way the dissipativity inequality runs and that ||R_lambda|| <= 1/lambda'),
+    (_lazy_re('\\b(core for (?:the|a) (?:generator|operator)|is a core|essential(?:ly)? self[-\\s]?adjoint|graph norm|domain of the generator|closure of the (?:generator|operator))\\b', re.I), 'Cores for a generator: dense in the graph norm, not merely dense in the Banach space'),
+    (_lazy_re("\\b(Dynkin'?s? formula|martingale problem|well[- ]posed martingale problem|generator of the (?:process|diffusion|semigroup)|A ?f\\(X_s\\)|in D\\(A\\))\\b", re.I), "Dynkin's formula and the martingale problem: the compensator is subtracted, and the stopping time needs an integrability hypothesis"),
+    (_lazy_re('\\b(detailed balance|reversib(?:le|ility)|self[-\\s]?adjoint (?:on|in|with respect to) L\\^?2|Peskun|electrical network|conductance c\\(x,y\\))\\b', re.I), 'Detailed balance and reversibility: it implies stationarity but not conversely, and both measures must be indexed correctly'),
+    (_lazy_re('\\b(Dirichlet form|spectral gap|Rayleigh quotient|variational characteri[sz]ation|canonical paths|energy form)\\b', re.I), 'Dirichlet form and the variational spectral gap: an infimum over centred test functions, with the factor 1/2'),
+    (_lazy_re('\\b(Poincar[eé] inequality|spectral gap|exponential ergodicity|chi[-\\s]?square distance|L\\^?2 (?:decay|contraction)|relaxation)\\b', re.I), 'Poincare inequality for a Markov semigroup: gap in the denominator, and the exponent 2 gap for the variance'),
+    (_lazy_re('\\b(relaxation time|mixing time|t_?\\{?mix|t_?\\{?rel|absolute spectral gap|second[-\\s]?largest eigenvalue|hitting time of a set)\\b', re.I), 'Relaxation, mixing and hitting times: the absolute gap, and the two-sided bound with log(1/pi_min)'),
+    (_lazy_re('\\b(ergodic theorem|aperiodic\\w*|period(?:ic|icity) of the chain|irreducib\\w+|positive recurrent|null recurrent|Harris recurren\\w+|Ces[aà]ro average)\\b', re.I), 'Ergodic theorem for Markov chains: the law of large numbers needs no aperiodicity, convergence of the n-step law does'),
+    (_lazy_re('\\b(coupling (?:inequality|argument|time)|maximal coupling|coalesc\\w+|total variation distance|TV distance|in total variation|submultiplicativ\\w+)\\b', re.I), 'Coupling inequality and total variation: the 1/2 sits with the L^1 sum, and the coupling gives an upper bound only'),
+    (_lazy_re('\\b(strong stationary time|separation distance|sep\\(|randomi[sz]ed stopping time|stationary time)\\b', re.I), 'Strong stationary times: independence of position and time, and that they bound separation rather than total variation'),
+    (_lazy_re('\\b(cutoff(?: phenomenon| window)?|pre[-\\s]?cutoff|product condition|birth[-\\s]?and[-\\s]?death chain)\\b', re.I), 'Cutoff and the product condition: necessary for reversible chains, not sufficient'),
+    (_lazy_re("\\b(harmonic function|Dirichlet problem|hitting probabilit\\w+|hitting time|escape probability|effective resistance|Kac'?s formula|return time|tau_?[A-Za-z]?\\^?\\+)\\b", re.I), "Harmonic functions, hitting probabilities and Kac's formula: uniqueness needs almost sure absorption, and the return time is 1/pi(x)"),
+    (_lazy_re("\\b(sub[- ]?[Gg]aussian|Hoeffding'?s? (lemma|inequality)|variance proxy|psi[-_ ]?2 norm|Orlicz norm)\\b", re.I), "Sub-Gaussian variables and Hoeffding's inequality: which constant sits under the square"),
+    (_lazy_re("\\b(sub[- ]?exponential|psi[-_ ]?1 norm|Bernstein'?s? (moment )?condition|Orlicz|sub[- ]?gamma)\\b", re.I), 'Sub-exponential and psi_1 norms: the moment generating function only exists near zero'),
+    (_lazy_re("\\b(Bernstein'?s? inequality|Bennett'?s? inequality|Bernstein[- ]type (bound|inequality)|Bennett[- ]type)\\b", re.I), "Bernstein's and Bennett's inequalities: the variance, not the range, sets the Gaussian regime"),
+    (_lazy_re('\\b(Efron[-\\s]?Stein|jackknife|tensoriz\\w+ of (the )?variance|independent copy of)\\b', re.I), 'Efron-Stein inequality: it bounds the variance from above, and the 1/2 belongs to the resampled form'),
+    (_lazy_re('(\\bEnt\\b|\\bsubadditivity of (the )?entropy\\b|\\bentropy method\\b|\\bmodified log[-\\s]?Sobolev\\b|\\bexponential Efron[-\\s]?Stein\\b)', re.I), 'Subadditivity of entropy and the modified log-Sobolev bound: it is the entropy of the exponential'),
+    (_lazy_re("\\b(Herbst'?s? (argument|method)|Herbst)\\b", re.I), 'Herbst argument: the boundary value as lambda goes to zero is E[Z], not zero'),
+    (_lazy_re('\\b(log(arithmic)?[-\\s]?Sobolev|Borell[-\\s]?TIS|Borell[-\\s]?Tsirelson|Gaussian concentration|Lipschitz function of a Gaussian|Poincar[eé] inequality)\\b', re.I), 'Gaussian log-Sobolev and Lipschitz concentration: the constant is dimension free and sigma^2 is pointwise'),
+    (_lazy_re('\\b(McDiarmid|bounded[-\\s]differences?|Azuma[-\\s]?Hoeffding)\\b', re.I), "McDiarmid's bounded differences inequality: sum of squared constants, with a 2 in the numerator"),
+    (_lazy_re('\\b(self[-\\s]?bounding|configuration function|sub[-\\s]?Poissonian)\\b', re.I), 'Self-bounding functions: the t/3 correction belongs to the upper tail only'),
+    (_lazy_re("\\b(Talagrand'?s? (convex distance|inequality)|convex distance|convex[-\\s]distance inequality)\\b", re.I), "Talagrand's convex distance inequality: the exponent carries a 4 and the sup sits outside the inf"),
+    (_lazy_re('\\b(negativ\\w+ (associat\\w+|dependen\\w+)|without replacement|hypergeometric|Serfling|permutation distribution|balls[-\\s]in[-\\s]bins)\\b', re.I), 'Negative association and sampling without replacement: Chernoff bounds transfer, and never get worse'),
+    (_lazy_re("\\b(transport(ation)?[-\\s]cost|Marton|Bobkov[-\\s]?G[oö]tze|Pinsker'?s? inequality|Wasserstein|T_2 inequality|Otto[-\\s]?Villani)\\b", re.I), 'Transportation-cost inequalities: entropy bounds transport, and T_2 is strictly stronger than T_1'),
+    (_lazy_re("\\b(Lindeberg[-\\s]?Feller|Lindeberg(?:'s)? condition|triangular array|uniformly asymptotically negligible|asymptotic negligibility)\\b", re.I), 'Lindeberg-Feller CLT: the truncation runs over the large values, for every epsilon'),
+    (_lazy_re("\\b(Lyapunov(?:'s)?\\s+(?:condition|criterion|CLT|ratio)|(?:two|2)\\s*\\+\\s*\\\\?delta(?:\\s+moment)?)\\b", re.I), 'Lyapunov condition: the moment exponent is 2+delta on top and s_n^{2+delta} below'),
+    (_lazy_re('\\b(Lindeberg (?:replacement|swapping|exchange)|swapping (?:method|argument)|replac(?:e|ing) one (?:summand|variable|coordinate) at a time|telescop\\w+ sum of Gaussians)\\b', re.I), 'Lindeberg swapping method: two moments matched, third derivative, remainder constant 1/6'),
+    (_lazy_re("\\b(Berry[-\\s]?Esseen|Esseen(?:'s)? (?:bound|inequality|estimate)|uniform (?:rate|bound) (?:of|in) (?:the )?(?:normal approximation|CLT))\\b", re.I), 'Berry-Esseen bound: rate n^{-1/2}, third absolute moment over sigma^3'),
+    (_lazy_re('\\b(martingale (?:central limit theorem|CLT|difference array)|martingale differences?|Hall[-\\s]?Heyde|McLeish|predictable quadratic variation)\\b', re.I), 'Martingale CLT: conditional variances converge in probability plus conditional Lindeberg'),
+    (_lazy_re('\\b(conditional Lindeberg|conditional Lyapunov|asymptotic(?:ally)? negligib\\w+|infinitesimal array|uniformly negligible summands)\\b', re.I), 'Conditional Lindeberg and negligibility: what may replace it and what it forces'),
+    (_lazy_re('\\b((?:strong|alpha|phi|uniform)(?:ly)?[-\\s]?mixing (?:sequence|array|CLT|process|central limit)|Ibragimov|long[-\\s]?run variance|asymptotic variance series)\\b', re.I), 'CLT for stationary mixing sequences: the variance series is Var(X_0) + 2 sum_{k>=1} Cov(X_0,X_k)'),
+    (_lazy_re("\\b(delta method|second[-\\s]?order delta method|Taylor expan\\w+ (?:of|about) (?:the estimator|\\\\?theta)|g'\\(\\\\?theta\\))", re.I), 'Delta method: differentiability at the point, and the derivative enters squared'),
+    (_lazy_re('\\b(Anscombe|random(?:ly)? (?:index|indices|number of (?:summands|terms))|randomly stopped sum|random time change in the CLT)\\b', re.I), "Anscombe's theorem: random indices need N_n/n -> c and uniform continuity in probability"),
+    (_lazy_re('\\b(Cram(?:e|é)r[-\\s]?Wold|linear combinations? of the components|one[-\\s]?dimensional projections|multivariate (?:CLT|central limit theorem))\\b', re.I), 'Cramer-Wold device: every linear combination, and only for convergence in distribution'),
+    (_lazy_re('\\b(stable (law|laws|distribution|limit)|alpha[- ]stable|α-stable|(?<!max[- ])(?<!maximum )domain of attraction|non[- ]normal domain of attraction)\\b', re.I), 'Stable limits and domains of attraction: tail index alpha, scaling n^{1/alpha}, tail balance'),
+    (_lazy_re("\\b(Edgeworth (?:expansion|correction)|Cram(?:e|é)r(?:'s)? condition|lattice (?:span|distribution) correction|skewness correction term|cumulant expansion of the distribution function)\\b", re.I), "Edgeworth expansion: Cramer's condition, the order of the remainder, and the lattice exception"),
+    (_lazy_re('\\b(contraction principle|push(-|\\s)?forward of the (LDP|large deviation)|rate function of the image|inf\\s*\\{?\\s*I\\(x\\)\\s*:\\s*f\\(x\\)\\s*=)\\b', re.I), 'Contraction principle: the map must be continuous, and the rate infimum runs over the preimage'),
+    (_lazy_re('\\b(G(ä|a)rtner[- ]Ellis|essentially smooth|steepness|Legendre[- ]Fenchel|limiting (log[- ])?(cumulant|moment) generating function|Lambda\\^?\\*)\\b', re.I), 'Gartner-Ellis: the limiting log-mgf must be essentially smooth and lower semicontinuous, and only then is the closed-set bound available'),
+    (_lazy_re('\\b(exponential(ly)? tight(ness)?|weak (LDP|large deviation principle)|upper bound (on|over) compact|good rate function)\\b', re.I), 'Upper bound on compacts versus on closed sets: only exponential tightness closes the gap'),
+    (_lazy_re("\\b(Varadhan('s)? (integral )?lemma|Laplace principle)\\b|sup_?\\{?x\\}?\\s*\\(?\\s*F\\(x\\)\\s*-\\s*I\\(x\\)", re.I), "Varadhan's integral lemma: the exponential moment condition and why it is a sup minus the rate"),
+    (_lazy_re("\\b(Bryc('s)? (inverse )?lemma|inverse (of )?Varadhan|Laplace[- ]principle equivalence)\\b", re.I), "Bryc's inverse lemma: the limit must exist for all bounded continuous F, and tightness is not optional"),
+    (_lazy_re('\\b(Freidlin[- ]Wentzell|small[- ]noise (diffusion|limit)|Schilder|quasi(-|\\s)?potential|action functional)\\b', re.I), 'Freidlin-Wentzell: the small-noise rate is the energy with a 1/2 and the inverse diffusion matrix, at speed epsilon^{-2}'),
+    (_lazy_re('\\b(moderate deviations?|moderate[- ]deviation (principle|regime)|between the (CLT|central limit theorem) and (Cram(é|e)r|large deviations))\\b', re.I), 'Moderate deviations: the scaling window between the CLT and Cramer, and why the rate is always Gaussian'),
+    (_lazy_re('\\b(liminf.{0,40}open|limsup.{0,40}closed|I[- ]continuity set|lower bound (over|on) open sets|upper bound (over|on) closed sets|both bounds of the (LDP|large deviation principle))\\b', re.I), 'Laplace-Varadhan matching: the LDP is two inequalities in opposite directions over different set classes'),
+    (_lazy_re('\\b(exponential(ly)? (good )?(equivalen(t|ce)|approximations?)|extended contraction principle|uniformly on sublevel sets)\\b', re.I), 'Exponentially good approximations: the extended contraction principle needs a uniform-on-sublevel-sets limit'),
+    (_lazy_re("\\b(Legendre transform|convex conjugate|Cram(é|e)r('s)? theorem|log[- ]moment generating function|rate function .{0,20}sup_)\\b", re.I), "Legendre transform of the log-mgf: convexity, the direction of the duality, and where Cramer's rate is finite"),
+    (_lazy_re("\\b(exponential Chebyshev|exponential Markov inequality|Markov('s)? inequality.{0,40}exp|union bound.{0,60}(exponential|large deviation|rate function)|finite cover.{0,30}compact)\\b", re.I), 'Exponential Chebyshev and the union bound: the two inequalities every LDP upper bound is built from'),
+    (_lazy_re('\\b(speed (of the )?(LDP|large deviation)|at speed \\\\?[a-z]_n|scale a_n|normali[sz]ation of the (rate|deviation))\\b', re.I), 'Speed and the change-of-speed trap: rate functions only compare at the same normalisation'),
+    (_lazy_re("\\b(Harris(?:'s)?[- ]?FKG|FKG inequality|Harris inequality|positively correlated|positive(ly)? associat)", re.I), 'Harris-FKG inequality: both events increasing, and which way the correlation runs'),
+    (_lazy_re('\\b(FKG lattice condition|strong FKG|random[- ]cluster|Fortuin[- ]Kasteleyn|distributive lattice|comparison inequalit)', re.I), 'FKG lattice condition: what positive association needs beyond a product measure'),
+    (_lazy_re("\\b(van den Berg[- ]Kesten|BK inequality|BK[- ]Reimer|Reimer'?s|disjoint occurrence|disjointly (occur|open)|edge[- ]disjoint (open )?paths)", re.I), 'BK-Reimer inequality: disjoint occurrence, and the direction opposite to FKG'),
+    (_lazy_re("\\b(Russo'?s formula|Margulis[- ]Russo|pivotal(ity)?|pivotal (edge|site|coordinate|bond)|total influence)", re.I), "Russo's formula: the derivative is a sum of pivotal probabilities, for increasing events"),
+    (_lazy_re('\\b(Russo[- ]Seymour[- ]Welsh|\\bRSW\\b|box[- ]crossing|crossing probabilit|left[- ]right crossing|arm (event|exponent)s?)', re.I), 'Russo-Seymour-Welsh box crossings: bounded away from 0 AND from 1, uniformly in the scale'),
+    (_lazy_re('\\b(sharp threshold|coarse threshold|threshold window|Friedgut[- ]Kalai|Kahn[- ]Kalai[- ]Linial|\\bKKL\\b|Bourgain[- ]Kalai|influence of (a |the )?(variable|coordinate))', re.I), 'Friedgut-Kalai and KKL: sharp thresholds need transitivity, and the width is absolute'),
+    (_lazy_re('\\b(OSSS|revealment|randomized (decision tree|algorithm)|decision tree algorithm|Duminil[- ]Copin.{0,20}Raoufi.{0,20}Tassion)', re.I), 'OSSS inequality: variance bounded by revealment times influence, summed'),
+    (_lazy_re('\\b(giant component|Erd[oő]s[-– ]R[eé]nyi|G\\(n, ?p\\)|branching process (approximation|comparison|coupling)|survival probability|exploration process)', re.I), 'Erdos-Renyi giant component: the survival equation and the c > 1 hypothesis'),
+    (_lazy_re('(critical window|scaling window|barely (sub|super)critical|multiplicative coalescent|n\\^\\{?-?4/3\\}?|n\\^\\{?2/3\\}?)', re.I), 'The critical window of G(n,p): n^(-4/3) in p, n^(2/3) in component size'),
+    (_lazy_re('\\b(copies of H|subgraph counts?|balanced (?:graph|subgraph)|densest subgraph|m\\(H\\)|second[- ]moment method.{0,40}(?:copies|subgraph|G\\(n)|threshold for containing)\\b', re.I), 'Second-moment threshold for subgraph containment: m(H) is a maximum over subgraphs'),
+    (_lazy_re('\\b(connectivity threshold|connected with high probability|isolated vert(ex|ices)|coupon collector|minimum degree (reaches|is at least)|hitting time (for|of) (connectivity|Hamiltonicity))\\b', re.I), 'Connectivity threshold of G(n,p): (log n + c)/n and the double-exponential limit'),
+    (_lazy_re('\\b(increasing event|decreasing event|monotone (event|property|graph property)|non-?monotone|upward[- ]closed|stochastic(ally)? dominat|monotone coupling)', re.I), 'Monotone versus non-monotone events: which percolation tool is licensed'),
+    (_lazy_re('\\b(Laplace functional|probability generating functional|generating functional|characteristic functional|Poisson random measure)\\b', re.I), 'Laplace functional of a Poisson process: the exponent is -int (1 - e^{-f}) dLambda'),
+    (_lazy_re('\\b(Mecke (equation|formula|identity)|multivariate Mecke|Slivnyak[- ]Mecke)\\b', re.I), 'Mecke equation: the right-hand side evaluates the functional at the configuration with the point added'),
+    (_lazy_re('\\b(Papangelou|Georgii[- ]Nguyen[- ]Zessin|GNZ (equation|formula)|conditional intensity|Gibbs point process)\\b', re.I), 'GNZ equation and the Papangelou intensity: kappa is evaluated without the point, f with it'),
+    (_lazy_re("\\b(Campbell(\\'s)? (theorem|formula)|refined Campbell|Campbell[- ]Mecke|Palm (distribution|measure|version|expectation)|reduced Palm|Slivnyak)\\b", re.I), 'Campbell formula, Palm distributions and Slivnyak: reduced versus unreduced Palm'),
+    (_lazy_re("\\b(Palm inversion( formula)?|Neveu('s)? exchange formula|exchange formula|Palm (calculus|distribution|measure|version|expectation)|reduced Palm|typical (point|cell)|inspection paradox|length[- ]bias\\w*)\\b", re.I), 'Palm inversion formula: the prefactor is lambda and the typical cell has mean volume 1/lambda'),
+    (_lazy_re('\\b(factorial moment (measure|density|expansion)|(second|k[- ]?th|kth)[- ]order (moment|product|correlation) (measure|density|function)|pair correlation|Ripley|correlation function(s)? rho)\\b', re.I), 'Factorial moment measures: the distinct-tuple sum and the missing diagonal term'),
+    (_lazy_re('\\b(determinantal|Macchi|Soshnikov|projection kernel|det\\(K|correlation kernel)\\b', re.I), 'Determinantal point processes: spectrum in [0,1], and rho_2 subtracts |K(x,y)|^2'),
+    (_lazy_re('\\b(permanental|permanent of the (matrix|kernel)|per\\(K|boson(ic)? (process|point process)|alpha[- ](determinantal|permanental))\\b', re.I), 'Permanental processes: every determinantal sign is reversed and the spectral bound is not needed'),
+    (_lazy_re('\\b(Chen[- ]Stein|Stein[- ]Chen|Poisson approximation|dependency (graph|neighbou?rhood)|Arratia|total variation distance.{0,30}Poisson)\\b', re.I), 'Chen-Stein with a dependency graph: b1 keeps the diagonal, b2 drops it, and the Stein factor falls with lambda'),
+    (_lazy_re('\\b(thinn(ing|ed|s)|p-thinning|retention probability|independently (retain|delete|keep)s? each point)\\b', re.I), 'Thinning theorem: retained and discarded parts of a Poisson process are independent Poisson'),
+    (_lazy_re('\\b(marking theorem|displacement theorem|mapping theorem[^.\\n]{0,80}\\b(?:Poisson|point process)|(?:Poisson|point process)[^.\\n]{0,80}\\bmapping theorem|independently (?:marked|displaced)|marked point process|push[- ]?forward of the intensity)\\b', re.I), 'Marking, displacement and mapping theorems: the kernel is integrated against Lambda in the first variable'),
+    (_lazy_re("\\b(void probabilit|avoidance function|Renyi(\\'s)? theorem|Rényi(\\'s)? theorem|complete(ly)? independen(t|ce)|simple point process|no fixed atoms)\\b", re.I), "Void probabilities and Renyi's theorem: the conclusion needs the process to be simple"),
+    (_lazy_re('\\b(Stieltjes transform|Cauchy transform|Stieltjes inversion|inversion formula|upper half[- ]plane|resolvent trace)\\b', re.I), 'Stieltjes transform and its inversion: which sign convention, and the 1/pi in the density'),
+    (_lazy_re('\\b(semi-?circle law|semi-?circular|Wigner (matrix|matrices|law|ensemble)|self-consistent equation)\\b', re.I), 'Semicircle law and its self-consistent equation: m^2 + z m + 1 = 0 and the branch at infinity'),
+    (_lazy_re('\\b(Marchenko[- ]?Pastur|MP law|sample covariance matri|Wishart|aspect ratio|singular values of X)\\b', re.I), 'Marchenko-Pastur law: the edges are (1 +/- sqrt(y))^2 and the atom has mass 1 - 1/y'),
+    (_lazy_re("\\b(local law|local semi-?circle law|isotropic (?:local )?law|resolvent (?:entries|of (?:H|the matrix|a Wigner|the random matrix))|Green(?:['\\u2019]s)?\\s+function (?:of|for) (?:H|the matrix|(?:a |the )?(?:Wigner|random) matrix)|spectral parameter)\\b", re.I), 'Local law for random matrices: eta >> 1/n, and the averaged rate is one power better than the entrywise one'),
+    (_lazy_re('\\b(rigidity|classical location|classical eigenvalue location|quantile of the (semi-?circle|limiting)|eigenvalue location)\\b', re.I), 'Eigenvalue rigidity: the n^{-2/3} edge scale, n^{-1} in the bulk, and the min(i, n+1-i) factor'),
+    (_lazy_re('\\b(Tracy[- ]?Widom|soft edge|Airy kernel|edge fluctuation|GOE|GUE|largest eigenvalue distribution)\\b', re.I), 'Tracy-Widom at the soft edge: the n^{-2/3} scale, and which tail has exponent 3/2'),
+    (_lazy_re('\\b(BBP|Baik[- ]Ben ?Arous[- ]Pech|spiked (model|covariance|matrix)|outlier eigenvalue|deformed Wigner|rank[- ]one spike)\\b', re.I), 'BBP transition for spiked models: threshold sqrt(y) for covariance, 1 for additive, and the outlier formula'),
+    (_lazy_re("\\b(Weyl'?s? inequalit|Lidskii|Hoffman[- ]?Wielandt|Ky Fan|eigenvalue perturbation|unitarily invariant norm)\\b", re.I), 'Weyl, Lidskii and Hoffman-Wielandt: eigenvalue perturbation needs Hermitian matrices and matched order'),
+    (_lazy_re('\\b(interlac(e|es|ing)|Cauchy interlacing|principal submatrix|rank[- ]one (perturbation|update)|rank inequality|low[- ]rank perturbation)\\b', re.I), 'Cauchy interlacing and the rank inequality: the index shifts by exactly one per unit of rank'),
+    (_lazy_re('\\b(Bai(?:[-\\s\\u2010-\\u2015]+)?Yin|Davidson[-\\s\\u2010-\\u2015]+Szarek|(?:operator|spectral) norm of (?:a|an|the) [^.\\n]{0,60}\\bGaussian matrix|(?:operator|spectral) norm of (?:a|the) (?:random|m x n) matrix|largest singular value|smallest singular value|sqrt\\(m\\) ?\\+ ?sqrt\\(n\\))\\b', re.I), 'Operator norm of a Gaussian matrix: sqrt(m) + sqrt(n), the 2 sqrt(n) symmetric edge, and dimension-free concentration'),
+    (_lazy_re("\\b(Chevet|Gordon'?s? (inequality|minimax|comparison|theorem)|Slepian|Sudakov[- ]Fernique|Gaussian width|Gaussian comparison)\\b", re.I), 'Chevet, Slepian and Sudakov-Fernique: both cross terms, and which side of the comparison the maximum sits on'),
+    (_lazy_re('\\b(universality of (?:the )?local|sine kernel|Airy kernel|four[- ]moment (?:theorem|matching)|local eigenvalue statistics|Dyson Brownian motion|bulk (?:universality|statistics))\\b', re.I), 'Universality of local eigenvalue statistics: sine kernel in the bulk, Airy at the edge, and what is not universal'),
+    (_lazy_re("\\b(Birkhoff(?:'s)?(?:\\s+pointwise)?\\s+ergodic theorem|pointwise ergodic theorem|ergodic averages?|Birkhoff averages?|time averages? converge)\\b", re.I), 'Birkhoff pointwise ergodic theorem: the limit is E[f | invariant sigma-field], constant only under ergodicity'),
+    (_lazy_re("\\b(von Neumann(?:'s)?(?:\\s+mean)? ergodic theorem|mean ergodic theorem|Koopman operator|projection onto the (?:space of )?invariant (?:functions|vectors))\\b", re.I), 'Von Neumann mean ergodic theorem: norm convergence to the projection on the fixed subspace, not pointwise'),
+    (_lazy_re("\\b(maximal ergodic theorem|Hopf(?:'s)? maximal|ergodic maximal (?:inequality|function)|dominated ergodic theorem|weak[- ]type \\(1, ?1\\))\\b", re.I), 'Maximal ergodic theorem and the ergodic maximal inequality: which side is nonnegative, and where the constant lives'),
+    (_lazy_re("\\b(Poincar[eé] recurrence|Kac(?:'s)? (?:lemma|formula)|first return time|return time to A|mean recurrence time)\\b", re.I), "Poincare recurrence and Kac's lemma: the mean return time is 1/mu(A), not mu(A)"),
+    (_lazy_re('\\b(weak(?:ly)? mixing|mild(?:ly)? mixing|strong(?:ly)? mixing|mixing implies ergodic|ergodic but not mixing|T x T is ergodic)\\b', re.I), 'The mixing hierarchy: mixing implies mild implies weak implies ergodic, each strictly, and the absolute values matter'),
+    (_lazy_re('\\b(stationary Gaussian (?:process|sequence|field)|Gaussian (?:process|shift) is (?:ergodic|mixing)|spectral measure (?:is continuous|has no atoms)|Maruyama|Rajchman|Kolmogorov[-–]Rozanov)\\b', re.I), 'Spectral criterion for a stationary Gaussian process: atomless gives ergodic, r(n) -> 0 gives mixing'),
+    (_lazy_re("\\b(Kingman(?:'s)?|sub(?:-)?additive ergodic theorem|super(?:-)?additive ergodic theorem|Fekete(?:'s)? lemma|subadditive sequence)\\b", re.I), "Kingman's subadditive ergodic theorem: the constant is the infimum of E[X_{0,n}]/n, and subadditivity points one way"),
+    (_lazy_re('\\b(Shannon[-–]McMillan[-–]Breiman|SMB theorem|entropy rate|asymptotic equipartition|typical set|-\\(1/n\\) ?\\\\?log p)\\b', re.I), 'Shannon-McMillan-Breiman: the a.s. limit is the entropy rate, which is an infimum and a conditional entropy'),
+    (_lazy_re('\\b(Kolmogorov[-–]Sinai|measure[- ]theoretic entropy|entropy of the (?:shift|transformation|system)|generating partition|generator of the sigma[- ]field|Ornstein isomorphism)\\b', re.I), 'Kolmogorov-Sinai entropy: a sup over partitions, attained at any generator, with h(T^k) = |k| h(T)'),
+    (_lazy_re('\\b(invariant sigma[- ]?(?:field|algebra)|ergodic decomposition|extreme points of the set of invariant measures|stationary but not ergodic|tail sigma[- ]?(?:field|algebra)|mixed normal)\\b', re.I), 'The invariant sigma-field and ergodic decomposition: what a non-ergodic stationary limit theorem actually says'),
+    (_lazy_re('\\b(subshift|shift of finite type|specification property|topological(?:ly)? (?:mixing|entropy)|variational principle|equilibrium state|measure of maximal entropy|Perron root)\\b', re.I), 'Subshifts, specification and the variational principle: topological entropy is a supremum over invariant measures'),
+    (_lazy_re('\\b(alpha[- ]mixing|strong(?:ly)? mixing coefficient|beta[- ]mixing|phi[- ]mixing|rho[- ]mixing|absolutely regular|maximal correlation|covariance inequality|Davydov|Ibragimov)\\b', re.I), 'Mixing coefficients for stationary sequences: alpha is the weakest, and the covariance bound carries the exponent 1/r'),
+    (_lazy_re('\\b(Vitali convergence|uniformly integrable|uniform integrability|[Uu]\\.?[Ii]\\.?\\b|equi-?integrab)', re.I), 'Vitali convergence theorem: uniform integrability plus tightness replaces a dominating function'),
+    (_lazy_re('\\b(dominated convergence|DCT|dominating function|bounded convergence theorem)\\b', re.I), 'Dominated convergence theorem: one fixed integrable dominating function, not an n-dependent bound'),
+    (_lazy_re("\\b(Fatou'?s? lemma|Fatou|reverse Fatou)\\b", re.I), "Fatou's lemma: liminf on the inside is <= liminf on the outside, and only for nonnegative or bounded-below sequences"),
+    (_lazy_re('\\b(layer[- ]cake|distribution function formula|E\\[X\\] *= *\\\\?int_?0\\^\\\\?infty|integrating the tail|tail integral)', re.I), 'Layer-cake formula: the tail is integrated in t from 0 to infinity, with the p t^{p-1} weight'),
+    (_lazy_re("\\b(Markov'?s? inequality|Chebyshev'?s? inequality|Bienaym(e|é)\\w*)\\b", re.I), 'Markov and Chebyshev inequalities: which side of t, which power, and where the moment sits'),
+    (_lazy_re('\\b(absolute(ly)? continu(ity|ous) of the integral|uniform(ly)? absolutely continuous|small(ness)? on sets of small measure|int_A \\|f\\|)', re.I), 'Absolute continuity of the integral: small sets carry small integral, uniformly only for a UI family'),
+    (_lazy_re('\\b(Fubini|Tonelli|iterated integral|product measur(e|able|ability)|interchange the order of integration)\\b', re.I), 'Fubini and Tonelli: nonnegativity or integrability of the double integral, and joint measurability first'),
+    (_lazy_re("\\b(Egoro[fv]|Egorov'?s theorem|Lusin|almost uniform convergence)\\b", re.I), "Egorov's theorem: finite measure, a.e. convergence, and uniform convergence off a small set (not off a null set)"),
+    (_lazy_re('\\b(Riesz[- ]Fischer|L\\^?p is complete|completeness of L\\^?p|Banach space L\\^?p|essential sup(remum)?)\\b', re.I), 'Riesz-Fischer: L^p is complete for 1 <= p <= infinity, and convergence in L^p gives only a subsequence a.e.'),
+    (_lazy_re('\\b(weak[- ]?\\*|weak-?star|weakly (convergen|compact)|Dunford[- ]Pettis|Banach[- ]Alaoglu|conjugate exponent|dual of L\\^?p)', re.I), 'Weak versus weak-star convergence in L^p: which duality holds, and what compactness it buys'),
+    (_lazy_re("\\b(Minkowski('s)? inequality|conjugate exponents?|H(o|ö)lder'?s? inequality with exponents?|which exponent)\\b", re.I), 'Holder, Minkowski and Jensen: which exponent goes on which factor and which way the convexity runs'),
+    (_lazy_re('\\b(completion of the sigma[- ]algebra|complete(d)? filtration|usual conditions|null sets? (are )?(adjoined|added)|indistinguishab\\w*|(measurable |continuous )?modification of (the|a) process|version of (the|a) (process|random variable|conditional expectation|density))\\b', re.I), "Completion of a sigma-algebra and a.e. statements: null sets, versions, and where 'for all omega' is not available"),
+    (_lazy_re('\\b(regular(ly)? var(iation|ying)|slow(ly)? var(iation|ying)|uniform convergence theorem|index of regular variation)\\b', re.I), 'Regular variation: which index carries the minus sign, and how uniform the limit is'),
+    (_lazy_re('\\b(Karamata|truncated (second )?moment|integrat(e|ing|ion of) (a )?regularly varying)\\b', re.I), "Karamata's theorem: the integral is x f(x) over the distance of the index from -1"),
+    (_lazy_re("\\b(Potter'?s? (bound|bounds|inequality)|Karamata representation|representation theorem for slowly varying)\\b", re.I), 'Karamata representation and Potter bounds: a max of two powers, valid only past a threshold'),
+    (_lazy_re("\\b(Tauberian|Abelian theorem|Laplace[- ]Stieltjes transform|Karamata'?s Tauberian)\\b", re.I), "Karamata's Tauberian theorem: infinity for the function, zero for the transform, and the gamma factor"),
+    (_lazy_re('\\b(Fisher[- ]Tippett|Gnedenko|generali[sz]ed extreme value|extreme value (index|distribution|law)|GEV|Fr[eé]chet|Gumbel)\\b', re.I), 'Fisher-Tippett-Gnedenko: the GEV exponent is -1/xi and the sign of xi picks the type'),
+    (_lazy_re('\\b(max[- ]domain of attraction|maximum domain of attraction|von Mises condition|norming constants|MDA)\\b', re.I), 'Max-domains of attraction: n times the tail converges, and the limit is exp(-tau)'),
+    (_lazy_re("\\b(subexponential|one[- ]big[- ]jump|max[- ]sum equivalence|Kesten'?s bound|convolution tail)\\b", re.I), 'Subexponentiality: the two-fold convolution tail is twice the tail, and one big jump does it'),
+    (_lazy_re('\\b(long[- ]tailed|regularly varying .{0,30}subexponential|subexponential .{0,30}(regularly varying|long[- ]tailed|heavy[- ]tailed)|tail[- ]equivalen\\w+|closed under convolution)\\b', re.I), 'Regularly varying versus subexponential: strict inclusions and which tail survives a sum'),
+    (_lazy_re("\\bBreiman'?s (lemma|theorem)\\b", re.I), "Breiman's lemma: the constant is E[Y^alpha] and the moment must reach strictly past alpha"),
+    (_lazy_re('\\b(stable (law|laws|distribution|limit)|alpha[- ]stable|α-stable|domain of attraction|non[- ]normal domain of attraction)\\b', re.I), 'Stable limits: norming is n^{1/alpha}, tail balance is a hypothesis, and alpha = 2 is not a power tail'),
+    (_lazy_re('\\b(Pickands|Balkema|generali[sz]ed Pareto|GPD|excess distribution|mean excess|peaks over threshold)\\b', re.I), 'Pickands-Balkema-de Haan: the excess law is generalised Pareto with the same xi as the maximum'),
+    (_lazy_re('\\b(Hill estimator|Hill plot|tail index estimat\\w+|second[- ]order (regular variation|condition))\\b', re.I), 'The Hill estimator: it estimates 1/alpha, and k must go to infinity with k/n going to zero'),
 ]
 _KNOW = None
 
@@ -700,16 +643,16 @@ def knowledge_notes(text, cap=3, note_budget=6000):
 # the per-step inventory: the tokens where a one-token fault lives, listed per step so the reader looks AT them.
 # Every step is listed, never a chosen one - this is attention, not an answer.
 INV = [
-    ("limit", re.compile(r"(?:\\to|\\rightarrow|\\longrightarrow|->|\u2192)\s*\{?\s*(\+?\\infty|\\infty|infty|0|-\\infty|[0-9]+|[a-zA-Z](?![a-zA-Z]))")),
-    ("hyp", re.compile(r"\b(independent|independence|bounded|uniformly|uniform|continuous|continuity|compact|closed|open|finite|infinite|integrable|measurable|Lipschitz|H[o\u00f6]lder|smooth|analytic|monotone|increasing|decreasing|nondecreasing|nonincreasing|convex|concave|nonnegative|non-negative|positive|negative|strictly|centered|centred|symmetric|invariant|irreducible|aperiodic|recurrent|transient|countable|dense|separable|complete|i\.i\.d\.|iid|martingale|supermartingale|submartingale|exchangeable|stationary|ergodic|mixing|absolutely continuous|almost surely|almost everywhere|a\.s\.|a\.e\.|in probability|in distribution|in law|pointwise|at most|at least|above|below|upper|lower|larger|smaller|greater|less|maximal|minimal|sufficiently (large|small)|arbitrarily (large|small))\b", re.I)),
-    ("rel", re.compile(r"\\(?:leq|le|geq|ge|leqslant|geqslant|lneq|gneq|lesssim|gtrsim|ll|gg)(?![A-Za-z])|<=|>=|\u2264|\u2265|(?<![<>=\\])<(?![<=])|(?<![<>=\\])>(?![>=])")),
-    ("idx", re.compile(r"(?<![A-Za-z0-9])[a-zA-Z]\s*[+-]\s*1(?![0-9])|\{\s*[a-zA-Z]\s*[+-]\s*1\s*\}")),
-    ("quant", re.compile(r"\\forall(?![A-Za-z])|\\exists(?![A-Za-z])|\bfor (all|every|each|some|any)\b|\bthere (exists?|is a|are)\b", re.I)),
-    ("op", re.compile(r"\\(limsup|liminf|sup|inf|max|min|cup|cap|bigcup|bigcap|subset|supset|subseteq|supseteq|subsetneq)(?![A-Za-z])|\b(supremum|infimum|maximum|minimum|union|intersection)\b", re.I)),
-    ("cite", re.compile(r"\b(Lemma|Theorem|Proposition|Corollary|Claim|Equation|inequality)\b\s*\(?(?:ref|eqref|cref|Cref)?\s*[A-Za-z:._-]*\)?|\bby\s+(?:the\s+)?[A-Z][a-zA-Z\u00e9\u00f6\u00f4'-]+(?:[- ][A-Z][a-zA-Z]+)?(?:'s)?\s+(?:inequality|theorem|lemma|formula|bound|principle)", re.I)),
-    ("const", re.compile(r"\^\{?\s*-?[0-9]+(?:/[0-9]+)?\}?|\\frac\{\s*-?[0-9]+\s*\}\{\s*-?[0-9]+\s*\}|(?<![a-zA-Z_\\{])\b[0-9]+(?:\.[0-9]+)?\b(?![a-zA-Z}])")),
+    ("limit", _lazy_re(r"(?:\\to|\\rightarrow|\\longrightarrow|->|\u2192)\s*\{?\s*(\+?\\infty|\\infty|infty|0|-\\infty|[0-9]+|[a-zA-Z](?![a-zA-Z]))")),
+    ("hyp", _lazy_re(r"\b(independent|independence|bounded|uniformly|uniform|continuous|continuity|compact|closed|open|finite|infinite|integrable|measurable|Lipschitz|H[o\u00f6]lder|smooth|analytic|monotone|increasing|decreasing|nondecreasing|nonincreasing|convex|concave|nonnegative|non-negative|positive|negative|strictly|centered|centred|symmetric|invariant|irreducible|aperiodic|recurrent|transient|countable|dense|separable|complete|i\.i\.d\.|iid|martingale|supermartingale|submartingale|exchangeable|stationary|ergodic|mixing|absolutely continuous|almost surely|almost everywhere|a\.s\.|a\.e\.|in probability|in distribution|in law|pointwise|at most|at least|above|below|upper|lower|larger|smaller|greater|less|maximal|minimal|sufficiently (large|small)|arbitrarily (large|small))\b", re.I)),
+    ("rel", _lazy_re(r"\\(?:leq|le|geq|ge|leqslant|geqslant|lneq|gneq|lesssim|gtrsim|ll|gg)(?![A-Za-z])|<=|>=|\u2264|\u2265|(?<![<>=\\])<(?![<=])|(?<![<>=\\])>(?![>=])")),
+    ("idx", _lazy_re(r"(?<![A-Za-z0-9])[a-zA-Z]\s*[+-]\s*1(?![0-9])|\{\s*[a-zA-Z]\s*[+-]\s*1\s*\}")),
+    ("quant", _lazy_re(r"\\forall(?![A-Za-z])|\\exists(?![A-Za-z])|\bfor (all|every|each|some|any)\b|\bthere (exists?|is a|are)\b", re.I)),
+    ("op", _lazy_re(r"\\(limsup|liminf|sup|inf|max|min|cup|cap|bigcup|bigcap|subset|supset|subseteq|supseteq|subsetneq)(?![A-Za-z])|\b(supremum|infimum|maximum|minimum|union|intersection)\b", re.I)),
+    ("cite", _lazy_re(r"\b(Lemma|Theorem|Proposition|Corollary|Claim|Equation|inequality)\b\s*\(?(?:ref|eqref|cref|Cref)?\s*[A-Za-z:._-]*\)?|\bby\s+(?:the\s+)?[A-Z][a-zA-Z\u00e9\u00f6\u00f4'-]+(?:[- ][A-Z][a-zA-Z]+)?(?:'s)?\s+(?:inequality|theorem|lemma|formula|bound|principle)", re.I)),
+    ("const", _lazy_re(r"\^\{?\s*-?[0-9]+(?:/[0-9]+)?\}?|\\frac\{\s*-?[0-9]+\s*\}\{\s*-?[0-9]+\s*\}|(?<![a-zA-Z_\\{])\b[0-9]+(?:\.[0-9]+)?\b(?![a-zA-Z}])")),
 ]
-STEP_SPLIT_LINE = re.compile(r"(?m)^\s*(?:\[step\s+)?(\d{1,3})[.)\]]\s+")
+STEP_SPLIT_LINE = _lazy_re(r"(?m)^\s*(?:\[step\s+)?(\d{1,3})[.)\]]\s+")
 
 
 class _Steps(object):
@@ -734,8 +677,8 @@ class _Steps(object):
 STEP_SPLIT = _Steps()
 
 
-CLAIM_RE = re.compile(r"(?s)CLAIM:\s*(.+?)\n\s*(?:ARGUMENT|PROOF|STEPS)\s*:")
-LIMIT_PAIR = re.compile(r"([a-zA-Z])\s*(?:\\to|\\rightarrow|\\longrightarrow|->|→)\s*\{?\s*(\+?\\infty|\\infty|infty|0|-\\infty)")
+CLAIM_RE = _lazy_re(r"(?s)CLAIM:\s*(.+?)\n\s*(?:ARGUMENT|PROOF|STEPS)\s*:")
+LIMIT_PAIR = _lazy_re(r"([a-zA-Z])\s*(?:\\to|\\rightarrow|\\longrightarrow|->|→)\s*\{?\s*(\+?\\infty|\\infty|infty|0|-\\infty)")
 
 
 def claim_line(text):
@@ -775,7 +718,7 @@ WEAKER = [
     ("local martingale", ("martingale",)), ("supermartingale", ("martingale",)), ("submartingale", ("martingale",)),
     ("for some", ("for all", "for every", "for each")), ("there exists", ("for all", "for every")),
 ]
-_WRX = {w: re.compile(r"(?<![a-z-])" + re.escape(w) + r"(?![a-z-])", re.I) for w in
+_WRX = {w: _lazy_re(r"(?<![a-z-])" + re.escape(w) + r"(?![a-z-])", re.I) for w in
         set(w for w, _ in WEAKER) | set(x for _, xs in WEAKER for x in xs)}
 
 
@@ -894,7 +837,7 @@ def step_inventory(text, max_chars=6000):
             "read each one against the claim and the previous step, do not skim it):\n" + block)
 
 
-# v9 (2026-09-24, from a brain-on/off study): the card leads with what is specific to THIS argument. The hook
+# v9 (2026-09-24, from the ab30 brain-on/off study): the card leads with what is specific to THIS argument. The hook
 # dispatcher cuts every hook's text from the end when the prompt's hooks outrun the 10,000 characters the harness hands
 # the model, and in all nine proof audits of the study where this card fired, the cut left only POSTURE's first ~1,500
 # characters - general rules and the Lean certificate paragraph - and not one of the checks picked for the argument
@@ -951,16 +894,13 @@ def render(text):
 
 
 def main():
-    data = _SC_DATA
-    if data is None:
-        try:
-            data = json.load(sys.stdin)
-        except Exception:
-            return
+    try:
+        data = json.load(sys.stdin)
+    except Exception:
+        return
     prompt = (data.get("prompt") or "")[:20000]
     block = render(prompt)
     if not block:
-        _sc_store(prompt, str(data.get("session_id") or ""), _SC_IDENT)
         return
     if _recently_fired(str(data.get("session_id") or "")):
         return

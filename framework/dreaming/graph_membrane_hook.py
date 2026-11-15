@@ -1,7 +1,7 @@
 """graph_membrane_hook.py - the brain graph's subconscious feeding the context, on prompts and tool calls (26 Sep 2026).
 
-The graph grown from everything agents touch runs live, with a weight that is not zero, so it can be studied and
-made better. The work is in ~/.claude/brain_graph/bin/live_membrane.py; this
+His voice note of 26 Sep 00:26 and his 15:5x order: the graph grown from everything agents touch runs live, with a weight
+that is not zero, so it can be studied and made better. The work is in ~/.claude/brain_graph/bin/live_membrane.py; this
 file only reads the hook payload and prints what reached the context. It never blocks and never fails a tool call.
 
 Wired through hook_dispatch_list.json (UserPromptSubmit and PostToolUse), enabled while

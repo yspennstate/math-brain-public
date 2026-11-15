@@ -7,7 +7,7 @@ VERDICT (2026-07-11): MARGIN=1.35 CONFIRMED - keep. Ran the retune on n=28 accum
 4/28 (14%) of the MARGIN-suppressed challengers were read in-session, so 86% of suppressions correctly
 filtered noise. The useful ones cluster in the 1.25-1.35 ratio bucket (4/13 = 31%) vs 0/15 in 1.15-1.25, so
 IF ever loosened it should go to ~1.25, not lower - but 69% of that bucket is still noise, so for a
-protect-the-owner's-attention brain the high-precision 1.35 gate is the right call. n=28 is thin (directional
+protect-the-the author's-attention brain the high-precision 1.35 gate is the right call. n=28 is thin (directional
 only; the gate's own comment flagged n=7 as too thin), and the shadow log keeps growing for a firmer future
 retune. With eval_proactive_coeffs (cosine-damp floor) this completes the proactive-hook audit: ranking AND
 firing gate both confirmed.
@@ -25,7 +25,7 @@ if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:
 
 import io, os, re, time
 from collections import defaultdict
-DR = os.path.expanduser(r"~/.claude/dreaming")
+DR = os.path.expanduser(r"~\.claude\dreaming")
 SHADOW = os.path.join(DR, "shadow_fires.tsv")
 TRACE = os.path.join(DR, "retrievals.tsv")
 # rows judged by the last run: work_finders W71 asks for a re-run only once the log has grown past this

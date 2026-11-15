@@ -1,4 +1,4 @@
-"""Controls for foresight reading the dated prose corrections (27 Sep).
+"""Controls for foresight reading the dated prose corrections (27 Sep, an agent).
 
 The old version (brain repository a5cb082f7a, or a path given as the first argument) and the live one parse the same
 ledgers. Every old row must survive unchanged; the only new rows are dated entries that state 'reflex:'. A synthetic
@@ -6,10 +6,6 @@ ledger covers the edge cases; the live ledger is read, never written.
 
     python test_foresight_dated.py [OLD_FORESIGHT_PY]
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import collections
 import importlib.util
 import os
@@ -25,7 +21,7 @@ FAILS = []
 TEXT = """# Mistakes
 
 - **2026-08-10 (bold)** "x" -> wrong: a; lesson: keep the bold rows; reflex: none yet
-- 2026-09-20 05:1x his clock (agentx, topic): a dated entry that names its guard. Rule: do the thing first. reflex:
+- 2026-09-20 05:1x local time (agentx, topic): a dated entry that names its guard. Rule: do the thing first. reflex:
   a_fix_at_one_site_is_a_note
 - 2026-09-21 (agentx): a dated entry with no reflex field at all. Rule: something.
   - **2026-09-22 (an indented bold line under a dated entry)** -> wrong: b; lesson: stays its own row; reflex: none
@@ -50,9 +46,8 @@ def old_path():
     repo = os.path.join(os.path.expanduser("~"), "brain-repo")
     blob = subprocess.run(["git", "-C", repo, "show", "a5cb082f7a:12_cognitive_architecture/dreaming/foresight.py"],
                           capture_output=True, text=True, encoding="utf-8", errors="replace").stdout
-    if "def _mistakes" not in blob:     # a shallow or missing clone (5 Nov 2026, a Mac): nothing to compare with
-        print("SKIP - could not read the old foresight from git history; pass its path")
-        raise SystemExit(0)
+    if "def _mistakes" not in blob:
+        raise SystemExit("could not read the old foresight from git history; pass its path")
     p = os.path.join(tempfile.mkdtemp(prefix="fs_old_"), "foresight_old.py")
     open(p, "w", encoding="utf-8").write(blob)
     return p
@@ -77,9 +72,6 @@ def check(name, ok, detail=""):
 
 def main():
     new = load(os.path.join(DR, "foresight.py"), "fs_live")
-    if "{{" in new.MEM:                 # a framework checkout before install renders the slug: no ledger to read
-        print("SKIP - foresight.MEM is not rendered (%s); run it in an installed copy" % new.MEM)
-        return 0
     old = load(old_path(), "fs_old")
     rn, ro = rows(new, TEXT), rows(old, TEXT)
     check("1 the old version reads the two bold rows only", len(ro) == 2, str(ro))

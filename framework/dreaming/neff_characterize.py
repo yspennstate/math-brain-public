@@ -5,10 +5,9 @@
 (2) Characterize n_eff's real predictive power linearly vs via log(n_eff) (the range is 1..367, so a
     linear coef understates a monotone-but-curved relationship).
 (3) Confirm S adds nothing even with log(n_eff) in the model (the verdict, re-checked nonlinearly)."""
-import os
 import numpy as np
 
-ROWS = os.path.expanduser("~/.claude/dreaming/eval_S_rows.npy")
+ROWS = r"~/.claude/dreaming/eval_S_rows.npy"
 
 
 def _z(x):

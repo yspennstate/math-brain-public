@@ -59,10 +59,10 @@ import memory_date as current_memory_date
 
 
 HOME = Path.home()
-DEFAULT_MEM = HOME / ".claude" / "projects" / "{{BRAIN_SLUG}}" / "memory"
-DEFAULT_PROJECT = HOME / ".claude" / "projects" / "{{BRAIN_SLUG}}"
+DEFAULT_MEM = HOME / ".claude" / "projects" / os.environ.get("BRAIN_SLUG", "default") / "memory"
+DEFAULT_PROJECT = HOME / ".claude" / "projects" / os.environ.get("BRAIN_SLUG", "default")
 DEFAULT_ARCHIVE = (HOME / "brain-repo" / "11_raw_session_transcripts" /
-                   "claude_projects" / "{{BRAIN_SLUG}}")
+                   "claude_projects" / os.environ.get("BRAIN_SLUG", "default"))
 CREATED = re.compile(r"^\s*created:\s*[\"']?(20\d\d-\d\d-\d\d)", re.M)
 DESCRIPTION = re.compile(r"^description:\s*(.+)$", re.M)
 FULL_SLUG_DATE = re.compile(
@@ -558,13 +558,14 @@ def main(argv=None):
     parser.add_argument("--project-dir", default=str(DEFAULT_PROJECT))
     parser.add_argument("--archive-dir", default=str(DEFAULT_ARCHIVE))
     parser.add_argument("--as-of", help="local YYYY-MM-DD; default is today's local date")
-    parser.add_argument("--timezone", default="UTC")
+    parser.add_argument("--timezone", default="Asia/Jerusalem")
     args = parser.parse_args(argv)
 
+    if ZoneInfo is None:
+        print("eval_memory_age: DATA-GATED - Python zoneinfo is unavailable.")
+        return 2
     try:
-        # The shared resolver answers UTC without a time-zone database (Windows has none unless
-        # tzdata is installed) and names the fix for any other zone it cannot find.
-        tz = current_memory_date._trusted_timezone(args.timezone)
+        tz = ZoneInfo(args.timezone)
         as_of = date.fromisoformat(args.as_of) if args.as_of else datetime.now(tz).date()
     except (KeyError, ValueError) as exc:
         print("eval_memory_age: invalid date/timezone: %s" % exc)
@@ -720,11 +721,6 @@ def main(argv=None):
     if len(gold) < 100 or strict_stats["n"] < 0.75 * len(gold):
         print("\nVERDICT: DATA-GATED - exact-create evidence or strict coverage is insufficient; "
               "do not change live age behavior.")
-        if passed == len(tests):
-            # Not a failure: the code's contracts hold and the gate waits for history a young
-            # brain does not have yet. A broken contract still exits 1.
-            print("(synthetic contracts pass; the ship gate needs more recorded history)")
-            return 0
     else:
         print("\nVERDICT: HOLD - the strict resolver failed an accuracy or contract gate; "
               "do not change live age behavior.")

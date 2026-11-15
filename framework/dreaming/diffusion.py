@@ -2,7 +2,7 @@
 """diffusion.py - spreading activation over the use-grown brain graph, as a personalised PageRank, and its blend
 with the brain's lexical recall behind one dial.
 
-The graph is the store graph_store.py builds from the agents' touches: context -> target counts
+The graph is the store graph_store.py builds from the agents' touches (an agent): context -> target counts
 (whenever a memory was read, a file or folder first touched, a tool called or a call failed, every distinct item the
 session touched in the ten minutes before it) and co-occurrence counts between non-word items.
 
@@ -408,9 +408,9 @@ class Diffusion:
                 dang = r[self.dangling].sum(axis=0, keepdims=True)
                 r = alpha * S + (1 - alpha) * (self.PT @ r + S * dang)
             return r
-        # The same walk bit for bit: off the seed rows alpha*0 + (1-alpha)*(y + 0*dang) is (1-alpha)*y exactly, so
-        # only the seed rows take the full expression, and the dangling mass is summed over the same rows taken by
-        # index. ppr 0.61 -> 0.33 s on a 360k-node walk. BRAIN_PPR_SEEDROWS=0 runs the plain loop.
+        # The same walk bit for bit (13/13 recall walks and a batch of 3, 3 Nov, an agent): off the seed rows
+        # alpha*0 + (1-alpha)*(y + 0*dang) is (1-alpha)*y exactly, so only the seed rows take the full expression,
+        # and the dangling mass is summed over the same rows taken by index. ppr 0.61 -> 0.33 s on the 360k-node walk.
         di = getattr(self, "_dang_ix", None)
         if di is None:
             di = self._dang_ix = np.flatnonzero(self.dangling)

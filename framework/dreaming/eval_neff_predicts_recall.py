@@ -13,12 +13,11 @@ embedded memories minus A. Writes nothing.
 """
 
 from __future__ import annotations
-import os
 
 import sys
 from collections import defaultdict
 
-sys.path.insert(0, os.path.expanduser("~/.claude/dreaming"))
+sys.path.insert(0, r"~/.claude/dreaming")
 import numpy as np
 import brain as B
 import spread_recall as sr

@@ -13,15 +13,20 @@ Called by dream.py at agenda build (guarded). Standalone test: python fire_judge
 import calendar, glob, io, json, os, random, re, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# the Claude project directory whose transcripts are judged: BRAIN_PROJECT_DIR wins, else the slug in
-# BRAIN_PROJECT_SLUG under ~/.claude/projects (the slug is the working directory with separators replaced by dashes),
-# else the home folder's slug, as the memory folder is found. The old default, a folder named "default" that nothing
-# makes, left the judge with no transcript and 0 cases a night on every install that did not set the variable (5 Nov).
-PROJ = os.environ.get("BRAIN_PROJECT_DIR") or os.path.join(
-    os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_PROJECT_SLUG") or os.environ.get("BRAIN_SLUG")
-    or os.path.expanduser("~").replace(":", "-").replace(chr(92), "-").replace("/", "-"))
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 OUTLOG = os.path.join(HERE, "judged_nightly.jsonl")
-TARGET = ("sim_flatters", "risk_vs_measured_record", "ib_marks",
+# 2026-11-07 (an agent): the REM judged its cases and could not append them - appending needs a
+# shell, and on a loaded laptop a shell start costs 35 s or more, so the 7 Nov rows stayed prose in the
+# journal and judged_nightly.jsonl went five nights without a row. The judge now WRITES a new small file
+# with the Write tool (no shell); judged_inbox_merge.py folds it into OUTLOG before reflex_precision runs.
+INBOX = os.path.join(HERE, "judged_inbox")
+
+
+def _write_to(section):
+    return ("WRITE one JSON line per case, with the Write tool (no shell needed), into the NEW file "
+            + INBOX.replace("\\", "/") + "/<first case_id of this section>.jsonl (the dream runner merges it into "
+            + OUTLOG.replace("\\", "/") + " and drops a case_id already there), exactly as")
+TARGET = ("sim_flatters", "risk_vs_his_book", "ib_marks",
           "vxn_long_tenor_state", "stale_mark_banks")
 N_CASES = 4
 
@@ -69,7 +74,78 @@ def _in_window(ln, lo_s, hi_s):
 
 
 _SCAN_CACHE = {}
-SEEK_BACKOFF = 30 * 60      # the seek aims this far before a window's start, so a line stamped slightly out of order
+
+# BOUNDED BUILD (2026-11-10). The sheet was skipped every night from 8 Nov: the builder takes 3-4 s on a quiet disk and
+# 94 s to over 120 s inside a loaded dream, against dream.py's 120 s kill, and a killed builder returns nothing. Three
+# changes, none of which alters which cases a finished build picks: (1) a deadline the case loops check, so a slow
+# night returns the cases found so far with a PARTIAL note instead of no sheet; (2) the two logs are read from their
+# END back to the cutoff (they are append-only and chronological; instinct_fires.tsv was 27 MB and read twice,
+# instinct_suppressed.tsv 71 MB, for one day of rows each); (3) one listing of the projects folder per run instead of
+# a glob per scanned session (1,700 entries each time).
+_DEADLINE = [None]          # epoch seconds after which the case loops stop adding cases; set by agenda_section
+_PARTIAL = []               # the strata the deadline cut short, named in the sheet's own note
+
+
+def _late(stratum=None):
+    d = _DEADLINE[0]
+    if d is not None and time.time() >= d:
+        if stratum and stratum not in _PARTIAL:
+            _PARTIAL.append(stratum)
+        return True
+    return False
+
+
+_PROJ_INDEX = {}
+
+
+def _transcripts(sid):
+    """The session's transcript files (what glob(PROJ/sid[:8]*.jsonl) returned), from one listing per PROJ."""
+    if _PROJ_INDEX.get("\0dir") != PROJ:
+        _PROJ_INDEX.clear()
+        _PROJ_INDEX["\0dir"] = PROJ
+        try:
+            for fn in os.listdir(PROJ):
+                if fn.endswith(".jsonl"):
+                    _PROJ_INDEX.setdefault(fn[:8], []).append(os.path.join(PROJ, fn))
+        except OSError:
+            pass
+    return _PROJ_INDEX.get(sid[:8], [])
+
+
+TAIL_STEP = 2 * 1024 * 1024
+
+
+def _recent_lines(path, cutoff):
+    """The lines of an append-only tab-separated log (column 0 = epoch seconds, chronological) from about `cutoff` on:
+    steps back from the end 2 MB at a time until a block starts before the cutoff, then reads forward from there. The
+    callers still test every row's stamp, so a block that starts a little early costs nothing."""
+    with io.open(path, "rb") as fb:
+        fb.seek(0, 2)
+        pos = fb.tell()
+        while pos > 0:
+            pos = max(0, pos - TAIL_STEP)
+            fb.seek(pos)
+            if pos:
+                fb.readline()                           # the rest of the line the seek landed in
+            first = None
+            for _ in range(50):
+                ln = fb.readline()
+                if not ln:
+                    break
+                try:
+                    first = float(ln.split(b"\t", 1)[0])
+                    break
+                except ValueError:
+                    continue
+            if first is not None and first < cutoff:
+                break
+        fb.seek(pos)
+        if pos:
+            fb.readline()
+        return fb.read().decode("utf-8", "replace").replace("\r\n", "\n").split("\n")
+
+
+SEEK_BACKOFF = 30 * 60     # the seek aims this far before a window's start, so a line stamped slightly out of order
                             # near the boundary is still read (the per-line stamp check then filters as before)
 
 
@@ -114,7 +190,7 @@ def _session_scan(sid, window=None):
     key = (sid, window)
     if key in _SCAN_CACHE:
         return _SCAN_CACHE[key]
-    hits = glob.glob(os.path.join(PROJ, sid[:8] + "*.jsonl"))
+    hits = _transcripts(sid)
     tools, prompts = [], []
     if not hits:
         _SCAN_CACHE[key] = (tools, prompts)
@@ -131,8 +207,8 @@ def _session_scan(sid, window=None):
             for raw in fb:
                 ln = raw.decode("utf-8", "replace")
                 is_user = '"type":"user"' in ln or '"type": "user"' in ln
-                # prompts typed while the agent works are queued_command attachments, never user records (27 Sep:
-                # a quarter of the prompts, a third of the corrections - often the reaction to what a fire preceded)
+                # his prompts typed while the agent works are queued_command attachments, never user records (27 Sep:
+                # a quarter of his prompts, a third of his corrections - often the reaction to what a fire preceded)
                 is_queued = 'queued_command' in ln
                 if not is_user and not is_queued and '"tool_use"' not in ln and '"text"' not in ln:
                     continue
@@ -207,26 +283,25 @@ def firehose_cases(n=FIREHOSE_N, days=1, seed=None, since=None):
     """Cases from the day's TOP FIRERS outside TARGET, across proxies (prompt/act/write/read). The
     2026-09-02 profile: 6,014 fires in a day, 43 percent at prompt time, three recognition cues
     (verify_adversarially 1,558, steelman_opposite 484, proof_step_needs_derivation 172) at the top -
-    never judged, because TARGET only names five domain judgment reflexes and the act/write proxies. A reflex
+    never judged, because TARGET only names five trading reflexes and the act/write proxies. A reflex
     that fires on most prompts is noise unless a judge says otherwise; this stratum gets it judged.
     Deterministic by day (same seed rule as agenda_section). Never raises; [] on any trouble."""
     try:
         cutoff = float(since) if since else time.time() - days * 86400   # since: epoch seconds, e.g. to judge only fires after a trigger edit
         fires = []
-        with io.open(os.path.join(HERE, "instinct_fires.tsv"), encoding="utf-8", errors="replace") as f:
-            for ln in f:
-                p = ln.rstrip("\n").split("\t")
-                if len(p) < 6:
-                    continue
-                try:
-                    ts = float(p[0])
-                except Exception:
-                    continue
-                if ts < cutoff or p[3] in TARGET or not re.match(r"^[0-9a-f]{8}-", p[5]):
-                    continue
-                if p[2] not in ("prompt", "act", "write", "read"):
-                    continue
-                fires.append((ts, p[3], p[5], p[2], p[6] if len(p) > 6 else ""))   # col 6: the firing path (regex | graph | ff)
+        for ln in _recent_lines(os.path.join(HERE, "instinct_fires.tsv"), cutoff):
+            p = ln.rstrip("\n").split("\t")
+            if len(p) < 6:
+                continue
+            try:
+                ts = float(p[0])
+            except Exception:
+                continue
+            if ts < cutoff or p[3] in TARGET or not re.match(r"^[0-9a-f]{8}-", p[5]):
+                continue
+            if p[2] not in ("prompt", "act", "write", "read"):
+                continue
+            fires.append((ts, p[3], p[5], p[2], p[6] if len(p) > 6 else ""))   # col 6: the firing path (regex | graph | ff)
         if not fires:
             return []
         counts = {}
@@ -248,7 +323,7 @@ def firehose_cases(n=FIREHOSE_N, days=1, seed=None, since=None):
         guts = _gut()
         cases, seen = [], set()
         for ts, rid, sid, proxy, path in order:
-            if len(cases) >= n:
+            if len(cases) >= n or _late("firehose"):
                 break
             if (sid, rid) in seen:
                 continue
@@ -287,9 +362,8 @@ def firehose_section(n=FIREHOSE_N):
            "guards actually at stake in at_fire (vocabulary overlap alone is NO)? followed: did conduct",
            "in `after` show the prescribed caution (yes/no/no_opportunity)? useful: would a careful",
            "agent have WANTED this injection here (yes/no)?",
-           "APPEND one JSON line per case to " + OUTLOG.replace("\\", "/") + " exactly as",
-           "(one object per line, each line ending in a newline; if the file's last byte is not a newline,",
-           "write one first - a row glued onto the previous line hides both rows from every reader):",
+           _write_to(None),
+           "(one object per line, each line ending in a newline; never append to the big file by hand):",
            '{"case_id": "...", "instinct": "...", "stratum": "firehose", "proxy": "...", "path": "copy the case\'s path",'
            ' "fired_at": "copy the case\'s fired_at",'
            ' "domain_at_play": "yes|no|unclear", "followed": "yes|no|no_opportunity",'
@@ -318,18 +392,17 @@ def suppressed_cases(n=SUPPRESSED_N, days=1, seed=None):
             return []
         cutoff = time.time() - days * 86400
         rows = []
-        with io.open(path, encoding="utf-8", errors="replace") as f:
-            for ln in f:
-                p = ln.rstrip("\n").split("\t")
-                if len(p) < 6:
-                    continue
-                try:
-                    ts = float(p[0])
-                except Exception:
-                    continue
-                if ts < cutoff or not re.match(r"^[0-9a-f]{8}-", p[5]):
-                    continue
-                rows.append((ts, p[3], p[5], p[2], p[4]))
+        for ln in _recent_lines(path, cutoff):
+            p = ln.rstrip("\n").split("\t")
+            if len(p) < 6:
+                continue
+            try:
+                ts = float(p[0])
+            except Exception:
+                continue
+            if ts < cutoff or not re.match(r"^[0-9a-f]{8}-", p[5]):
+                continue
+            rows.append((ts, p[3], p[5], p[2], p[4]))
         if not rows:
             return []
         rng = random.Random(int(time.time() // 86400) + 7 if seed is None else seed)
@@ -353,7 +426,7 @@ def suppressed_cases(n=SUPPRESSED_N, days=1, seed=None):
         guts = _gut()
         cases, seen = [], set()
         for ts, rid, sid, proxy, reason in order:
-            if len(cases) >= n:
+            if len(cases) >= n or _late("suppressed"):
                 break
             if (sid, rid, reason) in seen:
                 continue
@@ -391,9 +464,8 @@ def suppressed_section(n=SUPPRESSED_N):
            "was the subject this instinct guards actually at stake in at_fire? useful: would a careful agent",
            "have WANTED this injection here? A yes/yes here is a fire the gate should have let through; count",
            "them against the fires the gate saved before loosening anything. followed is judged on `after`.",
-           "APPEND one JSON line per case to " + OUTLOG.replace("\\", "/") + " exactly as",
-           "(one object per line, each line ending in a newline; if the file's last byte is not a newline,",
-           "write one first - a row glued onto the previous line hides both rows from every reader):",
+           _write_to(None),
+           "(one object per line, each line ending in a newline; never append to the big file by hand):",
            '{"case_id": "...", "instinct": "...", "stratum": "suppressed", "reason": "...", "proxy": "...",'
            ' "fired_at": "copy the case\'s fired_at",'
            ' "domain_at_play": "yes|no|unclear", "followed": "yes|no|no_opportunity",'
@@ -406,26 +478,27 @@ def suppressed_section(n=SUPPRESSED_N):
     return "\n".join(out) + "\n"
 
 
-def agenda_section():
-    """Markdown section with N_CASES to judge inline, or ''. Never raises."""
+def agenda_section(budget_s=None):
+    """Markdown section with N_CASES to judge inline, or ''. Never raises. budget_s (2026-11-10): seconds after which
+    the case loops stop and the sheet is returned PARTIAL, with a note naming the strata cut short; None = no bound."""
     try:
+        _DEADLINE[0] = (time.time() + float(budget_s)) if budget_s else None
+        del _PARTIAL[:]
         cutoff = time.time() - 1 * 86400
         fires = []
-        with io.open(os.path.join(HERE, "instinct_fires.tsv"),
-                     encoding="utf-8", errors="replace") as f:
-            for ln in f:
-                p = ln.rstrip("\n").split("\t")
-                if len(p) < 6:
-                    continue
-                try:
-                    ts = float(p[0])
-                except Exception:
-                    continue
-                if ts < cutoff or p[1] != "PreToolUse" or p[2] not in ("act", "write"):
-                    continue
-                if p[3] not in TARGET or not re.match(r"^[0-9a-f]{8}-", p[5]):
-                    continue
-                fires.append((ts, p[3], p[5], p[2], p[6] if len(p) > 6 else ""))
+        for ln in _recent_lines(os.path.join(HERE, "instinct_fires.tsv"), cutoff):
+            p = ln.rstrip("\n").split("\t")
+            if len(p) < 6:
+                continue
+            try:
+                ts = float(p[0])
+            except Exception:
+                continue
+            if ts < cutoff or p[1] != "PreToolUse" or p[2] not in ("act", "write"):
+                continue
+            if p[3] not in TARGET or not re.match(r"^[0-9a-f]{8}-", p[5]):
+                continue
+            fires.append((ts, p[3], p[5], p[2], p[6] if len(p) > 6 else ""))
         if not fires:
             return ""
         # deterministic-by-day seed: same night -> same sample (a retried dream re-judges
@@ -435,7 +508,7 @@ def agenda_section():
         guts = _gut()
         cases, seen_sessions = [], set()
         for ts, rid, sid, proxy, path in fires:
-            if len(cases) >= N_CASES:
+            if len(cases) >= N_CASES or _late("target"):
                 break
             if sid in seen_sessions:
                 continue
@@ -457,6 +530,10 @@ def agenda_section():
                           "at_fire": [x for _, k, x in at],
                           "after": ["[%s] %s" % (k, x) for _, k, x in after]})
         if not cases:
+            if _PARTIAL:
+                return ("## J. Nightly judge - NO CASES tonight: the sheet builder reached its %d s budget before it "
+                        "found one (a loaded disk). Judge nothing from this section; `python fire_judge_nightly.py "
+                        "--firehose 6 --sheet <file>` builds a sheet by hand when the machine is quiet.\n" % int(budget_s))
             return ""
         out = ["## J. Judge these reflex fires (nightly model pass - 4 cases, ~5 min)",
                "",
@@ -464,9 +541,8 @@ def agenda_section():
                "injected. Judge on the transcript alone - domain_at_play: is the subject matter",
                "this instinct guards actually at stake (vocabulary overlap alone is NO)?",
                "followed: did conduct in `after` show the prescribed caution (yes/no/no_opportunity)?",
-               "APPEND one JSON line per case to " + OUTLOG.replace("\\", "/") + " exactly as",
-           "(one object per line, each line ending in a newline; if the file's last byte is not a newline,",
-           "write one first - a row glued onto the previous line hides both rows from every reader):",
+               _write_to(None),
+           "(one object per line, each line ending in a newline; never append to the big file by hand):",
                '{"case_id": "...", "instinct": "...", "stratum": "target", "path": "copy the case\'s path", "fired_at": "copy the case\'s fired_at", "domain_at_play": "yes|no|unclear",'
                ' "followed": "yes|no|no_opportunity", "why": "one sentence", "judged_by": "dream"}',
                ""]
@@ -474,9 +550,15 @@ def agenda_section():
             out.append("```json")
             out.append(json.dumps(c, ensure_ascii=False))
             out.append("```")
-        return "\n".join(out) + "\n" + firehose_section() + suppressed_section()
+        sheet = "\n".join(out) + "\n" + firehose_section() + suppressed_section()
+        if _PARTIAL:
+            sheet += ("\n(PARTIAL sheet: the builder reached its %d s budget on a loaded disk; cut short: %s. Judge "
+                      "the cases that are here - a short night's rows still count.)\n" % (int(budget_s), ", ".join(_PARTIAL)))
+        return sheet
     except Exception:
         return ""
+    finally:
+        _DEADLINE[0] = None
 
 
 if __name__ == "__main__":

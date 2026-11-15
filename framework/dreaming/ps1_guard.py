@@ -3,7 +3,7 @@
 
 heed_audit (2026-07-15) measured the ps1_hook_edit reflex as the fleet's most read-past
 warning: fired 185 times in 4 days, followed by an actual ParseFile check only 12% of the
-time (control 7%). The owner's law: a rule that must always hold is a spec for MACHINERY,
+time (control 7%). The the author's law: a rule that must always hold is a spec for MACHINERY,
 not a promise to be careful - so this hook runs the parse itself after every Edit/Write
 that touches a .ps1/.psm1 file and injects a LOUD context line only when the file fails
 to parse or carries non-ASCII in a string-literal-bearing file (the exact 07-08 scar that
@@ -40,11 +40,6 @@ def _check(path):
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         raw = sys.stdin.read()
         data = json.loads(raw) if raw.strip() else {}

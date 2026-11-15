@@ -25,17 +25,10 @@ Read-only unless it decides to rebuild. Exit 0 either way - a skip is a success.
 """
 import glob, gzip, io, json, os, subprocess, sys, time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 INDEX = os.path.join(HERE, "bm25_index.json.gz")
 BUILDER = os.path.join(HERE, "bm25.py")
-MEMDIR = os.path.expanduser("~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEMDIR = os.path.expanduser("~/.claude/projects/" + os.environ.get("BRAIN_SLUG", "default") + "/memory")
 LOG = os.path.join(HERE, "bm25_refresh.log")
 
 MAX_AGE_HOURS = 4.0     # the launcher fires every 3h; 4h means "a cycle was actually missed"
@@ -52,6 +45,30 @@ def say(msg):
         pass
 
 
+def _indexed_slugs():
+    """The slugs the live index holds, read from its postings sidecar (table d, one row per document) when the
+    sidecar matches the live generation; None otherwise, and the caller parses the index as before.
+    WHY (7 Nov 2026, an agent, TOP10 rank 3): parsing the 55 MB gzip json just to read its keys took the
+    run started 17:51 more than 34 minutes on the loaded laptop (py-spy: json raw_decode, stranded() line 60),
+    and stranded() runs twice a run. The sidecar answers the same set in well under a second.
+    BM25_STALE_SIDECAR=0 restores the json parse."""
+    if os.environ.get("BM25_STALE_SIDECAR", "1") == "0":
+        return None
+    try:
+        import bm25
+        c = bm25._postings_conn(INDEX)
+        if c is None:
+            return None
+        con = c[0]
+        try:
+            slugs = set(r[0] for r in con.execute("select slug from d"))
+        finally:
+            con.close()
+        return slugs if len(slugs) == int(c[1]) else None
+    except Exception:
+        return None
+
+
 def stranded():
     """(indexed, eligible, stranded) or None when it cannot be determined."""
     try:
@@ -60,12 +77,14 @@ def stranded():
         # Read the bytes and let go of the index before parsing them. Parsing as it streams from the open file
         # held the index 9-13 s on this laptop under load (13 Oct 2026), and on Windows no publish can replace it
         # while anyone holds it.
-        with open(INDEX, "rb") as fh:
-            blob = fh.read()
-        with gzip.GzipFile(fileobj=io.BytesIO(blob), mode="rb") as gz:
-            with io.TextIOWrapper(gz, encoding="utf-8") as f:
-                dl = json.load(f).get("dl") or {}
-        del blob
+        dl = _indexed_slugs()
+        if dl is None:
+            with open(INDEX, "rb") as fh:
+                blob = fh.read()
+            with gzip.GzipFile(fileobj=io.BytesIO(blob), mode="rb") as gz:
+                with io.TextIOWrapper(gz, encoding="utf-8") as f:
+                    dl = json.load(f).get("dl") or {}
+            del blob
         eligible = [s for s in (os.path.basename(p)[:-3] for p in glob.glob(os.path.join(MEMDIR, "*.md")))
                     if s not in SKIP_FILES and not s.startswith("dream_")]
         if not eligible:
@@ -106,6 +125,19 @@ def main():
         say("DRY RUN: would rebuild now; no bytes touched")
         return 0
 
+    # REFRESH FIRST (4 Nov 2026, an agent). The missing memories are almost always ones changed since the index
+    # was read (42 of 42 on 4 Nov 08:4x), and refresh() merges up to 5000 of them in a few minutes where build() re-reads
+    # all 51k (506 s for the read alone) and moves the generation for every reader. Build only if refresh did not close it.
+    if os.path.exists(INDEX) and os.environ.get("BM25_STALE_REFRESH_FIRST", "1") != "0":
+        p = subprocess.run([sys.executable, BUILDER, "refresh"], capture_output=True, timeout=1800)
+        out = (p.stdout or b"").decode("utf-8", errors="replace").strip()
+        say("refresh first, exit %s: %s" % (p.returncode, out[-300:] or "(no output)"))
+        age_h = (time.time() - os.path.getmtime(INDEX)) / 3600.0
+        cov = stranded()
+        if cov is not None and age_h <= MAX_AGE_HOURS and cov[2] <= STRANDED_LIMIT:
+            say("refresh closed it: index age %.2fh, %d stranded (%d/%d eligible) - no build"
+                % (age_h, cov[2], cov[0], cov[1]))
+            return 0
     p = subprocess.run([sys.executable, BUILDER, "build"], capture_output=True, timeout=1800)
     out = (p.stdout or b"").decode("utf-8", errors="replace").strip()
     err = (p.stderr or b"").decode("utf-8", errors="replace").strip()

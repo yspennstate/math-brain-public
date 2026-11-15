@@ -2,12 +2,6 @@
 
     python test_hookcall.py      (about 10 s; prints PASS / FAIL per control and ALL PASS at the end)
 """
-
-import sys
-if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:]):
-    print(__doc__ or "No command-line options.")
-    raise SystemExit(0)
-
 import os
 import sys
 import tempfile
@@ -74,7 +68,4 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     sys.exit(main())

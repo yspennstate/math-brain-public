@@ -1,16 +1,18 @@
 """frontier_digest.py - what the math brain holds on the open problem a research session is working, delivered to it.
 
-Why: the math hook fires on the user's prompts only, so in one measurement a session working the quadratic-form
-problem received 4 math cards in 28 hours and a session on FEI 1 in 21, while other agents added dozens of results on
-the same problems to the store. This module gives a session on a program the program's frontier once, then, hourly,
-only what was added since.
+Why (measured 2026-09-24, memory the_math_brain_barely_reaches_the_research_agents_2026_09_24): the math hook fires on
+his prompts only, so the quadratic-form session received 4 math cards in 28 hours and the FEI session 1 in 21, while
+other agents added dozens of results on the same problems to the store. This module gives a session on a program the
+program's frontier once, then, hourly, only what was added since.
 
-Version 2. A test run built on a rank-three "theorem" that an agent had typed the evening before and that was found
-false the next afternoon; the first version showed it exactly like Rogozin's published theorem. Three changes:
+Version 2 (24 Sep, after T16; the T16 file is frontier_digest.py.bak_t16). T16's QFORM arms built on a rank-three
+"theorem" that an agent had typed the evening before and that was found false the next afternoon; the digest showed it
+exactly like Rogozin's published theorem. Three changes:
   - every item says where it comes from: "literature YEAR" (the card carries a citation or a literature/arXiv source),
-    "textbook" (an encyclopedia source), "our paper", or "house, unrefereed" with "proof on file" or "no proof on file";
+    "textbook" (an encyclopedia source), "his paper", or "house, unrefereed" with "proof on file" or "no proof on file";
   - supersession is read from the store's SUPERSEDES edges as well as node metadata, as of the digest's moment (the store
-    records corrections as edges, and the first version kept showing a withdrawn card after its edge was written);
+    records corrections as edges: the false rank-three card was withdrawn by an edge at 09-23 14:58 local time, and the
+    first version kept showing it after that);
   - a short section after the results lists what was withdrawn as wrong (with the correction's own reason) and
     refutations, then the cards that record a failed route or a refuted citation ("Failed route ...", "REFUTED CITATION
     ... active scar", "Known false ...") - the routes a session should not walk again. A claim filed from a memory is an
@@ -29,11 +31,10 @@ import sqlite3
 import sys
 import time
 
-STORE = os.environ.get("MATHBRAIN_STORE", os.path.join(os.path.expanduser("~"), "math-brain-build", "local",
-                                                       "population", "brain.sqlite3"))
+STORE = os.environ.get("MATHBRAIN_STORE", r"~\math-brain-build\local\population\brain.sqlite3")
 NOTE = "python ~/.claude/dreaming/math_note.py"
 
-# A program: how a session's prompts name it, and how its claims name it. Add a program here when one opens.
+# A program: how a session's prompts name it, and how its claims name it. Add a program here when he opens one.
 PROGRAMS = {
     "FEI": {"title": "the Fourier entropy-influence conjecture (FEI)",
             "session": re.compile(r"\bFEI\b|entropy[- ]influence", re.I),
@@ -97,7 +98,7 @@ def provenance(meta, refs, title, body):
     if any(r.startswith(TEXTBOOK_PREFIXES) for r in refs):
         return "textbook"
     if any(r.startswith(OWNER_PREFIXES) for r in refs):
-        return "our paper"
+        return "his paper"
     proof = bool(str(meta.get("proof_text") or "").strip()) or bool(re.search(r"\bProof\b[.:]", body or ""))
     return "house, unrefereed" + (", proof on file" if proof else ", no proof")
 
@@ -232,7 +233,7 @@ def first_line(c, n=LINE_CHARS):
 
 
 def local_stamp(utc_iso):
-    """'MM-DD HH:MM' in local time for a UTC store stamp (the store writes UTC; the reader's screen is local time)."""
+    """'MM-DD HH:MM' on local time for a UTC store stamp (the store writes UTC; his screen is local time)."""
     try:
         import calendar
         t = calendar.timegm(time.strptime(utc_iso[:19], "%Y-%m-%dT%H:%M:%S"))

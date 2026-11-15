@@ -14,7 +14,7 @@ than WINDOW_MIN. It takes no mesh claim, never blocks, and on any error says not
 only, never deleted (owner law 2026-09-26).
 
 Reading the ledger, deciding and appending this edit's line are one transaction under a short lock on LEDGER + ".lock"
-(28 Sep: two sessions editing one file at the
+(28 Sep, scheduled audit account03/B15, B15-R41-READ-BEFORE-APPEND-TOCTOU-20260928: two sessions editing one file at the
 same moment both read the ledger before either appended, and neither was told). The lock is held for the few
 milliseconds of that transaction, never through the edit; if it cannot be had within LOCK_WAIT_S the hook goes ahead
 without it rather than hold up the edit.
@@ -23,11 +23,6 @@ without it rather than hold up the edit.
 Env for tests: SHARED_EDIT_LEDGER (another ledger file), SHARED_EDIT_NOW (epoch seconds), SHARED_EDIT_TEST_PAUSE
 (seconds to wait between the decision and the append, to widen the window a race needs).
 """
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import hashlib
 import io
 import json
@@ -50,11 +45,11 @@ WINDOW_MIN = 30
 TAIL_BYTES = 262144                      # a week of shared edits is about 450 KB; the last half hour sits in the tail
 TOOLS = {"Edit", "Write", "MultiEdit", "NotebookEdit"}
 ROOTS = [os.path.normcase(os.path.abspath(r)) for r in (
-    os.path.join(HOME, "brain-repo"),
+    r"~\brain-repo",
     os.path.join(HOME, ".claude", "dreaming"),
     os.path.join(HOME, ".claude", "brain_graph"),
-    os.path.join(HOME, ".claude", "projects", (os.environ.get("BRAIN_SLUG") or HOME.replace(":", "-").replace(chr(92), "-").replace("/", "-")), "memory"),
-    os.path.join(HOME, "math-store-build"))]
+    os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory"),
+    r"~\math-brain-build")]
 
 
 def shared(path):
@@ -85,7 +80,7 @@ def tail_lines(path):
 
 def session_key(session_id):
     """The identity two ledger rows are compared on: a hash of the whole session id. Until 28 Sep the hook kept and
-    compared only its first 8 characters, so two sessions sharing
+    compared only its first 8 characters (account01/B19 auto11 and account03/B19 r61, R41), so two sessions sharing
     them were one session to it. No two of 1,088 Claude session ids share them, but Codex ids are time-ordered and
     share them for sessions started within about a minute. The 8 characters stay in the row for display."""
     return hashlib.sha256(str(session_id).encode("utf-8", "replace")).hexdigest()[:16]
@@ -199,7 +194,7 @@ def selftest():
     import tempfile
     d = tempfile.mkdtemp()
     led = os.path.join(d, "ledger.jsonl")
-    mem = os.path.join(HOME, ".claude", "projects", (os.environ.get("BRAIN_SLUG") or HOME.replace(":", "-").replace(chr(92), "-").replace("/", "-")), "memory", "x_selftest_2026_09_28.md")
+    mem = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory", "x_selftest_2026_09_28.md")
     outside = os.path.join(d, "not_shared.md")
     other_mem = mem.replace("x_selftest_", "z_selftest_")
     t0 = 1_800_000_000.0
@@ -211,7 +206,7 @@ def selftest():
         r = subprocess.run([sys.executable, hook or os.path.abspath(__file__)],
                            input=json.dumps({"tool_name": tool, "session_id": full or (sid + "0000-aaaa"),
                                              "tool_input": {"file_path": path}}),
-                           capture_output=True, text=True, env=env, creationflags=(0x08000000 if os.name == "nt" else 0))
+                           capture_output=True, text=True, env=env, creationflags=0x08000000)
         return r.stdout.strip()
 
     ok.append(("first edit, nobody else: silent", run("aaaaaaaa", mem, t0) == ""))
@@ -223,7 +218,7 @@ def selftest():
     ok.append(("a Read is ignored", run("eeeeeeee", mem, t0 + 7610, tool="Read") == ""))
     lines = io.open(led, encoding="utf-8").read().splitlines()
     ok.append(("ledger: five shared edits recorded, the outside path and the Read not", len(lines) == 5))
-    # two sessions whose ids share their first 8 characters: one session
+    # two sessions whose ids share their first 8 characters (account01/B19 auto11, account03/B19 r61; R41): one session
     # to the hook before 28 Sep, two now. Codex ids are time-ordered and look like these for sessions a minute apart.
     a_full, b_full = "01a0c3c2-1111-7aaa-8aaa-000000000001", "01a0c3c2-2222-7bbb-8bbb-000000000002"
     src = io.open(os.path.abspath(__file__), encoding="utf-8").read()
@@ -255,7 +250,7 @@ def selftest():
                "[collision]" in run("", mem, t0 + 300, full=a_full, ledger=lled)))
     ok.append(("a legacy row (no key) with this session's 8 characters stays silent",
                run("", other_mem, t0 + 300, full=a_full, ledger=lled) == ""))
-    # the race: two sessions start an edit of one file at the same moment. A pause between
+    # the race account03/B15 found (R41): two sessions start an edit of one file at the same moment. A pause between
     # the decision and the append widens the window; under the lock the second waits and is told.
     ok.extend(race_checks(os.path.abspath(__file__), d, mem))
     # the same race with the lock taken out: the check must be able to fail (both read before either appends)
@@ -285,7 +280,7 @@ def race_checks(hook, d, mem, expect_fixed=True):
         for sid, path in ((sid_a, path_a), (sid_b, path_b)):
             env = dict(os.environ, SHARED_EDIT_LEDGER=led, SHARED_EDIT_NOW=str(t0), SHARED_EDIT_TEST_PAUSE="0.4")
             procs.append(subprocess.Popen([sys.executable, hook], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                          stderr=subprocess.PIPE, text=True, env=env, creationflags=(0x08000000 if os.name == "nt" else 0)))
+                                          stderr=subprocess.PIPE, text=True, env=env, creationflags=0x08000000))
         for pr, (sid, path) in zip(procs, ((sid_a, path_a), (sid_b, path_b))):
             pr.stdin.write(json.dumps({"tool_name": "Edit", "session_id": sid + "0000-aaaa",
                                        "tool_input": {"file_path": path}}))

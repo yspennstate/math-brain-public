@@ -1,21 +1,16 @@
 # -*- coding: utf-8 -*-
 """Stop hook: the first time a session tries to stop after a compaction, send it back to its open work.
 
-Design goal (16 Oct 2026): after a compaction an agent keeps working on its open tasks. Seen the same
+Owner, 16 Oct 2026 02:13: "please make sure that after agents compact they get a hook to keep working". Seen the same
 night: after a compaction an agent writes a recap of where it stands and ends the turn, although its tasks are still open
-and nothing is waiting on the user. The SessionStart notes (CP17, CP39, CP40) only
+and nothing is waiting on him (an agent did exactly that at 02:11). The SessionStart notes (CP17, CP39, CP40) only
 add context; they cannot make the agent take another turn. A Stop hook that answers {"decision": "block"} can.
 
 Rules: once per compaction (keyed by the compact_boundary record's uuid), never while stop_hook_active (no loops), only
 when the compaction is in the transcript's last 3 MB and under 6 hours old, and only when the checklist holds open or
 working entries under this session's agent id. The reason tells the agent it may stop with one line when everything is
-done or waiting on the user or a running job, so a finished agent pays one short turn, nothing more. Silent on any error.
+done or waiting on him or a running job, so a finished agent pays one short turn, nothing more. Silent on any error.
 Fires are logged to ~/.claude/brain_graph/compactions/keep_working_fires.jsonl."""
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import io
 import json
 import os
@@ -31,7 +26,7 @@ except Exception:
 HOME = os.path.expanduser("~")
 STATE_DIR = os.path.join(HOME, ".claude", "compact_hooks", "keep_working")
 FIRES = os.path.join(HOME, ".claude", "brain_graph", "compactions", "keep_working_fires.jsonl")
-CHECKLIST = os.path.join(os.environ.get("TASK_CHECKLIST_HOME") or os.path.join(HOME, "brain-repo", "12_cognitive_architecture", "task_checklist"), "state.json")
+CHECKLIST = os.path.join(HOME, "brain-repo", "12_cognitive_architecture", "task_checklist", "state.json")
 TAIL = 3 * 1024 * 1024
 MAX_AGE_S = 6 * 3600
 OPEN = ("open", "working")

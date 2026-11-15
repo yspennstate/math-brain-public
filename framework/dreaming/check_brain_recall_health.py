@@ -15,36 +15,11 @@ nightly job. Prints what to do about each failure rather than only that it faile
 """
 import io
 import json
-import re
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
-
-
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
 
 if any(a in ("-h", "--help") for a in sys.argv[1:]):
     # Discovery is not execution: this file works at module scope, so the guard
@@ -53,13 +28,12 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     raise SystemExit(0)
 
 DR = os.path.dirname(os.path.abspath(__file__))
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
-MEM = os.environ.get("BRAIN_MEM_DIR") or os.path.join(os.path.expanduser("~"), ".claude", "projects",
-                                                     _BRAIN_SLUG, "memory")
+# Same slug rule as spread_recall.MEM, so the check reads this machine's memory
+# folder ({{BRAIN_SLUG}} on the laptop, -Users-<name> on the Mac).
+MEM = os.environ.get("BRAIN_MEM_DIR") or os.path.join(
+    os.path.expanduser("~"), ".claude", "projects",
+    os.environ.get("BRAIN_SLUG") or os.path.expanduser("~").replace(":", "-").replace(chr(92), "-").replace("/", "-"),
+    "memory")
 
 problems = []
 
@@ -79,7 +53,7 @@ try:
     # and the embedding refresh runs every three hours, so between refreshes there are always a few
     # just-written memories without one: this arm printed DEGRADED on 2 missing of 16,010 with a
     # two-hour-old sidecar, which is the system working exactly as designed. A gate that is yellow by
-    # construction trains every reader to ignore it (the owner's 2026-09-02 order: fire less, be more
+    # construction trains every reader to ignore it (the author's 2026-09-02 order: fire less, be more
     # confident when you fire). The lexical arm below already solved its own version of this by
     # self-healing first. So: count the memories written SINCE the sidecar was built - those cannot
     # possibly be embedded yet - and treat the arm as healthy when every missing vector is one of them,
@@ -109,9 +83,9 @@ try:
             f"SEMANTIC DEGRADED - {missing} memories have no vector and the "
             f"sidecar is {age_h:.0f}h old. Recent nodes are reachable by "
             f"keyword and graph but NOT by paraphrase.\n"
-            f"    Fix: rebuild the sidecar with build_memory_embeddings.py on a machine "
-            f"where the model fits in memory, then publish it with "
-            f"publish_memory_embeddings.py.\n"
+            f"    Fix belongs ON THE AZURE BOX (build_memory_embeddings.py: "
+            f"the model 'belongs on the Azure box, not on the crash-prone "
+            f"laptop'), published via publish_memory_embeddings.py.\n"
             f"    Laptop-safe check only: build_memory_embeddings.py --plan-only")
 except Exception as exc:
     problems.append(f"SEMANTIC UNREADABLE - {status_path}: {exc}")

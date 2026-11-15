@@ -27,8 +27,8 @@ def _log_fetch(source_id, outcome=None):
     eval_ownvoice), to label its run, and inside a session's shell that label must not become the session's.
 
     A fourth column, since 30 Sep, is the read's outcome: ok, or failed:<exit code>. The row used to be written before
-    the note was read, so a refused read (an invalid id, a missing note, a digest mismatch) was logged like a full one;
-    math_use.py counts only ok rows and the
+    the note was read, so a refused read (an invalid id, a missing note, a digest mismatch) was logged like a full one
+    (account04/B19, B19-R79-MATH-NOTE-LOGS-FAILED-FETCH-AS-READ-20260929); math_use.py counts only ok rows and the
     three-column rows before it, whose outcome is unknown.
     """
     try:
@@ -49,13 +49,7 @@ def main(argv=None):
     parser.add_argument('source_id')
     args = parser.parse_args(argv)
     home = Path.home()
-    src = home / 'math-brain-build/src'
-    if not src.is_dir():
-        # an installed brain keeps the package next to this folder, in ../mathbrain/src
-        beside = Path(__file__).resolve().parent.parent / 'mathbrain' / 'src'
-        if beside.is_dir():
-            src = beside
-    sys.path.insert(0, str(src))
+    sys.path.insert(0, str(home / 'math-brain-build/src'))
     try:
         from math_brain.current_note import main as read_note
         rc = read_note(['--database', str(home / 'math-brain-build/local/population/brain.sqlite3'),

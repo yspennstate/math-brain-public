@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """eval_type_utility.py - do the dream's REFLECTIVE memories earn their keep, per type, with CIs?
 
-The owner's standing question is "smarter or just bigger" - does the brain improve, or only accumulate.
+The the author's standing question is "smarter or just bigger" - does the brain improve, or only accumulate.
 The 2026 reflective-memory benchmarks (Connecting the Dots) draw the right distinction: inference-level
 memories (gists, daydreams/hunches, methods, scars) are a different KIND from verbatim episodic records,
 and the test is whether they get REUSED, not whether they exist. This measures, per memory type, the
@@ -19,7 +19,7 @@ import os, io, re, time, math
 from collections import defaultdict
 
 DR = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
 TRACE = os.path.join(DR, "retrievals.tsv")
 TRACE_START = "2026-06-25"   # the trace-coverage era; memories older than this predate observation
 

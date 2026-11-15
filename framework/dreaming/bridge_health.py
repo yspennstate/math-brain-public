@@ -20,7 +20,7 @@ except Exception:
 
 HOME = os.path.expanduser("~")
 DR = os.path.join(HOME, ".claude", "dreaming")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 EDGES = os.path.join(DR, "spread_edges.tsv")
 SUPERSEDED = os.path.join(DR, "superseded.tsv")
 NOISE = re.compile(r"(build_watchdog|inspector_w\d+.*(quiet|clean)|_quiet_20)", re.I)

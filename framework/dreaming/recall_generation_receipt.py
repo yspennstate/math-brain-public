@@ -22,13 +22,6 @@ Exit 0 = receipt written; 1 = generation moved during the run, nothing published
 """
 import hashlib, io, json, os, subprocess, sys, time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 INDEX = os.path.join(HERE, "bm25_index.json.gz")
 SUITE = os.path.join(HERE, "recall_policy_regression.py")
@@ -45,7 +38,7 @@ POLICY = os.path.join(HERE, "recall_policy.json")
 # never actually loads.
 _HOME = os.path.expanduser("~")
 _BRAINVIEWS = os.path.join(_HOME, "brain-repo", "01_ai_consciousness", "brain")
-_MEMDIR = os.path.join(_HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+_MEMDIR = os.path.join(_HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 
 ARTIFACTS = {
     "index": INDEX,

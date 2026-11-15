@@ -37,13 +37,6 @@ import json
 import os
 import sys
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bm25  # noqa: E402
 

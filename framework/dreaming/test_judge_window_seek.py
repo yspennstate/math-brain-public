@@ -1,4 +1,5 @@
-"""The judge's agenda builder reads per-case windows through a byte seek and builds the same cases (28 Sep 2026).
+"""The judge's agenda builder reads per-case windows through a byte seek and builds the same cases (28 Sep 2026,
+an agent).
 
 Before: the builder took 178 s against the dream's 120 s budget, so the judge section (J) was skipped every night since
 27 Sep. Each case uses the record within 3 s of its fire and up to 20 min after it; the builders now scan exactly that,
@@ -12,18 +13,9 @@ starting from a binary search over the transcript's bytes.
     frozen copy of today's fire and suppression logs with the clock pinned
  S1 the new builder is inside the dream's 120 s budget with room to spare (under 60 s here)
 With --old OLD.py the old builder is run for E1 (it takes about three minutes on a busy day); without it E1 is skipped.
-S1 and E1 read the fire log of a running brain (instinct_fires.tsv beside this file); on a fresh clone, which has
-none, they are skipped and T1-T2 still run. The cases come from the transcripts of the project the fires were in: set
-BRAIN_PROJECT_SLUG (or BRAIN_PROJECT_DIR) to it, or S1 finds 0 cases.
 
-    python test_judge_window_seek.py [--old OLD_fire_judge_nightly.py]
+    python test_judge_window_seek.py [--old fire_judge_nightly.py.bak_seek_20260928]
 """
-
-import sys
-if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:]):
-    print(__doc__ or "No command-line options.")
-    raise SystemExit(0)
-
 import importlib.machinery
 import importlib.util
 import io
@@ -118,24 +110,11 @@ def seek_tests(fj):
     shutil.rmtree(d)
 
 
-LOGS = ("instinct_fires.tsv", "instinct_suppressed.tsv", "instincts.tsv")
-
-
-def log_source():
-    """This folder when it holds the fire log (an installed brain), else the installed dreaming folder: a framework
-    checkout carries no logs, and S1 there timed 0 cases (5 Nov 2026). None when neither has one."""
-    for src in (HERE, os.path.join(os.path.expanduser("~"), ".claude", "dreaming")):
-        if os.path.exists(os.path.join(src, LOGS[0])):
-            return src
-    return None
-
-
 def frozen_dir():
     d = tempfile.mkdtemp(prefix="judge_eq_")
-    src = log_source()
-    for n in LOGS:
-        if src and os.path.exists(os.path.join(src, n)):
-            shutil.copy2(os.path.join(src, n), os.path.join(d, n))
+    for n in ("instinct_fires.tsv", "instinct_suppressed.tsv", "instincts.tsv"):
+        if os.path.exists(os.path.join(HERE, n)):
+            shutil.copy2(os.path.join(HERE, n), os.path.join(d, n))
     return d
 
 
@@ -158,19 +137,12 @@ def build(m, d, t, seed):
 def main():
     new = load(os.path.join(HERE, "fire_judge_nightly.py"), "fj_new")
     seek_tests(new)
-    if not os.path.exists(os.path.join(HERE, "instinct_fires.tsv")):
-        print("SKIP  S1/E1 no fire log beside this file (a fresh clone); they need a brain that has fired")
-        print("FAIL" if fails else "PASS", "- %d controls, %d failed" % (len(ran), len(fails)))
-        sys.exit(1 if fails else 0)
     d = frozen_dir()
     t, seed = time.time(), 20260928
     try:
         new_cases, new_dt = build(new, d, t, seed)
         n_new = sum(len(v) for v in new_cases.values())
-        if log_source() is None:
-            print("SKIP  S1 no instinct_fires.tsv here or in the installed dreaming folder, so nothing to time")
-        else:
-            check(new_dt < 60 and n_new > 0, "S1 the new builder: %.1f s for %d cases (budget 120 s)" % (new_dt, n_new))
+        check(new_dt < 60 and n_new > 0, "S1 the new builder: %.1f s for %d cases (budget 120 s)" % (new_dt, n_new))
         if "--old" in sys.argv:
             old = load(os.path.join(HERE, sys.argv[sys.argv.index("--old") + 1]), "fj_old")
             old_cases, old_dt = build(old, d, t, seed)
@@ -185,7 +157,4 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     main()

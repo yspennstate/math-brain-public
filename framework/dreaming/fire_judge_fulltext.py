@@ -17,7 +17,7 @@ Read-only. Usage: python fire_judge_fulltext.py sim_flatters [--days 7] [--max 4
 import calendar, glob, io, json, os, re, sys, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 MATCH_CAP = 32768   # lockstep with instinct_prime.MATCH_CAP
 
 

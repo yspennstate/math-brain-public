@@ -20,12 +20,13 @@ Read-only: opens the store, writes one JSONL of per-item results and prints a su
 """
 import sys, os, io, json, re, time, collections, statistics, argparse
 
-# The math package and its store; set MATH_BRAIN_SRC / MATH_BRAIN_STORE when they live elsewhere.
-sys.path.insert(0, os.environ.get("MATH_BRAIN_SRC") or os.path.expanduser("~/math-brain-build/src"))
+sys.path.insert(0, "~/math-brain-build/src")
 from math_brain.retrieval import retrieve
 from math_brain.store import ResearchStore
+sys.path.insert(0, os.path.expanduser("~/.claude/brain_graph/bin"))
+from quarantine_rows import keep_old  # a rerun keeps the previous run's rows (R13 trap 1, 27 Sep): brain data is never deleted, and an overwrite deletes
 
-STORE = os.environ.get("MATH_BRAIN_STORE") or os.path.expanduser("~/math-brain-build/local/population/brain.sqlite3")
+STORE = "~/math-brain-build/local/population/brain.sqlite3"
 OUT = os.path.expanduser("~/.claude/dreaming/state/math_selfretrieval.jsonl")
 
 
@@ -80,7 +81,7 @@ def main():
     print()
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    fh = io.open(OUT, "w", encoding="utf-8", newline="\n")
+    fh = io.open(keep_old(OUT), "w", encoding="utf-8", newline="\n")
     res = {"text": [], "title": []}
     res_dup = {"text": [], "title": []}
     thieves = collections.Counter()

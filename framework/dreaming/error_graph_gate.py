@@ -1,10 +1,10 @@
-"""Run the error graph's hook only while error_graph_runtime/ENABLED exists.
+"""Run the error graph's hook only while error_graph_runtime/ENABLED exists (2026-09-24).
 
 Codex on Windows runs each hook's commandWindows line from ~/.codex/hooks.json, and its four error-graph lines call this
 file in place of error_graph/hook.py. With the flag absent it exits 0 at once and reads nothing, so an event costs one
 interpreter start instead of the engine import and its per-session SQLite writes. With the flag present it runs
 error_graph/hook.py exactly as before, with the same arguments and the same stdin. The Claude side honours the same
-file through the dispatcher's enabled_if key, so one flag turns the graph on or off for both runtimes.
+file through the dispatcher's enabled_if key; why the graph is off: error_graph_runtime/ERROR_GRAPH_OFF_20260924.md.
 """
 import os
 import runpy

@@ -149,7 +149,7 @@ def main():
         print("  %-22s [%s]" % (f, where))
         print("       %s" % summ[:150])
 
-    print("\nON-DEMAND  (a session or the owner runs these - the diagnostics + observers):")
+    print("\nON-DEMAND  (a session or the author runs these - the diagnostics + observers):")
     for f, summ in tools:
         print("  %-22s %s" % (f, summ[:130]))
     print()

@@ -19,10 +19,6 @@ Files, in the cache folder (MATH_RECALL_CACHE_DIR or ~/.claude/dreaming/cache/ma
     prebuild_state.json   the last good signature and the last run (rewritten every run)
     prebuild.log          one line per run that opened the state or failed; quiet runs add nothing
 """
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import hashlib
 import importlib.util
 import json
@@ -193,7 +189,8 @@ def write_back(fr, P, st, t_read, current=None):
     WRITE_AGE_S old is rewritten: the write is 460 MB (about 20 s on this disk)."""
     try:
         age = time.time() - float(P.s.get("read_at") or 0)
-        if not st.get("extended") or age < WRITE_AGE_S or not st.get("path"):
+        # extended_links: a run that added only links between known cards (fastrecall_delta._read_links, 4 Nov)
+        if not (st.get("extended") or st.get("extended_links")) or age < WRITE_AGE_S or not st.get("path"):
             return " (not written, base %d s old)" % age
         if current is not None:
             now = current()
@@ -246,7 +243,7 @@ def main(argv):
     trimmed = trim_sidecar_wal(store)
     if trimmed:
         log(folder, "%s %s" % (stamp(), trimmed))
-    sig = hashlib.sha256(("%s|%s|%s|%s|%s" % (
+    sig =hashlib.sha256(("%s|%s|%s|%s|%s" % (
         sys.version, fr._code_key(R, mr.__file__, mr.derive_tool), fr._env_key(),
         os.path.normcase(os.path.abspath(store)), fr._store_key(store))).encode("utf-8")).hexdigest()[:24]
     state["last_check"] = stamp()
@@ -274,7 +271,7 @@ def main(argv):
             sys.version, fr._code_key(R, mr.__file__, mr.derive_tool), fr._env_key(),
             os.path.normcase(os.path.abspath(store)), fr._store_key(store))).encode("utf-8")).hexdigest()[:24]
         result = ("built" if st.get("built") else "loaded") + (", %d s behind the store" % st["stale_s"] if st.get("stale_s") else "")
-        # Say whether the in-memory extend ran or why it was refused, so a full build is never unexplained
+        # lead 3: say whether the in-memory extend ran or why it was refused, so a full build is never unexplained
         if st.get("extended") is not None:
             result += ", extended by %s card(s) in %s s" % (st["extended"], st.get("extend_s")) + write_back(
                 fr, P, st, t1, current=lambda: name_now(fr, R, mr, store))

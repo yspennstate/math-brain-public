@@ -5,8 +5,8 @@ MEASURED 2026-08-09: the memory corpus carries 227 distinct dangling link target
 across 391 citations. They break down as
 
      60  date-suffix mismatch  - the memory EXISTS. A note writes
-                                 [[kettle_descaling_routine]] while the
-                                 file is kettle_descaling_routine_2026_01_01.md.
+                                 [[crash_payoff_is_path_dependent_not_speed]] while the
+                                 file is crash_payoff_is_path_dependent_not_speed_2026_08_09.md.
                                  Every one of the 60 resolves to exactly ONE file; zero
                                  are ambiguous.
      20  not links at all      - python/json syntax caught by the [[ ]] regex, e.g.
@@ -42,38 +42,8 @@ import os
 import re
 import sys
 
-
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
-
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
 MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects",
-                   _BRAIN_SLUG, "memory")
+                   os.environ.get("BRAIN_SLUG", "default"), "memory")
 LINK = re.compile(r"\[\[([^\]]+)\]\]")
 FENCE = re.compile(r"```.*?```", re.S)
 DATED = re.compile(r"_20\d\d_\d\d_\d\d$")

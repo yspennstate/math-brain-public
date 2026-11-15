@@ -1,6 +1,6 @@
 """hook_dispatch.py - run every hook of one event in ONE python process instead of one process per hook.
 
-WHY (measured 2026-09-15 on <hostname>): a Bash tool call fires 12 PreToolUse + 5 PostToolUse hooks, each a separate
+WHY (measured 2026-09-15 on MATH-ROSS20): a Bash tool call fires 12 PreToolUse + 5 PostToolUse hooks, each a separate
 python start. On a quiet box that set costs 4.7 s of CPU; under the day's real load the same set measured 70.8 s, with
 single hooks at 4-6 s. Nearly all of it is interpreter startup and re-importing the same modules (json, psutil, the brain
 libraries) seventeen times. One process imports them once.
@@ -29,7 +29,7 @@ timings only, one line per invocation).
 """
 import time
 _T_IMPORT = time.perf_counter()      # module start, before the imports below: the sampled profile's clock
-# THE IMPORT LINE IS PAID ON EVERY TOOL CALL (14 Oct 2026, front R31). Each PreToolUse and
+# THE IMPORT LINE IS PAID ON EVERY TOOL CALL (14 Oct 2026, an agent-r, front R31). Each PreToolUse and
 # PostToolUse starts this file in a new process, and this line used to import traceback, subprocess and shlex too.
 # Under Python 3.14 traceback alone brings in _colorize, dataclasses, inspect, dis, ast, annotationlib, tokenize, copy
 # and textwrap: 25 ms of every dispatch, measured in fresh processes over 15 alternated rounds (34 ms with subprocess
@@ -62,12 +62,12 @@ def _format_exc(path=None):
 
 # Once wired, settings.json holds only the dispatcher, so the real hook list lives here (written by hook_dispatch_wire.py,
 # and the same file --off restores from). Before wiring, this file does not exist and settings.json is the list.
-LIST = os.path.expanduser("~/.claude/dreaming/hook_dispatch_list.json")
-SETTINGS = os.path.expanduser("~/.claude/settings.json")
-ENABLED = os.path.expanduser("~/.claude/dreaming/HOOK_DISPATCH_ENABLED")
-LOG = os.path.expanduser("~/.claude/compute/hook_dispatch.log")
+LIST = r"~\.claude\dreaming\hook_dispatch_list.json"
+SETTINGS = r"~\.claude\settings.json"
+ENABLED = r"~\.claude\dreaming\HOOK_DISPATCH_ENABLED"
+LOG = os.environ.get("HOOK_DISPATCH_LOG") or r"~\.claude\compute\hook_dispatch.log"
 SELF = os.path.basename(__file__).lower()
-CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
+CREATE_NO_WINDOW = 0x08000000
 PER_HOOK_BUDGET_S = 120.0
 
 # THE BUDGET IS PER EVENT, BECAUSE THE EVENTS ARE NOT COMPARABLE (2026-09-18). One flat 120 s governed a
@@ -115,7 +115,7 @@ def budget_for(event):
 
 # Per-hook rows are written above this, even on success, so the event totals become attributable.
 # WHO WRITES THESE ROWS: every session on this machine shares this log, and on 2026-09-18 that was
-# eleven of them - the owner's interactive work and a number of agent loops, which do not have the
+# eleven of them - the author's interactive work and a number of agent loops, which do not have the
 # same hook mix or the same prompt shape. So SPLIT BY SESSION BEFORE QUOTING A RATE from these rows;
 # a pooled median here is the median of a population nobody uses. The same defect once made a silence
 # log read as "the math brain dies on the clock" when 243 of its 256 rows were the measurement
@@ -124,7 +124,7 @@ def budget_for(event):
 SLOW_HOOK_S = 1.0
 # Claude Code persists ONE hook command's context above this many chars to a file and shows the model a 2 KB
 # preview (its persist threshold, read out of the bundle 2026-09-20; 16.1/36.1/65.6 KB merged outputs all spilled).
-# The dispatcher is one command, so its MERGED output has to stay under it; the owner-prompts hook, whose block
+# The dispatcher is one command, so its MERGED output has to stay under it; the author-prompts hook, whose block
 # alone is that big, is wired as its own command in settings.json for its own ceiling.
 HARNESS_INLINE_MAX = 10000
 
@@ -133,14 +133,14 @@ HARNESS_INLINE_MAX = 10000
 # "python -S -B <file>"; run in-process (with site loaded and a different sys.path) the hot hook exits 1 and says
 # nothing where its own process returns context, and the prompt hook returns context where its own process is silent.
 # Never in-process without a fresh passing control: a hook that changes what it says is a changed brain, not a speedup.
-# 13 Oct 2026 (front R25): the hot hook's exit 1 was its first line, sys.stdin.buffer.read(), meeting
+# 13 Oct 2026 (an agent, front R25): the hot hook's exit 1 was its first line, sys.stdin.buffer.read(), meeting
 # the io.StringIO below, which has no .buffer - the AttributeError is raised outside its try. Given the bytes its own
 # process would have read (STDIN_BYTES_OK) it says exactly what its own process says: 331 payloads (320 real tool
 # calls from 30 sessions, 11 edge cases) gave the same rc and stdout and left the same state files, where this
 # file's StringIO gives rc 1 and silence; 116 ms a call saved, 204.6 -> 88.2 ms median (primary_directive/
 # improve_1012/fronts/R25/runs/control_hot_1.txt). It left this set for the allowlist on that control. The prompt
 # hook (a different difference) and the strong-node runner stay.
-FORCE_SUBPROCESS = {# project_memory_hook.py left on 3 Nov for STDIN_BYTES_OK (below): its difference was the stdin
+FORCE_SUBPROCESS = {"project_memory_hook.py",
                     # the strong-nodes runtime hook: caused the 2026-09-15 fleet-wide block. Passing its argv fixed
                     # the argparse exit 2, and it still returns rc 1 with a traceback in-process where its own
                     # process returns 0 silently. Belt and braces with the allowlist below - it fails the control,
@@ -151,13 +151,7 @@ FORCE_SUBPROCESS = {# project_memory_hook.py left on 3 Nov for STDIN_BYTES_OK (b
 # them: the same bytes run_subprocess would send, behind a text layer, so .buffer.read() and .read() both work. Every
 # other hook keeps the io.StringIO it has always had, byte for byte; hook_dispatch_extend.py's stdin probe relies on
 # that. A name joins this set only with its own control.
-STDIN_BYTES_OK = frozenset({"project_memory_hot_hook.py",
-                            # 3 Nov 2026: the prompt hook's 15 Sep difference was the same stdin. On APFS
-                            # clones of its store, 8 of 8 prompts gave the same rc, stdout and rows (only time-derived
-                            # ids differ); with the StringIO it printed a failed-closed note and wrote no row at all.
-                            # In its own process it logged 962 s of slow prompts on 3 Nov, 70 runs at 5 s or more, for
-                            # 0.1-0.4 s of work (measured 3 Nov 2026).
-                            "project_memory_hook.py"})
+STDIN_BYTES_OK = frozenset({"project_memory_hot_hook.py"})
 
 
 def _stdin_for(path, payload):
@@ -169,19 +163,19 @@ def _stdin_for(path, payload):
 # THE ALLOWLIST, and why it replaced a denylist.
 # A denylist asks me to remember every hook that misbehaves shared. On 2026-09-15 that memory failed twice in one
 # hour: the strong-nodes hook moved in-process when a peer improved the argv parsing, exited 2 on a missing argument,
-# and blocked every tool call in every session on the machine until the owner ran the rollback by hand. Passing its
+# and blocked every tool call in every session on the machine until the author ran the rollback by hand. Passing its
 # argv through fixed the argument error and it STILL fails in-process for a second reason.
 # So the default is now the old, safe path - a subprocess - and a hook earns the fast path only by being proven
 # equivalent. hook_dispatch_control.py writes this file after a passing run, listing the hooks whose in-process
 # output matched their own subprocess exactly. An unknown hook, a new hook, or a hook edited since the last control
 # run is simply not in the list, and runs the way it always did.
-ALLOW = os.path.expanduser("~/.claude/dreaming/hook_dispatch_allow.json")
+ALLOW = r"~\.claude\dreaming\hook_dispatch_allow.json"
 
 
 _ALLOW_STALE = [False]          # set by _allowlist(), read once per dispatch so the log says it ONCE
 
 
-# THE HOOK CODE CACHE (13 Oct 2026, front R24). runpy.run_path keeps no bytecode: for every in-process
+# THE HOOK CODE CACHE (13 Oct 2026, an agent, front R24). runpy.run_path keeps no bytecode: for every in-process
 # hook on every call it asked each sys.path hook for an importer (the zip importer opens the file and reads its tail),
 # read the file twice and compiled the whole source. Measured 13 Oct 20:15 under a dream's load: 166 ms of a Bash
 # PreToolUse across its 205 in-process hooks (191 of them film hooks) and 372 ms of a UserPromptSubmit, against 10 and
@@ -297,7 +291,8 @@ def _allowlist():
     in-process behaviour at all - a logging change on 09-17 and a subprocess-timeout change on 09-18,
     both of mine. [[editing_a_file_can_disable_an_optimisation_keyed_on_its_mtime_2026_09_17]]
     So it still empties, and now it SAYS so, once per dispatch, with both timestamps. Re-signing is
-    `python hook_dispatch_allowlist.py --resign` or simply touching the json AFTER reading the diff
+    done by hook_dispatch_land.py (the one way to land an edit to this file: it tests the copy, replaces,
+    re-signs in the same step and reads this log) or by touching the json AFTER reading the diff
     and satisfying yourself the change cannot alter what a hook does when run in-process.
     """
     try:
@@ -311,7 +306,19 @@ def _allowlist():
         return set()
 
 
+LOG_ROTATE_BYTES = 64 << 20
+
+
 def log(s):
+    # ROTATED AT 64 MB (13 Nov 2026, an agent): the log had grown to 415 MB since 15 Sep, about 5 MB a day.
+    # The full file is renamed to hook_dispatch.<stamp>.log and a new one starts; the readers seek to the end of this
+    # name, so they see only the newer part. A rename that fails (another writer has the file open) is tried at the
+    # next line. The renamed files are AI outputs: GitHub first, then delete, never deleted here.
+    try:
+        if os.path.getsize(LOG) > LOG_ROTATE_BYTES:
+            os.replace(LOG, LOG[:-4] + time.strftime(".%Y%m%dT%H%M%S.") + str(os.getpid()) + ".log")
+    except Exception:
+        pass
     try:
         with open(LOG, "a", encoding="utf-8") as f:
             f.write(time.strftime("%Y-%m-%d %H:%M:%S") + "  " + s + "\n")
@@ -470,7 +477,7 @@ def as_python_argv(cmd, args, allow_all=False, memo=None):
     `memo` is the dict dispatch() hands every entry of one dispatch: the list is read at the first entry that asks, as
     before, and that answer serves the rest of the dispatch, as the hook list itself is read once per dispatch. Until
     13 Oct every entry re-read the 13 KB json and stat'ed two files: 64 ms of every PreToolUse over its ~205 entries,
-    113-125 ms under a dream's load (primary_directive/improve_1012/fronts/R24/runs/
+    113-125 ms under a dream's load (an agent, primary_directive/improve_1012/fronts/R24/runs/
     measure_overhead_1.txt and probe_rest_1.txt). Without a memo every call reads the files, exactly as it did."""
     try:
         path, tail = script_argv(cmd, args)
@@ -506,7 +513,7 @@ def run_in_process(path, payload, argv_tail=()):
     argv_tail is the hook's OWN arguments. Dropping them caused a fleet-wide outage on 2026-09-15 18:5x: the
     strong-nodes hook is wired as `hook.py --hook-runtime claude --enabled <path>`, ran here with argv=[path],
     and argparse exits 2 on a missing required argument - 2 being the code that BLOCKS a tool call. Every tool
-    call in every session on the machine was refused until the owner ran the rollback by hand. A hook's argv is
+    call in every session on the machine was refused until the author ran the rollback by hand. A hook's argv is
     part of how it is wired; pass it or do not run it in-process.
     """
     saved_env = dict(os.environ)
@@ -541,7 +548,7 @@ def run_in_process(path, payload, argv_tail=()):
         sys.stdin, sys.stdout, sys.stderr = real_in, real_out, real_err
         sys.argv = saved_argv
         sys.path[:] = saved_path
-        # 7 Oct 2026: restore only when the hook changed it. A full restore is one Windows call per
+        # 7 Oct 2026 (an agent): restore only when the hook changed it. A full restore is one Windows call per
         # variable, 0.76 ms a hook, and with his 150 film hooks in-process that was 0.11 s of every tool call.
         if os.environ != saved_env:
             os.environ.clear(); os.environ.update(saved_env)
@@ -581,18 +588,19 @@ def run_subprocess(cmd, args, payload, budget=None):
         return 1, "", "hook_dispatch: %r" % (e,)
 
 
-# THE HOOKS THAT RUN AS THEIR OWN PROCESS NO LONGER WAIT IN LINE. The loop ran every hook one after another, so on
-# UserPromptSubmit the six hooks that spawn cost the sum of their walls - 16.5 s of a 54 s median loop in one day's
-# profile (129 dispatches) - while each mostly waits on its own interpreter start and disk. They are now all started at
-# the top of the loop, BEFORE any in-process hook can change the cwd or the environment (so each child gets exactly the
-# cwd and env it got before), fed and read on their own threads, and collected after the in-process hooks; their
-# results go back into the settings order, so merge() is unchanged. Off for one dispatch: HOOK_PARALLEL_SUBPROC=0.
+# THE HOOKS THAT RUN AS THEIR OWN PROCESS NO LONGER WAIT IN LINE (an agent, 1 Nov 2026). The loop ran every hook
+# one after another, so on UserPromptSubmit the six hooks that spawn (project_memory, waste_sense, fleet_inbox, voice,
+# owner_board, codex_profile) cost the sum of their walls - 16.5 s of a 54 s median loop on 1 Nov (hook_profile.jsonl,
+# 129 dispatches) - while each mostly waits on its own interpreter start and disk. They are now all started at the top
+# of the loop, BEFORE any in-process hook can change the cwd or the environment (so each child gets exactly the cwd and
+# env it got before), fed and read on their own threads, and collected after the in-process hooks; their results go
+# back into the settings order, so merge() is unchanged. Off for one dispatch: HOOK_PARALLEL_SUBPROC=0. Events: below.
 PARALLEL_SUBPROC_EVENTS = {"UserPromptSubmit", "Stop", "SessionStart"}
-PARALLEL_AB_FLAG = os.path.expanduser("~/.claude/compute/hook_parallel_ab.on")
+PARALLEL_AB_FLAG = r"~\.claude\compute\hook_parallel_ab.on"
 
 
 class _Spawned(object):
-    """One hook started at the top of the loop; result() waits for it and returns (rc, out, err, seconds)."""
+    """One hook started by spawn_subprocess; result() waits for it and returns (rc, out, err, seconds)."""
 
     def __init__(self, cmd, args, payload, budget):
         self.t0 = time.perf_counter()
@@ -610,8 +618,7 @@ class _Spawned(object):
             else:
                 self.p = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                           stderr=subprocess.PIPE, creationflags=CREATE_NO_WINDOW)
-            if getattr(self.p, "_handle", None):
-                _unthrottle(self.p._handle)
+            _unthrottle(getattr(self.p, "_handle", None)) if getattr(self.p, "_handle", None) else None
             self.th = threading.Thread(target=self._talk, args=(data,), daemon=True)
             self.th.start()
         except Exception as e:
@@ -659,7 +666,7 @@ RANK = {"allow": 0, "ask": 1, "deny": 2}
 # ones are cut to that share at a line boundary, the whole untrimmed text goes to a file named in the first line, and
 # the log says so (FIT). INLINE_CAP sits under the harness number because it counts UTF-16 units and we count code points.
 INLINE_CAP = 9800
-OVERFLOW_DIR = os.path.expanduser("~/.claude/compute/hook_overflow")
+OVERFLOW_DIR = r"~\.claude\compute\hook_overflow"
 OVERFLOW_KEEP_S = 48 * 3600
 _LAST_FIT = [None]        # (total_chars, n_hooks, n_cut, path) of the last merge that had to cut, for the dispatch log
 
@@ -743,14 +750,16 @@ def _overflow_write(event, session, items):
         return None
 
 
-# THE HOOKS THAT CARRY WHAT THE BRAIN KNOWS ABOUT THE WORK GET THREE SHARES (2026-09-24, from a brain-on/off study). With equal
+# THE HOOKS THAT CARRY WHAT THE BRAIN KNOWS ABOUT THE WORK GET THREE SHARES (2026-09-24, from the ab30 study). With equal
 # shares, a maths session's 10,000 characters went as much to the process census, the slow-machine probe and the task
 # board as to the math and proof cards: in the study's brain-on arms the hooks wrote 12-22 K characters on a proof, the
 # proof card was cut on every one of the nine proofs where it fired, and the checks it had picked for the argument never
-# reached the model once (replayed from the untrimmed overflow files). A hook named here gets FIT_WORK_WEIGHT
+# reached the model once (tools/fit_replay.py in campaign_2026-09-23_ab30_tokens). A hook named here gets FIT_WORK_WEIGHT
 # shares to every other hook's one; the order of the texts and the cut at a line boundary are as before.
+# fleet_inbox_hook.py added 10 Nov 2026 (an agent): it carries his NEW orders, and in a film session the two film
+# digests (11.8k) took the budget at three shares while the user's words were cut at one.
 FIT_WORK_HOOKS = frozenset({"math_sense.py", "proof_sense.py", "instinct_prime.py", "spread_recall.py", "fok_probe.py",
-                            "movie_alert_hook.py"})
+                            "movie_alert_hook.py", "fleet_inbox_hook.py"})
 FIT_WORK_WEIGHT = 3
 
 
@@ -793,67 +802,6 @@ def fit_contexts(items, cap, event, session):
     _LAST_FIT[0] = (len(joined), len(items), n_cut, path)
     out = head + "\n" + "\n".join(keep[i] for i in range(len(items)))
     return out[:cap]
-
-
-# 1000-ways #13 (2026-10-30): one "recently attended" store across the hooks. Measured by eval_hook_cofire.py on 30 h
-# of one machine's transcripts: 71.5% of all hook text was a block the session had been shown, numbers aside, within the last
-# 10 min - [prompt-contract] 91% repeats, [project-context] 97.5% - while the memory-naming hooks almost never repeat
-# (unconscious 0.8%, exact-name 0%) and never named one slug twice in an event. So only those two tags are folded: a
-# block whose number-blind text this session saw within DEDUP_WINDOW_S is dropped; it shows again once the window has
-# passed, and any change of substance is new text and shows at once. Tool and prompt events only; HOOK_DEDUP_OFF=1
-# turns it off.
-DEDUP_TAGS = ("prompt-contract", "project-context")
-DEDUP_WINDOW_S = 600
-DEDUP_EVENTS = ("PreToolUse", "PostToolUse", "UserPromptSubmit")
-DEDUP_DIR = os.path.expanduser("~/.claude/compute/hook_seen")
-
-
-def dedup_repeats(items, event, session, now=None):
-    """items: [(label, text)]. Returns them with the repeated DEDUP_TAGS blocks removed (an item left empty goes)."""
-    if event not in DEDUP_EVENTS or not session or os.environ.get("HOOK_DEDUP_OFF") == "1":
-        return items
-    if not any("[%s]" % t in text for _, text in items for t in DEDUP_TAGS):
-        return items
-    import hashlib, re
-    now = time.time() if now is None else now
-    path = os.path.join(DEDUP_DIR, (re.sub(r"[^0-9A-Za-z_-]", "", session) or "x")[:64] + ".json")
-    try:
-        with open(path) as f:
-            seen = {k: v for k, v in json.load(f).items() if now - v <= DEDUP_WINDOW_S}
-    except (OSError, ValueError, AttributeError):
-        seen = {}
-    tag_at = re.compile(r"^\[([a-z][a-z0-9_-]{1,30})\]", re.M)
-    out, changed = [], False
-    for label, text in items:
-        starts = [m.start() for m in tag_at.finditer(text)]
-        if not starts:
-            out.append((label, text))
-            continue
-        pieces = [text[:starts[0]]] + [text[a:b] for a, b in zip(starts, starts[1:] + [len(text)])]
-        kept = []
-        for p in pieces:
-            m = tag_at.match(p)
-            if m and m.group(1) in DEDUP_TAGS:
-                key = hashlib.md5(re.sub(r"\d+", "#", " ".join(p.split())).encode()).hexdigest()[:16]
-                if key in seen:
-                    changed = True
-                    continue
-                seen[key] = now
-                changed = True
-            kept.append(p)
-        t = "".join(kept).rstrip("\n")
-        if t.strip():
-            out.append((label, t))
-    if changed:
-        try:
-            os.makedirs(DEDUP_DIR, exist_ok=True)
-            tmp = "%s.%d.tmp" % (path, os.getpid())
-            with open(tmp, "w") as f:
-                json.dump(seen, f)
-            os.replace(tmp, path)
-        except OSError:
-            pass
-    return out
 
 
 TOP_LEVEL_EVENTS_WITHOUT_HSO = ("Stop", "SubagentStop")
@@ -976,10 +924,6 @@ def merge(results, event, session=""):
                             "event: " + LIST_UNREADABLE[0] + ". The session is unharmed and unhooked; "
                             "repair that file."))
     hso = {"hookEventName": event}
-    try:
-        contexts = dedup_repeats(contexts, event, session)
-    except Exception:
-        log("dedup failed, contexts kept whole: " + _format_exc().replace("\n", " | ")[:300])
     if contexts:
         try:
             hso["additionalContext"] = fit_contexts(contexts, INLINE_CAP, event, session)
@@ -1075,15 +1019,6 @@ def _label_from_cmd(cmd, args=None):
                 if parent:
                     return "%s/%s" % (parent[:12], base)
             return base
-    # The error-graph runner passes its path hex-encoded inside -c "...bytes.fromhex('...')...runpy...", so no token
-    # ends in .py; on 29 Oct it logged 4,266 rows (70 of them timeouts) as "/Library/Frameworks/Python.framework/Ve...".
-    import re
-    m = re.search(r"fromhex\(\s*['\"]([0-9a-fA-F]{8,})['\"]\s*\)", cmd)
-    if m:
-        try:
-            return os.path.basename(bytes.fromhex(m.group(1)).decode("utf-8").rstrip("/\\")) or (cmd[:40] + "...")
-        except ValueError:
-            pass
     return (cmd[:40] + "...")
 
 
@@ -1091,7 +1026,7 @@ def _label_from_cmd(cmd, args=None):
 # its report to the parent session as a UserPromptSubmit whose prompt is a <task-notification> envelope. Counted over
 # the last three days of transcripts: 699 such envelopes against ~296 prompts he typed, across 42 sessions - seven
 # prompt events in ten. Every content hook below answered them as if he had asked: the math hook served an arXiv
-# "memory strength" definition beside a subagent's report, danger mode announced a LIVE production action because the
+# "memory strength" definition beside a subagent's report, danger mode announced a LIVE trading action because the
 # report used the word, and each of those fires was logged where the reflex and association precision numbers are
 # computed. The archive and the checklist already strip the envelope (prompt_archive._NOISE_MARKERS,
 # task_checklist_hook._NOISE); these hooks never did. So for a UserPromptSubmit carrying an envelope, the CONTENT hooks
@@ -1169,11 +1104,9 @@ def _owner_words(payload):
 def _entry_basename(cmd, args):
     """The script file an entry runs, whatever process runs it (a content hook must be recognised on either path). Until
     29 Sep this asked as_python_argv, which answers None for a hook forced onto its own process, so the two project-memory
-    hooks in HEADLESS_SKIP were never recognised and never skipped (critical-path audit D04). ntpath splits on both
-    separators, so a settings file written on Windows names the same hooks on Linux and macOS."""
+    hooks in HEADLESS_SKIP were never recognised and never skipped (critical-path audit D04)."""
     try:
-        import ntpath
-        return ntpath.basename(script_argv(cmd, args)[0] or "").lower()
+        return os.path.basename(script_argv(cmd, args)[0] or "").lower()
     except Exception:
         return ""
 
@@ -1197,7 +1130,7 @@ def _flag_file_absent(args):
     return False
 
 
-# A SAMPLED PER-HOOK PROFILE, OFF UNLESS ITS FLAG FILE IS THERE (14 Oct 2026, front R30). The log
+# A SAMPLED PER-HOOK PROFILE, OFF UNLESS ITS FLAG FILE IS THERE (14 Oct 2026, an agent, front R30). The log
 # names a hook only when it fails or takes SLOW_HOOK_S, so what a whole event costs was never split by hook: PreToolUse
 # runs ~222 hooks in 0.34 s (median, R26 harness) to 0.65-0.72 s (this log, 14 Oct 06:45), and nobody could say whether
 # a few hooks carry that or a long tail does. Running the real hooks on made-up payloads to find out would write fires,
@@ -1212,8 +1145,8 @@ def _flag_file_absent(args):
 # payload, a hook's text or a prompt. With the flag absent the cost is one os.stat per event; nothing is written past
 # PROFILE_MAX_BYTES; nothing here raises. On: create the flag (an empty file). It lapses three hours after its mtime.
 # Read the lines with primary_directive/improve_1012/fronts/R30/analyse_r30.py.
-PROFILE_FLAG = os.path.expanduser("~/.claude/compute/hook_profile.on")
-PROFILE_LOG = os.path.expanduser("~/.claude/compute/hook_profile.jsonl")
+PROFILE_FLAG = r"~\.claude\compute\hook_profile.on"
+PROFILE_LOG = r"~\.claude\compute\hook_profile.jsonl"
 PROFILE_MAX_AGE_S = 3 * 3600
 PROFILE_MAX_BYTES = 64 * 1024 * 1024
 PROFILE_RATE_256 = 64                # sampled when os.urandom(1)[0] < this: 64 of 256, one dispatch in four
@@ -1232,7 +1165,15 @@ def _profile_gate(event):
             return None
         try:
             if os.path.getsize(PROFILE_LOG) > PROFILE_MAX_BYTES:
-                return None
+                # ROTATED AT THE CAP (14 Nov 2026, an agent): the profile used to stop writing here without a
+                # word, so a flag armed for three hours recorded nothing once the file reached 64 MB (12 Nov: 61 MB,
+                # renamed by hand). The full file is renamed to hook_profile_to_<stamp>.<pid>.jsonl and a new one
+                # starts; if the rename fails (another writer has it open) this dispatch is not sampled.
+                try:
+                    os.replace(PROFILE_LOG, PROFILE_LOG[:-6] + time.strftime("_to_%Y%m%dT%H%M%S.") + str(os.getpid())
+                               + ".jsonl")
+                except OSError:
+                    return None
         except OSError:
             pass
         return []
@@ -1327,7 +1268,7 @@ def dispatch(event, payload, tool_name, settings_path=SETTINGS, force=False, ses
             prof.append((label, el, how, mods, rc, len(out or "")))
         # A SLOW HOOK THAT SUCCEEDS WAS INVISIBLE. This line used to fire only on a bad return code, so
         # every per-hook row in the log was a failure - and all of them were the same 120 s timeout. The
-        # cost that actually lands on the owner had no rows at all: UserPromptSubmit runs 18 hooks for a
+        # cost that actually lands on the author had no rows at all: UserPromptSubmit runs 18 hooks for a
         # MEDIAN of 12.46 s, measured over 792 invocations, and nothing said which of the eighteen owns
         # it. An event total with no breakdown is the probe's stage table before it had stages
         # [[forty_four_percent_of_the_probe_was_in_no_stage_at_all_2026_09_18]].
@@ -1346,7 +1287,7 @@ def dispatch(event, payload, tool_name, settings_path=SETTINGS, force=False, ses
         log("%s merge failed, restrictive answers kept: %s" % (event, _format_exc().replace("\n", " | ")[:300]))
         code, out, err = _restrictive_fallback(results, event)
     log("%s hooks=%d %.2fs exit=%d out=%d%s%s" % (event, len(results), time.perf_counter() - t0, code, len(out),
-                                                (" envelope: %d content hooks %s" % (content_seen, "skipped" if content_payload is None else "got his words only"))
+                                                (" envelope: %d content hooks %s" % (content_seen, "skipped" if content_payload is None else "got the user's words only"))
                                                 if automated else "",
                                                 ((" headless diet: %d skipped" % diet_skipped) if diet_skipped else "")
                                                 + ((" flag off: %d" % flag_off) if flag_off else "")))
@@ -1504,11 +1445,11 @@ def _code_selftest():
     return 1 if fails else 0
 
 
-# Windows 11 power-throttles (EcoQoS) a windowless process by default, and every hook runs windowless. A/B on a probe's
-# own work in a CREATE_NO_WINDOW child, 6 alternating pairs: wall median 10.4 s default vs 6.4 s opted out, 5 of 6
-# pairs faster, cpu and answers identical. The dispatcher opts itself out at start and each hook process it starts
-# right after launch; children do not inherit it. Priority is untouched. HOOK_UNTHROTTLE=0 turns it off. Elsewhere
-# than Windows it does nothing.
+# 1 Nov 2026 (an agent, brain loop T-20261028-054): Windows 11 power-throttles (EcoQoS) a windowless process
+# by default, and every hook runs windowless. A/B on fok_probe's own work in a CREATE_NO_WINDOW child, 6 alternating
+# pairs: wall median 10.4 s default vs 6.4 s opted out, 5 of 6 pairs faster, cpu and answers identical
+# (brain_math_loop_1e0a/op/upslow/throttle_ab.py). The dispatcher opts itself out at start and each hook process it
+# starts right after launch; children do not inherit it. Priority is untouched. HOOK_UNTHROTTLE=0 turns it off.
 def _unthrottle(handle=None):
     if os.name != "nt" or os.environ.get("HOOK_UNTHROTTLE", "1") == "0":
         return False
@@ -1525,7 +1466,7 @@ def _unthrottle(handle=None):
         fn = k.SetProcessInformation
         fn.argtypes = [ctypes.c_void_p, ctypes.c_int, ctypes.c_void_p, ctypes.c_ulong]
         fn.restype = ctypes.c_int
-        st = _PPT(1, 1, 0)          # PROCESS_POWER_THROTTLING_EXECUTION_SPEED in the mask, cleared in the state
+        st = _PPT(1, 1, 0)
         return bool(fn(ctypes.c_void_p(int(handle)), 4, ctypes.byref(st), ctypes.sizeof(st)))
     except Exception:
         return False
@@ -1546,6 +1487,7 @@ def main():
         raw = buf.read().decode("utf-8", "replace") if buf is not None else sys.stdin.read()
     except Exception:
         raw = ""
+    _PAYLOAD_READ[0] = raw
     if not os.path.exists(ENABLED) and "--force" not in sys.argv:
         return 0
     i = raw.find("{")
@@ -1574,9 +1516,93 @@ def _write_utf8(stream, text):
         stream.flush()
 
 
+# LAST-KNOWN-GOOD COPY (10 Nov 2026, an agent). Six times between 18 Sep and 10 Nov an edit to this file left
+# it raising in its own code (NameError twice, 19 fatals over seven minutes on 1 Nov, nine in four seconds on 10 Nov).
+# The entry point below exits 0 on that so a tool call is never blocked, which also means every hook of every session,
+# the guards included, was skipped in silence until someone read the log. Now: a run that raises hands the same
+# payload and arguments to hook_dispatch.lkg.py, a copy of this file taken after it had stood unchanged for
+# LKG_SETTLE_S and completed a run, and relays that copy's output and exit code. The copy never falls back again and
+# never promotes itself. A file that cannot be compiled at all is outside this: Python never reaches this code.
+LKG = os.environ.get("HOOK_DISPATCH_LKG") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "hook_dispatch.lkg.py")
+LKG_ENV = "HOOK_DISPATCH_IN_LKG"
+LKG_SETTLE_S = 600.0
+LKG_TIMEOUT_S = 240.0
+_PAYLOAD_READ = [None]        # the payload main() read from stdin; None while stdin is still unread
+
+
+def _fatal_line():
+    """The traceback on one line, cut in the middle: the last line names the error and used to be cut off at 400."""
+    txt = _format_exc().strip().replace("\n", " | ")
+    return txt if len(txt) <= 700 else txt[:300] + " ... " + txt[-380:]
+
+
+def _run_last_known_good():
+    """Run the last-known-good dispatcher on this call. Returns its exit code, or None when there is none to run."""
+    if os.environ.get(LKG_ENV) or not os.path.isfile(LKG):
+        return None
+    import subprocess
+    env = dict(os.environ)
+    env[LKG_ENV] = "1"
+    raw = _PAYLOAD_READ[0]
+    kw = {"input": raw.encode("utf-8", "replace")} if raw is not None else {"stdin": getattr(sys, "__stdin__", None)}
+    done = subprocess.run([sys.executable, "-s", LKG] + sys.argv[1:], capture_output=False, stdout=subprocess.PIPE,
+                          stderr=subprocess.PIPE, env=env, timeout=LKG_TIMEOUT_S,
+                          creationflags=CREATE_NO_WINDOW if os.name == "nt" else 0, **kw)
+    for stream, data in ((getattr(sys, "__stdout__", None), done.stdout), (getattr(sys, "__stderr__", None), done.stderr)):
+        if stream is not None and data:
+            buf = getattr(stream, "buffer", None)
+            if buf is not None:
+                buf.write(data)
+            else:
+                stream.write(data.decode("utf-8", "replace"))
+            stream.flush()
+    return done.returncode
+
+
+def _promote_last_known_good():
+    """After a run that raised nothing: copy this file over the last-known-good one once it has stood LKG_SETTLE_S."""
+    me = os.path.abspath(__file__)
+    if os.environ.get(LKG_ENV) or os.path.basename(me).lower() != "hook_dispatch.py":
+        return False
+    st = os.stat(me)
+    if time.time() - st.st_mtime < LKG_SETTLE_S:
+        return False
+    try:
+        lk = os.stat(LKG)
+        if lk.st_size == st.st_size and lk.st_mtime >= st.st_mtime:
+            return False
+    except OSError:
+        pass
+    with open(me, "rb") as fh:
+        data = fh.read()
+    compile(data, me, "exec")            # a file that no longer compiles is never promoted
+    tmp = "%s.tmp.%d" % (LKG, os.getpid())
+    with open(tmp, "wb") as fh:
+        fh.write(data)
+    os.replace(tmp, LKG)
+    log("lkg: promoted %d bytes (file unchanged since %s)" % (len(data), time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(st.st_mtime))))
+    return True
+
+
 if __name__ == "__main__":
     try:
-        sys.exit(main())
+        _rc = main()
     except Exception:
-        log("fatal: " + _format_exc().replace("\n", " | ")[:400])
-        sys.exit(0)          # a broken dispatcher must never block a tool call
+        log("fatal: " + _fatal_line())
+        _rc = 0              # a broken dispatcher must never block a tool call
+        try:
+            _lk = _run_last_known_good()
+            if _lk is None:
+                log("fatal: no last-known-good copy ran (%s); every hook of this call was skipped"
+                    % ("this is the copy" if os.environ.get(LKG_ENV) else "none at " + LKG))
+            else:
+                _rc = _lk
+                log("lkg: the last-known-good copy ran this call, exit=%s" % _lk)
+        except Exception:
+            log("fatal: last-known-good run failed: " + _fatal_line())
+    else:
+        try:
+            _promote_last_known_good()
+        except Exception:
+            log("lkg: promote failed: " + _fatal_line())
+    sys.exit(_rc)

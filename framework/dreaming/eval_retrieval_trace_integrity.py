@@ -22,7 +22,7 @@ import sys
 
 AS_OF_ISO = "2026-07-09T12:00:00Z"
 AS_OF = trace._epoch(AS_OF_ISO)
-MEMORY_ROOT = "~/.claude/projects/{{BRAIN_SLUG}}/memory"
+MEMORY_ROOT = "~/.claude/projects/" + os.environ.get("BRAIN_SLUG", "default") + "/memory"
 
 
 def _iso(offset_seconds):

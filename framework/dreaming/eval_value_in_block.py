@@ -29,6 +29,11 @@ _NOISE_RE = re.compile(r"\(\s*-?\d+\s*,\s*-?\d+\s*\)|\d{4}-\d{2}-\d{2}|\b\d{4}\.
 _PAGE_RE = re.compile(r"(?:PDF|pp?\.|pages?)\s*(\d+)(?:\s*-\s*(\d+))?", re.I)
 
 
+import os as _ko_os, sys as _ko_sys  # noqa: E402
+_ko_sys.path.insert(0, _ko_os.path.join(_ko_os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
+from quarantine_rows import keep_old  # noqa: E402  a rerun keeps the previous output (R13 trap 1, 27 Sep): brain data is never deleted
+
+
 def _numbers(text, family=None):
     """Numbers in the block's CONTENT. The source-id hashes, score tags, hint lines and the header's command are
     stripped first (04:2x audit: a key of 25 matched the digits inside 'claim_b23fe6f25d2a'), then the parameter
@@ -85,7 +90,7 @@ def _run(question, env, timeout=90):
     """(block, ids, seconds, invalid). invalid is '' for a clean call, else why the block is not a measurement: a hook
     that exited nonzero, timed out or printed something other than its JSON delivers nothing in a session. Until 30 Sep
     the exit code was never read, a timeout counted as a silent hook, and output that was not JSON was scored as the
-    block."""
+    block (account03/B01, B01-R79-GATE-PROOFBANK-VIB-FAILED-HOOK-OUTPUT-SCORED-20260929)."""
     sess = "vib-" + uuid.uuid4().hex[:12]
     t0 = time.time()
     try:
@@ -110,13 +115,19 @@ def _run(question, env, timeout=90):
 
 
 def main():
+    global HOOK
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True)
     ap.add_argument("--bank", default="l1,l2")
     ap.add_argument("--env", action="append", default=[])
     ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--hook", default=HOOK, help="the math_sense.py to run (default: the live hook); --env MATHBRAIN_STORE=... picks the store")
     a = ap.parse_args()
+    HOOK = a.hook
+    if not os.path.isfile(HOOK):
+        # a missing hook scores every question silent - a quiet zero, never a measurement
+        raise SystemExit("eval_value_in_block: no such hook: %s" % HOOK)
     env = dict(os.environ)
     for kv in a.env:
         k, _, v = kv.partition("=")
@@ -146,7 +157,7 @@ def main():
     with ThreadPoolExecutor(max_workers=max(1, a.jobs)) as ex:
         for r in ex.map(one, work):
             rows.append(r)
-    with io.open(a.out, "w", encoding="utf-8") as fh:
+    with io.open(keep_old(a.out), "w", encoding="utf-8") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     # summary per bank x family; an invalid call is in no count and is counted at the end of the line
@@ -170,7 +181,7 @@ def main():
         tot[0], tot[1], tot[2], med, ",".join(a.env) or "-", sum(bad.values()),
         (" (%s)" % "; ".join("%s: %d" % kv for kv in sorted(bad.items()))) if bad else "")
     print(line)
-    with io.open(a.out + ".summary.txt", "w", encoding="utf-8") as fh:
+    with io.open(keep_old(a.out + ".summary.txt"), "w", encoding="utf-8") as fh:
         fh.write(line + "\n")
     return 0
 
