@@ -1,0 +1,49 @@
+{
+  "python": "3.13.2 (v3.13.2:4f8bb3947cf, Feb  4 2025, 11:51:10) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "inherited_nice": 10,
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "checks": [
+    {
+      "script": "check_boolean.py",
+      "exit_code": 0,
+      "seconds": 0.9367849999980535,
+      "children_peak_RSS_bytes_so_far": 63209472
+    },
+    {
+      "script": "verify_counterexample.py",
+      "exit_code": 0,
+      "seconds": 0.04877366701839492,
+      "children_peak_RSS_bytes_so_far": 63209472
+    },
+    {
+      "script": "audit_counterexample.py",
+      "exit_code": 0,
+      "seconds": 1.1418566670035943,
+      "children_peak_RSS_bytes_so_far": 63209472
+    },
+    {
+      "script": "check_counter_exact_finite.py",
+      "exit_code": 0,
+      "seconds": 0.6031727090012282,
+      "children_peak_RSS_bytes_so_far": 63209472
+    },
+    {
+      "script": "repair_small.py",
+      "exit_code": 0,
+      "seconds": 0.08022608302417211,
+      "children_peak_RSS_bytes_so_far": 63209472
+    },
+    {
+      "script": "check_properties.py",
+      "exit_code": 0,
+      "seconds": 0.10771599999861792,
+      "children_peak_RSS_bytes_so_far": 63209472
+    }
+  ],
+  "peak_child_RSS_bytes": 63209472
+}

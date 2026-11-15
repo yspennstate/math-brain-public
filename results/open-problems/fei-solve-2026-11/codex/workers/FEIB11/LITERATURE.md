@@ -1,0 +1,31 @@
+# What the literature supplies
+
+CHECKED: primary texts were accessed through the web tool on 10 November 2026. The scope is the definitions, introductions, and theorem/proof passages named below, together with searches for containment, subset-sample and Renyi terminology. This is not a claim to have read every page or exhausted the literature. Search-result publication dates were not used to date the papers.
+
+## The named papers
+
+PROVED in the cited work: [O'Donnell–Wright–Zhou, 2011](https://www.cs.cmu.edu/~odonnell/papers/fei.pdf), introduction and Theorems 1–3, defines FMEI as the existence of an atom mu(S)>=2^(-CI). It observes that KKL gives FMEI for monotone functions. It proves FEI for symmetric functions with constant 12.04 and read-once decision trees with constant 4.88. These imply WC bounds by L_1<=H, and its monotone observation implies WC by L_1<=2H_infinity. The paper does not state the WC statistic in the passages examined.
+
+PROVED in the cited work: [Keller–Mossel–Schlank, 2011 preprint / 2012 publication](https://arxiv.org/pdf/1105.2651), section 3, Proposition 3.1, proves coefficient granularity and H<=2d for integer-valued functions supported on levels through d. Its Theorem 3.2 reports a Bourgain–Kalai concentration result under an exponentially decaying Fourier tail. These are low-degree/tail hypotheses, not a general FMEI theorem. Their biased-measure formulation and tensor discussion do not identify WC. PROOFS.md gives the sign-valued degree refinement directly.
+
+PROVED in the cited work: [Chakraborty–Kulkarni–Lokam–Saurabh, Upper Bounds on Fourier Entropy](https://eccc.weizmann.ac.il/report/2013/052/revision/2/download/), Theorem 5.11 and Remark 5.1, proves H<=10I for read-once AND/OR/XOR/NOT formulas. The result immediately bounds every L_q, including containment A, on that class. Its complexity and second-moment bounds do not give a general CI bound. The linked source is the authors' ECCC revision; the journal version appeared in 2016.
+
+PROVED in the cited work: [Shalev, 2018 preprint, revised 2019](https://arxiv.org/html/1806.03646), introduction, section 5, and section 6.1.2/Corollary 30, proves FMEI for regular read-k DNFs with fixed k. It also proves FEI for bounded Fourier L1 norm, and improves the read-k decision-tree dependence to O(sqrt(k)). The regularity hypothesis is substantive; that statement alone does not cover arbitrary read-k DNFs. Its proposed general DNF coding protocol is conjectural. WC transfers from its established FMEI or FEI cases.
+
+PROVED in the cited work: [Arunachalam–Chakraborty–Koucky–Saurabh–de Wolf, 2021](https://www.isical.ac.in/~sourav/papers/TOCT21.pdf), Theorems 1.8–1.9 and Corollary 4.6, establishes H_infinity<=2C_min^parity and H_infinity<=2log(||fhat||_(1,epsilon)/(1-epsilon)), for 0<=epsilon<1. It proves FMEI for arbitrary read-k DNFs with fixed k; the printed O(log k) dependence is understood with a positive constant at k=1. Its Renyi entropy corollary has the factor 1+1/delta for order 1+delta. These are ordinary Fourier Renyi entropies, not the containment interpolation. The bounds give L_1<=4C_min^parity and L_1<=4log(||fhat||_(1,epsilon)/(1-epsilon)), and L_q is bounded by H_(1+q). No cited theorem bounds these complexity measures by O(I) for every Boolean function.
+
+PROVED in the cited work: [Kelman–Kindler–Lifshitz–Minzer–Safra, 2020](https://www.ias.edu/sites/default/files/math/csdm/19-20/KelmanKiLiMiSa-Towards.pdf), Theorems 1.1–1.3 and sections 7.1–7.3, supplies a nonempty atom of normalized mass at least 2^(-O(kappa log(1+kappa))) and concentration on that scale, kappa=I/v. Its low-degree entropy theorem includes a degree logarithm. This gives WC at exponent O(I log(2+I)) after handling small variance with the empty atom. It does not give the general linear exponent. The theorem's indicator/sign convention changes absolute constants only; no numerical universal constant is extracted here.
+
+PROVED in additional cited work: [O'Donnell–Tan, 2013](https://arxiv.org/pdf/1304.1347), abstract and composition theorem, establishes FEI for read-once formulas over bounded-arity arbitrary gates. This supports the gate-dependent WC conclusion in PROOFS.md. Allowing a single arbitrary gate of unbounded arity would cover every function, so that formulation remains open.
+
+## Is WC already a named result?
+
+CHECKED with limited scope: the reviewed passages and terminology searches did not identify a paper specifically studying sum_S mu(S)sum_{U superset S}mu(U) as an FEI relaxation, or proving its general linear exponent. This is an absence from this search, not a novelty certificate. Search strings included “Fourier containment probability entropy influence”, “spectral samples subset entropy influence conjecture”, and “Fourier collision min-entropy influence conjecture”.
+
+PROVED: WC has an exact standard-information-theory interpretation: its negative logarithm is D_0(nu||mu x mu), and the entire L_q interpolation is D_(1-q), for the containment coupling nu. PROOFS.md derives it directly. A superficially related published result is the ordinary collision/Renyi entropy bound from Corollary 4.6 above; it upper-bounds L_q but is generally different from it.
+
+OPEN as far as the read sources establish: FMEI for all Boolean functions, WC with a general CI exponent, and containment A<=CI. The known methods give WC for their proven classes and a general logarithmic loss. They do not prove the linear statement in general. Later search results still describe FMEI as a conjecture, but no claim that every later paper has been checked is made.
+
+RECALLED, not used as a theorem here: the brain surfaced a newer symmetric FEI constant 4.650431. Its proof was not audited in this task. CHECKED independently: the recalled description of the perfect-matching-plus-coins function reconstructs a balanced 18-variable function with H/(I-1)=6.521845710923046; the numerical receipt is families.json. No claim of matching the public table's complete hash is made.
+
+The brain was useful for identifying the nine coin sites of the record function. The math recall command returned “math store not found”; it supplied no mathematics. No memories were written outside this folder, as RULES.md forbids it.

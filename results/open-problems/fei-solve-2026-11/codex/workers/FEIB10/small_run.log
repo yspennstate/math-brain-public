@@ -1,0 +1,83 @@
+nice: setpriority: Operation not permitted
+progress 1 0 2.0
+progress 1 5 2.0000000262127653
+progress 1 10 2.0000000262127653
+progress 1 15 2.0000000262127653
+progress 1 20 2.0000000262127653
+DONE 1 {'max_violation': 3.0130221373436683e-09, 'witness': (1, 0), 'A': 0.49999999664165545, 'B': 0.3112781182664229, 'H': 0.8112781149080783, 'I': 0.24999999397395564, 'A_I': 2.0000000347749776, 'B_I': 1.2451125030781043}
+progress 2 0 2.5120016971458727
+progress 2 5 2.51200175380415
+progress 2 10 2.51200205382258
+progress 2 15 2.51200205382258
+progress 2 20 2.51200205382258
+DONE 2 {'max_violation': 1.0803239795798003e-08, 'witness': (3, 0), 'A': 0.564899109559584, 'B': 0.3310709722751375, 'H': 0.8959700818347215, 'I': 0.22488003491078445, 'A_I': 2.51200205382258, 'B_I': 1.472211494481854}
+progress 3 0 3.232516759243608
+progress 3 5 3.2325167743155045
+progress 3 10 3.2325167743155045
+progress 3 15 3.2325167743155045
+progress 3 20 3.2325167743155045
+DONE 3 {'max_violation': 2.2954483105963597e-10, 'witness': (2, 0), 'A': 0.41203133908143047, 'B': 0.21045162567798964, 'H': 0.6224829647594201, 'I': 0.12746456332579414, 'A_I': 3.2325167743155045, 'B_I': 1.6510598725395074}
+progress 4 0 3.734935637879398
+progress 4 5 3.7349381687015537
+progress 4 10 3.7349381687015537
+progress 4 15 3.7349381687015537
+progress 4 20 3.7349381687015537
+DONE 4 {'max_violation': 1.1021825721633377e-08, 'witness': (5, 0), 'A': 0.22675917410022595, 'B': 0.10339691435513121, 'H': 0.33015608845535716, 'I': 0.06071296601385465, 'A_I': 3.7349381687015537, 'B_I': 1.7030450189426773}
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:20: RuntimeWarning: divide by zero encountered in matmul
+  up=np.maximum(Z@x,0)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:20: RuntimeWarning: overflow encountered in matmul
+  up=np.maximum(Z@x,0)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:20: RuntimeWarning: invalid value encountered in matmul
+  up=np.maximum(Z@x,0)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:22: RuntimeWarning: divide by zero encountered in matmul
+  return up**1.5-(L@x)/fac
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:22: RuntimeWarning: overflow encountered in matmul
+  return up**1.5-(L@x)/fac
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:22: RuntimeWarning: invalid value encountered in matmul
+  return up**1.5-(L@x)/fac
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:13: RuntimeWarning: divide by zero encountered in matmul
+  up=z@x; us=np.maximum(up,1e-250)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:13: RuntimeWarning: overflow encountered in matmul
+  up=z@x; us=np.maximum(up,1e-250)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:13: RuntimeWarning: invalid value encountered in matmul
+  up=z@x; us=np.maximum(up,1e-250)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:17: RuntimeWarning: divide by zero encountered in matmul
+  dA=-(np.log(us)+z.T@(x/us))/np.log(2)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:17: RuntimeWarning: overflow encountered in matmul
+  dA=-(np.log(us)+z.T@(x/us))/np.log(2)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:17: RuntimeWarning: invalid value encountered in matmul
+  dA=-(np.log(us)+z.T@(x/us))/np.log(2)
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:23: RuntimeWarning: divide by zero encountered in matmul
+  def jac(x): return 1.5*np.sqrt(np.maximum(Z@x,0))[:,None]*Z-L/fac[:,None]
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:23: RuntimeWarning: overflow encountered in matmul
+  def jac(x): return 1.5*np.sqrt(np.maximum(Z@x,0))[:,None]*Z-L/fac[:,None]
+~/codex_fleet/20261108_pro/workers/FEIB10/search_small.py:23: RuntimeWarning: invalid value encountered in matmul
+  def jac(x): return 1.5*np.sqrt(np.maximum(Z@x,0))[:,None]*Z-L/fac[:,None]
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:37: RuntimeWarning: divide by zero encountered in matmul
+  up=z@mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:37: RuntimeWarning: overflow encountered in matmul
+  up=z@mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:37: RuntimeWarning: invalid value encountered in matmul
+  up=z@mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:40: RuntimeWarning: divide by zero encountered in matmul
+  left=lhs@mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:40: RuntimeWarning: overflow encountered in matmul
+  left=lhs@mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:40: RuntimeWarning: invalid value encountered in matmul
+  left=lhs@mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:17: RuntimeWarning: divide by zero encountered in matmul
+  up = z @ mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:17: RuntimeWarning: overflow encountered in matmul
+  up = z @ mu
+~/codex_fleet/20261108_pro/workers/FEIB10/common.py:17: RuntimeWarning: invalid value encountered in matmul
+  up = z @ mu
+progress 5 0 -1.0
+progress 5 5 4.031900102952663
+progress 5 10 4.0319013696758095
+progress 5 15 4.0319013696758095
+DONE 5 {'max_violation': -3.404688448923124e-09, 'witness': (31, 0), 'A': 0.15597508001134655, 'B': 0.06683401843829351, 'H': 0.22280909844964006, 'I': 0.03868524195171172, 'A_I': 4.0319013696758095, 'B_I': 1.727636045852268}
+progress 6 0 4.186279566348022
+progress 6 5 4.186279566348022
+progress 6 10 4.186616767498837
+progress 6 15 4.186616767498837
+DONE 6 {'max_violation': 1.7707929138863557e-10, 'witness': (63, 0), 'A': 0.14987820089291715, 'B': 0.06309112907557796, 'H': 0.2129693299684951, 'I': 0.035799360012227055, 'A_I': 4.186616767498837, 'B_I': 1.7623535463770739}
