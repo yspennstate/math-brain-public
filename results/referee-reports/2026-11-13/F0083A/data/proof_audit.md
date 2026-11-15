@@ -1,0 +1,20 @@
+# Proof audit, 2026-11-13
+
+The candidate result is uniqueness for all locally finite centre sets in d=1,2, with common finite positive appetite. It does not resolve existence of a counterexample in d>=3.
+
+Primary derivation uses HHP Lemma 15, applied before any stationarity assumption:
+
+- Write s for site-optimal and c for centre-optimal. Off the null tie set, every site weakly prefers s, while every centre has at least as much total territory under c.
+- Set A_v=s^{-1}(v)\c^{-1}(v), B_v=c^{-1}(v)\s^{-1}(v). Then |B_v|>=|A_v|. Every B_v site has another (closer) centre under s; it cannot be s-unclaimed. Thus q(u,v)=|c^{-1}(u) intersect s^{-1}(v)| for u!=v has outgoing capacity |B_u| and incoming capacity <=|A_u|. Incoming capacity can be smaller because c-unclaimed sites can be assigned under s.
+- A positive-measure disagreement gives a positive q edge: if only c-unclaimed sites differ, some A_v has positive mass, so B_v has positive mass too.
+- If q(u,v)>0, a.e. incoming x desires v under c. Stability implies v is sated under c and ALL of its c-territory is at distance <=|x-v|. In particular T_v=ess sup_{y:c(y)=v}|y-v| is finite. For a.e. x in the edge set, T_v<=|x-v|<|x-u|<=T_u. Therefore T_v<T_u, no directed cycles, and q(u,v)<=v_d(T_u^d-T_v^d) if T_u<infinity.
+- Start at one edge (rho,v0). Keep it and all edges reachable from v0. T_{v0}<infinity; downstream T_v<=R=T_{v0}. Root cannot be reached again by acyclicity. Every downstream vertex is sated and has c-territory of volume alpha in B(v,R), up to null sets. These territories are disjoint. This bounds local centre counts for the downstream graph independently of Xi. Every downstream edge has length <2R.
+- Capacities are nondecreasing in aggregate at downstream vertices. Send a random path from rho, routing at each visited v proportionally to its outgoing q. With m=q(rho,v0), the expected edge-traversal flow f satisfies f<=q/m. Proof by cumulative probability of arriving by time n and induction, using in(q)<=out(q); local finiteness permits limits. No directed cycles means no revisits, and positive incoming capacity prevents a dead end. It is a unit flow.
+- Each path has sum q <=m+v_d R^d by telescoping T^d. Therefore sum f(e)^2=E sum_{e on path}f(e)<=1+v_d R^d/m<infinity.
+- Sated, disjoint radius-R territories give O(1) downstream vertices per fixed cube. Those in a fixed-width annulus of radius r number O(r^{d-1}); thickening their territories preserves that order. Bounded edge length then gives edge cutsets of cardinality O(r^{d-1}). Choose annuli farther apart than the maximum edge length so cutsets are edge-disjoint. A unit flow costs >=1/|cutset| energy on each. The harmonic series diverges for d=1,2, contradicting finite energy.
+
+Second derivation, using the original arbitrary-allocation graph rather than optimality:
+
+HHP N_v=D_v intersect B(v,r_v), M_v=the disputed sites preferring v, F(u,v)=N_u intersect M_v. Lemma 8 implies M_v and N_v overlap only on a null set. Thus an incoming edge forces r_v finite and r_v<=|x-v|<|x-u|. Descendant radii are bounded by the finite initial target radius. By continuity of radial Lebesgue measure, (territory_1(v) union territory_2(v)) intersect B(v,r_v) has volume alpha. Summed over centres, these unions have multiplicity at most two. Hence local descendant counts <=2 times the volume of an expanded region /alpha. This independently yields exactly the density bound needed in the primary derivation. HHP Lemma 12 and Proposition 13 supply finite-energy transience, contradicting the same cutset argument in d<=2.
+
+Cases checked: empty/finite sets; disconnected graphs; arbitrary large original local densities; unsated centres; sites unclaimed under either allocation; null exceptional/tie sets; territory outliers on null sets; possible infinite root radius; no reachable returns to root; finite graph/dead ends; finite branching; the direction of the centre-volume inequality; geometry of thickened annuli; flow direction versus undirected cut flux. alpha=0 and alpha=infinity can be handled separately and are not used in the theorem.
