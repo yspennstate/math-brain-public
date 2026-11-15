@@ -1,0 +1,4 @@
+VERDICT: SOLVED-CLAIMED the whole statement is claimed: an FPRAS for counting perfect matchings in every finite simple undirected graph
+OpenAI's “A Fully Polynomial Randomized Approximation Scheme for Perfect Matchings in General Graphs” (September 23, 2026), Theorem 1.1, claims relative error epsilon, success at least 1-delta, exact zero detection, and polynomial worst-case bit time; take delta=1/4.
+Chenghua Liu and Boning Meng, arXiv:2610.26803 (October 19, 2026), give a later simplified proof claim; OpenAI also supplies a matching Lean statement and proof module, with a published community Comparator acceptance log. No referee report or direct refutation was found in the sources checked; proof correctness is not adjudicated here.
+The entropy candidate gives coarse counting bounds rather than an FPRAS; the maximum-cardinality candidate finds one matching rather than counting them. See VERIFY.md for exact statements, scope, sources, and qualifications.

@@ -1,0 +1,41 @@
+# Round 2 verdicts (mini1, 40 briefs), pulled 2026-11-14 20:35
+- T077 (REPORT.md): VERDICT: COMPUTED exact local extinction certificates and a quadratic coexistence bound for adjacent seeds in Z²
+- T080 (REPORT.md): VERDICT: PARTIAL quantitative near-optimal mixing packings; the Gibbs freezing problem remains open
+- T088 (REPORT.md): VERDICT: PROVED exact shortest-crossing generating function and conditional length asymptotics for the two-row square-lattice ladder at p=1/2
+- T092 (LOG.md): VERDICT: PARTIAL. The filename follows the requested external-result branch;
+- T098 (REPORT.md): VERDICT: PARTIAL exact full-spectrum l-bits for Bernoulli-diluted transverse-field Ising chains
+- T101 (REPORT.md): VERDICT: PARTIAL exact probability of vertex-simple periodic orbits with at most six mirrors
+- T116 (REPORT.md): VERDICT: PARTIAL located a later preprint ruling out polynomial worst-case trace complexity
+- T119 (REPORT.md): VERDICT: PARTIAL substantial published improvement located; exact constant unresolved
+- T133 (REPORT.md): VERDICT: PARTIAL substantial limit-shape announcement found; full T133 remains unverified
+- T139 (REPORT.md): VERDICT: COMPUTED exact Fourier concentration curves for every DNF on at most four variables
+- T185 (REPORT.md): VERDICT: PARTIAL sharp linear-workload certificate and finite-mean stability when sum_i rho_i/b_i < 1
+- T200 (REPORT.md): VERDICT: PARTIAL a fully checked explicit bound xi_3(1,1) < 0.99984
+- T226 (REPORT.md): VERDICT: PARTIAL an exponentially small edge-entry probability for a fixed-width, multi-input two-layer linear network
+- T247 (REPORT.md): VERDICT: PARTIAL exact finite-width second moments and joint-limit empirical isometry for independent gates with Haar orthogonal weights
+- T266 (REPORT.md): VERDICT: PROVED a linear-activation special case with both-layer discrete GD, exact risk laws, and nonconcentrating critical fluctuations.
+- T286 (LOG.md): VERDICT: PARTIAL literature status corrected; substantial follow-ups found, general theorem still open
+- T306 (REPORT.md): VERDICT: PROVED smooth pure-ODE TV instability and a uniform Euler-step obstruction
+- T324 (REPORT.md): VERDICT: PARTIAL two-token deterministic merging asymptotic and joint small-noise mean merging exponent
+- T346 (REPORT.md): VERDICT: PROVED exact Gaussian minimax radius under a trace budget, allowing arbitrary input-dependent covariance
+- T427 (REPORT.md): VERDICT: PARTIAL existence settled in arXiv:2610.40509v1 as stated; numerical value remains unevaluated
+- T440 (REPORT.md): VERDICT: PROVED an explicit exponential lower bound for the first-click time when 0<lambda<alpha
+- T090 (REPORT.md): VERDICT: PARTIAL omitted critical-regime advance identified; fixed-coupling T090 remains open
+- T081 (REPORT.md): VERDICT: PARTIAL exact obstruction to removing the boxed partition by common-shift Boltzmann averaging
+- T160 (REPORT.md): VERDICT: PARTIAL explicit degree-three critical tree with nonconvergent radius-conditioned laws
+- T221 (REPORT.md): VERDICT: PARTIAL finite witnesses and a reduction of RBS to finitely presented groups with finite uniform bases
+- T105 (REPORT.md): VERDICT: PARTIAL omitted 2026 pair-correlation advance documented; flat 2-torus spacing remains unresolved
+- T102 (REPORT.md): VERDICT: PARTIAL exact resistance-gluing reduction and planar obstruction
+- T117 (REPORT.md): VERDICT: PROVED exact three-bit optimizer and its unique stationary first-order Markov exception
+- T122 (REPORT.md): VERDICT: PARTIAL located recent cavity-formula proofs covering the Erdős–Rényi branch; regular-graph coverage not verified
+- T428 (REPORT.md): VERDICT: PARTIAL Brownian signed-kernel tuning eigenvalue and cutoff stability
+- T142 (REPORT.md): VERDICT: PARTIAL Var(L_n) <= n/4 and a quadratic route to the missing lower bound
+- T430 (REPORT.md): VERDICT: PARTIAL stationary variance reduction and an explicit obstruction to averaging deterministic-start estimates
+- T423 (LOG.md): VERDICT: PARTIAL exact reduction to terminal-mass equality and a scalar occupation estimate
+- T227 (REPORT.md): VERDICT: PARTIAL a probability-one catapult interval for an explicitly initialized sparse three-layer tanh network; eta_max remains open
+- T248 (REPORT.md): VERDICT: PARTIAL found a new edge-universality theorem relevant to T248; full statement not verified
+- T267 (REPORT.md): VERDICT: PARTIAL proved one-minimum property of the isotropic Marchenko--Pastur surrogate at every aspect ratio
+- T287 (REPORT.md): VERDICT: PROVED finite-size fourth-order low-SNR mutual-information and product-MMSE coefficients for fixed bounded symmetric iid priors
+- T307 (REPORT.md): VERDICT: PROVED an approximation-error floor for clipped homogeneous space–time score networks
+- T325 (REPORT.md): VERDICT: PARTIAL identified substantial restricted training-convergence advances omitted from the supplied status
+- T347 (REPORT.md): VERDICT: PARTIAL substantial 2026 free-energy advance located; exact T347 remains unverified

@@ -1,0 +1,4 @@
+VERDICT: PARTIAL-CLAIMED Viana–Bray and diluted even-K spin glasses at every positive temperature; positive-temperature random K-SAT only for even K
+OpenAI's “The Mézard–Parisi formula for diluted spin glasses” (September 23, 2026) claims equality with the infimum over all finite hierarchy depths, without a finite-RSB restriction; its arity hypothesis explicitly excludes odd-K SAT.
+The other two candidates concern Haar-orthogonal interaction matrices and representation-theoretic Spin groups, respectively, and do not cover T137's sparse models. No correctness judgment is made here.
+A separate later paper by Dmitry Panchenko, “The Mézard-Parisi formula” (arXiv:2610.39545, October 29, 2026), claims the full row, including random K-SAT for every K >= 2; it does not verify OpenAI's different argument.

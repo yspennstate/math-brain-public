@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "unconditional Gaussian probability of one cone sector",
+      "value": 0.25000000000027633,
+      "expected": 0.25,
+      "absolute_error": 2.7633451082920146e-13,
+      "tolerance": 2e-11
+    },
+    {
+      "name": "Cartesian q per conditioned sector",
+      "value": 0.9999999999988949,
+      "expected": 1.0,
+      "absolute_error": 1.1051159987118808e-12,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "polar q per conditioned sector",
+      "value": 0.999999999999349,
+      "expected": 1.0,
+      "absolute_error": 6.510347816401918e-13,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "agreement of independent Gaussian integral lanes",
+      "value": 0.999999999999349,
+      "expected": 0.9999999999988949,
+      "absolute_error": 4.54081217071689e-13,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "Gaussian half-line input second moment",
+      "value": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "rational ensemble total mass",
+      "value": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact hyperbolic m identity",
+      "value": 3.8046875,
+      "expected": 3.8046875,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact hyperbolic q identity",
+      "value": 8.890625,
+      "expected": 8.890625,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact moment invariant",
+      "value": 21.140625,
+      "expected": 21.140625,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact particle balance 0",
+      "value": 3.0,
+      "expected": 3.0,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact particle balance 1",
+      "value": 8.0,
+      "expected": 8.0,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact particle balance 2",
+      "value": 0.75,
+      "expected": 0.75,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact moment ODE m",
+      "value": -23.13646240234375,
+      "expected": -23.13646240234375,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact moment ODE q",
+      "value": -39.6044189453125,
+      "expected": -39.6044189453125,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact differentiated moment invariant",
+      "value": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "exact energy dissipation",
+      "value": 60.20902832984925,
+      "expected": 60.20902832984925,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "population-risk factor one quarter",
+      "value": 1.953125,
+      "expected": 1.953125,
+      "absolute_error": 0.0,
+      "tolerance": 2e-10
+    },
+    {
+      "name": "maximum root residual on five signed targets",
+      "value": 1.7763568394002505e-15,
+      "expected": 0.0,
+      "absolute_error": 1.7763568394002505e-15,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "maximum positive coupling-bound excess",
+      "value": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "outside-cone finite-clock kink collision",
+      "value": -2.220446049250313e-16,
+      "expected": 0.0,
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "outside-cone surviving a at collision",
+      "value": 1.7320508075688772,
+      "expected": 1.7320508075688772,
+      "absolute_error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "balanced single-neuron moment discriminant",
+      "value": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 0
+    }
+  ],
+  "notes": [
+    "No ML training, GPU, torch, or external file writes.",
+    "Floating-point checks are audits, not substitutes for the proof.",
+    "Gaussian integration cutoffs are 10; analytic tails are negligible at these tolerances."
+  ],
+  "elapsed_seconds": 0.026706400036346167,
+  "python_version": "3.14.3",
+  "OMP_NUM_THREADS": "1",
+  "resources": {
+    "priority_class": "BelowNormal",
+    "peak_working_set_bytes": 25628672,
+    "peak_commit_bytes": 16777216
+  }
+}

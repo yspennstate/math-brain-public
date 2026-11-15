@@ -1,0 +1,4 @@
+VERDICT: PARTIAL-CLAIMED bounded convex planar domains with smooth (C-infinity) boundary, for every nonzero second Neumann eigenfunction, including multiple eigenvalues
+OpenAI's “Strict hot spots and absence of interior critical points on smooth simply connected planar domains” (September 24, 2026), Theorem 1.1, claims a stronger no-interior-critical-point conclusion, but assumes smooth boundary; the row permits arbitrary convex boundaries.
+The later sources opened give a conditional non-strict extension with simple eigenvalue, or strict maximum modulus rather than both signed extrema; they do not fill the exact gap. The other two candidates concern optimal transport and complex geometry.
+Lean artifacts and a reported accepted comparator run cover the smooth-domain claim; no judgment of proof correctness is made. Task: “Verify: has open problem T030 been settled by the OpenAI math release?” — 14 November 2026, 20:58 Asia/Tbilisi.

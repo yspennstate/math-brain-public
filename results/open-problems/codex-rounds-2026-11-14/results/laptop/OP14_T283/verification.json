@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "total_vector_configurations": 5884,
+  "configurations": [
+    {
+      "k": 1,
+      "kind": "distinct_nonzero",
+      "configurations": 0,
+      "vector_girth_histogram": {}
+    },
+    {
+      "k": 2,
+      "kind": "distinct_nonzero",
+      "configurations": 4,
+      "vector_girth_histogram": {
+        "infinity": 3,
+        "3": 1
+      }
+    },
+    {
+      "k": 3,
+      "kind": "distinct_nonzero",
+      "configurations": 112,
+      "vector_girth_histogram": {
+        "infinity": 49,
+        "3": 56,
+        "4": 7
+      }
+    },
+    {
+      "k": 4,
+      "kind": "distinct_nonzero",
+      "configurations": 4928,
+      "vector_girth_histogram": {
+        "infinity": 1365,
+        "3": 2450,
+        "4": 945,
+        "5": 168
+      }
+    },
+    {
+      "k": 1,
+      "kind": "nonzero_multisets",
+      "configurations": 4
+    },
+    {
+      "k": 2,
+      "kind": "nonzero_multisets",
+      "configurations": 52
+    },
+    {
+      "k": 3,
+      "kind": "nonzero_multisets",
+      "configurations": 784
+    }
+  ],
+  "graph_rank_audit": [
+    {
+      "n": 2,
+      "graphs": 1
+    },
+    {
+      "n": 3,
+      "graphs": 7
+    },
+    {
+      "n": 4,
+      "graphs": 63
+    },
+    {
+      "n": 5,
+      "graphs": 1023
+    },
+    {
+      "n": 6,
+      "graphs": 32767
+    }
+  ],
+  "permutation_and_noise_audit": [
+    {
+      "circuit_size": 3,
+      "permutation_form_pairs": 12,
+      "parity_expectation_numerator": 12,
+      "parity_expectation_denominator": 12,
+      "zero_functions": 6
+    },
+    {
+      "circuit_size": 4,
+      "permutation_form_pairs": 192,
+      "parity_expectation_numerator": 192,
+      "parity_expectation_denominator": 192,
+      "zero_functions": 24
+    },
+    {
+      "circuit_size": 5,
+      "permutation_form_pairs": 7680,
+      "parity_expectation_numerator": 7680,
+      "parity_expectation_denominator": 7680,
+      "zero_functions": 120
+    },
+    {
+      "vectors": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "numerator": 48,
+      "denominator": 192,
+      "zero_functions": 6,
+      "permutations": 24
+    },
+    {
+      "resampling_rate": "1/2",
+      "numerator": 192,
+      "denominator": 3072
+    }
+  ],
+  "zero_vector_exception": {
+    "vector_girth": 1,
+    "edge_girth": 1
+  },
+  "resource_audit": {
+    "OMP_NUM_THREADS": "1",
+    "peak_working_set_bytes": 25640960,
+    "peak_private_commit_bytes": 17240064,
+    "priority_class": 16384
+  },
+  "elapsed_seconds": 5.425
+}

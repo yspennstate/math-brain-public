@@ -1,0 +1,4 @@
+VERDICT: SOLVED-CLAIMED the whole statement: critical triangle condition and β = γ = 1, δ = 2 for every connected, locally finite, quasi-transitive nonamenable graph under Bernoulli bond percolation.
+OpenAI, Nonuniqueness of percolation on nonamenable quasi-transitive graphs (September 24, 2026), Theorem 1.1 claims boundedness of the critical connection operator; its critical-laws corollary explicitly gives the triangle sum and the requested exponent bounds.
+The other two candidates claim critical nonpercolation only; the cubic-lattice paper also concerns an amenable graph outside the row's class.
+Lean artifacts and a reported MathVet Comparator pass were found; this is a claimed resolution, not a judgment that the proof is correct or refereed. Details, access limits, and sources are in VERIFY.md.

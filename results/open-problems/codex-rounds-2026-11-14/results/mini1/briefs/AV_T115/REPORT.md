@@ -1,0 +1,4 @@
+VERDICT: SOLVED-CLAIMED The whole statement: every degree-d polynomial threshold function on the uniform Boolean n-cube has total influence at most C d sqrt(n), with absolute C=8.
+OpenAI's “Average sensitivity of polynomial threshold functions” (September 25, 2026), Theorem 1, claims exactly this bound, uniformly for 1<=d<=n, including polynomial zeros with sign(0)=1; multilinearization covers general polynomials.
+The other two candidates concern maximum sensitivity versus block sensitivity, and polynomial-difference-free integer sets, respectively; neither addresses T115.
+The main bound has a matching Lean formalisation with independent Comparator acceptance reports and explicit acknowledgement in arXiv:2604.08095v3 (October 26, 2026). This verdict records the claim, not a judgment that its proof is correct; VERIFY.md contains the sources and a limited spot check.

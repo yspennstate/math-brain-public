@@ -1,0 +1,4 @@
+VERDICT: PARTIAL-CLAIMED fixed-degree bulk GOE eigenvalue point-process statistics for every d≥3; spatial quantum unique ergodicity is not claimed
+OpenAI’s “GOE bulk universality for fixed-degree random regular graphs” (September 23, 2026), Theorem 1.1, matches the clean uniform simple graph model and claims fixed-energy bulk point-process convergence; delocalization is an imported input.
+The October 5 Anderson paper adds fixed positive uniform diagonal disorder; the September 23 Ising paper concerns a different model. Neither supplies the missing spatial QUE theorem.
+He–Huang–Wang separately prove bulk universality; no family-219 Lean formalization or specialist proof validation was found. The old QUE-open note needs qualification: Bauerschmidt–Huang–Yau Corollary 1.3 already gives probabilistic QUE for sufficiently large fixed degree, so the intended QUE strength must be specified.

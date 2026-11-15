@@ -1,0 +1,4 @@
+VERDICT: PARTIAL-CLAIMED differentiability everywhere for iid Gamma edge weights of every positive shape and rate, including exponential weights
+OpenAI, Strict convexity and differentiability of the planar exponential first-passage limit shape (September 24, 2026), Theorems 1.1–1.2, claims this subclass, not all continuous laws satisfying the minimum-of-four second-moment condition.
+No bigeodesics in planar first-passage percolation uses the general hypotheses but proves a different conclusion; the QAOA paper concerns SK spin-glass energy.
+Lean scope notes and external checking records cover Gamma differentiability, not the general continuous-law statement. This verdict records claims, without endorsing the proofs; see VERIFY.md for exact quotations, follow-ups, and a conditional spot check.

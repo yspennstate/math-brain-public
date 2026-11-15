@@ -1,0 +1,4 @@
+VERDICT: SOLVED-CLAIMED the whole statement, parts (a) and (b), for the standard nearest-neighbor RWRE model
+OpenAI’s “A directional zero–one law for finite-range-dependent random environments” (October 5, 2026), Theorem 1.1, includes iid uniformly elliptic environments in d ≥ 3; it claims precisely the missing case of (a).
+OpenAI’s “Directional transience implies ballisticity” (September 23, 2026), Theorem 1.1, claims (b) for every d ≥ 2, with an almost-sure deterministic vector velocity and positive directional projection. The honeycomb preprint concerns self-avoiding walks and covers neither part.
+Lean artifacts and external checking records exist for the iid claims; this is a claim-coverage verdict, not a judgment that either manuscript’s proof is correct. Details and limitations are in VERIFY.md.

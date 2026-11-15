@@ -1,0 +1,60 @@
+# Worker rounds on the top-200 open problems, 14-15 November 2026
+
+This folder is the complete working record of five rounds of automated attempts on rows of our list of
+200 open problems in probability, statistical mechanics, random matrices and theoretical computer
+science. It is published as it was written, with the intermediate steps left in: the briefs each worker
+received, its running log, its proofs and scripts, its final report, and the coordinator's vetting of
+every claimed result. Home paths and internal names have been replaced; nothing else was edited.
+
+## How a round works
+
+One coordinating agent picks rows, writes one brief per row and runs a pool of language-model workers
+(OpenAI Codex, model gpt-6.1-sol at high reasoning effort, normal service tier) on two small machines.
+Each worker has one session, one folder and one row. The brief (`PROMPT.md`) states the problem, its
+source papers, where it stands, and the earlier attempts the worker must read first. The worker then:
+
+1. checks for five minutes whether the problem was solved elsewhere (if so it writes
+   `SOLVED_ELSEWHERE.md` with the reference and stops);
+2. re-checks the previous worker's main claim an independent way and records whether it holds;
+3. chooses one piece that extends it (a special case, a sharper constant, more cases computed, a missing
+   lemma), writes the choice in `LOG.md`, and does it: a proof goes in `PROOF.md` step by step, a
+   computation is a script in the folder with its command and output in `LOG.md`;
+4. tries to break its own result;
+5. ends with `REPORT.md`, whose first line is one of `VERDICT: PROVED`, `PARTIAL`, `COMPUTED`,
+   `NO PROGRESS` or `EARLIER RESULT WRONG`.
+
+Each later round is a continuation brief for every row whose previous report said PROVED or PARTIAL, so a
+row's folders across `results/mini1`, `round3`, `round4` and `round5` read as one chain. The scripts
+`make_r5.sh` and `make_r6.sh` show how a continuation round is generated from the last one. Workers run
+single-threaded under 1 GB with a 20-minute cap per program, and may not write outside their folder.
+
+## What is here
+
+| path | what it holds | reports |
+|---|---|---|
+| `results/mini1/briefs/` | rounds 1 and 2 (first attempts on 122 rows) | 26 PROVED, about 70 PARTIAL, 6 COMPUTED, 11 found solved elsewhere, 9 no progress |
+| `results/laptop/` | a small set of laptop runs | 6 PROVED, 2 PARTIAL |
+| `round3/`, `round4/`, `round5/` | continuation rounds | about one third PROVED a piece, the rest PARTIAL, each round |
+| `PICKED.tsv`, `PICKED2.tsv` | the rows chosen for rounds 1 and 2: id, list rank, area, title | |
+| `MATCH.tsv` | each row matched against our earlier notes, with a lexical score | |
+| `ROUND2_VERDICTS.md` | the first line of every round-2 report | |
+| `VETTED_PROVED.md`, `VETTED_PROVED2.md` | the coordinator's check of each PROVED claim: re-run checkers, brute-force enumeration, hand derivations | |
+
+A PROVED verdict means the worker proved the piece it chose, not that the open problem is solved. Every
+vetted PROVED claim so far is a bounded lemma, a reduction, a special case or an obstruction; none changes
+the status of its row, and the reports say so themselves. The vetting files record which claims were
+reproduced independently, which were only read, and which steps are still owed by hand. Treat any result
+here as a lead to be checked, not as a theorem.
+
+## Credit
+
+The problems belong to the people who posed and developed them. Each brief names its source papers on its
+`Source:` line, and each worker's `LITERATURE.md` and `REPORT.md` cite the work it relied on, with authors
+as they appear on the paper; the workers were told to cite only papers they actually opened. Where a
+report finds that a row was settled elsewhere, `SOLVED_ELSEWHERE.md` gives the reference, and the credit
+for that result is entirely its authors'. The language-model workers produced the drafts, proofs and code
+in this folder; the coordinating agent chose the rows, wrote the briefs and did the vetting. No result here
+has been refereed.
+
+A small number of files from these rounds are not included because they contain personal names or local
+machine details that could not be scrubbed without changing their content.

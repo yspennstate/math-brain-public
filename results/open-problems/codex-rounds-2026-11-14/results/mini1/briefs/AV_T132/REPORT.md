@@ -1,0 +1,3 @@
+VERDICT: PARTIAL-CLAIMED full-range graph-metric GHP convergence with degree measure and unspecified deterministic rescaling; the stated distance exponent is not asserted
+OpenAI, “Metric-measure limits of subcritical FK and spanning-tree planar maps” (September 24, 2026), Theorem 1.1 covers each fixed 0<q<4 and the q=0 spanning-tree ensemble, but explicitly declines a normalization power law.
+The q=4 paper is outside the row; the linear-clock paper imports the q=0 spatial limit. Located expert acknowledgements are not proof audits, and the family’s Lean statement covers q>4 and a Brownian CRT instead.
