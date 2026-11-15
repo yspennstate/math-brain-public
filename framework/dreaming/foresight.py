@@ -30,15 +30,11 @@ What it does (reads only; writes nothing; wires to nothing - safe to run any tim
 
   python foresight.py
 """
-if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
-    print((__doc__ or "").strip() or "run with no arguments")
-    raise SystemExit(0)
-
 import os, io, re, time
 from collections import defaultdict
 
 HOME = os.path.expanduser("~")
-MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 DR = os.path.join(HOME, ".claude", "dreaming")
 BRAIN = os.path.join(HOME, "brain-repo", "01_ai_consciousness", "brain")
 
@@ -85,50 +81,7 @@ def _entries(text):
     return out
 
 
-_MIS_CACHE = os.environ.get("FORESIGHT_CACHE") or os.path.join(DR, "foresight_mistakes_cache.json")
-_MIS_HOME = (MEM, DR)
-
-
-def _mis_ident():
-    """What the parse reads: the ledger and the reflex table, by full path and [mtime_ns, size, inode]."""
-    out = []
-    for p in (os.path.join(MEM, "MISTAKES.md"), os.path.join(DR, "instincts.tsv")):
-        try:
-            s = os.stat(p)
-            out.append([p, s.st_mtime_ns, s.st_size, s.st_ino])
-        except OSError:
-            out.append([p, None, None, None])
-    return out
-
-
 def _mistakes():
-    """_mistakes_parse, cached on disk while the ledger and the reflex table are unchanged (6 Nov 2026: the parse was
-    ~26 ms of resume_checkpoint's ~37 ms on every Stop). FORESIGHT_CACHE=0 turns it off; a cache that cannot be read
-    or written only costs the parse."""
-    if _MIS_CACHE == "0" or (MEM, DR) != _MIS_HOME:   # a test that points MEM elsewhere never touches the cache
-        return _mistakes_parse()
-    ident = _mis_ident()
-    try:
-        import json
-        with io.open(_MIS_CACHE, encoding="utf-8") as f:
-            c = json.load(f)
-        if c.get("ident") == ident:
-            return [tuple(r) for r in c["rows"]]
-    except Exception:
-        pass
-    rows = _mistakes_parse()
-    try:
-        import json
-        tmp = "%s.%d.tmp" % (_MIS_CACHE, os.getpid())
-        with io.open(tmp, "w", encoding="utf-8") as f:
-            json.dump({"ident": ident, "rows": rows}, f)
-        os.replace(tmp, _MIS_CACHE)
-    except Exception:
-        pass
-    return rows
-
-
-def _mistakes_parse():
     """Parse the correction ledger into (date, reflex_id, lesson) rows. reflex_id is the first token after
     'reflex:' - a name, or 'none' when the correction has no guard yet. A dated prose entry counts on the same terms:
     only when it states 'reflex:' (the ledger's header asks it to since 27 Sep)."""
@@ -168,6 +121,13 @@ def _mistakes_parse():
             cov = _covered_by_sting(dm, ln[:rm.start()])   # the entry's own words, never its 'reflex:' tail
             if cov:
                 rid = cov
+            else:
+                # A correction whose shape a hook now catches on the tool's OUTPUT (not a reflex on the command) is
+                # guarded too; it prints under GUARDED IN CODE with the hook named, not as 'none yet'.
+                for hid, rx in GUARDED_BY_HOOK:
+                    if rx.search(ln[:rm.start()]):
+                        rid = hid
+                        break
         # A word that is neither 'none', a live id, nor shaped like an id ("reflex: the X reflex fired", "reflex: before
         # ...", "reflex: claim ...") is prose after the label, not a citation: it was printed as a missing reflex
         # ('the', 'exists', 'machinery', 'covered', 'last', 'before', 'claim', 'stop' on 12 Oct). Skip the row.
@@ -236,7 +196,7 @@ def _gut():
 
 
 def _owner_forecasts():
-    """The brain's own open bets about what the owner will ask next - the honest preplay source."""
+    """The brain's own open bets about what the author will ask next - the honest preplay source."""
     t = _read(os.path.join(BRAIN, "PREDICTIONS.md"))
     m = re.search(r"## The brain expects[^\n]*\n+(.*?)(\n## |\Z)", t, re.S)
     out = []
@@ -348,7 +308,12 @@ def main():
     none_dates = dates_by_reflex.get("none", set())
     known = set(gut)
     orphan = [(rid, dates_by_reflex[rid]) for rid in dates_by_reflex
-              if rid != "none" and rid not in known and len(dates_by_reflex[rid]) >= 1]
+              if rid != "none" and rid not in known and rid not in GUARDED_IN_CODE and len(dates_by_reflex[rid]) >= 1]
+    by_code = sorted(rid for rid in dates_by_reflex if rid in GUARDED_IN_CODE and rid not in known)
+    if by_code:
+        print("\nGUARDED IN CODE, NOT BY A REFLEX (measured: a reflex for these would be noise)")
+        for rid in by_code:
+            print("  * %s - %s" % (rid, GUARDED_IN_CODE[rid]))
     if none_dates or orphan:
         print("\nUNGUARDED  (corrections with no live reflex - a future mistake with no guard)")
         n_none = sum(1 for _, rid, _ in mis if rid == "none")
@@ -364,5 +329,31 @@ def main():
     print()
 
 
+# Cited reflex ids whose guard belongs in the worker's code, not in a shell reflex, because a replay showed the
+# reflex would be almost all false fires. Each line says why, so a later reader can reopen it. (10 Nov 2026,
+# an agent.) Not a door for ids that were simply never built: add one only with the replay numbers.
+GUARDED_IN_CODE = {
+    "a_failed_step_must_not_write_its_done_marker":
+        "MISTAKES 10-10; replay 10 Nov: a foreground worker under a kill timer is 45 of 72,202 commands, nearly all "
+        "label-checker scripts, and 1 kill of that shape in 98,523 results (a false match). The rule lives in the worker: "
+        "a failed or killed item writes nothing and stays queued.",
+    "felt_error_hook_guessed_field":
+        "MISTAKES 08-10 01:0x, 11-06 18:34 and 19:04 (a JSON field read by a guessed name). Caught on the tool's output "
+        "by error_monitor.py's _GUESSED_FIELD signature since 10 Nov (KeyError / IndexError off an empty default; replay "
+        "54 of 97,312 results). A reflex on the command matched 304 of 116,647 Bash inputs, so it stays a hook. Not yet "
+        "caught: a guessed field that silently reads an empty default and never throws.",
+}
+
+# Ledger rows with 'reflex: none' whose shape a hook catches on the output: (id in GUARDED_IN_CODE, entry pattern).
+GUARDED_BY_HOOK = [
+    ("felt_error_hook_guessed_field",
+     re.compile(r"guess\w*\W+(?:\w+\W+){0,2}(?:key|field|schema|shape)|(?:key|field|schema|shape)\W+(?:\w+\W+){0,2}guess", re.I)),
+]
+
+
 if __name__ == "__main__":
+    # Discovery is not execution: a help request exits before any work.
+    if "-h" in __import__('sys').argv[1:] or "--help" in __import__('sys').argv[1:]:
+        print(__doc__ or os.path.basename(__file__))
+        raise SystemExit(0)
     main()

@@ -48,7 +48,7 @@ SIGS = [
     ("a possible LEAKED SECRET", r"sk-[A-Za-z0-9]{20}|ghp_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----"),
     ("a PowerShell parse error", r"ParserError|Unexpected token|missing (statement|closing|terminator)"),
     ("a SyntaxError", r"SyntaxError:|IndentationError:"),
-    ("an implausible magnitude (numbers like this have flattered a sim before - reconcile against the measured record/tape, don't report it)",
+    ("an implausible magnitude (numbers like this have flattered a sim before - reconcile against the lived book/tape, don't report it)",
      r"(?i:sharpe\D{0,12}([5-9]\.\d|[1-9]\d[.\s])|\b\d{3,}(\.\d+)?\s*%\s*(std|standard|vol)|hedg\w*\D{0,20}\d{2,}\s*(million|\bmn\b)|\b\d{3,}\s*%\s*(a month|monthly|return))"),
 ]
 
@@ -81,22 +81,31 @@ def hits_for(resp, cmd):
         if label.startswith("mojibake") and pdf_cmd:
             continue
         hits.append(label)
+    # A GUESSED FIELD (10 Nov 2026, an agent): MISTAKES 2026-08-10 01:0x and 2026-11-06 18:34/19:04 are one slip -
+    # reading a field of a record parsed from another tool by a guessed name. It stayed 'reflex: none yet' because the
+    # command shape (json.load + .get('k', [])) is on ~1.1 pct of all Bash commands, nearly all harmless. The moment it
+    # bites is visible in the OUTPUT: KeyError, an IndexError off an empty default, or a None where a record was meant.
+    if cmd and _JSON_PARSE.search(cmd) and _GUESSED_FIELD.search(resp) and not echo:
+        hits.append("a guessed field on a parsed record - print list(d) / d.keys() of ONE record from that tool "
+                    "before reading any field (MISTAKES 2026-08-10, 2026-11-06)")
     return hits
 
 
+_JSON_PARSE = re.compile(r"json\.loads?\(|ConvertFrom-Json|\bjq\b")
+_GUESSED_FIELD = re.compile(r"KeyError: ['\"]|IndexError: list index out of range|'NoneType' object is not "
+                            r"(subscriptable|iterable)|AttributeError: 'NoneType' object has no attribute 'get'|"
+                            r"TypeError: string indices must be integers|cannot index into a null array|"
+                            r"Cannot index into a null array")
+
+
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
         return
     try:
         # A call that FAILED (non-zero exit, a tool error) never reaches PostToolUse: Claude Code sends it to
-        # PostToolUseFailure with the text under "error" and no tool_response. Measured 30 Oct on macOS over 48 h:
+        # PostToolUseFailure with the text under "error" and no tool_response. Measured 30 Oct on the Mac over 48 h:
         # 0 of 281 failed calls carried any PostToolUse hook output against 812 of 8,807 ok calls, and all 165 ERN
         # fires were on calls that had succeeded. Read the failure text so the felt error can see real failures.
         resp = data.get("tool_response") or data.get("error") or ""

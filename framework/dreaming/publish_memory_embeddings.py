@@ -44,7 +44,7 @@ def _authority_snapshot(report, committed_at=None):
     }
 
 
-def _missing_only_newer(report):
+def _missing_only_newer(report, exclude=()):
     """True when the report's only shortfall is memories newer than every memory the generation holds, so written
     after the build read the corpus. Their rows are missing, not wrong; the next build embeds them. A missing memory
     no newer than the newest held one (the build skipped it), or more than 2% of the corpus missing, still refuses."""
@@ -57,11 +57,52 @@ def _missing_only_newer(report):
     if len(missing) > max(1, int(0.02 * report.get("eligible", 0))):
         return False
     try:
-        held = [int(manifest[s][1]) for s in manifest if s not in missing]
+        skip = missing | set(exclude)
+        held = [int(manifest[s][1]) for s in manifest if s not in skip]
         newest_held = max(held)
         return all(int(manifest[s][1]) > newest_held for s in missing)
     except (KeyError, IndexError, TypeError, ValueError):
         return False
+
+
+def _built_at_ns(report):
+    from datetime import datetime
+    text = str(report.get("built_at") or "")
+    if not text:
+        return None
+    try:
+        return int(datetime.fromisoformat(text.replace("Z", "+00:00")).timestamp() * 1_000_000_000)
+    except ValueError:
+        return None
+
+
+def _stale_only_edited_after_build(report):
+    """The stale rows (text hash differs from the file now) are at most 2% of the corpus. A stale row holds the vector
+    of the file's older text; _stamp_activation marks it row_safe False, consumers skip it (embedding_artifact checks
+    row_safe), the next build re-embeds it. built_at is stamped when the build ENDS, so a file edited during the encode
+    is older than built_at and still stale: the time is no test here, the hash is. More than 2% stale (a builder that
+    hashed the wrong text) still refuses."""
+    stale = report.get("stale") or []
+    return len(stale) <= max(1, int(0.02 * report.get("eligible", 0)))
+
+
+def _missing_or_stale_only_newer(report):
+    """complete, except for memories written (missing) or edited (stale) after the build."""
+    if (not report.get("readable") or not report.get("corpus_readable") or not report.get("hashes_available")
+            or report.get("problems") or report.get("extra") or report.get("duplicates")
+            or report.get("activation_inconsistent")):
+        return False
+    if not report.get("missing") and not report.get("stale"):
+        return False
+    if not _stale_only_edited_after_build(report):
+        return False
+    if report.get("missing"):
+        trimmed = dict(report)
+        trimmed["stale"] = []
+        # the stale files were edited after the build: their mtimes are now-ish and would make every memory
+        # written during the build look older than the newest held one (8 Nov: 47 of 48 and 16 of 16 refused)
+        return _missing_only_newer(trimmed, exclude=report.get("stale") or ())
+    return True
 
 
 def _why(report):
@@ -84,6 +125,42 @@ def _why(report):
     return "; ".join(parts)
 
 
+def _only_added_between(first, second):
+    """True when the second read differs from the first only by memories written between the two reads: the same
+    sidecar bytes and rows, every file of the first read still there with the same size and mtime, and at least one
+    new file. Writers that skip memory_write.lock (compaction anchors, notes) add about a file a minute, and treating
+    each addition as a torn read refused every publish on 7 Nov (24 of 24 passes). An edited or deleted file still
+    refuses. The second read is then judged on its own (the new files are missing, newer than the build)."""
+    if not (first.get("readable") and second.get("readable") and first.get("corpus_readable")
+            and second.get("corpus_readable")):
+        return False
+    for key in ("sidecar_sha256", "sidecar_size", "model", "built_at", "embedded"):
+        if first.get(key) != second.get(key):
+            return False
+    m1 = first.get("corpus_manifest") or {}
+    m2 = second.get("corpus_manifest") or {}
+    if not m1 or len(m2) < len(m1):
+        return False
+    # 8 Nov (an agent, handed over by an agent): authors revise their own fresh notes about once every
+    # 2.5 min without memory_write.lock, so an edit inside the two reads refused every publish that night. An edited
+    # file is accepted like an added one: no file of the first read may vanish, and every file that moved must be newer
+    # than the first read saw it. The second read then judges it alone; an edited row is stale there and is published
+    # masked (row_safe False) through _missing_or_stale_only_newer, so recall falls back to the overlay for it.
+    moved = 0
+    for slug, row in m1.items():
+        now = m2.get(slug)
+        if now is None:
+            return False
+        if now != row:
+            try:
+                if int(now[1]) <= int(row[1]):
+                    return False
+            except (IndexError, TypeError, ValueError):
+                return False
+            moved += 1
+    return moved > 0 or len(m2) > len(m1)
+
+
 def _coherent_report(mem_dir, sidecar, expected_model, expected_sha, expected_size,
                      require_complete=True):
     """Two strict reads must describe the same safe corpus and exact immutable bytes."""
@@ -93,11 +170,11 @@ def _coherent_report(mem_dir, sidecar, expected_model, expected_sha, expected_si
         "sidecar_sha256", "sidecar_size", "corpus_sha256", "corpus_stat_sha256",
         "corpus_stat_files", "eligible", "embedded", "model", "built_at",
     )
-    if any(first.get(k) != second.get(k) for k in stable_keys):
+    if any(first.get(k) != second.get(k) for k in stable_keys) and not _only_added_between(first, second):
         raise OSError("corpus or staged generation changed during publication audit")
     if (not second["readable"] or not second["corpus_readable"] or second["problems"]
             or second["sidecar_sha256"] != expected_sha or second["sidecar_size"] != expected_size
-            or (require_complete and not second["complete"] and not _missing_only_newer(second))):
+            or (require_complete and not second["complete"] and not _missing_or_stale_only_newer(second))):
         raise ValueError("sidecar is not an exact safe current-corpus generation (%s)" % _why(second))
     return second
 
@@ -108,7 +185,7 @@ def _warm_corpus(mem_dir):
     read, and the publish hit its 1800 s cap holding the lock). The locked audits still decide."""
     if not hasattr(builder, "enable_read_cache"):
         # the read cache lives in the Mac's builder (dreaming/macmini); a machine whose builder lacks it skips the warm
-        # pass, which only saves time, rather than failing the publish (4 Nov)
+        # pass, which only saves time, rather than failing the publish (4 Nov, math-ross20)
         return
     builder.enable_read_cache()
     try:
@@ -256,7 +333,7 @@ def publish(staged, production=builder.OUT, authority_path=coverage.DEFAULT_AUTH
                 mem_dir, staged, expected_model, staged_sha, staged_size
             )
             generation_blob, expected_active = _stamp_activation(staged_blob, staged_report)
-            if expected_active != staged_report["embedded"]:
+            if expected_active != staged_report["embedded"] - len(staged_report.get("stale") or []):
                 raise ValueError("complete publication unexpectedly produced unsafe rows")
             pending_sha = hashlib.sha256(generation_blob).hexdigest()
             pending_generation = generation_path(production, pending_sha)

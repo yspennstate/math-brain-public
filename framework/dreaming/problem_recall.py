@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """What did we already try on this open problem? Prior work for a problem id or a problem statement, in one call
-(12 Oct 2026, front F08 of the brain-improvement run).
+(an agent-f08, 12 Oct 2026, front F08 of the brain-improvement run).
 
     python ~/.claude/dreaming/problem_recall.py P0072              prior work for one problem id (any intake: P C D E F G H I)
     python ~/.claude/dreaming/problem_recall.py "<statement words>" find the problem by its statement, then its prior work
@@ -43,11 +43,11 @@ import sys
 import time
 
 HOME = os.path.expanduser("~")
-MOP = os.environ.get("PROBLEM_RECALL_MOP", os.path.expanduser(r"~/open-problems-repo"))
-BRAIN = os.environ.get("PROBLEM_RECALL_BRAIN", os.path.expanduser(r"~/brain-repo"))
+MOP = os.environ.get("PROBLEM_RECALL_MOP", r"~\open-problems-repo")
+BRAIN = os.environ.get("PROBLEM_RECALL_BRAIN", r"~\brain-repo")
 MATHDIR = "06_math_research"
-MEMDIR = os.environ.get("PROBLEM_RECALL_MEMDIR", os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory"))
-STORE = os.environ.get("MATHBRAIN_STORE", "")
+MEMDIR = os.environ.get("PROBLEM_RECALL_MEMDIR", os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory"))
+STORE = os.environ.get("MATHBRAIN_STORE", r"~\math-brain-build\local\population\brain.sqlite3")
 CACHE_DIR = os.environ.get("PROBLEM_RECALL_CACHE", os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                                                    "problem_recall_cache"))
 CACHE = os.path.join(CACHE_DIR, "index_v1.json.gz")
@@ -574,11 +574,12 @@ def attempt_docs(idx):
     return docs
 
 
-def find_problems(idx, query, limit):
+def find_problems(idx, query, limit, bm=None):
     q = words(query)
     if not q:
         return []
-    ps = Bm25(problem_docs(idx)).scores(q)
+    # main() already built this index for same_problem(); reuse it within the call.
+    ps = (bm if bm is not None else Bm25(problem_docs(idx))).scores(q)
     at = Bm25(attempt_docs(idx)).scores(q)
     top_p = max(ps.values()) if ps else 1.0
     top_a = max(at.values()) if at else 1.0
@@ -683,7 +684,7 @@ def latest(rows):
 
 def run_name(ledger_path):
     p = ledger_path or ""
-    for pat, name in (("codex_20h_20260906", "6 Sep codex_20h first pass"), ("intake_claude_20260907", "7 Sep intake C"),
+    for pat, name in (("codex_20h_20260906", "6 Sep codex_20h first pass"), ("intake_agent", "7 Sep intake C"),
                       ("intake_D_", "8 Sep intake D"), ("intake_E_", "8 Sep intake E"), ("intake_F_", "8 Sep intake F"),
                       ("intake_G_", "10 Sep intake G"), ("intake_H_", "14 Sep intake H"), ("intake_I_", "14 Sep intake I")):
         if pat in p:
@@ -984,8 +985,11 @@ def main(argv=None):
                                                       len(idx["files"])))
         return 0
     ids = [a + b for a, b in ID_RE.findall(q.upper())] if ID_RE.fullmatch(q.upper().split()[0]) else []
-    docs = problem_docs(idx)
-    bm = Bm25(docs)
+    docs = bm = None
+    # JSON needs only matches (or the explicitly supplied ids), not duplicate detection.
+    if not args.json:
+        docs = problem_docs(idx)
+        bm = Bm25(docs)
     if ids and all(ID_RE.fullmatch(x) for x in q.upper().replace(",", " ").split()):
         if args.json:
             print(json.dumps({"query": q, "ids": ids}))
@@ -995,7 +999,7 @@ def main(argv=None):
         for pid in ids:
             print_problem(idx, pid, args, docs, bm)
         return 0
-    hits = find_problems(idx, q, max(args.limit, 10))
+    hits = find_problems(idx, q, max(args.limit, 10), bm=bm)
     if args.json:
         print(json.dumps({"query": q[:80], "hits": [[p, round(s, 4)] for p, s in hits]}))
         return 0

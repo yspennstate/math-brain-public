@@ -3,8 +3,8 @@
 Why: the hook is the slowest one on every prompt (median ~400 ms of ~870 ms on 4 Nov). Almost all of it is reloading
 the same files each prompt: the embedding sidecar and its freshness check, the edge graph, the keyword generation,
 salience, habituation, the memory listing and MEMORY.md. Kept in one process those loads are paid once; on 5 Nov
-memoizing them cut the median from 415 ms to 50 ms with the output byte-identical on 8 of 8
-prompts (scratch harness memo_spread.py).
+(an agent) memoizing them cut the median from 415 ms to 50 ms with the output byte-identical on 8 of 8
+prompts (scratch harness memo_spread.py, kept in ~/brain/porting/spread_server/).
 
 The hook itself is unchanged: spread_client.py sends the hook's stdin here and prints the answer; any failure, a
 busy server or a decline means the hook runs cold exactly as before.
@@ -34,13 +34,13 @@ ENDPOINT = os.path.join(STATE_DIR, "endpoint.json")
 LOG = os.path.join(STATE_DIR, "server.log")
 WARM_KEYS = os.path.join(STATE_DIR, "warm_keys.json")   # the last server's loader calls, for a warm start
 CALL_LOG = os.path.join(STATE_DIR, "calls.jsonl")   # one line a call: session prefix, served or why not, ms
-# Laptop port (5 Nov): the laptop's loaders cost seconds, not the Mac's ~0.4 s, so a refill of every
+# Laptop port (5 Nov, an agent): the laptop's loaders cost seconds, not the Mac's ~0.4 s, so a refill of every
 # entry each 72 s would keep a core busy for nothing; here the TTL is 300 s (a dependency's stat change still refills
 # at once). An in-place edit to one memory file, which moves no watched stat, is seen within 5 minutes.
 STATE_TTL = float(os.environ.get("SPREAD_SERVER_TTL", "300" if os.name == "nt" else "120"))
+NAMES_BG = os.environ.get("SPREAD_SERVER_NAMES_BG", "1") != "0"
 IDLE_EXIT = float(os.environ.get("SPREAD_SERVER_IDLE_EXIT", "7200"))
 RSS_CAP = int(float(os.environ.get("SPREAD_SERVER_RSS_CAP_GB", "1.5")) * 1024 ** 3)
-NAMES_BG = os.environ.get("SPREAD_SERVER_NAMES_BG", "1") != "0"
 SERVE_STALE = os.environ.get("SPREAD_SERVER_STALE", "1" if os.name == "nt" else "0") == "1"
 RESTAT_AGE = float(os.environ.get("SPREAD_SERVER_RESTAT_AGE", "120"))
 ENV_PREFIXES = ("BRAIN_", "SPREAD_", "MATHBRAIN_", "FOK_")
@@ -48,9 +48,7 @@ ENV_PREFIXES = ("BRAIN_", "SPREAD_", "MATHBRAIN_", "FOK_")
 # and read 68 vs ~85 ms; timed both as a hook runs (a fresh process each, ab_fok2.py) it is 86 vs 134 ms, 30 of 30
 # byte-identical, so it is hosted. Its warm time is scoring long prompts (14 ms short, ~64 ms median on real ones).
 HOSTED = ("spread_recall", "fok_probe")
-
-
-# Which files a slow served call opened. A served call spends 80-94 pct of its
+# Which files a slow served call opened (laptop, 5 Nov 20:2x, an agent). A served call spends 80-94 pct of its
 # wall time off the CPU; the BM25 arm's 2,000 sqlite page reads (7.1 MB) cost only ~140 ms of CPU, and single cold
 # opens here take ~0.3 s under disk contention. An audit hook notes every open/listdir/scandir of the serving thread
 # during a call; a call slower than OPEN_LOG_MS writes its opens, by directory, with the longest gaps that followed
@@ -84,13 +82,13 @@ def open_summary(ops, t_end):
     return {"n": len(ops), "dirs": dict(sorted(dirs.items(), key=lambda kv: -kv[1])[:8]), "gaps": gaps[:8]}
 
 
-# The BM25 build window. After each index publish the new generation's postings sidecar takes tens of seconds to build,
-# and in that window BM25() unpickles the whole payload under the GIL (measured: 14.9 s of a 15.1 s served call). The
-# previous generation's sidecar is still on disk then (the sweep keeps the newest older one as the next build's base),
-# and a sidecar file only ever appears by os.replace of a committed temp, so any *.postings.<tag>.sqlite3 is a finished
-# file. Here the hosted hooks' BM25() answers from it while the live one builds, the same one-generation-stale trade
-# SERVE_STALE makes for the graph; deliberate recall (outside this process) is untouched. Past STALE_BM25_MAX_S of age
-# the old file is not used and the payload path runs as before. Off: SPREAD_SERVER_STALE_BM25=0.
+# The BM25 build window (laptop, 5 Nov 20:4x, an agent). After each index publish the new generation's postings
+# sidecar takes 20-75 s to build, and in that window BM25() unpickles the ~100 MB payload under the GIL: 14.9 of a
+# 15.1 s served call at 20:28:58 (opens.jsonl). The previous generation's sidecar is still on disk then (the sweep keeps
+# the newest older one as the next build's base), and a sidecar file only ever appears by os.replace of a committed
+# temp, so any *.postings.<tag>.sqlite3 is a finished file. Here the hosted hooks' BM25() answers from it while the live
+# one builds, the same one-generation-stale trade SERVE_STALE makes for the graph; deliberate recall (brain.py, outside
+# this process) is untouched. Past STALE_BM25_MAX_S of age the old file is not used and the payload path runs as before.
 STALE_BM25 = os.environ.get("SPREAD_SERVER_STALE_BM25", "1" if os.name == "nt" else "0") == "1"
 STALE_BM25_MAX_S = float(os.environ.get("SPREAD_SERVER_STALE_BM25_MAX_S", "1800"))
 STALE_BM25_USED = [0]
@@ -142,38 +140,39 @@ def install_stale_bm25():
 
     __init__._stale_wrapped = True
     cls.__init__ = __init__
+    install_df_memo(bm25)
 
 
-# Spell-correct df memo. After the held name list, the largest frames in slow served calls were the sidecar df's
-# prefetch: QueryNormalizer asks the sidecar's p(term, df) table for every edit-1 candidate of each rare prompt word
-# (about 55 x length candidates a word), and each served call builds a new BM25 and a new df reader, so every answer
-# was thrown away. The memo keeps them per sidecar FILE: the key is the database file the connection opened plus its
-# stat identity, so a new generation (a new file, or the same file rewritten) changes the key and the answers stay
-# exact. prefetch fills a local dict and publishes it in one update, so a concurrent caller never sees a half-filled
-# chunk. Off: SPREAD_SERVER_DF_MEMO=0.
-#
-# Carry. The sidecar is rebuilt every few minutes (one new memory is a new generation), and an empty memo per
-# generation left no live win. A new generation keeps every answer whose word is in no document that changed: the two
-# generations' fp tables (an 8-byte fingerprint per position) say which documents went or came, their fwd rows give
-# those documents' words, and only those words are dropped. Checked on a real rebuild (54 documents gone, 63 came,
-# 7,410 words): 0 of 20,000 present words and 0 of 30,000 edit-1 candidates outside that set changed df; 1,129 of
-# 5,000 inside it did. The retirer deletes a superseded sidecar within minutes, so the memo's generation is held open
-# read-only (bm25's sweep treats a held file as next sweep's work) and let go right after the carry. Cost about 210 ms
-# (the new fp table; the old one is kept) plus about 30 ms once per generation. No fp/fwd table, or any error: an
-# empty memo. Off: SPREAD_SERVER_DF_CARRY=0.
+# Spell-correct df memo (5 Nov 23:2x, an agent, RECALL-10X rank 3). After the held name list, the largest frames in
+# slow served calls were bm25 _SidecarDF.prefetch (41 sampler hits, 24k faults over 14 slow calls): QueryNormalizer asks
+# the sidecar's p(term, df) table for every edit-1 candidate of each rare prompt word (~55 x length candidates a word),
+# and each served call builds a new BM25 and a new connection, so every answer is thrown away. The memo keeps them per
+# sidecar FILE: the key is the database file the connection opened plus its stat identity, so a new generation (a new
+# file, or the same file rewritten) starts an empty memo and the answers stay exact. prefetch fills a local dict and
+# publishes it in one update, so a concurrent caller never sees a placeholder None. Off: SPREAD_SERVER_DF_MEMO=0.
 DF_MEMO = {"key": None, "got": {}, "hold": None, "fp": None}
 DF_MEMO_MAX = 400000
+# Carry (6 Nov 00:2x, an agent): the sidecar is rebuilt every 3-7 min (one new memory = a new generation), and an
+# empty memo per generation left no live win (74 calls median 733 ms before, 36 calls 851 ms with the memo). A new
+# generation now keeps every answer whose word is in no document that changed: the two generations' fp tables (8-byte
+# fingerprint per position) say which documents went or came, their fwd rows give those documents' words, and only
+# those words are dropped. Checked on a real rebuild (54 docs gone, 63 came, 7,410 words): 0 of 20,000 present words
+# and 0 of 30,000 edit-1 candidates outside that set changed df; 1,129 of 5,000 inside it did. The retirer deletes a
+# superseded sidecar within minutes, so the memo's generation is HELD open read-only (bm25's sweep treats a held file
+# as next sweep's work) and let go right after the carry. Cost ~210 ms (the new fp table; the old one is kept) + ~30 ms
+# once per generation. No fp/fwd table or any error: empty memo as before. Off: SPREAD_SERVER_DF_CARRY=0.
 DF_CARRY = os.environ.get("SPREAD_SERVER_DF_CARRY", "1") != "0"
 DF_LOCK = threading.Lock()
 _bm25_mod = None
-# Vocabulary filter. Nearly all of the edit-1 candidates prefetch asks the sidecar for are not words of the corpus (150
-# memory descriptions: 9,973 asked, 50 present), and each absent probe still reads a leaf page of p, whose postings sit
-# inline (about 0.7 ms a probe cold, about 310 ms a corrected word). The server holds, per generation, a sorted array of
-# the in-process hash() of every term (the keys of vocab['df'] are exactly p's terms) and asks sqlite only for
-# candidates whose hash is in it: an absent hash is an exact None, a collision only costs a query. Built off the call
-# path in a thread (about 0.7 s, about 80 MB transient); a new generation unions the carry's changed words into the old
-# array (a word in no changed document was in the old p), and a full rebuild every 6 h drops the stale words. While no
-# array matches the current file, prefetch asks for everything, as before. Off: SPREAD_SERVER_DF_VOCAB=0.
+# Vocabulary filter (6 Nov 05:0x, an agent, RECALL-10X rank 3). 99.5% of the edit-1 candidates prefetch asks the
+# sidecar for are not words of the corpus (150 memory descriptions: 9,973 asked, 50 present), and each absent probe still
+# reads a leaf page of p, whose postings blobs sit inline (~0.7 ms a probe cold, ~310 ms a corrected word). The server now
+# holds per generation a sorted array of the in-process hash() of every term (vocab['df'] keys = p's terms exactly,
+# checked on 599,656), and asks sqlite only for candidates whose hash is in it: an absent hash is an exact None, a
+# collision only costs a query. Built off the call path in a thread (0.7 s, ~80 MB transient); a new generation unions the
+# carry's changed-word set into the old array (a word in no changed document was in the old p), and a full rebuild every
+# 6 h drops the stale words. No filter for the current file: prefetch asks for everything, as before.
+# Off: SPREAD_SERVER_DF_VOCAB=0.
 DF_VOCAB = os.environ.get("SPREAD_SERVER_DF_VOCAB", "1") != "0"
 VOCAB = {"key": None, "h": None, "built": 0.0, "bg": None}
 VOCAB_REBUILD_S = 6 * 3600
@@ -214,16 +213,7 @@ def _vocab_union(h, words):
     i = np.searchsorted(h, new)
     j = np.minimum(i, len(h) - 1)
     keep = h[j] != new
-    return np.insert(h, i[keep], new[keep]) if keep.any() else h   # a sorted insert, no re-sort of the whole array
-
-
-def _vocab_absent(h, words):
-    """For each of `words`, True when its hash is not in the sorted array `h`: the word is exactly absent from p."""
-    import numpy as np
-    hs = np.fromiter((hash(x) for x in words), dtype=np.int64, count=len(words))
-    i = np.searchsorted(h, hs)
-    i[i >= len(h)] = 0
-    return (h[i] != hs).tolist()
+    return np.insert(h, i[keep], new[keep]) if keep.any() else h   # sorted insert, no re-sort of the whole array
 
 
 def _ro_con(path):
@@ -231,126 +221,147 @@ def _ro_con(path):
     return sqlite3.connect("file:%s?mode=ro" % path.replace("\\", "/"), uri=True, check_same_thread=False)
 
 
+# Carry cap (11 Nov 2026, an agent). The carry reads each changed document's terms one row at a time, under
+# DF_LOCK, so every call waits for it. A full rebuild renumbers positions and makes every document look changed: at
+# 02:43 on 11 Nov one carry ran 93 s (93,214 page faults) and the 13 prompts that came in meanwhile went cold at 13-17 s,
+# one of them starting a second server. Reading all 61,870 documents costs ~14 s even warm (0.22 ms each), and a carry
+# that drops most of the memo saves nothing (2,800 documents: 1.2 s warm, 43k words dropped). Above the cap it raises, and df_view's existing error path starts an empty
+# memo, as before carries existed. An ordinary rebuild changes about 120 documents. SPREAD_SERVER_DF_CARRY_MAX sets it.
+DF_CARRY_MAX = int(os.environ.get("SPREAD_SERVER_DF_CARRY_MAX", "1000") or 1000)
+
+
 def _df_carry(old_con, old_fp, new_con, got):
-    """`got` minus the words of every document that differs between the two generations, the new fp map, and the
-    changed words."""
+    """`got` minus the words of every document that differs between the two generations, plus the new fp map."""
     fn = dict(new_con.execute("select pos, h from fp"))
     fo = old_fp if old_fp is not None else dict(old_con.execute("select pos, h from fp"))
+    gone = [p for p, h in fo.items() if fn.get(p) != h]
+    came = [p for p, h in fn.items() if fo.get(p) != h]
+    if len(gone) + len(came) > DF_CARRY_MAX:
+        try:
+            log("df carry skipped: %d documents differ (cap %d)" % (len(gone) + len(came), DF_CARRY_MAX))
+        except Exception:
+            pass
+        raise ValueError("df carry over cap")
     changed = set()
-    for p, h in fo.items():
-        if fn.get(p) != h:
-            changed.update(_bm25_mod._fwd_terms(old_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
-    for p, h in fn.items():
-        if fo.get(p) != h:
-            changed.update(_bm25_mod._fwd_terms(new_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
-    snap = dict(got)      # a copy first: other callers may be publishing into `got` meanwhile
-    return {k: v for k, v in snap.items() if k not in changed}, fn, changed
-
-
-def _df_memo_for(con):
-    """The shared answer dict for the sidecar `con` reads, swapped (and carried) when the generation changed."""
-    return _df_memo_and_vocab(con)[0]
-
-
-def _df_memo_and_vocab(con):
-    """(the shared answer dict, the vocabulary hash array or None) for the sidecar `con` reads; the array is returned
-    only when it was built for this exact file and stat identity."""
-    f = [r[2] for r in con.execute("pragma database_list") if r[1] == "main"][0]
-    s = os.stat(f)
-    key = (os.path.normcase(f), s.st_size, s.st_mtime_ns, getattr(s, "st_birthtime_ns", s.st_ctime_ns), s.st_ino)
-    if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
-        with DF_LOCK:
-            if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
-                got, fp, hold, changed = {}, None, DF_MEMO["hold"], None
-                old_key = DF_MEMO["key"]
-                if (DF_CARRY and hold is not None and (DF_MEMO["got"] or (DF_VOCAB and VOCAB["h"] is not None))
-                        and len(DF_MEMO["got"]) <= DF_MEMO_MAX
-                        and DF_MEMO["key"] and DF_MEMO["key"][0] != key[0] and hasattr(_bm25_mod, "_fwd_terms")):
-                    try:
-                        got, fp, changed = _df_carry(hold, DF_MEMO["fp"], con, DF_MEMO["got"])
-                    except Exception:
-                        got, fp, changed = {}, None, None
-                new_hold = None
-                if DF_CARRY:
-                    try:
-                        new_hold = _ro_con(f)
-                    except Exception:
-                        new_hold = None
-                DF_MEMO["key"], DF_MEMO["got"], DF_MEMO["fp"], DF_MEMO["hold"] = key, got, fp, new_hold
-                if DF_VOCAB and VOCAB["key"] != key:
-                    h = None
-                    if (changed is not None and VOCAB["h"] is not None and VOCAB["key"] == old_key
-                            and time.time() - VOCAB["built"] < VOCAB_REBUILD_S):
-                        try:
-                            h = _vocab_union(VOCAB["h"], changed)
-                        except Exception:
-                            h = None
-                    VOCAB["key"], VOCAB["h"] = (key, h) if h is not None else (None, None)
-                if hold is not None:
-                    try:
-                        hold.close()
-                    except Exception:
-                        pass
-    got, vh = DF_MEMO["got"], None
-    if DF_VOCAB:
-        if VOCAB["key"] == key:
-            vh = VOCAB["h"]
-        elif VOCAB["bg"] is None:
-            with DF_LOCK:
-                if VOCAB["bg"] is None and VOCAB["key"] != key and DF_MEMO["key"] == key:
-                    _vocab_bg(f, key)
-    return got, vh
+    for p in gone:
+        changed.update(_bm25_mod._fwd_terms(old_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
+    for p in came:
+        changed.update(_bm25_mod._fwd_terms(new_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
+    return {k: v for k, v in got.items() if k not in changed}, fn, changed
 
 
 def install_df_memo(bm25):
-    """Replace bm25's sidecar df reader with one whose answers live in DF_MEMO; returns True when installed."""
+    cls = bm25.BM25
     global _bm25_mod
-    base = getattr(bm25, "_SidecarDf", None)
-    if base is None or getattr(base, "_df_memo", False) or os.environ.get("SPREAD_SERVER_DF_MEMO", "1") == "0":
-        return False
     _bm25_mod = bm25
+    base = getattr(bm25, "_SidecarDF", None)
+    if (base is None or not hasattr(cls, "df_view") or getattr(cls.df_view, "_memo_wrapped", False)
+            or os.environ.get("SPREAD_SERVER_DF_MEMO", "1") == "0"):
+        return
 
-    class _MemoDf(base):
-        _df_memo = True
-
+    class _MemoDF(base):
         _vh = None
 
-        def __init__(self, con):
-            base.__init__(self, con)
-            try:
-                self._c, self._vh = _df_memo_and_vocab(con)
-            except Exception:
-                pass                      # keep the reader's own dict: no memo for this one
+        def _absent(self, need):
+            """The words of `need` whose hash is not in the generation's vocabulary: exactly absent from p."""
+            import numpy as np
+            h = self._vh
+            hs = np.fromiter((hash(x) for x in need), dtype=np.int64, count=len(need))
+            i = np.searchsorted(h, hs)
+            i[i >= len(h)] = 0
+            return (h[i] != hs).tolist()
 
         def prefetch(self, terms):
-            if self._full is not None:
-                return
-            got = self._c
-            need = [t for t in set(terms) if t not in got]
+            got = self._got
+            need = [x for x in terms if x not in got]
             loc = {}
             if self._vh is not None and need:
-                miss = _vocab_absent(self._vh, need)
-                loc.update(dict.fromkeys([t for t, m in zip(need, miss) if m]))
-                need = [t for t, m in zip(need, miss) if not m]
+                miss = self._absent(need)
+                loc.update(dict.fromkeys([x for x, m in zip(need, miss) if m]))
+                need = [x for x, m in zip(need, miss) if not m]
             for i in range(0, len(need), 900):
                 part = need[i:i + 900]
                 loc.update(dict.fromkeys(part))
-                for term, df in self._con.execute("select term, df from p where term in (%s)" % ",".join("?" * len(part)),
-                                                  part):
+                rows = self._con.execute("select term, df from p where term in (%s)" % ",".join("?" * len(part)), part)
+                for term, df in rows:
                     loc[term] = df
             got.update(loc)
 
-    bm25._SidecarDf = _MemoDf
-    return True
+        def get(self, term, default=None):
+            if self._vh is not None and term not in self._got and self._absent([term])[0]:
+                self._got[term] = None
+            return base.get(self, term, default)
+
+    orig = cls.df_view
+
+    def df_view(self):
+        v = orig(self)
+        if type(v) is not base:
+            return v
+        try:
+            f = [r[2] for r in v._con.execute("pragma database_list") if r[1] == "main"][0]
+            s = os.stat(f)
+            key = (os.path.normcase(f), s.st_size, s.st_mtime_ns, getattr(s, "st_birthtime_ns", s.st_ctime_ns), s.st_ino)
+        except Exception:
+            return v
+        if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
+            with DF_LOCK:
+                if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
+                    got, fp, hold, changed = {}, None, DF_MEMO["hold"], None
+                    old_key = DF_MEMO["key"]
+                    if (DF_CARRY and hold is not None and (DF_MEMO["got"] or (DF_VOCAB and VOCAB["h"] is not None))
+                            and len(DF_MEMO["got"]) <= DF_MEMO_MAX
+                            and DF_MEMO["key"] and DF_MEMO["key"][0] != key[0] and hasattr(bm25, "_fwd_terms")):
+                        try:
+                            got, fp, changed = _df_carry(hold, DF_MEMO["fp"], v._con, DF_MEMO["got"])
+                        except Exception:
+                            got, fp, changed = {}, None, None
+                    new_hold = None
+                    if DF_CARRY:
+                        try:
+                            new_hold = _ro_con(f)
+                        except Exception:
+                            new_hold = None
+                    DF_MEMO["key"], DF_MEMO["got"], DF_MEMO["fp"], DF_MEMO["hold"] = key, got, fp, new_hold
+                    if DF_VOCAB and VOCAB["key"] != key:
+                        h = None
+                        if (changed is not None and VOCAB["h"] is not None and VOCAB["key"] == old_key
+                                and time.time() - VOCAB["built"] < VOCAB_REBUILD_S):
+                            try:
+                                h = _vocab_union(VOCAB["h"], changed)
+                            except Exception:
+                                h = None
+                        if h is not None:
+                            VOCAB["key"], VOCAB["h"] = key, h
+                        else:
+                            VOCAB["key"], VOCAB["h"] = None, None
+                    if hold is not None:
+                        try:
+                            hold.close()
+                        except Exception:
+                            pass
+        m = _MemoDF(v._con)
+        m._got = DF_MEMO["got"]
+        if DF_VOCAB:
+            if VOCAB["key"] == key:
+                m._vh = VOCAB["h"]
+            elif VOCAB["bg"] is None:
+                with DF_LOCK:
+                    if VOCAB["bg"] is None and VOCAB["key"] != key and DF_MEMO["key"] == key:
+                        _vocab_bg(f, key)
+        return m
+
+    df_view._memo_wrapped = True
+    cls.df_view = df_view
 
 
-# Idle paging. Served calls of 2 s or more took a median 41,936 page faults
+# Idle paging (laptop, 5 Nov 21:0x, an agent). Served calls of 2 s or more took a median 41,936 page faults
 # against 399 for calls under 1.5 s, and the faults follow the idle time before the call (over 60 s idle: ~46,500, every
 # call slow): with ~0.7 GB of RAM free Windows trims the idle server's ~390 MB working set and the next prompt pages its
-# state back in. A SOFT minimum (both hard
+# state back in (memory spread_server_slow_warm_calls_are_page_faults_after_idle_2026_11_05). A SOFT minimum (both hard
 # flags off) asks the memory manager to trim other working sets first; it can still trim this one under real pressure,
 # so nothing is pinned. Off with SPREAD_SERVER_WS_MIN_MB=0; posix unchanged.
-WS_MIN_MB = float(os.environ.get("SPREAD_SERVER_WS_MIN_MB", "0"))   # off: the ~46k-fault calls blamed on idle trimming were each the first call after a server restart; 320 and 560 MB soft floors changed nothing
+WS_MIN_MB = float(os.environ.get("SPREAD_SERVER_WS_MIN_MB", "0"))   # off (5 Nov 21:3x): the ~46k-fault calls blamed on idle trimming were each the first call after a server restart; 320 and 560 MB soft floors changed nothing
 
 
 def ws_floor(min_mb):
@@ -407,7 +418,7 @@ def avail_mb():
 
 
 def rss_bytes(_faults=False):
-    if os.name == "nt":   # laptop port: the working set, from GetProcessMemoryInfo
+    if os.name == "nt":   # laptop port (5 Nov, an agent): the working set, from GetProcessMemoryInfo
         try:
             import ctypes
             from ctypes import wintypes
@@ -439,7 +450,7 @@ def rss_bytes(_faults=False):
 
 
 def call_cost():
-    """(process CPU s, page faults, working set MB) for one call's before/after: a
+    """(process CPU s, page faults, working set MB) for one call's before/after (5 Nov 20:1x, an agent): a
     served call of 8-55 s with no load inside it was not waiting on the refresher (1 of 4 overlapped one, as often
     as fast calls), so the log must say whether the time was CPU, paging, or waiting for a core. Windows counts soft
     and hard faults together; posix gives major faults."""
@@ -447,7 +458,7 @@ def call_cost():
     return time.process_time(), pf, ws / 1048576.0, io_counts()
 
 
-# Where a call's page faults come from. About one served call in eight takes
+# Where a call's page faults come from (laptop, 5 Nov 21:4x, an agent). About one served call in eight takes
 # ~44k faults (~175 MB) and ~2.2 s, yet its working set grows only 4-20 MB and free RAM is no lower than on fast calls:
 # something allocates and frees ~175 MB inside the call. A sampler thread reads the process fault count and private
 # bytes every FAULT_SAMPLE_MS during a call, charges each interval's faults to the serving thread's stack at its end
@@ -461,11 +472,22 @@ FAULT_LOG_MIN = int(os.environ.get("SPREAD_SERVER_FAULT_LOG_MIN", "20000"))
 FAULT_LOG_MS = float(os.environ.get("SPREAD_SERVER_FAULT_LOG_MS", "800"))
 
 
-class FaultSampler(threading.Thread):
+# 12 Nov 2026 (an agent): this was a Thread started inside the timed part of every call, and Thread.start()
+# returns only once the new thread has run. On the loaded laptop a new thread waits its turn: 33 ms median, p90 136 ms
+# from a fresh Normal process (08:14, 40 starts), while a thread that already exists answers an event in 0.08 ms. Calls
+# that skip the walk (two stat calls, no CPU) took 21 to 30 ms median for that reason, and every other call paid the
+# same. Now one resident thread is started once and each call hands it the job with an event (0.02 ms for the caller).
+# Same samples, same summary. SPREAD_SERVER_FAULT_RESIDENT=0 starts a thread per call as before.
+class FaultSampler:
+    _go = threading.Event()
+    _job = None
+    _thr = None
+
     def __init__(self, target):
-        super().__init__(daemon=True)
         self.tid = target.ident
         self.done = threading.Event()
+        self.finished = threading.Event()
+        self.picked = False
         self.by = {}
         self.n = 0
         self.peak_priv = 0.0
@@ -507,6 +529,40 @@ class FaultSampler(threading.Thread):
             fr = fr.f_back
         return "%s | %s" % (" < ".join(ours) or None, inner)
 
+    def start(self):
+        cls = FaultSampler
+        if os.environ.get("SPREAD_SERVER_FAULT_RESIDENT", "1") == "0":
+            threading.Thread(target=self._run_one, daemon=True).start()
+            return
+        if cls._thr is None or not cls._thr.is_alive():
+            cls._thr = threading.Thread(target=cls._resident, daemon=True, name="fault-sampler")
+            cls._thr.start()   # once in the server's life
+        cls._job = self
+        cls._go.set()
+
+    @classmethod
+    def _resident(cls):
+        while True:
+            cls._go.wait()
+            cls._go.clear()
+            job = cls._job
+            if job is not None:
+                job._run_one()
+
+    def _run_one(self):
+        self.picked = True
+        try:
+            self.run()
+        finally:
+            self.finished.set()
+
+    def join(self, timeout=None):
+        # called after done is set. A job the sampler never reached has nothing to wait for (and with done set it
+        # takes no sample when it is reached later).
+        if not self.picked:
+            return
+        self.finished.wait(timeout)
+
     def run(self):
         last = self.pf0
         while not self.done.wait(FAULT_SAMPLE_MS / 1000.0):
@@ -529,7 +585,6 @@ class FaultSampler(threading.Thread):
                 "top": [[k, v[0], v[1]] for k, v in top]}
 
 
-
 class DirWatch(threading.Thread):
     """Counts name changes (create, delete, rename) in one folder with ReadDirectoryChangesW; see Warm.held_names.
     ok is False when the watch could not be armed or has failed: the caller then lists every time."""
@@ -541,7 +596,7 @@ class DirWatch(threading.Thread):
         self.ok = False
         self.armed_at = float("inf")
         self.ready = threading.Event()
-        # (gen, "add"|"del"|"ovf", name) per change, so a hold can be patched instead of re-listed
+        # (gen, "add"|"del"|"ovf", name) per change, so a hold can be patched instead of re-listed (5 Nov 23:0x)
         self.log = collections.deque(maxlen=8192)
         self.lock = threading.Lock()
 
@@ -617,7 +672,7 @@ class DirWatch(threading.Thread):
 
 def io_counts():
     """(read ops, read MB, other ops) for this process on Windows, from GetProcessIoCounters; None elsewhere (5 Nov
-    20:1x): the first 28 costed calls spent 80-94 pct of their wall time off the CPU with few page
+    20:1x, an agent): the first 28 costed calls spent 80-94 pct of their wall time off the CPU with few page
     faults, so the wait is either file I/O (opens here cost ~0.3 s under contention) or a core run queue; read ops
     during a call tell the two apart."""
     if os.name != "nt":
@@ -680,12 +735,6 @@ class Warm:
                 log("stale bm25 sidecar in the build window on (max age %.0f s)" % STALE_BM25_MAX_S)
             except Exception as e:
                 log("stale bm25 off: %s: %s" % (type(e).__name__, e))
-        try:
-            import bm25
-            if install_df_memo(bm25):
-                log("spell-correct df memo on (carry %s)" % ("on" if DF_CARRY else "off"))
-        except Exception as e:
-            log("df memo off: %s: %s" % (type(e).__name__, e))
         log("loaded in %.2f s, %d code files watched" % (time.perf_counter() - t, len(self.code_files)))
 
     def _code_files(self):
@@ -835,11 +884,11 @@ class Warm:
             return "rss cap"
         return None
 
-    # Held memory-folder listing. The sampler's caller frames put the
+    # Held memory-folder listing (5 Nov 22:3x, an agent, RECALL-10X rank 3). The sampler's caller frames put the
     # remaining served-call listing cost (~13 samples, 260+ ms, 1.7k faults in a 2.5 s call) in spread_recall._mem_names,
     # which lists the 53k-entry folder on every call with two long words; none of the server's memoized loaders covers
     # it. The NAME SET changes only on create, delete or rename. The folder's own stat is NOT a usable key for that on
-    # one NTFS volume (measured: a create moved it, a delete never did, one rename did and the next did not), so
+    # this laptop (measured 5 Nov 22:3x: a create moved it, a delete never did, one rename did and the next did not), so
     # the hold is keyed on DirWatch's generation: ReadDirectoryChangesW (FILE_NOTIFY_CHANGE_FILE_NAME) bumps it on any
     # create, delete or rename and on a buffer overflow. The generation is read BEFORE the listing, so a change during it
     # re-lists next call; a hold made before the watcher was armed is not trusted; STATE_TTL is the backstop; no watcher
@@ -882,7 +931,7 @@ class Warm:
         sig = w.gen if w.ok else None
         h = hold_was = getattr(self, "names_hold", None)
         now = time.time()
-        # Background re-list: the TTL re-list ran inside a served call every ~5 min, and
+        # Background re-list (6 Nov 01:3x, an agent): the TTL re-list ran inside a served call every ~5 min, and
         # those calls were the slowest the server had (11 calls 00:41-01:29, median 1,316 ms, 9 over 1 s, against 438 ms
         # for calls on the held list). From half the TTL a thread lists the folder and the next call adopts its result,
         # patched from the watcher's events after the generation it read before listing (add and del are set operations,
@@ -899,7 +948,7 @@ class Warm:
                 and getattr(self, "names_bg", None) is None and STATE_TTL / 2 <= now - h[1] < STATE_TTL
                 and h[1] >= w.armed_at + 0.5):
             self._names_bg_start(w, ea, sr.MEM)
-        # A generation change is patched from the watcher's own events: with ~1.7 new memories a minute,
+        # A generation change is patched from the watcher's own events (5 Nov 23:0x): with ~1.7 new memories a minute,
         # 7 of the first 27 served calls re-listed on a generation change, and the listing was the largest frame in
         # each slow one (5-6 sampler hits, 0.7-1.2k faults). The folder lists in NTFS order, which for these names is
         # sorted(key=str.upper) (checked on all 53,563), so an added name is slotted in at its place; add and del are
@@ -972,14 +1021,81 @@ class Warm:
         return out.getvalue()
 
 
+# 11 Nov 2026 (an agent): every prompt waits on this server, and on the laptop it ran in the state Windows picks
+# for a windowless process, which power-throttles it (EcoQoS): 1.5 h of calls on the loaded box used 109 ms of CPU for
+# 387 ms of wall (median), p90 1.9 s. The dispatcher opts each hook out (hook_dispatch._unthrottle, measured 10.4 s ->
+# 6.4 s on fok_probe's work); a server it never started was left in. The old BelowNormal line here never took effect:
+# GetCurrentProcess without a HANDLE restype truncated the -1 pseudo-handle, so the server has always run at Normal,
+# and Normal stays. SPREAD_SERVER_UNTHROTTLE=0 turns the opt-out off. The result lands in server.log.
+def _unthrottle():
+    if os.environ.get("SPREAD_SERVER_UNTHROTTLE", "1") == "0":
+        return False
+    import ctypes
+    from ctypes import wintypes
+
+    class _PPT(ctypes.Structure):
+        _fields_ = [("Version", wintypes.ULONG), ("ControlMask", wintypes.ULONG), ("StateMask", wintypes.ULONG)]
+
+    k = ctypes.WinDLL("kernel32", use_last_error=True)
+    k.GetCurrentProcess.restype = wintypes.HANDLE
+    k.GetCurrentProcess.argtypes = []
+    k.SetProcessInformation.restype = wintypes.BOOL
+    k.SetProcessInformation.argtypes = [wintypes.HANDLE, ctypes.c_int, ctypes.c_void_p, wintypes.DWORD]
+    st = _PPT(1, 1, 0)
+    ok = bool(k.SetProcessInformation(k.GetCurrentProcess(), 4, ctypes.byref(st), ctypes.sizeof(st)))
+    try:
+        log("EcoQoS opt-out %s" % ("ok" if ok else "FAILED err %d" % ctypes.get_last_error()))
+    except Exception:
+        pass
+    return ok
+
+
+# 12 Nov 2026 (an agent): "has always run at Normal" above held only while the hook that started the server was
+# itself Normal. Windows hands a child its parent's priority class when the parent is Idle or BelowNormal, and
+# spread_client._spawn passes no class, so a server started from a BelowNormal session came up BelowNormal: pid 32280,
+# 07:15:38 on 12 Nov, on a box at 78-87 pct CPU. In its first five minutes 7 calls took 0.2 to 2.5 s with 0 ms of
+# process CPU and no file reads (a runnable thread that was not scheduled); the ten hours before held none. Set back to
+# Normal by hand at 07:22:44. Now the server raises itself to Normal at start when it finds Idle or BelowNormal; a
+# higher class is left alone. SPREAD_SERVER_NORMAL=0 turns it off. The result lands in server.log.
+def _normal_priority():
+    if os.environ.get("SPREAD_SERVER_NORMAL", "1") == "0":
+        return None
+    import ctypes
+    from ctypes import wintypes
+
+    k = ctypes.WinDLL("kernel32", use_last_error=True)
+    k.GetCurrentProcess.restype = wintypes.HANDLE
+    k.GetCurrentProcess.argtypes = []
+    k.GetPriorityClass.restype = wintypes.DWORD
+    k.GetPriorityClass.argtypes = [wintypes.HANDLE]
+    k.SetPriorityClass.restype = wintypes.BOOL
+    k.SetPriorityClass.argtypes = [wintypes.HANDLE, wintypes.DWORD]
+    h = k.GetCurrentProcess()
+    was = k.GetPriorityClass(h)
+    ok, err = True, 0
+    if was in (0x40, 0x4000):   # Idle, BelowNormal
+        ok = bool(k.SetPriorityClass(h, 0x20))
+        err = ctypes.get_last_error()
+    now = k.GetPriorityClass(h)
+    try:
+        log("priority class 0x%x -> 0x%x%s" % (was, now, "" if ok else " FAILED err %d" % err))
+    except Exception:
+        pass
+    return now
+
+
 def main():
     os.environ["SPREAD_SERVER_CHILD"] = "1"
     try:
         if hasattr(os, "nice"):
             os.nice(10)
-        elif os.name == "nt":   # laptop port: Windows has no os.nice (AttributeError killed every spawn); BelowNormal
-            import ctypes
-            ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(), 0x00004000)
+        elif os.name == "nt":
+            _unthrottle()
+    except Exception:
+        pass
+    try:
+        if os.name == "nt":
+            _normal_priority()
     except Exception:
         pass
     os.makedirs(STATE_DIR, exist_ok=True)
@@ -1026,6 +1142,10 @@ def main():
                                 fs.start()
                             except Exception:
                                 fs = None
+                        try:   # 12 Nov 2026 (an agent): the names arm's own time goes in cost (names_ms)
+                            sys.modules["spread_recall"].ARM_MS.clear()
+                        except Exception:
+                            pass
                         try:
                             resp = {"ok": True, "out": warm.call(req.get("raw") or "{}", hook),
                                     "ms": round((time.perf_counter() - t) * 1000, 1)}
@@ -1058,6 +1178,13 @@ def main():
                         if c0[3] and c1[3]:   # Windows only: file reads and other I/O (opens, stats) in the call
                             resp["cost"].update({"rd": c1[3][0] - c0[3][0], "rd_mb": round(c1[3][1] - c0[3][1], 1),
                                                  "oth": c1[3][2] - c0[3][2]})
+                        try:
+                            na = sys.modules["spread_recall"].ARM_MS.get("names")
+                            if na:
+                                resp["cost"]["names_ms"] = round(na[0], 1)
+                                resp["cost"]["names_path"] = ",".join(sorted(na[2]))
+                        except Exception:
+                            pass
                         if STALE_BM25_USED[0] != s0:   # the BM25 arm answered from the previous sidecar
                             resp["cost"]["stale_bm"] = STALE_BM25_USED[0] - s0
                         am = avail_mb()
@@ -1120,6 +1247,19 @@ def main():
                 log("idle exit")
                 break
             tick += 1
+            # Endpoint taken (7 Nov, an agent): a client whose 0.3 s connect timed out on a stalled server starts
+            # a successor, which writes its own endpoint; clients then go only to the successor, yet the old one kept
+            # refreshing until its 2 h idle exit (pid 46824, 02:04-04:06 7 Nov, ~700 MB with commit at 95 pct). Once
+            # a minute: when the endpoint names another pid, no call can reach this server again, so it exits.
+            if tick % 12 == 0:
+                try:
+                    with open(ENDPOINT, encoding="utf-8") as f:
+                        owner_pid = json.load(f).get("pid")
+                except Exception:
+                    owner_pid = None
+                if owner_pid and owner_pid != os.getpid():
+                    log("exiting: the endpoint belongs to pid %s" % owner_pid)
+                    break
             if tick % 2 == 0 and SERVE_STALE:
                 # the stale check under the lock, the reload off it: a caller meanwhile is served the held value
                 if lock.acquire(blocking=False):

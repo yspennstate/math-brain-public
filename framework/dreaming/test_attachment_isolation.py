@@ -1,5 +1,5 @@
 """test_attachment_isolation.py - one attachment bundle that fails verification no longer stops every deliberate recall
-(28 Sep 2026).
+(28 Sep 2026, an agent; scheduled audit account03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001).
 
     python test_attachment_isolation.py [--brain BRAIN.py] [--docs NODE_DOCUMENTS.py] [--bm25 BM25.py] [--old OLD_BRAIN.py]
                                         [--old-r71 OLD_BRAIN.py] [--old-bm25 OLD_BM25.py]
@@ -16,7 +16,7 @@ written. A bundle is broken by changing one byte of its document after it was at
  I6 the top node's own bundle broken: no partial attached block is printed, and the recall exits 2
 With --old, the brain before this change must fail I2 (it exits 2 and shows nothing).
 
-I7-I10 (28 Sep 2026): the index is
+I7-I10 (28 Sep 2026, scheduled audit account03/B02 r71, B02-R23-ATTACHMENT-STALE-BM25-DIGEST-BYPASS-001): the index is
 built while a's bundle is valid, and the query also holds words every parent's own index line has, so recall reaches
 BM25 (I3's attachment-only query returns before it). a must score exactly as its twin in a store where the bundle
 never existed:
@@ -136,6 +136,24 @@ class Store:
         bm25.build(self.mem, os.environ["BRAIN_BM25_INDEX"])
 
     def close(self):
+        # 13 Nov 2026 (an agent): a BM25 instance keeps its postings sidecar's sqlite connection while it
+        # lives, and recall caches the instance, so on Windows the fixture's .sqlite3 file stayed open and rmtree
+        # raised WinError 32 after I5b - every check after it never ran. Close those connections first (a closed
+        # one only sends a later score to the payload path), then collect.
+        try:
+            import gc
+            import bm25
+            for obj in gc.get_objects():
+                if isinstance(obj, bm25.BM25):
+                    sc = obj.__dict__.get("_sc")
+                    if sc:
+                        try:
+                            sc[0].close()
+                        except Exception:
+                            pass
+            gc.collect()
+        except Exception:
+            pass
         rmtree(self.td)
 
 
@@ -371,7 +389,7 @@ def main():
                   rows[:1], "AUTO-READ DOCUMENTS ATTACHED TO TOP NODE" not in out, rc))
     finally:
         st.close()
-    # I7-I10 (28 Sep): the index was built while
+    # I7-I10 (28 Sep, account03/B02 r71, B02-R23-ATTACHMENT-STALE-BM25-DIGEST-BYPASS-001): the index was built while
     # a's bundle was valid; the query reaches BM25 through "attachment", which every parent's own text holds. A parent
     # whose bundle is left out must score exactly as its twin in a store where that bundle never existed.
     r = stale_cases(BRAIN, "st")

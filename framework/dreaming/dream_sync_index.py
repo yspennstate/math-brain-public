@@ -2,12 +2,14 @@
 
     python dream_sync_index.py stage <repo> <old> <target> <paths_file> <staged_out> <undo_out>
     python dream_sync_index.py undo  <repo> <undo_file>
+    python dream_sync_index.py absent <repo> <old> <target> <staged_out> <undo_out>
+    python dream_sync_index.py present <repo> <out_file>
 
 `git reset --keep <target>` refuses a path whose local file would be overwritten: an untracked copy of an incoming file,
 or a tracked file edited here. dream_git_sync.ps1 used to delete the untracked copies (identical ones outright,
 differing ones after copying them aside) and to revert edited files to HEAD, let the move write the incoming version,
-and put the local bytes back. For those minutes the files were missing, and a job that read one of them in that
-window failed.
+and put the local bytes back. For those minutes the files were missing: on 25 Sep 05:3x a campaign's evals read three
+bank files in that window and failed (memory the_dreams_git_sync_empties_pushed_campaign_files_for_minutes_2026_09_25).
 
 `stage` sets the INDEX entry of each listed path to the target's own entry (mode and blob, from one
 `git diff --raw -z old target`), with one `git update-index -z --index-info`, and never touches the working tree. git's
@@ -109,10 +111,124 @@ def undo(repo, undo_file):
     data = open(undo_file, "rb").read()
     if data:
         git(repo, ["update-index", "-z", "--index-info"], data)
+    skip = undo_file + ".skip"
+    if os.path.exists(skip):
+        flagged = open(skip, "rb").read()
+        if flagged:
+            git(repo, ["update-index", "-z", "--skip-worktree", "--stdin"], flagged)
+    return 0
+
+
+# ABSENT (2026-11-10). The move used to write every file the target adds. Since the other computers push their own
+# outputs to this repository, and since AI outputs are uploaded and then removed from this computer (owner, 9 Nov),
+# most incoming files are ones this checkout never held: on 10 Nov a move from the stale local main would have
+# downloaded and written 171,063 of them. `absent` sets the index entry of each such path to the target's entry and
+# marks it skip-worktree, so `git reset --keep` keeps the entry and writes nothing; git then treats the path as
+# unchanged. A path already marked that way is brought to the target's entry the same way on later nights. Paths under
+# KEEP_PREFIXES (the trees the persist stages and rebuilds) and top-level files are left to the ordinary checkout, and
+# so is any path that exists on disk.
+KEEP_PREFIXES = ("01_ai_consciousness/",)
+
+
+def index_flags(repo):
+    """{path: (tag, mode, oid, stage)} for the whole index; tag S or s means skip-worktree."""
+    out = git(repo, ["-c", "core.quotepath=false", "ls-files", "-v", "-s", "-z"])
+    have = {}
+    for rec in out.split(b"\0"):
+        if not rec:
+            continue
+        head, _, path = rec.partition(b"\t")
+        f = head.decode("ascii").split()
+        if len(f) == 4:
+            have[path.decode("utf-8", "surrogateescape")] = (f[0], f[1], f[2], f[3])
+    return have
+
+
+def absent(repo, old, target, staged_out, undo_out):
+    raw = raw_diff(repo, old, target)
+    idx = index_flags(repo)
+    todo, undo_rows, reflag = [], [], []
+    for p, e in raw.items():
+        if e["status"] not in ("A", "M", "T") or e["new_mode"] not in MODES or e["new_oid"] == ZERO:
+            continue
+        if "/" not in p or p.startswith(KEEP_PREFIXES):
+            continue
+        cur = idx.get(p)
+        if cur is not None and (cur[3] != "0" or cur[0] not in ("S", "s")):
+            continue                                   # tracked here and not marked: the ordinary move handles it
+        if cur is None and e["status"] != "A":
+            continue
+        if os.path.lexists(os.path.join(repo, p)):
+            continue
+        todo.append((e["new_mode"], e["new_oid"], p))
+        if cur is None:
+            undo_rows.append(("0", ZERO, p))
+        else:
+            undo_rows.append((cur[1], cur[2], p))
+            reflag.append(p)
+    tmp = undo_out + ".tmp"
+    with open(tmp, "wb") as fh:
+        for mode, oid, p in undo_rows:
+            fh.write(("%s %s\t" % (mode, oid)).encode("ascii") + p.encode("utf-8", "surrogateescape") + b"\0")
+    with open(undo_out + ".skip", "wb") as fh:
+        fh.write(b"".join(p.encode("utf-8", "surrogateescape") + b"\0" for p in reflag))
+    os.replace(tmp, undo_out)
+    if todo:
+        data = b"".join(("%s %s\t" % (mode, oid)).encode("ascii") + p.encode("utf-8", "surrogateescape") + b"\0"
+                        for mode, oid, p in todo)
+        git(repo, ["update-index", "-z", "--index-info"], data)
+        git(repo, ["update-index", "-z", "--skip-worktree", "--stdin"],
+            b"".join(p.encode("utf-8", "surrogateescape") + b"\0" for _m, _o, p in todo))
+    tmp = staged_out + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n", errors="surrogateescape") as fh:
+        for _mode, _oid, p in todo:
+            fh.write(p + "\n")
+    os.replace(tmp, staged_out)
+    return 0
+
+
+# PRESENT (2026-11-13). `absent` marks a path skip-worktree because no file was here. When a file appears later (a
+# session writes it, a push lane leaves its copy, a restore puts it back) the mark stays and the entry's stat is zero.
+# core.sparseCheckout is off in this clone, so `git reset --keep` compares such an entry with the file, finds them
+# different and refuses the whole move ("Entry ... not uptodate. Cannot merge."); `git diff` and `git status` skip
+# marked entries, so neither the facts helper nor the parking loop ever lists the file. From 10 to 13 Nov three such
+# files (one tsv, two scripts, each holding exactly the incoming bytes) kept every night's commit local. `present`
+# clears the mark on every marked entry whose file exists. An entry whose file holds the index's own bytes also gets
+# its stat refreshed (the move does not refresh, and a zero stat reads as edited). After that the file is an ordinary
+# tracked file: unchanged, or shown as edited and handled by the caller's rules for edited files.
+def present(repo, out_file):
+    idx = index_flags(repo)
+    marked = [p for p, v in idx.items()
+              if v[0] in ("S", "s") and v[3] == "0" and v[1] in MODES and "\n" not in p
+              and os.path.isfile(os.path.join(repo, p))]
+    rows = []
+    if marked:
+        out = git(repo, ["hash-object", "--stdin-paths"],
+                  ("\n".join(marked) + "\n").encode("utf-8", "surrogateescape"))
+        shas = out.decode("ascii").split()
+        if len(shas) != len(marked):
+            raise RuntimeError("hash-object returned %d ids for %d paths" % (len(shas), len(marked)))
+        same = [p for p, s in zip(marked, shas) if s == idx[p][2]]
+        git(repo, ["update-index", "-z", "--no-skip-worktree", "--stdin"],
+            b"".join(p.encode("utf-8", "surrogateescape") + b"\0" for p in marked))
+        if same:
+            git(repo, ["update-index", "-z", "--info-only", "--stdin"],
+                b"".join(p.encode("utf-8", "surrogateescape") + b"\0" for p in same))
+        keep = set(same)
+        rows = [(p, "same" if p in keep else "differs") for p in marked]
+    tmp = out_file + ".tmp"
+    with open(tmp, "w", encoding="utf-8", newline="\n", errors="surrogateescape") as fh:
+        for p, kind in rows:
+            fh.write("%s\t%s\n" % (p, kind))
+    os.replace(tmp, out_file)
     return 0
 
 
 def main():
+    if len(sys.argv) >= 4 and sys.argv[1] == "present":
+        return present(sys.argv[2], sys.argv[3])
+    if len(sys.argv) >= 7 and sys.argv[1] == "absent":
+        return absent(*sys.argv[2:7])
     if len(sys.argv) >= 8 and sys.argv[1] == "stage":
         return stage(*sys.argv[2:8])
     if len(sys.argv) >= 4 and sys.argv[1] == "undo":
@@ -122,9 +238,6 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     try:
         sys.exit(main())
     except Exception as exc:

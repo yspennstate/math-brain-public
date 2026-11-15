@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the
-cards it links to (11 Oct 2026; leaner printout 12 Oct 2026).
+cards it links to (an agent, 11 Oct 2026; leaner printout an agent-f03, 12 Oct 2026).
 
     python ~/.claude/dreaming/math_recall.py "<words>" [--or "<other words>" ...] [--limit 8] [--chars 4000]
     python ~/.claude/dreaming/math_recall.py --id <card id> [<card id> ...]     walk: one card whole, every link
@@ -66,30 +66,11 @@ import os
 import re
 import sys
 
-BUILD_SRC = os.environ.get("MATHBRAIN_BUILD_SRC", "")
-STORE_PATH = os.environ.get("MATHBRAIN_STORE", "")
+BUILD_SRC = os.environ.get("MATHBRAIN_BUILD_SRC", r"~\math-brain-build\src")
+STORE_PATH = os.environ.get("MATHBRAIN_STORE", r"~\math-brain-build\local\population\brain.sqlite3")
 WALK_LINKS = 60   # links printed for one walked card (a hub can carry hundreds); the rest are counted
 WHY_PATHS = 2     # spreading paths printed per hit (the strongest); the rest are counted
 SHORT_ID = 14     # shortest printed id prefix (extended until it fits one card)
-# 257 card bodies (31 Oct) carry C0 bytes where PDF extraction kept TeX cmex delimiter codes: 00/01, 10/11, 12/13 come
-# in matched pairs (parens), 02/03 and 14/15 brackets, 08 and 1a/1b braces, 18/19 ceilings. Printed raw, a NUL makes
-# grep call the whole recall binary and show nothing. Output maps them back; the store is left as it is.
-CMEX = str.maketrans({0x00: "(", 0x01: ")", 0x02: "[", 0x03: "]", 0x04: "⌊", 0x05: "⌋", 0x06: "⌈",
-                      0x07: "⌉", 0x08: "{", 0x0b: "⟩", 0x0c: "|", 0x0e: "/", 0x0f: "\\", 0x10: "(", 0x11: ")",
-                      0x12: "(", 0x13: ")", 0x14: "[", 0x15: "]", 0x16: "⌊", 0x17: "⌋", 0x18: "⌈",
-                      0x19: "⌉", 0x1a: "{", 0x1b: "}", 0x1c: "⟨", 0x1d: "⟩", 0x1e: "/", 0x1f: "\\",
-                      0x7f: ""})
-
-
-class _CmexOut:
-    def __init__(self, f):
-        self._f = f
-
-    def write(self, s):
-        return self._f.write(s.translate(CMEX))
-
-    def __getattr__(self, name):
-        return getattr(self._f, name)
 # mathematical relations first, then dependencies and citations, then similarity links
 KIND_ORDER = {k: i for i, k in enumerate(("proves", "refutes", "fails_under", "generalizes", "specializes",
                                            "analogous_to", "bridges_to", "defines", "depends_on", "cites",
@@ -276,26 +257,6 @@ def unmatched_words(query_terms, corpus_low):
     return [t for t in query_terms if len(t) >= 4 and corpus_low.find(t) < 0]
 
 
-_FAST_OFF_TOLD = set()
-
-
-def _say_fast_off(fr):
-    """One stderr line, once per reason per process, when the prepared fast path was not used. Before 31 Oct the
-    fallback was silent: a peer's in-place edit of retrieval.py turned it off for every agent and one question took
-    347 s instead of 22 s with nothing printed. MATH_RECALL_FAST=0 is a choice and says nothing."""
-    try:
-        why = str((getattr(fr, "STATUS", None) or {}).get("why") or "unknown reason")
-        if why == "MATH_RECALL_FAST=0" or why in _FAST_OFF_TOLD or os.environ.get("MATH_RECALL_QUIET_FALLBACK") == "1":
-            return
-        _FAST_OFF_TOLD.add(why)
-        sys.stderr.write("[math_recall] fast path OFF (%s): every card and link is read from the store, about 10x "
-                         "slower. If retrieval.py was edited, land it with a re-pinned fastrecall.PIN_RETRIEVAL.\n"
-                         % why)
-        sys.stderr.flush()
-    except Exception:
-        pass
-
-
 def derive_tool(nodes, edges):
     """What a printout reads besides the search, from every card and link: titles, which card supersedes which, the
     link kinds of each pair, each card's links in store order, and the short ids. Plain values only, so fastrecall.py
@@ -314,6 +275,30 @@ def derive_tool(nodes, edges):
         links.setdefault(dst(e), []).append(("<-", _kind(e.kind), src(e), why))
     return {"title": title, "superseded_by": superseded_by, "pair_kinds": pair_kinds, "links": links,
             "short": short_ids(title.keys())}
+
+
+def settle_supersedes(superseded_by, links):
+    """Break supersedes cycles. Two dedup passes can pick opposite keepers for one pair (Adjoint Functors: 4 Nov kept
+    claim_5f786e72, 8 Nov kept claim_b4c0b020), and then search, the literal lane and the walk all hid both cards. In a
+    cycle the card with the most links is kept (ties: the smaller id); the store's edges are left as they are. Kept out
+    of derive_tool on purpose, so changing it does not throw away the prepared state. A card with several superseders
+    points at one that is itself live when there is one (after a merge card retires both ends of a cycle)."""
+    out = dict(superseded_by)
+    for n, cur in superseded_by.items():
+        if cur in superseded_by:
+            live = sorted(o for d, k, o, *_ in links.get(n, ()) if d == "<-" and k == "supersedes" and o not in superseded_by)
+            if live:
+                out[n] = live[0]
+    for start in list(out):
+        seen, n = [], start
+        while n in out and n not in seen:
+            seen.append(n)
+            n = out[n]
+        if n in seen:   # a cycle through n
+            ring = seen[seen.index(n):]
+            keep = max(ring, key=lambda x: (len(links.get(x, ())), [-ord(c) for c in x]))
+            out.pop(keep, None)
+    return out
 
 
 def _fast_module():
@@ -409,18 +394,14 @@ def strength_edges(edges, S, typed):
     return out, kinds
 
 
-# Possessive names (28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
+# Possessive names (an agent, 28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
 # "Janson's Inequality" indexes the term janson's, and the question "Janson inequality" (term janson) never meets it:
 # the card was not in the top 8 for that wording, while three cards about a different Janson result were. Of the
 # lexical index's 98,255 terms, 1,138 are possessives (talagrand's 64 cards, hall's 54, jensen's 116, janson's 19).
 # Each wording gets the other form of a name added: base -> base's when base's is at least 0.5 pct of base's own
 # document count and in 2 or more cards (that keeps group's, graph's, function's out), and base's -> base always.
-# Meta words are skipped. Summed into the wording (MATH_RECALL_POSSESSIVE=1) the 28 Oct A/B was mixed, so it stayed
-# off. As its own wording fused by rank ("swap") it is the default since 6 Nov 2026: on 40 cards with a possessive
-# title, asked by the bare name, a title word and a body word, 16 ranked better and 0 worse (10 of the 20 the plain
-# search left out came back); their exact titles and 40 bare-name control titles were 0 better, 0 worse (two seeds,
-# rule written before the run). MATH_RECALL_POSSESSIVE=0 turns it off. Changing the two tokenizers instead would
-# need the prefilter index and the signal cache rebuilt.
+# Meta words are skipped. OFF by default since the 28 Oct A/B (brain_recall_agent/possessive/POSS_RESULT.md: mixed); MATH_RECALL_POSSESSIVE=1 turns it on. Changing the two tokenizers instead would need the
+# prefilter index and the signal cache rebuilt.
 _POSS_SKIP = {"paper", "author", "agent", "page", "image", "wikipedia", "claim", "source", "model", "campaign",
               "worker", "collector", "card", "lemma", "theorem"}
 
@@ -464,146 +445,10 @@ def possessive_variants(queries, lex, ratio=0.005, min_df=2, swap=False):
     return out
 
 
-# Number words against digits (31 Oct 2026). math_brain.retrieval.tokenize keeps a hyphenated word whole, so
-# "zero-one" and "0-1" are two terms that never match: "Kolmogorov 0-1 law" missed both Kolmogorov Zero-One cards in
-# its top 3, and "Levy zero-one law" missed the card titled Levy's 0-1 Law. The lexicon holds 49 such pairs in both
-# forms (two-dimensional 103 cards / 2-dimensional 11, zero-one 18 / 0-1 15). Each wording gets the other form of
-# such a term added when that form is indexed. ON by default as "swap" since its A/B (31 Oct, 60 title cases): appended to the same query (=1) it lifted
-# swapped titles 6/0 and four-word queries 13/0 but cost 3 exact titles their rank 1; as its own wording fused by rank
-# (=swap) it lifted them 11/1 and 13/0 with 0 exact titles moved. MATH_RECALL_NUMWORD=0 turns it off.
-_NUMW = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-_NUMW_RE = re.compile(r"(?<![a-z0-9])(%s)(?![a-z0-9])" % "|".join(_NUMW))
-_NUMD_RE = re.compile(r"(?<![a-z0-9])(10|[0-9])(?![0-9a-z])")
-
-
-def numword_variants(queries, lex, swap=False):
-    from math_brain.retrieval import tokenize, _content_terms
-    out = []
-    for q in queries:
-        terms = set(_content_terms(tokenize(q)))
-        rep = {}
-        for t in sorted(terms):
-            if "-" not in t:
-                continue
-            o = _NUMW_RE.sub(lambda m: str(_NUMW.index(m.group(1))), t)
-            if o == t:
-                o = _NUMD_RE.sub(lambda m: _NUMW[int(m.group(1))], t)
-            if o != t and o not in terms and o in lex:
-                rep[t] = o
-        if swap:   # one wording with each such term in its other form, in place; none when nothing swapped
-            sw = q
-            for t, o in rep.items():
-                sw = re.sub(r"(?<![\w-])%s(?![\w-])" % re.escape(t), o, sw, flags=re.I)
-            if sw != q:
-                out.append(sw)
-            continue
-        out.append(q + " " + " ".join(rep.values()) if rep else q)
-    return out
-
-
-# Names that live inside a compound (3 Nov 2026). The same whole-hyphen tokenizer indexes "Azuma-Hoeffding" as one
-# term, so "Azuma's inequality" or "Azuma inequality" never meets the Azuma-Hoeffding card (not in the top 8; tensor
-# and matrix Azuma cards and Minkowski's inequality outrank it), while "Azuma Hoeffding inequality" ranks it 1st
-# because both parts are named. Of the lexicon's 30,311 terms, 7,197 are alphabetic compounds and 1,531 of the 3,879
-# words they are made of have a compound at least half as frequent as the word alone (azuma 4 / azuma-hoeffding 4,
-# paley 5 / paley-zygmund 12, cantelli 1 / borel-cantelli 23; borel 134 / borel-cantelli 23 does not qualify). Such a
-# word gets one wording with it swapped for its most frequent compound, fused by rank. Affix compounds (hoeffding-type,
-# non-negative) and parts over 100 cards are skipped. MATH_RECALL_COMPOUND=swap turns it on. OFF after its A/B
-# (3 Nov n 40, seed 11): titles cut to one name improved 7 and fell 2
-# (9 -> 1 three times; 1 -> 3 once), exact titles 0/0 of 40, bare-name titles 0/0 of 40. The rule fixed beforehand asked
-# for a net gain of 10, and 27 of the 40 cut titles were already at rank 1 without it. Run 2 (seed 23): 10 of 30
-# misses reached rank 3 or better, 0 worse of 120 controls; its rule asked for 15, so it stays off.
-_COMPOUND_AFFIX = {"type", "like", "based", "free", "valued", "order", "non", "sub", "semi", "multi", "self", "well",
-                   "anti", "pre", "post", "quasi", "pseudo", "super", "dimensional", "invariant", "style"}
-_COMPOUND_PARTS = None
-
-
-def compound_variants(queries, lex, ratio=0.5, max_part_df=100):
-    from math_brain.retrieval import tokenize, _content_terms
-    global _COMPOUND_PARTS
-    import fastrecall
-
-    def df(t):
-        b = lex.get(t)
-        return 0 if b is None else len(fastrecall._unints(b)) // 2
-    if _COMPOUND_PARTS is None:
-        parts = {}
-        for k in lex:
-            ps = k.split("-") if "-" in k else ()
-            if len(ps) >= 2 and all(p.isalpha() and len(p) >= 3 for p in ps) and not _COMPOUND_AFFIX & set(ps):
-                for p in set(ps):
-                    parts.setdefault(p, []).append(k)
-        _COMPOUND_PARTS = parts
-    out = []
-    for q in queries:
-        terms = set(_content_terms(tokenize(q)))
-        rep = {}
-        for t in sorted(terms):
-            base = t[:-2] if t.endswith("'s") else t
-            if "-" in base or len(base) < 4 or base in _POSS_SKIP:
-                continue
-            best, bd = None, 0
-            for c in _COMPOUND_PARTS.get(base, ()):
-                others = [p for p in c.split("-") if p != base]
-                if c in terms or any(p in terms or df(p) > max_part_df for p in others):
-                    continue
-                d = df(c)
-                if d >= 2 and d > bd:
-                    best, bd = c, d
-            if best and bd >= ratio * max(1, df(base)):
-                rep[t] = best
-        sw = q
-        for t, c in rep.items():
-            sw = re.sub(r"(?<![\w-])%s(?![\w-])" % re.escape(t), c, sw, flags=re.I)
-        if sw != q:
-            out.append(sw)
-    return out
-
-
 _TUP = re.compile(r"\(\s*-?\d+(?:\s*,\s*-?\d+)+\s*\)")
 _NUM = re.compile(r"(?<![\w.])-?\d+(?![\w.])")
 LIT_MAX = int(os.environ.get("MATH_RECALL_LITERAL", "3") or 0)   # cards the literal lane may put first; 0 turns it off
 LIT_POOL = 40   # a tuple set held by more cards than this says too little to pick one
-
-
-# The title lane (30 Oct 2026). A wording that is a card's whole title, once case, punctuation and a possessive 's are
-# set aside, puts that card ahead of the word-ranked ones: "Chernoff bound" ranked the card titled Chernoff bound 12th
-# and "Kolmogorov Zero-One Law" ranked its card 3rd, under longer cards that use the same words more often.
-# A title shared by more than TITLE_POOL cards, or shorter than TITLE_MIN characters, says too little to pick one.
-TITLE_MAX = int(os.environ.get("MATH_RECALL_TITLE", "3") or 0)   # cards the title lane may put first; 0 turns it off
-TITLE_POOL, TITLE_MIN = 8, 6
-_TITLE_IDX = {}
-
-
-def _title_key(text):
-    t = re.sub(r"['\u2019]s\b", "", (text or "").lower())
-    return " ".join(re.sub(r"[^a-z0-9]+", " ", t).split())
-
-
-def title_lane(queries, title, superseded_by, found_by):
-    """(card id, wording number) for cards whose whole title is a wording, best word rank first."""
-    if TITLE_MAX <= 0:
-        return []
-    idx = _TITLE_IDX.get(id(title))
-    if idx is None:
-        idx = {}
-        for cid, t in title.items():
-            if cid not in superseded_by:
-                idx.setdefault(_title_key(t), []).append(cid)
-        _TITLE_IDX.clear()
-        _TITLE_IDX[id(title)] = idx
-    out, seen = [], set()
-    for qi, q in enumerate(queries, 1):
-        k = _title_key(q)
-        ids = idx.get(k, []) if len(k) >= TITLE_MIN else []
-        if not ids or len(ids) > TITLE_POOL:
-            continue
-        rank = lambda c: min([r for _q, r in found_by.get(c, []) if r > 0] or [10 ** 6])  # noqa: E731
-        for cid in sorted(ids, key=lambda c: (rank(c), c)):
-            if cid not in seen:
-                seen.add(cid)
-                out.append((cid, qi))
-    return out[:TITLE_MAX]
 
 
 class _LitHit(object):
@@ -768,16 +613,11 @@ def tuple_tip(queries, hits, P, nodes, store_path):
 
 
 def main(argv=None):
-    try:  # optional resident recall server; without it every call runs in-process
-        from recall_client import try_server
-    except ImportError:
-        try_server = None
-    remote = try_server(sys.argv[1:] if argv is None else argv) if try_server else None
+    from recall_client import try_server
+    remote = try_server(sys.argv[1:] if argv is None else argv)
     if remote is not None:
         return remote
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-    if not isinstance(sys.stdout, _CmexOut):
-        sys.stdout = _CmexOut(sys.stdout)
     ap = argparse.ArgumentParser(
         description="One-call recall from the math store: ids, whole cards, linked ids.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -848,14 +688,14 @@ def main(argv=None):
     _pin_cm = _pin_scope() if _pin_scope is not None else None
     if _pin_cm is not None:
         _pin_cm.__enter__()
-    if fr is not None:
-        import math_brain.retrieval as R
-        if query and fr.wants_encoder(queries, R):
-            enc = fr.Encoder().start()
-        P = fr.open_prepared(a.store, R, derive_tool, __file__)
-        if P is None:
-            _say_fast_off(fr)
     try:
+        if fr is not None:
+            import math_brain.retrieval as R
+            if query and fr.wants_encoder(queries, R):
+                enc = fr.Encoder().start()
+            P = fr.open_prepared(a.store, R, derive_tool, __file__)
+            if P is None:
+                _say_fast_off(fr)
         if P is not None:
             nodes, edges, by_id, tool = None, None, P.node_map(), P.tool
             edge_by_id = P.edge_map()
@@ -866,6 +706,7 @@ def main(argv=None):
             by_id, tool = None, derive_tool(nodes, edges)
             edge_by_id = {getattr(e, "id", None): e for e in edges}
         title, superseded_by, pair_kinds, links = tool["title"], tool["superseded_by"], tool["pair_kinds"], tool["links"]
+        superseded_by = settle_supersedes(superseded_by, links)
         if a.full:
             sid = lambda x: x  # noqa: E731
         else:
@@ -899,20 +740,12 @@ def main(argv=None):
                 why_kinds.update(learned_kinds)
                 why_edges = dict(edge_by_id)
                 why_edges.update({e.id: e for e in edges_s[len(edges):]})
-        _poss = os.environ.get("MATH_RECALL_POSSESSIVE", "swap")
+        _poss = os.environ.get("MATH_RECALL_POSSESSIVE", "0")
         if P is not None and _poss == "1":
             queries = possessive_variants(queries, P.s.get("lex") or {})
         elif P is not None and _poss == "swap":   # the other form as its own wording: fused by rank, never summed
             queries = queries + [v for v in possessive_variants(queries, P.s.get("lex") or {}, swap=True)
                                  if v not in queries]
-        _numw = os.environ.get("MATH_RECALL_NUMWORD", "swap")
-        if P is not None and _numw == "1":
-            queries = numword_variants(queries, P.s.get("lex") or {})
-        elif P is not None and _numw == "swap":   # the other form as its own wording, fused by rank
-            queries = queries + [v for v in numword_variants(queries, P.s.get("lex") or {}, swap=True)
-                                 if v not in queries]
-        if P is not None and os.environ.get("MATH_RECALL_COMPOUND", "0") == "swap":   # own wording, fused by rank
-            queries = queries + [v for v in compound_variants(queries, P.s.get("lex") or {}) if v not in queries]
         found_by, best, results = {}, {}, []
         for qi, q in enumerate(queries, 1):
             kw = dict(edges=edges_s, limit=a.limit * 2, min_support_score=0.0, min_margin=0.0, graph_depth=a.depth,
@@ -935,9 +768,6 @@ def main(argv=None):
             if h.node.id in lit_pos:   # the literal lane's own order, ahead of every word-ranked card
                 key = (lit_pos[h.node.id] - 1000, 0, 0)
                 return key if a.full else key + (h.node.id,)
-            if h.node.id in ttl_pos:   # the title lane next, then the word-ranked cards
-                key = (ttl_pos[h.node.id] - 500, 0, 0)
-                return key if a.full else key + (h.node.id,)
             key = (min(r for _, r in fb), -len(fb), min(q for q, _ in fb))
             return key if a.full else key + (h.node.id,)
         lit = literal_lane(queries, P, nodes, title, superseded_by, a.store, found_by)
@@ -949,17 +779,6 @@ def main(argv=None):
                 best[cid] = _LitHit(node)
             found_by[cid] = [(qi, 0)] + [x for x in found_by.get(cid, []) if x[1] > 0]
         lit_pos = {c: j for j, (c, _q) in enumerate(lit)}
-        ttl = title_lane(queries, title, superseded_by, found_by)
-        for cid, qi in ttl:   # a card whose whole title is a wording; the literal lane keeps its place ahead
-            if cid in lit_pos:
-                continue
-            if cid not in best:
-                node = by_id[cid] if by_id is not None else next((n for n in nodes if n.id == cid), None)
-                if node is None:
-                    continue
-                best[cid] = _LitHit(node)
-            found_by[cid] = [(qi, 0)] + [x for x in found_by.get(cid, []) if x[1] > 0]
-        ttl_pos = {c: j for j, (c, _q) in enumerate(c for c in ttl if c[0] not in lit_pos)}
         hits = sorted(best.values(), key=order)[:a.limit]
         hit_learned = int(os.environ.get("MATH_RECALL_LEARNED", "2") or 0)
         if S is not None and not a.list:
@@ -1040,48 +859,13 @@ def main(argv=None):
                 print("No card contains: %s" % ", ".join(missing[:12]))
         return 0
     finally:
-        if _pin_cm is not None:
-            _pin_cm.__exit__(None, None, None)
-        if enc is not None:
-            enc.wait()   # the encoder thread ends before the process does
-
-
-def _exit(code):
-    """sys.exit(code), except when onnxruntime was loaded in this process (the query encoder): then the exit handlers
-    run and stdio is flushed here, and the process ends with os._exit, so onnxruntime's C++ teardown never runs. In
-    1.31.1 that teardown (OneDsTelemetry::Shutdown, called from exit()) can spin on sched_yield for good: two brain.py
-    recalls from 30 Oct were still in it 22 h later, about 220 CPU-minutes each. A search here loads it too (31 Oct)."""
-    if "onnxruntime" not in sys.modules:
-        sys.exit(code)
-    if code is None:
-        rc = 0
-    elif isinstance(code, int):
-        rc = code
-    else:
-        print(code, file=sys.stderr)
-        rc = 1
-    try:
-        import atexit
-        atexit._run_exitfuncs()
-    except Exception:
-        pass
-    for stream in (sys.stdout, sys.stderr):
         try:
-            stream.flush()
-        except Exception:
-            pass
-    os._exit(rc)
+            if _pin_cm is not None:
+                _pin_cm.__exit__(None, None, None)
+        finally:
+            if enc is not None:
+                enc.wait()   # the encoder thread ends before the process does
 
 
 if __name__ == "__main__":
-    try:
-        _rc = main()
-    except SystemExit as e:
-        _rc = e.code
-    except KeyboardInterrupt:
-        _rc = 130
-    except BaseException:
-        import traceback
-        traceback.print_exc()
-        _rc = 1
-    _exit(_rc)
+    sys.exit(main())

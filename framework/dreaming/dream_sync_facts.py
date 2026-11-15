@@ -10,8 +10,8 @@ exists as a file and is either untracked or edited against HEAD; empty otherwise
 (`git rev-parse <target>:path`; empty when absent). The caller keeps every decision; this file only answers. Exit 0 on
 success; anything else means the caller falls back to its per-file calls.
 
-Why: one parking loop over 1,141 incoming paths ran 34 minutes - about 1,300 git process starts on a loaded
-machine - and during those minutes live memory files moved on and git refused the move.
+Why (2026-09-25): the 03:30 dream's parking loop ran 34 minutes over 1,141 incoming paths - about 1,300 git process
+starts on a loaded machine - and during those minutes live memory files moved on and git refused the move.
 """
 import os
 import subprocess
@@ -46,14 +46,18 @@ def main():
         local = dict(zip(want_local, shas))
     incoming = {}
     if paths:
-        out = git(repo, ["cat-file", "--batch-check=%(objectname) %(objecttype)"],
-                  ("".join("%s:%s\n" % (target, p) for p in paths)).encode("utf-8"))
-        rows = out.decode("utf-8", "replace").splitlines()
-        if len(rows) != len(paths):
-            raise RuntimeError("cat-file returned %d rows for %d paths" % (len(rows), len(paths)))
-        for p, row in zip(paths, rows):
-            parts = row.split()
-            incoming[p] = parts[0] if len(parts) == 2 and parts[1] in ("blob", "tree", "commit") else ""
+        # 2026-11-10: the ids come from the target's trees (one ls-tree), not from `cat-file --batch-check`. In this
+        # blob:none clone a type query on a blob that is not here fetches it, one network round trip per path; a move
+        # with 200,000 incoming paths, most of them files this computer never held, would have fetched them all.
+        want = set(paths)
+        out = git(repo, ["-c", "core.quotepath=false", "ls-tree", "-r", "-t", "-z", target])
+        for rec in out.split(b"\0"):
+            head, _, name = rec.partition(b"\t")
+            p = name.decode("utf-8", "surrogateescape")
+            if p in want:
+                f = head.decode("ascii", "replace").split()
+                if len(f) == 3 and f[1] in ("blob", "tree", "commit"):
+                    incoming[p] = f[2]
     tmp = out_tsv + ".tmp"
     with open(tmp, "w", encoding="utf-8", newline="\n") as fh:
         for p in paths:
@@ -63,9 +67,6 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     try:
         sys.exit(main())
     except Exception as exc:

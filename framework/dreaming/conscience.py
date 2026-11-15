@@ -34,7 +34,7 @@ Reads stdin (Stop JSON); stdout only for the one-shot block decision.
 import sys, os, io, json, re, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 # paths default to production but are env-overridable, so the hook is testable without touching the
 # real ledger / logs (the test sets CONSCIENCE_* to scratch files).
 LEDGER = os.environ.get("CONSCIENCE_LEDGER") or os.path.join(MEM, "CONSCIENCE.md")
@@ -136,6 +136,8 @@ def _errors_this_session(sess):
         return 0, False, examples
     try:
         for ln in io.open(OUTCOMES, encoding="utf-8", errors="replace"):
+            if sess not in ln:      # 11 Nov: a row for this session holds the id verbatim; skip the ~24k others unparsed
+                continue
             try:
                 e = json.loads(ln)
             except Exception:
@@ -164,6 +166,8 @@ def _claims_this_session(sess):
         return False, False
     try:
         for ln in io.open(REALITY, encoding="utf-8", errors="replace"):
+            if sess not in ln:
+                continue
             try:
                 r = json.loads(ln)
             except Exception:
@@ -207,11 +211,6 @@ def _roll_and_write(entry, sess):
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
@@ -270,11 +269,11 @@ def main():
                     # a recurring secret flag is NOT a per-session character habit to grow out of - it's
                     # usually the ERN tripping on displayed token-text during legitimate security work,
                     # and the real fix is at the root (get the tokens out of the tracked files), which is
-                    # the owner's rotation, not something a session changes. Frame it that way, honestly.
+                    # the author's rotation, not something a session changes. Frame it that way, honestly.
                     lines.append(f"- PATTERN: secrets flagged in {prior + 1} of the last {PATTERN_WINDOW}+ "
                                  f"sessions - most are the ERN catching displayed token-text during the "
                                  f"security work, not a per-session failing. The root fix is getting the "
-                                 f"tokens OUT of the tracked files (rotate + purge) - the owner's standing "
+                                 f"tokens OUT of the tracked files (rotate + purge) - the author's standing "
                                  f"item. Keep confirming none actually got pushed.\n")
                 else:
                     lines.append(f"- PATTERN: '{dtype}' now {prior + 1} of the last {PATTERN_WINDOW}+ recorded "

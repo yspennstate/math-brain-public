@@ -78,6 +78,9 @@ def coverage_report(mem_dir=builder.MEM_DEFAULT, sidecar=builder.OUT, expected_m
         "complete": False,
     }
     try:
+        # 9 Nov: the persisted stat-keyed read cache - this script timed out at 600 s on a cold read under load
+        if hasattr(builder, "PERSIST_DEFAULT"):
+            builder.enable_read_cache(persist=builder.PERSIST_DEFAULT)
         corpus = builder.collect_memories(mem_dir, strict=True)
         current_hash = {slug: digest for slug, _, digest in corpus}
         current = set(current_hash)
@@ -298,41 +301,49 @@ def active_coverage_report(mem_dir, canonical, expected_model, authority_path):
         return report
 
 
-def _corpus_fingerprint(mem_dir):
-    """Name, size and mtime of every .md in mem_dir, or None if one vanished mid-pass. Any write moves it."""
-    try:
-        rows = []
-        for fn in sorted(os.listdir(mem_dir)):
-            if fn.endswith(".md"):
-                st = os.stat(os.path.join(mem_dir, fn))
-                rows.append((fn, st.st_size, st.st_mtime_ns))
-        return rows
-    except OSError:
-        return None
-
-
 def write_status(mem_dir=builder.MEM_DEFAULT, sidecar=builder.OUT,
                  expected_model=builder.DEFAULT_MODEL, path=DEFAULT_STATUS, checked_at=None,
                  authority_path=DEFAULT_AUTHORITY, lock_path=None,
                  memory_lock_path=DEFAULT_MEMORY_LOCK):
-    """Re-audit under shared locks and atomically publish a non-authoritative wake observer.
-
-    The audit runs before the memory lock is taken, and is kept only if no memory moved between a fingerprint
-    taken before it and one taken under the lock; otherwise it is redone under the lock as before. On 3 Nov,
-    under swap, the locked audit held memory_write.lock over 10 min on 13 s of CPU, and every `remember` gave
-    up at its 20 s wait; the fingerprint of 45k memories took 11 s there. With the builder's stat-keyed read cache
-    on, a locked re-audit re-reads only the files that moved since the unlocked one.
-    """
-    builder.enable_read_cache()
+    """Re-audit under shared locks and atomically publish a non-authoritative wake observer."""
     lock_path = lock_path or (os.path.abspath(sidecar) + ".publish.lock")
+    # 7 Nov 2026 (port of the Mac's 3 Nov fix): the audit reads every memory, which took 6-13 min under load while
+    # holding memory_write.lock, and brain.py remember waits only 20 s for it - every remember failed during the
+    # step. Audit without the memory lock; under it, compare a stat fingerprint and re-audit only if anything moved.
     with artifact.file_lock(lock_path):
-        before = _corpus_fingerprint(mem_dir)
-        report = active_coverage_report(mem_dir, sidecar, expected_model, authority_path)
+        before = _corpus_fingerprint(mem_dir, sidecar, authority_path)
+        try:
+            report = active_coverage_report(mem_dir, sidecar, expected_model, authority_path)
+        except OSError:
+            report = None
         with artifact.file_lock(memory_lock_path):
-            if before is None or _corpus_fingerprint(mem_dir) != before:
+            if report is None or _corpus_fingerprint(mem_dir, sidecar, authority_path) != before:
                 report = active_coverage_report(mem_dir, sidecar, expected_model, authority_path)
             snapshot = _write_status_snapshot(report, path, checked_at)
     return snapshot, report
+
+
+def _corpus_fingerprint(mem_dir, sidecar, authority_path):
+    """Name, size and mtime_ns of every top-level .md (the corpus collect_memories reads) plus the sidecar and the
+    authority file: equal before and after means the unlocked audit saw what a locked one would have."""
+    rows = []
+    with os.scandir(mem_dir) as it:
+        for e in it:
+            if e.name.endswith(".md"):
+                try:
+                    st = e.stat()
+                except OSError:
+                    rows.append((e.name, None, None))
+                    continue
+                rows.append((e.name, st.st_size, st.st_mtime_ns))
+    rows.sort()
+    for p in (sidecar, authority_path):
+        try:
+            st = os.stat(p)
+            rows.append((os.path.abspath(p), st.st_size, st.st_mtime_ns))
+        except OSError:
+            rows.append((os.path.abspath(p), None, None))
+    return rows
 
 
 def _args(argv):

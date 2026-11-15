@@ -32,9 +32,9 @@ from collections.abc import Mapping
 
 FORMAT = 1
 #: the retrieve() / _channel_scores() this module mirrors (math-brain-build src/math_brain/retrieval.py, 12 Oct 2026)
-PIN_RETRIEVAL = "4930c1b233d8f8ad0b90dc131b1fc8712794e2f3c4e0b62bf92a132847464565"
+PIN_RETRIEVAL = "350904078336b15b89ae71cf3e57678c360fdb85949402dd42ea592e883d0a79"
 #: the query encoder whose ONNX session the Encoder thread builds ahead of time
-PIN_QUERY_EMBED = "5cdcd6b55003cd62659e41bc37b47b1283500592b1e1e5ed02b5ca0ad235cb21"
+PIN_QUERY_EMBED = "855b962e6c462ef151ce9c9417208214bd13750af26ee35bb5c5d6dd3cae57d8"
 KEEP_FILES = 4   # prepared states kept at most; an evaluation arm with other dials is one more
 #: and at most this many bytes of them (main + link file), the newest always kept. A state was about 60 MB when the count
 #: was set; on 28 Oct it was 370 MB, so four held 1.6 GB on a disk with 1.2 GB free (env MATH_RECALL_FAST_KEEP_MB).
@@ -200,20 +200,35 @@ def _plain(*values):
 
 
 # ----------------------------------------------------------------------------------------------------------- build
+def _nodes_in_table_order(con):
+    """The cards in iter_nodes' order (created_at, id), read by one pass over the table.
+
+    iter_nodes asks SQLite for ORDER BY created_at, id, which it answers by walking idx_nodes_created_at and fetching
+    every row by a random lookup: about 94k scattered page reads, most of the 15-27 min cold build (5 Nov profile:
+    12 s of CPU in 21 min). Reading the table in storage order and sorting here gives the same list: id is the primary
+    key, so (created_at, id) is a total order, and Python's str order is SQLite's BINARY order (code points = UTF-8 bytes).
+    """
+    from math_brain.models import GraphNode, NodeKind
+    rows = con.execute("SELECT id, kind, title, body, metadata_json, created_at FROM nodes").fetchall()
+    rows.sort(key=lambda r: (r[5], r[0]))
+    return [GraphNode(id=r[0], kind=NodeKind(r[1]), title=r[2], body=r[3], metadata=json.loads(r[4]), created_at=r[5])
+            for r in rows]
+
+
 def _read_store(store_path):
     import warnings
     from math_brain.store import ResearchStore
     with warnings.catch_warnings(record=True) as caught:
         warnings.simplefilter("always")
         with ResearchStore.open_read_only(store_path) as store:
-            # One read transaction, so the cards, the retracted set and the links come from one
+            # RECALL-10X lead 3: one read transaction, so the cards, the retracted set and the links come from one
             # version of the store. As separate statements a write landing between them mixed two versions.
             con = store.connection
             began = not con.in_transaction
             if began:
                 con.execute("BEGIN")
             try:
-                nodes = list(store.iter_nodes())
+                nodes = _nodes_in_table_order(con)
                 edges = list(store.iter_edges(skip_unknown=True))
             finally:
                 if began and con.in_transaction:
@@ -837,7 +852,7 @@ def _load_state(path, key, name, window):
                 return got, key
             if window > 0 and got["key"].split("|", 1)[0] == name:
                 age = time.time() - float(got.get("read_at") or os.path.getmtime(path))
-                # A state past the window is still used when extend() can bring it up to date
+                # RECALL-10X lead 2: a state past the window is still used when extend() can bring it up to date
                 if 0 <= age <= max(window, DELTA_MAX_AGE_S):
                     STATUS["stale_s"] = int(age)
                     STATUS["past_window"] = age > window

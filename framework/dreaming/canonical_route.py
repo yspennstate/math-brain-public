@@ -31,13 +31,6 @@ import re
 import sys
 import time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 DR = os.path.dirname(os.path.abspath(__file__))
 if DR not in sys.path:
     sys.path.insert(0, DR)
@@ -61,86 +54,49 @@ def _read_stdin_json():
         return None
 
 
-# THE GATE'S VERDICT, KEPT PER PROMPT (6 Nov 2026). Importing brain.py for the gate cost about 20 ms a prompt (13 of
-# them its own copy of spread_recall), and the gate is silent on nearly every prompt. Its answer depends on three
-# things only: the prompt, recall_policy.json and brain.py's code. Loop sessions send the same text again and again
-# (2,120 prompts from 4 to 6 Nov held 42 distinct texts), so the answer is kept under a hash of the prompt, for as long
-# as both files keep the size, mtime and inode they had when it was computed. Any change to either empties the cache.
-# Only real (uuid) sessions write it. CANONICAL_ROUTE_GATE_CACHE=0 turns it off.
-GATE_CACHE = os.environ.get("CANONICAL_ROUTE_GATE_CACHE", os.path.join(DR, "canonical_route_gate_cache.json"))
-GATE_CACHE_MAX = 400
+_CONTRACTIONS = (("don't", "dont"), ("can't", "cant"), ("won't", "wont"), ("let's", "let us"), ("i'd", "i would"),
+                 ("we'd", "we would"), ("you'd", "you would"))
 
 
-def _gate_ident():
-    """[node, brain.py, its stat, policy, its stat] as the gate would read them, or None."""
+def _no_referent(prompt: str) -> bool:
+    """True only when the gate cannot fire: every positive path of brain._intent_gate_strength needs, after its own
+    normalisation, "brain", one of the gate's ai_anchors or a term of a canonical group somewhere in the prompt.
+
+    11 Nov 2026 (an agent): importing brain costs about 60 ms of every prompt and the gate 1 ms; about 60 pct of
+    prompts hold none of those terms (his last 3,000: 1,975; none of them gates above 0). The terms come from the same
+    recall_policy.json the gate reads, so they cannot drift; any trouble reading it answers False and the full gate runs.
+    """
     try:
-        import importlib.util
-
-        spec = importlib.util.find_spec("brain")
-        bp = os.path.abspath(spec.origin) if spec and spec.origin else ""
-        if not bp:
-            return None
-        pol = os.environ.get("BRAIN_RECALL_POLICY", os.path.join(os.path.dirname(bp), "recall_policy.json"))
-        ident = [NODE, bp]
-        for p in (bp, pol):
-            st = os.stat(p)
-            ident += [p, st.st_mtime_ns, st.st_size, st.st_ino] if p == pol else [st.st_mtime_ns, st.st_size, st.st_ino]
-        return ident
+        path = os.environ.get("BRAIN_RECALL_POLICY", os.path.join(DR, "recall_policy.json"))
+        with io.open(path, encoding="utf-8") as handle:
+            gate = json.load(handle)["nodes"][NODE]["intent_gate"]
+        terms = {"brain"} | {str(t).lower() for t in gate["ai_anchors"]}
+        terms |= {str(t).lower() for group in gate["canonical_groups"] for t in group}
+        norm = {str(k).lower(): str(v).lower() for k, v in gate.get("normalization_map", {}).items()}
+        act = {str(k).lower(): str(v).lower() for k, v in gate.get("action_normalization", {}).items()}
+        text = prompt.lower()
+        for a, b in _CONTRACTIONS:
+            text = text.replace(a, b)
+        for token in re.findall(r"[a-z0-9]+", text):
+            n = norm.get(token, token)
+            if n in terms or act.get(n, n) in terms:
+                return False
+        return True
     except Exception:
-        return None
+        return False
 
 
-def _gate_cached(key, ident):
-    try:
-        with io.open(GATE_CACHE, encoding="utf-8") as handle:
-            cache = json.load(handle)
-        if isinstance(cache, dict) and cache.get("ident") == ident:
-            v = (cache.get("v") or {}).get(key)
-            return None if v is None else float(v)
-    except Exception:
-        pass
-    return None
-
-
-def _gate_keep(key, ident, strength):
-    try:
-        try:
-            with io.open(GATE_CACHE, encoding="utf-8") as handle:
-                cache = json.load(handle)
-        except Exception:
-            cache = {}
-        v = cache.get("v") if isinstance(cache, dict) and cache.get("ident") == ident else None
-        v = dict(v) if isinstance(v, dict) else {}
-        v.pop(key, None)
-        v[key] = strength
-        while len(v) > GATE_CACHE_MAX:
-            v.pop(next(iter(v)))
-        tmp = GATE_CACHE + ".%d.tmp" % os.getpid()
-        with io.open(tmp, "w", encoding="utf-8") as handle:
-            json.dump({"ident": ident, "v": v}, handle)
-        os.replace(tmp, GATE_CACHE)
-    except Exception:
-        pass
-
-
-def gate_strength(prompt: str, session: str = "") -> float:
+def gate_strength(prompt: str) -> float:
     """The recall path's own intent gate on this prompt; 0.0 means silent."""
-    use = GATE_CACHE not in ("", "0")
-    key = hashlib.sha256(prompt.encode("utf-8", "replace")).hexdigest()
-    ident = _gate_ident() if use else None
-    if ident is not None:
-        hit = _gate_cached(key, ident)
-        if hit is not None:
-            return hit
+    if _no_referent(prompt):
+        return 0.0
     import brain
 
     policy = brain._load_recall_policy()
     gate = (policy.get(NODE) or {}).get("intent_gate")
-    strength = float(brain._intent_gate_strength(prompt, gate) or 0.0) if gate else 0.0
-    # kept only if neither file moved while it was computed, and only for a real session
-    if ident is not None and re.match(r"^[0-9a-f]{8}-", session or "") and _gate_ident() == ident:
-        _gate_keep(key, ident, strength)
-    return strength
+    if not gate:
+        return 0.0
+    return float(brain._intent_gate_strength(prompt, gate) or 0.0)
 
 
 def _fresh(session: str) -> bool:
@@ -196,10 +152,10 @@ def route(data: dict) -> str | None:
     prompt = data.get("prompt", "") or ""
     if not prompt.strip() or prompt.lstrip().startswith(NOISE_PREFIXES):
         return None
-    session = str(data.get("session_id") or "")
-    strength = gate_strength(prompt, session)
+    strength = gate_strength(prompt)
     if strength <= 0.0:
         return None
+    session = str(data.get("session_id") or "")
     if not _fresh(session):
         return None
     _log_fire(session, strength, prompt)

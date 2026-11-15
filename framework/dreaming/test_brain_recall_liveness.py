@@ -54,9 +54,7 @@ class BrainRecallLivenessTests(unittest.TestCase):
                 mock.patch.object(brain.sr, "_load_graph", return_value=({}, {})),
                 mock.patch.object(brain.sr, "_load_salience", return_value={}),
                 mock.patch.object(brain.sr, "_desc", side_effect=lambda slug, _idx: slug),
-                mock.patch.dict(os.environ, {"BRAIN_RECALL_BLEND": "1",
-                                             # the tail lane reads the real compaction and memory folders
-                                             "BRAIN_RECALL_CTAIL": "0"}),
+                mock.patch.dict(os.environ, {"BRAIN_RECALL_BLEND": "1"}),
             ):
                 output = io.StringIO()
                 with redirect_stdout(output):
@@ -105,8 +103,12 @@ class BrainRecallLivenessTests(unittest.TestCase):
                                              # (QueryNormalizer(_bm.df)) would raise and the
                                              # bm25 block swallows it into lexical blindness.
                                              "BRAIN_RECALL_SPELLFIX": "0",
-                                             # the tail lane reads the real compaction and memory folders
-                                             "BRAIN_RECALL_CTAIL": "0"}),
+                                             # The fixtures are written just before the call, so every one is
+                                             # newer than the real index and the fresh-memory merge (14 Sep) scored
+                                             # the real index through the overlay, never reaching FakeBM25 (13 Nov
+                                             # 2026: the test had failed that way). This test is about the corpus
+                                             # snapshot, not the refresh.
+                                             "BRAIN_RECALL_REFRESH": "0"}),
             ):
                 output = io.StringIO()
                 with redirect_stdout(output):

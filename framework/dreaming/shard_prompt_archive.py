@@ -20,24 +20,9 @@ usable `ts`, are NOT dropped - they go to PROMPTS_UNDATED.jsonl so the round-tri
 Writes are atomic (temp file + os.replace) and only happen when content actually changed, so a
 crash cannot leave a half-written shard and an unchanged month does not churn the repo.
 
-A MONTH PAST PART_CAP IS PUBLISHED IN PARTS. A busy month can outgrow one file: with agents on
-five-minute loops one month reached 67.8 MB and the next 32 MB in six days. A secret scanner that
-refuses objects over 64 MB then blocks the whole push, and GitHub refuses anything over 100 MB. Such
-a month is written as `PROMPTS_<YYYY-MM>.pNN.jsonl`, broken only at day boundaries and filled from
-the 1st, so a closed part never changes when later days arrive. A month under the cap keeps its one
-file, so nothing already published churns.
-
 Usage:
     python shard_prompt_archive.py            # publish shards, print the manifest
-    python shard_prompt_archive.py --union-existing  # merge a partial ledger into existing shards
-    python shard_prompt_archive.py --check     # strict local-ledger audit, write nothing
-
-Union mode preserves existing shard order and the maximum occurrence count of every exact
-line across the archive and local ledger. It does not deduplicate repeated ledger entries.
-Fetch/merge the latest repo archive before publishing; this is not a concurrent-writer lock.
---check always audits against the local ledger, even with --union-existing: archive-only rows
-still fail that audit until the ledger is reconciled. Union publishing instead verifies the
-exact merged multiset, including archive-only rows, both before and after writing.
+    python shard_prompt_archive.py --check     # verify only, write nothing (exit 1 on mismatch)
 """
 from __future__ import annotations
 
@@ -50,9 +35,9 @@ import os
 import sys
 
 LIVE = os.path.expanduser(
-    r"~/.claude/projects/{{BRAIN_SLUG}}/memory/prompts/PROMPTS.jsonl")
+    r"~\.claude\projects\{{BRAIN_SLUG}}\memory\prompts\PROMPTS.jsonl")
 REPO_PROMPTS = os.path.expanduser(
-    r"~/brain-repo/01_ai_consciousness/claude/memory/prompts")
+    r"~\brain-repo\01_ai_consciousness\claude\memory\prompts")
 ARCHIVE = os.path.join(REPO_PROMPTS, "archive")
 UNDATED = "UNDATED"
 
@@ -67,7 +52,7 @@ def month_of(line: str) -> str:
         rec = json.loads(line)
     except Exception:
         return UNDATED
-    ts = str(rec.get("ts") or "") if isinstance(rec, dict) else ""
+    ts = str(rec.get("ts") or "")
     # "2026-07-09T12:07:09" -> "2026-07"; reject anything not shaped like a real date.
     if len(ts) >= 7 and ts[4] == "-" and ts[:4].isdigit() and ts[5:7].isdigit():
         return ts[:7]
@@ -97,9 +82,11 @@ PART_CAP = 40 * 1048576   # bytes; a month over this is published as day-bounded
 def split_big_months(buckets: dict[str, list[str]]) -> dict[str, list[str]]:
     """A month whose shard would pass PART_CAP becomes PROMPTS_<YYYY-MM>.pNN.jsonl parts.
 
-    Parts break only at a day boundary and are filled greedily from the 1st, so a part's edges depend only on the
-    days before it: a closed part never changes when later days are added. A single day over the cap stays whole in
-    its own part. Months under the cap keep their one-file name, so nothing old churns.
+    7 Nov 2026: October reached 67.8 MB (the five-minute loop ticks) and November 32 MB in six days. The secret
+    scanner refuses any object over 64 MB, so the nightly dream push was blocked, and a month past 100 MB would be
+    refused by GitHub itself. Parts break only at a day boundary and are filled greedily from the 1st, so a part's
+    edges depend only on the days before it: a closed part never changes when later days are added. A single day
+    over the cap stays whole in its own part. Months under the cap keep their one-file name, so nothing old churns.
     """
     out: dict[str, list[str]] = {}
     for key, lines in buckets.items():
@@ -158,24 +145,47 @@ def existing_shards() -> dict[str, list[str]]:
     return found
 
 
-def union_shards(source: list[str], published: dict[str, list[str]]) -> dict[str, list[str]]:
-    """Keep all archived occurrences; append only missing occurrences from source.
+def line_key(line: str) -> bytes:
+    """A 16-byte stand-in for one ledger line in the multiset checks.
 
-    Compare globally so an existing line in an unexpected shard is still preserved rather
-    than duplicated. Existing shard contents and ordering are never rewritten from source.
-    """
-    merged = {key: list(lines) for key, lines in published.items()}
-    available = collections.Counter(line for lines in published.values() for line in lines)
-    for line in source:
-        if available[line]:
-            available[line] -= 1
-        else:
-            month = month_of(line)
-            # a month already published in parts takes new lines in its last part, never a second whole-month file
-            parts = sorted(k for k in merged if k.startswith(month + ".p"))
-            key = month if month in merged or not parts else parts[-1]
-            merged.setdefault(key, []).append(line)
-    return merged
+    8 Nov 2026: the dream's run wrote its shards in 12 minutes and then sat 33 more in the final check, killed at
+    its 2700 s cap under commit pressure. That check held a second full copy of the 230 MB ledger plus two string
+    Counters (the --check alone peaked at 578 MB). Counting 16-byte blake2b digests keeps the same multiset test
+    (a collision needs 2^64 lines) and never holds the published text."""
+    return hashlib.blake2b(line.encode("utf-8"), digest_size=16).digest()
+
+
+def key_counter(lines) -> collections.Counter:
+    return collections.Counter(line_key(l) for l in lines)
+
+
+def published_keys(only: set[str] | None = None) -> tuple[collections.Counter, int, list[str]]:
+    """Stream the shard files into a Counter of line keys, holding one line at a time. Returns (keys, lines, names);
+    `only` limits it to those shard names. Same line cleaning as existing_shards()."""
+    keys: collections.Counter = collections.Counter()
+    n, names = 0, []
+    if not os.path.isdir(ARCHIVE):
+        return keys, n, names
+    for name in sorted(os.listdir(ARCHIVE)):
+        if not (name.startswith("PROMPTS_") and name.endswith(".jsonl")):
+            continue
+        key = name[len("PROMPTS_"):-len(".jsonl")]
+        if only is not None and key not in only:
+            continue
+        names.append(key)
+        with io.open(os.path.join(ARCHIVE, name), encoding="utf-8") as f:
+            for l in f:
+                if l.strip():
+                    keys[line_key(l.strip("\n").strip("\r"))] += 1
+                    n += 1
+    return keys, n, names
+
+
+def shard_names() -> list[str]:
+    if not os.path.isdir(ARCHIVE):
+        return []
+    return [n[len("PROMPTS_"):-len(".jsonl")] for n in sorted(os.listdir(ARCHIVE))
+            if n.startswith("PROMPTS_") and n.endswith(".jsonl")]
 
 
 def digest(lines: list[str]) -> str:
@@ -190,18 +200,9 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true",
                     help="verify the published shards against the live ledger; write nothing")
-    ap.add_argument("--union-existing", action="store_true",
-                    help="publish the multiset union with existing shards; --check remains "
-                         "a strict local-ledger audit")
     args = ap.parse_args()
 
     if not os.path.exists(LIVE):
-        # A new brain has no prompt ledger until the prompt hook records its first prompt, and
-        # then there is nothing to shard. A missing ledger is a fault only when shards already
-        # exist, because then the ledger that fed them has gone.
-        if not (os.path.isdir(ARCHIVE) and any(f.endswith(".jsonl") for f in os.listdir(ARCHIVE))):
-            print("shard_prompt_archive: no prompt ledger yet, nothing to shard")
-            return 0
         print("shard_prompt_archive: no live ledger at %s" % LIVE, file=sys.stderr)
         return 2
 
@@ -209,20 +210,20 @@ def main() -> int:
     buckets = split_big_months(group(source))
 
     if args.check:
-        published = existing_shards()
-        flat = [l for k in sorted(published) for l in published[k]]
+        pub_keys, pub_n, pub_names = published_keys()
+        src_keys = key_counter(source)
         # TWO NUMBERS, DELIBERATELY NOT ONE - the same discipline the bm25 staleness check needed.
         # INVENTED is the fault and it triggers: a line in the shards that is not in the live
         # ledger means corruption or duplication, and there is no benign reason for it.
-        # PENDING is reported and must NOT trigger: the ledger gains a line every time the owner
+        # PENDING is reported and must NOT trigger: the ledger gains a line every time the author
         # types, so any check run between publishes legitimately sees unpublished records. A gate
         # that failed on that would be red almost always and would teach everyone to ignore it.
-        invented = collections.Counter(flat) - collections.Counter(source)
-        pending = collections.Counter(source) - collections.Counter(flat)
+        invented = pub_keys - src_keys
+        pending = src_keys - pub_keys
         ok = not invented
         print("shard_prompt_archive --check: live=%d published=%d shards=%d "
               "pending_publish=%d invented=%d -> %s"
-              % (len(source), len(flat), len(published), sum(pending.values()),
+              % (len(source), pub_n, len(pub_names), sum(pending.values()),
                  sum(invented.values()), "ok" if ok else "CORRUPT"))
         if invented:
             print("  %d shard line(s) are absent from the live ledger - the shards disagree with "
@@ -230,19 +231,10 @@ def main() -> int:
                   % sum(invented.values()), file=sys.stderr)
         return 0 if ok else 1
 
-    expected = collections.Counter(source)
-    if args.union_existing:
-        published_before = existing_shards()
-        archived = collections.Counter(line for lines in published_before.values() for line in lines)
-        expected |= archived  # maximum multiplicity, not a set or concatenation
-        buckets = union_shards(source, published_before)
-        print("union existing : %d archive-only occurrence(s) preserved"
-              % sum((archived - collections.Counter(source)).values()))
-
     # Prove the split is lossless BEFORE touching the repo: a multiset comparison both ways,
     # so a duplicated or dropped line cannot pass as equal counts.
-    rebuilt = [l for k in sorted(buckets) for l in buckets[k]]
-    if collections.Counter(rebuilt) != expected:
+    src_keys = key_counter(source)
+    if key_counter(l for k in sorted(buckets) for l in buckets[k]) != src_keys:
         print("shard_prompt_archive: ABORT - the split is not lossless; nothing written",
               file=sys.stderr)
         return 1
@@ -262,44 +254,42 @@ def main() -> int:
               % (key, len(lines), size / 1048576.0, digest(lines)[:12],
                  "(updated)" if wrote else ""))
 
-    if not args.union_existing:
-        # UNDATED is a residue bucket, not a month. A ledger repaired after an undated shard was published leaves that
-        # shard behind, and the check below would read its stale lines as invented on every later run. Remove the
-        # residue shard when the source has no undated line. A MONTH shard is never removed here: a month missing from
-        # the ledger is a loss to investigate, not to mirror.
-        undated_path = os.path.join(ARCHIVE, "PROMPTS_%s.jsonl" % UNDATED)
-        if UNDATED not in buckets and os.path.exists(undated_path):
-            os.remove(undated_path)
-            changed.append(UNDATED + " (removed: no undated line left in the ledger)")
-            print("%-10s %8d %10s  removed, no undated line left in the ledger" % (UNDATED, 0, "-"))
+    # UNDATED is a residue bucket, not a month. 2026-09-23: a class rewriter had cut two pasted prompts of 09-21 at
+    # their U+2028 separators into 58 fragment lines, and they were published here at 11:40. The ledger was repaired
+    # at 13:27; from then on it had no undated line, the loop above never rewrote this shard, and the check below read
+    # the 58 stale lines as invented - LOSSLESS False on every run. Remove the residue shard when the source has no
+    # undated line. A MONTH shard is never removed here: a month missing from the ledger is a loss to investigate,
+    # not to mirror, and the check below stays loud about it.
+    undated_path = os.path.join(ARCHIVE, "PROMPTS_%s.jsonl" % UNDATED)
+    if UNDATED not in buckets and os.path.exists(undated_path):
+        os.remove(undated_path)
+        changed.append(UNDATED + " (removed: no undated line left in the ledger)")
+        print("%-10s %8d %10s  removed, no undated line left in the ledger" % (UNDATED, 0, "-"))
 
-        # A month that moved between one file and parts leaves the old layout behind. Remove it only when the shards
-        # this run wrote already hold every source line (checked from disk), and only names of a month this run
-        # published, so a month missing from the ledger is still never removed here.
-        stale = [k for k in existing_shards() if k not in buckets and k != UNDATED
-                 and k.split(".p")[0] in {b.split(".p")[0] for b in buckets}]
-        if stale:
-            fresh = existing_shards()
-            flat_new = [l for k in sorted(buckets) for l in fresh.get(k, [])]
-            if collections.Counter(flat_new) == expected:
-                for k in stale:
-                    os.remove(os.path.join(ARCHIVE, "PROMPTS_%s.jsonl" % k))
-                    changed.append(k + " (removed: its records now live in the month's other layout)")
-            else:
-                print("shard_prompt_archive: old layout kept - the new shards do not yet hold every line",
-                      file=sys.stderr)
+    # A month that moved between one file and parts leaves the old layout behind. Remove it only when the shards
+    # this run wrote already hold every source line (checked from disk), and only names of a month this run
+    # published, so a month missing from the ledger is still never removed here.
+    stale = [k for k in shard_names() if k not in buckets and k != UNDATED
+             and k.split(".p")[0] in {b.split(".p")[0] for b in buckets}]
+    if stale:
+        if published_keys(only=set(buckets))[0] == src_keys:
+            for k in stale:
+                os.remove(os.path.join(ARCHIVE, "PROMPTS_%s.jsonl" % k))
+                changed.append(k + " (removed: its records now live in the month's other layout)")
+        else:
+            print("shard_prompt_archive: old layout kept - the new shards do not yet hold every line",
+                  file=sys.stderr)
 
     # Re-read from disk and compare to the source again - the check that matters is what the
     # repo will actually carry, not what we intended to write.
-    published = existing_shards()
-    flat = [l for k in sorted(published) for l in published[k]]
-    ok = collections.Counter(flat) == expected
+    pub_keys, pub_n, pub_names = published_keys()
+    ok = pub_keys == src_keys
     print()
     print("source records : %d" % len(source))
     print("published      : %d across %d shards, %.2f MB total, largest %.2f MB"
-          % (len(flat), len(published), total_bytes / 1048576.0,
+          % (pub_n, len(pub_names), total_bytes / 1048576.0,
              max((os.path.getsize(os.path.join(ARCHIVE, "PROMPTS_%s.jsonl" % k))
-                  for k in published), default=0) / 1048576.0))
+                  for k in pub_names), default=0) / 1048576.0))
     print("updated shards : %s" % (", ".join(changed) if changed else "none"))
     print("LOSSLESS       : %s" % ok)
     return 0 if ok else 1

@@ -167,7 +167,7 @@ class SupersessionProducerTests(unittest.TestCase):
         env.update({
             "BRAIN_SUPERSEDED_INDEX": str(self.ledger),
             "BRAIN_AGE_AS_OF": "2026-07-19",
-            "BRAIN_TIMEZONE": "UTC",
+            "BRAIN_TIMEZONE": "Asia/Jerusalem",
             "DREAM_TYPE": "sws",
             "PYTHONIOENCODING": "utf-8",
         })
@@ -221,10 +221,12 @@ class SupersessionProducerTests(unittest.TestCase):
         index_path = self.root / "bm25_index.json.gz"
         bm25.build(str(self.mem), str(index_path))
         live_bm25 = bm25.BM25
+        opened = []
 
         class FixtureBM25(live_bm25):
             def __init__(self, path=str(index_path)):
                 super().__init__(path)
+                opened.append(self)
 
         old_mem, old_sal, old_state = fok_probe.MEM, fok_probe.SAL, fok_probe.FONK_STATE
         old_know = fok_probe.KNOW_STATE
@@ -248,6 +250,15 @@ class SupersessionProducerTests(unittest.TestCase):
             bm25.BM25 = live_bm25
             fok_probe.MEM, fok_probe.SAL, fok_probe.FONK_STATE = old_mem, old_sal, old_state
             fok_probe.KNOW_STATE = old_know
+            # Each BM25 keeps its postings sidecar open; on Windows tearDown cannot remove the temp folder while it is
+            # (PermissionError on bm25_index.json.gz.postings...sqlite, 13 Nov 2026). Close what this fixture opened.
+            for bm in opened:
+                sc = bm.__dict__.get("_sc")
+                if sc is not None:
+                    try:
+                        sc[0].close()
+                    except Exception:
+                        pass
         output = capture.getvalue()
         self.assertIn(NEW, output)
         self.assertNotIn(OLD, output)
@@ -284,14 +295,9 @@ class SupersessionProducerTests(unittest.TestCase):
         (fake_mem / (third + ".md")).write_text(
             memory_text(third, "Verified exact terminal crash recovery structure Cascadia controllers") + shared,
             encoding="utf-8")
-        # The views builder ships beside this tree (framework root) and, in a deployment that keeps
-        # its brain in a separate repository, under that repository's root; the installer puts it
-        # in <home>/brain-repo. Take the first that exists; a deployment names its own with
-        # BRAIN_VIEWS_BUILDER.
-        candidates = [Path(os.environ["BRAIN_VIEWS_BUILDER"])] if os.environ.get("BRAIN_VIEWS_BUILDER") else []
-        candidates += [parent / "manifests" / "build_tools" / "build_brain_architecture.py"
-                       for parent in (HERE.parents[0], HERE.parents[1], HERE.parents[1] / "brain-repo")]
-        builder = next((c for c in candidates if c.exists()), candidates[-1])
+        branch_builder = HERE.parents[1] / "manifests" / "build_tools" / "build_brain_architecture.py"
+        live_builder = Path.home() / "brain-repo" / "manifests" / "build_tools" / "build_brain_architecture.py"
+        builder = branch_builder if branch_builder.exists() else live_builder
         env = dict(os.environ)
         env["PYTHONPATH"] = str(HERE) + os.pathsep + env.get("PYTHONPATH", "")
         proc = subprocess.run([sys.executable, str(builder), str(fake_repo)], env=env,

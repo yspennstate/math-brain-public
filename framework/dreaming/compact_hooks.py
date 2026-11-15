@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Compaction hooks: agents compact at task boundaries, sooner, and lose nothing when they do (9 Oct 2026: an agent that has finished
-a subject compacts then, compaction follows tasks rather than a full context, and it happens sooner).
+"""Compaction hooks: agents compact at task boundaries, sooner, and lose nothing when they do (owner, 9 Oct 2026
+17:0x-17:2x: "if they feel like they have finished a subject they should autocompact", "i want thing to compact faster",
+"we should be compacting based on tasks", "100 new hooks for compacting").
 
-Fifty-three brain hooks in compact_hooks.jsonl (a math brain can keep its own set beside them). Each is fired by a measured signal; at most one per event (two right after a compaction); a per-session
-cooldown per hook; within a kind the hook shown least recently goes first, so they rotate.
+Fifty brain hooks in compact_hooks.jsonl (the math brain's fifty are HOOK_IDEAS_v6.jsonl under primary_directive/
+math_hooks). Each is fired by a measured signal; at most one per event (two right after a compaction); a per-session
+cooldown per hook; within a kind the hook shown least recently goes first, so the fifty rotate.
 - A task or subject ends: a checklist entry closed, a final report ("This was your ..."), a push, a commit, a released
   claim, a handoff sent, a report written to Downloads, a gate decision written, tests passed, a checkpoint written.
 - The context is large: the live token count from the transcript's last usage record (bands 200k, 250k, 280k, 350k,
@@ -24,6 +26,8 @@ import time
 HOME = os.path.expanduser("~")
 HERE = os.path.dirname(os.path.abspath(__file__))
 HOOKS = os.path.join(HERE, "compact_hooks.jsonl")
+STOP_CARRY_KINDS = ("final_report", "lesson_before_compact")   # computed only on Stop; carried to the next event
+STOP_CARRY_S = 2 * 3600
 T_START = time.time()       # under hook_dispatch the module is run afresh for each hook call
 STATE = os.environ.get("COMPACT_HOOKS_STATE") or os.path.join(HOME, ".claude", "compact_hooks", "state")
 FIRES = os.environ.get("COMPACT_HOOKS_FIRES") or os.path.join(HOME, ".claude", "brain_graph", "compactions", "hook_fires.jsonl")
@@ -297,7 +301,7 @@ def _named_on_disk(sp):
 def _this_compactions_rows(sid, sp, st):
     """The node rows written for THIS compaction, newest last: the session's rows from NODE_FRESH_S before the hook
     started on that no earlier SessionStart named, polled for up to sum(NODE_WAITS) seconds.
-    14 Oct 12:07:53: the old half-hour window named compaction_claude_e5f6a7b8_20261014T120520, a
+    14 Oct 12:07:53 (an agent-r): the old half-hour window named compaction_agent_20261014T120520, a
     sibling subagent's node 153 s old, as this compaction's; this compaction's own row landed at 12:07:55. A subagent's
     compaction reaches the hook with its parent's session id and transcript, so a session's window holds its siblings'
     nodes; and in any session that compacted in the half hour before, a lost node read as saved. Run this once per
@@ -344,6 +348,10 @@ def _maybe_spawn_sweep():
         pyw = os.path.join(os.path.dirname(sys.executable), "pythonw.exe")
         args = [pyw if os.path.exists(pyw) else sys.executable, "-X", "utf8", os.path.join(HERE, "compact_nodes.py"),
                 "--sweep", "--days", "1"]
+        if os.name != "nt":   # macOS/Linux: own session (outlives the hook), niced like BelowNormal
+            subprocess.Popen(args, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                             close_fds=True, start_new_session=True, preexec_fn=lambda: os.nice(10))
+            return
         base = 0x00000008 | 0x00004000 | 0x08000000   # DETACHED_PROCESS | BELOW_NORMAL | CREATE_NO_WINDOW
         err = None
         for flags in (base | 0x01000000, base):       # break away from the hook's job when it is allowed
@@ -387,6 +395,23 @@ def main():
     except (OSError, ValueError):
         st = {}
     kinds, fill = candidates(ev, data, tokens, idle, last_text, st)
+    # 14 Nov (an agent): Claude Code delivers no context on Stop (hook_dispatch logs "not delivered": 171 rows on
+    # 14 Nov by 11:00). A card picked on a Claude Stop was marked shown, started its cooldown and was never seen. So a
+    # Claude Stop picks nothing; its Stop-only kinds wait in the state and ride on the next event that delivers.
+    stop_hold = ev == "Stop" and not CODEX
+    if stop_hold:
+        held = [x for x in kinds if x in STOP_CARRY_KINDS]
+        if held:
+            st["stop_carry"] = {"kinds": held, "t": time.time()}
+    elif not CODEX and st.get("stop_carry"):
+        c = st.pop("stop_carry") or {}
+        try:
+            fresh_c = time.time() - float(c.get("t", 0)) <= STOP_CARRY_S
+        except (TypeError, ValueError):
+            fresh_c = False
+        if fresh_c and not (ev == "SessionStart" and data.get("source") == "compact"):
+            have = set(kinds) | set(x for x in c.get("kinds") or [] if x in STOP_CARRY_KINDS)
+            kinds = [x for x in ORDER if x in have]
     # 9 Oct 19:3x (his 19:0x ask): after a compaction, say whether it became a brain node, so a lost one is caught at once
     compact_start = ev == "SessionStart" and data.get("source") == "compact"
     fresh = COMPACTION_KINDS if compact_start else ()
@@ -398,7 +423,7 @@ def main():
             # (the PostCompact writer runs beside this hook and takes 15-30 s on a busy box). Holding SessionStart longer
             # would stall every resume, so the verdict waits for this session's next events instead.
             st["cp52_pending"] = time.time()
-    elif not CODEX and st.get("cp52_pending"):
+    elif not CODEX and st.get("cp52_pending") and not stop_hold:   # a verdict on a Claude Stop would be dropped unseen
         try:
             since = float(st["cp52_pending"])
         except (TypeError, ValueError):
@@ -445,7 +470,7 @@ def main():
         kinds = ["codex_compacted"] + kinds
     shown = st.setdefault("shown", {})
     now = time.time()
-    picked = choose(load_hooks(), kinds, shown, now, 2 if ev == "SessionStart" else 1, fresh=fresh)
+    picked = [] if stop_hold else choose(load_hooks(), kinds, shown, now, 2 if ev == "SessionStart" else 1, fresh=fresh)
     for h in picked:
         shown[h["id"]] = now
         shown["kind:" + h["kind"]] = now
@@ -453,7 +478,17 @@ def main():
     try:
         with io.open(tmp, "w", encoding="utf-8") as fh:
             fh.write(json.dumps(st))
-        os.replace(tmp, sp)
+        # A reader holding the state file open makes os.replace fail on Windows with a sharing violation for a few
+        # milliseconds; errors.log carried ten such "Access is denied" rows from 27 Oct to 11 Nov 2026, each one a
+        # lost shown-state (the same card served again). Retry briefly before giving up.
+        for _try in range(6):
+            try:
+                os.replace(tmp, sp)
+                break
+            except PermissionError:
+                if _try == 5:
+                    raise
+                time.sleep(0.05 * (_try + 1))
     except OSError as exc:   # a sibling's hook holding the file (subagents share the parent's state): say it anyway
         _note_error("state not written: " + repr(exc))
         try:

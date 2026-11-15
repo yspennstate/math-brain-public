@@ -21,56 +21,36 @@ Usage:  python bm25.py build            rebuild the index from the memory dir
         python bm25.py query "text"     top-10 sanity check
 
 WRITE-TIME LANE (2026-09-02). A memory written to the corpus was invisible to the bm25 arm - and so to
-deliberate recall, whose ranking is bm25-first - until the nightly rebuild. Measured that night: a box-icing
-law filed at 01:2xZ did not surface for "can I restart <remote-box>" until the index was rebuilt by hand.
+deliberate recall, whose ranking is bm25-first - until the nightly rebuild. Measured that night: a rule about
+one machine filed at 01:2xZ did not surface for a question naming that machine until the index was rebuilt by hand.
 refresh() closes that gap incrementally: it adds or replaces the docs whose file mtime is newer than the
 index, drops docs whose file is gone, and rewrites the same payload format atomically under a lock, so the
 nightly build() stays the source of truth and every reader (hooks via the pickle sidecar, recall(), evals)
 sees the fresh memory on its next load.
 """
-import os, io, re, sys, json, gzip, hashlib, math, pickle, stat, tempfile
+import os, io, re, sys, json, gzip, hashlib, math, pickle, stat
 import time as _time
 from contextlib import contextmanager
 
-import brain_node_documents as node_docs
+class _LazyNodeDocs:
+    """brain_node_documents, imported on first use. Only index builds and the attachment checks need it; importing it
+    up front (dataclasses, inspect, tempfile, argparse) cost every hook that scores a query about 30 ms (11 Nov)."""
+
+    def __getattr__(self, name):
+        import brain_node_documents as mod
+        globals()["node_docs"] = mod
+        return getattr(mod, name)
 
 
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
+node_docs = _LazyNodeDocs()
 
 HOME = os.path.expanduser("~")
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
-MEM = os.environ.get("BRAIN_MEM_DIR", os.path.join(HOME, ".claude", "projects", _BRAIN_SLUG, "memory"))
+MEM = os.environ.get("BRAIN_MEM_DIR", os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory"))
 DR = os.path.dirname(os.path.abspath(__file__))
 # BRAIN_BM25_INDEX points a whole process (build, refresh, recall, the evals) at a SHADOW index - the tokeniser
-# A/B of 2026-09-14 scores the owner-voice bank end to end on a shadow built with V3 without touching the live one.
+# A/B of 2026-09-14 scores the author-voice bank end to end on a shadow built with V3 without touching the live one.
 INDEX = os.environ.get("BRAIN_BM25_INDEX") or os.path.join(DR, "bm25_index.json.gz")
-LIVE_MEM = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+LIVE_MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 LIVE_INDEX = os.path.join(DR, "bm25_index.json.gz")
 
 
@@ -90,10 +70,6 @@ def publishes_live_from_elsewhere(mem_dir=None, out=None):
     return _same_path(out, LIVE_INDEX) and not _same_path(mem_dir, LIVE_MEM)
 _PAYLOAD_CACHE = {}   # (path, file signature) -> parsed payload; one entry in practice
 K1, B = 1.2, 0.75
-# term -> weight multiplying that query term's idf in both scorers; empty means every weight is 1 and scores are bit
-# for bit unchanged (x * 1.0 is exact). Set by a caller for one query, e.g. a trial that gives added word forms a
-# fraction of a typed word's weight (1 Nov, mesh task 1; recall_misses_word_forms_closing_vs_close_2026_10_29).
-QUERY_TERM_WEIGHTS = {}
 MAX_DOC_TOKENS = 1500          # the load-bearing head of a memory; keeps the index lean
 MAX_ATTACHMENT_TOKENS = 3000   # extra bounded space; never displace the parent node's head
 TOKEN = re.compile(r"[a-z0-9_]{3,}")
@@ -116,12 +92,12 @@ DOMAIN2 = ({"mv", "iv", "dd", "ib"}                       # measurement vocabula
            | {"1y", "2y", "3y", "5y"})                    # tenors
 TOKEN2 = re.compile(r"[a-z0-9_]{2,}")
 _DOMAIN2_ON = os.environ.get("BRAIN_TOKENS_DOMAIN2") == "1"
-# V3 (2026-09-14, staged behind BRAIN_TOKENS_V3=1 for a shadow-index measurement): the owner's short
-# alphanumeric names vanish from BOTH index and query under the {3,} floor - "v2-B" -> nothing, "rev-8" ->
-# "rev", "k=0.45" -> nothing, "box 4" -> "box" - four of fourteen owner-voice recall misses on 2026-09-11 could
+# V3 (2026-09-14, staged behind BRAIN_TOKENS_V3=1 for a shadow-index measurement): the author's short
+# alphanumeric names vanish from BOTH index and query under the {3,} floor - "v2-B" -> nothing, "gen-8" ->
+# "gen", "k=0.65" -> nothing, "box 4" -> "box" - four of fourteen owner-voice recall misses on 2026-09-11 could
 # not match their memory at all. V3 keeps the DOMAIN2 whitelist, keeps any token that carries a digit (v2, p100,
 # 65, 24, 1s), and keeps an alphanumeric compound joined by '-' or '.' as ONE token as well as its parts
-# ("v2-b" -> v2_b, v2; "0.45" -> 0_45, 45; "<remote-box>" -> research_box_03, research, box, 03).
+# ("v2-b" -> v2_b, v2; "0.65" -> 0_65, 65; "host-box-03" -> host_box_03, host, box, 03).
 # Single characters are still dropped (the "4" of "box 4" stays invisible - a lone digit is noise everywhere).
 # DEFAULT ON since 2026-09-14 01:1x (BRAIN_TOKENS_V3=0 opts out; the live index was rebuilt with it in the same
 # minute). Shadow A/B on the 56-question owner-voice bank, one corpus, one moment: hit@1 28 -> 28, hit@5 42 -> 43
@@ -131,15 +107,15 @@ _V3_COMPOUND = re.compile(r"[a-z0-9]+(?:[-.][a-z0-9]+)+")
 _DIGIT = re.compile(r"[0-9]")
 
 
-_ALNUM_ID = re.compile(r"^(?=.*[0-9])(?=.*[a-z])[a-z0-9_]+$")      # v2, p100, 1s, rev_8, v2_b, research_box_03
+_ALNUM_ID = re.compile(r"^(?=.*[0-9])(?=.*[a-z])[a-z0-9_]+$")      # v2, p100, 1s, gen_8, v2_b, host_box_03
 _WORDNUM_ON = os.environ.get("BRAIN_TOKENS_WORDNUM") == "1"      # staged 2026-09-14 02:0x for a shadow measurement
 _V3_WORDNUM = re.compile(r"\b([a-z]{3,}) ([0-9]{1,3})\b")
-_DECIMAL = re.compile(r"^[0-9]+_[0-9]+$")                             # 0_45, 0_25 - a decimal number, not a date
+_DECIMAL = re.compile(r"^[0-9]+_[0-9]+$")                             # 0_65, 0_24 - a decimal number, not a date
 # Decimals are 45 pct of V3's added vocabulary (36,675 of 81,038 terms measured 2026-09-14) and 62 pct of all the
-# added terms appear in exactly one memory. A partner's rules are full of numbers they type back at the brain
-# (k=0.45, ratio 0.25, STEP 0.0035), so the lane is not obviously waste - it is measured, not assumed, below.
+# added terms appear in exactly one memory. The author's rules are full of numbers typed back at the brain
+# (k=0.65, a threshold of 0.30, a step of 0.0048), so the lane is not obviously waste - it is measured, not assumed, below.
 _V3_DECIMALS = os.environ.get("BRAIN_TOKENS_V3_DECIMAL", "1") != "0"
-# DATES (2026-09-27; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
+# DATES (2026-09-27, an agent; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
 # month and day however written - "september 2", "2 Sep", "2026-09-02", a slug's 2026_09_02 - gains one shared token
 # md0902 on both sides; nothing is removed, so an exact match keeps its weight. A memory's head gets the tokens of the
 # dates in its first 12,000 characters (the slug's creation date among them), after the head budget, so they never
@@ -182,7 +158,7 @@ def date_tokens(text):
 def _tokens_v3(text):
     """A strict SUPERSET of the live tokeniser: every token it emits today, plus the two-letter DOMAIN2 terms,
     plus short ALPHANUMERIC identifiers (a letter and a digit together: 3c, 1s, p100), plus each identifier-like
-    '-'/'.' compound as one extra token (v2_b, rev_8, research_box_03) and each decimal number (0_45).
+    '-'/'.' compound as one extra token (3c_d, gen_8, research_box_03) and each decimal number (0_65).
     Deliberately NOT admitted (first shadow, 2026-09-14 00:5x): bare integers and years ('65', '24', '2026') and
     date compounds ('2026_09_13') - they sit in every memory, grew the average document 455 -> 543 tokens, moved
     the lexical seed set on unrelated questions, and cost two owner-voice hits for the one they bought."""
@@ -237,6 +213,51 @@ def _edits1(w):
                + [a + c + b for a, b in sp for c in _ALPHA])
 
 
+class _SidecarDF:
+    """Read-only df lookups against the sidecar's p(term, df) table, cached per term (see BM25.df_view). Only get,
+    [] and `in` exist: a caller that needs to iterate the vocabulary must use BM25.df."""
+
+    def __init__(self, con):
+        self._con = con
+        self._got = {}
+        # p keeps each term's postings blob in its row, so a df lookup by the primary key lands on leaf pages that hold
+        # a few terms each: about 35 ms for the 200-odd words of a tool output. The covering index p_df(term, df) has
+        # the same rows and answers in 2-4 ms, but the planner keeps choosing the primary key, so it is named. A sidecar
+        # built before the index existed has none and is read the old way (11 Nov, an agent).
+        try:
+            ix = con.execute("select 1 from sqlite_master where type='index' and name='p_df'").fetchone()
+        except Exception:
+            ix = None
+        self._from = "from p indexed by p_df" if ix else "from p"
+
+    def prefetch(self, terms):
+        need = [x for x in terms if x not in self._got]
+        for i in range(0, len(need), 900):
+            part = need[i:i + 900]
+            for x in part:
+                self._got[x] = None
+            rows = self._con.execute("select term, df %s where term in (%s)" % (self._from, ",".join("?" * len(part))),
+                                     part)
+            for term, df in rows:
+                self._got[term] = df
+
+    def get(self, term, default=None):
+        if term not in self._got:
+            row = self._con.execute("select df %s where term=?" % self._from, (term,)).fetchone()
+            self._got[term] = row[0] if row else None
+        v = self._got[term]
+        return default if v is None else v
+
+    def __getitem__(self, term):
+        v = self.get(term)
+        if v is None:
+            raise KeyError(term)
+        return v
+
+    def __contains__(self, term):
+        return self.get(term) is not None
+
+
 class QueryNormalizer:
     """Spell-normalize OUT-OF-VOCAB query tokens to their nearest corpus term (edit distance, df-tie).
 
@@ -251,7 +272,7 @@ class QueryNormalizer:
     0.56->0.61, hit@20 0.75->0.81); MRR dips are rank-order noise, irrelevant to spread_recall's seeder
     which takes the top-5 as a POOL, not a ranked list.
 
-    QUOTED-TYPO IMMUNITY (found+fixed 2026-07-09 night): memories QUOTE the owner's typo'd prompts, so
+    QUOTED-TYPO IMMUNITY (found+fixed 2026-07-09 night): memories QUOTE the author's typo'd prompts, so
     within a DAY of shipping, 'memeory' reached df=5 and a bare `tok in df` short-circuit made his
     highest-frequency typos permanently uncorrectable - the records of the typos were protecting the
     typos. Fix: TYPO_DF_MAX/SNAP_RATIO (a rare in-vocab token corrects only to a >=50x-more-common
@@ -265,7 +286,7 @@ class QueryNormalizer:
     DF_FLOOR = 2   # only correct TO a term in >= this many memories (blocks fluke single-memory snaps;
                    # floor 1 scores marginally higher on the 36-ep snapshot but a df=1 target is almost
                    # always a wrong correction - cheap insurance for unseen queries, MRR/hit@5 unchanged)
-    TYPO_DF_MAX = 8   # a token this rare may itself BE a quoted typo: memories QUOTE the owner's typo'd
+    TYPO_DF_MAX = 8   # a token this rare may itself BE a quoted typo: memories QUOTE the author's typo'd
                       # prompts, so 'memeory' reached df=5 within a DAY of the spell fix shipping and a
                       # bare membership test made it immune (measured 2026-07-09 night - the records of
                       # his typos were protecting the typos). Rare in-vocab tokens stay correctable...
@@ -291,55 +312,18 @@ class QueryNormalizer:
         if own > self.TYPO_DF_MAX:
             return tok         # solidly in vocabulary - never touched
         floor = max(self.DF_FLOOR, self.SNAP_RATIO * own)
-        e1 = _edits1(tok)
-        prefetch = getattr(self.df, "prefetch", None)   # a df read term by term (brain's recall) takes them in one batch
-        if prefetch is not None:
-            prefetch(e1)
-        c1 = [x for x in e1 if self.df.get(x, 0) >= floor]
+        cands = _edits1(tok)
+        pre = getattr(self.df, "prefetch", None)
+        if pre is not None:
+            pre(cands)       # a _SidecarDF answers the candidates in one query instead of one each
+        c1 = [x for x in cands if self.df.get(x, 0) >= floor]
         return max(c1, key=lambda x: self.df[x]) if c1 else tok
 
     def normalize(self, query):
-        m = _typo_map()
-        out = []
-        for t in tokens(query):
-            c = self._correct(t)
-            out.append(m.get(t, t) if c == t else c)
-        return " ".join(out)
+        return " ".join(self._correct(t) for t in tokens(query))
 
 
-# THE USER TYPO MAP, where the edit-1 fix gives up (1 Nov 2026). A map of the user's recurring typos
-# (built from their own prompts) reaches what one edit cannot: two-edit typos and
-# misspelt words (brian -> brain, platue -> plateau). It is read from the guarded copy that
-# a guard script writes (dictionary-word keys such as noam, todd and howard stay as
-# typed, and so does xhigh). A token takes its map entry only when _correct leaves it as typed. Judged blind on the user's
-# questions, own-session compactions dropped (typo_blind_round.py): this narrow use won 28 and lost 13 of 79 changed
-# top 5s over three disjoint slices (sign test p 0.028, one judge, the third slice added after a look at p 0.099);
-# the map applied ahead of the edit-1 fix won 14 and lost 11 of 33 (chanles -> changes and common-word respellings).
-# BRAIN_TYPO_MAP=0 turns it off.
-TYPO_MAP_FILE = os.path.join(HOME, ".claude", "dreaming", "owner_typo_map_guarded.json")
-_TYPO_MAP = {}
-
-
-def _typo_map():
-    """typo -> word from the guarded map, reread when the file changes; {} if absent or switched off."""
-    if os.environ.get("BRAIN_TYPO_MAP", "1") == "0":
-        return {}
-    try:
-        st = os.stat(TYPO_MAP_FILE)
-    except OSError:
-        return {}
-    key = (st.st_size, st.st_mtime_ns)
-    if _TYPO_MAP.get("key") != key:
-        try:
-            with io.open(TYPO_MAP_FILE, encoding="utf-8") as fh:
-                m = json.load(fh).get("map") or {}
-        except (OSError, ValueError):
-            m = {}
-        _TYPO_MAP.update(key=key, map=m)
-    return _TYPO_MAP["map"]
-
-
-# DOC EXPANSION (2026-09-26). The index sees a memory in its own words, and he asks in his: measured on
+# DOC EXPANSION (2026-09-26, an agent). The index sees a memory in its own words, and he asks in his: measured on
 # 968 reworded questions, the answer memory is in a plain search's top five a third of the time. Each memory now also
 # carries three questions a person might ask whose answer is in it, written once in ordinary words by Haiku 4.5 from the
 # memory's own description and opening (doc_expand.py; it never sees a test question). They are appended after the
@@ -378,28 +362,19 @@ def expansions():
     return got
 
 
-# A dated dream journal (dream_2026_10_16) is an aggregate that matches everything; a lesson whose slug merely
-# starts with dream_ (dream_semantic_association_step_...) is an ordinary memory and must be indexed.
-_JOURNAL = re.compile(r"dream_\d{4}_\d{2}_\d{2}")
-
-
-def is_journal(slug):
-    return bool(_JOURNAL.fullmatch(slug))
-
-
 def _indexable(fn):
     """The one rule for which memory files the index sees (shared by build, refresh and evals)."""
     if not fn.endswith(".md"):
         return None
     slug = fn[:-3]
-    if slug in SKIP_FILES or is_journal(slug):
+    if slug in SKIP_FILES or slug.startswith("dream_"):
         return None
     return slug
 
 
 ATTACHMENT_FAILURES = []     # (slug, error type) of every bundle read_doc could not verify in this process
 
-# read_doc's tokeniser output kept by the text's own hash (3 Nov 2026). In the
+# read_doc's tokeniser output kept by the text's own hash (3 Nov 2026, RECALL-10X lever 11, an agent). In the
 # resident recall server every call merges the memories newer than the published index (refresh_in_memory), and each
 # call re-read and re-tokenised the same twenty or thirty files: about 1 s of a 4 s warm recall went to _tokens_v3.
 # The key is the exact text, so a changed file gives a new key; the tokens are the tokeniser's own. BRAIN_BM25_TOKMEMO=0
@@ -433,7 +408,7 @@ def read_doc(mem_dir, slug):
     # Preserve the historical parent-node budget exactly, then give verified attachments
     # their own bounded tail.  Appending text before the old slice would make a long parent
     # silently consume the entire budget and recreate the "attached but unreadable" failure.
-    # 2026-09-11: the slug (the memory's name, the field that most often carries the owner's own words for a
+    # 2026-09-11: the slug (the memory's name, the field that most often carries the author's own words for a
     # thing) counts THREE times, not once. Measured offline on the 50-question owner-voice bank and the 68
     # real-prompt episodes with the 09-03 lab (recall_rerank_lab_v2.py, mode T = slug x3 + the live job_
     # demotion): G1 hit@1 18 -> 21, hit@5 33 -> 36 of 50 with 0 losses; G2 hit@10 +1 / -0. Nine of the
@@ -447,8 +422,8 @@ def read_doc(mem_dir, slug):
     try:
         attachment_text = node_docs.search_text_for_node(mem_dir, slug)
     except Exception as exc:
-        # A bundle that fails verification adds nothing to its parent's entry, and the rest of the index is read (28 Sep).
-        # Until then one broken
+        # A bundle that fails verification adds nothing to its parent's entry, and the rest of the index is read (28 Sep,
+        # scheduled audit account03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001). Until then one broken
         # bundle stopped the whole build and emptied recall's BM25 block: the live lane reads a fresh parent here, and a
         # damaged file is fresh by its mtime. The parent's own text is still indexed; the bundle is named on stderr.
         attachment_text = ""
@@ -473,7 +448,7 @@ def _read_threads():
 
 def read_many(mem_dir, slugs):
     """[read_doc(mem_dir, s) for s in slugs], in the same order, on a small thread pool.
-    Why (4 Nov 2026): a refresh's merge is file reads, not arithmetic - on a shadow
+    Why (4 Nov 2026, TOP10 rank 3, an agent): a refresh's merge is file reads, not arithmetic - on a shadow
     copy the merge loop for 1,000 notes took 0.4 s and their read_doc 4-31 s. Interleaved A/B on 4,000 older notes
     (100-note chunks, ABAB): serial 7.3 ms/note median, 8 threads 2.8, tokens identical. The open and read release
     the GIL; tokenising does not, so more threads buy little. BRAIN_BM25_READ_THREADS=1 restores the serial loop."""
@@ -512,26 +487,6 @@ def _stat_signature(info):
     identity_time = (getattr(info, "st_birthtime_ns", info.st_ctime_ns)
                      if os.name == "nt" else info.st_ctime_ns)
     return (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, identity_time)
-
-
-def _stable_signature(info):
-    """The identity a rename keeps, where the platform has a birth time; None elsewhere.
-
-    On macOS os.replace moves ctime (1.1 s after a 1.1 s wait, 30 Oct 2026, APFS; inode, size, mtime and
-    birth time kept), so a sidecar staged against the temp's full signature never matched the published
-    index: every publish fell back to writing the pickle after the replace, and a recall in those seconds
-    parsed the gzip json and wrote its own (8-13 s, 4 of 20 one-shot recalls). Tagged so it can never equal a full signature."""
-    birth = getattr(info, "st_birthtime", None) if os.name != "nt" else None
-    if birth is None:
-        return None
-    return ("stable", info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, birth)
-
-
-def _stable_index_signature(path):
-    try:
-        return _stable_signature(os.stat(path))
-    except FileNotFoundError:
-        return None
 
 
 def _stage_pickle(payload, pkl, source_signature=None, fresh=None):
@@ -578,6 +533,7 @@ def _stage_pickle(payload, pkl, source_signature=None, fresh=None):
     # using the prior reader remain compatible during the runtime cutover.
     cached = dict(payload, _cache_schema="bm25-pickle-generation-v1",
                   _source_signature=source_signature)
+    import tempfile   # writers only: a scoring hook should not pay for it (11 Nov)
     fd, tmp = tempfile.mkstemp(prefix=os.path.basename(pkl) + ".tmp.",
                                dir=os.path.dirname(os.path.abspath(pkl)))
     try:
@@ -628,11 +584,7 @@ def _load_payload(path=INDEX):
     pickle IS the parsed json (verified equal + identical query battery 2026-07-09)."""
     path = os.fspath(path)
     pkl = path + ".pkl"
-    try:
-        info = os.stat(path)
-        signature, stable = _stat_signature(info), _stable_signature(info)
-    except FileNotFoundError:
-        signature = stable = None
+    signature = _index_signature(path)
     key = (path, signature)
     if signature is not None and key in _PAYLOAD_CACHE:
         return _PAYLOAD_CACHE[key]
@@ -647,7 +599,7 @@ def _load_payload(path=INDEX):
         del blob
         if (signature is not None and isinstance(cached, dict)
                 and cached.get("_cache_schema") == "bm25-pickle-generation-v1"
-                and cached.get("_source_signature") in (signature, stable)
+                and cached.get("_source_signature") == signature
                 and _index_signature(path) == signature):
             z = {name: cached[name] for name in ("n", "avgdl", "df", "dl", "tf")}
     except Exception:
@@ -865,7 +817,10 @@ JSON_WRITE_SLICE = 1 << 23       # characters of json text encoded and written a
 
 
 def _write_json_text(f, obj):
-    """Write obj as json to the binary file f: json.dumps once, then encode and write it in 8 MB slices.
+    """Write obj as json to the binary file f, the text of json.dumps(obj), encoded and written 8 MB at a time.
+
+    Since 10 Nov 2026 the text is produced in pieces (_json_pieces), never as one string: see there. What follows
+    is why the C encoder is used at all.
 
     json.dump(obj, f) was three quarters of a publish. CPython uses its C encoder only for the one-shot
     json.dumps; json.dump runs the pure-Python encoder and pushes every small piece through the gzip text
@@ -873,9 +828,86 @@ def _write_json_text(f, obj):
     laptop): json.dump 17.0 and 17.6 s, json.dumps plus the writes 4.2 and 4.4 s, the decompressed text
     identical (fronts/R20/time_publish_r20.py). The slices keep the encoded copy at 8 MB instead of a second
     87 MB. BRAIN_BM25_JSON_ONESHOT=0 restores json.dump."""
-    s = json.dumps(obj)
-    for i in range(0, len(s), JSON_WRITE_SLICE):
-        f.write(s[i:i + JSON_WRITE_SLICE].encode("utf-8"))
+    buf, held = [], 0
+    for piece in _json_pieces(obj, top=True):
+        buf.append(piece)
+        held += len(piece)
+        if held >= JSON_WRITE_SLICE:
+            f.write("".join(buf).encode("utf-8"))
+            buf, held = [], 0
+    if buf:
+        f.write("".join(buf).encode("utf-8"))
+
+
+JSON_PIECE_BIG = 2048            # a dict or list with this many entries is written in batches, not in one call
+JSON_PIECE_BATCH = 256           # entries handed to the C encoder at a time
+
+
+def _json_pieces(obj, top=False, big=None, batch=None):
+    """Yield the text of json.dumps(obj), piece by piece, character for character the same.
+
+    json.dumps(payload) builds the whole index as one string before a byte is written, and the C encoder holds its
+    chunks and the joined copy at once. That was 87 MB of text at 21,509 docs (13 Oct 2026); at 59,248 docs
+    (9 Nov) the refresh died four times in a row with MemoryError inside the encoder, and twice before that
+    (15 and 30 Oct) inside the gzip write that followed it. Here a large dict or list is handed to the same C
+    encoder a batch of entries at a time, so the text held is one batch and the 8 MB write buffer, whatever the
+    index grows to. Keys go through the encoder inside a one-entry dict, so a key json would coerce (an int, a
+    bool, None) comes out exactly as json.dumps writes it. Controls: brain_improvement/agent_run/bm25_json_stream."""
+    big = JSON_PIECE_BIG if big is None else big
+    batch = JSON_PIECE_BATCH if batch is None else batch
+    if isinstance(obj, dict) and (top or len(obj) >= big) and obj:
+        yield "{"
+        first, part = True, {}
+        for k, v in obj.items():
+            if isinstance(v, (dict, list)) and len(v) >= big:
+                if part:
+                    yield ("" if first else ", ") + json.dumps(part)[1:-1]
+                    first, part = False, {}
+                yield ("" if first else ", ") + json.dumps({k: None})[1:-5]
+                first = False
+                for piece in _json_pieces(v, False, big, batch):
+                    yield piece
+            else:
+                part[k] = v
+                if len(part) >= batch:
+                    yield ("" if first else ", ") + json.dumps(part)[1:-1]
+                    first, part = False, {}
+        if part:
+            yield ("" if first else ", ") + json.dumps(part)[1:-1]
+        yield "}"
+    elif isinstance(obj, list) and (top or len(obj) >= big) and obj:
+        yield "["
+        first, part = True, []
+        for v in obj:
+            if isinstance(v, (dict, list)) and len(v) >= big:
+                if part:
+                    yield ("" if first else ", ") + json.dumps(part)[1:-1]
+                    first, part = False, []
+                if not first:
+                    yield ", "
+                first = False
+                for piece in _json_pieces(v, False, big, batch):
+                    yield piece
+            else:
+                part.append(v)
+                if len(part) >= batch:
+                    yield ("" if first else ", ") + json.dumps(part)[1:-1]
+                    first, part = False, []
+        if part:
+            yield ("" if first else ", ") + json.dumps(part)[1:-1]
+        yield "]"
+    else:
+        yield json.dumps(obj)
+
+
+def _drop_early_postings(p):
+    """Remove a sidecar built before the publish for a generation that will never be live."""
+    if p:
+        for junk in (p, p + "-journal"):
+            try:
+                os.remove(junk)
+            except OSError:
+                pass
 
 
 def _publish_payload(payload, out, expected_signature, scan_t0, added, removed,
@@ -900,6 +932,7 @@ def _publish_payload(payload, out, expected_signature, scan_t0, added, removed,
     written the old way: the binding is checked, never assumed. BRAIN_BM25_PKL_EARLY=0 restores the old order.
     """
     _sweep_index_temps(out)
+    import tempfile   # writers only: a scoring hook should not pay for it (11 Nov)
     fd, tmp = tempfile.mkstemp(prefix=os.path.basename(out) + ".tmp.",
                                dir=os.path.dirname(os.path.abspath(out)))
     os.close(fd)
@@ -914,28 +947,43 @@ def _publish_payload(payload, out, expected_signature, scan_t0, added, removed,
                 json.dump(payload, f)
         if os.environ.get("BRAIN_BM25_PKL_EARLY", "1") != "0":
             try:
-                staged = _stable_index_signature(tmp) or _index_signature(tmp)
+                staged = _index_signature(tmp)
                 pkl_tmp = _stage_pickle(payload, pkl, staged, fresh_docs) if staged is not None else None
             except Exception:
                 pkl_tmp = staged = None
-        pre = _prebuild_postings(payload, out, expected_signature)
+        # THE POSTINGS SIDECAR GOES IN WITH THE INDEX TOO (7 Nov 2026, an agent, TOP10 rank 3). It was built by
+        # the refresh after the publish, 38-53 s later on the loaded laptop, and every BM25() in that gap - the recall
+        # server and each prompt hook's spread_recall - unpickled the 104 MB payload instead (py-spy on the live server:
+        # 2.2 s in 10 min). It is built here from the payload in hand under the name of the generation the staged file
+        # carries; nothing looks that name up until the index carries it, and it is removed below if the identity
+        # came out different. BRAIN_BM25_POSTINGS_EARLY=0 restores the old order.
+        pst = None
+        if staged is not None and _POSTINGS_ON and os.environ.get("BRAIN_BM25_POSTINGS_EARLY", "1") != "0":
+            try:
+                pst = postings_path(out, staged)
+                if not os.path.exists(pst):
+                    base = _postings_base(out, pst) if _POSTINGS_INCR_ON else None
+                    build_postings(tmp, out=pst, base=base, _z=payload, _signature=staged)
+            except Exception:
+                _drop_early_postings(pst)
+                pst = None
         placed = False
         with _publication_lock(out):
             if _index_signature(out) != expected_signature:
+                _drop_early_postings(pst)
                 return None
             _replace_waiting_out_readers(tmp, out)
             signature = _index_signature(out)
-            bound = _stable_index_signature(out) or signature
-            if pkl_tmp is not None and bound == staged:
+            if pst is not None and signature != staged:
+                _drop_early_postings(pst)
+            if pkl_tmp is not None and signature == staged:
                 try:
                     os.replace(pkl_tmp, pkl)
                     placed = True
                 except OSError:
                     pass            # a reader holds the old sidecar: wait for it below, outside this lock
             _write_scan_marker(out, scan_t0, added, removed, signature, manifests)
-            if pre is not None:
-                _place_prebuilt(pre, out, signature)
-        if not placed and pkl_tmp is not None and bound == staged:
+        if not placed and pkl_tmp is not None and signature == staged:
             try:
                 with _publication_lock(out):
                     if _index_signature(out) == signature:
@@ -954,11 +1002,6 @@ def _publish_payload(payload, out, expected_signature, scan_t0, added, removed,
             if pkl_tmp is not None and os.path.exists(pkl_tmp):
                 os.remove(pkl_tmp)
         except OSError:
-            pass
-        try:
-            if pre is not None and os.path.exists(pre):
-                os.remove(pre)      # the publish lost its race, or the placing failed
-        except (OSError, NameError):
             pass
 
 
@@ -986,7 +1029,7 @@ def build(mem_dir=MEM, out=INDEX, _attempt=0):
     if _attempt == 0:
         try:
             if not freeze_state(out)[0]:
-                freeze(15, "bm25 full rebuild in progress (pid %d)" % os.getpid(), index_path=out, kind="build")
+                freeze(15, "bm25 full rebuild in progress (pid %d)" % os.getpid(), index_path=out)
                 _took_freeze = True
         except Exception:
             _took_freeze = False
@@ -1161,9 +1204,11 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
     """(fresh, gone): slugs whose .md is newer than the index (new or edited) or whose attachments changed since it
     was read, and indexed slugs whose file no longer exists. One scandir + one stat per entry - ~30 ms on the live
     corpus, so recall() can afford it on every call. Returns ([], []) when the index does not exist (build() is the
-    answer then). `entries` is a DirEntry listing of mem_dir the caller already took: brain.py's recall passes its
-    one listing, whose stats the supersession reader has usually paid for already (30 Oct: this second scan's 28k
-    stats were 1.1 s of a recall at load 48)."""
+    answer then).
+
+    entries: a scandir listing of mem_dir the caller already took (brain.recall's shared listing, R19), read
+    instead of listing the folder again. Same answer as the own scan of that moment (20 of 20 in one process,
+    29 Oct 2026, lead6_1e0a/sup_fm2); the scan was 1.3 s median of the 1.3 s this function took, 0.25 s without it."""
     if not os.path.exists(index_path):
         return [], []
     since = scan_reference(index_path)
@@ -1173,7 +1218,7 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
         # A caller's listing (the recall server's resident one) keeps an unchanged file's entry object and replaces it
         # when the folder watcher reports that name, so an entry object we have seen has the stat we already read:
         # name -> (entry, slug, fresh), reset when the index's scan reference moves. Same answer as the loop below on
-        # 22 of 22 forced folder drops, 0.3 s off the median served call (4 Nov 2026,
+        # 22 of 22 forced folder drops, 0.3 s off the median served call (4 Nov 2026, an agent, TOP10 rank 3,
         # recall_10x_2026_10_29/folder_drop_2026_11_04/incr_parity.py). BM25_FM_IDCACHE=0 turns it off.
         if _FM_IDC["since"] != since:
             _FM_IDC["since"], _FM_IDC["c"] = since, {}
@@ -1212,7 +1257,7 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
                 except OSError:
                     continue
     # A memory whose attachments changed after the last scan is fresh too: read_doc indexes their text, so what the
-    # index should hold for it changed (28 Sep:
+    # index should hold for it changed (28 Sep, account02/B02 R1, B02-R1-ATTACHMENT-REFRESH-DROPS-LIVE-PROMOTION-001:
     # until then an incremental refresh never re-read an attachment-only change, and its newer index then switched off
     # brain.py's live promotion of that attachment while the index still lacked the text).
     have = set(fresh)
@@ -1220,7 +1265,7 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
         if t >= since and slug in present and slug not in have:
             fresh.append(slug)
     # ...and so is one whose bundle manifest differs from the one recorded when its text was read, whatever the mtimes
-    # say (28 Sep: a bundle replaced with its old
+    # say (28 Sep, account03/B02 r71, B02-R23-ATTACHMENT-STALE-BM25-DIGEST-BYPASS-001: a bundle replaced with its old
     # mtimes kept was never re-read, so its old text went on ranking the parent). A parent with no recorded digest is
     # left to the mtime test above.
     recorded = _marker_manifests(index_path)
@@ -1300,33 +1345,15 @@ def freeze_state(index_path=INDEX):
         return True, "unreadable freeze file (%s) - treating as frozen, fix or remove %s" % (exc, f)
 
 
-def freeze(minutes, why, index_path=INDEX, kind="generation"):
-    """kind "generation" (default): a consumer needs ONE index generation - refresh() and the read path's
-    in-memory merge both stand still. kind "build": the full rebuild only needs refresh() not to publish
-    over it; the read path keeps merging fresh memories in memory (it publishes nothing)."""
+def freeze(minutes, why, index_path=INDEX):
     minutes = max(1.0, min(float(minutes), FREEZE_MAX_MINUTES))
     d = {"until": _time.time() + minutes * 60.0, "why": str(why)[:200], "holder": os.getpid(),
-         "since": _time.strftime("%Y-%m-%dT%H:%M:%SZ", _time.gmtime()), "kind": str(kind)}
+         "since": _time.strftime("%Y-%m-%dT%H:%M:%SZ", _time.gmtime())}
     tmp = "%s.freeze.tmp.%d" % (index_path, os.getpid())
     with io.open(tmp, "w", encoding="utf-8") as fh:
         json.dump(d, fh)
     os.replace(tmp, index_path + ".freeze")
     return d
-
-
-def read_merge_frozen(index_path=INDEX):
-    """True when the read path's in-memory merge of fresh memories must stand still: any live freeze except
-    one the full rebuild took for itself (kind "build"). Until 4 Nov 2026 the rebuild's 15-minute freeze
-    also stopped the merge, so recall silently dropped every memory filed since the last index for the
-    whole build (memory bm25_rebuild_freeze_makes_new_memories_dark_to_recall_silently_2026_11_03)."""
-    frozen, _why = freeze_state(index_path)
-    if not frozen:
-        return False
-    try:
-        with io.open(index_path + ".freeze", encoding="utf-8") as fh:
-            return json.load(fh).get("kind") != "build"
-    except Exception:
-        return True
 
 
 def unfreeze(index_path=INDEX):
@@ -1501,10 +1528,8 @@ def refresh(mem_dir=MEM, out=INDEX, quiet=False, build_if_absent=False):
         # Only the `bm25.py refresh` CLI used to rebuild it, but refresh() is also called IN PROCESS - by
         # the recall self-heal, by remember(), by the health check - and every one of those publishes left
         # the cache dark until some later CLI run caught up. Polled liveness came out at 20 pct. The build
-        # still never runs where anyone is waiting: it is handed to a detached windowless process. A sidecar prebuilt
-        # with the publish (P1) needs none.
-        if not PREBUILT_LAST.get("sidecar"):
-            spawn_detached_postings()
+        # still never runs where anyone is waiting: it is handed to a detached windowless process.
+        spawn_detached_postings()
         return added, len(gone)
     finally:
         try:
@@ -1524,14 +1549,14 @@ def refresh_in_memory(mem_dir=MEM, out=INDEX, found=None):
     31 MB pickle, synchronously, while a person waited (memory
     a_deliberate_recall_republishes_the_whole_index_2026_09_13). The read path now merges the fresh
     memories in memory, scores this query on the merged payload (same ranking the published index
-    would give), and hands the publish to a detached windowless `bm25.py refresh`.
-
-    found: the (fresh, gone) pair the caller just took from fresh_memories against this same index generation.
-    brain.recall passes it only while the index signature is unchanged; scanning the folder a second time cost
-    about 2.2 s of a recall. None scans here, as before."""
+    would give), and hands the publish to a detached windowless `bm25.py refresh`."""
     out = os.fspath(out)
-    if read_merge_frozen(out):
+    frozen, _why = freeze_state(out)
+    if frozen:
         return None, 0, 0
+    # found: the (fresh, gone) pair the caller just took from fresh_memories on this same index generation
+    # (brain.recall passes it only while the index signature is unchanged; 29 Oct 2026, RECALL-10X lead 6: the
+    # second scan cost 2.2 s of a recall)
     fresh, gone = found if found is not None else fresh_memories(mem_dir, out)
     if not fresh and not gone:
         return None, 0, 0
@@ -1575,7 +1600,7 @@ def scrub_in_memory(slugs, mem_dir=MEM, out=INDEX, payload=None):
     written. For a parent whose attachment bundle just failed verification: read_doc indexes its own text and nothing
     from the bundle, so this recall does not rank it on text the verifier rejected. The published index may still hold
     that text when the damage kept the bundle's mtime (the incremental refresh never sees it); the next full build
-    re-reads every parent (28 Sep).
+    re-reads every parent (28 Sep, account03/B02 r71, B02-R23-ATTACHMENT-STALE-BM25-DIGEST-BYPASS-001).
     Returns None when there is nothing to scrub or no index to scrub."""
     slugs = sorted(set(slugs or ()))
     if not slugs:
@@ -1802,13 +1827,6 @@ POSTINGS_INCR_MAX = 2000          # more documents to place or drop than this an
 POSTINGS_INCR_CHAIN = 100         # a full build after this many incremental ones in a row: it compacts the file and
                                   # bounds how long a fault no check saw could be carried forward
 POSTINGS_LAST = {}                # what the last build_postings of this process did: mode, base, counts, why
-# P1 (30 Oct 2026, Mac): the publisher builds the new generation's sidecar from the old one's BEFORE the publish and puts
-# it in place under the publication lock, so no reader meets a generation without one. Until then a detached child built
-# it after the publish: 51 builds in 2 h, median 5.9 s, and a recall in that gap unpickled the whole payload (1.8 s,
-# about 0.1 s on the average recall). Only the detached `bm25.py refresh` sets this (nobody waits on it); remember()'s
-# awaited refresh and the recall path leave it off. BRAIN_BM25_PREBUILD=0 turns it off there too.
-_POSTINGS_PREBUILD = False
-PREBUILT_LAST = {}                # what the last publish of this process did with a prebuilt sidecar
 
 
 def _postings_tag(signature):
@@ -1988,6 +2006,9 @@ def _build_postings_incremental(signature, out, z, base, index_path=INDEX):
         tables = {r[0] for r in con.execute("select name from sqlite_master where type='table'")}
         if not {"p", "d", "hdr", "vocab", "fp", "fwd"} <= tables:
             raise LookupError("the base has no forward tables")
+        # the df index the readers use (_SidecarDF): kept up to date by sqlite from here on; a base built before
+        # it existed gets it once, about 1.2 s
+        con.execute("create index if not exists p_df on p(term, df)")
         h = dict(con.execute("select k,v from hdr"))
         if h.get("schema") != POSTINGS_SCHEMA:
             raise LookupError("the base is schema %r" % h.get("schema"))
@@ -2109,59 +2130,7 @@ def _build_postings_incremental(signature, out, z, base, index_path=INDEX):
     return terms, len(slugs), {"kept": kept, "dropped": len(dropped), "placed": len(tail), "chain": chain}
 
 
-def _prebuild_postings(payload, out, expected_signature):
-    """P1: the sidecar for the generation about to be published, built incrementally from `expected_signature`'s own
-    sidecar into a temp, or None (off, no base, or the incremental build refused; the detached build then runs as before).
-    Its header still names the base's generation; _place_prebuilt renames it once the publish has its signature. The
-    staged payload is what the published json parses back to (the early pickle relies on the same), so the sidecar is the
-    one a build after the publish would write; the incremental build's own query checks hold it to that."""
-    PREBUILT_LAST.clear()
-    if (not _POSTINGS_PREBUILD or not _POSTINGS_INCR_ON or expected_signature is None
-            or os.environ.get("BRAIN_BM25_PREBUILD", "1") == "0"):
-        return None
-    base = postings_path(out, expected_signature)
-    if not os.path.exists(base):
-        PREBUILT_LAST.update(why="the old generation has no sidecar")
-        return None
-    pre = "%s.postings.pre.tmp.%d" % (os.fspath(out), os.getpid())
-    t0 = _time.time()
-    try:
-        terms, docs, info = _build_postings_incremental(expected_signature, pre, payload, base, index_path=out)
-    except Exception as e:
-        for junk in (pre, "%s.tmp.%d" % (pre, os.getpid())):
-            try:
-                os.remove(junk)
-            except OSError:
-                pass
-        PREBUILT_LAST.update(why=("%s: %s" % (type(e).__name__, e))[:200])
-        return None
-    PREBUILT_LAST.update(info, terms=terms, docs=docs, base=os.path.basename(base), seconds=_time.time() - t0)
-    return pre
-
-
-def _place_prebuilt(pre, out, signature):
-    """Under the publication lock, right after the replace: stamp the prebuilt sidecar with the published signature and
-    move it to that generation's name. Best effort; on any failure the detached build makes it as before."""
-    import sqlite3
-    try:
-        con = sqlite3.connect(pre)
-        try:
-            con.execute("insert or replace into hdr values (?,?)", ("signature", str(signature)))
-            con.commit()
-        finally:
-            con.close()
-        final = postings_path(out, signature)
-        if os.path.exists(final):
-            return False
-        os.replace(pre, final)
-        PREBUILT_LAST.update(sidecar=os.path.basename(final))
-        return True
-    except Exception as e:
-        PREBUILT_LAST.update(why=("placing: %s: %s" % (type(e).__name__, e))[:200])
-        return False
-
-
-def build_postings(index_path=INDEX, out=None, base=None):
+def build_postings(index_path=INDEX, out=None, base=None, _z=None, _signature=None):
     """Write the term-major sidecar for the CURRENT generation of `index_path`. Returns (terms, docs).
 
     With `base`, the sidecar of an older generation, it first tries _build_postings_incremental and does the full build
@@ -2170,11 +2139,16 @@ def build_postings(index_path=INDEX, out=None, base=None):
     import struct
     import zlib
     index_path = os.fspath(index_path)
-    signature = _index_signature(index_path)
+    # _z/_signature: the payload in hand and the generation it will be published as (_publish_payload, before the
+    # replace); index_path is then the staged file, which carries that generation until it is put in place.
+    signature = _signature if _signature is not None else _index_signature(index_path)
     if signature is None:
         raise OSError("no index at %s" % index_path)
     out = out or postings_path(index_path, signature)
-    z = _load_payload(index_path)
+    if _z is not None:
+        z = _z
+    else:
+        z = _load_payload(index_path)
     if _index_signature(index_path) != signature:
         # A sidecar's name says which generation it answers for, and every reader trusts the name. A publish that
         # landed while the payload was read would put the next generation's postings under this one's name.
@@ -2221,6 +2195,7 @@ def build_postings(index_path=INDEX, out=None, base=None):
         con.execute("pragma synchronous=off")
         con.execute("create table p(term text primary key, df int, blob blob) without rowid")
         con.executemany("insert into p values (?,?,?)", _rows())
+        con.execute("create index p_df on p(term, df)")   # df lookups by the readers (_SidecarDF), about 1.2 s
         con.execute("create table d(pos integer primary key, slug text)")
         con.executemany("insert into d values (?,?)", enumerate(slugs))
         if fwd is not None:
@@ -2303,6 +2278,7 @@ def _postings_conn(index_path=INDEX):
 # plain loop.
 _FASTLOOP = os.environ.get("BRAIN_BM25_FASTLOOP", "1") == "1"
 _HEAPTOP = os.environ.get("BRAIN_BM25_HEAPTOP", "1") == "1"
+_KTH = os.environ.get("BRAIN_BM25_KTH", "1") == "1"         # k-th value first, then the keyed sort (0 = plain heap)
 
 
 class _LengthNorm(dict):
@@ -2317,6 +2293,193 @@ class _LengthNorm(dict):
     def __missing__(self, d):
         v = self[d] = K1 * (1 - B + B * d / self.avgdl)
         return v
+
+
+_PRUNE = os.environ.get("BRAIN_BM25_PRUNE", "1") == "1"
+_PRUNE_REL = 1e-9
+
+# NUMPY SCORER (13 Nov 2026, an agent). The pruned loop below still decodes every term into arrays and walks
+# them in Python dict updates; on a 600-character prompt that was 2.1 s a call on the loaded laptop. The same sum on a
+# dense float64 array: each posting's ((idf*f)*(K1+1))/(f+norm) in IEEE double with the loop's operands in the loop's
+# order, added per document in sorted-term order starting from 0.0, ties broken by position - so every score is the
+# plain loop's double and the top-k is the same list. 123 of his prompts at topk 60 and 400: 0 mismatches of 246,
+# 134.0 s -> 29.2 s; the longest 20 (618-634 chars) 2.14 -> 0.34 s a call. Used when numpy is already loaded (the
+# recall server) or the query has 8+ distinct words; a short query in a fresh hook process keeps the pruned loop and
+# never pays numpy's import. A postings list not strictly increasing falls back. BRAIN_BM25_NUMPY=0 off.
+_NUMPY = os.environ.get("BRAIN_BM25_NUMPY", "1") == "1"
+
+
+def _score_numpy(con, n, avgdl, toks, topk):
+    """Exact top-k as described above, or None (the caller then runs the loops)."""
+    import zlib
+    import numpy as np
+    rec = np.dtype([("p", "<u4"), ("f", "<i4"), ("d", "<u4")])
+    got = {}
+    for c in range(0, len(toks), 500):
+        ch = toks[c:c + 500]
+        for t, df, blob in con.execute("select term,df,blob from p where term in (%s)" % ",".join("?" * len(ch)), ch):
+            got[t] = (df, blob)
+    terms, mx = [], -1
+    for t in toks:
+        row = got.get(t)
+        if not row:
+            continue
+        b = zlib.decompress(row[1])
+        if len(b) % 12:
+            return None
+        r = np.frombuffer(b, dtype=rec)
+        if len(r):
+            p = r["p"].astype(np.int64)
+            if len(p) > 1 and not bool(np.all(p[1:] > p[:-1])):
+                return None         # a repeated position would be summed twice by the loop, once here
+            mx = max(mx, int(p[-1]))
+            terms.append((math.log(1.0 + (n - row[0] + 0.5) / (row[0] + 0.5)), p, r["f"].astype(np.float64),
+                          r["d"].astype(np.float64)))
+    if mx < 0:
+        return []
+    sc = np.zeros(mx + 1, dtype=np.float64)
+    k1p1 = K1 + 1
+    for idf, p, f, d in terms:
+        sc[p] = sc[p] + ((idf * f) * k1p1) / (f + K1 * (1 - B + B * d / avgdl))
+    nz = np.nonzero(sc > 0)[0]
+    if not len(nz):
+        return []
+    vals = sc[nz]
+    k = min(topk, len(nz))
+    if k < len(nz):
+        sel = vals >= np.partition(vals, len(vals) - k)[len(vals) - k]
+        nz, vals = nz[sel], vals[sel]
+    o = np.lexsort((nz, -vals))[:k]
+    top = [(int(nz[i]), float(vals[i])) for i in o]
+    slug_of = {}
+    tp = [p for p, _s in top]
+    for i in range(0, len(tp), 500):
+        ch = tp[i:i + 500]
+        for p, sl in con.execute("select pos, slug from d where pos in (%s)" % ",".join("?" * len(ch)), ch):
+            slug_of.setdefault(p, sl)
+    return [(slug_of[pos], s) for pos, s in top if pos in slug_of]
+
+
+def _score_pruned(con, n, avgdl, query, topk):
+    """Exact top-k with a score bound, or None when no bound helps (the caller then runs the plain loop).
+
+    Every contribution ((idf*f)*(K1+1))/(f+norm) with f >= 1 and norm > 0 is below idf*(K1+1). Terms are read rarest
+    first. Once the k-th best partial score is above all that the unread terms could still add (with a 1e-9 margin for
+    rounding), a document no read term touched cannot reach the top k, and a touched one needs partial + rest >= that
+    score. The survivors are scored again from scratch with every term in sorted order and the same expression, so
+    their scores are the plain loop's doubles. A long prompt reads its common words' postings with one membership test
+    each instead of the arithmetic (an agent, 11 Nov 2026; equivalence in the ledger row)."""
+    import heapq
+    import zlib
+    from array import array
+    from itertools import repeat, compress
+    from operator import add, mul, truediv
+    k1p1 = K1 + 1
+    info = []
+    toks = sorted(set(tokens(query)))
+    got = {}                                        # one IN select per 500 terms (term is the primary key)
+    for c in range(0, len(toks), 500):
+        ch = toks[c:c + 500]
+        for t, df, blob in con.execute("select term,df,blob from p where term in (%s)" % ",".join("?" * len(ch)), ch):
+            got[t] = (df, blob)
+    for t in toks:
+        row = got.get(t)
+        if row:
+            info.append([math.log(1.0 + (n - row[0] + 0.5) / (row[0] + 0.5)), row[1], None])
+    if len(info) < 2 or topk <= 0:
+        return None
+    norm = _LengthNorm(avgdl).__getitem__
+
+    def dec(e):
+        if e[2] is None:
+            b = zlib.decompress(e[1])
+            if len(b) % 12:
+                raise ValueError("torn postings blob")
+            w = array("I")
+            w.frombytes(b)
+            fs = array("i")
+            fs.frombytes(b)
+            e[2] = (w[0::3], fs[1::3], w[2::3])
+        return e[2]
+
+    from bisect import bisect_left
+
+    def pick(post, keep):
+        """The (pos, f, d) records of the documents in keep. Postings are in increasing position order (the full
+        build writes them so, the incremental build appends only higher positions; _rec_find relies on the same), so
+        a few survivors are found by binary search instead of a membership test on every record."""
+        ps, fs, ds = post
+        m = len(ps)
+        if len(keep) * 16 < m:
+            out = []
+            for p in keep:
+                i = bisect_left(ps, p)
+                if i < m and ps[i] == p:
+                    out.append((p, fs[i], ds[i]))
+            return out
+        return compress(zip(ps, fs, ds), map(keep.__contains__, ps))
+
+    order = sorted(range(len(info)), key=lambda i: (-info[i][0], i))
+    rest = [0.0] * (len(order) + 1)
+    for j in range(len(order) - 1, -1, -1):
+        rest[j] = rest[j + 1] + info[order[j]][0] * k1p1
+    part = {}
+    get = part.get
+    th = None
+    used = len(order)
+    # The k-th best partial score can rise by at most idf*(K1+1) per term read (each document gains at most that), so
+    # after one exact reading `ub` bounds it from above; while the bound itself fails the break test the exact k-th
+    # best would fail it too, and the O(len(part)) nlargest is skipped. Same breaks at the same term, same results
+    # (an agent, 11 Nov 2026: on 64-word queries the per-term nlargest was a quarter of the search).
+    ub = None
+    for j, i in enumerate(order):
+        idf = info[i][0]
+        ps, fs, ds = dec(info[i])
+        vs = map(truediv, map(mul, map(mul, repeat(idf), fs), repeat(k1p1)), map(add, fs, map(norm, ds)))
+        part.update(zip(ps, map(add, map(get, ps, repeat(0.0)), vs)))
+        r = rest[j + 1]
+        if len(part) >= topk:
+            if ub is not None:
+                ub += idf * k1p1
+                if r * (1 + _PRUNE_REL) + _PRUNE_REL >= (ub * (1 + _PRUNE_REL) + _PRUNE_REL) * (1 - _PRUNE_REL):
+                    continue
+            cut = heapq.nlargest(topk, part.values())[-1]
+            ub = cut
+            if r * (1 + _PRUNE_REL) + _PRUNE_REL < cut * (1 - _PRUNE_REL):
+                th, used = cut, j + 1
+                break
+    if th is None:
+        return None
+    r = rest[used] * (1 + _PRUNE_REL) + _PRUNE_REL
+    keep = set(p for p, s in part.items() if s + r >= th * (1 - _PRUNE_REL))
+    # the unread terms, still rarest first: each adds only to the survivors, then the survivors are cut again against
+    # the k-th best of their own partial scores (a lower bound on the k-th final score) and the smaller remainder
+    for j in range(used, len(order)):
+        if len(keep) <= topk:
+            break
+        e = info[order[j]]
+        idf = e[0]
+        for p, f, d in pick(dec(e), keep):
+            part[p] += ((idf * f) * k1p1) / (f + norm(d))
+        th = max(th, heapq.nlargest(topk, [part[p] for p in keep])[-1])
+        r = rest[j + 1] * (1 + _PRUNE_REL) + _PRUNE_REL
+        lo = th * (1 - _PRUNE_REL)
+        keep = set(p for p in keep if part[p] + r >= lo)
+    contains = keep.__contains__
+    scores = {}
+    sget = scores.get
+    for e in info:
+        idf = e[0]
+        for p, f, d in pick(dec(e), keep):
+            scores[p] = sget(p, 0.0) + ((idf * f) * k1p1) / (f + norm(d))
+    top = sorted(((p, s) for p, s in scores.items() if s > 0), key=lambda kv: (-kv[1], kv[0]))[:topk]
+    slug_of = {}
+    tp = [p for p, _s in top]
+    for i in range(0, len(tp), 500):
+        ch = tp[i:i + 500]
+        for p, sl in con.execute("select pos, slug from d where pos in (%s)" % ",".join("?" * len(ch)), ch):
+            slug_of.setdefault(p, sl)
+    return [(slug_of[pos], s) for pos, s in top if pos in slug_of]
 
 
 def score_postings(query, topk=20, index_path=INDEX, conn=None):
@@ -2335,6 +2498,15 @@ def score_postings(query, topk=20, index_path=INDEX, conn=None):
         return None
     con, n, avgdl = got
     try:
+        if _NUMPY and topk > 0:
+            _nt = sorted(set(tokens(query)))
+            if "numpy" in sys.modules or len(_nt) >= 8:
+                try:
+                    out = _score_numpy(con, n, avgdl, _nt, topk)
+                except Exception:
+                    out = None
+                if out is not None:
+                    return out
         scores = {}
         fast = False
         if _FASTLOOP:
@@ -2343,12 +2515,19 @@ def score_postings(query, topk=20, index_path=INDEX, conn=None):
             from operator import add, mul, truediv
             fast = sys.byteorder == "little" and array("I").itemsize == 4 and array("i").itemsize == 4
             get, norm, k1p1 = scores.get, _LengthNorm(avgdl).__getitem__, K1 + 1
+        if fast and _PRUNE:
+            try:
+                out = _score_pruned(con, n, avgdl, query, topk)
+            except Exception:
+                out = None
+            if out is not None:
+                return out
         for t in sorted(set(tokens(query))):
             row = con.execute("select df,blob from p where term=?", (t,)).fetchone()
             if not row:
                 continue
             df_t, blob = row
-            idf = math.log(1.0 + (n - df_t + 0.5) / (df_t + 0.5)) * QUERY_TERM_WEIGHTS.get(t, 1.0)
+            idf = math.log(1.0 + (n - df_t + 0.5) / (df_t + 0.5))
             b = zlib.decompress(blob)
             if fast:
                 if len(b) % 12:
@@ -2370,19 +2549,30 @@ def score_postings(query, topk=20, index_path=INDEX, conn=None):
             return []
         # heapq.nsmallest is documented equal to sorted(...)[:topk]; the key is unique (pos), so no tie can reorder.
         # A full sort of ~18,000 candidates cost about half of a seed-arm score call (28 of 53 ms median; the heap
-        # 4.9 ms - 4 Nov 2026). BRAIN_BM25_HEAPTOP=0 restores the full sort.
+        # 4.9 ms - an agent, 4 Nov 2026). BRAIN_BM25_HEAPTOP=0 restores the full sort.
         cand = ((p, s) for p, s in scores.items() if s > 0)
-        if _HEAPTOP:
+        if _HEAPTOP and _KTH:
+            # the k-th largest value on plain floats (no key, no tuples), then only the items at or above it go
+            # through the old key: every item the key places in the first topk is >= that value. 89 -> 37 ms on
+            # 62,000 candidates (27 real prompts, topk 5/12/40/300, 0 mismatches; an agent, 11 Nov 2026)
+            import heapq
+            kth = heapq.nlargest(topk, scores.values())[-1] if topk > 0 else None
+            if kth is not None and kth > 0:
+                cand = [(p, s) for p, s in scores.items() if s >= kth]
+            top = sorted(cand, key=lambda kv: (-kv[1], kv[0]))[:topk]
+        elif _HEAPTOP:
             import heapq
             top = heapq.nsmallest(topk, cand, key=lambda kv: (-kv[1], kv[0]))
         else:
             top = sorted(cand, key=lambda kv: (-kv[1], kv[0]))[:topk]
-        out = []
-        for pos, s in top:
-            r = con.execute("select slug from d where pos=?", (pos,)).fetchone()
-            if r:
-                out.append((r[0], s))
-        return out
+        # one IN query per 500 positions instead of one select per hit (the membrane asks for 300; 10 Nov 2026)
+        slug_of = {}
+        tp = [p for p, _s in top]
+        for i in range(0, len(tp), 500):
+            ch = tp[i:i + 500]
+            for p, sl in con.execute("select pos, slug from d where pos in (%s)" % ",".join("?" * len(ch)), ch):
+                slug_of.setdefault(p, sl)
+        return [(slug_of[pos], s) for pos, s in top if pos in slug_of]
     except Exception:
         return None
     finally:
@@ -2401,9 +2591,7 @@ def score_postings(query, topk=20, index_path=INDEX, conn=None):
 # rebuild costs about 11 CPU-minutes and 2.9 GB of rewritten (not grown) bytes a day.
 POSTINGS_MIN_REBUILD_S = 90       # per GENERATION: do not retry a generation this machine just failed on
 POSTINGS_HERD_S = 20              # per CLOCK: only wide enough to stop two concurrent refreshes both building
-POSTINGS_LOCK_STALE_S = 600       # a build lock older than this is taken over if its holder is not running
-POSTINGS_LOCK_DEAD_S = 3 * 3600   # ... and taken over regardless past this (a recycled pid, or a build stuck for good)
-POSTINGS_CATCHUP_ROUNDS = 3       # builds one holder makes for generations published while it was building
+POSTINGS_LOCK_STALE_S = 600       # a build lock older than this belongs to a dead process
 POSTINGS_TEMP_STALE_S = 1800      # a .tmp.<pid> nobody replaced within half an hour is an orphan
 POSTINGS_RETIRE_S = 120           # a superseded generation's sidecar, once its readers have let go
 
@@ -2444,46 +2632,7 @@ def _sweep_postings_temps(p, index_path=INDEX, older_than=POSTINGS_TEMP_STALE_S)
             pass          # a hook still has it open; it will be gone next sweep
 
 
-def _lock_holder_alive(lock):
-    """True while the pid written in `lock` is a running process and the lock is younger than POSTINGS_LOCK_DEAD_S.
-    On Windows there is no cheap signal-0 probe here, so it answers False and age alone decides, as before."""
-    if os.name == "nt":
-        return False
-    try:
-        if _time.time() - os.stat(lock).st_mtime > POSTINGS_LOCK_DEAD_S:
-            return False
-        with io.open(lock, encoding="utf-8") as fh:
-            pid = int(fh.read().strip() or 0)
-    except (OSError, ValueError):
-        return False
-    if pid <= 0:
-        return False
-    try:
-        os.kill(pid, 0)
-    except ProcessLookupError:
-        return False
-    except OSError:
-        return True               # EPERM: alive, just not ours
-    return True
-
-
 def maybe_build_postings(index_path=INDEX, force=False, quiet=True):
-    """Rebuild the sidecar IF it is absent or built from a different generation; see _build_postings_once.
-    With one lock per machine, a generation published during a build is refused as "another-build", so the holder
-    builds again for whatever is live when it finishes (up to POSTINGS_CATCHUP_ROUNDS more) rather than leaving the
-    sidecar a generation behind until the next publish. Each catch-up is incremental from the build just made."""
-    status = _build_postings_once(index_path, force, quiet)
-    for _ in range(POSTINGS_CATCHUP_ROUNDS):
-        if status not in ("built", "superseded"):
-            break
-        nxt = _build_postings_once(index_path, False, quiet, catchup=True)
-        if nxt not in ("built", "superseded"):
-            break                  # current, or refused: the answer is still what the last build did
-        status = nxt
-    return status
-
-
-def _build_postings_once(index_path=INDEX, force=False, quiet=True, catchup=False):
     """Rebuild the sidecar IF it is absent or built from a different generation. Returns a short status word.
 
     Called only from the DETACHED `bm25.py refresh` / `build` process, never from a read path: rebuilding
@@ -2524,22 +2673,15 @@ def _build_postings_once(index_path=INDEX, force=False, quiet=True, catchup=Fals
                         return "rate-limited"
                 except OSError:
                     pass
-            elif not catchup:             # a catch-up's own stamp is the one this would see
+            else:
                 try:
                     if _time.time() - os.stat(stamp).st_mtime < POSTINGS_HERD_S:
                         return "another-build"
                 except OSError:
                     pass
-        # ONE BUILDER PER MACHINE, NOT PER GENERATION (1 Nov, Mac, measured). The lock used to sit beside the
-        # sidecar, whose name carries the generation, so a build for each new generation took a lock of its own:
-        # at 03:52 three builds (~0.9 GB each) for three generations ran at once through swap, started 01:48 to
-        # 03:42, and the log shows two ending "superseded". The 600 s staleness was also by age alone, which would
-        # let a second build in beside one that swap had slowed past ten minutes. Now: one lock per index, stale
-        # only once its holder is gone (or past POSTINGS_LOCK_DEAD_S), and the builder goes round again for any
-        # generation published while it worked (maybe_build_postings).
-        lock = index_path + ".postings.build.lock"
+        lock = p + ".build.lock"
         try:
-            if _time.time() - os.stat(lock).st_mtime > POSTINGS_LOCK_STALE_S and not _lock_holder_alive(lock):
+            if _time.time() - os.stat(lock).st_mtime > POSTINGS_LOCK_STALE_S:
                 os.remove(lock)
         except OSError:
             pass
@@ -2571,74 +2713,13 @@ def _build_postings_once(index_path=INDEX, force=False, quiet=True, catchup=Fals
             return "built"
         finally:
             try:
-                with io.open(lock, encoding="utf-8") as fh:
-                    mine = fh.read().strip() == str(os.getpid())
-                if mine:                  # a lock taken over after a stale removal is somebody else's now
-                    os.remove(lock)
+                os.remove(lock)
             except OSError:
                 pass
     except Exception as e:
         if not quiet:
             print("%s bm25 postings: build failed (%s) - the payload path still answers" % (_stamp(), e))
         return "failed"
-
-
-class _SidecarDf:
-    """The sidecar's df read term by term from table p (get, [], in, prefetch); anything that walks the whole map
-    (len, iteration, keys/values/items) loads the vocabulary blob once and answers from it."""
-
-    def __init__(self, con):
-        self._con, self._c, self._full = con, {}, None
-
-    def _all(self):
-        if self._full is None:
-            import zlib
-            row = self._con.execute("select blob from vocab where k='df'").fetchone()
-            self._full = pickle.loads(zlib.decompress(row[0])) if row else {}
-        return self._full
-
-    def prefetch(self, terms):
-        if self._full is not None:
-            return
-        need = [t for t in set(terms) if t not in self._c]
-        for i in range(0, len(need), 900):
-            chunk = need[i:i + 900]
-            got = dict(self._con.execute("select term, df from p where term in (%s)" % ",".join("?" * len(chunk)),
-                                         chunk))
-            for t in chunk:
-                self._c[t] = got.get(t)
-
-    def get(self, term, default=None):
-        if self._full is not None:
-            return self._full.get(term, default)
-        if term not in self._c:
-            self.prefetch([term])
-        v = self._c.get(term)
-        return default if v is None else v
-
-    def __getitem__(self, term):
-        v = self.get(term)
-        if v is None:
-            raise KeyError(term)
-        return v
-
-    def __contains__(self, term):
-        return self.get(term) is not None
-
-    def __len__(self):
-        return len(self._all())
-
-    def __iter__(self):
-        return iter(self._all())
-
-    def keys(self):
-        return self._all().keys()
-
-    def values(self):
-        return self._all().values()
-
-    def items(self):
-        return self._all().items()
 
 
 class BM25:
@@ -2662,11 +2743,6 @@ class BM25:
         if name.startswith("_") or name not in ("df", "dl", "tf"):
             raise AttributeError(name)
         sc = self.__dict__.get("_sc")
-        if name == "df" and sc is not None and os.environ.get("BRAIN_BM25_LAZY_DF", "1") != "0":
-            # a hook that only spell-normalizes a prompt reads a few dozen terms; unpickling the whole 394k-term
-            # blob cost it ~0.11-0.14 s per prompt (30 Oct). Single terms come from table p; iteration loads the blob.
-            self.df = _SidecarDf(sc[0])
-            return self.df
         if name == "df" and sc is not None:
             import zlib
             try:
@@ -2681,6 +2757,19 @@ class BM25:
         self.df, self.dl, self.tf = z["df"], z["dl"], z["tf"]
         self.n, self.avgdl = z["n"], z["avgdl"]
         return self.__dict__[name]
+
+    def df_view(self):
+        """What a QueryNormalizer needs from df, without unpickling the whole vocabulary (5 Nov 2026, an agent,
+        RECALL-10X rank 3). The first touch of `df` on a sidecar instance loads the 590,989-term blob: 0.9-1.3 s of
+        every prompt hook, which then looks up about six words. The sidecar's table p(term, df) holds the same counts
+        (590,989 terms, 0 differ, checked on the live index), so a view that asks the table per word gives the same
+        normalized query. A loaded df is returned as is; BRAIN_BM25_DFVIEW=0 always loads it, as before."""
+        if "df" in self.__dict__ or os.environ.get("BRAIN_BM25_DFVIEW", "1") == "0":
+            return self.df
+        sc = self.__dict__.get("_sc")
+        if sc is None:
+            return self.df
+        return _SidecarDF(sc[0])
 
     @classmethod
     def from_payload(cls, payload):
@@ -2722,8 +2811,7 @@ class BM25:
             return []
         # sorted() so the summation order (and thus the last ulp of each score) is identical in every
         # process - set order is hash-randomized per process, which made eval runs differ bit-for-bit
-        idf = {t: math.log(1.0 + (self.n - self.df[t] + 0.5) / (self.df[t] + 0.5)) * QUERY_TERM_WEIGHTS.get(t, 1.0)
-               for t in sorted(set(q))}
+        idf = {t: math.log(1.0 + (self.n - self.df[t] + 0.5) / (self.df[t] + 0.5)) for t in sorted(set(q))}
         scores = {}
         for slug, tf in self.tf.items():
             s = 0.0
@@ -2757,6 +2845,19 @@ def main():
     elif sys.argv[1:2] == ["unfreeze"]:
         print("%s bm25 unfreeze: %s" % (_stamp(), "released" if unfreeze() else "nothing was frozen"))
     elif sys.argv[1:2] == ["refresh"]:
+        # RAISE IT TO NORMAL (2026-10-30, measured). The 15-min task (wscript -> cmd -> python) starts this at class
+        # BelowNormal, I/O 1 and memory 2. On the busy box that is starvation: one refresh ran 06:06Z-09:4xZ on 10 s of
+        # CPU, its thread Ready (never scheduled) or faulting its trimmed pages back in, and no new memory was
+        # recallable for hours. Same treatment as spawn_detached_postings gives the builder.
+        try:
+            import ctypes
+            # The pseudo-handle -1 must go in as a pointer: passed as a bare int, ctypes sends 0xFFFFFFFF and the call
+            # fails with ERROR_INVALID_HANDLE (shipped that way 10:2x 30 Oct; the task's refresh stayed BelowNormal).
+            _k = ctypes.windll.kernel32
+            _k.SetPriorityClass(ctypes.c_void_p(_k.GetCurrentProcess()), 0x00000020)
+        except Exception:
+            pass
+        _raise_io_mem_priority()
         frozen, why = freeze_state()
         if frozen:
             print("%s bm25 refresh: skipped, generation FROZEN - %s" % (_stamp(), why))
@@ -2773,16 +2874,7 @@ def main():
             print("%s bm25 refresh: no index yet - built %s docs -> %s" % (_stamp(), n0, INDEX))
             maybe_build_postings(quiet=True)
             return
-        global _POSTINGS_PREBUILD
-        _POSTINGS_PREBUILD = True
         added, removed = refresh(quiet=True)
-        pb = PREBUILT_LAST
-        if pb.get("sidecar"):
-            print("%s bm25 postings: prebuilt %d terms over %d docs in %.1f s -> %s [from %s: %d kept, %d dropped, "
-                  "%d placed, chain %d]" % (_stamp(), pb["terms"], pb["docs"], pb["seconds"], pb["sidecar"], pb["base"],
-                                            pb["kept"], pb["dropped"], pb["placed"], pb["chain"]))
-        elif pb.get("why"):
-            print("%s bm25 postings: not prebuilt (%s)" % (_stamp(), pb["why"]))
 
         def _docs():
             # Loaded only for a line that prints it. A BLOCKED run used to load the whole payload first (about
@@ -2830,7 +2922,7 @@ def main():
         if st not in ("current", "rate-limited"):
             print("%s bm25 postings: %s" % (_stamp(), st))
         # New memories get their wiki-link edges in the association graph now, not at the next nightly
-        # spread_edges.tsv build (build_spread_edges.py --fresh, a few seconds).
+        # spread_edges.tsv build (which ran on 7 of 30 dream logs, 23 Oct-1 Nov; gaps up to ~56 h). About 3 s.
         if added:
             try:
                 import build_spread_edges

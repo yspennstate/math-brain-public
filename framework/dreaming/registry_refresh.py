@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """registry_refresh.py - Stop hook: keep the fleet crash-recovery registry CHECKPOINT fresh.
 
-The recovery apparatus (~/.claude/fleet/) relaunches a crashed agent using the
+The recovery apparatus (~\\.claude\\fleet\\) relaunches a crashed agent using the
 registry's task + checkpoint (relaunch.ps1 builds the resume prompt from them). But register.ps1 is
 MANUAL - agents register at startup and rarely update - so a long-running agent's registry checkpoint
 goes stale/empty, and a crash resumes it with the wrong task and no next-step. Verified 2026-07-11:
@@ -25,64 +25,60 @@ DREAMING = os.path.dirname(os.path.abspath(__file__))
 REG_DIR = os.environ.get("FLEET_REGISTRY_DIR", os.path.join(HOME, ".claude", "fleet", "registry"))
 
 
-def _last_assistant(tp):
-    # Scan the WHOLE transcript for the last assistant TEXT message. A fixed-size tail (the earlier 200KB,
-    # then 800KB windows) MISSES the true last message on a long session: when more than a window's worth of
-    # user / system-reminder / tool-result content sits AFTER it, the window returns an older message = a
-    # STALE checkpoint. Reproduced 2026-07-11 on a 7MB transcript (the 800KB window returned a message 3
-    # turns old). Streaming the whole file fixes it; a cheap b'"assistant"' prefilter avoids json.loads on
-    # every line, and MAX_SCAN caps an extreme transcript so a Stop hook never stalls. Partial-first-line
-    # drop happens only in the capped case (a mid-UTF-8 byte-cut can't then inject mojibake).
-    MAX_SCAN = 80 * 1024 * 1024
-    last = ""
+def _assistant_text(ln):
+    """The text of one transcript line when it is an assistant TEXT message, else ''."""
+    if b'"assistant"' not in ln:         # cheap prefilter: skip non-assistant lines without a json parse
+        return ""
+    try:
+        obj = json.loads(ln.decode("utf-8", "replace"))
+    except Exception:
+        return ""
+    msg = obj.get("message", {}) if isinstance(obj.get("message"), dict) else {}
+    if (msg.get("role") or obj.get("role") or obj.get("type")) != "assistant":
+        return ""
+    content = msg.get("content") or obj.get("content") or ""
+    if isinstance(content, str):
+        txt = content
+    elif isinstance(content, list):
+        txt = " ".join(c.get("text", "") for c in content
+                       if isinstance(c, dict) and c.get("type") == "text")
+    else:
+        txt = ""
+    return txt if txt.strip() else ""
+
+
+def _last_assistant(tp, MAX_SCAN=80 * 1024 * 1024, CHUNK=2 * 1024 * 1024):
+    # The last assistant TEXT message of the transcript. A fixed-size tail (the earlier 200KB, then 800KB windows)
+    # MISSES it on a long session: when more than a window's worth of user / system-reminder / tool-result content
+    # sits AFTER it, the window returns an older message = a STALE checkpoint (reproduced 2026-07-11 on a 7MB
+    # transcript). So the scan has no window: it reads BACKWARD from the end in 2 MB blocks and stops at the first
+    # line that is an assistant text message, which is the same line the earlier whole-file forward scan ended on
+    # (10 Nov 2026: that scan read and split up to 80 MB on every Stop, 0.9 s a Stop on a 60 MB transcript; the
+    # last message is almost always inside the final block). MAX_SCAN still caps an extreme transcript, and in the
+    # capped case the partial first line is dropped as before.
     try:
         with open(tp, "rb") as f:
             f.seek(0, 2)
             size = f.tell()
             start = max(0, size - MAX_SCAN)
-            f.seek(start)
-            buf = f.read()
-        if start > 0:
-            nl = buf.find(b"\n")
-            if nl != -1:
-                buf = buf[nl + 1:]
-        for ln in buf.split(b"\n"):
-            if b'"assistant"' not in ln:     # cheap prefilter: skip non-assistant lines without a json parse
-                continue
-            try:
-                obj = json.loads(ln.decode("utf-8", "replace"))
-            except Exception:
-                continue
-            msg = obj.get("message", {}) if isinstance(obj.get("message"), dict) else {}
-            if (msg.get("role") or obj.get("role") or obj.get("type")) != "assistant":
-                continue
-            content = msg.get("content") or obj.get("content") or ""
-            if isinstance(content, str):
-                txt = content
-            elif isinstance(content, list):
-                txt = " ".join(c.get("text", "") for c in content
-                               if isinstance(c, dict) and c.get("type") == "text")
-            else:
-                txt = ""
-            if txt.strip():
-                last = txt
-        return last
+            pos, carry, had_nl = size, b"", False
+            while pos > start:
+                lo = max(start, pos - CHUNK)
+                f.seek(lo)
+                parts = (f.read(pos - lo) + carry).split(b"\n")
+                pos = lo
+                if pos > start:              # the first piece may be the tail of a line the next block completes
+                    carry, parts = parts[0], parts[1:]
+                    had_nl = had_nl or bool(parts)
+                elif start > 0 and (len(parts) > 1 or had_nl):
+                    parts = parts[1:]        # capped: the first piece is a cut line
+                for ln in reversed(parts):
+                    txt = _assistant_text(ln)
+                    if txt:
+                        return txt
+        return ""
     except Exception:
         return ""
-
-
-def _last_text(tp):
-    """_last_assistant's answer, from resume_checkpoint's offset cache when its window is this one (1 Nov 2026).
-    Both pick the newest assistant text line by the same test within the transcript's last 80 MB; resume_checkpoint
-    keeps the answer per transcript and parses only appended lines, where _last_assistant read up to 80 MB at every
-    Stop (0.2-0.4 s on the long sessions). Any error, or a different window, reads the file as before."""
-    try:
-        import resume_checkpoint as rc
-        if rc._MAX_SCAN == 80 * 1024 * 1024:
-            return rc._scan_cached(tp)[0]
-    except Exception:
-        pass
-    return _last_assistant(tp)
 
 
 def _gist(text, n=300):
@@ -132,10 +128,9 @@ def _first_user(tp):
     return ""
 
 
-def refresh(session_id, transcript_path, reg_dir=None, final=""):
+def refresh(session_id, transcript_path, reg_dir=None):
     """Pure, testable: update registry/<id>.json's checkpoint+updated if it EXISTS. Returns the path
-    written, or None (no entry / no session / error). final is the Stop payload's last_assistant_message: the
-    hook runs before that message is on disk, so the transcript alone gives the turn's second-to-last text."""
+    written, or None (no entry / no session / error)."""
     reg_dir = reg_dir or REG_DIR
     if not session_id:
         return None
@@ -149,10 +144,7 @@ def refresh(session_id, transcript_path, reg_dir=None, final=""):
         obj = json.load(io.open(f, encoding="utf-8-sig"))
     except Exception:
         return None
-    if isinstance(final, str) and final.strip():
-        gist = _gist(final)
-    else:
-        gist = _gist(_last_text(transcript_path)) if transcript_path else ""
+    gist = _gist(_last_assistant(transcript_path)) if transcript_path else ""
     if not gist:
         return None                      # nothing to record - leave the prior checkpoint intact
     obj["checkpoint"] = gist
@@ -195,9 +187,9 @@ def ensure_registered(session_id, transcript_path, reg_dir=None):
     if os.path.exists(f) and not _torn(f):
         return None                          # already registered - refresh() owns updates
     if os.path.exists(f):
-        # A crash mid-write can leave the file at its old length but all NUL bytes: json.load fails,
-        # refresh() returns None every turn, and the session has no crash recovery until someone notices.
-        # Keep the torn file aside and re-create the entry.
+        # A crash mid-write leaves the file at its old length but all NUL bytes (the 2 Nov 2026 08:51
+        # crash did this to three live sessions' entries: json.load fails, refresh() returned None every
+        # turn, and those sessions had no crash recovery for a day). Keep the torn file aside, re-create.
         try:
             qdir = os.path.join(reg_dir, ".quarantine")
             os.makedirs(qdir, exist_ok=True)
@@ -208,7 +200,7 @@ def ensure_registered(session_id, transcript_path, reg_dir=None):
     fu = re.sub(r"<task-notification.*?</task-notification>|<system-reminder.*?</system-reminder>"
                 r"|<local-command-caveat>.*?</local-command-caveat>|<local-command-stdout>.*?</local-command-stdout>",
                 "", fu, flags=re.S)
-    # slash-command launches carry the owner's actual ask in <command-args>; without this the
+    # slash-command launches carry the author's actual ask in <command-args>; without this the
     # derived task was the caveat boilerplate (found 07-17: two live agents' crash-resume
     # prompts read "Caveat: The messages below were generated...")
     m = re.search(r"<command-args>(.*?)</command-args>", fu, flags=re.S)
@@ -230,11 +222,6 @@ def ensure_registered(session_id, transcript_path, reg_dir=None):
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     try:
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
@@ -245,7 +232,7 @@ def main():
         sid = data.get("session_id") or ""
         tp = data.get("transcript_path") or ""
         ensure_registered(sid, tp)   # auto-register a NEW top-level non-dream session (create-if-missing)
-        refresh(sid, tp, final=data.get("last_assistant_message") or "")   # keep the checkpoint fresh
+        refresh(sid, tp)             # keep the checkpoint fresh (existing + just-created entries)
     except Exception:
         return
 

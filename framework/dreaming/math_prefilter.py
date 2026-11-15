@@ -65,6 +65,41 @@ def index_path(store_path):
     return str(store_path) + ".prefilter.pkl"
 
 
+PUBLISH_WAIT_S = float(os.environ.get("MATHBRAIN_PREFILTER_PUBLISH_WAIT", "45"))
+
+
+def _publish(dest, write, wait_s=None):
+    """Write a file through a temp name of our own and move it over `dest`; `write(fh)` fills it.
+
+    Until 11 Nov 2026 the temp name was fixed (<dest>.tmp) and the move was one bare os.replace. Windows refuses the
+    move (PermissionError, WinError 5 or 32) while any process has `dest` open, and every math prompt opens the index
+    to load it, so a build that had run for minutes died at its last line: nine times in the logs to 10 Nov. Two
+    builds at once also wrote the same temp file. Now the temp name carries the pid and thread, a refused move is
+    tried again until the reader lets go (PUBLISH_WAIT_S in all, then the error is raised and `dest` is as it was),
+    and the temp file never outlives the call."""
+    import threading
+    tmp = "%s.tmp.%d.%d" % (dest, os.getpid(), threading.get_ident())
+    deadline = time.time() + (PUBLISH_WAIT_S if wait_s is None else wait_s)
+    try:
+        with open(tmp, "wb") as fh:
+            write(fh)
+        pause = 0.05
+        while True:
+            try:
+                os.replace(tmp, dest)
+                return
+            except PermissionError:
+                if time.time() >= deadline:
+                    raise
+                time.sleep(pause)
+                pause = min(pause * 2, 1.0)
+    finally:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+
+
 def _current_index_nodes(nodes, edges):
     """Current-only projection; damaged or ambiguous revision families stay out."""
     from math_brain.models import EdgeKind
@@ -128,23 +163,8 @@ def _index_file_signature(path):
     return (stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns)
 
 
-def _own_memory_dir():
-    """This install's memory folder, found as brain.py finds its corpus: $BRAIN_SLUG, then the BRAIN_SLUG marker the
-    installer writes beside this file, then the slug Claude Code derives from the home path."""
-    slug = os.environ.get("BRAIN_SLUG", "").strip()
-    if not slug:
-        try:
-            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG"), encoding="utf-8") as fh:
-                slug = fh.read().strip()
-        except OSError:
-            slug = ""
-    home = os.path.expanduser("~")
-    slug = slug or home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-    return os.path.join(home, ".claude", "projects", slug, "memory")
-
-
 def build(store_path):
-    sys.path.insert(0, os.path.expanduser(r"~/math-brain-build/src"))
+    sys.path.insert(0, r"~\math-brain-build\src")
     from math_brain.store import ResearchStore
     from math_brain.models import EdgeKind
     t0 = time.time()
@@ -185,18 +205,22 @@ def build(store_path):
     revision_projection["reader_refused_excluded"] = len(refused)
     revision_projection["reader_refused_ids"] = refused
     source_revision_sha256 = _source_revision_seal(source_nodes, revision_edges)
-    # DOCUMENT EXPANSION: a card's index-only words (math_brain.expansion, read back by math_brain.retrieval.EXPANSION)
-    # are indexed here too, or a question that names a card only by those words never reaches the ranker's pool. The
-    # expansion is recomputed from the current cards at every build, so a revised card is expanded at the next build
-    # and a superseded one loses its words with it. The memory directory comes from MATHBRAIN_EXPANSION_MEMORY (the
-    # library reports in LAST_BUILD when none is configured). Any failure builds the index without expansion.
-    # MATHBRAIN_EXPANSION=0 builds without it.
+    # DOCUMENT EXPANSION (mb10d, 2026-09-24): a card's index-only words from <store>.expansion.pkl (see
+    # math_brain.retrieval.EXPANSION) are indexed here too, or a question that names a card only by those words never
+    # reaches the ranker's pool. MATHBRAIN_EXPANSION=0 builds without them.
+    # The expansion is RECOMPUTED here from the current cards and their memories (math_brain.expansion.build writes the
+    # sidecar), so a revised or newly transported card is expanded at the next index build and a superseded one loses
+    # its words with it. Any failure builds the index without expansion, exactly as before.
+    # The memory directory is named here: since 30 Sep the library has no default of its own and says in LAST_BUILD
+    # whether it was unconfigured, found no directory, or built nothing (account04/B03), and the index records that
+    # status instead of a path to a sidecar that was never written.
     expansion, expansion_meta = {}, {"path": None, "cards": 0}
     if os.environ.get("MATHBRAIN_EXPANSION", "1").strip() not in ("0", "", "off", "false"):
         try:
             from math_brain import expansion as _X
             _tx = time.time()
-            _mem = os.environ.get("MATHBRAIN_EXPANSION_MEMORY", "").strip() or _own_memory_dir()
+            _mem = (os.environ.get("MATHBRAIN_EXPANSION_MEMORY", "").strip()
+                    or os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory"))
             expansion = _X.build(store_path, current_all, memory_dir=_mem)
             _last = dict(getattr(_X, "LAST_BUILD", {}) or {})
             _side = _last.get("sidecar")     # the file this build wrote, or None
@@ -214,7 +238,7 @@ def build(store_path):
         ids.append(n.id)
         tf = collections.Counter(tokens((n.title or "") + " " + (n.body or "")))
         # the card's own length is its title and body; expansion words add postings, never length (a longer card
-        # scores less on every query, and near-floor cards fell under the gate floor that way)
+        # scores less on every query, and near-floor house cards fell under the gate floor that way)
         dl.append(sum(tf.values()))
         if n.id in expansion:
             tf.update(tokens(expansion[n.id]))
@@ -240,14 +264,15 @@ def build(store_path):
             "source_revision_sha256": source_revision_sha256,
             "df_cap": DF_CAP, "token_re": TOKEN_RE.pattern, "expansion": expansion_meta}
     p = index_path(store_path)
-    tmp = p + ".tmp"
-    with open(tmp, "wb") as fh:
-        pickle.dump(data, fh, protocol=pickle.HIGHEST_PROTOCOL)
-    os.replace(tmp, p)
-    # STORE-WIDE LEXICAL DOCUMENT FREQUENCIES. The hook's ranker is handed only the ~300 cards select() returns, so its
-    # lexical IDF must come from the whole store: math_sense reads <store>.lexdf.pkl, written here so every index
-    # rebuild refreshes it with the ranker's own tokenizer and content filter over the same current cards. A missing
-    # table is the old pool IDF, so a failure here degrades, never breaks.
+    _publish(p, lambda fh: pickle.dump(data, fh, protocol=pickle.HIGHEST_PROTOCOL))
+    try:
+        lazy = write_lazy(store_path)      # the per-token sidecar the hook reads (see LAZY_SCHEMA); a failure is the old load
+    except Exception as exc:
+        lazy = {"error": "%s: %s" % (type(exc).__name__, str(exc)[:120])}
+    # STORE-WIDE LEXICAL DOCUMENT FREQUENCIES (campaign 2026-09-24). The hook's ranker is handed only the ~300 cards
+    # select() returns, so its lexical IDF must come from the whole store: math_sense._install_global_idf reads
+    # <store>.lexdf.pkl, written here so every index rebuild refreshes it with the ranker's own tokenizer and content
+    # filter over the same current cards. A missing table is the old pool IDF, so a failure here degrades, never breaks.
     try:
         import math_brain.retrieval as _R
         _df = collections.Counter()
@@ -256,17 +281,15 @@ def build(store_path):
                 (n.title or "") + " " + (n.body or "")
                 + ((" " + expansion[n.id]) if n.id in expansion else "")).lexical_tokens)))
         _lp = str(store_path) + ".lexdf.pkl"
-        with open(_lp + ".tmp", "wb") as fh:
-            pickle.dump({"n": len(current_all), "df": dict(_df), "built": data["built_at"], "store_nodes": len(source_nodes)},
-                        fh, protocol=pickle.HIGHEST_PROTOCOL)
-        os.replace(_lp + ".tmp", _lp)
+        _lexdf_table = {"n": len(current_all), "df": dict(_df), "built": data["built_at"], "store_nodes": len(source_nodes)}
+        _publish(_lp, lambda fh: pickle.dump(_lexdf_table, fh, protocol=pickle.HIGHEST_PROTOCOL))
         lexdf = {"path": _lp, "terms": len(_df)}
     except Exception as exc:
         lexdf = {"error": "%s: %s" % (type(exc).__name__, str(exc)[:120])}
-    # KEYED SIGNAL SIDECAR (math_brain.retrieval.update_signal_db): the hook reads its ~300 pooled candidates' index
-    # signals from <store>.signals.sqlite instead of recomputing them every prompt. Filled here, at every index build,
-    # with the texts retrieve() hashes - title + body, and title + body + expansion for an expanded card - so a landing
-    # or an ingest keeps it current. Incremental; a failure leaves the hook computing.
+    # KEYED SIGNAL SIDECAR (mb10d, 2026-09-24; math_brain.retrieval.update_signal_db): the hook reads its ~300 pooled
+    # candidates' index signals from <store>.signals.sqlite instead of recomputing them every prompt. Filled here, at
+    # every index build, with the texts retrieve() hashes - title + body, and title + body + expansion for an expanded
+    # card - so a landing or a transport ingest keeps it current. Incremental; a failure leaves the hook computing.
     try:
         import math_brain.retrieval as _R
         if hasattr(_R, "update_signal_db"):
@@ -282,7 +305,7 @@ def build(store_path):
     except Exception as exc:
         sigdb = {"error": "%s: %s" % (type(exc).__name__, str(exc)[:120])}
     return {"index": p, "nodes": N, "tokens": len(post), "seconds": round(time.time() - t0, 1),
-            "bytes": os.path.getsize(p), "lexdf": lexdf, "expansion": expansion_meta, "signals": sigdb}
+            "bytes": os.path.getsize(p), "lexdf": lexdf, "expansion": expansion_meta, "signals": sigdb, "lazy": lazy}
 
 _CACHE = {}
 LAST_SCORES = {}   # node id -> BM25 score of the last select() call
@@ -291,14 +314,17 @@ LAST_QSELF = 0.0   # the last query's self-score: sum of idf over its distinct i
                    # (2026-09-11), because a raw BM25 floor grows with the question and silenced one-line questions.
 LAST_FRESH = 0     # nodes the last select() found in the store newer than the index (the fresh-node lane below)
 
-# FRESH-NODE LANE. The index is a snapshot: a node filed after the last rebuild is invisible to every query until the
-# next one, and that is exactly when it matters most (the cards written while work on a problem is under way). So
-# select() also asks the store for nodes created after the index's own built_at stamp and scores them against the
-# query with the index's statistics (N, df, avgdl), merged into the same ranking. Every created_at in the store is UTC
-# ISO, so the first 19 characters compare as text. Bounded at FRESH_MAX, newest first: a longer backlog means the
-# rebuild is overdue. A query token the index does not carry (a new word, or one capped for df) scores nothing here,
-# so a fresh node is under-scored rather than over-scored. The scan is skipped when neither the store nor its WAL has
-# been written since the index file was. MATHBRAIN_PREFILTER_FRESH=0 restores the snapshot-only behaviour.
+# FRESH-NODE LANE (2026-09-22, round 5). The index is a snapshot, and until tonight nothing but the transport's own
+# ingests rebuilt it. Found on his live quadratic-form conjecture: the index was built at 14:51 local time, and the
+# twelve nodes filed from 19:11 to 22:39 - the proved separable case, the rank-three theorem, the localized regime,
+# the coarea bound, the literature survey - were invisible to every query while agents worked on that conjecture;
+# the hook answered the conjecture prompt with the conjecture alone. So select() also asks the store for nodes
+# created after the index's own built_at stamp (a ~25 ms scan at 8,110 nodes; every created_at in the store is UTC
+# ISO, so the first 19 characters compare as text) and scores them against the query with the index's statistics
+# (N, df, avgdl), merged into the same ranking. Bounded at FRESH_MAX, newest first: a longer backlog means the
+# rebuild is overdue (math_transport rebuilds a stale index every 15 minutes; hook_liveness reports one).
+# A query token the index does not carry - a new word, or one capped for df - scores nothing here, so a fresh node
+# is under-scored rather than over-scored. MATHBRAIN_PREFILTER_FRESH=0 restores the snapshot-only behaviour.
 try:
     FRESH_MAX = int(os.environ.get("MATHBRAIN_PREFILTER_FRESH_MAX", "400") or 400)
 except Exception:
@@ -333,8 +359,8 @@ def fresh_nodes(store_path, data=None, limit=None):
         con = sqlite3.connect(uri, uri=True, timeout=2.0)
         try:
             # created_at > ? is implied by the substr test (a string is never below its own prefix), so the row set
-            # is unchanged; it lets SQLite seek idx_nodes_created_at instead of scanning every node (milliseconds
-            # instead of a full scan on a large store). Without the index it is just a second filter.
+            # is unchanged; it lets SQLite seek idx_nodes_created_at instead of scanning every node (2 Nov 2026:
+            # 17 ms -> 0.3 ms warm, seconds cold on a busy disk). Without the index it is just a second filter.
             return con.execute("select id, title, body from nodes where created_at > ? and substr(created_at,1,19) > ? "
                                "order by created_at desc limit ?",
                                (built, built, int(limit if limit is not None else FRESH_MAX))).fetchall()
@@ -370,7 +396,6 @@ def _fresh_scores(data, text, rows):
             out[nid] = s
     return out
 
-
 def load(store_path):
     p = index_path(store_path)
     try:
@@ -381,6 +406,14 @@ def load(store_path):
     cached = _CACHE.get(p)
     if cached is not None and cached[0] == signature:
         return cached[1]
+    if os.environ.get("MATHBRAIN_PREFILTER_LAZY", "1") != "0":
+        try:
+            data = _load_lazy(p, signature)
+        except Exception:
+            data = None
+        if data is not None:
+            _CACHE[p] = (signature, data)
+            return data
     with open(p, "rb") as fh:
         data = pickle.load(fh)
     if _index_file_signature(p) != signature:
@@ -389,6 +422,146 @@ def load(store_path):
         raise ValueError("malformed prefilter index")
     _CACHE[p] = (signature, data)
     return data
+
+# THE PER-TOKEN SIDECAR (11 Nov 2026). Every math prompt loads the index in a fresh process, and unpickling its
+# postings (102,119 tokens, 3.5 million pairs) took 938 of the 962 ms on a warm cache - seconds on a busy box, where
+# the hook's served prompts ran 1.5-4 s. A query reads twenty-odd tokens. So the builder writes <index>.lazy.sqlite
+# beside the pickle, one row per token, made from the published pickle's own bytes and stamped with that file's
+# signature; load() opens it only when the stamp matches the pickle on disk now, and reads a token's postings when
+# one is asked for. Anything else (no sidecar, a stale or broken one, MATHBRAIN_PREFILTER_LAZY=0) is the old load.
+# The connection stays open for the process, so the postings come from one build; while a reader holds the sidecar
+# a new one waits in _publish like the pickle always has.
+LAZY_SCHEMA = "math_prefilter.lazy.v1"
+
+
+def lazy_path(index_file):
+    return str(index_file) + ".lazy.sqlite"
+
+
+class _LazyPost(object):
+    """The postings dict, read per token from the sidecar: get / in / [] / len, values as the pickle has them."""
+
+    def __init__(self, con, ntok):
+        self._con, self._ntok, self._got = con, ntok, {}
+
+    def prefetch(self, toks):
+        import array
+        want = [t for t in set(toks) if t not in self._got]
+        for i in range(0, len(want), 400):
+            chunk = want[i:i + 400]
+            found = {}
+            for tok, blob in self._con.execute("SELECT tok, blob FROM post WHERE tok IN (%s)" % ",".join("?" * len(chunk)),
+                                               chunk):
+                a = array.array("I")
+                a.frombytes(blob)
+                found[tok] = list(zip(a[0::2], a[1::2]))
+            for t in chunk:
+                self._got[t] = found.get(t)
+
+    def get(self, tok, default=None):
+        if tok not in self._got:
+            self.prefetch([tok])
+        v = self._got[tok]
+        return default if v is None else v
+
+    def __contains__(self, tok):
+        return self.get(tok) is not None
+
+    def __getitem__(self, tok):
+        v = self.get(tok)
+        if v is None:
+            raise KeyError(tok)
+        return v
+
+    def __len__(self):
+        return self._ntok
+
+    def __iter__(self):
+        for (tok,) in self._con.execute("SELECT tok FROM post"):
+            yield tok
+
+    def keys(self):
+        return list(iter(self))
+
+    def items(self):
+        self.prefetch(self.keys())
+        return [(t, v) for t, v in self._got.items() if v is not None]
+
+    def values(self):
+        return [v for _t, v in self.items()]
+
+
+def _load_lazy(p, signature):
+    """The index from its sidecar when the sidecar was made from the pickle now on disk, else None."""
+    lp = lazy_path(p)
+    if not os.path.exists(lp):
+        return None
+    import sqlite3
+    con = sqlite3.connect("file:%s?mode=ro" % lp.replace("\\", "/"), uri=True, timeout=2, check_same_thread=False)
+    try:
+        meta = dict(con.execute("SELECT k, v FROM meta"))
+        if meta.get("schema") != LAZY_SCHEMA or json.loads(meta.get("pkl_sig") or "null") != list(signature):
+            con.close()
+            return None
+        data = pickle.loads(meta["rest"])
+        data["post"] = _LazyPost(con, int(meta["ntok"]))
+    except Exception:
+        con.close()
+        raise
+    if _index_file_signature(p) != signature or not isinstance(data.get("ids"), list):
+        con.close()
+        return None
+    return data
+
+
+def write_lazy(store_path):
+    """Write the per-token sidecar from the published index. Reads the pickle itself (signature checked before and
+    after, as load() does), so the stamp is the signature of the very bytes the sidecar was made from."""
+    import array, sqlite3
+    p = index_path(store_path)
+    sig = _index_file_signature(p)
+    with open(p, "rb") as fh:
+        data = pickle.load(fh)
+    if _index_file_signature(p) != sig:
+        return {"skipped": "index changed while it was read"}
+    post = data["post"]
+    rest = {k: v for k, v in data.items() if k != "post"}
+    lp = lazy_path(p)
+    tmp_db = "%s.build.%d.%d" % (lp, os.getpid(), int(time.time() * 1000))
+    try:
+        con = sqlite3.connect(tmp_db)
+        con.execute("PRAGMA journal_mode=OFF")
+        con.execute("PRAGMA synchronous=OFF")
+        con.execute("CREATE TABLE meta (k TEXT PRIMARY KEY, v)")
+        con.execute("CREATE TABLE post (tok TEXT PRIMARY KEY, blob BLOB) WITHOUT ROWID")
+        rows = []
+        for tok, pl in post.items():
+            a = array.array("I")
+            for i, f in pl:
+                if type(i) is not int or type(f) is not int or not (0 <= i < 2 ** 32 and 0 <= f < 2 ** 32):
+                    raise ValueError("a posting is not a pair of small non-negative ints: %r" % ((i, f),))
+                a.append(i)
+                a.append(f)
+            rows.append((tok, a.tobytes()))
+            if len(rows) >= 20000:
+                con.executemany("INSERT INTO post VALUES (?, ?)", rows)
+                rows = []
+        if rows:
+            con.executemany("INSERT INTO post VALUES (?, ?)", rows)
+        con.executemany("INSERT INTO meta VALUES (?, ?)", [
+            ("schema", LAZY_SCHEMA), ("pkl_sig", json.dumps(list(sig))), ("ntok", len(post)),
+            ("rest", pickle.dumps(rest, protocol=pickle.HIGHEST_PROTOCOL)), ("built_at", str(data.get("built_at")))])
+        con.commit()
+        con.close()
+        with open(tmp_db, "rb") as src:
+            _publish(lp, lambda fh: fh.write(src.read()))
+    finally:
+        try:
+            os.unlink(tmp_db)
+        except OSError:
+            pass
+    return {"path": lp, "tokens": len(post), "bytes": os.path.getsize(lp)}
+
 
 def _scores(data, text):
     """BM25 score per node index for the text (only nodes sharing a token appear)."""
@@ -415,6 +588,8 @@ def select(store_path, text, k=300):
     data = load(store_path)
     if not data:
         return None
+    if hasattr(data["post"], "prefetch"):
+        data["post"].prefetch(tokens(text))     # one read for the query's tokens (the per-token sidecar)
     try:
         N, post = data["n"], data["post"]
         LAST_QSELF = sum(math.log(1.0 + (N - len(post[t]) + 0.5) / (len(post[t]) + 0.5))
@@ -478,10 +653,13 @@ if __name__ == "__main__":
     if len(sys.argv) < 2 or any(a in ("-h", "--help") for a in sys.argv[1:]):
         # help is inert: nothing is built or written
         print("usage: math_prefilter.py build STORE            (write STORE.prefilter.pkl)\n"
+              "       math_prefilter.py lazy STORE             (write the per-token sidecar from the published index)\n"
               "       math_prefilter.py query STORE TEXT [K]   (print the top-K candidate count and time)")
         raise SystemExit(0)
     if len(sys.argv) >= 3 and sys.argv[1] == "build":
         print(build(sys.argv[2]))
+    elif len(sys.argv) >= 3 and sys.argv[1] == "lazy":
+        print(write_lazy(sys.argv[2]))
     elif len(sys.argv) >= 4 and sys.argv[1] == "query":
         t0 = time.time()
         ids = select(sys.argv[2], sys.argv[3], int(sys.argv[4]) if len(sys.argv) > 4 else 10)

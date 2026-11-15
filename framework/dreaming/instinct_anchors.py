@@ -41,13 +41,6 @@ import re
 import sys
 import time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
 try:
     from re import _parser as _sre_parser   # Python 3.11+
     from re import _constants as _C
@@ -76,56 +69,80 @@ def _better(a, b):
     return a if ka >= kb else b
 
 
-def _req_seq(seq):
-    best = None
+def _req_seq_all(seq):
+    """Every requirement read from one concatenation, as a list of any-of sets. Each element of a concatenation must
+    match, so each set is required on its own and together they are a conjunction (14 Nov 2026, see anchors_for)."""
+    out = []
     cur = []
     for op, av in seq:
         if op is _C.LITERAL and av < 128:
             cur.append(chr(av).lower())
             continue
         if cur:
-            best = _better(best, {"".join(cur)})
+            out.append({"".join(cur)})
             cur = []
-        r = _req_node(op, av)
-        if r:
-            best = _better(best, r)
+        out.extend(_req_node(op, av))
     if cur:
-        best = _better(best, {"".join(cur)})
+        out.append({"".join(cur)})
+    return out
+
+
+def _req_seq(seq):
+    """The single strongest requirement of a concatenation (what a branch can carry), or None."""
+    best = None
+    for r in _req_seq_all(seq):
+        best = _better(best, r)
     return best
 
 
 def _req_node(op, av):
+    """The requirements one node adds to its concatenation, as a list of any-of sets ([] = none)."""
     if op is _C.SUBPATTERN:
-        return _req_seq(av[3])
+        return _req_seq_all(av[3])
     if op is _C.BRANCH:
         out = set()
         for b in av[1]:
             r = _req_seq(b)
             if not r:
-                return None
+                return []
             out |= r
-        return out if out and len(out) <= MAX_ANYOF else None
+        return [out] if out and len(out) <= MAX_ANYOF else []
     if op in (_C.MAX_REPEAT, _C.MIN_REPEAT) or op is getattr(_C, "POSSESSIVE_REPEAT", object()):
-        return _req_seq(av[2]) if av[0] >= 1 else None
+        return _req_seq_all(av[2]) if av[0] >= 1 else []
     if op is getattr(_C, "ATOMIC_GROUP", object()):
-        return _req_seq(av)
+        return _req_seq_all(av)
     if op is _C.ASSERT:
         # (?=X) or (?<=X): X matched somewhere in the text, so whatever X requires is in it (R29, 14 Oct 2026)
-        return _req_seq(av[1])
-    return None   # IN, ANY, AT, ASSERT_NOT, NOT_LITERAL, GROUPREF, CATEGORY, ...
+        return _req_seq_all(av[1])
+    return []   # IN, ANY, AT, ASSERT_NOT, NOT_LITERAL, GROUPREF, CATEGORY, ...
+
+
+MAX_CONJ = 3            # at most this many independent any-of sets are kept per trigger
 
 
 def anchors_for(trigger):
-    """Any-of literal set for one trigger, or None when no requirement can be read from it."""
+    """The required literals of one trigger, or None when no requirement can be read from it: a sorted any-of list
+    when one requirement is kept (the v1 form), or a list of up to MAX_CONJ any-of lists, all required, when the
+    pattern requires several unrelated pieces.
+
+    WHY (14 Nov 2026, an agent, T-20261113-049): only the strongest requirement used to be kept. A trigger
+    built as "a paper word ... then a push word" passed the pre-check whenever EITHER word was present, and findall
+    then scanned the text with a 400-character lookahead at every position. On 300 real tool calls the hook spent
+    62 ms per call matching, 17.5 ms of it on three such triggers that passed the pre-check on 17-30 pct of calls."""
     try:
         tree = _sre_parser.parse(trigger, re.I)
     except Exception:
         return None
-    req = _req_seq(tree)
-    if not req:
+    reqs = []
+    for r in _req_seq_all(tree):
+        r = {x for x in r if x}
+        if r and len(r) <= MAX_ANYOF and sorted(r) not in reqs:
+            reqs.append(sorted(r))
+    if not reqs:
         return None
-    req = {x for x in req if x}
-    return sorted(req) if req and len(req) <= MAX_ANYOF else None
+    reqs.sort(key=lambda a: (min(len(x) for x in a), -len(a)), reverse=True)
+    reqs = reqs[:MAX_CONJ]
+    return reqs[0] if len(reqs) == 1 else reqs
 
 
 def build(tsv=TSV, out=SIDECAR):
@@ -188,6 +205,11 @@ def could_match(trigger, low_text, table):
     if not a:
         return True
     low_text = _folded(low_text)
+    if isinstance(a[0], list):      # several requirements, all needed (see anchors_for)
+        for group in a:
+            if not any(lit in low_text for lit in group):
+                return False
+        return True
     for lit in a:
         if lit in low_text:
             return True
@@ -199,7 +221,7 @@ def _verify(sample=4000):
     import random
     random.seed(20260914)
     texts = []
-    prompts = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}", "memory", "prompts", "PROMPTS.jsonl")
+    prompts = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory", "prompts", "PROMPTS.jsonl")
     try:
         with io.open(prompts, encoding="utf-8", errors="replace") as f:
             lines = f.readlines()
@@ -210,7 +232,7 @@ def _verify(sample=4000):
                 texts.append(ln[:8000])
     except Exception:
         pass
-    mem = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}", "memory")
+    mem = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
     names = [n for n in os.listdir(mem) if n.endswith(".md")]
     for n in random.sample(names, min(sample // 2, len(names))):
         try:

@@ -1,7 +1,8 @@
 """Git pre-push gate: run scan_secrets.py on every range a push would publish, and refuse the push unless each scan
 exits 0 (scan_secrets: 1 = possible secrets, 2 = the scan could not complete; both block). Installed as the
 pre-push hook of a clone, it makes the rule "scan_secrets --range must print clean before the push" a property of
-the push instead of the pusher's command line - pushes went out on a scanner error twice, both times from a chained command whose exit did not gate the push.
+the push instead of the pusher's command line - pushed on a scanner error twice (MISTAKES 2026-09-17 00:34 and
+2026-09-25 01:0x), both times from a chained command whose exit did not gate the push.
 
 git calls the hook with the remote name and url as arguments and one line per ref on stdin:
     <local ref> <local oid> <remote ref> <remote oid>
@@ -13,28 +14,24 @@ replaced started three git processes per ref, and a new branch on a remote with 
 the fallback for any answer the batched search cannot read. Everything reachable from that base is already on the
 remote, so every commit the new ref makes reachable is in the scan (it may scan more, never less). Until 28 Sep the base came from the local tracking refs, and a tracking ref left
 ahead of the remote by a rewind (or behind it by a missed fetch) could leave a commit the push made reachable out of
-the scan. The push refuses when the remote
+the scan (account02/B06 r65, R24-B06-PREPUSH-NEW-REF-FALLBACK-CAN-NARROW-20260928). The push refuses when the remote
 cannot be read or none of its advertised commits shares history with the pushed one. A deletion (all-zero local oid)
 sends no content and is not scanned. Git's hook environment (GIT_DIR and friends) is removed before the scanner runs,
 because the scanner refuses inherited repository overrides.
 
 The gate reads the commit graph the way the scanner does and the remote will: no replace objects, no grafts, no shallow
 file. Until 28 Sep 20:5x its merge-base honored refs/replace while the scanner disabled replacements, so a local
-replacement that grafted an unrelated remote commit onto the pushed history certified one commit and published three. Those three settings go only to the gate's
+replacement that grafted an unrelated remote commit onto the pushed history certified one commit and published three
+(account03/B19 r69, B19-R51-FRESH-BASE-REPLACE-REF-GRAPH-MISMATCH-20260928). Those three settings go only to the gate's
 own git calls; the scanner sets them itself and refuses them inherited.
 
 A new ref's base rests on some other ref of the remote (the witness), and that ref can move or be deleted while the scan
-runs, which leaves commits the scan treated as already published newly reachable. After the scan the base is chosen again from what the remote advertises
+runs, which leaves commits the scan treated as already published newly reachable (account02/B06 r68,
+R51-B06-NEWREF-WITNESS-DELETE-CUSTOMREF-20260928). After the scan the base is chosen again from what the remote advertises
 then; a base the first range does not cover is scanned too, and after three moves the push is refused. What the hook
 cannot close is the moment between its own exit and the remote's ref update: an update of an existing ref is guarded by
 the old id git sends with it, a new ref by nothing but this re-check.
 """
-
-import sys
-if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:]):
-    print(__doc__ or "No command-line options.")
-    raise SystemExit(0)
-
 import os
 import re
 import subprocess
@@ -71,8 +68,14 @@ def git(args, env):
 
 
 def scan(base, local_oid, env):
-    return subprocess.run([sys.executable, SCANNER, "--range", "%s..%s" % (base, local_oid)], env=env,
-                          creationflags=NOWIN).returncode
+    # The scanner's own lines are captured and passed on: under CREATE_NO_WINDOW a child of the hook can lose its
+    # inherited console, and a refused push then said only "exit 2" with no reason (12 Nov 2026).
+    p = subprocess.run([sys.executable, SCANNER, "--range", "%s..%s" % (base, local_oid)], env=env,
+                       capture_output=True, text=True, errors="replace", creationflags=NOWIN)
+    for text in (p.stdout, p.stderr):
+        if text and text.strip():
+            print(text.rstrip(), file=sys.stderr)
+    return p.returncode
 
 
 def advertised(where, env):
@@ -102,7 +105,7 @@ def fresh_base(local_oid, where, env):
     object id, so the order the remote lists its refs in cannot change it). An advertised commit this clone lacks is
     skipped, which can only widen the scan.
 
-    A handful of git processes for the whole advertisement, not three per advertised id (4 Oct 2026: a remote that
+    A handful of git processes for the whole advertisement, not three per advertised id (4 Oct 2026: research-repo
     advertised 776 refs, so a new branch's push started about 2,300 processes and ran for hours inside a
     process-creation stall). cat-file --batch-check peels the advertised ids this clone has to commits; rev-list
     --boundary of local_oid against them lists the commits the remote lacks and, prefixed '-', the remote commits they
@@ -112,12 +115,14 @@ def fresh_base(local_oid, where, env):
     adv = advertised(where, env)
     if adv is None:
         return "", "the remote's refs could not be read (git ls-remote failed)"
-    rc, out = git_input(["cat-file", "--batch-check=%(objectname) %(objecttype)"],
+    # --no-lazy-fetch on both: in a partial clone an advertised id this clone lacks was downloaded with its whole
+    # history (12 Nov 2026: a push sat 40 min while the hook fetched a 452,792-object pack). A missing id is skipped.
+    rc, out = git_input(["--no-lazy-fetch", "cat-file", "--batch-check=%(objectname) %(objecttype)"],
                         "".join(oid + "^{commit}\n" for oid in adv), env)
     if rc == 0:
         commits = sorted({line.split()[0] for line in out.splitlines()
                           if line.endswith(" commit") and _OIDLINE.match(line.split()[0])})
-        rc, out = git_input(["rev-list", "--ignore-missing", "--boundary", local_oid, "--stdin"],
+        rc, out = git_input(["--no-lazy-fetch", "rev-list", "--ignore-missing", "--boundary", local_oid, "--stdin"],
                             "".join("^" + oid + "\n" for oid in commits), env)
         lines = out.splitlines() if rc == 0 else []
         if rc == 0 and all(_OIDLINE.match(line) for line in lines):
@@ -146,7 +151,8 @@ def _fresh_base_by_id(local_oid, adv, env):
     skipped, which can only widen the scan."""
     best = None
     for oid in adv:
-        if git(["cat-file", "-e", oid + "^{commit}"], env)[0] != 0:
+        # --no-lazy-fetch: a plain probe on a commit this partial clone lacks downloads its whole history (10 Nov 2026)
+        if git(["--no-lazy-fetch", "cat-file", "-e", oid + "^{commit}"], env)[0] != 0:
             continue
         rc, mb = git(["merge-base", local_oid, oid], env)
         if rc != 0 or not mb:
@@ -177,7 +183,17 @@ def main():
         if ZERO.match(local_oid):
             continue
         base = remote_oid
-        from_witness = ZERO.match(remote_oid) or git(["cat-file", "-e", remote_oid + "^{commit}"], genv)[0] != 0
+        have = lambda oid: git(["--no-lazy-fetch", "cat-file", "-e", oid + "^{commit}"], genv)[0] == 0
+        if not ZERO.match(remote_oid) and not have(remote_oid):
+            # The remote ref moved after this clone's last fetch. Fetch that one commit by a normal fetch (a minute on
+            # a slow box) instead of searching the other branches' tips for a base: on 12 Nov 2026 that search picked
+            # a base 14,074 commits back on research-repo and the scan timed out on every try.
+            try:
+                subprocess.run(["git", "fetch", "--no-tags", "--no-write-fetch-head", "--recurse-submodules=no", where,
+                                remote_oid], capture_output=True, env=env, creationflags=NOWIN, timeout=600)
+            except (OSError, subprocess.SubprocessError):
+                pass   # the search below still runs; a failed fetch can only widen the scan
+        from_witness = ZERO.match(remote_oid) or not have(remote_oid)
         if from_witness:
             base, why = fresh_base(local_oid, where, genv)
             if not base:
@@ -211,7 +227,4 @@ def main():
 
 
 if __name__ == "__main__":
-    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
-        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
-        raise SystemExit(0)
     sys.exit(main())

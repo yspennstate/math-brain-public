@@ -4,7 +4,7 @@ Split ONE local, never-pushed commit whose new blobs exceed the secret scanner's
 MAX_TOTAL_OBJECT_BYTES, 256 MB) into parts that each fit, so the dream's per-commit scan can certify it. The scanner
 is NOT loosened: every byte is still scanned, just in commits small enough for one bounded scan.
 
-Why it exists: one nightly commit changed 19,819 paths, 366.8 MB of blobs. The whole-range
+Why it exists (7 Nov 2026): the dream commit of 5 Nov 10:39 changed 19,819 paths, 366.8 MB of blobs. The whole-range
 scan and the per-commit fallback both refused it ("Git objects exceeded the bounded total scan size"), so the nightly
 push stayed blocked for days while the brain views alone grow toward ~175 MB a commit.
 
@@ -20,7 +20,7 @@ import argparse, datetime, os, subprocess, sys, tempfile
 ap = argparse.ArgumentParser()
 ap.add_argument("target")
 ap.add_argument("--budget", type=float, default=180.0, help="MB of new blobs per part")
-ap.add_argument("--repo", default=".")
+ap.add_argument("--repo", default="~/brain-repo")
 ap.add_argument("--dry-run", action="store_true")
 ap.add_argument("--base", default="origin/main",
                 help="the pushed main (the dream passes the advertised remote OID); the target must not be in it")
@@ -121,7 +121,7 @@ cur = parent
 for k, (rs, _) in enumerate(bins[:-1], 1):
     info = "".join("%s %s\t%s\n" % (m, o, p) for m, o, _, p in rs).encode("utf-8", "surrogateescape")
     git("update-index", "--index-info", env=env_i, inp=info)
-    tk = git("write-tree", env=env_i).decode().strip()
+    tk = git("write-tree", "--missing-ok", env=env_i).decode().strip()  # partial clone: no lazy blob fetch
     mk = subj + b" (part %d of %d)\n" % (k, n) + (b"\n" + body.lstrip(b"\n") if body.strip() else b"")
     cur = git("commit-tree", tk, "-p", cur, env=env_c, inp=mk).decode().strip()
 first_part = cur

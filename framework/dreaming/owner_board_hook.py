@@ -1,4 +1,4 @@
-"""owner_board_hook.py - hand every agent the owner's board for the scheduled tasks (his 2026-09-20 18:37 order:
+"""owner_board_hook.py - hand every agent the author's board for the scheduled tasks (his 2026-09-20 18:37 order:
 "have a whole tasks thing in the brain that the schedules keep reading, that agents like you keep reading, and that
 I can update").
 
@@ -7,13 +7,6 @@ message from 12_cognitive_architecture/scheduled_tasks/OWNER_MESSAGES.md. Claude
 Codex gets JSON (the only form it injects). Never blocks, never raises out; under BOARD_MAX chars.
 """
 import io, json, os, re, sys, time
-
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
 
 BOARD = os.path.join(os.path.expanduser("~"), "brain-repo", "12_cognitive_architecture", "scheduled_tasks", "BOARD.md")
 README = "~/brain-repo/12_cognitive_architecture/scheduled_tasks/README.md"
@@ -24,8 +17,7 @@ BOARD_MAX = 3500
 
 def read_payload():
     try:
-        b = getattr(sys.stdin, "buffer", None)   # the dispatcher's in-process stdin is text only
-        raw = b.read().decode("utf-8", "replace") if b is not None else sys.stdin.read()
+        raw = sys.stdin.buffer.read().decode("utf-8", "replace") if hasattr(sys.stdin, "buffer") else sys.stdin.read()
     except Exception:
         return {}
     i = raw.find("{")
@@ -47,7 +39,7 @@ def board_text():
     m2 = re.search(r"## OWNER MESSAGE\n(.*?)(?=\n## |\Z)", t, re.S)
     if m2:
         message = m2.group(1).strip()
-    out = ["[owner-board] the owner message to the scheduled tasks and every agent (the control README the tasks read; his newest words win over an earlier task). Roster, protocol and how to answer: %s" % README]
+    out = ["[owner-board] the author's message to the scheduled tasks and every agent (the control README the tasks read; his newest words win over an earlier task). Roster, protocol and how to answer: %s" % README]
     if control:
         out.append("  control: " + control)
     if message:
@@ -62,7 +54,7 @@ REPEAT_NOTE = ("[owner-board] unchanged since it reached this context (his messa
 
 def _once(sess, full):
     """The control line goes every hour; the header and his message only once per context, again when they change,
-    after a compaction or after three hours (4 Nov 2026: 2,845 chars a fire, 91 pct a repeat to the
+    after a compaction or after three hours (4 Nov 2026, an agent: 2,845 chars a fire, 91 pct a repeat to the
     same session). No session id, or any failure, sends the whole text as before."""
     if not sess:
         return full
@@ -111,9 +103,9 @@ def main():
         if runtime == "codex":
             sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": event, "additionalContext": text}}))
         else:
-            b = getattr(sys.stdout, "buffer", None)  # in-process the dispatcher hands a text stream with no buffer
-            if b is not None:
-                b.write((text + "\n").encode("utf-8", "replace"))
+            buf = getattr(sys.stdout, "buffer", None)     # in the dispatcher's process stdout is a StringIO with no .buffer
+            if buf is not None:
+                buf.write((text + "\n").encode("utf-8", "replace"))
             else:
                 sys.stdout.write(text + "\n")
     except Exception:

@@ -39,7 +39,7 @@ from collections import Counter, defaultdict
 
 HOME = os.path.expanduser("~")
 DR = os.path.dirname(os.path.abspath(__file__))
-CLAUDE_DIR = os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}")
+CLAUDE_DIR = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 CODEX_DIR = os.path.join(HOME, ".codex", "sessions")
 SURFACED = os.path.join(HOME, ".claude", "dreaming", "surfaced.tsv")
 RETRIEVALS = os.path.join(HOME, ".claude", "dreaming", "retrievals.tsv")
@@ -51,14 +51,11 @@ FIELDS = (
     "confidence", "artifact", "line", "evidence_sha256",
 )
 
-# Compared against lowercased paths, so the markers are lowercased too: an installed project
-# folder name keeps its capitals (the drive letter, the user name), and a marker that kept them
-# matched nothing, so no memory read was ever recorded.
-_MEMORY_MARKERS = tuple(m.lower() for m in (
-    "/.claude/projects/{{BRAIN_SLUG}}/memory/",
+_MEMORY_MARKERS = (
+    "/.claude/projects/" + os.environ.get("BRAIN_SLUG", "default").lower() + "/memory/",
     "/brain-repo/01_ai_consciousness/claude/memory/",
     "/.codex/memories/",
-))
+)
 _CONTEXT_FILES = {"recent_brain.md": "RECENT_BRAIN"}
 _SHELL_NAMES = {"bash", "powershell", "shell", "shell_command", "exec_command"}
 _COMMAND_PREFIX = r"(?:^|\|\s*)(?:&\s*)?(?:(?:sudo|command)\s+)?"
@@ -138,10 +135,34 @@ def _cache_take(path, cutoff, end, stats, prefix):
         st = os.stat(path)
     except Exception:
         return None
-    if entry.get("size") != st.st_size or entry.get("mtime") != st.st_mtime:
+    if entry.get("size") == st.st_size and entry.get("mtime") == st.st_mtime:
+        rows = _window_rows(entry.get("rows", []), cutoff, end)
+        _CACHE["new"][path] = entry
+        stats[prefix + "_files_cached"] += 1
+        return rows
+    # A transcript is append-only: when it grew since the last scan and the bytes just before the
+    # cached offset are unchanged, resume at that offset instead of re-reading the whole file. Before
+    # 8 Nov every grown session file was read from byte 0 each night; the 7-day window passed 42 GB
+    # and the 1800 s budget ran out two dreams running with nothing written.
+    off = entry.get("offset")
+    if not isinstance(off, int) or off <= 0 or st.st_size < off or not entry.get("tail_sha"):
         return None
+    try:
+        with io.open(path, "rb") as fh:
+            if _tail_sha(fh, off) != entry["tail_sha"]:
+                return None
+    except Exception:
+        return None
+    stats[prefix + "_files_resumed"] += 1
+    stats[prefix + "_resume_bytes_skipped"] += off
+    return {"rows": _window_rows(entry.get("rows", [])[:int(entry.get("nrows", 0))], cutoff, end),
+            "offset": off, "lines": int(entry.get("lines", 0)),
+            "pending": dict((k, tuple(v)) for k, v in (entry.get("pending") or {}).items())}
+
+
+def _window_rows(cached_rows, cutoff, end):
     rows = []
-    for row in entry.get("rows", []):
+    for row in cached_rows:
         try:
             epoch = float(row["epoch"])
         except Exception:
@@ -151,25 +172,50 @@ def _cache_take(path, cutoff, end, stats, prefix):
         if end is not None and epoch > end:
             continue
         rows.append(dict(row))
-    _CACHE["new"][path] = entry
-    stats[prefix + "_files_cached"] += 1
     return rows
 
 
-def _cache_put(path, rows):
+def _tail_sha(fh, pos):
+    """Hash of the (up to) 4 KB ending at byte pos: the resume check that the prefix is unchanged."""
+    lo = max(0, pos - 4096)
+    fh.seek(lo)
+    return hashlib.sha256(fh.read(pos - lo)).hexdigest()[:16]
+
+
+def _cache_put(path, rows, mark=None, nrows=None, pending=None, fh=None, partial=False):
     if not _CACHE["enabled"]:
         return
     try:
         st = os.stat(path)
     except Exception:
         return
-    _CACHE["new"][path] = {"size": st.st_size, "mtime": st.st_mtime, "rows": [dict(r) for r in rows]}
+    entry = {"size": st.st_size, "mtime": st.st_mtime, "rows": [dict(r) for r in rows]}
+    if mark is not None and fh is not None:
+        try:
+            scanned = fh.seek(0, 2) if partial else fh.tell()
+            entry.update({
+                # the bytes actually read, not a later stat: a session that grew during the scan must
+                # not look unchanged next time; a partial (budget-cut) entry never looks unchanged
+                "size": -1 if partial else scanned,
+                "offset": int(mark["pos"]), "lines": int(mark["lines"]),
+                "nrows": len(rows) if nrows is None else int(nrows),
+                "pending": dict((k, list(v)) for k, v in (pending or {}).items()),
+                "tail_sha": _tail_sha(fh, int(mark["pos"])) if mark["pos"] > 0 else "",
+            })
+        except Exception:
+            pass
+    _CACHE["new"][path] = entry
 
 
-def _cache_save(path):
+def _cache_save(path, merge=False):
     if not _CACHE["enabled"]:
         return
-    blob = {"scanner_sha": _scanner_sha(), "written": _iso(time.time()), "files": _CACHE["new"]}
+    files = _CACHE["new"]
+    if merge:
+        # a budget-cut run keeps the old entries it never reached, so the next night starts further on
+        files = dict(_CACHE["old"])
+        files.update(_CACHE["new"])
+    blob = {"scanner_sha": _scanner_sha(), "written": _iso(time.time()), "files": files}
     tmp = "%s.tmp.%d" % (path, os.getpid())
     with io.open(tmp, "w", encoding="utf-8") as fh:
         json.dump(blob, fh)
@@ -186,14 +232,21 @@ def _check_budget():
         raise ScanBudgetExceeded("scan budget exhausted")
 
 
-def _needle_lines(fh, needles, stats, prefix):
+def _needle_lines(fh, needles, stats, prefix, mark=None):
     """Yield (line_no, text) for the lines of a binary file handle that contain any needle.
 
     Lines are counted exactly as the old text reader counted them; only matching lines are decoded.
     A line longer than MAX_LINE_BYTES is dropped (stats[prefix + '_oversize_lines']) and the scan
     continues at its newline. The time budget is checked once per chunk.
+
+    With mark (a dict holding "pos", the byte offset the handle starts at, and "lines", the lines
+    before it), mark is kept at the end of the last line the caller has finished with, and a last
+    line with no newline is NOT yielded but left in mark["tail"] so the caller can cache the offset
+    before it (a session being written ends mid-line).
     """
-    line_no = 0
+    line_no = mark["lines"] if mark is not None else 0
+    pos = mark["pos"] if mark is not None else 0
+    carry = 0   # bytes of an oversize line already dropped from buf
     buf = b""
     skipping = False
     while True:
@@ -209,20 +262,26 @@ def _needle_lines(fh, needles, stats, prefix):
             if skipping:
                 skipping = False
                 stats[prefix + "_oversize_lines"] += 1
-                continue
-            if any(needle in part for needle in needles):
+            elif any(needle in part for needle in needles):
                 yield line_no, part.decode("utf-8", "replace")
+            pos += carry + len(part) + 1
+            carry = 0
+            if mark is not None:
+                mark["pos"], mark["lines"] = pos, line_no
         if len(buf) > MAX_LINE_BYTES:
+            carry += len(buf)
             buf = b""
             skipping = True
         _check_budget()
     if buf:
-        line_no += 1
         stats[prefix + "_lines"] += 1
         if skipping:
             stats[prefix + "_oversize_lines"] += 1
         elif any(needle in buf for needle in needles):
-            yield line_no, buf.decode("utf-8", "replace")
+            if mark is not None:
+                mark["tail"] = (line_no + 1, buf.decode("utf-8", "replace"))
+            else:
+                yield line_no + 1, buf.decode("utf-8", "replace")
 
 
 def _sha(value):
@@ -501,6 +560,9 @@ def scan_claude(paths, cutoff=None, end=None):
         stats["claude_files"] += 1
         pending = {}
         cached = _cache_take(path, cutoff, end, stats, "claude")
+        resume = None
+        if isinstance(cached, dict):
+            resume, cached = cached, None
         if cached is not None:
             rows.extend(cached)
             continue
@@ -510,27 +572,32 @@ def scan_claude(paths, cutoff=None, end=None):
         except Exception:
             stats["claude_open_error"] += 1
             continue
-        with fh:
-            for line_no, raw in _needle_lines(fh, _CLAUDE_NEEDLES, stats, "claude"):
+        mark = {"pos": 0, "lines": 0}
+        if resume is not None:
+            rows.extend(resume["rows"])
+            pending = dict(resume["pending"])
+            mark = {"pos": resume["offset"], "lines": resume["lines"]}
+
+        def handle(line_no, raw):
                 try:
                     obj = json.loads(raw)
                 except Exception:
                     stats["claude_bad_json"] += 1
-                    continue
+                    return
                 epoch = _parse_time(obj.get("timestamp"))
                 if epoch is None:
                     stats["claude_missing_ts"] += 1
-                    continue
+                    return
                 if cutoff is not None and epoch < cutoff:
-                    continue
+                    return
                 if end is not None and epoch > end:
                     stats["claude_future_ts"] += 1
-                    continue
+                    return
                 session = obj.get("sessionId") or os.path.basename(path)[:-6]
                 message = obj.get("message") if isinstance(obj.get("message"), dict) else {}
                 content = message.get("content")
                 if not isinstance(content, list):
-                    continue
+                    return
                 for item in content:
                     if not isinstance(item, dict):
                         continue
@@ -560,7 +627,22 @@ def scan_claude(paths, cutoff=None, end=None):
                                 _text_content(item.get("content")), call_epoch, call_session, "claude",
                                 "brain_cli_claude", path, call_line, tool_id,
                             ))
-        _cache_put(path, rows[start:])
+
+        with fh:
+            if mark["pos"]:
+                fh.seek(mark["pos"])
+            try:
+                for line_no, raw in _needle_lines(fh, _CLAUDE_NEEDLES, stats, "claude", mark):
+                    handle(line_no, raw)
+            except ScanBudgetExceeded:
+                # keep what this file got through, so the next run resumes here, not at byte 0
+                _cache_put(path, rows[start:], mark, None, pending, fh, partial=True)
+                raise
+            nrows, pend_at_mark = len(rows) - start, dict(pending)
+            tail = mark.pop("tail", None)
+            if tail is not None:
+                handle(*tail)
+            _cache_put(path, rows[start:], mark, nrows, pend_at_mark, fh)
     stats["claude_rows"] = len(rows)
     return rows, stats
 
@@ -878,6 +960,13 @@ def main(argv=None):
               "(%.1f GB in window); nothing written, prior sidecar preserved" % (
                   args.max_seconds, len(claude_paths), len(codex_paths),
                   sum(_size_or_zero(p) for p in claude_paths + codex_paths) / 1e9))
+        if args.write and args.cache:
+            try:
+                _cache_save(args.cache, merge=True)
+                print("build_memory_access: scan cache saved for %d files; the next run resumes from it" %
+                      len(_CACHE["new"]))
+            except Exception as exc:
+                print("build_memory_access: scan cache not saved (%s)" % type(exc).__name__)
         return 3
     stats["scan_seconds"] = round(time.time() - started, 1)
     report = summarize(rows, stats, args.retrievals, cutoff=cutoff, end=end)

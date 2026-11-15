@@ -1,7 +1,7 @@
-"""effort_guard.py - every Claude agent runs at effort HIGH, not max (a standing rule since 14 Oct 2026).
+"""effort_guard.py - every Claude agent runs at effort HIGH, not max (his order of 14 Oct 2026).
 
-The rule: every Claude terminal and every Claude subagent runs at high thinking effort, not max, and the rule is
-held by a hook and by the brain rather than by memory.
+Written at the author's request. and "make sure all agents running on claude in terminals or
+subagent from now on are high mode, put this in hooks, in the brain, and codify it".
 
 The lock itself is "maxEffortLevel": "high" in ~/.claude/settings.json: Claude Code clamps every ask above it (an
 --effort flag, CLAUDE_CODE_EFFORT_LEVEL, an /effort or /model pick, a model default) for every process that loads
@@ -14,17 +14,15 @@ PreToolUse (Bash, PowerShell, Write, Edit, MultiEdit) refuses:
     CLAUDE_CODE_EXTRA_BODY carrying an effort (the cap does not see it);
   - a write to a launcher, script or settings file (.ps1 .py .cmd .bat .vbs .sh .json .toml) whose new text does
     any of the above or sets maxEffortLevel to anything but high.
-Codex is not covered (his order names Claude; Codex keeps its own model_reasoning_effort). Markdown is not checked,
+Since his order of 2 Nov 2026 23:3x ("all the cluade tmerinals here and headless agents work on opu 5.5 hgh thinking
+nothing mroe then that, and all codex work on 6.1 high thinking nothing more then that") it also refuses a claude
+launch with --model fable, and a Codex launch or launcher/config write that names a model outside gpt-6.1-* or sets
+model_reasoning_effort to xhigh, max or ultra. The Codex homes default to gpt-6.1-sol at high. Markdown is not checked,
 so notes and memories may quote the old values. Refusals are logged to ~/.claude/brain_graph/logs/effort_guard.log.
 
 SessionStart (run with --session-start) prints one line only when the settings lock has drifted.
-Only his words in a live session change this.
+Only the user's words in a live session change this.
 """
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import json
 import os
 import re
@@ -43,6 +41,11 @@ ENV_ABOVE = re.compile(r"(?i)CLAUDE_CODE_EFFORT_LEVEL[\"']?\s*(?:=|:|,)\s*[\"']?
 SOURCES = re.compile(r"(?i)--setting-sources(?:\s+|=)[\"']?([a-z,]+)")
 EXTRA_BODY = re.compile(r"(?i)CLAUDE_CODE_EXTRA_BODY[^\n]*effort")
 CAP_WRONG = re.compile(r"(?i)[\"']maxEffortLevel[\"']\s*:\s*[\"'](?!high[\"'])\w+")
+# 2 Nov 2026 23:3x his order: Claude on Opus 5.5 at high, Codex on 6.1 at high, "nothing more then that".
+CLAUDE_MODEL_ABOVE = re.compile(r"(?i)--model(?:\s+|=|[\"']\s*,\s*)[\"']?(?:claude-)?fable")
+CODEX_WORD = re.compile(r"(?i)(?:^|[\s\"'`;&|(\\/])codex(?:\.exe|\.cmd)?(?=[\s\"'`;&|)]|$)")
+CODEX_EFFORT_ABOVE = re.compile(r"(?i)model_reasoning_effort[\"']?\s*=\s*\\?[\"']?(?:xhigh|max|ultra)\b")
+CODEX_MODEL = re.compile(r"(?i)(?:(?<![\w-])-m|--model)(?:\s+|=|[\"']\s*,\s*)[\"']?(gpt-[\w.-]+)|(?m:^\s*model\s*=\s*[\"'](gpt-[\w.-]+))")
 GUARDED_EXT = (".ps1", ".psm1", ".py", ".cmd", ".bat", ".vbs", ".sh", ".json", ".toml")
 
 
@@ -62,6 +65,40 @@ def problems(text, launches=True):
             out.append("launches claude with --setting-sources that skips user settings (and the cap)")
     if EXTRA_BODY.search(text):
         out.append("passes an effort through CLAUDE_CODE_EXTRA_BODY, which the cap does not clamp")
+    if CLAUDE_MODEL_ABOVE.search(text) and not owner_fable_terminal(text):
+        out.append("launches claude on a model above Opus 5.5 (Fable)")
+    return out
+
+
+# Owner door, his live words 9 Nov 2026 22:18 ("can you set it up to 5.2", after "open a new terminal that will have the
+# fable 5.2 in it"): a Fable launch is let through ONLY when it opens a visible console window for him (conhost.exe or
+# wt.exe in the same command) and the stamp file OWNER_FABLE_TERMINAL.json exists and has not expired. Headless agents,
+# keepers and subagents stay on Opus 5.5 under his 2 Nov order.
+OWNER_FABLE_STAMP = os.path.join(os.path.expanduser("~"), ".claude", "dreaming", "OWNER_FABLE_TERMINAL.json")
+
+
+def owner_fable_terminal(text):
+    if not re.search(r"(?i)\b(conhost|wt)(\.exe)?\b", text) or re.search(r"(?i)\s-p\b|--print\b", text):
+        return False
+    try:
+        with open(OWNER_FABLE_STAMP, encoding="utf-8") as fh:
+            stamp = json.load(fh)
+        return time.time() < float(stamp.get("expires_epoch", 0))
+    except Exception:
+        return False
+
+
+def codex_problems(text, launches=True):
+    """Reasons this text would run (or write) a Codex agent above gpt-6.1 at high (his order of 2 Nov 2026 23:3x)."""
+    out = []
+    if CODEX_EFFORT_ABOVE.search(text):
+        out.append("sets Codex model_reasoning_effort above high")
+    if launches and not CODEX_WORD.search(text):
+        return out
+    for m in CODEX_MODEL.finditer(text):
+        name = m.group(1) or m.group(2)
+        if not name.lower().startswith("gpt-6.1-"):
+            out.append("runs Codex on %s, not a gpt-6.1 model" % name)
     return out
 
 
@@ -112,7 +149,7 @@ def main():
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
         return
-    # A temporary hold (14 Oct, about a day): no Claude agents, Codex only. While ~/claude_pool/NO_CLAUDE_AGENTS
+    # 14 Oct 23:4x his order: "don't use any cluade agent, only codex" (about a day). While ~/claude_pool/NO_CLAUDE_AGENTS
     # holds, an Agent-tool subagent is refused in every session; headless launches are refused by claude_pool itself.
     if data.get("tool_name") in ("Agent", "Task"):
         try:
@@ -123,16 +160,24 @@ def main():
             why = None
         if why:
             sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
-                "permissionDecisionReason": "NO CLAUDE AGENTS (a standing hold: Codex workers only while it is set). Start a Codex worker instead. " + why}}))
+                "permissionDecisionReason": "NO CLAUDE AGENTS (his order, 14 Oct 23:4x: 'don't use any cluade agent, only "
+                "codex'). Start a Codex worker instead. " + why}}))
         return
     text, launches, path = tool_text(data)
     if not text:
         return
     hit = problems(text, launches)
+    codex_hit = codex_problems(text, launches)
+    if codex_hit:
+        sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
+            "permissionDecisionReason": "EVERY CODEX AGENT RUNS gpt-6.1-sol AT HIGH, NOTHING ABOVE (his order, 2 Nov 2026 "
+            "23:3x: 'all codex work on 6.1 high thinking nothing more then that'). This %s %s. Use -m gpt-6.1-sol with "
+            "model_reasoning_effort high, medium or low." % ("write" if path else "command", "; ".join(codex_hit + hit))}}))
+        return
     if not hit:
         return
-    reason = ("EVERY CLAUDE AGENT RUNS AT HIGH EFFORT, NOT MAX (a standing rule: terminals and subagents alike). "
-              "This %s %s. Use --effort high "
+    reason = ("EVERY CLAUDE AGENT RUNS AT HIGH EFFORT, NOT MAX (his order, 14 Oct 2026 22:26: 'make sure all agents "
+              "running on claude in terminals or subagent from now on are high mode'). This %s %s. Use --effort high "
               "(or no flag: settings.json caps every session at high through maxEffortLevel). Codex is not covered."
               % ("write" if path else "command", "; ".join(hit)))
     try:

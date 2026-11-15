@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Refuse a full checkout of the brain repo (10 Oct 2026).
+"""Refuse a full checkout of the brain repo (an agent, 10 Oct 2026).
 
 brain-repo is about 252,000 files and 13 GB at origin/main. A `git worktree add` or a `git clone` of it
 checks the whole tree out onto C:. It happened five times (23 Jul, 25 Jul, 28 Sep, 2 Oct, 10 Oct): on 10 Oct 03:19 a
@@ -14,11 +14,6 @@ text that only mentions the words inside a heredoc or here-string.
     python -s brain_checkout_guard.py            (reads the hook JSON on stdin)
     python -s brain_checkout_guard.py --selftest  (controls both ways)
 """
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import json
 import os
 import re
@@ -30,6 +25,31 @@ LOG = os.path.expanduser("~").replace("\\", "/") + "/.claude/brain_graph/logs/gu
 GIT = r"\bgit(?:\.exe)?\b(?:\s+-[Cc]\s+(?:\"[^\"]*\"|'[^']*'|\S+))*"
 WORKTREE_ADD = re.compile(GIT + r"\s+worktree\s+add\b(?P<rest>[^\n;&|]*)")
 CLONE = re.compile(GIT + r"\s+clone\b(?P<rest>[^\n;&|]*)")
+# The brain clone is a partial clone (blob:none). A plain write-tree checks every blob the index names and lazily
+# fetches each missing one: on 10 Nov 19:11 and 19:15 two ad-hoc pushes started 76,500-object fetches, each landing as
+# one more promisor pack (8,066 packs, 28 GB; a dry-run push spent 14 s just loading the pack index). --missing-ok
+# writes the same tree without the download (memory dream_push_merge_locally_first_partial_clone_missing_ok_2026_11_10).
+WRITE_TREE = re.compile(GIT + r"\s+write-tree\b(?P<rest>[^\n;&|)]*)")
+# The working tree of the brain clone holds other agents' uncommitted work (about 1,000 files at any hour). pull, stash,
+# rebase and reset --hard move or reset it: an autostash that is never popped left the tree at HEAD on 19 Sep, 2 Oct and
+# 12 Nov 18:37 (1,053 files, the checklist store and four brain sources among them), each time with the reflex
+# a_tree_touching_git_command_in_the_shared_brain_repo firing on the command. Refused here (an agent, 12 Nov).
+TREE_MOVE = re.compile(GIT + r"\s+(?:-c\s+\S+\s+)*(?P<verb>pull\b|stash\b(?!\s+(?:list|show)\b)|rebase\b(?!\s+--abort\b)"
+                             r"|reset\s+(?:\S+\s+)*--hard\b|merge\b[^\n;&|]*--autostash)(?P<rest>[^\n;&|]*)")
+CD = re.compile(r"(?:\bcd|\bSet-Location|\bPush-Location|\bsl|\bpushd)\s+(?:-(?:Path|LiteralPath)\s+)?(\"[^\"]*\"|'[^']*'|[^\s;&|]+)",
+                re.I)
+DASH_C = re.compile(r"\s-C\s+(\"[^\"]*\"|'[^']*'|\S+)")
+
+
+def git_target(m, norm, cwd):
+    """Where this one git command runs: its -C, else the last cd before it in the command, else the session cwd."""
+    c = DASH_C.search(m.group(0))
+    if c:
+        return c.group(1)
+    cds = CD.findall(norm[:m.start()])
+    if cds:
+        return cds[-1]
+    return cwd.replace("\\", "/")
 
 
 def command_part(cmd):
@@ -52,6 +72,12 @@ def verdict(cmd, cwd=""):
         rest = m.group("rest")
         if REPO in rest and not re.search(r"--no-checkout|--sparse|--filter=", rest):
             return True, "git clone"
+    for m in WRITE_TREE.finditer(norm):
+        if in_repo and "--missing-ok" not in m.group("rest"):
+            return True, "git write-tree"
+    for m in TREE_MOVE.finditer(norm):
+        if REPO in git_target(m, norm, cwd):
+            return True, "tree move: git " + m.group("verb").split()[0]
     return False, ""
 
 
@@ -66,10 +92,28 @@ def main():
     deny, what = verdict(cmd, str(data.get("cwd") or ""))
     if not deny:
         return
-    reason = ("REFUSED: %s of the brain repo checks out about 252,000 files (13 GB) onto C:. To push a few files, build "
+    if what == "git write-tree":
+        reason = ("REFUSED: plain git write-tree in the brain repo. It is a partial clone (blob:none), so write-tree "
+                  "lazily downloads every blob the index names that is not local - 76,500 objects per call on 10 Nov, "
+                  "each call one more pack, and every later push slows down. Use git write-tree --missing-ok (same tree, "
+                  "no download) or git merge-tree --write-tree (memory "
+                  "dream_push_merge_locally_first_partial_clone_missing_ok_2026_11_10).")
+    elif what.startswith("tree move"):
+        reason = ("REFUSED: %s in the brain repo. Its working tree is other agents' uncommitted work; pull, stash, rebase "
+                  "and reset --hard move or reset it, and an autostash that is never popped (a timeout is enough) leaves "
+                  "every tracked file at HEAD - 19 Sep, 2 Oct and 12 Nov 18:37 (1,053 files). Commit by explicit path "
+                  "(git commit -m MSG -- PATHS) and push; if the push is rejected, build the commit on origin/main in a "
+                  "temporary index: GIT_INDEX_FILE=scratch; git read-tree origin/main; h=$(git hash-object -w --path P "
+                  "FILE); git update-index --add --cacheinfo 100644,$h,P; t=$(git write-tree --missing-ok); c=$(git "
+                  "commit-tree $t -p origin/main -m MSG); git push origin $c:refs/heads/main. The tree is never touched "
+                  "(memory checklist_reset_by_autostash_again_restored_from_stash_2026_11_12)." % what[11:])
+    else:
+        reason = None
+    if reason is None:
+        reason = ("REFUSED: %s of the brain repo checks out about 252,000 files (13 GB) onto C:. To push a few files, build "
               "the commit in a temporary index with no checkout: set GIT_INDEX_FILE to a scratch file; git read-tree "
               "origin/main; h=$(git hash-object -w --path P FILE); git update-index --add --cacheinfo 100644,$h,P; "
-              "t=$(git write-tree); c=$(git commit-tree $t -p origin/main -m MSG); scan the range; git push origin "
+              "t=$(git write-tree --missing-ok); c=$(git commit-tree $t -p origin/main -m MSG); scan the range; git push origin "
               "$c:refs/heads/main (memory brain_repo_worktree_is_13gb_use_temp_index_2026_09_28). For a narrow checkout "
               "use --no-checkout, then git sparse-checkout set DIRS." % what)
     try:
@@ -84,23 +128,46 @@ def main():
 
 
 def selftest():
-    W = "C:/Users/me/AppData/Local/Temp/claude/x/scratchpad/brain_push"
+    W = "~/AppData/Local/Temp/claude/x/scratchpad/brain_push"
     refuse = [
-        ('cd /c/Users/me/brain-repo && W="%s" && timeout 180 git fetch -q origin main && '
+        ('cd ~/brain-repo && W="%s" && timeout 180 git fetch -q origin main && '
          'git worktree add -q --detach "$W" origin/main && cp a b' % W, ""),          # the 10 Oct 03:19 command
-        ("git -C C:/Users/me/brain-repo worktree add C:/tmp/wt origin/main", ""),
-        ("git worktree add ../wt origin/main", "C:\\Users\\me\\brain-repo"),
-        ('git -C "C:\\Users\\me\\brain-repo" worktree add -f D:/wt HEAD', ""),
-        ("git clone https://github.com/example/brain-repo.git brain", ""),
+        ("git -C ~/brain-repo worktree add C:/tmp/wt origin/main", ""),
+        ("git worktree add ../wt origin/main", "~\\brain-repo"),
+        ('git -C "~\\brain-repo" worktree add -f D:/wt HEAD', ""),
+        ("git clone https://github.com/yspennstate/brain-repo.git brain", ""),
+        ("export GIT_INDEX_FILE=$(mktemp -u) && git read-tree $O && T=$(git write-tree) && git diff --stat $O $T",
+         "~\\brain-repo"),                       # the 10 Nov 19:11 command
+        ("git -C ~/brain-repo write-tree", ""),
+        ("cd ~/brain-repo && git pull --autostash origin main && git push", ""),
+        ("git pull --rebase", "~\\brain-repo"),
+        ("git -C ~/brain-repo rebase --autostash origin/main", ""),
+        ("cd ~/brain-repo; git stash; git pull; git stash pop", ""),
+        ("git -C \"~\\brain-repo\" reset --hard origin/main", ""),
+        ("Set-Location ~\\brain-repo; git -c pull.rebase=true pull", ""),
+        ("git merge --autostash origin/main", "~\\brain-repo\\12_cognitive_architecture"),
     ]
     allow = [
-        ("git -C C:/Users/me/brain-repo worktree add --no-checkout C:/tmp/wt origin/main", ""),
-        ("git -C C:/Users/me/math-store-main worktree add C:/tmp/mb origin/main", ""),
-        ("git worktree list", "C:\\Users\\me\\brain-repo"),
-        ("git -C C:/Users/me/brain-repo worktree prune", ""),
-        ("git clone --filter=blob:none --sparse https://github.com/example/brain-repo.git b", ""),
+        ("git -C ~/brain-repo worktree add --no-checkout C:/tmp/wt origin/main", ""),
+        ("git -C ~/math-brain-main worktree add C:/tmp/mb origin/main", ""),
+        ("git worktree list", "~\\brain-repo"),
+        ("git -C ~/brain-repo worktree prune", ""),
+        ("git clone --filter=blob:none --sparse https://github.com/yspennstate/brain-repo.git b", ""),
         ("cat >> MISTAKES.md <<'EOF'\nran git worktree add of brain-repo\nEOF", ""),
-        ("export GIT_INDEX_FILE=/c/tmp/idx && git -C C:/Users/me/brain-repo read-tree origin/main", ""),
+        ("export GIT_INDEX_FILE=/c/tmp/idx && git -C ~/brain-repo read-tree origin/main", ""),
+        ("T=$(git write-tree --missing-ok) && git commit-tree $T -p HEAD -m x", "~\\brain-repo"),
+        ("git -C ~/brain-repo merge-tree --write-tree A B", ""),
+        ("git -C ~/math-brain-main write-tree", ""),
+        ("git -C ~/brain-repo stash list", ""),
+        ("git stash show -p stash@{0}", "~\\brain-repo"),
+        ("git -C ~/brain-repo rebase --abort", ""),
+        ("cd ~/math-brain-main && git pull && cp a ~/brain-repo/x", ""),
+        ("git -C ~/vanilla-brain pull --ff-only", "~\\brain-repo"),
+        ("git -C ~/brain-repo commit -m 'pull request notes' -- a.md", ""),
+        ("git -C ~/brain-repo reset -q HEAD -- a.md", ""),
+        ("git -C ~/brain-repo push origin HEAD:main", ""),
+        ("git -C ~/brain-repo fetch origin main", ""),
+        ("git -C ~/brain-repo log --oneline -3 --grep rebase", ""),
     ]
     ok = all(verdict(c, d)[0] for c, d in refuse) and not any(verdict(c, d)[0] for c, d in allow)
     for c, d in refuse:

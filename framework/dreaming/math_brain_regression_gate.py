@@ -30,7 +30,7 @@ STATE = os.path.join(HERE, "state")
 PY = sys.executable
 sys.path.insert(0, HERE)
 from math_block_parse import delivery_problem  # noqa: E402
-MESH = os.path.expanduser("~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py")
+MESH = r"~\brain-repo\12_cognitive_architecture\agent_mesh\agent_mesh.py"
 
 # floors (fresh bank of 2026-09-03, through the hook): 74.2 / 91.0 served, 14.6 / 4.5 silent on 09-11
 THRESH = {
@@ -52,7 +52,7 @@ THRESH = {
     # absent-target false fires (09-12 03:xx, after the coverage abstention landed: 0.675, was 0.775) - a ceiling with
     # slack, so a landing that quietly undoes the abstention shows up the next morning
     "absent_fire_max": 0.75,
-    # owner-voice PROBABILITY bank (09-13 02:xx; 30 questions in the owner's words about the campaign's own results; hit = a served
+    # owner-voice PROBABILITY bank (09-13 02:xx; 30 questions in the user's words about the campaign's own results; hit = a served
     # node's title carries "(our id KEY)", the result nodes landed 09-12 22:11): served 24/30 and result nodes 19/30 after
     # the cost-gate anchors landed (12 / 10 before them; 9 / 0 before the result nodes existed). Floors carry ~4 items of
     # slack. The rotated-key negative control (every question scored against its neighbour's key) read 1 of 30 on the
@@ -65,6 +65,16 @@ THRESH = {
     "ownvoice_served_min": 0.60,
     "ownvoice_result_min": 0.50,
     "ownvoice_rotated_max": 2,
+    # REAL PROOFS (2026-09-25, the landing that made a pasted proof an argument - arm cand46 of campaign mb10d): the results a
+    # pasted proof cites by name, reached in a served card's title. Held-out bank of other papers' proofs (FEI, QSO, paper23,
+    # Benjamini-Schramm): 20 of 32 after the landing, 1 of 32 before; the quadratic-form papers' proofs: 21 of 57 after, 4
+    # before. Floors carry about five items of slack; a landing that stops reading proofs as arguments falls to the old numbers.
+    # raised 2026-09-25 after cand65 landed (on the live hook: other papers 0.72, quadratic-form papers 0.91, held-out 0.45)
+    "proofbank_named_min": 0.60,
+    "proofbank_qform_min": 0.75,
+    "proofbank_heldout_min": 0.33,
+    # the same keys scored against shuffled prompts: a hit there means the instrument is not key-specific (0 at landing)
+    "proofbank_shuffled_max": 2,
 }
 
 
@@ -72,7 +82,7 @@ def _invalid_to_row(row, inst, out, name):
     """Read an evaluator line's '| invalid N (reason: k; ...)' tail into the row. A hook call that exited nonzero, failed
     to launch or printed something other than its JSON delivers nothing in a session, so any such call is a breach; a
     call that timed out makes the row inconclusive (an error), not a breach. A line with no invalid count comes from an
-    evaluator that does not check its calls, and is an error too (30 Sep 2026)."""
+    evaluator that does not check its calls, and is an error too (account03/B01, 30 Sep 2026)."""
     m = re.search(r"\| invalid (\d+)(?: \(([^)]*)\))?", out or "")
     if not m:
         row["errors"].append("%s: the summary carries no invalid-call count" % name)
@@ -95,10 +105,28 @@ def _invalid_to_row(row, inst, out, name):
 # 300 s production hook call and the mesh notice).
 GATE_BUDGET_S = 6000
 ROW_RESERVE_S = 120
+# 2026-11-10: the hook-path pass asks 218 hook calls and used to write its rows and summary only after the last one.
+# Under the 1800 s cap on a loaded night it was killed with nothing written: 27 of the 32 runs from 9 Oct to 10 Nov
+# read "hookpath summary unreadable" and the gate gave no verdict for a month. The evaluator now takes a deadline,
+# asks the bank in a seeded random order and writes a summary over the calls it finished (summary["partial"]).
+# 1500 s leaves room for calls in flight at the deadline (one call can take 2 x 90 s) inside the 1800 s cap.
+# A partial sample is judged against the same floors when it is at least this large; below that the pass is
+# recorded as too small and the run reads INCONCLUSIVE with that reason. At 40 rows a true rate of 0.80 reads
+# below the 0.65 floor about once in a hundred runs, so a breach on a partial night says so in its text.
+HOOKPATH_DEADLINE_S = 1500
+HOOKPATH_MIN_N = {"q_content": 40, "q_hinted": 40, "unanswerable": 15}
+# 2026-11-10: the real-prompt recall pass replays 139 prompts and printed its one summary line only after the
+# last. One 25,621-char pasted prompt took 168 s of recall by itself (two quadratic paths, fixed the same day in
+# brain_syn.py and bm25_fold.py) and the pass died at the 900 s cap with nothing to parse on 28 of the 32 runs
+# from 9 Oct to 10 Nov. After the fixes the whole pass measures 757 s on a busy box - inside the cap, not by
+# much. The evaluator now takes a deadline: past it, it stops asking (seeded random order, so a cut night is a
+# sample and not the oldest prompts) and prints the same summary line over the prompts it asked plus a
+# "partial: asked a of b" line, which is recorded here. 700 s leaves room for a call in flight and the index load.
+REAL_PROMPTS_DEADLINE_S = 700
 _GATE = {"t0": None, "skipped": []}
 
 
-def run(cmd, timeout):
+def run(cmd, timeout, extra_env=None):
     t0 = time.time()
     name = os.path.basename(cmd[1]) if len(cmd) > 1 else str(cmd[0])
     if _GATE["t0"] is not None:
@@ -111,7 +139,7 @@ def run(cmd, timeout):
     print("[gate %s] %s started (cap %ss)" % (time.strftime("%H:%M:%S"), name, timeout), flush=True)
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace",
-                           timeout=timeout, cwd=HERE, env=dict(os.environ, PYTHONIOENCODING="utf-8"))
+                           timeout=timeout, cwd=HERE, env=dict(os.environ, PYTHONIOENCODING="utf-8", **(extra_env or {})))
         result = p.returncode, p.stdout, p.stderr, round(time.time() - t0, 1)
     except subprocess.TimeoutExpired:
         result = 124, "", "TIMEOUT after %ss" % timeout, round(time.time() - t0, 1)
@@ -217,7 +245,8 @@ def main():
 
 def production_math_block(pout):
     """(served, problem) for the dispatcher's stdout on the production-flags probe. Until 30 Sep the probe passed on the
-    literal marker alone, so a block whose cards had lost their id and trust lines read as served. The math section of the dispatcher's context - the marker to the
+    literal marker alone, so a block whose cards had lost their id and trust lines read as served (account04/B07,
+    B07-R79-INCOMPLETE-CARD-PASSES-REGRESSION-GATES). The math section of the dispatcher's context - the marker to the
     next hook's tag line; the block's own '[math-brain: N note(s) omitted ...]' line belongs to it - must hold at least
     one card and every card whole. The dispatcher's cut, when the hooks overflow its cap, works at line boundaries and
     can leave a header without its id line; that is a delivery failure too."""
@@ -237,7 +266,7 @@ def production_math_block(pout):
 
 def _main_locked():
     _GATE["t0"], _GATE["skipped"] = time.time(), []
-    # --selftest is what other checkers pass to every gate; this script never knew it, so each of
+    # --selftest is what work_finders' W86 and the referee pass to every gate; this script never knew it, so each of
     # those checks ran the FULL gate (bank recall, 500+ s at load 260) - 29 Oct, several agents every 12 min. It means
     # the quick self-check: health check + proof-sense selftest.
     quick = "--quick" in sys.argv or "--selftest" in sys.argv
@@ -245,7 +274,23 @@ def _main_locked():
     row = {"as_of": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "quick": quick, "instruments": {}, "breaches": [], "errors": []}
 
     rc, out, err, dt = run([PY, os.path.join(HERE, "math_sense_healthcheck.py")], 600)
+    # 2026-11-04 (an agent): every nightly run from 27 Oct to 4 Nov came back rc 3 - the first row timed out twice
+    # at 60 s and the other 16 were never asked - while the same check by hand that evening answered all 17 rows (11
+    # speak, 6 silent). The night's load passes in minutes; the gate had been blind for nine nights. An unjudged check is
+    # now run once more after a pause, and the first attempt is kept beside it so the row still shows what happened.
+    if rc == 3:
+        row["instruments"]["healthcheck_first"] = {"rc": rc, "seconds": dt, "tail": (out or err)[-300:]}
+        time.sleep(60 if quick else 300)
+        # 2026-11-05 (an agent): the 4->5 Nov night ran the retry and it was unjudged too (222 s, then 179 s; row
+        # 1 timed out twice at 60 s). The box was not briefly busy - 14 of 16 cores at 100 pct all night, 321 python
+        # processes, commit 95.6 pct - and every later stage blew its cap as well. The same hook call took 8-16 s at
+        # 05:2x. The live dispatcher gives math_sense.py 600 s, so a 60 s row cap was judging speed, not content. The
+        # first attempt keeps the strict 60 s (its time stays in the row); the retry judges content with 180 s a row.
+        rc, out, err, dt = run([PY, os.path.join(HERE, "math_sense_healthcheck.py")], 1200,
+                               extra_env={"MATH_SENSE_HEALTHCHECK_TIMEOUT": "180"})
     row["instruments"]["healthcheck"] = {"rc": rc, "seconds": dt, "tail": (out or err)[-300:]}
+    if "healthcheck_first" in row["instruments"]:
+        row["instruments"]["healthcheck"]["row_cap_s"] = 180
     # rc 3 (2026-10-03): the hook did not answer a row in time, twice. That is the box's load, not a verdict on the
     # brain, so it is an instrument error (the run reads INCONCLUSIVE), never a BREACH and never a PASS.
     if rc == 3:
@@ -283,10 +328,20 @@ def _main_locked():
 
     if not quick:
         outp = os.path.join(STATE, "hookpath_gate_%s.jsonl" % stamp)
-        rc, out, err, dt = run([PY, os.path.join(HERE, "eval_math_hookpath.py"), "--out", outp, "--jobs", "2"], 1800)
+        rc, out, err, dt = run([PY, os.path.join(HERE, "eval_math_hookpath.py"), "--out", outp, "--jobs", "2",
+                                "--deadline-s", str(HOOKPATH_DEADLINE_S)], 1800)
         inst = {"rc": rc, "seconds": dt, "rows": outp}
         try:
             s = json.load(open(outp + ".summary.json", encoding="utf-8"))
+            _part = s.get("partial")
+            _small = {}
+            if _part:
+                inst["partial"] = _part
+                _small = dict((f, s[f]["n"]) for f in ("q_content", "q_hinted", "unanswerable")
+                              if s[f]["n"] < HOOKPATH_MIN_N[f])
+                if _small:
+                    inst["too_few_rows"] = _small
+            _tag = (" (partial: %d of %d asked)" % (_part["asked"], _part["of"])) if _part else ""
             for form in ("q_content", "q_hinted"):
                 n = s[form]["n"]
                 inst[form + "_hit"] = round(s[form]["hit"] / n, 3) if n else 0.0
@@ -295,10 +350,10 @@ def _main_locked():
                 inst[form + "_not_scored"] = s[form].get("not_scored", 0)
             _un_n = s["unanswerable"]["n"]
             inst["absent_fire"] = round(s["unanswerable"]["false_fire"] / _un_n, 3) if _un_n else 0.0
-            # 2026-09-30: the evaluator scores a
+            # 2026-09-30 (account02/B07, B07-R79-MATH-HOOKPATH-EVALUATOR-IGNORES-CHILD-EXIT-056): the evaluator scores a
             # block only from a hook that exited 0 and counts the calls that exited nonzero, failed to launch or printed
             # something other than the hook's JSON. Such a call delivers nothing in a session, so it is a breach.
-            # Since 30 Sep a block with an incomplete card or no readable card is counted the same way:
+            # Since 30 Sep (account04/B07-R79) a block with an incomplete card or no readable card is counted the same way:
             # the session received it broken.
             inst["invalid_rows"] = s.get("invalid", 0)
             if inst["invalid_rows"]:
@@ -312,18 +367,20 @@ def _main_locked():
                 inst["absent_fire_strict"] = round(_un["strict_false_fire"] / _un["strict_n"], 3)
                 inst["absent_targets_present"] = _un.get("target_served", 0)
             _judged = inst.get("absent_fire_strict", inst["absent_fire"])
-            if _judged > THRESH["absent_fire_max"]:
-                row["breaches"].append("absent-target fires %.3f > %.2f" % (_judged, THRESH["absent_fire_max"]))
+            if _judged > THRESH["absent_fire_max"] and not _small:
+                row["breaches"].append("absent-target fires %.3f > %.2f%s" % (_judged, THRESH["absent_fire_max"], _tag))
             inst["median_seconds"] = s.get("median_seconds")
             # 2026-09-25: the evaluator asks a timed-out hook call once more and counts the calls that time out twice;
             # the verdict below reads those as contention, like an instrument timeout
             inst["retried_rows"] = s.get("retried", 0)
             inst["timed_out_rows"] = s.get("timed_out", 0)
             for form in ("q_content", "q_hinted"):
+                if _small:
+                    break                    # too few rows finished to judge a floor; the verdict block says so
                 if inst[form + "_hit"] < THRESH[form + "_hit_min"]:
-                    row["breaches"].append("%s served-theorem %.3f < %.2f" % (form, inst[form + "_hit"], THRESH[form + "_hit_min"]))
+                    row["breaches"].append("%s served-theorem %.3f < %.2f%s" % (form, inst[form + "_hit"], THRESH[form + "_hit_min"], _tag))
                 if inst[form + "_silent"] > THRESH[form + "_silent_max"]:
-                    row["breaches"].append("%s silent %.3f > %.2f" % (form, inst[form + "_silent"], THRESH[form + "_silent_max"]))
+                    row["breaches"].append("%s silent %.3f > %.2f%s" % (form, inst[form + "_silent"], THRESH[form + "_silent_max"], _tag))
         except Exception as e:  # noqa: BLE001
             row["errors"].append("hookpath summary unreadable: %s" % e)
         # PER ITEM AGAINST THE LAST GATE RUN (2026-09-13). Every number above is an aggregate against a floor, and
@@ -388,12 +445,18 @@ def _main_locked():
         # rerank - and the older eval_prompt_recall_fullstack.py cannot either, because it reimplements the blend
         # and never calls recall(), which is how it returned byte-identical numbers on both arms of a change that
         # moved 12 of 56 bank questions. Watch hit8 and mrr drift; floor them once there is a baseline.
-        rc, out, err, dt = run([PY, os.path.join(HERE, "eval_recall_real_prompts.py")], 900)
+        rc, out, err, dt = run([PY, os.path.join(HERE, "eval_recall_real_prompts.py"), "--resident",
+                                "--deadline-s", str(REAL_PROMPTS_DEADLINE_S)], 900)
         inst = {"rc": rc, "seconds": dt}
         m = re.search(r"hit@\d+ (\d+)/(\d+) = ([0-9.]+)\s+MRR ([0-9.]+)", out or "")
         if m:
             inst.update({"hit8": round(float(m.group(3)), 3), "mrr": round(float(m.group(4)), 4),
                          "n": int(m.group(2))})
+            inst["path"] = "resident"
+            mp = re.search(r"partial: asked (\d+) of (\d+)", out or "")
+            if mp:
+                inst["partial"] = {"asked": int(mp.group(1)), "of": int(mp.group(2)),
+                                   "deadline_s": REAL_PROMPTS_DEADLINE_S}
         else:
             # AN UNPARSED SUMMARY IS AN ERROR EVEN AT rc 0. A parser that quietly records nothing when the
             # wording moves is an instrument that stops measuring without saying so - one wording change
@@ -440,10 +503,10 @@ def _main_locked():
         _invalid_to_row(row, inst, out, "value-in-block")
         row["instruments"]["vib"] = inst
 
-        # 2026-09-13: the owner-voice probability bank through the hook (state/bank_ownvoice_prob.json, keys are node
+        # 2026-09-13: the author-voice probability bank through the hook (state/bank_ownvoice_prob.json, keys are node
         # NAMES not answers), then the rotated-key negative control on the same recorded run. ~1 min.
         _ov_out = os.path.join(HERE, "state", "ownvoice_%s.jsonl" % time.strftime("%Y%m%d_%H%M%S"))
-        _store = os.path.expanduser("~/math-brain-build/local/population/brain.sqlite3")
+        _store = r"~\math-brain-build\local\population\brain.sqlite3"
         rc, out, err, dt = run([PY, os.path.join(HERE, "eval_ownvoice.py"), "--store", _store, "--out", _ov_out, "--tag", "gate"], 900)
         inst = {"rc": rc, "seconds": dt, "rows": _ov_out}
         mo = re.search(r"OWNVOICE\[gate\] n=(\d+) served (\d+) hit_result (\d+) hit_any (\d+)(?: strict (\d+))?", out or "")
@@ -468,14 +531,69 @@ def _main_locked():
             row["errors"].append("owner-voice summary line not found (rc=%s): %s" % (rc, (err or out)[-200:]))
         row["instruments"]["ownvoice"] = inst
 
+        # 2026-09-25: real proofs through the hook (state/bank_named_proofs_v1.json, bank_qform_proofs_v1.json). ~2 min.
+        rc, out, err, dt = run([PY, os.path.join(HERE, "eval_proof_banks.py"), "--jobs", "2"], 900)
+        inst = {"rc": rc, "seconds": dt}
+        mp = re.search(r"PROOFBANKS named n=(\d+) served (\d+) title (\d+)/(\d+) items (\d+) \| qform n=(\d+) served (\d+) "
+                       r"title (\d+)/(\d+) items (\d+)(?: \| heldout n=(\d+) served (\d+) title (\d+)/(\d+) items (\d+))? "
+                       r"\| shuffled (\d+)", out or "")
+        if mp:
+            g = mp.groups()
+            nn, ns, nt, nk, ni, qn, qs, qt, qk, qi = map(int, g[:10])
+            sh = int(g[15])
+            if g[10] is not None:
+                hn, hs, ht, hk, hi = map(int, g[10:15])
+                inst.update({"heldout_title": round(ht / max(hk, 1), 3), "heldout_items": hi, "heldout_n": hn, "heldout_served": hs})
+                if inst["heldout_title"] < THRESH["proofbank_heldout_min"]:
+                    row["breaches"].append("real-proof bank (held-out papers) title reach %.3f < %.2f" % (inst["heldout_title"], THRESH["proofbank_heldout_min"]))
+            inst.update({"named_title": round(nt / max(nk, 1), 3), "named_items": ni, "named_n": nn, "named_served": ns,
+                         "qform_title": round(qt / max(qk, 1), 3), "qform_items": qi, "qform_n": qn, "qform_served": qs,
+                         "shuffled": sh})
+            if inst["named_title"] < THRESH["proofbank_named_min"]:
+                row["breaches"].append("real-proof bank (other papers) title reach %.3f < %.2f" % (inst["named_title"], THRESH["proofbank_named_min"]))
+            if inst["qform_title"] < THRESH["proofbank_qform_min"]:
+                row["breaches"].append("real-proof bank (quadratic-form papers) title reach %.3f < %.2f" % (inst["qform_title"], THRESH["proofbank_qform_min"]))
+            if sh > THRESH["proofbank_shuffled_max"]:
+                row["breaches"].append("real-proof bank shuffled control: %d hits > %d (the instrument is not key-specific)" % (sh, THRESH["proofbank_shuffled_max"]))
+        else:
+            row["errors"].append("proof-bank summary line not found (rc=%s): %s" % (rc, (err or out)[-200:]))
+        _invalid_to_row(row, inst, out, "real-proof bank")
+        row["instruments"]["proofbanks"] = inst
+
+        # 2026-09-25: the ledger questions in other words (state/bank_locate_l2_paraphrase_v1.json), stored wording beside
+        # them. Recorded, NOT floored: the first reading (cand65) is stored 40 of 40 against paraphrase 11 of 40 answer nodes
+        # served, and a floor under a number that low would only freeze it; it is here so a change that moves recall in
+        # other words - either way - shows in the nightly row. ~3 min.
+        # 2026-10-04: the same 40 descriptions also go in two natural framings (eval_paraphrase_reach.NATURAL): the template
+        # alone halves recall - 14 of 40 against 27 for "where is the open problem about X posed" - and "what is known about
+        # X" (12) shows the entry-gate weakness. Twice the calls, hence 1500 s. Also recorded, never floored.
+        rc, out, err, dt = run([PY, os.path.join(HERE, "eval_paraphrase_reach.py"), "--jobs", "2"], 1500)
+        inst = {"rc": rc, "seconds": dt}
+        mp = re.search(r"PARAPHRASE stored n=(\d+) served (\d+) node (\d+) value (\d+) \| paraphrase n=(\d+) served (\d+) "
+                       r"node (\d+) value (\d+)", out or "")
+        if mp:
+            sn, ss, sno, sv, pn, psv, pno, pv = map(int, mp.groups())
+            inst.update({"stored_n": sn, "stored_node": sno, "stored_value": sv, "stored_served": ss,
+                         "para_n": pn, "para_node": pno, "para_value": pv, "para_served": psv})
+            for _nm in ("natural_where", "natural_known"):
+                _mn = re.search(r"\| %s n=(\d+) served (\d+) node (\d+) value (\d+)" % _nm, out or "")
+                if _mn:
+                    _n, _s, _no, _v = map(int, _mn.groups())
+                    inst.update({_nm + "_n": _n, _nm + "_served": _s, _nm + "_node": _no, _nm + "_value": _v})
+        else:
+            row["errors"].append("paraphrase summary line not found (rc=%s): %s" % (rc, (err or out)[-200:]))
+        if mp:
+            _invalid_to_row(row, inst, out, "paraphrase")
+        row["instruments"]["paraphrase"] = inst
+
     # 2026-09-12: is content still flowing into the store? Count inbox bundles the integration ledger has never seen and
     # the store's newest node. Recorded, never floored: whether a lane's bundles enter the store is a quality decision
     # (found 946 of 1,121 unintegrated on 09-12, the 09-07 corpus lanes, ~157k entries against 7,451 nodes).
     try:
         import glob as _glob
         import sqlite3 as _sqlite3
-        _led = os.path.expanduser("~/math-brain-build/local/population/integration_ledger.jsonl")
-        _inbox = os.path.expanduser("~/math-brain-inbox")
+        _led = r"~\math-brain-build\local\population\integration_ledger.jsonl"
+        _inbox = r"~\math-brain-inbox"
         _seen = {json.loads(l).get("draft") for l in io.open(_led, encoding="utf-8") if l.strip()} if os.path.exists(_led) else set()
         _bundles = _glob.glob(os.path.join(_inbox, "*", "bundle_*.json"))
         _never = [p for p in _bundles if os.path.relpath(p, _inbox).replace("\\", "/") not in _seen]
@@ -484,7 +602,7 @@ def _main_locked():
         # decision, so it is counted on its own and named - one stuck bundle must be visible, not one in 950.
         _cut = time.mktime((2026, 9, 12, 12, 0, 0, 0, 0, -1))
         _new = sorted(os.path.relpath(p, _inbox).replace("\\", "/") for p in _never if os.path.getmtime(p) >= _cut)
-        _con = _sqlite3.connect("file:" + os.path.expanduser("~/math-brain-build/local/population/brain.sqlite3") + "?mode=ro", uri=True)
+        _con = _sqlite3.connect("file:~/math-brain-build/local/population/brain.sqlite3?mode=ro", uri=True)
         _nodes, _newest = _con.execute("select count(*), max(created_at) from nodes").fetchone()
         row["instruments"]["inflow"] = {"inbox_bundles": len(_bundles), "never_in_ledger": len(_never),
                                         "new_pending": len(_new), "new_pending_names": _new[:10],
@@ -498,17 +616,24 @@ def _main_locked():
     # times its normal cost is contention, not a regression: the verdict is INCONCLUSIVE, the mesh hears it
     # once with that word, and the panel keeps the last decided verdict beside it.
     timed_out = any(v.get("rc") == 124 for v in row["instruments"].values())
-    slow_health = float(row["instruments"]["healthcheck"].get("seconds") or 0) > 120
+    # 2026-11-04: the ceiling was 120 s when the 17 rows took 16 s in all (September median). The store is 93k nodes now
+    # and one hook call costs 3-5 s on its own (prefilter pickle, imports, sqlite), so a calm run reads 100-150 s and a
+    # fully green run (4 Nov 19:49, 137 s) read INCONCLUSIVE on time alone. 300 s is about twice today's calm cost.
+    slow_health = float(row["instruments"]["healthcheck"].get("seconds") or 0) > 300
     # 2026-09-25: hook calls that timed out twice inside the hook-path pass are the same contention at row level: the
     # pass exits 0 and scores those questions silent, which read as a served-theorem breach before the evaluator counted them
     rows_timed_out = int((row["instruments"].get("hookpath") or {}).get("timed_out_rows") or 0)
     health_unjudged = row["instruments"]["healthcheck"].get("rc") == 3
-    if timed_out or slow_health or rows_timed_out or health_unjudged:
+    # 2026-11-10: a hook-path pass cut at its deadline with too few rows to judge is contention too
+    hook_small = (row["instruments"].get("hookpath") or {}).get("too_few_rows")
+    if timed_out or slow_health or rows_timed_out or health_unjudged or hook_small:
         row["verdict"] = "INCONCLUSIVE"
         row["inconclusive_because"] = (("instrument timeout" if timed_out else "")
                                        + (" health check %.0f s" % row["instruments"]["healthcheck"]["seconds"] if slow_health else "")
                                        + (" health check could not judge a row (timed out twice)" if health_unjudged else "")
                                        + (" %d hook-path calls timed out twice" % rows_timed_out if rows_timed_out else "")
+                                       + (" hook-path pass too small to judge at its deadline (%s)"
+                                          % ", ".join("%s n=%d" % kv for kv in sorted(hook_small.items())) if hook_small else "")
                                        + (" the run was out of time before %s" % ", ".join(_GATE["skipped"])
                                           if _GATE["skipped"] else "")).strip()
     else:
@@ -526,6 +651,10 @@ def _main_locked():
     if hp:
         md.append("- fresh bank through the hook: unnamed served %s (rank-1 %s, silent %s); named served %s (rank-1 %s, silent %s); absent-target fires %s (strict %s, targets now present %s); median %s s"
                   % (hp.get("q_content_hit"), hp.get("q_content_rank1"), hp.get("q_content_silent"), hp.get("q_hinted_hit"), hp.get("q_hinted_rank1"), hp.get("q_hinted_silent"), hp.get("absent_fire"), hp.get("absent_fire_strict"), hp.get("absent_targets_present"), hp.get("median_seconds")))
+        if hp.get("partial"):
+            md.append("  - partial sample: %s of %s questions were asked before the %s s deadline (seeded random order)%s"
+                      % (hp["partial"].get("asked"), hp["partial"].get("of"), hp["partial"].get("deadline_s"),
+                         "; too few to judge" if hp.get("too_few_rows") else ""))
     if hp.get("vs_prev") and "error" not in hp["vs_prev"]:
         _vp = hp["vs_prev"]
         md.append("- per item against the previous gate run (%s, %s items shared): %d gained, %d lost%s%s"
@@ -534,6 +663,13 @@ def _main_locked():
                      ("; gained: " + ", ".join(_vp["gained"])) if _vp.get("gained") else ""))
     if rcl:
         md.append("- owner-voice recall bank: hit@1 %s, hit@5 %s (n=%s)" % (rcl.get("hit1"), rcl.get("hit5"), rcl.get("n")))
+    rrp = row["instruments"].get("recall_real_prompts", {})
+    if rrp.get("hit8") is not None:
+        md.append("- real prompts through recall (recorded, not floored): hit@8 %s, MRR %s (n=%s, %s s)%s"
+                  % (rrp.get("hit8"), rrp.get("mrr"), rrp.get("n"), rrp.get("seconds"),
+                     ("; partial sample, %s of %s prompts asked before the %s s deadline"
+                      % (rrp["partial"].get("asked"), rrp["partial"].get("of"), rrp["partial"].get("deadline_s")))
+                     if rrp.get("partial") else ""))
     rch = row["instruments"].get("reach", {})
     if rch:
         md.append("- locate reach (source node served): saw %s, open-problem %s; campaign constants served %s; two-fact pairs both served %s (n=%s)"
@@ -542,9 +678,23 @@ def _main_locked():
     if vib and "all_vib" in vib:
         md.append("- value in block (the stored number reached the served text): campaign %s (served %s), saw %s, open-problem %s, all %s (n=%s)"
                   % (vib.get("campaign_vib"), vib.get("campaign_served"), vib.get("saw_vib"), vib.get("openproblem_vib"), vib.get("all_vib"), vib.get("n")))
+    pb = row["instruments"].get("proofbanks", {})
+    if pb and "named_title" in pb:
+        md.append("- real proofs (the results a pasted proof cites, in a served title): other papers %s (%s of %s proofs), quadratic-form papers %s (%s of %s), held-out papers %s (%s of %s); shuffled control %s"
+                  % (pb.get("named_title"), pb.get("named_items"), pb.get("named_n"), pb.get("qform_title"), pb.get("qform_items"), pb.get("qform_n"),
+                     pb.get("heldout_title"), pb.get("heldout_items"), pb.get("heldout_n"), pb.get("shuffled")))
+    pp = row["instruments"].get("paraphrase", {})
+    if pp and "para_node" in pp:
+        md.append("- the ledger questions in other words (answer node served, recorded not floored): paraphrase %s of %s (served %s, "
+                  "value %s), stored wording %s of %s" % (pp.get("para_node"), pp.get("para_n"), pp.get("para_served"),
+                                                          pp.get("para_value"), pp.get("stored_node"), pp.get("stored_n")))
+        if "natural_where_node" in pp or "natural_known_node" in pp:
+            md.append("- the same descriptions in natural questions (template above): 'where is the open problem about X posed' "
+                      "%s of %s, 'what is known about X' %s of %s" % (pp.get("natural_where_node"), pp.get("natural_where_n"),
+                                                                     pp.get("natural_known_node"), pp.get("natural_known_n")))
     ov = row["instruments"].get("ownvoice", {})
     if ov and "served" in ov:
-        md.append("- owner-voice probability bank (the owner's words, the campaign's own results): served %s, result nodes %s (served cards alone %s), any %s; rotated-key control %s (n=%s)"
+        md.append("- owner-voice probability bank (the user's words, the campaign's own results): served %s, result nodes %s (served cards alone %s), any %s; rotated-key control %s (n=%s)"
                   % (ov.get("served"), ov.get("result"), ov.get("result_strict"), ov.get("any"), ov.get("rotated_key_hits"), ov.get("n")))
     inf = row["instruments"].get("inflow", {})
     if inf and "error" not in inf:
@@ -560,7 +710,10 @@ def _main_locked():
     with io.open(os.path.join(STATE, "REGRESSION_GATE.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(md) + "\n")
     print("\n".join(md))
-    if row["verdict"] != "PASS":
+    # 2026-11-04: a copy of this script run from a test folder mailed every agent a false "BREACH" as brain-mathgate.
+    # Only the installed gate (~/.claude/dreaming) speaks for the brain on the mesh; any other copy stays quiet.
+    _home = os.path.normcase(os.path.realpath(os.path.join(os.path.expanduser("~"), ".claude", "dreaming")))
+    if row["verdict"] != "PASS" and os.path.normcase(os.path.realpath(HERE)) == _home:
         try:
             body = "math-brain regression gate %s: %s" % (row["verdict"], "; ".join(row["breaches"] + row["errors"])[:600])
             subprocess.run([PY, MESH, "hello", "--agent", "brain-mathgate", "--runtime", "brain", "--task", "nightly math-brain regression gate"],

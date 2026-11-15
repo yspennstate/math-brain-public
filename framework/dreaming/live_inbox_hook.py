@@ -1,6 +1,6 @@
 """live_inbox_hook.py - show a Claude or Codex session the messages waiting for it, within one tool call.
 
-Before 1 Oct 2026 no hook on this machine read the agent mesh: a message sent to an agent's name sat undelivered until
+Before 1 Oct 2026 no hook on this machine read the agent mesh: a message sent to "an agent" sat undelivered until
 that agent ran `agent_mesh.py inbox` by hand (three hourly broadcasts to this very session were found that way), and the
 dots' brain-inbox messages reached nobody until someone read the board. The relay (12_cognitive_architecture/live_inbox/
 live_inbox.py) now turns every inbox message for a local session into a mesh message; this hook puts mesh messages in
@@ -20,12 +20,8 @@ readable with `agent_mesh.py inbox --include-acked`). Output: plain text for the
 for Codex. Fail-open: any error prints nothing. Switch: ~/.agents/live_inbox/HOOK_ON (the dispatcher's enabled_if).
 A message the relay fanned out because no session holds its name (topic brain-inbox-broadcast) is shown but never
 blocks a stop or wakes a waiter: only mail addressed to the session does.
-1 Oct 2026; the waiter offer, the broadcast rule and the 3 s look by the inbox agent the same
+an agent, 1 Oct 2026; the waiter offer, the broadcast rule and the 3 s look by an agent-inbox the same
 evening (his 22:3x order: "messages go through right away and prompt the other agents")."""
-import sys
-if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
-    print(__doc__)
-    sys.exit(0)
 import calendar
 import hashlib
 import json
@@ -40,10 +36,15 @@ STATE_DIR = os.path.join(HOME, ".agents", "live_inbox")
 HOOKSTATE = os.path.join(STATE_DIR, "hookstate")
 MESH_DB = os.path.join(HOME, ".agents", "coordination", "agent_mesh.sqlite3")
 MESH_DIR = os.path.join(HOME, "brain-repo", "12_cognitive_architecture", "agent_mesh")
-LIVE = os.path.expanduser("~/brain-repo/12_cognitive_architecture/live_inbox/live_inbox.py")
-MESH_CLI = os.path.expanduser("~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py")
+LIVE = "~/brain-repo/12_cognitive_architecture/live_inbox/live_inbox.py"
+MESH_CLI = "~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py"
 CHECK_EVERY_S = 3
 REG_EVERY_S = 600
+# How long one mesh read or write waits on a lock. The mesh runs a rollback journal, so a writer waiting to commit shuts
+# out new readers until the slowest current reader is done; on 11 Nov such convoys lasted 8-26 s (19:59 local) and the
+# hook paid 0.6 s per step, up to three steps a prompt (2-4 s rows). A failed look is cheap: the next tool call looks
+# again 3 s later and anything shown but unstamped is stamped then, so a short wait loses nothing.
+MESH_WAIT_S = max(0.05, min(5.0, float(os.environ.get("LIVE_INBOX_MESH_WAIT_S") or 0.3)))
 BROADCASTERS = ("brain-high", "thumbnail-rotator", "dots-speedup-hourly", "agent-desk", "brain-boxping")
 WAKES_PER_HOUR = 6          # Stop blocks per session per hour at most (a runaway cap, as in campaign_keep_working)
 WAITERS = os.path.join(STATE_DIR, "waiters")      # live_inbox.py wait registers itself here
@@ -51,7 +52,7 @@ TALKERS = os.path.join(STATE_DIR, "talkers")      # live_inbox.py send/event tou
 TALK_WINDOW_S = 6 * 3600    # a session that sent or was shown inbox mail in the last 6 h is offered a waiter
 NUDGE_EVERY_S = 2 * 3600    # at most one waiter offer per session per 2 hours
 # A request, warning or handoff shown once and still unacknowledged is listed again 30 min, 2 h and 8 h after its
-# delivery, then left to the inbox (4 Oct: the hook dropped ack-required mail after delivery while the
+# delivery, then left to the inbox (account04/B20, 4 Oct: the hook dropped ack-required mail after delivery while the
 # mesh kept it pending). Only mail delivered in the last day: 2,553 of the 2,601 such rows on 4 Oct were older than a
 # week and addressed to sessions and boxes long gone. The relay's own reminders are not reminded about.
 ACK_AFTER_S = (1800, 7200, 28800)
@@ -149,12 +150,38 @@ def _save(sid8, st):
     os.replace(tmp, p)
 
 
+# SQLite's own busy wait is not a wall-clock wait here. Its retry sleeps are counted at their nominal length but each
+# one is rounded up to the Windows timer tick, and a locked read runs the wait twice, so a 0.3 s busy timeout cost
+# 0.81-0.91 s on a held lock (11 Nov, a copy of the mesh: 0.05 s cost 0.32-0.36 s, 0.6 s cost 1.23 s, 0 cost 30 ms).
+# The hook's tool-result rows clustered at 800-900 ms for exactly that reason. Reads therefore retry with no busy
+# wait against a real deadline, and the Mesh() writes get the smallest timeout agent_mesh accepts (50 ms nominal,
+# about 0.3 s real on a held lock).
+MESH_WRITE_BUSY_MS = 50
+
+
 def _mesh():
     from pathlib import Path
     if MESH_DIR not in sys.path:
         sys.path.insert(0, MESH_DIR)
     from agent_mesh import Mesh, duration_seconds
-    return Mesh(Path(MESH_DB), busy_timeout_ms=600), duration_seconds
+    return Mesh(Path(MESH_DB), busy_timeout_ms=MESH_WRITE_BUSY_MS), duration_seconds
+
+
+def _ro_rows(sql, params):
+    """Rows of one read-only query, retried until MESH_WAIT_S of wall time has passed; raises the last lock error."""
+    deadline = time.monotonic() + MESH_WAIT_S
+    con = sqlite3.connect(f"file:{MESH_DB}?mode=ro", uri=True, timeout=0)
+    try:
+        while True:
+            try:
+                return con.execute(sql, params).fetchall()
+            except sqlite3.OperationalError as e:
+                msg = str(e).lower()
+                if ("locked" not in msg and "busy" not in msg) or time.monotonic() + 0.02 >= deadline:
+                    raise
+                time.sleep(0.02)
+    finally:
+        con.close()
 
 
 def _register(agent, runtime, sid, cwd):
@@ -182,28 +209,20 @@ def _register(agent, runtime, sid, cwd):
 
 
 def _pending(ids):
-    con = sqlite3.connect(f"file:{MESH_DB}?mode=ro", uri=True, timeout=0.6)
-    try:
-        marks = ",".join("?" for _ in ids)
-        return con.execute(
-            f"SELECT message_id, recipient, sender_agent, topic, body, created_at, kind FROM messages "
-            f"WHERE recipient IN ({marks}) AND delivered_at IS NULL AND acked_at IS NULL ORDER BY rowid DESC LIMIT 2000",
-            ids).fetchall()
-    finally:
-        con.close()
+    marks = ",".join("?" for _ in ids)
+    return _ro_rows(
+        f"SELECT message_id, recipient, sender_agent, topic, body, created_at, kind FROM messages "
+        f"WHERE recipient IN ({marks}) AND delivered_at IS NULL AND acked_at IS NULL ORDER BY rowid DESC LIMIT 2000",
+        ids)
 
 
 def _unacked(ids):
     """Ack-required mail (request, warning, handoff) this session was shown and has not acknowledged."""
-    con = sqlite3.connect(f"file:{MESH_DB}?mode=ro", uri=True, timeout=0.6)
-    try:
-        marks = ",".join("?" for _ in ids)
-        return con.execute(
-            f"SELECT message_id, recipient, sender_agent, topic, body, created_at, kind, delivered_at FROM messages "
-            f"WHERE recipient IN ({marks}) AND requires_ack=1 AND acked_at IS NULL AND delivered_at IS NOT NULL "
-            f"ORDER BY rowid DESC LIMIT 200", ids).fetchall()
-    finally:
-        con.close()
+    marks = ",".join("?" for _ in ids)
+    return _ro_rows(
+        f"SELECT message_id, recipient, sender_agent, topic, body, created_at, kind, delivered_at FROM messages "
+        f"WHERE recipient IN ({marks}) AND requires_ack=1 AND acked_at IS NULL AND delivered_at IS NOT NULL "
+        f"ORDER BY rowid DESC LIMIT 200", ids)
 
 
 def _epoch(stamp):
@@ -388,28 +407,35 @@ def main():
     if event == "PostToolUse" and now - st.get("last_check", 0) < CHECK_EVERY_S:
         return 0
     st["last_check"] = now
-    if now - st.get("last_reg", 0) >= REG_EVERY_S:
-        try:
-            _register(agent, runtime, sid, str(data.get("cwd") or ""))
-            st["last_reg"] = now
-        except Exception as e:
-            st["last_reg"] = now - REG_EVERY_S + 60       # try again in a minute
-            _log(f"{agent} {event} register failed: {type(e).__name__}: {str(e)[:160]}")
     ids = [agent, f"{runtime}:{sid[:16]}"]
-    # A launcher that names its worker (series_keeper sets AGENT_MESH_ID=<id>-s1c) gets mail sent to that name
+    # A launcher that names its worker (series_keeper sets AGENT_MESH_ID=an agent-s1c) gets mail sent to that name
     # too. Before 15 Oct mail to the name waited forever: the hook read only codex-<first 8 of the thread>, and Codex
     # thread ids are time-ordered, so threads started within about a minute share those 8 (s3 and s4 both 01a13b70).
     named = (os.environ.get("AGENT_MESH_ID") or "").strip()
     if named and named not in ids and re.match(r"[A-Za-z0-9][A-Za-z0-9._:-]{2,80}$", named):
         ids.append(named)
+    locked = False
     try:
         rows = _pending(ids)
     except Exception as e:
         rows = []
+        locked = True
         st["last_check"] = 0                               # look again at the next tool call
         _log(f"{agent} {event} read failed: {type(e).__name__}: {str(e)[:160]}")
+    # The registration write comes after the read since 11 Nov: when the read was shut out, a write would wait out the
+    # same lock, so it is left for a minute later instead of costing this prompt a second wait.
+    if now - st.get("last_reg", 0) >= REG_EVERY_S:
+        if locked:
+            st["last_reg"] = now - REG_EVERY_S + 60       # try again in a minute
+        else:
+            try:
+                _register(agent, runtime, sid, str(data.get("cwd") or ""))
+                st["last_reg"] = now
+            except Exception as e:
+                st["last_reg"] = now - REG_EVERY_S + 60   # try again in a minute
+                _log(f"{agent} {event} register failed: {type(e).__name__}: {str(e)[:160]}")
     # Messages an earlier look showed but could not stamp delivered (the mesh was locked past its 0.6 s) are stamped
-    # now and kept out of this look, so a message is never shown twice. On 4 Oct 135 of 2,157 stamps had
+    # now and kept out of this look, so a message is never shown twice. account04/B10 (4 Oct): 135 of 2,157 stamps had
     # failed since 1 Oct, and 37 of 302 inbox files were shown to the same session more than once. A crash before
     # this record is written leaves the message unstamped and it is shown again, which is the safe side.
     pending = {r[0] for r in rows}
@@ -447,7 +473,7 @@ def main():
             _log(f"{agent} Stop: no mail waiting; offered an idle waiter")
             sys.stdout.write(json.dumps({"decision": "block", "reason": (
                 "[live-inbox] You talk with the dots through the brain inbox, and no inbox waiter is armed for this "
-                "session, so a message that arrives while you are idle would wait for the owner's next prompt. Before "
+                "session, so a message that arrives while you are idle would wait for the author's next prompt. Before "
                 "you end this turn, start the waiter with your shell tool's run_in_background option:\n"
                 f"  python {LIVE} wait --agent {agent}\n"
                 "It costs nothing while it waits, ends the moment mail addressed to you arrives (never for a "
@@ -455,7 +481,7 @@ def main():
                 "to close. (Offered once every 2 hours, and again after the waiter has woken you.)")}, ensure_ascii=True))
             sys.stdout.flush()
         return 0
-    if not rows and event in ("UserPromptSubmit", "PostToolUse") and now - st.get("acks_at", 0) >= ACK_CHECK_EVERY_S:
+    if not rows and not locked and event in ("UserPromptSubmit", "PostToolUse") and now - st.get("acks_at", 0) >= ACK_CHECK_EVERY_S:
         st["acks_at"] = now                               # a failed read waits for the next check as well
         try:
             due, acks = _ack_due(_unacked(ids), st, now)
@@ -508,7 +534,7 @@ def main():
     sys.stdout.flush()
     if inbox_files:                                       # the sender learns within one relay pass that it was seen
         try:
-            # each row names the mesh messages it covers and the digest of the text shown, so a second
+            # each row names the mesh messages it covers and the digest of the text shown (account04/B10), so a second
             # row for one file can be told apart from a replay of the same text
             digest = hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
             ids_by_file = {}

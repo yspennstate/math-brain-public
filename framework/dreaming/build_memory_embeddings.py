@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build the offline semantic sidecar consumed by ``spread_recall``.
 
-The production model is BAAI/bge-small-en-v1.5. Run the build where the model fits in memory; on a
-small or busy machine, build elsewhere and copy the NPZ.  The online hook only loads the resulting ~2 MB NPZ and performs dot
+The production model is BAAI/bge-small-en-v1.5 and belongs on the Azure box, not on the
+crash-prone laptop.  The online hook only loads the resulting ~2 MB NPZ and performs dot
 products, so no model is needed at recall time.
 
 The model-output staging schema v2 is deliberately self-auditing::
@@ -33,8 +33,7 @@ Usage::
     python build_memory_embeddings.py [memory_dir] \
         --incremental-from memory_embeddings.npz --plan-only
 
-BGE encoding uses sentence-transformers when it is importable and otherwise the ONNX export that
-fetch_bge_onnx.py places in models/ (same weights, cosine 0.9999999).  Planning, coverage checks, and the fake-encoder
+Actual BGE encoding is box-gated.  Planning, coverage checks, and the fake-encoder
 regression are laptop-safe and do not import sentence-transformers.
 """
 import argparse
@@ -48,7 +47,7 @@ import time
 from datetime import datetime, timezone
 
 
-MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
 DR = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(DR, "memory_embeddings.npz")
 STAGED_OUT = os.path.join(DR, "memory_embeddings.next.npz")
@@ -116,7 +115,11 @@ def collect_memories(mem_dir=MEM_DEFAULT, limit=None, strict=True):
     last = None
     for attempt in range(COLLECT_CHURN_RETRIES if strict else 1):
         try:
-            return _collect_memories_once(mem_dir, limit=limit, strict=strict)
+            rows = _collect_memories_once(mem_dir, limit=limit, strict=strict)
+            if _PERSIST_PATH is not None and _DIRTY[0] and limit is None:
+                _DIRTY[0] = 0
+                save_read_cache()          # persisted for the next process (enable_read_cache(persist=...) only)
+            return rows
         except OSError as exc:
             if not strict or "changed while" not in str(exc):
                 raise
@@ -125,93 +128,171 @@ def collect_memories(mem_dir=MEM_DEFAULT, limit=None, strict=True):
     raise last
 
 
-RECONCILE_ROUNDS = 8
+COLLECT_RECONCILE_ROUNDS = 8   # 2026-10-18: membership churn is reconciled by name, not by re-reading the corpus
+CHANGED_READ_RETRIES = 3
 
 
-def _collect_memories_once(mem_dir=MEM_DEFAULT, limit=None, strict=True):
-    """One snapshot attempt; see collect_memories for the retry contract."""
-    rows = []
-    names = sorted(os.listdir(mem_dir))
-    eligible_names = [fn for fn in names if fn.endswith(".md") and fn[:-3] not in SKIP]
-    missing = set()
-    rows = _read_rows(mem_dir, eligible_names, limit, strict, missing)
-    if strict and limit is None:
-        # 3 Nov 2026: a membership change used to throw the whole pass away; read only what came or went. A file
-        # that vanished mid-read is settled the same way: gone if the listing agrees, read again if it is back.
-        have = [fn for fn in eligible_names if fn not in missing]
-        for _round in range(RECONCILE_ROUNDS):
-            after_names = sorted(
-                fn for fn in os.listdir(mem_dir) if fn.endswith(".md") and fn[:-3] not in SKIP
-            )
-            if after_names == have:
-                return rows
-            added = sorted(set(after_names) - set(have))
-            gone = {fn[:-3] for fn in set(have) - set(after_names)}
-            rows = [r for r in rows if r[0] not in gone]
-            missing = set()
-            rows.extend(_read_rows(mem_dir, added, None, strict, missing))
-            rows.sort(key=lambda r: r[0] + ".md")
-            have = [fn for fn in after_names if fn not in missing]
-        raise OSError("memory corpus membership changed while it was collected")
-    return rows
+def _eligible(mem_dir):
+    return sorted(fn for fn in os.listdir(mem_dir) if fn.endswith(".md") and fn[:-3] not in SKIP)
 
 
 _READ_CACHE = None   # {file name: (stat key, row or None)}; off unless a caller turns it on
 
 
-def enable_read_cache():
-    """Reuse a file's row while its full stat is unchanged. For callers that read the corpus more than once in one
-    process, or once outside memory_write.lock and again under it; the builder never turns it on."""
+def enable_read_cache(persist=None):
+    """Reuse a file's row while its full stat is unchanged (ported from the Mac builder, dreaming/macmini, 8 Nov).
+    For callers that read the corpus more than once in one process: the refresh's passes, and publish's warm read
+    outside memory_write.lock before its locked audits (publish_memory_embeddings._warm_corpus skipped that warm read
+    on this laptop because the laptop builder lacked this). The builder never turns it on by itself."""
     global _READ_CACHE
     if _READ_CACHE is None:
         _READ_CACHE = {}
+    if persist:
+        _load_persisted(persist)
+
+
+# 9 Nov (an agent, recall-10x/persist-read-cache): the in-process cache started cold in every refresh run and
+# in embedding_coverage.py (a separate process): a cold read is 208 s on a quiet disk and passed 49 min under load on
+# 9 Nov 00:21, when the task's 1 h limit killed the run before it logged anything (same shape 6 and 7 Nov 03:2x).
+# enable_read_cache(persist=path) loads rows saved by an earlier process; an entry is used only while the file's full
+# stat key (dev, inode, size, mtime_ns, ctime_ns) and the text contract are unchanged, exactly the in-process rule.
+PERSIST_DEFAULT = os.path.join(os.path.expanduser("~"), ".claude", "dreaming", "embedding_refresh", "read_cache.pkl.z")
+_PERSIST_PATH = None
+_TOUCHED = set()      # names whose entry was validated or read in this process (what a save keeps)
+_DIRTY = [0]          # fresh reads since the last save; a collect with none skips the rewrite
+
+
+def _text_contract():
+    import inspect
+    return hashlib.sha256((inspect.getsource(_text_for) + FM.pattern).encode("utf-8")).hexdigest()[:16]
+
+
+def _load_persisted(path):
+    global _PERSIST_PATH
+    if _PERSIST_PATH is not None:
+        return
+    _PERSIST_PATH = path
+    try:
+        import pickle, zlib
+        with open(path, "rb") as fh:
+            d = pickle.loads(zlib.decompress(fh.read()))
+        if d.get("v") == 1 and d.get("contract") == _text_contract():
+            for fn, ent in d.get("rows", {}).items():
+                _READ_CACHE.setdefault(fn, ent)
+    except Exception:
+        pass                              # absent or unreadable: start cold, exactly as before
+
+
+def save_read_cache():
+    """Write the validated entries of this process for the next one (atomic replace; a no-op without persist)."""
+    if _PERSIST_PATH is None or _READ_CACHE is None or not _TOUCHED:
+        return 0
+    import pickle, zlib
+    rows = {fn: _READ_CACHE[fn] for fn in _TOUCHED if fn in _READ_CACHE}
+    blob = zlib.compress(pickle.dumps({"v": 1, "contract": _text_contract(), "rows": rows}, protocol=4), 1)
+    tmp = "%s.%d.tmp" % (_PERSIST_PATH, os.getpid())
+    try:
+        with open(tmp, "wb") as fh:
+            fh.write(blob)
+        os.replace(tmp, _PERSIST_PATH)
+    except OSError:
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        return 0
+    return len(rows)
 
 
 def _stat_key(st):
     return (st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns)
 
 
-def _read_rows(mem_dir, eligible_names, limit, strict, missing):
-    rows = []
+def _read_row(mem_dir, fn, strict):
+    """(slug, text, sha) for one memory read with no change under the read; None when too short or skipped."""
+    path = os.path.join(mem_dir, fn)
+    for attempt in range(CHANGED_READ_RETRIES if strict else 1):
+        try:
+            before = os.stat(path)
+            if _READ_CACHE is not None:
+                hit = _READ_CACHE.get(fn)
+                if hit is not None and hit[0] == _stat_key(before):
+                    _TOUCHED.add(fn)
+                    return hit[1]
+            body = io.open(path, encoding="utf-8", errors="replace").read()
+            after = os.stat(path)
+        except FileNotFoundError:
+            return "gone"
+        except PermissionError as exc:
+            # 2026-11-08: Windows refuses an open while another process replaces the file (os.replace mid-write);
+            # the 18:40 refresh died on it. Retry here, then report it as a change under the read so
+            # collect_memories retries the snapshot instead of failing the whole run.
+            if strict and attempt + 1 < CHANGED_READ_RETRIES:
+                time.sleep(0.5)
+                continue
+            if strict:
+                raise OSError("corpus memory changed while read (locked): %s: %s" % (fn, exc)) from exc
+            return None
+        except Exception as exc:
+            if strict:
+                raise OSError("could not read corpus memory %s: %s" % (fn, exc)) from exc
+            return None
+        before_sig = (before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns)
+        after_sig = (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns)
+        if before_sig == after_sig:
+            text = _text_for(body)
+            row = (fn[:-3], text, text_sha256(text)) if len(text) >= 40 else None
+            if _READ_CACHE is not None and _stat_key(before) == _stat_key(after):
+                _READ_CACHE[fn] = (_stat_key(after), row)
+                _DIRTY[0] += 1
+                _TOUCHED.add(fn)
+            return row
+        if strict and attempt + 1 < CHANGED_READ_RETRIES:
+            time.sleep(0.5)
+    if strict:
+        raise OSError("corpus memory changed while read: %s" % fn)
+    return None
+
+
+def _collect_memories_once(mem_dir=MEM_DEFAULT, limit=None, strict=True):
+    """One snapshot attempt; see collect_memories for the retry contract.
+
+    18 Oct 2026: one pass over ~28k files took ~9 min on a busy disk, and agents file a memory every few minutes, so
+    almost every pass ended with "membership changed" and was thrown away whole (the 13:20 refresh read the corpus
+    for 20+ min; embedding_coverage.py timed out at 600 s on every run that day). Now a pass that ends with a
+    different membership reads only the names that arrived, drops the ones that left, and checks again; the result
+    is still exactly the final listing's membership, every row read with no change under its read."""
+    rows = {}
+    eligible_names = _eligible(mem_dir)
     for fn in eligible_names:
-        if not fn.endswith(".md") or fn[:-3] in SKIP:
-            continue
-        row = _read_row(os.path.join(mem_dir, fn), fn, strict, missing)
-        if row is None:
-            continue
-        rows.append(row)
+        row = _read_row(mem_dir, fn, strict)
+        if row == "gone":
+            continue                      # removed mid-pass; the membership check below settles it
+        if row:
+            rows[fn] = row
         if limit and len(rows) >= limit:
-            break
-    return rows
-
-
-def _read_row(path, fn, strict, missing):
-    try:
-        before = os.stat(path)
-        if _READ_CACHE is not None:
-            hit = _READ_CACHE.get(fn)
-            if hit is not None and hit[0] == _stat_key(before):
-                return hit[1]
-        body = io.open(path, encoding="utf-8", errors="replace").read()
-        after = os.stat(path)
-    except FileNotFoundError:
-        missing.add(fn)         # left the folder mid-read: the caller's listing decides
-        return None
-    except Exception as exc:
-        if strict:
-            raise OSError("could not read corpus memory %s: %s" % (fn, exc)) from exc
-        return None
-    before_sig = (before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns)
-    after_sig = (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns)
-    if before_sig != after_sig:
-        if strict:
-            raise OSError("corpus memory changed while read: %s" % fn)
-        return None
-    text = _text_for(body)
-    row = (fn[:-3], text, text_sha256(text)) if len(text) >= 40 else None
-    if _READ_CACHE is not None and _stat_key(before) == _stat_key(after):
-        _READ_CACHE[fn] = (_stat_key(after), row)
-    return row
+            return [rows[k] for k in sorted(rows)]
+    if strict and limit is None:
+        for _ in range(COLLECT_RECONCILE_ROUNDS):
+            after_names = _eligible(mem_dir)
+            if after_names == eligible_names:
+                break
+            now = set(after_names)
+            for fn in [k for k in rows if k not in now]:
+                del rows[fn]
+            for fn in sorted(now - set(eligible_names)):
+                row = _read_row(mem_dir, fn, strict)
+                if row and row != "gone":
+                    rows[fn] = row
+            eligible_names = after_names
+        else:
+            raise OSError("memory corpus membership changed while it was collected")
+        missing = [fn for fn in eligible_names if fn not in rows and os.path.exists(os.path.join(mem_dir, fn))]
+        for fn in missing:                # read as "gone" mid-pass but listed at the end: read it now
+            row = _read_row(mem_dir, fn, strict)
+            if row and row != "gone":
+                rows[fn] = row
+    return [rows[k] for k in sorted(rows)]
 
 
 def _scalar(z, name, default=None):
@@ -446,44 +527,13 @@ def build_sidecar(mem_dir=MEM_DEFAULT, model_name=DEFAULT_MODEL, out=OUT, increm
     }
 
 
-def _onnx_encoder_factory(model_name):
-    """The same BGE weights through onnxruntime (query_embed.py's session), for a machine without torch.
-
-    Only for the default model, and only when fetch_bge_onnx.py has placed the files. Each text is encoded
-    alone, so padding never enters the CLS vector."""
-    if model_name != DEFAULT_MODEL:
-        return None
-    try:
-        import query_embed
-    except Exception:
-        return None
-    if not query_embed.available():
-        return None
-
-    def encode(texts):
-        import numpy as np
-        rows = []
-        for text in texts:
-            v = query_embed.embed(text)
-            if v is None:
-                raise ValueError("onnx encoder returned nothing for a %d-char text" % len(text))
-            rows.append(v)
-        return np.asarray(rows, dtype="float32")
-    return encode
-
-
 def _box_encoder_factory(model_name):
     """Load the heavy model only after planning proves rows actually need encoding."""
     try:
         from sentence_transformers import SentenceTransformer
     except Exception as exc:
-        onnx = _onnx_encoder_factory(model_name)
-        if onnx is not None:
-            print("sentence-transformers is not importable; encoding with the ONNX export in models/")
-            return onnx
         raise EncoderUnavailable(
-            "sentence-transformers is not importable here and the ONNX export is not in models/; run "
-            "fetch_bge_onnx.py, or pip install sentence-transformers, or encode elsewhere and copy the NPZ"
+            "sentence-transformers is not importable here; run the encode step on the Azure box"
         ) from exc
     model = SentenceTransformer(model_name)
 

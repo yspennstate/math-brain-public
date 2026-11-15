@@ -14,7 +14,7 @@ general. It is concentrated in OWNER-scope bets BELOW p=0.70:
     infra    >=0.70       13    0.758   0.769   +0.012
     result   all bands    37    0.541   0.514   -0.027
 
-When the brain is CONFIDENT about the owner it is right. When it HEDGES about him it is close to
+When the brain is CONFIDENT about the author it is right. When it HEDGES about him it is close to
 fantasising, and seven sub-0.50 owner bets went 0 for 7.
 
 WHY A LINTER AND NOT A PLACEMENT HOOK. There is no code path that writes a bet. foresight.py only
@@ -31,9 +31,6 @@ DO NOT FIRE scope is result at any band           (overall -0.027, inside noise 
 DO NOT FIRE a cell with fewer than MIN_N resolved bets - an unmeasured cell gets UNKNOWN, never a
             warning invented from a neighbouring cell.
 
-30 Oct: those cells have since recovered (owner 0.50-0.70 gap about -0.06 at n 38 each), and a verdict now needs
-the Wilson 95% interval of the hit rate to sit wholly below the stated p as well as the gap.
-
 Recomputes the table from the live ledger every run rather than trusting the constants above, so it
 cannot keep warning from a record that has since changed. Usage:
     python prediction_calibration_check.py                 lint the OPEN bets
@@ -44,22 +41,37 @@ Read-only.
 from __future__ import annotations
 
 import io
-import math
 import os
 import re
 import sys
 from collections import defaultdict
 
-LEDGER = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}",
+LEDGER = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"),
                       "memory", "PREDICTIONS.md")
 
 # BOTH resolution vocabularies. The ledger uses outcome:hit and also "RESOLVED HIT"; reading only
 # the first silently drops entries, which is how a calibration loses part of its own denominator.
 VALID = re.compile(r"\boutcome:\s*(hit|miss|void)\b", re.I)
-ALT = re.compile(r"\bRESOLVED\s+(HIT|MISS|VOID)\b", re.I)
+ALT = re.compile(r"\bRESOLVED\s+(HIT|MISS|VOID|YES|NO)\b", re.I)
 P_RE = re.compile(r"\bp:\s*([0-9.]+)")
+P_EQ_RE = re.compile(r"^- \[[ xX]\]\s*p=([0-9.]+)")          # "- [x] p=0.7 [infra] ..." (no bet id)
 SCOPE_RE = re.compile(r"\bscope:\s*([A-Za-z_]+)")
-ID_RE = re.compile(r"- \[[ xX]\]\s*(\S+)")
+SCOPE_BR_RE = re.compile(r"^- \[[ xX]\]\s*p=[0-9.]+\s*\[([A-Za-z_]+)\]")
+ID_RE = re.compile(r"- \[[ xX]\]\s*(p[A-Za-z0-9_-]+)")       # p52, pL1, pRW3, p17x-sws0819; not "p=0.7"
+# A resolution written apart from its bet (13 Nov fix, an agent): "- [x] p228 RESOLVED MISS ...",
+# "- [x] p209 resolved YES ...", "- p226 -> MISS (p=0.60) ...". Before the fix these bets read as
+# RESOLVED BUT UNSCOREABLE, and so did outcomes on the indented lines under a bet; 20 bets fell out.
+SEP_RES_RE = re.compile(r"^\s*-\s*(?:\[[xX]\]\s*)?(p[A-Za-z0-9_-]+)[^|]*?(?:\bRESOLVED\s+|->\s*)"
+                        r"(HIT|MISS|VOID|YES|NO)\b", re.I)
+_NORM = {"yes": "hit", "no": "miss"}
+
+
+def _outcome(text):
+    m = VALID.search(text) or ALT.search(text)
+    if not m:
+        return None
+    lab = m.group(1).lower()
+    return _NORM.get(lab, lab)
 
 BANDS = [(0.0, 0.50, "<0.50"), (0.50, 0.60, "0.50-0.60"),
          (0.60, 0.70, "0.60-0.70"), (0.70, 1.01, ">=0.70")]
@@ -74,19 +86,57 @@ def band_of(p):
     return "?"
 
 
-def parse(path=LEDGER):
-    """Return (scored, open_bets, unscoreable)."""
+def parse(path=LEDGER, lines=None):
+    """Return (scored, open_bets, unscoreable).
+
+    A bet is its checkbox line plus the indented lines under it. Its outcome is the one on the
+    checkbox line; else the last one on its indented lines; else a resolution line written
+    elsewhere in the ledger under the same bet id. A checked line with no stated p whose id is
+    a bet's id is that bet's resolution, not a bet of its own.
+    """
+    if lines is None:
+        lines = io.open(path, encoding="utf-8", errors="replace").read().splitlines()
+    # 1. group each checkbox bullet with its indented continuation lines
+    entries, cur = [], None
+    for line in lines:
+        if line.startswith("- ["):
+            cur = [line, []]
+            entries.append(cur)
+        elif cur is not None and line[:1] in (" ", "\t") and line.strip():
+            cur[1].append(line)
+        elif line.strip():
+            cur = None                           # a heading or paragraph ends the bet
+    # 2. resolutions written apart from the bet, keyed by bet id (first one wins)
+    sep = {}
+    for line in lines:
+        m = SEP_RES_RE.match(line)
+        if m and not P_RE.search(line):
+            lab = m.group(2).lower()
+            sep.setdefault(m.group(1), _NORM.get(lab, lab))
+    bet_ids = set()
+    for head, _ in entries:
+        mid = ID_RE.match(head)
+        if mid and (P_RE.search(head) or P_EQ_RE.match(head)):
+            bet_ids.add(mid.group(1))
     scored, open_bets, unscoreable = [], [], []
-    for line in io.open(path, encoding="utf-8", errors="replace"):
-        if not line.startswith("- ["):
-            continue
-        checked = line.startswith("- [x]") or line.startswith("- [X]")
-        mp, ms, mid = P_RE.search(line), SCOPE_RE.search(line), ID_RE.match(line)
-        m = VALID.search(line) or ALT.search(line)
-        lab = m.group(1).lower() if m else None
+    for head, cont in entries:
+        checked = head.startswith("- [x]") or head.startswith("- [X]")
+        mp = P_RE.search(head) or P_EQ_RE.match(head)
+        ms = SCOPE_RE.search(head) or SCOPE_BR_RE.match(head)
+        mid = ID_RE.match(head)
         rec = {"id": mid.group(1) if mid else "?",
                "p": float(mp.group(1)) if mp else None,
                "scope": (ms.group(1).lower() if ms else "UNKNOWN")}
+        if rec["p"] is None and rec["id"] in bet_ids:
+            continue                             # the resolution line of a bet counted elsewhere
+        lab = _outcome(head)
+        if lab is None:
+            for c in reversed(cont):
+                lab = _outcome(c)
+                if lab:
+                    break
+        if lab is None and checked:
+            lab = sep.get(rec["id"])
         if checked:
             if lab in ("hit", "miss") and rec["p"] is not None:
                 scored.append((rec, 1 if lab == "hit" else 0))
@@ -115,23 +165,12 @@ def verdict(cell):
     if cell is None or cell["n"] < MIN_N:
         return "UNKNOWN", ("no measured track record for this scope and confidence band "
                            "(fewer than %d resolved bets) - not a warning, an absence" % MIN_N)
-    lo, hi = wilson(round(cell["actual"] * cell["n"]), cell["n"])
-    # A gap alone is not a verdict: 30 Oct, verdicts from the first 127 bets flipped sign on the next 128 in 4 of 5
-    # cells (1000-ways D4 #22, w08_checks/d4_22_wilson.py). Say OVERCONFIDENT only when the interval excludes the stated p.
-    if cell["gap"] <= GAP_WARN and hi < cell["stated"]:
-        return "OVERCONFIDENT", ("this cell states %.3f and lands %.3f [95%% %.3f-%.3f] over %d resolved bets "
-                                 "(gap %+.3f)" % (cell["stated"], cell["actual"], lo, hi,
+    if cell["gap"] <= GAP_WARN:
+        return "OVERCONFIDENT", ("this cell states %.3f and lands %.3f over %d resolved bets "
+                                 "(gap %+.3f)" % (cell["stated"], cell["actual"],
                                                   cell["n"], cell["gap"]))
-    return "OK", ("stated %.3f against %.3f [95%% %.3f-%.3f] over %d resolved bets (gap %+.3f)"
-                  % (cell["stated"], cell["actual"], lo, hi, cell["n"], cell["gap"]))
-
-
-def wilson(k, n, z=1.96):
-    """Wilson score interval for k hits in n."""
-    p = k / n
-    c = (p + z * z / (2 * n)) / (1 + z * z / n)
-    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / (1 + z * z / n)
-    return c - h, c + h
+    return "OK", ("stated %.3f against %.3f over %d resolved bets (gap %+.3f)"
+                  % (cell["stated"], cell["actual"], cell["n"], cell["gap"]))
 
 
 def main():
@@ -168,10 +207,49 @@ def main():
 
 
 def selftest():
-    """Controls: the check must FIRE on the measured-bad cell and STAY SILENT on the good ones."""
-    scored, _, _ = parse()
+    """Controls on fixed fixtures (the live ledger drifts: the first version asserted that the live
+    owner cells were overconfident, and it failed once they recalibrated - a test of the data,
+    not of the code)."""
+    def cell_bets(scope, p, n, hits):
+        return [({"id": "f", "p": p, "scope": scope}, 1 if i < hits else 0) for i in range(n)]
+    scored = (cell_bets("owner", 0.65, 20, 9) + cell_bets("owner", 0.55, 20, 8)
+              + cell_bets("owner", 0.75, 20, 15) + cell_bets("infra", 0.55, 20, 10)
+              + cell_bets("infra", 0.75, 20, 16) + cell_bets("result", 0.55, 5, 0))
     t = table(scored)
     fails = []
+
+    print("PARSER CONTROLS - outcomes written apart from the bet line:")
+    fx = ["- [x] p1 | scope:owner | p:0.6 | by:x | bet | outcome:hit | on:x",
+          "- [x] p2 | scope:infra | p:0.7 | by:x | bet",
+          "  - interim note, NOT resolving",
+          "  - outcome: miss (SWS): measured",
+          "- [x] p3 | scope:result | p:0.5 | by:x | bet",
+          "## REM",
+          "- [x] p3 RESOLVED HIT 09-21: the bet said ...",
+          "- [x] p4 | scope:owner | p:0.55 | by:x | bet",
+          "- p4 -> MISS (p=0.55). his lines ...",
+          "- [x] p=0.7 [infra] by:x bet | outcome:hit | on:x",
+          "- [x] p5 | scope:owner | p:0.6 | by:x | bet with no outcome anywhere",
+          "- [x] p6 | scope:owner | p:0.6 | by:x | bet",
+          "",
+          "Paragraph text that is not under the bet: outcome: hit",
+          "- [ ] p7 | scope:owner | p:0.6 | by:x | open bet"]
+    s, o, u = parse(lines=fx)
+    got = {(r["id"], r["scope"]): y for r, y in s}
+    want = {("p1", "owner"): 1, ("p2", "infra"): 0, ("p3", "result"): 1, ("p4", "owner"): 0,
+            ("?", "infra"): 1}
+    for k, v in sorted(want.items()):
+        ok = got.get(k) == v
+        if not ok:
+            fails.append("parse %s" % (k,))
+        print("  %-5s %-34s -> %s" % ("PASS" if ok else "FAIL", "%s scored %s" % (k[0], v), got.get(k)))
+    ok = sorted(r["id"] for r in u) == ["p5", "p6"] and [r["id"] for r in o] == ["p7"] and len(s) == 5
+    if not ok:
+        fails.append("parse unscoreable/open")
+    print("  %-5s %-34s -> unscoreable %s, open %s, scored %d" % (
+        "PASS" if ok else "FAIL", "p5,p6 unscoreable; p7 open", [r["id"] for r in u],
+        [r["id"] for r in o], len(s)))
+    print()
 
     def show(label, key, expect):
         cell = t.get(key)
@@ -181,20 +259,22 @@ def selftest():
             fails.append(label)
         print("  %-5s %-34s -> %-14s (%s)" % ("PASS" if ok else "FAIL", label, v, why[:70]))
 
-    # Fixed cells, not live ones: the live table moves (the 17 Aug owner cells it used to name had recovered by 30 Oct).
-    t[("ctl", "bad")] = {"n": 20, "stated": 0.65, "actual": 0.25, "gap": -0.40}
-    t[("ctl", "noisy")] = {"n": 11, "stated": 0.41, "actual": 3 / 11, "gap": 3 / 11 - 0.41}
     print("POSITIVE CONTROL - must fire:")
-    show("stated .65, 5 of 20 hit", ("ctl", "bad"), "OVERCONFIDENT")
+    show("owner p=0.65", ("owner", "0.60-0.70"), "OVERCONFIDENT")
+    show("owner p=0.55", ("owner", "0.50-0.60"), "OVERCONFIDENT")
     print()
     print("NEGATIVE CONTROLS - must stay silent:")
-    show("stated .41, 3 of 11 hit (inside noise)", ("ctl", "noisy"), "OK")
     show("owner p=0.75 (best cell)", ("owner", ">=0.70"), "OK")
     show("infra p=0.55", ("infra", "0.50-0.60"), "OK")
     show("infra p=0.75", ("infra", ">=0.70"), "OK")
     print()
     print("UNKNOWN CONTROL - an unmeasured cell must not invent a verdict:")
     show("scope=nonsense p=0.55", ("nonsense", "0.50-0.60"), "UNKNOWN")
+    show("result p=0.55, n=5 < MIN_N", ("result", "0.50-0.60"), "UNKNOWN")
+    print()
+    ls, lo, lu = parse()
+    print("LIVE LEDGER (reported, not tested): scored %d, open %d, unscoreable %d"
+          % (len(ls), len(lo), len(lu)))
     print()
     if fails:
         print("SELFTEST FAILED: %s" % ", ".join(fails))

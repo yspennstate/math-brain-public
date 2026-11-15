@@ -18,12 +18,6 @@ import subprocess
 import sys
 import time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
 # THE CAP DIES WITH THE SUPERVISOR UNLESS THE CHILD IS TIED TO IT (2026-09-24). At 18:36:42 a headless agent ran
 # `taskkill /F /IM python.exe`. This supervisor is python.exe; the project-memory pass it bounded is pythonw.exe. The
 # supervisor died, the pass lived on with no cap: 2 h 10 min and 8.9 GB read by 20:06, holding hourly.lock, so the
@@ -113,9 +107,8 @@ def _job_release(job):
 
 
 # OUT OF POWER THROTTLING, PRIORITY UNCHANGED (2026-09-25). Windows power-throttles (EcoQoS) a windowless background
-# process by default, and on the machine where this was measured that, not the BelowNormal class, is what starves
-# these jobs: the embedding refresh built in 28 s at Normal and in 139, 1,511 and 281-741 s at BelowNormal while the
-# machine was in interactive use,
+# process by default, and on this laptop that, not the BelowNormal class, is what starves these jobs: the embedding
+# refresh built in 28 s at Normal (07:20) and in 139, 1,511 and 281-741 s at BelowNormal while he was at the keyboard,
 # losing every publish to the memories written meanwhile; the hourly project-memory pass sat 26 minutes at about 1 pct
 # of a core until opted out (same-process A/B 0.61 vs 5.84 cpu-s per 30 s). So the child is opted out while it is
 # still suspended, and every process in its job - the child's own children included - again every 15 s while this
@@ -268,11 +261,37 @@ def main(argv):
     # owner_away_open means the work may take what is free. So the raise is honoured only while the governor says
     # he is away; at the keyboard the child keeps the caller's class and runs slower or caps, which the dream
     # tolerates (tiers stay at the previous generation). The 03:30 dream, run while he sleeps, gets Normal and
-    # finishes. Which STEPS deserve the raise is still the owner's call (see run_dream.ps1); this only adds the gate.
+    # finishes. Which STEPS deserve the raise is still the author's call (see run_dream.ps1); this only adds the gate.
     _want_normal = (os.name == "nt" and os.environ.get("RUN_BOUNDED_NORMAL_PRIORITY") == "1")
+    # WHILE HE IS PRESENT THE CPU CLASS STAYS, BUT DISK AND MEMORY PRIORITY GO BACK TO THE SHELL DEFAULT (2026-11-11).
+    # I/O priority 1 and memory priority 2 are not the doctrine's "BelowNormal": they come from the scheduled task's
+    # Priority 7, and a BelowNormal job started from a shell (every render) reads at I/O 2. At 1, the hourly
+    # project-memory pass was the only reader on the box queued behind all the others: its store-open COUNT took
+    # 13 min against 6-22 s at I/O 2, and its listing of ~/.claude/projects 10+ min against 40 s (11 Nov 03:05 pass,
+    # pid 41312). Restoring I/O 2 / memory 5 puts it level with the renders, not above them; the CPU class is untouched.
+    _want_io_only = False
     if _want_normal and not owner_away():
         _want_normal = False
-        _log(log, "run_bounded: owner present - the NORMAL raise is honoured only while he is away; the child keeps the caller's class")
+        _want_io_only = True
+        _log(log, "run_bounded: owner present - the NORMAL CPU raise is honoured only while he is away; the child keeps "
+                  "the caller's class, with I/O and memory priority restored to normal")
+
+    def _restore_io_memory(pid):
+        try:
+            import ctypes
+            k = ctypes.windll.kernel32
+            h = k.OpenProcess(0x0200, False, int(pid))         # PROCESS_SET_INFORMATION
+            if not h:
+                return False
+            try:
+                mem, iop = ctypes.c_ulong(5), ctypes.c_ulong(2)
+                ok_mem = bool(k.SetProcessInformation(ctypes.c_void_p(h), 0, ctypes.byref(mem), 4))
+                ok_io = ctypes.windll.ntdll.NtSetInformationProcess(ctypes.c_void_p(h), 33, ctypes.byref(iop), 4) == 0
+            finally:
+                k.CloseHandle(h)
+            return ok_mem and ok_io
+        except Exception:
+            return False
 
     def _raise_to_normal(pid):
         try:
@@ -284,6 +303,17 @@ def main(argv):
             if not h:
                 return False
             ok = bool(k.SetPriorityClass(h, NORMAL_PRIORITY_CLASS))
+            # The CPU class is not the whole of it (2026-11-09, an agent, measured). A scheduled task at
+            # Priority 7 starts its process at memory priority 2 and I/O priority 1, every child inherits both,
+            # and SetPriorityClass touches neither: dream steps "raised to NORMAL" read (2, Normal, 1) - their
+            # disk reads still queued behind every other process. Normal memory (5) and I/O (2) go with the raise.
+            # Memory priority7_task_children_inherit_memory_priority_2_and_io_1_2026_11_09.
+            try:
+                mem, iop = ctypes.c_ulong(5), ctypes.c_ulong(2)
+                k.SetProcessInformation(ctypes.c_void_p(h), 0, ctypes.byref(mem), 4)
+                ctypes.windll.ntdll.NtSetInformationProcess(ctypes.c_void_p(h), 33, ctypes.byref(iop), 4)
+            except Exception:
+                pass
             k.CloseHandle(h)
             return ok
         except Exception:
@@ -320,6 +350,9 @@ def main(argv):
         if _want_normal:
             _log(log, "run_bounded: pid %d raised to NORMAL priority (%s)"
                  % (p.pid, "ok" if _raise_to_normal(p.pid) else "REFUSED - it stays at the caller's class"))
+        elif _want_io_only:
+            _log(log, "run_bounded: pid %d I/O priority 2 and memory priority 5 restored, CPU class kept (%s)"
+                 % (p.pid, "ok" if _restore_io_memory(p.pid) else "REFUSED"))
     except Exception as exc:
         _log(log, "run_bounded: could not start %r: %s" % (cmd[:2], exc))
         if out_fh:
@@ -330,6 +363,13 @@ def main(argv):
         _start_off = os.path.getsize(out_path) if out_fh else 0
     except Exception:
         _start_off = 0
+    # HE LEFT WHILE THE JOB RAN (2026-11-13, an agent). The away check above is read once, at launch. The
+    # regression gate started 13 Nov 04:16 with him at the keyboard, he left about 04:29, and the gate kept the
+    # caller's BelowNormal class for all of its 100 minutes on a full box: two evaluators hit their caps, three were
+    # skipped, the night's verdict was INCONCLUSIVE. A job that asked for Normal and was refused only because he was
+    # present is raised once the governor says he is away (asked once a minute). One way only: a job is never
+    # lowered again when he comes back, same as a job that started while he was away.
+    _late = {"pending": _want_io_only, "ticks": 0}
     try:
         deadline = time.monotonic() + seconds
         while True:
@@ -341,6 +381,17 @@ def main(argv):
                     raise                              # the cap: the kill path below
                 if os.name == "nt":
                     _unthrottle_tree(job, p)           # the child's children too, and again in case it lapsed
+                    if _late["pending"]:
+                        try:
+                            _late["ticks"] += 1
+                            if _late["ticks"] % 4 == 0 and owner_away():
+                                _late["pending"] = False
+                                _pids = (_job_pids(job) if job else []) or [p.pid]
+                                _n = sum(1 for _q in _pids if _raise_to_normal(_q))
+                                _log(log, "run_bounded: owner away now - %d of %d processes of pid %d raised to NORMAL "
+                                          "priority" % (_n, len(_pids), p.pid))
+                        except Exception:
+                            _late["pending"] = False
         _job_release(job)
         _log(log, "run_bounded: pid %d exited %s" % (p.pid, rc))
         if rc:

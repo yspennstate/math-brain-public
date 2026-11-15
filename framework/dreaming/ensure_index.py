@@ -40,6 +40,7 @@ VIEWS = {
     "INTENTIONS", "OPEN_LOOPS",
 }
 
+_NAME_TOKEN = re.compile(r"[^\s()\[\]<>|`'\"]+\.md")
 _DESC = re.compile(r"^\s*description:\s*[\"']?(.*?)[\"']?\s*$", re.M)
 
 
@@ -63,16 +64,19 @@ def main():
         print(__doc__ or os.path.basename(__file__))
         return
     write = "--write" in sys.argv[1:]
-    # A new brain has no INDEX_ARCHIVE.md until the first index compaction or this pass writes
-    # one; a missing page reads as empty, and --write creates the archive when it appends.
-    idx = io.open(INDEX, encoding="utf-8", errors="replace").read() if os.path.exists(INDEX) else ""
-    arc = io.open(ARCHIVE, encoding="utf-8", errors="replace").read() if os.path.exists(ARCHIVE) else ""
+    idx = io.open(INDEX, encoding="utf-8", errors="replace").read()
+    arc = io.open(ARCHIVE, encoding="utf-8", errors="replace").read()
     both = idx + arc
+    # 8 Nov 2026 (an agent, T-20261103-049): `fn in both` scans the 14.7 MB index text once per memory file,
+    # about 12 ms each on a quiet laptop, so 57k files took 700 s quiet and the dream killed this step at its 2700 s cap
+    # (6 and 7 Nov). Every name that appears as a whole token is in this set, and a set hit implies the substring hit;
+    # only the names the set does not hold (a few thousand) get the old substring test, so the result is unchanged.
+    linked = set(_NAME_TOKEN.findall(both))
     missing = []
     for fn in sorted(os.listdir(MEM)):
         if not fn.endswith(".md") or fn[:-3] in VIEWS:
             continue
-        if fn in both:
+        if fn in linked or fn in both:
             continue
         missing.append(fn)
     print("ensure_index: %d un-indexed memory file(s)" % len(missing))
