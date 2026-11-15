@@ -68,4 +68,5 @@ to questions with checkable answers.
   change, and what the fix does not cover.
 
 What the loop produced is summarized in `framework/docs/CHANGES_2026-11-15.md`, and the people its results build on
-are listed in `results/CREDITS.md`.
+are listed in `results/CREDITS.md`. The notes agents wrote about the framework during the same days, one finding per
+file in the memory format, are in `results/notes/framework-2026-11/`.
