@@ -1,0 +1,105 @@
+{
+  "steps": [
+    {
+      "command": [
+        "clang",
+        "-O3",
+        "npn5.c",
+        "-o",
+        "npn5"
+      ],
+      "output": "compile_npn.log",
+      "returncode": 0,
+      "wall_seconds": 0.44759392738342285
+    },
+    {
+      "command": [
+        "./npn5"
+      ],
+      "output": "npn_generation.txt",
+      "returncode": 0,
+      "wall_seconds": 15.171616077423096
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "compute.py",
+        "small"
+      ],
+      "output": "small.log",
+      "returncode": 0,
+      "wall_seconds": 0.21802186965942383
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "compute.py",
+        "npn5"
+      ],
+      "output": "npn5.log",
+      "returncode": 0,
+      "wall_seconds": 2.57017183303833
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "compute.py",
+        "samples"
+      ],
+      "output": "samples.log",
+      "returncode": 0,
+      "wall_seconds": 6.382113933563232
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "compute.py",
+        "families"
+      ],
+      "output": "families.log",
+      "returncode": 0,
+      "wall_seconds": 6.115839958190918
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "analytic_families.py"
+      ],
+      "output": "analytic.log",
+      "returncode": 0,
+      "wall_seconds": 0.3970377445220947
+    },
+    {
+      "command": [
+        "clang",
+        "-O3",
+        "verify_census.c",
+        "-o",
+        "verify_census"
+      ],
+      "output": "compile_verify.log",
+      "returncode": 0,
+      "wall_seconds": 0.5653421878814697
+    },
+    {
+      "command": [
+        "./verify_census"
+      ],
+      "output": "independent_census.json",
+      "returncode": 0,
+      "wall_seconds": 1.2756130695343018
+    },
+    {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "audit.py"
+      ],
+      "output": "audit.log",
+      "returncode": 0,
+      "wall_seconds": 1.474088191986084
+    }
+  ],
+  "nice": 10,
+  "wall_seconds": 34.62288308143616,
+  "max_child_rss_bytes": 270204928
+}
