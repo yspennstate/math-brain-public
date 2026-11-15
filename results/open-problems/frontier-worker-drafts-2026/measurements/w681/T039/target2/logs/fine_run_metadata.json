@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-15T03:24:42.140677+00:00",
+  "argv": [
+    "~\\brain_workers\\w681\\T039\\scripts\\run_fine_certificate.py",
+    "--max-seconds",
+    "480"
+  ],
+  "parameters": {
+    "table_rho_max": 0.43,
+    "cutoff": 8.0,
+    "q_bins": 2048,
+    "a_bins": 8192,
+    "exp_bins": 65536,
+    "v_panels": 64,
+    "precision": 100,
+    "x_panels": 1600,
+    "chunk": 24,
+    "power_steps": 40,
+    "label": "fine",
+    "rho_min": 0.4,
+    "rho_max": 0.43,
+    "rho_panels": 30
+  },
+  "hardware": {
+    "affinity": [
+      2,
+      3
+    ],
+    "available_ram": 22574546944,
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "input_hashes": {
+    "scripts/run_fine_certificate.py": "fbb7079b439cc03e94d314cea0c4e5794c7ec1149ce124c1f16a670ca7ec131d",
+    "scripts/certify_fine_cells.py": "1146d8a36772dd8ac7121a1b83bc9e405158e70e43901c6e3d95bd5a59f10f57",
+    "scripts/fine_tables.py": "29dff602188bf2c4fba6008ff8dd32e0bdaef5d7e3c102c3a857b6ab04eebba2",
+    "scripts/certify_positive_cells_graded.py": "a2acca945a49a0476ae9a025fcea6c3af203119261f621a543ed94a80fa5b3de",
+    "scripts/certify_positive_cells_centered.py": "9185e9dcd6482622dd3d9f193b42210dd5834718deb4d96823290620b2b79f0b",
+    "scripts/certify_positive_cells_scaled.py": "ed74d5405eb1a8ef9a1ea340c30c574970ae5b8c3b783ef43b564c74358fd6d7",
+    "scripts/certify_positive_cells.py": "9c8ec38ac1d7f4432fff55f5acd15c5ad5c0640827f084dfd996f727807d2c39",
+    "scripts/measure_operator.py": "060ee509da0388a6cd94ede3ba6f28a019c05f6a49be63508384c67d667daa92",
+    "cut_bounds/plur_cert.py": "4f528edb6f1cc0080d7f0f5ca7549c5aa87b8389ca0279ffe040af6de35cae10",
+    "cut_bounds/plur_cert_positive.py": "159c54695fa747613559878711087cd351b58f09f0d9607a8cd9b27dfa933545"
+  },
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "flint": "0.9.0",
+  "random_generator": null,
+  "seed": null,
+  "reproduction": "Table stages are generated from scratch or recipe/hash-verified checkpoints. Quantile accuracy, quartic-fit accuracy and power-iteration accuracy are not assumed; the resulting exact binary64 partition, center and positive witness are verified using directed interval operations."
+}

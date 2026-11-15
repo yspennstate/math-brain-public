@@ -1,0 +1,40 @@
+{
+  "recipe": {
+    "stage": "e",
+    "parameters": {
+      "rho_max": 0.43,
+      "cutoff": 8.0,
+      "q_bins": 2048,
+      "a_bins": 8192,
+      "exp_bins": 65536,
+      "v_panels": 64,
+      "precision": 100
+    },
+    "input_hashes": {
+      "scripts\\fine_tables.py": "29dff602188bf2c4fba6008ff8dd32e0bdaef5d7e3c102c3a857b6ab04eebba2",
+      "scripts\\certify_positive_cells.py": "9c8ec38ac1d7f4432fff55f5acd15c5ad5c0640827f084dfd996f727807d2c39",
+      "cut_bounds\\plur_cert.py": "4f528edb6f1cc0080d7f0f5ca7549c5aa87b8389ca0279ffe040af6de35cae10",
+      "cut_bounds\\plur_cert_positive.py": "159c54695fa747613559878711087cd351b58f09f0d9607a8cd9b27dfa933545"
+    }
+  },
+  "at": "2026-10-15T02:16:10.576991+00:00",
+  "hardware": {
+    "affinity": [
+      2,
+      3
+    ],
+    "available_ram": 18187972608,
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "data_file": "e_data_v1.npz",
+  "sha256": "9c5e19ccd570c0af534e46b12961de8872b3a63139a34e77d6ccb9d14ca3291c",
+  "range_names": [
+    "E"
+  ],
+  "bytes": 792045
+}
