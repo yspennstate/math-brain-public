@@ -1,0 +1,271 @@
+{
+  "exact_spherical_moments": [
+    {
+      "n": 1,
+      "E_M4": "1",
+      "E_M6": "1",
+      "E_M4_squared": "1"
+    },
+    {
+      "n": 2,
+      "E_M4": "3/2",
+      "E_M6": "5/2",
+      "E_M4_squared": "19/8"
+    },
+    {
+      "n": 3,
+      "E_M4": "9/5",
+      "E_M6": "27/7",
+      "E_M4_squared": "123/35"
+    },
+    {
+      "n": 4,
+      "E_M4": "2",
+      "E_M6": "5",
+      "E_M4_squared": "22/5"
+    },
+    {
+      "n": 8,
+      "E_M4": "12/5",
+      "E_M6": "8",
+      "E_M4_squared": "32/5"
+    },
+    {
+      "n": 64,
+      "E_M4": "32/11",
+      "E_M6": "2560/187",
+      "E_M4_squared": "8192/935"
+    },
+    {
+      "n": 128,
+      "E_M4": "192/65",
+      "E_M6": "2048/143",
+      "E_M4_squared": "32768/3685"
+    },
+    {
+      "n": 10000,
+      "E_M4": "5000/1667",
+      "E_M6": "62500000/4169167",
+      "E_M4_squared": "187700000000/20858342501"
+    }
+  ],
+  "scalar_inequalities": {
+    "precision_digits": 110,
+    "scalar_points": 10,
+    "forward_cases": 15
+  },
+  "quadrature": {
+    "sphere3": [
+      {
+        "q": 1e-05,
+        "E_log_F": -1.1999932381487659e-05,
+        "log_mu_minus_E_log_F": -7.99984762086901e-06,
+        "variance_log_F": 1.219022812193946e-11
+      },
+      {
+        "q": 2e-05,
+        "E_log_F": -2.3999729527507555e-05,
+        "log_mu_minus_E_log_F": -1.5999390491032678e-05,
+        "variance_log_F": 4.8759920242785246e-11
+      },
+      {
+        "q": 0.001,
+        "E_log_F": -0.0011993242798952106,
+        "log_mu_minus_E_log_F": -0.0007984780417076274,
+        "variance_log_F": 1.2165704299121313e-07
+      },
+      {
+        "q": 0.01,
+        "E_log_F": -0.011932848129259425,
+        "log_mu_minus_E_log_F": -0.007849453784346427,
+        "variance_log_F": 1.194589540049123e-05
+      },
+      {
+        "q": 0.25,
+        "E_log_F": -0.2639285502786105,
+        "log_mu_minus_E_log_F": -0.127802360119328,
+        "variance_log_F": 0.004792286800625869
+      }
+    ],
+    "quadrature_difference": 4.440892098500626e-16,
+    "d_derivative_at_zero": -0.7999999996221682,
+    "predicted_derivative": -0.8,
+    "forward_derivative_at_zero": -1.1999999999221538,
+    "predicted_forward_derivative": -1.2,
+    "gains": [
+      {
+        "a": 1e-06,
+        "type": "gaussian",
+        "mu": 0.9999980000069998
+      },
+      {
+        "a": 1e-06,
+        "type": "spherical_n3",
+        "mu": 0.9999980000041997
+      },
+      {
+        "a": 1e-06,
+        "type": "spherical_n64",
+        "mu": 0.9999980000067881
+      },
+      {
+        "a": 1e-06,
+        "type": "spherical_n256",
+        "mu": 0.9999980000069455
+      },
+      {
+        "a": 0.000244140625,
+        "type": "gaussian",
+        "mu": 0.999512135527147
+      },
+      {
+        "a": 0.000244140625,
+        "type": "spherical_n3",
+        "mu": 0.9995119689723119
+      },
+      {
+        "a": 0.000244140625,
+        "type": "spherical_n64",
+        "mu": 0.9995121229234651
+      },
+      {
+        "a": 0.000244140625,
+        "type": "spherical_n256",
+        "mu": 0.9995121323032545
+      },
+      {
+        "a": 0.01,
+        "type": "gaussian",
+        "mu": 0.9806702434649816
+      },
+      {
+        "a": 0.01,
+        "type": "spherical_n3",
+        "mu": 0.9804120839109174
+      },
+      {
+        "a": 0.01,
+        "type": "spherical_n64",
+        "mu": 0.9806515153781195
+      },
+      {
+        "a": 0.01,
+        "type": "spherical_n256",
+        "mu": 0.9806654693230661
+      },
+      {
+        "a": 0.25,
+        "type": "gaussian",
+        "mu": 0.7173798616031098
+      },
+      {
+        "a": 0.25,
+        "type": "spherical_n3",
+        "mu": 0.6758859633775602
+      },
+      {
+        "a": 0.25,
+        "type": "spherical_n64",
+        "mu": 0.7154257855749383
+      },
+      {
+        "a": 0.25,
+        "type": "spherical_n256",
+        "mu": 0.7168925618961615
+      }
+    ]
+  },
+  "last_crossing": {
+    "paths": 1000,
+    "steps": 100,
+    "checks": 100000
+  },
+  "radial_simulation": [
+    {
+      "n": 64,
+      "L": 10000,
+      "a": 0.0002,
+      "samples": 48,
+      "L_a": 2.0,
+      "gain_squared": 1.0003998800905693,
+      "max_abs_log_radius_ratio": 0.03753342587775219,
+      "mean_final_radius_ratio": 1.030293770900256,
+      "mean_S": 0.9109031304425738,
+      "max_abs_log_S": 0.10622508802345781,
+      "max_pathwise_martingale_upper_bound": 0.029387625425117025,
+      "min_scalar_bound_margin": 0.4266980038156243
+    },
+    {
+      "n": 256,
+      "L": 2000,
+      "a": 0.0002,
+      "samples": 48,
+      "L_a": 0.4,
+      "gain_squared": 1.0003998800905693,
+      "max_abs_log_radius_ratio": 0.007022575815606871,
+      "mean_final_radius_ratio": 1.004165720443572,
+      "mean_S": 0.9980707201402982,
+      "max_abs_log_S": 0.003571767783299986,
+      "max_pathwise_martingale_upper_bound": 0.006846850104060685,
+      "min_scalar_bound_margin": 0.11046838116840245
+    }
+  ],
+  "actual_network": {
+    "n": 64,
+    "L": 120,
+    "samples": 24,
+    "a": 0.0002,
+    "gain_squared": 1.0003998800905693,
+    "mean_original_distortion": 0.00015867180118818382,
+    "mean_normalized_distortion": 0.00015868496904786588,
+    "normalized_distortion_bound": 0.06394792599263308,
+    "mean_S": 0.9999662906588446,
+    "radius_ratio_min": 0.9993732779124114,
+    "radius_ratio_max": 1.0024518638044484
+  },
+  "diverging_La_examples": [
+    {
+      "n": 100,
+      "L": 100000,
+      "a": 0.0001,
+      "La": 10.0,
+      "La_squared": 0.001,
+      "La_over_n": 0.1
+    },
+    {
+      "n": 1000,
+      "L": 31622776,
+      "a": 1e-06,
+      "La": 31.622775999999998,
+      "La_squared": 3.1622776e-05,
+      "La_over_n": 0.031622776
+    },
+    {
+      "n": 10000,
+      "L": 10000000000,
+      "a": 1e-08,
+      "La": 100.0,
+      "La_squared": 1e-06,
+      "La_over_n": 0.01
+    },
+    {
+      "n": 1000000,
+      "L": 1000000000000000,
+      "a": 1e-12,
+      "La": 1000.0,
+      "La_squared": 1e-09,
+      "La_over_n": 0.001
+    }
+  ],
+  "runtime_seconds": 1.8744357920368202,
+  "peak_rss_bytes": 68206592,
+  "niceness": 20,
+  "numpy_version": "2.2.3",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  }
+}
