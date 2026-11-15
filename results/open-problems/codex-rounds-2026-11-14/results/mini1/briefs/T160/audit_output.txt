@@ -1,0 +1,19 @@
+nice: setpriority: Operation not permitted
+PASS: 378 exact forward-distribution/backward-recursion comparisons
+PASS: 378 exact second-moment identities and survival lower bounds
+PASS: 126 reciprocal identities, critical bounds, and available plateau bounds
+PASS: 16 fixed-edge formulas by exhaustive enumeration of 33856 configurations
+PASS: 32 stage counts, final-plateau inequalities, and exact ratio certificates
+Certificates are bounds from the proof, not simulated survival probabilities.
+k  D_A  D_B  weaker  certified interval for P(e_A open | reach N_k+1)
+ 1    1    0      A  [0.500000000000, 0.999756216480]
+ 2    1    3      B  [0.714288205343, 1.000000000000]
+ 8   28   36      B  [0.996093630802, 1.000000000000]
+ 9   45   36      A  [0.500000000000, 0.501953139901]
+16  120  136      B  [0.999984741211, 1.000000000000]
+17  153  136      A  [0.500000000000, 0.500007629395]
+32  496  528      B  [0.999999999767, 1.000000000000]
+Priority: 20; OMP_NUM_THREADS=1
+Elapsed seconds: 0.270
+Peak RSS bytes (macOS): 15663104
+PASS: all exact checks

@@ -1,0 +1,31 @@
+PASS: interpolation, explicit dual pricing, and planar atom grid
+Maximum relative gap below exact dual price: 1.4092e-05
+Maximum relative circle-risk error: 2.86135e-09
+PASS: independent S^2 surface quadrature and bias pointwise bounds
+PASS: gamma normalizers equal sine-integral recurrence, d=2..8
+Conditional opposite-label truncated squared risks:
+  d=2 epsilon=1e-01 mean=1.785664668
+  d=2 epsilon=1e-02 mean=16.11430404
+  d=2 epsilon=1e-03 mean=159.3542295
+  d=2 epsilon=1e-04 mean=1591.748765
+  d=3 epsilon=1e-01 mean=0.6194179053
+  d=3 epsilon=1e-02 mean=1.003313771
+  d=3 epsilon=1e-03 mean=1.387079333
+  d=3 epsilon=1e-04 mean=1.770843521
+  d=4 epsilon=1e-01 mean=0.3188354031
+  d=4 epsilon=1e-02 mean=0.3331589196
+  d=4 epsilon=1e-03 mean=0.3345913249
+  d=4 epsilon=1e-04 mean=0.3347345566
+  d=5 epsilon=1e-01 mean=0.2140944075
+  d=5 epsilon=1e-02 mean=0.2148362448
+  d=5 epsilon=1e-03 mean=0.2148436799
+  d=5 epsilon=1e-04 mean=0.2148437469
+PASS: unconditional risk-tail constants, d=2..5, thresholds=1e4,1e6,1e8
+PASS: d=4 opposite-label mean: quadrature=0.334750472085, exact=0.334750474578
+PASS: d=5 opposite-label mean: quadrature=0.214843747651, exact=0.21484375
+theta=0.1: 2*theta^2*R=1.003233659, with_bias=1.066400373
+theta=0.01: 2*theta^2*R=1.000033228, with_bias=1.006393308
+theta=0.001: 2*theta^2*R=1.000000333, with_bias=1.000636891
+PASS: annulus radial multiplier 2.3333333325, exact 7/3=2.33333333333
+All assertions passed. Data: verification_data.json, angle_checks.csv
+Resources: {'elapsed_seconds': 1.5732312079635449, 'peak_rss_bytes': 15826944, 'nice': 20, 'OMP_NUM_THREADS': '1'}

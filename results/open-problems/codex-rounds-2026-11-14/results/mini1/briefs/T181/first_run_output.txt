@@ -1,0 +1,18 @@
+nice: setpriority: Operation not permitted
+n=0 squares=1 candidate_cells=1 affine_pieces=1 radical_terms=1 Fav=[1.27323954473516, 1.27323954473517] quadrature_error=4.88e-10 seconds=0.007
+n=1 squares=4 candidate_cells=2 affine_pieces=2 radical_terms=3 Fav=[1.04990339003727, 1.04990339003728] quadrature_error=4.07e-10 seconds=0.01
+n=2 squares=16 candidate_cells=21 affine_pieces=11 radical_terms=12 Fav=[0.92793731495768, 0.92793731495769] quadrature_error=5.35e-10 seconds=0.028
+Traceback (most recent call last):
+  File "~/codex_op_1114/briefs/T181/exact_favard.py", line 270, in <module>
+    main()
+    ~~~~^^
+  File "~/codex_op_1114/briefs/T181/exact_favard.py", line 254, in main
+    certificates = [compute(n, output_dir) for n in range(args.max_n + 1)]
+                    ~~~~~~~^^^^^^^^^^^^^^^
+  File "~/codex_op_1114/briefs/T181/exact_favard.py", line 229, in compute
+    'lower_rational': str(flo), 'upper_rational': str(fhi),
+                      ~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/fractions.py", line 432, in __str__
+    return '%s/%s' % (self._numerator, self._denominator)
+                      ^^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

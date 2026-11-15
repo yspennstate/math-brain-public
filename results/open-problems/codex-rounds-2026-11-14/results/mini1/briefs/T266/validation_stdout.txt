@@ -1,0 +1,20 @@
+nice: setpriority: Operation not permitted
+~/codex_op_1114/briefs/T266/validate.py:38: RuntimeWarning: divide by zero encountered in matmul
+  A = (u * np.linspace(1.0, 2.0, rank)) @ v.T
+~/codex_op_1114/briefs/T266/validate.py:38: RuntimeWarning: overflow encountered in matmul
+  A = (u * np.linspace(1.0, 2.0, rank)) @ v.T
+~/codex_op_1114/briefs/T266/validate.py:38: RuntimeWarning: invalid value encountered in matmul
+  A = (u * np.linspace(1.0, 2.0, rank)) @ v.T
+PASS: full two-layer GD, reduced GD, predictor recurrence, and finite differences
+GD n=18 d=8 widths=1,3,11 max_error=9.9e-10 width_difference=2.5e-16
+GD n=8 d=18 widths=1,3,11 max_error=9.91e-10 width_difference=1.18e-15
+GD n=12 d=12 widths=1,3,11 max_error=9.85e-10 width_difference=2.19e-16
+RISK n=24 d=12 df=(12,13) KS=0.02158 p=0.62344
+RISK n=16 d=16 df=(16,1) KS=0.02309 p=0.53643
+RISK n=12 d=24 df=(12,13) KS=0.01765 p=0.84241
+RISK n=24 d=23 df=(23,2) KS=0.01802 p=0.82376
+RISK n=23 d=24 df=(23,2) KS=0.02802 p=0.29720
+CRITICAL inverse-chi-square(1) quantiles: q10=0.369611509, q50=2.198109338, q90=63.328117677
+Peak RSS: 89.52 MiB
+Elapsed: 1.197 seconds
+Data: validation.json, risk_samples.csv

@@ -1,0 +1,244 @@
+{
+  "exact_rational_cases_passed": 95,
+  "circle_integral": {
+    "n": 2,
+    "L": 2,
+    "v": 1,
+    "direct_s": "15/4",
+    "direct_t": "19/8",
+    "direct_expected_Z": "11/4"
+  },
+  "monte_carlo": [
+    {
+      "n": 2,
+      "L": 2,
+      "deltas": [
+        1.0,
+        1.0
+      ],
+      "samples": 12000,
+      "seed": 24701,
+      "observations": {
+        "trace_mean": {
+          "predicted": 1.0,
+          "sample_mean": 1.0013437195164692,
+          "standard_error": 0.010802268883078146,
+          "error_in_se": 0.12439234118437056
+        },
+        "spectral_second_moment": {
+          "predicted": 3.75,
+          "sample_mean": 3.7536814237397502,
+          "standard_error": 0.04353933372062036,
+          "error_in_se": 0.08455397511070982
+        },
+        "trace_mean_squared": {
+          "predicted": 2.375,
+          "sample_mean": 2.4028407118698754,
+          "standard_error": 0.03658411858643616,
+          "error_in_se": 0.761005401950493
+        },
+        "distortion_Z": {
+          "predicted": 2.75,
+          "sample_mean": 2.750993984706812,
+          "standard_error": 0.02223427526329413,
+          "error_in_se": 0.044705064367572545
+        },
+        "fixed_vector_norm_fourth": {
+          "predicted": 3.0625,
+          "sample_mean": 3.0459309354228545,
+          "standard_error": 0.04928016280885538,
+          "error_in_se": 0.336221790528827
+        }
+      }
+    },
+    {
+      "n": 4,
+      "L": 8,
+      "deltas": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "samples": 8000,
+      "seed": 24702,
+      "observations": {
+        "trace_mean": {
+          "predicted": 1.0,
+          "sample_mean": 0.9963420901152733,
+          "standard_error": 0.009859534217714974,
+          "error_in_se": 0.3710023013211313
+        },
+        "spectral_second_moment": {
+          "predicted": 4.131569027900696,
+          "sample_mean": 4.089205037542694,
+          "standard_error": 0.10297504400008141,
+          "error_in_se": 0.41140055602178977
+        },
+        "trace_mean_squared": {
+          "predicted": 1.782892256975174,
+          "sample_mean": 1.7702836700426205,
+          "standard_error": 0.04397094630244268,
+          "error_in_se": 0.2867481369590849
+        },
+        "distortion_Z": {
+          "predicted": 3.131569027900696,
+          "sample_mean": 3.0965208573121483,
+          "standard_error": 0.08579679757151358,
+          "error_in_se": 0.4085020837675676
+        },
+        "fixed_vector_norm_fourth": {
+          "predicted": 2.565784513950348,
+          "sample_mean": 2.6823891460643727,
+          "standard_error": 0.11163156120359245,
+          "error_in_se": 1.0445489685606255
+        }
+      }
+    },
+    {
+      "n": 8,
+      "L": 6,
+      "deltas": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        0.25,
+        0.5
+      ],
+      "samples": 6000,
+      "seed": 24703,
+      "observations": {
+        "trace_mean": {
+          "predicted": 1.0,
+          "sample_mean": 1.0000815392908184,
+          "standard_error": 0.005264631171746159,
+          "error_in_se": 0.015488129777455903
+        },
+        "spectral_second_moment": {
+          "predicted": 2.3392014297485355,
+          "sample_mean": 2.3340969088616417,
+          "standard_error": 0.0216499422763486,
+          "error_in_se": 0.23577526543663135
+        },
+        "trace_mean_squared": {
+          "predicted": 1.1674001787185668,
+          "sample_mean": 1.1664334171360464,
+          "standard_error": 0.012522348658228183,
+          "error_in_se": 0.07720289611048035
+        },
+        "distortion_Z": {
+          "predicted": 1.3392014297485355,
+          "sample_mean": 1.3339338302800046,
+          "standard_error": 0.011720507866527077,
+          "error_in_se": 0.4494344040819964
+        },
+        "fixed_vector_norm_fourth": {
+          "predicted": 1.4017604289245607,
+          "sample_mean": 1.4215727992302727,
+          "standard_error": 0.024584045784099628,
+          "error_in_se": 0.8059035717597874
+        }
+      }
+    }
+  ],
+  "tanh_quadrature_256": [
+    {
+      "q": 0.1,
+      "v": 0.039709122523846854,
+      "v_over_q_squared": 3.9709122523846845
+    },
+    {
+      "q": 0.03,
+      "v": 0.005538292603881021,
+      "v_over_q_squared": 6.15365844875669
+    },
+    {
+      "q": 0.01,
+      "v": 0.0007273237404962792,
+      "v_over_q_squared": 7.273237404962791
+    },
+    {
+      "q": 0.003,
+      "v": 6.990361526368945e-05,
+      "v_over_q_squared": 7.767068362632162
+    },
+    {
+      "q": 0.001,
+      "v": 7.920802045303531e-06,
+      "v_over_q_squared": 7.920802045303532
+    },
+    {
+      "q": 0.0003,
+      "v": 7.178465452828124e-07,
+      "v_over_q_squared": 7.976072725364584
+    },
+    {
+      "q": 0.0001,
+      "v": 7.992008097957542e-08,
+      "v_over_q_squared": 7.992008097957542
+    }
+  ],
+  "quadrature_128_vs_256_max_relative_difference": 2.2604612453757528e-13,
+  "joint_examples": [
+    {
+      "n": 100,
+      "L": 100,
+      "v": 1,
+      "spread_over_n": 5.831512995658776,
+      "free_spread_over_n": 1
+    },
+    {
+      "n": 1000,
+      "L": 1000,
+      "v": 1,
+      "spread_over_n": 6.3047557731000685,
+      "free_spread_over_n": 1
+    },
+    {
+      "n": 10000,
+      "L": 10000,
+      "v": 1,
+      "spread_over_n": 6.356092964327636,
+      "free_spread_over_n": 1
+    }
+  ],
+  "kernel_examples": [
+    {
+      "n": 100,
+      "L": 10,
+      "V": 0.10101010101010102,
+      "expected_Z": 0.10114524829148717,
+      "log_invertible_probability": -10.050335853501442
+    },
+    {
+      "n": 10000,
+      "L": 100,
+      "V": 0.010001000100010001,
+      "expected_Z": 0.010001014950025,
+      "log_invertible_probability": -100.00500033335834
+    },
+    {
+      "n": 1000000,
+      "L": 1000,
+      "V": 0.001000001000001,
+      "expected_Z": 0.0010000010014994999,
+      "log_invertible_probability": -1000.0005000003334
+    }
+  ],
+  "runtime_seconds": 2.8106618329766206,
+  "peak_rss_bytes": 38289408,
+  "niceness": 20,
+  "numpy_version": "2.2.3",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  }
+}

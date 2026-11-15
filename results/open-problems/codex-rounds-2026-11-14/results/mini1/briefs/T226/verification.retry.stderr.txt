@@ -1,0 +1,6 @@
+nice: setpriority: Operation not permitted
+Traceback (most recent call last):
+  File "~/codex_op_1114/briefs/T226/verify.py", line 15, in <module>
+    resource.setrlimit(resource.RLIMIT_AS, (memory_cap, memory_cap))
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: current limit exceeds maximum limit

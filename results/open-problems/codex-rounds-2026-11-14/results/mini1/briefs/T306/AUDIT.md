@@ -1,0 +1,21 @@
+# Checks and attempts to break the result
+
+## Independent derivations
+
+- **ODE sign and scale.** The OU Fokker–Planck equation is `∂_t p=∂_x(xp)+∂_{xx}p`. Writing this as a continuity equation gives forward probability-flow velocity `-x-∂_x log p`; reversing time gives `x+s`. With (2) the entire velocity is `(c/k)sin(kx)`, as in (8). Using OU diffusion coefficient one instead of sqrt(2) would introduce a time factor; that normalization is not used here.
+- **Phase TV, second derivation.** In source coordinates the phase TV equals `(1/(4π))∫_0^{2π}|1-H_c'(θ)|dθ`. The region `H_c'<1` is `(b,2π-b)`, where `cos b=tanh(c/2)` and `b=π-a`, with a from the proof. Since `H_c(b)=a`, its positive-part integral is `(a-b)/π=(2a-π)/π=D(c)`. This independently computes the same constant using the forward Jacobian, rather than the inverse density used in the proof. The script also integrates both expressions numerically.
+- **Gaussian derivative norm and finite-k constant.** Besides `||φ'||_1=E|X|`, integrate `2∫_0^∞ xφ(x)dx=-2∫_0^∞φ'(x)dx=2φ(0)=sqrt(2/π)`. The cell estimate has TV at most `(ell/4)||φ'||_1`; two triangle-inequality errors make `(ell/2)||φ'||_1=(π/k)sqrt(2/π)=sqrt(2π)/k`. In particular there is no missing factor of two in the TV convention.
+- **Uniform Euler obstruction, second derivation.** One can avoid the Jacobian-density argument entirely, at the cost of a weaker constant. Since sine is 1-Lipschitz, `|sin(E_a(θ))|>= (1-a)|sin θ|`. Thus `E sin² Θ_j >= (1-a)^{2j}/2 >= (1-c)^2/2`, using Bernoulli's inequality `(1-a)^j>=1-ja>=1-c`. The same cosine Taylor inequality then gives phase TV at least `c(1-c/2)(1-c)^2/4`, uniformly in N. For `c=1/2` this is exactly `3/128=0.0234375`. Both routes yield a positive obstruction after the Gaussian comparison for sufficiently large k.
+- **Numerical independence.** RK4 integrates the phase and its variational equation without using the half-angle formula. Direct Gaussian score-error quadrature checks the characteristic-function formula. The one-step Euler phase TV has a separate exact expression: `(1/(4π))∫|c cos θ|dθ=c/π`, which is also checked numerically.
+
+## Cases checked and limitations
+
+- Period endpoints and the fixed point π require a continuous branch in the tangent formula. The proof specifies it; the script uses atan2. All flow and Euler Jacobians are positive. The example never produces atoms.
+- The real line has infinitely many cells. Their Gaussian masses sum to one, and the averaging estimate sums absolutely using `φ'` in L1. No compact-support shortcut or tail truncation appears in the proof.
+- Taking `c=0` gives zero error and zero TV; the proposition requires `c>0`. Taking `c<1` ensures uniform strong log-concavity and strictly positive Euler derivatives even when N=1. The script checks c=0.1,0.5,0.9, not just the displayed c=0.5 example.
+- The estimated score is smooth and uniformly Lipschitz, but its second derivative is not uniformly bounded as k grows. Its Jacobian error does not tend to zero. These are material distinctions from existing positive theorems.
+- Each estimate is the score of a density, but the time-indexed estimates are not required to be an OU-consistent family. Requiring that stronger property could exclude this construction. No result is asserted for that model.
+- The target is exactly Gaussian and is easy for an algorithm that ignores the supplied field. The obstruction is to the unmodified ODE and its specified Euler family. It is not an oracle-information lower bound, an impossibility for deterministic samplers with preprocessing, or evidence that linear dependence on d is necessary.
+- The exact integration result alone would not exclude an accidentally beneficial finite discretization. This is why (16) separately treats every positive equal-step Euler count, uniformly. Other discretizations and score regularization are not covered by (16).
+- The rigorous TV bounds are analytic. Numerical quadrature, grid agreement and finite RK4 checks corroborate them but do not replace a proof or certify numerical integration error.
+- The literature check found a pre-existing discrete discontinuous example. The general failure under L2 error alone is known. The completed artifact is a quantitative smooth continuous-time and all-N Euler version; priority for this precise refinement has not been established.

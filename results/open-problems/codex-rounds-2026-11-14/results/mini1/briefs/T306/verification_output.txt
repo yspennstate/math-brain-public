@@ -1,0 +1,12 @@
+nice: setpriority: Operation not permitted
+All deterministic checks passed.
+D(1/2) = 0.157522522023786
+k=1000: RMS score error = 0.000353553390593274
+k=1000: numerical TV = 0.157523213204538
+k=1000: analytic TV lower bound = 0.155015893749155
+maximum RK4 phase error = 1.17e-11
+maximum RK4 Jacobian error = 4.46e-11
+Euler uniform bound at c=1/2, k=1000 = 0.054355621073428
+Euler checks passed for c=0.1,0.5,0.9 and N=1,2,4,16,64,256.
+Independent Gaussian score-error quadrature passed for k=1,4,1000.
+{"OMP_NUM_THREADS": "1", "gaussian_tail_bound": 9.59239366279874e-18, "nice_priority": 20, "note": "Quadrature is a numerical check, not a certified integration bound; PROOF.md is analytic.", "peak_rss_raw": 15990784, "requested_resource_guards": {"RLIMIT_AS": "current limit exceeds maximum limit", "RLIMIT_CPU": 60}, "rss_units": "bytes on macOS", "seconds": 2.6219232080038637}

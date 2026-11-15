@@ -1,0 +1,413 @@
+# Stationary fluctuations of the leading leapfrog energy coefficient
+
+Let \(V\in C^2(\mathbb R^d)\) satisfy
+\[
+ mI\preceq K(x):=\nabla^2V(x)\preceq LI,
+ \qquad 0<m\le L.
+\]
+Write \(g=\nabla V\), \(\kappa=L/m\), and let
+\[
+ \pi(dx)=Z^{-1}e^{-V(x)}dx,
+ \qquad \rho(dx,dp)=\pi(dx)\,N(0,I)(dp).
+\]
+All expectations below are under \(\pi\) or \(\rho\), as appropriate. Define
+\[
+ A(x,p)=\frac1{12}p^TK(x)p-\frac1{24}|g(x)|^2.
+ \tag{1}
+\]
+No Lipschitz assumption on the Hessian is needed for the concentration results.
+
+## 1. Statements
+
+The exact variance identity is
+\[
+ 576\operatorname{Var}_{\rho}(A)
+ =12E\operatorname{tr}(K^2)-4E(g^TKg)
+   +\operatorname{Var}_{\pi}(|g|^2).
+ \tag{2}
+\]
+In particular,
+\[
+ \frac{E\operatorname{tr}(K^2)}{72}
+ \le \operatorname{Var}_{\rho}(A)
+ \le \frac{E\operatorname{tr}(K^2)}{48}
+ \le \frac{L^2d}{48}.
+ \tag{3}
+\]
+Thus the variance is between \(m^2d/72\) and \(L^2d/48\).
+For every \(s\ge1\),
+\[
+ \rho\left\{|A-EA|>
+ L\big(\sqrt{\kappa d s}+\kappa s\big)\right\}
+ \le6e^{-s}.
+ \tag{4}
+\]
+
+Let \(\Phi_T\) be the exact Hamiltonian flow for
+\(\mathcal H(x,p)=V(x)+|p|^2/2\). For every deterministic \(T\in\mathbb R\),
+\[
+ E_\rho\left|A(Z)-A(\Phi_TZ)\right|^2\le L^2d/12.
+ \tag{5}
+\]
+If \(\nu\le M_0\pi\), \(X\sim\nu\), and \(P\sim N(0,I)\) independently,
+then for \(0<\delta<1\), with probability at least \(1-\delta\),
+\[
+ |A(X,P)-A(\Phi_T(X,P))|
+ \le2L\big(\sqrt{\kappa d s}+\kappa s\big),
+ \qquad s=\log(12M_0/\delta).
+ \tag{6}
+\]
+Here \(M_0\ge1\), so \(s>1\). The warm factor is explicit.
+
+For \(V\in C^4\), fixed \(d,V\) and \(T>0\), and kick–drift–kick leapfrog \(\Psi_h\),
+the coefficient in (6) is also the pointwise energy-error limit:
+\[
+ \lim_{n\to\infty}
+ \frac{\mathcal H(\Psi_{T/n}^{\,n}z)-\mathcal H(z)}{(T/n)^2}
+ =A(z)-A(\Phi_Tz).
+ \tag{7}
+\]
+The limit (7) is not asserted to be uniform in dimension or in the potential.
+
+## 2. Integration by parts and the variance identity
+
+First suppose \(V\) is smooth. Put
+\[
+ D=\operatorname{tr}K,\qquad S=|g|^2,\qquad
+ F=D-S=\mathcal LV,\qquad
+ \mathcal Lf=\Delta f-g\cdot\nabla f.
+\]
+Strong convexity gives Gaussian tails after translation by the minimizer,
+and \(g\) has at most linear growth. Integration by parts gives
+\[
+ E[u\mathcal Lv]=-E[\nabla u\cdot\nabla v],
+ \quad EF=0,\quad ES=ED\le Ld.
+ \tag{8}
+\]
+Cutoffs followed by dominated convergence justify these formulas for the
+functions used below. They can first be applied to smooth mollifications
+of \(V\), whose derivatives of order at least two are bounded.
+
+The integrated Bochner identity is
+\[
+ E(\mathcal Lf)^2
+ =E\|\nabla^2f\|_F^2+E[\nabla f^TK\nabla f].
+ \tag{9}
+\]
+Indeed, differentiating \(\mathcal Lf\) gives
+\(\partial_i\mathcal Lf=\mathcal L(\partial_if)-(K\nabla f)_i\).
+Apply (8) to \(-E[\nabla f\cdot\nabla\mathcal Lf]\) and then separately
+to each \(-E[\partial_if\,\mathcal L(\partial_if)]\). This yields (9).
+Taking \(f=V\), and then using \(\nabla S=2Kg\), gives
+\[
+ EF^2=E\operatorname{tr}(K^2)+E(g^TKg),
+ \qquad E(FS)=-2E(g^TKg).
+ \tag{10}
+\]
+Since \(2D-S=2F+S\), equations (8)–(10) imply
+\[
+ \operatorname{Var}(2D-S)
+ =4E\operatorname{tr}(K^2)-4E(g^TKg)+\operatorname{Var}(S).
+ \tag{11}
+\]
+
+Conditionally on \(X=x\), diagonalize \(K(x)\). Independence of the
+standard Gaussian coordinates and \(\operatorname{Var}(P_i^2)=2\) give
+\[
+ E[p^TKp\mid X]=D,
+ \qquad \operatorname{Var}(p^TKp\mid X)=2\operatorname{tr}(K^2).
+\]
+The conditional variance formula applied to \(24A=2p^TKp-S\) yields
+\[
+ 576\operatorname{Var}(A)
+ =8E\operatorname{tr}(K^2)+\operatorname{Var}(2D-S).
+ \tag{12}
+\]
+This proves (2) and the lower bound in (3).
+
+The Brascamp–Lieb variance inequality in this setting is
+\[
+ \operatorname{Var}_\pi(f)
+ \le E[\nabla f^TK^{-1}\nabla f].
+ \tag{13}
+\]
+For completeness, its usual integrated-Bochner proof is as follows. For
+centered smooth \(f\), solve \(-\mathcal Lu=f\) in the mean-zero Sobolev
+space. The Poincare inequality with constant \(1/m\) makes this solution
+well-defined. Integration by parts, weighted Cauchy–Schwarz, and (9) give
+\[
+ \begin{aligned}
+ E f^2&=E[\nabla f\cdot\nabla u]\le
+ \big(E[\nabla f^TK^{-1}\nabla f]\big)^{1/2}
+ \big(E[\nabla u^TK\nabla u]\big)^{1/2}\\
+ &\le\big(E[\nabla f^TK^{-1}\nabla f]\big)^{1/2}
+      \big(E(\mathcal Lu)^2\big)^{1/2}.
+ \end{aligned}
+\]
+The last square root is \((Ef^2)^{1/2}\); divide by it unless \(f=0\).
+Approximation extends this inequality to \(f=S\), whose value and gradient
+have polynomial growth. Thus
+\[
+ \operatorname{Var}(S)\le4E(g^TKg).
+ \tag{14}
+\]
+Substituting (14) into (2) proves the upper bound in (3).
+
+The Poincare inequality just used, and the concentration inequality used
+below, are the standard consequences of strong convexity:
+\[
+ \operatorname{Var}_\pi f\le m^{-1}E|\nabla f|^2,
+ \qquad
+ \operatorname{Ent}_\pi(e^f)\le(2m)^{-1}E[e^f|\nabla f|^2].
+ \tag{15}
+\]
+One can obtain the second formula by the diffusion semigroup \(P_t\)
+generated by \(\mathcal L\). Its derivative flow has norm at most
+\(e^{-mt}\), because its tangent equation is \(\dot J=-K(X_t)J\).
+For positive \(u\), weighted Cauchy–Schwarz then gives
+\[
+ \frac{|\nabla P_tu|^2}{P_tu}
+ \le e^{-2mt}P_t\left(\frac{|\nabla u|^2}{u}\right).
+\]
+Integrating the entropy dissipation identity
+\(-\frac{d}{dt}\operatorname{Ent}_\pi(P_tu)
+ =E[|\nabla P_tu|^2/(P_tu)]\) from zero to infinity gives
+\(\operatorname{Ent}_\pi(u)\le(2m)^{-1}E[|\nabla u|^2/u]\).
+Take \(u=e^f\) for (15); expanding at \(u=e^{tf}\), \(t=0\), gives the
+Poincare inequality. These arguments can first be made for bounded positive
+smooth \(u\), then extended by truncation.
+
+## 3. An exponential bound for the generator term
+
+The troublesome trace term in (11) need not be differentiated. First prove
+the auxiliary inequality
+\[
+ E e^{aS}\le(1-2La)^{-d/2},\qquad 0\le a<(2L)^{-1}.
+ \tag{16}
+\]
+The descent inequality for an \(L\)-smooth convex function gives
+\(S\le2L(V-V_{\min})\). Thus the moment generating function and its
+derivative are finite on this interval, by strong convexity. Let
+\(Z(a)=Ee^{aS}\). Integration by parts and \(K\preceq LI\) give
+\[
+ \begin{aligned}
+ Z'(a)&=E[Se^{aS}]
+ =E[De^{aS}]+2aE[g^TKg\,e^{aS}]\\
+ &\le Ld Z(a)+2aLZ'(a).
+ \end{aligned}
+\]
+Hence \((\log Z)'\le Ld/(1-2La)\). Integrate from zero to \(a\) to
+obtain (16).
+
+For \(|u|L<1\), the map \(T_u(x)=x+ug(x)\) is a global diffeomorphism.
+Its derivative is positive definite with smallest eigenvalue at least
+\(1-|u|L\); global invertibility also follows from the contraction equation
+\(x=y-ug(x)\). Change of variables gives the exact identity
+\[
+ 1=E\exp\{V(x)-V(T_ux)+\log\det(I+uK(x))\}.
+ \tag{17}
+\]
+For a scalar \(|v|<1\), the power series for the logarithm gives
+\(\log(1+v)\ge v-v^2/[2(1-|v|)]\).
+The smoothness inequality and this scalar inequality imply
+\[
+ V(x)-V(T_ux)+\log\det(I+uK)
+ \ge uF-\frac{Lu^2}{2}S
+       -\frac{u^2L^2d}{2(1-|u|L)}.
+ \tag{18}
+\]
+Set \(u=2t\), \(a=2Lt^2\), and
+\(b=2t^2L^2d/(1-2|t|L)\). From (17)–(18),
+\(Ee^{2tF-aS}\le e^b\). Cauchy–Schwarz and (16) now give
+\[
+ \begin{aligned}
+ \log Ee^{tF}
+ &\le b/2+\tfrac12\log Ee^{aS}\\
+ &\le\frac{t^2L^2d}{1-2|t|L}
+      -\frac d4\log(1-4L^2t^2)\\
+ &\le\frac{10}{3}dL^2t^2\le4dL^2t^2,
+ \qquad |t|\le(4L)^{-1}.
+ \end{aligned}
+ \tag{19}
+\]
+For the last line use \(1-2|t|L\ge1/2\) and
+\(-\log(1-v)\le v/(1-v)\), \(0\le v\le1/4\).
+
+For \(s>0\), apply Chernoff's inequality to (19) at
+\[
+ t=\frac{\sqrt s}{2L\sqrt d+4L\sqrt s}.
+\]
+With \(r=4L\sqrt{ds}+4Ls\), direct substitution gives
+\(tr-4dL^2t^2\ge s\). Apply the same calculation to \(-F\). Therefore
+\[
+ \pi\{|F|>4L\sqrt{ds}+4Ls\}\le2e^{-s}.
+ \tag{20}
+\]
+
+## 4. Concentration of A
+
+Let \(Q=p^TKp-D\). Given \(X\), diagonalization gives
+\[
+ \log E[e^{tQ}\mid X]
+ =\sum_i\{-t\lambda_i-\tfrac12\log(1-2t\lambda_i)\}
+ \le\frac{dL^2t^2}{1-2L|t|},\qquad 2L|t|<1.
+\]
+The bound holds for both signs of \(t\) by the logarithm series. Choosing
+\(t=\sqrt s/(L\sqrt d+2L\sqrt s)\), and then using the negative sign,
+gives
+\[
+ \rho\{|Q|>2L\sqrt{ds}+2Ls\}\le2e^{-s}.
+ \tag{21}
+\]
+
+Put \(Y=|g(X)|\). The function \(x\mapsto |g(x)|\) is \(L\)-Lipschitz.
+The entropy inequality (15), applied to \(tY\), gives the Herbst bound
+\[
+ \log Ee^{t(Y-EY)}\le L^2t^2/(2m),\qquad t\in\mathbb R.
+\]
+To see the integration step, put \(\psi(t)=\log Ee^{tY}\).
+Then \(t\psi'(t)-\psi(t)\le L^2t^2/(2m)\), so integration of
+\((\psi(t)/t)'\), separately on the two sides of zero, gives the displayed
+bound. Chernoff's inequality and (15) imply
+\[
+ \pi\{|Y-EY|>L\sqrt{2s/m}\}\le2e^{-s},
+ \qquad \operatorname{Var}(Y)\le L^2/m.
+\]
+Since \(EY\le\sqrt{ES}\le\sqrt{Ld}\), on the complementary event,
+\[
+ \begin{aligned}
+ |S-ES|
+ &=|(Y-EY)(Y+EY)-\operatorname{Var}(Y)|\\
+ &\le 2\sqrt{Ld}\,L\sqrt{2s/m}+2L^2s/m+L^2/m\\
+ &\le L\{2\sqrt{2\kappa ds}+3\kappa s\},\qquad s\ge1.
+ \end{aligned}
+ \tag{22}
+\]
+Lipschitz approximation at \(g=0\) justifies the use of (15).
+
+Equations (8) and (1) give
+\[
+ EA=ES/24,\qquad
+ 24(A-EA)=2Q+2F+(S-ES).
+\]
+Outside a set of probability at most \(6e^{-s}\), equations (20)–(22)
+bound the absolute value of the right side by
+\[
+ L\{(12+2\sqrt{2\kappa})\sqrt{ds}+(12+3\kappa)s\}
+ \le15L\{\sqrt{\kappa ds}+\kappa s\}.
+\]
+Divide by 24 and enlarge the constant from \(15/24\) to 1. This proves (4).
+
+## 5. Regularity and exact-flow transfer
+
+All results above extend from smooth \(V\) to the stated \(C^2\) class.
+Convolve \(V\) with a compactly supported smooth mollifier of radius
+\(\eta\downarrow0\). Its Hessian remains between \(mI\) and \(LI\).
+After subtracting the value at zero, these potentials have a uniform
+quadratic lower bound and gradients of uniformly linear growth; their
+Hessians are uniformly bounded. The gradients and Hessians converge on
+compact sets. Gaussian domination therefore passes the polynomial moment
+identities, including (2), to the limit. For the exponential inequalities,
+almost-everywhere convergence of the densities and observables and Fatou's
+lemma suffice. They also pass (16), (19), and the Lipschitz concentration
+bound to the limit. The tail conclusions follow from these moment bounds.
+
+The Hamiltonian vector field is globally Lipschitz. Its divergence is zero,
+and \(\mathcal H\) is constant along its flow, so \(\Phi_T\) preserves
+\(\rho\). For any \(T\),
+\[
+ \begin{aligned}
+ E_\rho|A-A\circ\Phi_T|^2
+ &\le2E_\rho|A-EA|^2+2E_\rho|A\circ\Phi_T-EA|^2\\
+ &=4\operatorname{Var}_\rho(A)\le L^2d/12.
+ \end{aligned}
+\]
+This proves (5). Equation (4), invariance, and a union bound give
+\[
+ \rho\{|A-A\circ\Phi_T|>2L(\sqrt{\kappa ds}+\kappa s)\}
+ \le12e^{-s}.
+\]
+The initial phase-space law \(\nu\otimes N(0,I)\) is bounded above by
+\(M_0\rho\). Multiplying the last probability bound by \(M_0\) and taking
+\(s=\log(12M_0/\delta)\) proves (6).
+
+## 6. Why A is the leading kick–drift–kick coefficient
+
+This section assumes \(V\in C^4\); its constants are allowed to depend on
+\(d\), \(V\), the initial point, and a bounded time interval. Write
+\(C=\nabla^3V(x)\). One leapfrog step is
+\[
+ p_{1/2}=p-\tfrac h2g(x),\quad
+ x'=x+hp_{1/2},\quad p'=p_{1/2}-\tfrac h2g(x').
+\]
+Taylor expansion on a compact set gives
+\[
+ \begin{aligned}
+ x'-x&=hp-\tfrac{h^2}{2}g,\\
+ p'-p&=-hg-\tfrac{h^2}{2}Kp
+       +\tfrac{h^3}{4}Kg-\tfrac{h^3}{4}C[p,p]+O(h^4).
+ \end{aligned}
+ \tag{23}
+\]
+Expand the potential and kinetic terms separately:
+\[
+ \begin{aligned}
+ V(x')-V(x)
+ &=h g\cdot p+\tfrac{h^2}{2}(p^TKp-S)
+   +h^3\{-\tfrac12p^TKg+\tfrac16C[p,p,p]\}+O(h^4),\\
+ \tfrac12(|p'|^2-|p|^2)
+ &=-h g\cdot p+\tfrac{h^2}{2}(S-p^TKp)
+   +h^3\{\tfrac34p^TKg-\tfrac14C[p,p,p]\}+O(h^4).
+ \end{aligned}
+\]
+Consequently
+\[
+ \mathcal H(\Psi_hz)-\mathcal H(z)
+ =h^3\{\tfrac14p^TKg-\tfrac1{12}C[p,p,p]\}+O(h^4).
+ \tag{24}
+\]
+Along the exact flow \(\dot x=p,\ \dot p=-g\), differentiating (1) gives
+\[
+ \frac d{dt}A=\tfrac1{12}C[p,p,p]-\tfrac14p^TKg.
+ \tag{25}
+\]
+Equations (23)–(25) give the one-step identity
+\[
+ (\mathcal H+h^2A)(\Psi_hz)-(\mathcal H+h^2A)(z)=O(h^4).
+ \tag{26}
+\]
+For fixed \(T\), all sufficiently fine numerical trajectories from a fixed
+\(z\) stay in a common compact set: (23) gives consistency, and a discrete
+Gronwall estimate for the globally Lipschitz vector field gives convergence
+on \([0,T]\). More explicitly, the exact and numerical one-step maps differ
+by \(O(h^3)\) on that compact set; the exact flow is \(e^{Ch}\)-Lipschitz,
+so iteration bounds the global position–momentum error by \(O(h^2)\).
+The constants in (26) can therefore be used for every step. Summing
+\(n=T/h\) steps gives
+\[
+ \mathcal H(\Psi_h^nz)-\mathcal H(z)
+ =h^2\{A(z)-A(\Psi_h^nz)\}+O(h^3).
+\]
+As \(\Psi_h^nz\to\Phi_Tz\), continuity of \(A\) proves (7).
+
+## 7. Scope of the reduction
+
+Define, whenever \(T/h\) is an integer,
+\[
+ R_{h,T}(z)=\mathcal H(\Psi_h^{T/h}z)-\mathcal H(z)
+            -h^2\{A(z)-A(\Phi_Tz)\}.
+\]
+Equation (6) bounds the explicitly subtracted term by
+\[
+ 2Lh^2\{\sqrt{\kappa d\log(12M_0/\delta)}
+               +\kappa\log(12M_0/\delta)\}
+\]
+with probability at least \(1-\delta\). At fixed condition number its
+dimension dependence is the one compatible with \(h\) of order
+\(d^{-1/4}\), with logarithmic losses.
+
+There is no uniform bound here on \(R_{h,T}\) at that step size under an
+operator-norm Lipschitz Hessian. Equation (7) is a fixed-problem limit and
+does not supply one. In particular, no limit and growing-dimension sequence
+have been interchanged. Neither an acceptance guarantee for finite-step
+leapfrog nor a conductance/mixing theorem follows from (2)–(7) alone.
