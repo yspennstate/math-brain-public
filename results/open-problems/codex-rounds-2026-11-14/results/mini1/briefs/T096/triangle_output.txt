@@ -1,0 +1,22 @@
+nice: setpriority: Operation not permitted
+effective nice: 20
+K                 zero gap       field gap      Rayleigh upper
+   0.000000000000 1.000000000000 1.000000000000 1.714285714286
+   0.100000000000 0.901312339888 0.902059543159 1.586423682478
+   0.250000000000 0.768941421370 0.773308641627 1.380924638084
+   0.500000000000 0.619202922022 0.592440464037 1.038017037749
+   0.693147180560 0.558823529412 0.461355337305 0.799739921977
+   1.000000000000 0.517986209962 0.286548019965 0.498306747347
+   2.000000000000 0.500335350130 0.044755842535 0.079984579573
+   3.000000000000 0.500006144175 0.006177717752 0.011108507849
+   5.000000000000 0.500000002061 0.000113493384 0.000204284227
+Exact characteristic polynomials at K=log(2):
+field_zero: lambda*(lambda - 3)*(17*lambda - 49)*(17*lambda - 32)*(34*lambda - 53)**2*(34*lambda - 19)**2/386201104
+field_K: lambda*(lambda - 3)*(65*lambda**2 - 297*lambda + 328)*(325*lambda**2 - 720*lambda + 263)**2/6865625
+field_gap_series_q_exp_minus_2K: 5*q/2 - 25*q**2/8 + O(q**3)
+expected_field_small_eigenvalue: (72-sqrt(1765))/65
+expected_zero_gap: 19/34
+max_full_spectrum_residual: 1.9984014443252818e-15
+PASS: full spectra, invariant subspaces, stationary laws, and exit rates
+Data: triangle_data.csv; triangle_exact.json
+peak RSS bytes: 68583424

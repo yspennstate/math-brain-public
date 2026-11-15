@@ -1,0 +1,598 @@
+{
+  "numpy_version": "2.2.3",
+  "seed": 9802026,
+  "nice_value_from_libc": 20,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "matrix_checks": {
+    "case_count": 69,
+    "normalized_residual_maxima": {
+      "independent_H_assembly": 1.7864003311118835e-16,
+      "unitarity": 1.6216472574741095e-15,
+      "off_diagonal": 1.414598719590758e-15,
+      "sector_energy_formula": 1.1563973446429165e-15,
+      "full_spectrum": 8.727726182002911e-16,
+      "lbit_H_commutator": 2.0038362414231064e-15,
+      "lbit_involution": 2.83311803415101e-15,
+      "frozen_lbit": 1.2848529721616653e-15,
+      "support_envelope": 9.546752850272374e-16,
+      "joint_label_completeness": 4.9960036108132044e-15,
+      "lbit_pair_commutator": 2.0085298719183034e-15,
+      "gate_commutator": 0.0
+    },
+    "cases": [
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0",
+        "n": 1,
+        "dimension": 2,
+        "full_spectrum_absolute_error": 0.0
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1",
+        "n": 1,
+        "dimension": 2,
+        "full_spectrum_absolute_error": 0.0
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00",
+        "n": 2,
+        "dimension": 4,
+        "full_spectrum_absolute_error": 0.0
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01",
+        "n": 2,
+        "dimension": 4,
+        "full_spectrum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10",
+        "n": 2,
+        "dimension": 4,
+        "full_spectrum_absolute_error": 1.6653345369377348e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11",
+        "n": 2,
+        "dimension": 4,
+        "full_spectrum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "000",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 4.440892098500626e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "001",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 4.440892098500626e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "010",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "011",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 2.6645352591003757e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "100",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 1.7763568394002505e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "101",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 2.7200464103316335e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "110",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 4.440892098500626e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "111",
+        "n": 3,
+        "dimension": 8,
+        "full_spectrum_absolute_error": 3.552713678800501e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0000",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 1.7763568394002505e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0001",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0010",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 4.440892098500626e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0011",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 6.217248937900877e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0100",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 1.7763568394002505e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0101",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 2.6645352591003757e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0110",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 2.6645352591003757e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "0111",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 7.105427357601002e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1000",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 2.6645352591003757e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1001",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 1.2434497875801753e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1010",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 4.440892098500626e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1011",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 1.1546319456101628e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1100",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 2.220446049250313e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1101",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 7.993605777301127e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1110",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 6.217248937900877e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "1111",
+        "n": 4,
+        "dimension": 16,
+        "full_spectrum_absolute_error": 7.993605777301127e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00000",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.7763568394002505e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00001",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.7763568394002505e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00010",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00011",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 5.329070518200751e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00100",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 3.552713678800501e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00101",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 6.217248937900877e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00110",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "00111",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 7.993605777301127e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01000",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-16
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01001",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01010",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.2434497875801753e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01011",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 7.105427357601002e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01100",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 5.329070518200751e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01101",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.4210854715202004e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01110",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "01111",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 6.217248937900877e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10000",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.9539925233402755e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10001",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 9.547918011776346e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10010",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.5987211554602254e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10011",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.5987211554602254e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10100",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.0658141036401503e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10101",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.3322676295501878e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10110",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.0658141036401503e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "10111",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11000",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.4210854715202004e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11001",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 8.881784197001252e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11010",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 7.105427357601002e-15
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11011",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 2.6645352591003757e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11100",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.4210854715202004e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11101",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.4210854715202004e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11110",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 2.6645352591003757e-14
+      },
+      {
+        "kind": "exhaustive_masks",
+        "mask": "11111",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 1.2434497875801753e-14
+      },
+      {
+        "kind": "seven_site_edges",
+        "mask": "1101101",
+        "n": 7,
+        "dimension": 128,
+        "full_spectrum_absolute_error": 3.2862601528904634e-14
+      },
+      {
+        "kind": "seven_site_edges",
+        "mask": "0111110",
+        "n": 7,
+        "dimension": 128,
+        "full_spectrum_absolute_error": 2.842170943040401e-14
+      },
+      {
+        "kind": "seven_site_edges",
+        "mask": "1010101",
+        "n": 7,
+        "dimension": 128,
+        "full_spectrum_absolute_error": 5.5067062021407764e-14
+      },
+      {
+        "kind": "seven_site_edges",
+        "mask": "1111111",
+        "n": 7,
+        "dimension": 128,
+        "full_spectrum_absolute_error": 2.6645352591003757e-14
+      },
+      {
+        "kind": "seven_site_edges",
+        "mask": "0000000",
+        "n": 7,
+        "dimension": 128,
+        "full_spectrum_absolute_error": 1.7763568394002505e-15
+      },
+      {
+        "kind": "all_zero_degeneracy",
+        "mask": "10110",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 0.0
+      },
+      {
+        "kind": "degenerate_interacting",
+        "mask": "10101",
+        "n": 5,
+        "dimension": 32,
+        "full_spectrum_absolute_error": 5.329070518200751e-15
+      }
+    ]
+  },
+  "exact_tail_checks": {
+    "masks_checked": 1022,
+    "rational_probability_checks": 855,
+    "maximum_exact_error": "0",
+    "selected_bulk_and_boundary_rows": [
+      {
+        "L": 9,
+        "site": 5,
+        "r": 1,
+        "p": "1/2",
+        "probability": "3/4",
+        "bound": "3/4"
+      },
+      {
+        "L": 9,
+        "site": 5,
+        "r": 2,
+        "p": "1/2",
+        "probability": "7/16",
+        "bound": "7/16"
+      },
+      {
+        "L": 9,
+        "site": 5,
+        "r": 3,
+        "p": "1/2",
+        "probability": "15/64",
+        "bound": "15/64"
+      },
+      {
+        "L": 9,
+        "site": 5,
+        "r": 4,
+        "p": "1/2",
+        "probability": "0",
+        "bound": "31/256"
+      }
+    ]
+  },
+  "failure_and_gap_checks": {
+    "epsilon": 0.03125,
+    "barrier_commutator_norm": 0.0625,
+    "predicted_commutator_norm": 0.0625,
+    "old_diagonalizer_off_diagonal_norm": 0.03125000000000196,
+    "predicted_off_diagonal_norm": 0.03125,
+    "zero_H_GHZ_lbit_variance": 0.9999999999999998,
+    "base_three_gap_checks": [
+      {
+        "L": 1,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 2,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 3,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 4,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 5,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 6,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 7,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      },
+      {
+        "L": 8,
+        "exact_minimum_field_only_gap_at_t_1": 2
+      }
+    ]
+  },
+  "peak_rss_bytes": 57671680,
+  "elapsed_seconds": 4.743929790973198,
+  "status": "PASS"
+}
