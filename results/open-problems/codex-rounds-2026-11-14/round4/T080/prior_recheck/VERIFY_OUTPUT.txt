@@ -1,0 +1,25 @@
+nice: setpriority: Operation not permitted
+Standard-library independent audit; floating-point checks support the proof.
+nice_priority=20; thread_environment=1; memory_check=peak RSS <768 MiB; cpu_limit_seconds=60
+Earlier density formula: original integral vs conditional second-arrival integral
+density_pairs=24; maximum_absolute_error=3.33e-16
+d=2: loss_constant=1.77245385091; two_integral_errors=4.44e-16,4.44e-16
+d=3: loss_constant=2.70823587885; two_integral_errors=8.88e-16,8.88e-16
+d=4: loss_constant=3.6762501074; two_integral_errors=4.44e-16,4.44e-16
+d=8: loss_constant=7.62756650196; two_integral_errors=8.88e-16,0
+exact_grid_threshold_checks=81; rational_margin_and_pair_distance_checks=PASS
+exact_n_factorial_cancellation=PASS; missing_factorial_negative_control=detected
+truncated_exponential_and_tilt_cases=48; all_bounds=PASS
+Seam example: a=1/4, W=4, L=10; lower <= exact truncated-sum upper <= tilt upper
+d=2, z=1, m=12, M=70: 2.15129845 <= 39.9999939 <= 40
+d=2, z=100, m=12, M=70: 36.3238373 <= 350.162082 <= 353.188808
+d=2, z=1e+06, m=12, M=70: 146.251882 <= 994.868259 <= 997.912634
+d=3, z=1, m=72, M=1155: 4.56459131 <= 400 <= 400
+d=3, z=100, m=72, M=1155: 145.503581 <= 5244.80423 <= 5249.21987
+d=3, z=1e+06, m=72, M=1155: 798.411939 <= 15882.7181 <= 15887.163
+surface d=2: alpha=1.33333333333, m/A=1.3332; kappa=6.36619772368, M/A=6.3668
+surface d=3: alpha=0.888888888889, m/A=0.88871112; kappa=9.54929658551, M/A=9.55120654
+thin_strip W=4/5: maximum_distance_squared_bound=89/100<1, so Z=1
+wider_strip W=9/10: (x,y)=(1/2,89/100) is allowed by that exterior row
+PASS; elapsed_seconds=0.030; peak_rss_mib=15.625
+Wrote density_audit.csv, seam_bounds.csv, verification.json

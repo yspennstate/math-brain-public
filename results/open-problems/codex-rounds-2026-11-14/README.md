@@ -56,5 +56,9 @@ for that result is entirely its authors'. The language-model workers produced th
 in this folder; the coordinating agent chose the rows, wrote the briefs and did the vetting. No result here
 has been refereed.
 
+The `AV_` folders check rows against OpenAI's mathematics release (github.com/openai/math) and hold copies of its
+manuscript and Lean sources, redistributed under the Apache License 2.0; see `THIRD_PARTY.md` and
+`LICENSE-openai-math.txt`.
+
 A small number of files from these rounds are not included because they contain personal names or local
 machine details that could not be scrubbed without changing their content.

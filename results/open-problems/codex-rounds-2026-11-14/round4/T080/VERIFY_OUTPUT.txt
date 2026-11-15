@@ -1,0 +1,19 @@
+nice: setpriority: Operation not permitted
+Finite audits of integrated low-occupation and connected-set bounds.
+nice_priority=20; thread_environment=1; CPU_limit_seconds=60
+periodic_slots d=2: ell=100, rho=1/4, m_0=4225, r=2500, limiting_slot_density=4/9
+periodic_slots d=3: ell=100, rho=1/4, m_0=274625, r=250000, limiting_slot_density=8/27
+tilt_cases=150; all_finite_sums_below_exponent=PASS; independent_Poisson_derivation=PASS
+weighted_graphs=512; exact_low_count_ratio_cases=3072; negative_controls=PASS
+animals d=2: counts=[1, 4, 18, 76, 315]; independent_closed_walk_match=PASS
+animals d=3: counts=[1, 6, 45, 344]; independent_closed_walk_match=PASS
+d=2, z=4096: tau=3.97018440697, tau_lower=3.96521390452, q=0.301919249014
+d=2, z=10000: tau=5.75239897971, tau_lower=5.75036231503, q=0.0508024723399
+d=2, z=1000000: tau=14.9607230588, tau_lower=14.960702687, q=5.09050083408e-06
+exact sufficient threshold d=2: z>=4096, exp(-tau)<=1/36, q<=4/9
+d=3, z=10000: tau=-0.0485486301527, tau_lower=-0.0607624015223, q=37.7908711167
+d=3, z=65536: tau=7.46116054602, tau_lower=7.45929566641, q=0.0206995854069
+d=3, z=1000000: tau=18.3600405725, tau_lower=18.3599183424, q=3.82505947785e-07
+exact sufficient threshold d=3: z>=65536, exp(-tau)<=81/65536, q<=729/16384
+PASS; elapsed_seconds=0.271; peak_rss_mib=16.219
+Wrote animal_counts.csv, contour_bounds.csv, verification.json
