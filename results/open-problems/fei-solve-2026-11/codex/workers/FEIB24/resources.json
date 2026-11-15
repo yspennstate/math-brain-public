@@ -1,0 +1,192 @@
+{
+  "units": [
+    {
+      "unit": "compile_census",
+      "elapsed_seconds": 0.5461950302124023,
+      "command": [
+        "clang++",
+        "-O3",
+        "-std=c++17",
+        "census.cpp",
+        "-o",
+        "census"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "compile_hill",
+      "elapsed_seconds": 0.5946052074432373,
+      "command": [
+        "clang++",
+        "-O3",
+        "-std=c++17",
+        "hill.cpp",
+        "-o",
+        "hill"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "census",
+      "elapsed_seconds": 0.9674382209777832,
+      "command": [
+        "./census"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "npn",
+      "elapsed_seconds": 0.6868500709533691,
+      "command": [
+        "./census",
+        "npn"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "unrestricted",
+      "elapsed_seconds": 0.016666173934936523,
+      "command": [
+        "./census",
+        "unrestricted"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "audit",
+      "elapsed_seconds": 4.424884080886841,
+      "command": [
+        "python3",
+        "analysis.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "hill",
+      "elapsed_seconds": 6.317310333251953,
+      "command": [
+        "./hill"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "structured",
+      "elapsed_seconds": 18.129539251327515,
+      "command": [
+        "python3",
+        "structured.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "paired_hidden",
+      "elapsed_seconds": 0.36672520637512207,
+      "command": [
+        "python3",
+        "paired_hidden.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "profile",
+      "elapsed_seconds": 36.573232889175415,
+      "command": [
+        "python3",
+        "profile_search.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "more_constructions",
+      "elapsed_seconds": 5.099960088729858,
+      "command": [
+        "python3",
+        "more_constructions.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "extra_rules",
+      "elapsed_seconds": 0.43415307998657227,
+      "command": [
+        "python3",
+        "extra_rules.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "proof_checks",
+      "elapsed_seconds": 1.596350908279419,
+      "command": [
+        "python3",
+        "proof_checks.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "interval_census",
+      "elapsed_seconds": 4.937134742736816,
+      "command": [
+        "python3",
+        "interval_census.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "records",
+      "elapsed_seconds": 0.5700271129608154,
+      "command": [
+        "python3",
+        "records.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    },
+    {
+      "unit": "highprecision",
+      "elapsed_seconds": 13.22943902015686,
+      "command": [
+        "python3",
+        "highprecision.py"
+      ],
+      "nice": 10,
+      "governor_status": "ok",
+      "governor_mode": "owner_away_open"
+    }
+  ],
+  "elapsed_seconds": 94.50290107727051,
+  "children_cpu_seconds": 92.509909,
+  "max_child_rss_bytes": 915177472,
+  "parent_nice": 10,
+  "numerical_threads_per_process": 1,
+  "concurrent_units": 1
+}
