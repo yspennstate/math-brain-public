@@ -1,0 +1,17 @@
+nice: setpriority: Operation not permitted
+75-digit log-cosh inequalities: 10; exact signed coefficients: 18
+Independent 65-digit sphere quadratures: 9; max extrapolation error 2.19e-14
+Whole-vector biased determinant comparisons: 24 passed
+Traceback (most recent call last):
+  File "~/codex_op_1114r6/briefs/T247/verify_volume.py", line 228, in <module>
+    main()
+    ~~~~^^
+  File "~/codex_op_1114r6/briefs/T247/verify_volume.py", line 209, in main
+    products = full_products()
+  File "~/codex_op_1114r6/briefs/T247/verify_volume.py", line 167, in full_products
+    sign, logdet = np.linalg.slogdet(J)
+                   ~~~~~~~~~~~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 2325, in slogdet
+    sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+                   ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FloatingPointError: divide by zero encountered in slogdet
