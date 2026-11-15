@@ -1,0 +1,52 @@
+{
+  "seed": 20261113,
+  "replicates": 512,
+  "depth": 18,
+  "alpha": 0.6,
+  "gamma2": [
+    0.5,
+    2.0
+  ],
+  "stable_sampler": [
+    {
+      "q": 0.25,
+      "empirical": 0.645231315334693,
+      "se": 0.0007026885031303773,
+      "exact": 0.6470865115163524
+    },
+    {
+      "q": 1.0,
+      "empirical": 0.3661872301651071,
+      "se": 0.0006496462517891054,
+      "exact": 0.36787944117144233
+    },
+    {
+      "q": 4.0,
+      "empirical": 0.0999950116295806,
+      "se": 0.00032095171144203553,
+      "exact": 0.10052018659672336
+    }
+  ],
+  "critical_derivative_x_median": 0.6284915689298274,
+  "critical_derivative_negative_fraction": 0.0078125,
+  "seneta_heyde_median": 0.48069225820934036,
+  "derivative_converted_median": 0.5014637194438791,
+  "nice": 10,
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "address_space_cap_requested_bytes": 3221225472,
+  "address_space_cap_applied": false,
+  "peak_rss_bytes": 1238302720,
+  "seconds": 11.210700584022561,
+  "utc": "2026-11-13T04:38:38.903430+00:00",
+  "caveats": [
+    "Finite-depth critical convergence is slow.",
+    "Residual errors share a finite empirical terminal sample.",
+    "The chosen bounded-seed dual iteration collapses; critical regimes require renormalization.",
+    "Stable-seeded mass iteration uses exact conditional stable additivity.",
+    "No continuum inference."
+  ]
+}
