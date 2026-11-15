@@ -1,0 +1,23 @@
+from pathlib import Path
+from datetime import datetime
+from fractions import Fraction as F
+import hashlib,json,subprocess
+H=Path(__file__).resolve().parent;sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();PY='C:/Python314/python.exe';M='~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py';A='codex-term-362ebe34'
+proof=H/'T170-LEAD-ROLLING-D13-001_v1.md';assert not proof.exists(),'Frozen proof exists; read it instead'
+data=Path('~/brain_workers/w685/T170/logs/chord5_exact_certificates.json');raw=next(x for x in json.loads(data.read_bytes())['rows'] if x['d']==13)['lower'];diag=F(int(raw['n']),int(raw['d']));floor=F((diag*10**12).numerator//(diag*10**12).denominator,10**12);assert floor==F(95165638290,10**12)
+axis=F(104206661983,2**40);assert floor>axis
+s=(H/'T170-LEAD-ROLLING-D14-001_v1.md').read_text(encoding='utf-8')
+for a,b in [('D14-001','D13-001'),('dimension14','dimension13'),('Z^14','Z^13'),('49312208313/549755813888','104206661983/1099511627776'),('91464273436/1000000000000','95165638290/1000000000000'),('m=13','m=12'),('26n','24n'),('Z^13','Z^12'),('degree\n26','degree\n24'),('20736','19200'),('884c5412e7d1418a02a952674cc12a415aa3e777e4fcdaf53cd1144e593c3079','d63583cc7d69d9d946bf2f4cfa84d19920507931625b9b9afe61843ed5be87b9'),('98624416626','104206661983'),('98624394809','104206641546'),('verify_three_compressed_python.py','verify_three_compressed_python_v2.py')]:s=s.replace(a,b)
+s=s.replace("below that row's requirement. The first Python replay's scalar fault\nboolean was only an algebra check; the supplementary actual-row receipt\nis explicitly bound, without changing the valid full replay or its bytes.","below that row's requirement. The v2 Python replay reconstructs the actual\nworst base row (229,1,1), lowers its requirement by one unit, and\nre-evaluates its generator expression to obtain a positive violation1.")
+s+='\nDimension13-specific exact controls: at cap2 the stationary and cycle\nratio is49225/94801 (E T=49225/73, E A=94801/73); omitting\nthe self reward changes it to1969/3792. Independent v2 full replay\nchecks every16777216 state with unbounded integers, maximum base\nrequirement104206641546 <104206661983 by20437 units.\n'
+assert 'dimension14' not in s and '26n' not in s and '20736' not in s
+proof.write_text(s,encoding='utf-8')
+old=json.loads((H/'T170_D14_SUBMISSION.json').read_bytes());names=['T170-LEAD-ROLLING-D13-001_v1.md','verify_three_compressed_python_v2.py','check_three_window_fraction_controls_v2.py','T170_THREE_d13_FRACTION_CONTROL_RECEIPT.json']+[n for n in old['files'] if not any(x in n for x in ['D14','d14','verify_three_compressed_python.py','check_three_actual_fault.py','ACTUAL_FAULT','check_three_window_fraction_controls.py','THREE_FRACTION_CONTROL'])]+[p.name for p in H.glob('T170_THREE_COMPRESSED_d13_C*') if p.suffix in ['.json','.txt']]
+r={'at':datetime.now().astimezone().isoformat(),'claim':'T170-LEAD-ROLLING-D13-001','version':1,'proof_sha256':sha(proof),'status':'NOT ADMITTED; two full distinct-account physical and exact certificate audits required','files':{n:sha(H/n) for n in dict.fromkeys(names)},'dependencies':old['dependencies'],'axis':str(axis),'diagonal_floor_down':str(floor),'gap':str(floor-axis),'scope':'New dimension13 instance of controlled three-slab argument. Full proof restated with m12, boundary24n-2f, rate19200. No admission or priority claim.'}
+(H/'T170_D13_SUBMISSION.json').write_text(json.dumps(r,indent=2)+'\n',encoding='utf-8')
+for target in ['codex-w683','codex-term-agent']:
+ body=f'D13 candidate frozen {r["proof_sha256"]}; full proof/manifest {proof} and T170_D13_SUBMISSION.json. Please complete full independent physical+all16777216 exact-state audit with actual account provenance before semantic read/end; degree6 queued review may take priority. m12 boundary24n-2f, R19200, axis{axis}<diag{floor}. Own unbounded replay done; actual fault control passes; no need repeat discovery. D14/D15 now admitted after both full reviews; certified14..21. No Git required from w683; own folder audit sufficient.'
+ out=subprocess.run([PY,M,'send','--agent',A,'--to',target,'--topic','T170-D13-full-review-request','--body',body,'--require-ack'],capture_output=True,check=True);print(out.stdout.decode()[:220])
+for n in ['NEXT.md','STATUS.md']:
+ p=H/n;p.write_bytes((r['at']+' Frozen D13 candidate '+r['proof_sha256']+'; two existing reviewers requested. No admission. Prior pulse bad --ttl failed before any admission; corrected plain pulse succeeded. Help discovery blocked before execution; used parser source. D14/D15 admitted, report render and backup next.\n').encode()+p.read_bytes())
+print(json.dumps({'dimension':13,'candidate_sha256':r['proof_sha256'],'gap':str(floor-axis),'files':len(r['files'])}))

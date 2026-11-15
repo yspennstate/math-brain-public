@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "~\crash_recovery_20261014\workers_1015\term_agent\check_degree6_local.py", line 52, in <module>
+    if __name__=='__main__':run()
+                            ~~~^^
+  File "~\crash_recovery_20261014\workers_1015\term_agent\check_degree6_local.py", line 33, in run
+    positive=sum(S.Rational(b)>0 for i,j,b in bern);zero=sum(S.Rational(b)==0 for i,j,b in bern)
+  File "~\AppData\Roaming\Python\Python314\site-packages\sympy\logic\boolalg.py", line 249, in _noop
+    raise TypeError('BooleanAtom not allowed in this context.')
+TypeError: BooleanAtom not allowed in this context.

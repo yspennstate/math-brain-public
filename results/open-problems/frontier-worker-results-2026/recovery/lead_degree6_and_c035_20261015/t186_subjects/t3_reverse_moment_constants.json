@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Exact rational substitution into the C035 analytic moment proof; no independent proof audit or finite transfer.",
+  "at": "2026-10-15T14:35:26.372783+00:00",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "cases": [
+    {
+      "k": 4,
+      "c": "11",
+      "H": "91",
+      "terminal_probability_lower": "1/1024",
+      "eta": "1/1360313450496",
+      "moment_power": "1360313450497/1360313450496",
+      "weighted_moment_upper": "99372",
+      "reverse_weighted_contraction_upper": "181/182",
+      "tail_bound": "weighted E[r*1{r>L}] <= weighted_moment_upper / L^eta",
+      "negative_half_gap_control": "rejected coefficient2eta; criterion only"
+    },
+    {
+      "k": 4,
+      "c": "12",
+      "H": "89",
+      "terminal_probability_lower": "1/2048",
+      "eta": "1/6289241407488",
+      "moment_power": "6289241407489/6289241407488",
+      "weighted_moment_upper": "95052",
+      "reverse_weighted_contraction_upper": "177/178",
+      "tail_bound": "weighted E[r*1{r>L}] <= weighted_moment_upper / L^eta",
+      "negative_half_gap_control": "rejected coefficient2eta; criterion only"
+    }
+  ],
+  "source_sha256": {
+    "logs\\t3_cascade_rate_rational_verify.json": "37f9039f2a24f5410b383259d06a604c808635c407d4a0ed1351d439b028d339",
+    "logs\\t3_cascade_rate_k4_c11.json": "970dd261894a1b31538ae4c2d51fa46e85c4018f298ccf57334da00262cfc205",
+    "logs\\t3_cascade_rate_k4_c12.json": "fa17d4f581e39f8dea118bc0932c9e4c24b014c5e93417cc003f0b49a8d4745c"
+  },
+  "script_sha256": "d2f3b3b7902c8e33b65aebcde5b4d07f5371bf4d62faabc95ae9f0cd27368daf"
+}

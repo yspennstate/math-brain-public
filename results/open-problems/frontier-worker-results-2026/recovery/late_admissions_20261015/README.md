@@ -1,0 +1,1 @@
+Degree6 Potts admission: five exact version1 claims, two full independent actual accounts, complete fresh Bayes replay and local polynomial check. Retained scoped prior fusion/moment premises; no priority or full problem claim. Prior lead evidence archived in2f55cb047f8e9c168ae37360e0fdced3d722c85c.
