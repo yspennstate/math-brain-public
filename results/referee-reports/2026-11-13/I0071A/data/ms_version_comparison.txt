@@ -1,0 +1,233 @@
+VERSION 1 PDF PAGE 8
+We make the following assumption on the initial data.
+
+Assumption 0. For each i ∈ {1, ..., m}, ui0 (x) ∈ L∞ (D) and ui0 (x) ≥ 0.
+
+
+3.1     Assumptions on f
+                                                       
+We assume the following for f (a) = f1 (a), ..., fm (a) : Rm → Rm .
+
+Assumption 1 (Locally Lipschitz). For every R > 0 there exists LR > 0 such that, whenever
+||x||2 , ||y||2 ≤ R,
+                            |fi (x) − fi (y)| ≤ LR ||x − y||2 ,
+
+VERSION 1 PDF PAGE 8
+                                      fi (a1 , ..., ai−1 , 0, ai+1 , ..., am ) ≥ 0.
+
+Assumption 3 (Triangular mass control). For any a1 , ..., am ≥ 0 there exist constants
+C1 , ..., Cm ∈ R such that, if a = (a1 , ..., am ) :
+
+                            f1 (a) ≤ C1 (1 + a1 + ... + am ),
+                            f1 (a) + f2 (a) ≤ C2 (1 + a1 + ... + am ),
+                                      ..                                                                   (8)
+                                       .
+                            f1 (a) + ... + fm (a) ≤ Cm (1 + a1 + ... + am ).
+
+
+
+VERSION 1 PDF PAGE 10
+
+for any i ∈ {1, ..., m}.
+Assumption 7 (Linear Growth). For any a ∈ [0, ∞)m , i ∈ {1, ..., m} and k ∈ {1, ..., r} :
+
+                                 |σik (a)| ≤ C(1 + a1 + ... + am ).
+
+
+3.3    Assumptions on the noise Ẇ
+Definition 1. Let L : D × D → R be a symmetric, positive–definite generalized function. A
+white-in-time, colored-in-space Gaussian noise with spatial covariance kernel L is a centered
+
+                                                     10
+
+VERSION 1 PDF PAGE 11
+where d ≥ 1 is the spatial dimension.
+
+Assumption 10 (Heat kernel convolution singularity). There exist constants C > 0 and
+η ∈ (0, 1) such that for all t ∈ (0, T ],
+                         Z Z
+                   sup              G(t, x, y1 )G(t, x, y2 )L(y1 , y2 ) dy1 dy2 ≤ Ct−η .             (12)
+                   x∈D      D   D
+
+
+Assumption 11 (Integrability). The kernel L : D × D → R is integrable in the sense that:
+                                                     Z
+                                              sup            L(y1 , y2 )dy2 < ∞.
+
+VERSION 1 PDF PAGE 11
+
+
+Assumption 11 (Integrability). The kernel L : D × D → R is integrable in the sense that:
+                                                     Z
+                                              sup            L(y1 , y2 )dy2 < ∞.
+                                             y1 ∈D   D
+
+
+These assumptions are satisfied, for instance, by the Riesz kernel,
+
+                                                 1
+                            L(x, y) =                  ,         x, y ∈ D,       0 < β < d,
+
+VERSION 1 PDF PAGE 23
+along with the truncated global solution (5). We write un (t, x) = (u1,n (t, x), u2,n (t, x)) .
+
+Theorem 5.1. Under Assumptions 0-11, for any fixed time horizon T > 0
+
+                                   sup E sup sup sup |ui,n (t, x)|p < ∞.
+                                   n∈N    t∈[0,T ] x∈D i=1,2
+
+
+In particular, system (32) has a unique global mild solution.
+
+Proof. In view of our Introduction, system (32) admits a truncated global mild solution
+(u1,n (t, x), u2,n (t, x)) given by
+
+VERSION 1 PDF PAGE 24
+
+
+Assumption 3 (triangular mass control) in this two dimensional case reduces to
+
+                                f1,n (a1 , a2 ) ≤ C1 (1 + a1 + a2 ),                                         (37)
+                                f1,n (a1 , a2 ) + f2,n (a1 , a2 ) ≤ C2 (1 + a1 + a2 ),                       (38)
+
+for any a1 , a2 ≥ 0. By Remark 2, ui,n (t, x) are non negative a.e. Therefore, applying (37) to
+
+
+
+
+
+VERSION 1 PDF PAGE 31
+
+
+Theorem 6.1. Under Assumptions 0-11, for any fixed time horizon T > 0
+
+                               sup E sup sup sup |ui,n (t, x)|p < ∞.
+                               n∈N     t∈[0,T ] x∈D i=1,...,m
+
+
+In particular, system (53) has a unique global mild solution.
+
+Proof. Set
+                                 U (t, x) := u1,n (t, x) + ... + um,n (t, x)
+
+VERSION 2 PDF PAGE 9
+We make the following assumption on the initial data.
+
+Assumption 0. For each i ∈ {1, ..., m}, ui0 (x) ∈ L∞ (D) and ui0 (x) ≥ 0.
+
+
+3.1     Assumptions on f
+                                                               m
+We assume the following for f (a) = f1 (a), ..., fm (a) : Rm
+                                                           + → R .
+
+Assumption 1 (Locally Lipschitz). For every R > 0 there exists LR > 0 such that, whenever
+||x||2 , ||y||2 ≤ R,
+
+VERSION 2 PDF PAGE 9
+for all i ∈ {1, ..., m}.
+
+Assumption 3 (Triangular mass control). For any a1 , ..., am ≥ 0 there exist constants
+C1 , ..., Cm ∈ R such that, if a = (a1 , ..., am ) then
+
+                            f1 (a) ≤ C1 (1 + a1 + ... + am ),
+                            f1 (a) + f2 (a) ≤ C2 (1 + a1 + ... + am ),
+                            ..                                                                             (10)
+                             .
+                            f1 (a) + ... + fm (a) ≤ Cm (1 + a1 + ... + am ).
+
+                                                           9
+
+VERSION 2 PDF PAGE 11
+for any i ∈ {1, ..., m}.
+
+Assumption 7 (Linear Growth). For any i ∈ {1, ..., m}, k ∈ {1, ..., r} and a = (a1 , ..., am ) ∈
+[0, ∞)m ,
+                          |σik (a)| ≤ C(1 + a1 + ... + am ).
+
+
+
+                                                     11
+
+VERSION 2 PDF PAGE 12
+where d ≥ 1 is the spatial dimension.
+
+Assumption 10 (Heat kernel convolution singularity). For any i ∈ {1, ..., m} and k ∈
+{1, ..., r}, there exist constants C > 0 and η ∈ (0, 1) such that for all t ∈ (0, T ],
+                        Z Z
+                  sup             Gi (t, x, y1 )Gi (t, x, y2 )Lk (y1 , y2 ) dy1 dy2 ≤ Ct−η .   (14)
+                  x∈D   D     D
+
+
+Assumption 11 (Integrability). For any k ∈ {1, ..., r}, the kernels Lk : D × D → R are
+integrable in the sense that     Z
+                                           sup         Lk (y1 , y2 )dy2 < ∞.
+
+VERSION 2 PDF PAGE 12
+
+
+Assumption 11 (Integrability). For any k ∈ {1, ..., r}, the kernels Lk : D × D → R are
+integrable in the sense that     Z
+                                           sup         Lk (y1 , y2 )dy2 < ∞.
+                                           y1 ∈D   D
+
+These assumptions are satisfied, for instance, by the Riesz kernel,
+
+                                                   1
+                            L(x, y) =                     ,    x, y ∈ D,   0 < β < d,
+                                            ||x − y||β2
+
+VERSION 2 PDF PAGE 18
+Corollary 4.2 (Hölder continuity). For the truncated global solutions as defined in (7),
+ui,n (t, ·) ∈ C θ (D) almost surely for every t > 0 and for any θ < 1 − η, where η was given in
+Assumption 10.
+
+Proof. The proof is a direct consequence of Proposition 4.1 and Lemma 2.
+
+    The next lemma was proved in [40] for a single stochastic convolution. A trivial modifi-
+cation of the proof allows one to obtain the following for (15).
+                                                                         d
+Lemma 3 (Theorem 1 in [40]). Let p be large enough such that d+2  p
+                                                                     + p−2  < 1 − η, where η
+is given in Assumption 10, and consider the stochastic convolution as defined in (15). Then,
+
+VERSION 2 PDF PAGE 25
+
+
+Assumption 3 (triangular mass control) in this two dimensional case reduces to
+
+                               f1,n (a1 , a2 ) ≤ C1 (1 + a1 + a2 ),                                               (38)
+                               f1,n (a1 , a2 ) + f2,n (a1 , a2 ) ≤ C2 (1 + a1 + a2 ),                             (39)
+
+for any a1 , a2 ≥ 0. By Corollary 4.1, ui,n (t, x) are nonnegative a.e. Therefore, applying (38)
+to the first equation of (37) gives
+
+                    ∂t v1,n (t, x) − d1 ∆v1,n (t, x) ≤ C1 (1 + u1,n (t, x) + u2,n (t, x)).
+
+
+VERSION 2 PDF PAGE 29
+
+
+Theorem 5.1. Under Assumptions 0-11, for any fixed time horizon T > 0,
+
+                                    sup E sup sup sup |ui,n (t, x)|p < ∞.
+                                    n∈N    t∈[0,T ] x∈D i=1,2
+
+
+In particular, system (33) admits a unique global mild solution.
+
+Proof. Let µ > 0 be given by the polynomial growth of fi (Assumption 4). Lemma 5 showed
+us that for any µp ≥ 1, there exists a sufficiently small time Tµp such that
+
+VERSION 2 PDF PAGE 31
+in (7).
+
+Theorem 5.2. Under Assumptions 0-11, for any fixed time horizon T > 0,
+
+                                  sup E sup sup sup |ui,n (t, x)|p < ∞.
+                                  n∈N        t∈[0,T ] x∈D i=1,...,m
+
+
+In particular, system (53) has a unique global mild solution.
+
+Proof. Fix p > 1 + d/2. Set

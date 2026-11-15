@@ -1,0 +1,41 @@
+versions: numpy 2.2.3 sympy 1.13.1 scipy 1.15.2 clarabel 0.11.1
+
+EXACT SPECTRAL CHECKS
+P5 charpoly = z*(z - 1)*(z + 1)*(2*z**2 - 1)/2 ; lambda2 = sqrt(2)/2 ; tau2 = sqrt(2) + 2 ; minpoly(tau2) = z**2 - 4*z + 2
+P6 charpoly = (z - 1)*(z + 1)*(4*z**2 - 2*z - 1)*(4*z**2 + 2*z - 1)/16 ; lambda2 = 1/4 + sqrt(5)/4 ; tau2 = sqrt(5) + 3 ; minpoly(tau2) = z**2 - 6*z + 4
+P6 independent tree-cut ratios = [9/5, 21/5, 5, 21/5, 9/5] ; end-to-end unit energy = 50
+C5 charpoly = (z - 1)*(4*z**2 + 2*z - 1)**2/16 ; lambda2 = -1/4 + sqrt(5)/4 ; tau2 = sqrt(5)/5 + 1 ; minpoly(tau2) = 5*z**2 - 10*z + 4
+K4 charpoly = (z - 1)*(3*z + 1)**3/27 ; lambda2 = -1/3 ; tau2 = 3/4 ; minpoly(tau2) = 4*z - 3
+Petersen charpoly = (z - 1)*(3*z - 1)**5*(3*z + 2)**4/19683 ; lambda2 = 1/3 ; tau2 = 3/2 ; minpoly(tau2) = 2*z - 3
+
+SMALL QP ATTEMPTS (exact algebra plus independent SLSQP)
+singular_unconstrained ; rational minimizer = (1/2, 1/2) ; exact minimum = -1 ; g-min = (x + y - 1)**2 ; numerical = -1
+strip_no_optimal_vertex ; rational minimizer = (1/2, 1) ; exact minimum = -1/4 ; g-min = (2*x - 1)**2/4 ; numerical = -0.25
+optimal_affine_face_no_vertices ; rational minimizer = (1, 0) ; exact minimum = 1 ; g-min = (x - 1)*(x + 1) ; numerical = 1
+flat_objective_lineality ; rational minimizer = (2, -1) ; exact minimum = 0 ; g-min = 0 ; numerical = 0
+Excluded convex QCQP: min x subject to x^2 <= 2 has optimum -sqrt(2).
+Excluded open feasible set: min x subject to x > 0 has infimum 0, unattained.
+
+COUNTEREXAMPLES TO AUXILIARY SENTENCES
+Triangle chain pi=(1/3,1/3,1/3), c_e=1/6: lengths (4,1,1), C(lengths)=1; shortest distances (2,1,1), C=2/3.
+Squared Euclidean triangle: distances d01=1, d12=1, d02=4 > 1+1.
+K2,3 graph metric: sum alpha = 0 ; alpha^T d alpha = 12 > 0 (not negative type).
+
+INDEPENDENT LP / SDP OPTIMA
+name | congestion | metric_max | abs_gap_i | 2tau | SDP_max | abs_gap_ii | SDP_dual_minus_primal
+weighted5 edges (i,j,w) = [(0, 2, 3), (0, 3, 2), (0, 4, 3), (1, 2, 2), (1, 3, 4), (1, 4, 3), (2, 3, 1), (2, 4, 4), (3, 4, 4)]
+P3 | 1.5 | 1.5 | 0 | 2 | 1.99999999989 | 1.06177067138e-10 | -4.29849489336e-11
+P5 | 3.75 | 3.75 | 0 | 6.82842712475 | 6.82842712471 | 3.54036799877e-11 | -2.08464356888e-11
+P6 | 5 | 5 | 8.881784197e-16 | 10.472135955 | 10.4721359536 | 1.41322686886e-09 | -3.61547236594e-10
+C3 | 1.33333333333 | 1.33333333333 | 0 | 1.33333333333 | 1.33333333333 | 4.4408920985e-16 | 9.42106392898e-11
+C4 | 2 | 2 | 0 | 2 | 1.99999999986 | 1.43512979278e-10 | 1.42756917398e-11
+C5 | 2.4 | 2.4 | 0 | 2.894427191 | 2.89442719046 | 5.44821077142e-10 | 1.6024070959e-11
+C6 | 3 | 3 | 8.881784197e-16 | 4 | 3.99999999818 | 1.81895654094e-09 | -1.18523413306e-10
+star4 | 1.66666666667 | 1.66666666667 | 2.22044604925e-16 | 2 | 1.99999999912 | 8.80914008405e-10 | 3.94198007569e-11
+star6 | 1.8 | 1.8 | 4.4408920985e-16 | 2 | 1.99999999992 | 8.18674017466e-11 | -2.49786857864e-11
+K4 | 1.5 | 1.5 | 2.22044604925e-16 | 1.5 | 1.5 | 1.33226762955e-15 | 1.47493572911e-10
+weighted5 | 2.05128205128 | 2.05128205128 | 0 | 2.26654241454 | 2.26654241417 | 3.69620778429e-10 | -4.21045420751e-11
+maximum residuals: flow, metric, SDP C=1, negative Gram eigenvalue, negative dual eigenvalue: [1.2177758801357186e-15, 2.6645352591003757e-15, 7.713829575095588e-13, 1.650854088482877e-10, 1.6145674902549327e-10]
+elapsed_seconds = 0.359
+peak_RSS_bytes_on_macOS = 116031488
+ALL INDEPENDENT CHECKS PASSED

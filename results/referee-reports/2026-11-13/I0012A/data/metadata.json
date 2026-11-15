@@ -1,0 +1,15 @@
+{
+  "seed_scheme": "explicit in code/simulate.cpp",
+  "environments_per_gamma": 32,
+  "pairs_per_environment": 8,
+  "T": 131072,
+  "threads": 1,
+  "nice": 10,
+  "step_pairs": 100663296,
+  "law": "H=floor(U^(-1/gamma)); P(H>=k)=k^(-gamma), k>=1; C=1",
+  "cap": 131073,
+  "cap_reason": "Unreachable by time T, so no path transition through time T is changed.",
+  "initial_collision_counted": false,
+  "guides": "quenched asymptotic orders; amplitudes aligned at final means, no exact constants claimed",
+  "peak_resident_memory": "not measured; simulation uses sparse tooth maps and constant path state; raw CSV under 1 MB"
+}

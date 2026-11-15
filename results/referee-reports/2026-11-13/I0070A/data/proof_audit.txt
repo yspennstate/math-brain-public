@@ -1,0 +1,65 @@
+I0070 proof audit, 2026-11-13; exact algebra, no simulation.
+
+1. Put E=(X0,X1)_{1/2,2} and a_j=2 beta_j-1.
+   Reiteration: X_{beta_j,1}=(E,X1)_{a_j,1}.
+   Criticality is a_j(rho_j+1)<=1.
+   Highest growth interpolation gives E exponent (1-a_j)(rho_j+1)
+   and X1 exponent a_j(rho_j+1).
+   If equality holds, the latter is 1 and the former is rho_j>0.
+   Independent expansion: 2 beta_j(rho_j+1)<=rho_j+2;
+   2(1-beta_j)(rho_j+1)>=rho_j; subtracting from rho_j+1
+   gives a_j(rho_j+1)<=1. Same sign and threshold.
+
+2. For q with 1-1/q>max beta_j, E_q=(X0,X1)_{1-1/q,q}
+   embeds in every X_{beta_j,1} and in E. Hence the cutoffs are
+   locally Lipschitz on E_q. Use rho'=0, beta' between 1-1/q and 1
+   to verify Assumption 4.1 for the modified high-q equation.
+   No unjustified preservation of the original growth exponents is needed.
+
+3. Small-ball radius depends on N,q,T and fixed operator constants,
+   not on ||y||_{X1}, for y with ||y||_E<=N. The additive bound may
+   depend on y. This uniformity is necessary for the countable cover.
+
+4. Stopped MR estimates must include nonzero initial data and Bu.
+   For e(t)=exp(-(t-s)A)xi, write v=e+z, and give z the forcing
+   g+B e. The sign is positive. Then dz+A z=f+(B z+g+B e)dW.
+   Omitting B e is an error when B is nonzero.
+
+5. Absorb epsilon times the *solution L^q norm*, with a deterministic
+   epsilon satisfying K_{q,T} epsilon<1/2. No pathwise MR estimate
+   is asserted. Apply the estimate in L^q(Omega x dt), after stopping.
+
+6. Fatou gives finite L^q norm to a possible explosion time.
+   Small linear growth then gives finite L^q nonlinear forcing to that
+   time; solve the linear equation with forcing killed at explosion.
+   The linear solution is continuous in E_q and yields the trace limit.
+   Apply the printed survey Theorem 5.1(1), not a claimed blow-up
+   criterion based on the L^q norm alone.
+
+7. Restart at deterministic times in a countable dense subset of a
+   full-Lebesgue-measure set where 1_{s<sigma}u(s) lies in X1 a.s.
+   Do not assume all rational times have X1-valued data. Localize
+   their E_q norms by F_s-measurable events for moment estimates.
+
+8. Compare stopped original and cutoff equations only until exit from
+   their equality ball, where local L^2 pathwise uniqueness applies.
+   The high-q solution embeds into the energy class on finite intervals.
+   Original E-continuity then covers every t in (0,sigma), not merely
+   almost every t, by an interval carrying a high-q solution.
+
+9. Use countably many q tending to infinity and theta tending to 1/2,
+   then Hilbert-scale interpolation and finite-interval embeddings.
+   Sobolev embedding with q>1/epsilon gives C^{theta-epsilon}.
+   There is no theta=1/2 claim, no t=0 gain, and no global moment claim.
+
+10. Final initial-data construction uses an auxiliary positive self-adjoint
+    reference A_* with D(A_*)=X1, available for any dense Hilbert couple,
+    rather than needing to infer any additional calculus for A.
+    With e'= -A_* e, the equation for z=v-e has drift
+    f+(A_*-A)e and noise g+B e+B z. Both signs checked by substitution.
+    This reference is not a self-adjointness assumption on the principal part.
+
+11. Full-energy-domain time Sobolev failure in the 2026 note is compatible
+    with the result: X_{1-theta} is rougher than X1. For constant additive
+    noise the all-q integrability assertion also follows directly from
+    the available all-q linear estimates; it is not a contradiction.
