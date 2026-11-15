@@ -1,0 +1,35 @@
+
+PART B  exact Norm(Delta) and its valuations.  Lemma 7 claims v_p >= 4 E_p for p > H, p not dividing 2d, chi(p) = -1
+        (classes sigma, sigma*tau); the same replacement works for class id.  Class tau is not covered: control.
+d=13 N=4 H=2  M=256  S1=1124 S2=886  max a1=16  Norm(Delta) != 0: True  bits=22164  CRT primes=1498  check prime agrees: True  [303s]
+    p= 3  class tau        4E_p=1192  v_p=1176  
+    p= 5  class sigma*tau  4E_p= 556  v_p= 712  holds
+    p= 7  class sigma      4E_p= 296  v_p= 328  holds
+    p=11  class sigma*tau  4E_p=  80  v_p= 104  holds
+    p=13  class ramified   4E_p=  32  v_p=1544  
+    (1/4) log|Norm| = 3840.7   sum over admissible p of E_p log p = 415.7   over all usable p = 415.7   bound (5.1) = 10253.7   order holds: True
+d=-7 N=4 H=2  M=256  S1=1124 S2=886  max a1=16  Norm(Delta) != 0: True  bits=20191  CRT primes=1408  check prime agrees: True  [877s]
+    p= 3  class sigma*tau  4E_p=1192  v_p=1844  holds
+    p= 5  class sigma*tau  4E_p= 556  v_p= 652  holds
+    p= 7  class ramified   4E_p= 296  v_p=1848  
+    p=11  class tau        4E_p=  80  v_p=   4  
+    p=13  class sigma*tau  4E_p=  32  v_p=  32  holds
+    (1/4) log|Norm| = 3498.7   sum over admissible p of E_p log p = 571.6   over all usable p = 571.6   bound (5.1) = 9631.6   order holds: True
+d=5 N=4 H=3  M=256  S1=1524 S2=740  max a1=21  Norm(Delta) != 0: True  bits=20802  CRT primes=1516  check prime agrees: True  [2103s]
+    p= 3  class sigma*tau  4E_p=1712  v_p=2256  (p <= H, not covered)
+    p= 5  class ramified   4E_p= 864  v_p=1792  
+    p= 7  class sigma      4E_p= 500  v_p= 508  holds
+    p=11  class tau        4E_p= 200  v_p=   4  
+    p=13  class sigma*tau  4E_p= 120  v_p= 120  holds
+    p=17  class sigma      4E_p=  36  v_p=  40  holds
+    p=19  class tau        4E_p=  12  v_p=   0  
+    (1/4) log|Norm| = 3604.7   sum over admissible p of E_p log p = 345.7   over all usable p = 345.7   bound (5.1) = 10378.1   order holds: True
+d=13 N=4 H=1  M=256  S1=753 S2=1105  max a1=12  Norm(Delta) != 0: True  bits=20433  CRT primes=1395  check prime agrees: True  [3019s]
+    p= 3  class tau        4E_p= 716  v_p=1284  
+    p= 5  class sigma*tau  4E_p= 276  v_p= 548  holds
+    p= 7  class sigma      4E_p= 112  v_p= 164  holds
+    p=11  class sigma*tau  4E_p=   8  v_p=  72  holds
+    p=13  class ramified   4E_p=   0  v_p=1584  
+    (1/4) log|Norm| = 3540.6   sum over admissible p of E_p log p = 170.3   over all usable p = 170.3   bound (5.1) = 9532.0   order holds: True
+Lemma 7 inequality: 12 cases tested, 0 failures
+done in 3019 s

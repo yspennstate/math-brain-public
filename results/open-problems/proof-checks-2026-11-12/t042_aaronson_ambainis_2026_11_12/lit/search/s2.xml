@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/z2jmI3NkNU8tVkhgUG97A4S4k9s</id>
+  <title>arXiv Query: search_query=abs:"bounded polynomial" AND abs:influence AND abs:quantum&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-11-11T23:41:50Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22bounded+polynomial%22+AND+(abs:influence+AND+abs:quantum)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2611.12795v1</id>
+    <title>A short proof of the Aaronson-Ambainis Conjecture via the completion framework</title>
+    <updated>2026-11-09T18:01:58Z</updated>
+    <link href="https://arxiv.org/abs/2611.12795v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.12795v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a short proof of the Aaronson-Ambainis conjecture. If a partial Boolean function $f$ is defined on a $δ$-fraction of all $n$-bit strings and have quantum query complexity $Q(f)$, then, for every $0&lt;ε&lt;1$, a deterministic algorithm computes $f$ correctly on at least a $1-ε$ fraction of its domain using $O( Q(f)^6 / (εδ)^2)$ queries. Our proof uses the completion framework and establishes a more general bound in terms of the classical adversary measure. The only result we use from Turturean's recent proof is a special case of his certificate inequality, for which we provide a self-contained proof.
+  We also derive the stronger variant of the Aaronson-Ambainis Conjecture, the bounded-polynomial influence conjecture, from our main result in the appendix.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-09T18:01:58Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Thomas Huffstutler</name>
+    </author>
+    <author>
+      <name>David Miloschewsky</name>
+    </author>
+    <author>
+      <name>Supartha Podder</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.09773v1</id>
+    <title>A proof of the Aaronson-Ambainis conjecture</title>
+    <updated>2026-11-06T17:36:58Z</updated>
+    <link href="https://arxiv.org/abs/2611.09773v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.09773v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Aaronson and Ambainis conjectured that every bounded polynomial of low degree on the discrete cube has an influential variable. They showed that the conjecture implies that the acceptance probability of every quantum algorithm making $T$ queries can be approximated on most inputs by a classical algorithm making $\mathrm{poly}(T)$ queries. We prove their conjecture: every function $f\colon\{-1,1\}^n\to[-1,1]$ of degree at most $d\ge1$ has a variable of influence at least $c\,\operatorname{Var}(f)^{5/2}/d^{6}$, where $c&gt;0$ is an absolute constant. In the original formulation, for polynomials of degree at most $d$ with values in $[0,1]$ on $\{0,1\}^n$ and variance at least $\varepsilon$, this gives a variable of influence at least $(\varepsilon/d)^{7}$. The proof is elementary, with steps inspired by works of others. Thus, as Aaronson and Ambainis anticipated, superpolynomial quantum speedups in the query model require structure, such as a promise on the inputs.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-06T17:36:58Z</published>
+    <arxiv:comment>60 pages. Lean formalization and reproducibility materials: https://github.com/physical-superintelligence/aaronson-ambainis</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>David Turturean</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.05201v1</id>
+    <title>Optimal inequalities for completely bounded polynomials and the limitations of quantum query algorithms</title>
+    <updated>2026-09-04T14:34:56Z</updated>
+    <link href="https://arxiv.org/abs/2609.05201v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.05201v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the problem of establishing limitations on the power of quantum query algorithms via the completely bounded polynomial method. In particular, we prove several optimal functional inequalities involving different notions of completely bounded polynomials. These inequalities lead to limiting theorems for the power of quantum query algorithms that improve on prior works.
+  1. An optimal root-influence bound for block-multilinear polynomials. Prior work showed that block-multilinear polynomials $p$ of degree $t$ satisfy a root-influence bound, $\|p\|_{\text{cb}}\geq \sum_i \sqrt{\mathrm{Inf}_i[p]}/t^2$, which is stronger than the bound appearing in the Aaronson-Ambainis conjecture. We find the optimal constant in that inequality: $\|p\|_{\text{cb}}\geq \sum_i \sqrt{\mathrm{Inf}_i[p]}/t$. Since the amplitudes of quantum algorithms that query disjoint blocks of inputs-such as $t$-fold forrelation- are block-multilinear polynomials with $\|p\|_{\text{cb}}\leq 1,$ our inequality shows that they satisfy $t\geq \sum_i\sqrt{\mathrm{Inf}_i[p]}$. We prove that this inequality yields both a more efficient classical simulation than prior results based on the Aaronson-Ambainis argument, and a qualitative improvement: all classical queries are nonadaptive.
+  2. Optimal Fourier growth of the highest level of quantum query algorithms. We show that for every polynomial $p$ defined on $\{-1,1\}^n$ of degree $2t$, the Fourier Growth at the level $2t,$ namely $\|\widehat p_{2t}\|_{\ell_1}$, satisfies $\|\widehat p_{2t}\|_{\ell_1}\leq (en/(2t-1))^{\frac{2t-1}{2}}\|p\|_{\text{cb}}$. This is optimal up to the factor $e$, as witnessed by $2t$-fold forrelation. As quantum query algorithms that make $t$ queries (to the whole input) satisfy $\|p\|_{\text{cb}}\leq 1$, this yields a Fourier growth bound for these algorithms, partially resolving a question by Girish (STOC, 2026).</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-04T14:34:56Z</published>
+    <arxiv:comment>30 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Francisco Escudero Gutiérrez</name>
+    </author>
+    <author>
+      <name>Miquel Saucedo</name>
+    </author>
+    <author>
+      <name>Carlos Palazuelos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.06713v2</id>
+    <title>Influences of Fourier Completely Bounded Polynomials and Classical Simulation of Quantum Algorithms</title>
+    <updated>2023-06-28T12:39:58Z</updated>
+    <link href="https://arxiv.org/abs/2304.06713v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.06713v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a new presentation of the main result of Arunachalam, Briët and Palazuelos (SICOMP'19) and show that quantum query algorithms are characterized by a new class of polynomials which we call Fourier completely bounded polynomials. We conjecture that all such polynomials have an influential variable. This conjecture is weaker than the famous Aaronson-Ambainis (AA) conjecture (Theory of Computing'14), but has the same implications for classical simulation of quantum query algorithms.
+  We prove a new case of the AA conjecture by showing that it holds for homogeneous Fourier completely bounded polynomials. This implies that if the output of $d$-query quantum algorithm is a homogeneous polynomial $p$ of degree $2d$, then it has a variable with influence at least $Var[p]^2$.
+  In addition, we give an alternative proof of the results of Bansal, Sinha and de Wolf (CCC'22 and QIP'23) showing that block-multilinear completely bounded polynomials have influential variables. Our proof is simpler, obtains better constants and does not use randomness.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-13T17:58:36Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Francisco Escudero Gutiérrez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.00212v1</id>
+    <title>Influence in Completely Bounded Block-multilinear Forms and Classical Simulation of Quantum Algorithms</title>
+    <updated>2022-03-01T03:42:24Z</updated>
+    <link href="https://arxiv.org/abs/2203.00212v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.00212v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Aaronson-Ambainis conjecture (Theory of Computing '14) says that every low-degree bounded polynomial on the Boolean hypercube has an influential variable. This conjecture, if true, would imply that the acceptance probability of every $d$-query quantum algorithm can be well-approximated almost everywhere (i.e., on almost all inputs) by a $\mathrm{poly}(d)$-query classical algorithm. We prove a special case of the conjecture: in every completely bounded degree-$d$ block-multilinear form with constant variance, there always exists a variable with influence at least $1/\mathrm{poly}(d)$. In a certain sense, such polynomials characterize the acceptance probability of quantum query algorithms, as shown by Arunachalam, Briët and Palazuelos (SICOMP '19). As a corollary we obtain efficient classical almost-everywhere simulation for a particular class of quantum algorithms that includes for instance $k$-fold Forrelation. Our main technical result relies on connections to free probability theory.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-01T03:42:24Z</published>
+    <arxiv:comment>21 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Nikhil Bansal</name>
+    </author>
+    <author>
+      <name>Makrand Sinha</name>
+    </author>
+    <author>
+      <name>Ronald de Wolf</name>
+    </author>
+  </entry>
+</feed>

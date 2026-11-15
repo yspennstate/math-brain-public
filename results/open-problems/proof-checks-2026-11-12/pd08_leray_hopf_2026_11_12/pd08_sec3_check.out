@@ -1,0 +1,40 @@
+PASS  thresholds  r^(2 mu - 6) integrable at infinity iff mu < 5/2; r^(2 lambda - 4) iff lambda < 3/2
+PASS  shell exponents  -5(j-k)/2 with cancellation, -3(j-k)/2 without, -3(k-j)/2 inward; heat-div: extra -k
+PASS  weighted shell sums  geometric for mu < 5/2
+PASS  heat kernel sup  s^(3/2) e^-s <= 0.4099, s^(5/2) e^-s <= 0.8112
+PASS  (3.6) B_T  B_T = (1/r) d(r W_T)/dr
+PASS  heat evolution of one column  horizontal and vertical factors solve the heat equation; eta(0) is the Gaussian of variance b^2 l^2
+PASS  Gaussian suprema  sup r e^{-r^2/4T} = sqrt(2T) e^-1/2, sup |z| e^{-z^2/2D} = sqrt(D) e^-1/2
+PASS  axial factor bounds  D >= T, b l/sqrt(D) <= 1, ||eta'||_inf = b l e^-1/2/D <= 1/(b l)
+PASS  (3.8) first bound  sum of c_coup <= 16A/(3t); largest ratio 0.2705
+PASS  Hilbert-Schmidt and B_T norms  2 int rho Omega^2 = 2 T^-3; ||B_T||^2 in L^2(r dr) = 2 T^-3; sup |B_T| = 2 T^-2
+PASS  pressure primitive bound  ||p_v|| = 0.8756 <= sqrt2 T^-3/2 ||v_theta|| = 1.1708
+PASS  (3.10)  sup |v_r|/|k| = 0.1878 <= ||v_z||/sqrt2 = 0.3444
+PASS  one summand over an interval  2Ah/(l^2 + h) and at most 2 sqrt2 A l |k|
+PASS  constant parts  R >= 2: 10.3235 A and 8.3235 A, both below 12 A
+PASS  (3.8) second bound  exact integrals, 135 cases, R = 2, 3, e^2; largest ratio to the bound 0.7929
+PASS  maximisation in |k| sqrt h  max of 4 zeta log x - x^2/2 is 2 zeta log(4 zeta/e), so Phi <= 2 log K_Q
+PASS  active set and d_Q  u < 64A/(3 k^2); 64A/3 <= 24A <= d_Q
+PASS  convolution kernel G_l  int G = b l/sqrt(D) <= 1, int |q| G = sqrt(2/pi) b l/D
+PASS  shear multiplier  sup A l^2 W_T = L_l/sqrt(e)
+PASS  (3.16) constant  1 + K (d + 2) + K/sqrt(e) <= K (d + 4) for K >= 1
+PASS  (3.17)  L_l mu_l <= (2A/(sqrt(pi) b)) l (l^2 + t)^-3/2; sum <= 10/(3t), largest ratio 0.4328
+PASS  (3.18) bracket  b_0 - (2 b_0 - k^2/2)_+/2 <= k^2/4, 20000 random cases
+PASS  (3.20)  E^1/2 <= K M t^1/4/kappa solves the comparison equation; int D <= 2 K^2 M^2 sqrt(t)/(3 kappa^2)
+PASS  Beta integrals  powers t^-1/4 and t^-1/2 with B(kappa, 1/2), B(kappa, 1/4)
+PASS  last interval and interpolation  h_0 >= (t - s)/(8 (1 + A)); ||v||_inf <= C ||v||_2^1/4 ||grad^2 v||_2^3/4 is scale invariant
+PASS  (3.9) linearisation  (V . grad) v + (v . grad) V = -2 Omega v_theta e_r + B_T v_r e_theta for axisymmetric v
+PASS  (3.19) linearisation  M_Q v = -[(Q . grad) v + (v . grad) Q] in the stated Cartesian form
+PASS  (3.25)  d_r P = Q_theta Q~_theta/r, so (Q . grad) Q + grad P_Q = (d_z P_Q) e_z
+PASS  norms in the residual bound  variance D D~/(D + D~) >= D/2; ||d_z Gaussian||^2 = sqrt(pi)/(2 sigma); horizontal norm^2 = 2 pi T T~/(T + T~)
+PASS  f(u, v)  the rescaled factor is t^-3/4 f(u, v) and the three bounds hold with C = 1
+PASS  (3.26)  sum over ordered pairs, R = 2: 1.0265, 1.0265, 1.0265, 1.0265, 1.0265 (same at t and 4t)
+PASS  contraction  8 L^2 M <= 1: the ball of radius 2 L M is mapped into itself, Lipschitz constant 4 L^2 M <= 1/2
+PASS  K_Q for R = e^{rho A}  zeta_Q = 1/rho, K_Q = e^{12A + c_Q(rho)}
+PASS  (3.23) scaling  R Q_l(R^2 t, R x) = Q_{l/R}(t, x); radii -I..J become -(I+1)..(J-1)
+PASS  exponents  (3.28): t^-1/2 t^-1/4; Q e and e^2 are O(t^-1/4) in L^2; (3.29): Holder with 4/3 and 4
+PASS  (3.14) on a concrete array  0 <= Phi <= 2 log K_Q (largest Phi/(2 log K_Q) = 0.426); active set below 64A/(3 k^2)
+PASS  k d_k Phi  -64A/3 <= k d_k Phi <= Phi, so |k d_k Phi| <= d_Q (range found -0.175 d_Q to 0.008 d_Q)
+PASS  (3.15) on a concrete array  B_l |m(k)/m(k') - 1| <= K_Q (d_Q + 2) L_l |k - k'|, both signs, l = 1
+38 lines
+ALL PASS

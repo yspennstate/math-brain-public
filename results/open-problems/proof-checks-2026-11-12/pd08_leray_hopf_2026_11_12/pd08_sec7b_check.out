@@ -1,0 +1,15 @@
+int_{R^2} (1 + |xi_h|^2)^(-3 + al - de) d xi_h, al = 1.6, de = 0.3 (= pi/(2 - al + de))      got 4.48798950513  stated 4.48798950513  PASS
+|xi_h|^2 + k^2 <= (1 + |xi_h|^2)(1 + k^2); (1 + k^2)^((1+al)/2) <= (1 + |k|)^(1+al)          PASS
+|1 - cos y| <= 2 |y|^al and 1 - e^{-u} <= u^(al/2) for al = 1.6                              PASS
+sqrt(L) pi int (1 - e^{-r^2/(4L)})^2 dr/(r sqrt(1 + r^2)) for L = 1 .. 1e6 in [1.525, 1.631] PASS
+int dz/(a + z^2) at a = 2.7 (= pi/sqrt a)                                                    got 1.91191240318  stated 1.91191240318  PASS
+int_0^inf rho^2 (rho^2 + d + s)^-2 ds (= l^2/(l^2 + t_f))                                    got 0.000827472072817  stated 0.000827472072818  PASS
+int_0^inf rho^2 (rho^2 + d + s)^(-3/2) ds (= 2 l^2/(R sqrt(l^2 + t_f)))                      got 0.00230126513807  stated 0.00230126514466  PASS
+int_0^inf rho (rho^2 + d + s)^(-3/2) ds (= 2 l/sqrt(l^2 + t_f))                              got 0.0575316284516  stated 0.0575316286165  PASS
+int_0^inf rho (rho^2 + d + s)^-2 ds (= R l/(l^2 + t_f))                                      got 0.0206868018204  stated 0.0206868018204  PASS
+sup_r r e^{-r^2/(4T)} at T = 1.9 (= sqrt(2T/e))                                              got 1.18234588073  stated 1.18234592081  PASS
+Gamma_tr'(t) at t = 0.37 t_* (= 2 A R^2/(R^2 + t)^2)                                         got 788.302491664  stated 788.302495447  PASS
+Gamma_tr' >= A/(2 R^2) on [t_f, t_*] and Gamma_tr(t_*) <= 2 A t_p (A = 400)                  PASS
+int_0^t e^{-(n-1) A (t-u)/R^2} du, t = 40 (= R^2 (1 - e^{-(n-1) A t/R^2})/((n-1) A))         got 6.23961526704  stated 6.23961526704  PASS
+4 - 3/2 = 5/2 and 4 - 3/2 - 1 = 3/2; (R/b)(R^(5/2) + R^(3/2)) <= 2 R^(7/2)/b                 PASS
+ALL PASS

@@ -1,0 +1,71 @@
+== 1. Romik's table: gluing conditions
+x(0) = [1.0269563e-15 0.0000000e+00]  A(0) = [1. 0.]
+  break t1 = 0.039177364790084  |x jump| 4.72e-16  |x' jump| 2.22e-15
+  break t2 = 0.681301509382725  |x jump| 2.22e-16  |x' jump| 6.66e-16
+  break t3 = 0.889494817412172  |x jump| 1.89e-15  |x' jump| 3.77e-15
+  break t4 = 1.531618962004813  |x jump| 6.66e-16  |x' jump| 6.44e-15
+  (43) |x(phi) - B(pi/2-theta)| = 1.03e-15   (44) |x(pi/2-phi) - D(theta)| = 3.33e-15
+  x(pi/2) = (-1.227526458860500, 5.551e-17)
+  symmetry: max |x1(pi/2-t) + x1(t) - x1(pi/2)| = 3.55e-15, max |x2(pi/2-t) - x2(t)| = 1.89e-15
+== 2. Arm lengths f = 1 - <x',u>, g = 1 + <x',v> (injectivity condition asks f, g > 1 on (0, pi/2))
+  f(0) = 0.000e+00 + 1, g(0) = 2.420644844145, f(pi/2) = 2.420644844145, g(pi/2) = 1 + 0.000e+00
+  min f on interior grid = 1.000019 at t = 0.000008 ; min g = 1.000019 at t = 1.570788
+  smallest (f-1)/t near 0: 2.416620 ; f increasing: True ; g decreasing: True
+  x1(t) strictly decreasing: True
+== 3. Romik's balance equations on each interval (max abs residual; a small number means the equation holds)
+  I1: holds: (21)v <A',v>=0; (22)u <-C',u>=<D',u>
+      residuals: 1.6e-15 1.4e+00 2.4e+00 1.0e+00 5.0e-01 5.0e-01 9.4e-02 7.8e-16
+      <A',u> max abs 9.8e-17 ; <A',v> range [-0.00000, 0.00000] ; <-B',v> range [1.00000, 1.00000] ; <-C',u> range [0.50000, 0.50000]
+  I2: holds: (17) <A',v>=<x',v>; (19) <-C',u>=<D'-x',u>
+      residuals: 1.4e+00 6.7e-16 4.0e-01 1.8e+00 8.7e-01 4.5e-01 1.4e-15 7.4e-01
+      <A',u> max abs 5.0e-16 ; <A',v> range [0.94488, 1.39912] ; <-B',v> range [-0.39912, 0.05512] ; <-C',u> range [0.86820, 0.54729]
+  I3: holds: (17) <A',v>=<x',v>; (18) <-C',u>=<-x',u>
+      residuals: 9.4e-01 7.8e-16 2.6e-01 8.9e-01 9.4e-01 7.8e-16 2.6e-01 8.9e-01
+      <A',u> max abs 4.4e-16 ; <A',v> range [0.73660, 0.94469] ; <-B',v> range [0.05531, 0.26340] ; <-C',u> range [0.94469, 0.73660]
+  I4: holds: (20) <A',v>=<-B'+x',v>; (18) <-C',u>=<-x',u>
+      residuals: 8.7e-01 4.5e-01 4.6e-15 7.4e-01 1.4e+00 8.9e-16 4.0e-01 1.8e+00
+      <A',u> max abs 5.8e-16 ; <A',v> range [0.54729, 0.86820] ; <-B',v> range [0.13180, 0.45271] ; <-C',u> range [1.39912, 0.94488]
+  I5: holds: (22)v <A',v>=<-B',v>; (21)u <-C',u>=0
+      residuals: 5.0e-01 5.0e-01 9.4e-02 7.8e-16 1.9e-15 1.4e+00 2.4e+00 1.0e+00
+      <A',u> max abs 5.7e-16 ; <A',v> range [0.50000, 0.50000] ; <-B',v> range [0.50000, 0.50000] ; <-C',u> range [0.00000, -0.00000]
+== 4. Baek (1.9), (1.10), (1.11) evaluated on Gerver's sofa
+  I1: max(lhs-rhs of 1.9) = -2.399e+00 ; max(<A',v> - k0(g)) = -1.399e+00 ; min(f' - m0(g)) = +1.399e+00 ; |f' - (g-<A',v>)| fd 1.4e-10
+  I2: max(lhs-rhs of 1.9) = +8.882e-16 ; max(<A',v> - k0(g)) = +1.110e-15 ; min(f' - m0(g)) = -1.110e-15 ; |f' - (g-<A',v>)| fd 1.5e-11
+  I3: max(lhs-rhs of 1.9) = -5.527e-02 ; max(<A',v> - k0(g)) = -2.763e-02 ; min(f' - m0(g)) = +2.763e-02 ; |f' - (g-<A',v>)| fd 4.4e-11
+  I4: max(lhs-rhs of 1.9) = +4.441e-15 ; max(<A',v> - k0(g)) = +2.220e-15 ; min(f' - m0(g)) = -2.220e-15 ; |f' - (g-<A',v>)| fd 2.3e-11
+  I5: max(lhs-rhs of 1.9) = -4.742e-06 ; max(<A',v> - k0(g)) = -2.371e-06 ; min(f' - m0(g)) = +2.371e-06 ; |f' - (g-<A',v>)| fd 6.4e-10
+  overall: (1.9) violated by at most +4.441e-15 ; (1.10) margin +2.220e-15 ; (1.11) margin -2.220e-15
+== 5. The iteration f_{n+1} = max(f_n, F f_n), F f(x) = 1 + int_0^x m0(f(pi/2-u)) du  (Def. 6.5.1, 6.5.2)
+  n= 1  min f_n = 0.000000  min over x>0.001 of (f_n - 1) = -1.000000  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = -3.41e-13
+  n= 2  min f_n = 0.095870  min over x>0.001 of (f_n - 1) = -0.904130  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = -3.41e-13
+  n= 3  min f_n = 0.226514  min over x>0.001 of (f_n - 1) = -0.773486  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n= 4  min f_n = 0.442906  min over x>0.001 of (f_n - 1) = -0.557094  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n= 5  min f_n = 0.746745  min over x>0.001 of (f_n - 1) = -0.253255  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n= 6  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.000323  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n= 7  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.000699  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n= 8  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.000956  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n= 9  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.001001  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n=10  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.001001  min(f_G - f_n) = +0.000000  min(f_n - j_{(n-1)/12}) = +0.00e+00
+  n=11  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.001001  min(f_G - f_n) = +0.000000
+  n=12  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.001001  min(f_G - f_n) = +0.000000
+  n=20  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.001001  min(f_G - f_n) = +0.000000
+  n=40  min f_n = 1.000000  min over x>0.001 of (f_n - 1) = +0.001001  min(f_G - f_n) = +0.000000
+  after 40 steps: f_n(pi/2) = 2.315840, f_G(pi/2) = 2.420645, max(f_G - f_n) = 0.104804
+== 6. Lemma 6.5.3: the two minima
+  case 1: minimiser c = 7/6 - pi/4  value = -3*pi**2/32 - 1/8 + 3*pi/8 = 0.1278218324940451
+  case 2: minimiser c = 5/3 - pi/2  value = -3*pi**2/16 - 1/2 + 3*pi/4 = 0.005643664988090187
+  numeric: min over c in [0,2/3], x in [0,pi/2] of F j_c(x) - j_{c+1/12}(x) = -0.000000
+== 7. Area of the shape cut out by the rotating hallway (column method, no structural assumption)
+  Hammersley's sofa: 2.20743024  (exact pi/2 + 2/pi = 2.20741610)
+  Gerver's sofa:     2.21954620  (literature 2.21953166...)
+  Gerver's sofa, finer grid: 2.21953898
+  thinnest interior column of the shape: 0.009472 at X = -2.2271 (connected if positive)
+== 8. Area from the boundary curves (Green's theorem; uses the description in Theorem 8.4.1)
+  A(0) = (1.000000, 0.000000), A(pi/2) = (0.193118, 1.000000), C(0) = (-1.420645, 1.000000), C(pi/2) = (-2.227526, 0.000000)
+  niche corners: D(0) = (-1.420645, 0.00e+00), B(pi/2) = (0.193118, -5.55e-17); |B(t3)-x(t1)| = 5.6e-16, |x(t4)-D(t2)| = 3.3e-15
+  |K| = 2.860972951, |N| = 0.641441282, |K| - |N| = 2.219531669
+  difference from the column method (finer grid): -7.31e-06
+== 9. How close the core's endpoints come to the inner walls (Gerver's remark, quoted in Remark 8.4.1)
+  point x(phi): smallest clearance from the inner quadrant over t in (theta, pi/2]: 0.000000 at t = 0.889494 (pi/4 = 0.785398)
+  at t = pi/4: distances of x(phi) to the two inner-wall lines: 0.001238 and -0.862608
+done

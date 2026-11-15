@@ -1,0 +1,56 @@
+model transition: output below a_- at a_- and above a_+ at a_+ for every stage                           PASS
+clipped terminal amplitude is a_- at the left end and a_+ at the right end                               PASS
+bisection finds a parameter with terminal value 1.37 and no clipping acted on that orbit                 PASS
+the unclipped orbit from the same parameter has the same terminal value                                  got 1.37  stated 1.37  PASS
+||Q_l||_q ratio between (l, b) = (0.3, 5) and (1, 2), q = 1.0 (= (5/2)^(1/q) 0.3^(3/q - 1))              got 0.225  stated 0.225  PASS
+||Q_l||_q ratio between (l, b) = (0.3, 5) and (1, 2), q = 2.0 (= (5/2)^(1/q) 0.3^(3/q - 1))              got 0.866025403784  stated 0.866025403784  PASS
+||Q_l||_q ratio between (l, b) = (0.3, 5) and (1, 2), q = 2.5 (= (5/2)^(1/q) 0.3^(3/q - 1))              got 1.13396657763  stated 1.13396657763  PASS
+3/q - 1 > 0 exactly for q < 3                                                                            PASS
+max of s^4 e^{-s^2/4} (at s^2 = 8, = 64 e^-2)                                                            got 8.66145733702  stated 8.66145812714  PASS
+rho = 0.013: sum_{l_n >= rho} l_n^-2 <= rho^-2/(1 - R^-2) and sum_{l_n < rho} l_n^2 <= rho^2/(1 - R^-2)  PASS
+rho = 0.400: sum_{l_n >= rho} l_n^-2 <= rho^-2/(1 - R^-2) and sum_{l_n < rho} l_n^2 <= rho^2/(1 - R^-2)  PASS
+rho = 1.000: sum_{l_n >= rho} l_n^-2 <= rho^-2/(1 - R^-2) and sum_{l_n < rho} l_n^2 <= rho^2/(1 - R^-2)  PASS
+exponent |x_h|^2/(4 l^2) + z^2/(2 b^2 l^2) >= rho^2/(4 l^2) since 1/2 >= 1/4; |x_h| <= rho               PASS
+volume of the ellipsoid rho < a, b = 3, a = 0.7 (= 4 pi b a^3/3)                                         got 4.31026512073  stated 4.31026512073  PASS
+sum_{n > N} l_n^(1/2) at R = 4.7, N = 5 (= l_{N+1}^(1/2)/(1 - R^(-1/2)))                                 got 0.0178785264705  stated 0.0178785264705  PASS
+scaling of the input: -1 + 3/2 = 1/2; ||J_eta||_2 exponent -2 + 3/4 = -5/4                               PASS
+|D_n| at l = 0.2 (= 6 pi l^3)                                                                            got 0.150796447372  stated 0.150796447372  PASS
+on D_n with b = 1 the n-th summand is at least e^-3/2/l (A = 1)                                          PASS
+6 pi l^3 (e^-3/2/l)^3 (= 6 pi e^-9/2)                                                                    got 0.20939965148  stated 0.20939965148  PASS
+D_n and J_n are disjoint for R > 2: 2 l_{n+1} < l_n and c_0 A R/(2 l_n) > c_0 A/l_n                      PASS
+logarithmic length of J_n (= log 2)                                                                      got 0.69314718056  stated 0.69314718056  PASS
+(c_0 A/(2 l)) (6 pi l^3)^(1/3) with c_0 A = 1 (= (6 pi)^(1/3)/2)                                         got 1.33067003949  stated 1.33067003949  PASS
+exponents: (3/2)(4/3) = 2; 1 - 3/4 = 1/4; 10/3 and 5/3 from energy interpolation (2 + 4/3, half of it)   PASS
+interpolation L^3 between L^2 and L^(10/3): theta/2 + (1 - theta) 3/10 at theta = 1/6 (= 1/3)            got 0.333333333333  stated 0.333333333333  PASS
+(9.12): 3/2 times 4/3 = 2 and 1/4 + 3/4 = 1                                                              PASS
+(9.15): l_n^(1/2) <= t_p^(-1/4) t^(1/4) and l_n^-1 <= R sqrt(t_p) t^(-1/2) on T_n <= t <= R^2 T_n        PASS
+(9.16) exponent at q = 2: (1/4)(2/q) - (1/2)(1 - 2/q) (= (3/q - 1)/2)                                    got 0.25  stated 0.25  PASS
+(9.16) exponent at q = 3: (1/4)(2/q) - (1/2)(1 - 2/q) (= (3/q - 1)/2)                                    got -2.77555756156e-17  stated 0  PASS
+(9.16) exponent at q = 7: (1/4)(2/q) - (1/2)(1 - 2/q) (= (3/q - 1)/2)                                    got -0.285714285714  stated -0.285714285714  PASS
+||Q_l(t)||_q ratio between (l, b, t) = (0.3, 2, 0.5) and (1, 3, 0.1), q = 2 (stated formula)             got 0.0541221958313  stated 0.0541221958313  PASS
+||Q_l(t)||_q ratio between (l, b, t) = (0.3, 2, 0.5) and (1, 3, 0.1), q = 3 (stated formula)             got 0.0704130133544  stated 0.0704130133544  PASS
+||Q_l(t)||_q ratio between (l, b, t) = (0.3, 2, 0.5) and (1, 3, 0.1), q = 5 (stated formula)             got 0.0869110402861  stated 0.0869110402861  PASS
+heat flow of x_1 e^{-|x|^2/(4 l^2)} at (0.9, 0), l = 0.8, t = 0.35 (= (l^2/(l^2+t))^2 x_1 e^{-x_1^2/(4 (l^2+t))}) got 0.306548436912  stated 0.306548436912  PASS
+b >= 1 and q >= 1: (b^2 l^2 + 2t)^(-1/2 + 1/(2q)) <= (l^2 + t)^(-1/2 + 1/(2q)); exponents add to -2 + 3/(2q) PASS
+q = 2: sum_n l_n^3 (l_n^2 + t)^(-2 + 3/(2q)) / stated profile stays bounded for t down to 4e-14 (max 1.856) PASS
+q = 3: sum_n l_n^3 (l_n^2 + t)^(-2 + 3/(2q)) / stated profile stays bounded for t down to 4e-14 (max 0.323) PASS
+q = 6: sum_n l_n^3 (l_n^2 + t)^(-2 + 3/(2q)) / stated profile stays bounded for t down to 4e-14 (max 1.141) PASS
+(9.18) at p = 1.9, q = 1e+09: p (1 - 3/q)/2 < 1 iff 2/p + 3/q > 1                                        PASS
+(9.18) at p = 4.0, q = 5.9: p (1 - 3/q)/2 < 1 iff 2/p + 3/q > 1                                          PASS
+(9.18) at p = 2.5, q = 14: p (1 - 3/q)/2 < 1 iff 2/p + 3/q > 1                                           PASS
+int_0^inf min(|E|, M^3 lam^-3) d lam at M = 1.7, |E| = 0.4 (= (3/2) M |E|^(2/3))                         got 1.38435298446  stated 1.38435298446  PASS
+(9.21): 1/3 = (2/3)/2 + (1/3)/inf and (1/4)(2/3) - (1/2)(1/3) = 0                                        PASS
+(9.23): powers of l_n: -1 - 3/2 + 3 = 1/2; ||psi_n||_2: -3/2 + 3/2 = 0                                   PASS
+test replacement: 2 sqrt(E_A) times a_- l_1^(1/2)/(4 sqrt(E_A)) = a_- l_1^(1/2)/2                        PASS
+the chosen w is divergence free (max |div w| on the grid 1.1e-16)                                        PASS
+-int (w . grad) v . w against int (w . grad) w . v (grid sums, equal)                                    got 216  stated 216  PASS
+Young: a b <= a^2/2 + b^2/2                                                                              PASS
+chi_seed beta > 6 rho with chi_seed = 1/16 is beta/16 > 6 rho; (A.1) at p = 3 has the factor 3 of (9.8)  PASS
+heat powers: (3/2)(1/3 - 1/4) = 1/8; (3/2)(1/3) = 1/2; (3/4) 0 + (1/4)(1/2) = 1/8                        PASS
+kernel powers: 1/2 + (3/2)(1/2 - 1/4) = 7/8 and 1/2 + (3/2)(1/2 - 1/3) = 3/4; Lorentz product 1/3 + 1/6 = 1/2 PASS
+int_0^1 (1 - s)^(-7/8) s^(-1/4) ds (= B(1/8, 3/4))                                                       got 8.47262689579  stated 8.47262689579  PASS
+int_0^t (t - s)^(-7/8) s^(-1/4) ds at t = 0.37 (= t^(-1/8) B(1/8, 3/4)): exponent 1 - 7/8 - 1/4          got -0.125  stated -0.125  PASS
+with 3/4 in place of 7/8 the power of t is 1 - 3/4 - 1/4 (= 0) and the constant is B(1/4, 3/4) = pi sqrt 2 got 4.44288293816  stated 4.44288293816  PASS
+fixed point on the ball of radius 2 X: X + C (2X)^2 <= 2X and Lipschitz constant 4 C X < 1 once 4 C X <= 1/2 PASS
+(A.16): 1/4 + 1/4 = 1/2 leaves half of the dissipation; a b <= a^2/4 + b^2                               PASS
+ALL PASS

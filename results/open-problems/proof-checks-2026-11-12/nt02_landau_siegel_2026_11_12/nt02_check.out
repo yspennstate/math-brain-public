@@ -1,0 +1,62 @@
+PART A  retained rows by weight a1 + H(a2+a3); U = N^(4/3); ideal W/(H^(2/3)U) for independent monomials = 6^(1/3) = 1.817
+  d   N    M  H  same_set  Wmax/(H^.667U)  maxa1/T1  max(a2+a3)/(96H^-.333U)  S1/(M H^.667 U)  S2/(M H^-.333 U)  H*S2/S1
+  13   2    16  1  True               1.587     0.050                    0.008            0.446             0.397    0.889   [0s]
+  13   2    16  2  True               1.250     0.039                    0.010            0.344             0.438    1.273   [0s]
+  13   3    81  1  True               1.849     0.058                    0.012            0.471             0.579    1.230   [0s]
+  13   3    81  2  True               1.456     0.045                    0.012            0.422             0.593    1.404   [0s]
+  13   4   256  1  True               1.890     0.059                    0.015            0.463             0.680    1.467   [3s]
+  13   4   256  2  True               1.587     0.050                    0.014            0.436             0.687    1.577   [4s]
+  13   4   256  4  True               1.562     0.049                    0.016            0.429             0.662    1.544   [5s]
+  13   5   625  1  True               1.871     0.058                    0.016            0.447             0.747    1.670   [18s]
+  13   5   625  2  True               1.621     0.051                    0.015            0.434             0.748    1.723   [26s]
+  13   5   625  4  True               1.625     0.051                    0.015            0.439             0.720    1.639   [37s]
+  13   6  1296  2  True               1.676     0.052                    0.017            0.441             0.780    1.768   [117s]
+  -7   3    81  2  True               1.456     0.045                    0.012            0.422             0.593    1.404   [117s]
+  -7   4   256  2  True               1.587     0.050                    0.014            0.436             0.687    1.577   [117s]
+   5   3    81  2  True               1.456     0.045                    0.012            0.422             0.593    1.404   [117s]
+   5   4   256  3  True               1.590     0.050                    0.014            0.451             0.657    1.457   [118s]
+
+PART C  smallest t with evaluation onto for degrees (t,t,t); counting needs (t+1)^3 >= N^4; (3.1) asks (t-3N+4)^3 > (4N-3)^4
+  N=2  M=  16  smallest t found =  2   counting bound =  2   t from (3.1) =  11   t/N^(4/3) = 0.79   [118s]
+  N=3  M=  81  smallest t found =  4   counting bound =  4   t from (3.1) =  24   t/N^(4/3) = 0.92   [118s]
+  N=4  M= 256  smallest t found =  6   counting bound =  6   t from (3.1) =  39   t/N^(4/3) = 0.94   [119s]
+  N=5  M= 625  smallest t found =  8   counting bound =  8   t from (3.1) =  55   t/N^(4/3) = 0.94   [122s]
+
+PART B  exact Norm(Delta) and its valuations.  Lemma 7 claims v_p >= 4 E_p for p > H, p not dividing 2d, chi(p) = -1
+        (classes sigma, sigma*tau); the same replacement works for class id.  Class tau is not covered: control.
+d=13 N=3 H=1  M=81  S1=165 S2=203  max a1=8  Norm(Delta) != 0: True  bits=3600  CRT primes=255  check prime agrees: True  [148s]
+    p= 3  class tau        4E_p= 128  v_p= 204  
+    p= 5  class sigma*tau  4E_p=  44  v_p=  64  holds
+    p= 7  class sigma      4E_p=   8  v_p=  20  holds
+    p=11  class sigma*tau  4E_p=   0  v_p=   8  holds
+    p=13  class ramified   4E_p=   0  v_p= 328  
+    (1/4) log|Norm| = 623.8   sum over admissible p of E_p log p = 21.6   over all usable p = 21.6   bound (5.1) = 1819.4   order holds: True
+d=13 N=3 H=2  M=81  S1=235 S2=165  max a1=10  Norm(Delta) != 0: True  bits=3864  CRT primes=274  check prime agrees: True  [168s]
+    p= 3  class tau        4E_p= 220  v_p= 188  
+    p= 5  class sigma*tau  4E_p=  84  v_p=  92  holds
+    p= 7  class sigma      4E_p=  32  v_p=  52  holds
+    p=11  class sigma*tau  4E_p=   0  v_p=  12  holds
+    p=13  class ramified   4E_p=   0  v_p= 324  
+    (1/4) log|Norm| = 669.5   sum over admissible p of E_p log p = 49.4   over all usable p = 49.4   bound (5.1) = 1962.2   order holds: True
+d=-7 N=3 H=2  M=81  S1=235 S2=165  max a1=10  Norm(Delta) != 0: True  bits=3480  CRT primes=256  check prime agrees: True  [204s]
+    p= 3  class sigma*tau  4E_p= 220  v_p= 288  holds
+    p= 5  class sigma*tau  4E_p=  84  v_p=  88  holds
+    p= 7  class ramified   4E_p=  32  v_p= 356  
+    p=11  class tau        4E_p=   0  v_p=   0  
+    p=13  class sigma*tau  4E_p=   0  v_p=   0  holds
+    (1/4) log|Norm| = 602.9   sum over admissible p of E_p log p = 94.2   over all usable p = 94.2   bound (5.1) = 1838.4   order holds: True
+d=5 N=3 H=2  M=81  S1=235 S2=165  max a1=10  Norm(Delta) != 0: True  bits=3221  CRT primes=247  check prime agrees: True  [227s]
+    p= 3  class sigma*tau  4E_p= 220  v_p= 288  holds
+    p= 5  class ramified   4E_p=  84  v_p= 360  
+    p= 7  class sigma      4E_p=  32  v_p=  36  holds
+    p=11  class tau        4E_p=   0  v_p=   0  
+    p=13  class sigma*tau  4E_p=   0  v_p=   4  holds
+    (1/4) log|Norm| = 558.1   sum over admissible p of E_p log p = 76.0   over all usable p = 76.0   bound (5.1) = 1771.1   order holds: True
+d=13 N=3 H=3  M=81  S1=327 S2=133  max a1=14  Norm(Delta) != 0: True  bits=4405  CRT primes=310  check prime agrees: True  [262s]
+    p= 3  class tau        4E_p= 344  v_p= 188  
+    p= 5  class sigma*tau  4E_p= 152  v_p= 188  holds
+    p= 7  class sigma      4E_p=  80  v_p=  92  holds
+    p=11  class sigma*tau  4E_p=  16  v_p=  40  holds
+    p=13  class ramified   4E_p=   8  v_p= 328  
+    (1/4) log|Norm| = 763.3   sum over admissible p of E_p log p = 109.7   over all usable p = 109.7   bound (5.1) = 2229.8   order holds: True
+(stopped by its pid before the N=4 case, which needs about 2200 determinants of size 256)

@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yKrl7eBLd+pA1rx9LuqPxO28E9o</id>
+  <title>arXiv Query: search_query=all:"zero divisor conjecture"&amp;id_list=&amp;start=0&amp;max_results=20</title>
+  <updated>2026-11-11T22:50:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22zero+divisor+conjecture%22&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
+  <opensearch:totalResults>23</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.20306v1</id>
+    <title>The zero divisor and augmentation conjectures for medial quandle rings</title>
+    <updated>2026-10-14T14:55:08Z</updated>
+    <link href="https://arxiv.org/abs/2610.20306v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.20306v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For quandle rings, Bardakov--Passi--Singh and Elhamdadi--Nunez--Singh respectively formulated an analogue of Kaplansky's zero divisor conjecture and a weakened analogue of Kaplansky's idempotent conjecture involving the augmentation map. In this note, we verify these conjectures for medial quandles. The latter holds for a larger class of quandles; we characterize integral domains over which the statement holds for this class. We also characterize integral domains of characteristic 0 over which the statement holds for a given finite Alexander quandle.</summary>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-14T14:55:08Z</published>
+    <arxiv:comment>12 pages + references. Comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.RA"/>
+    <author>
+      <name>Luc Ta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.17662v1</id>
+    <title>Zero divisors in group algebras of torsion-free groups in odd characteristic</title>
+    <updated>2026-10-13T03:41:21Z</updated>
+    <link href="https://arxiv.org/abs/2610.17662v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.17662v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A recent preprint constructs a finitely presented torsion-free group $G$ with a finite two-dimensional classifying space such that $\mathbb F_2[G]$ contains nonzero zero divisors. We extend this to every odd prime $p$: there is a finitely presented torsion-free group $G_p$, again with a finite two-dimensional classifying space, such that $\mathbb F_p[G_p]$ contains nonzero elements $α,β$ with $αβ=0$. Together with the case $p=2$, Kaplansky's zero-divisor conjecture therefore fails over every field of positive characteristic. The new ingredients are a signed version of the parity cancellation, made possible by a bipartite random model on one side; a type design built from the projective plane over $\mathbb F_{p^3}$ with $p$ additional letters, which makes every cross-intersection congruent to $1$ modulo $p$; and a squared-word decay estimate for this design, proved with an explicit test vector. The geometric part of the argument is taken from the characteristic-two construction. The characteristic-zero case remains open.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-13T03:41:21Z</published>
+    <arxiv:comment>14 pages, submitted to IJAC</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>S. V. Ivanov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.22380v1</id>
+    <title>A Machine-Checked Proof that Gardam's $\tilde{A}_2$ Lattice Does Not Have Unique Products</title>
+    <updated>2026-09-17T23:50:08Z</updated>
+    <link href="https://arxiv.org/abs/2609.22380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.22380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kaplansky's zero-divisor conjecture asserts that the group ring of a torsion-free group over a field has no zero divisors. It holds for every group with the unique-product property, so a counterexample can only come from a torsion-free group without unique products. In lectures in 2021, Gardam announced that the torsion-free $\tilde{A}_2$ lattice $Γ= \langle a, b \mid a b a^2 b^{-1} a^2 b^{-2}, a b^3 a b^4 a^{-1} b \rangle$ does not have unique products and presented it as a new candidate group: it has property (T), and the known methods for proving the conjecture do not apply to it. To our knowledge, no proof of the announcement has been published. We give a proof checked by the Lean 4 kernel and stated against Mathlib's UniqueProds class. The witness is an explicit pair of finite subsets with $|A| = 32$ and $|B| = 28$ in which each of the 896 products coincides with another product. For 658 products the certificate is an identity in the free group; the other 238 certificates are explicit products of conjugated relators, 970 conjugates in all, checked by free reduction. A homomorphism onto $\mathbb{Z}/42$ shows that each pair $(u,v)$ differs from its partner $(u',v')$ as a pair of group elements, which is all the theorem requires. Together with a homomorphism onto the alternating group $A_4$ it also shows that the listed words are pairwise distinct, so the sets have exactly 32 and 28 elements. The witness and certificates come from an untrusted search program and are re-checked by Lean. The development uses only the axioms propext, Classical.choice and Quot.sound, with no sorry and no native_decide. The mathematical statement is Gardam's. To our knowledge this is the first verification in a proof assistant of a unique-product failure in a torsion-free group; torsion-freeness of $Γ$ is taken from Gardam and is not formalized here.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-17T23:50:08Z</published>
+    <arxiv:comment>10 pages, 1 table. Use of an LLM is disclosed in Section 10. Lean 4 sources and certificates: https://github.com/ibrahimmian36/Karanos</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Ibrahim Mian</name>
+    </author>
+    <author>
+      <name>Shayaan Siddique</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.19606v1</id>
+    <title>Outer automorphism groups and the Atiyah Conjecture</title>
+    <updated>2026-06-17T21:18:47Z</updated>
+    <link href="https://arxiv.org/abs/2606.19606v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.19606v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be the fundamental group of a compact surface, a finitely generated free group, or more generally a finitely generated right-angled Artin group. We prove that the von Neumann dimension function of $\mathrm{Out}(G)$ is valued in a discrete subgroup of $\mathbb Q$. This is accomplished by establishing the Strong Atiyah Conjecture for a torsion-free subgroup of $\mathrm{Out}(G)$ of finite index. We also prove that for every field $\mathbb K$, there exists a torsion-free subgroup $H \leqslant \mathrm{Out}(G)$ of finite index such that $\mathbb K[H]$ embeds into a division ring, and hence satisfies the Zero Divisor Conjecture. These results are obtained by establishing analogous ones for a suitable open subgroup of $\mathrm{Out}(\mathbf G)$ and its completed group algebra, where $\mathbf G$ denotes the pro-$p$ completion of $G$. In an appendix, the first author shows that an automorphism of a free nilpotent group is inner if and only if it induces an inner automorphism of its pro-$p$ completion.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-17T21:18:47Z</published>
+    <arxiv:comment>28 pages, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Sam P. Fisher</name>
+    </author>
+    <author>
+      <name>Andrew Ng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.22640v2</id>
+    <title>On the trivial units property and the unique product property</title>
+    <updated>2026-03-25T01:39:23Z</updated>
+    <link href="https://arxiv.org/abs/2603.22640v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.22640v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We report on some computational experiments related to the trivial units property and unique product property for group rings of torsion-free groups. These properties are related to Kaplansky's unit and zero-divisor conjectures. Our investigations include a classification of certain symmetric non-trivial units in the binary group ring of the Hantzsche-Wendt group; this group was used in Gardam's refutal of Kaplansky's unit conjecture. We also exhibit and investigate a new candidate group that fails the unique units property but may satisfy the trivial unit property. No examples of groups with these properties are known to date.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-23T23:31:57Z</published>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Heiko Dietrich</name>
+    </author>
+    <author>
+      <name>Melissa Lee</name>
+    </author>
+    <author>
+      <name>Andre Nies</name>
+    </author>
+    <author>
+      <name>Marc Vinyals</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.07646v2</id>
+    <title>On zero-divisors and units in group rings of torsion-free CAT$(0)$ groups</title>
+    <updated>2025-09-08T12:59:43Z</updated>
+    <link href="https://arxiv.org/abs/2501.07646v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.07646v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper addresses two of Kaplansky's conjectures concerning group rings $K[G]$, where $K$ is a field and $G$ is a torsion-free group: the zero-divisor conjecture, which asserts that $K[G]$ has no non-trivial zero-divisors, and the unit conjecture, which asserts that $K[G]$ has no non-trivial units. While the zero-divisor conjecture still remains open, the unit conjecture was disproven by Gardam in 2021. The search for more counterexamples remains an open problem.
+  Let $m$ and $n$ be the cardinality of support of two non-trivial elements $α, β\in \mathbb{F}_2[G]$, respectively. We address these conjectures by introducing a process called \text{left alignment} and recursively constructing the taikos of size $(m,n)$ which would yield counterexamples to both conjectures over the field $\mathbb{F}_2$ if they satisfy conditions $\mathsf{T}_1-\mathsf{T}_4$ given in \cite{Mineyev2024}. We also present a computer-search method that can be utilized to search for counterexamples of a certain geometry by significantly pruning the search space. We prove that a class of CAT(0) groups with certain geometry cannot be counterexamples to these conjectures. Moreover, we prove that for $ 1\le m \le 5$ and $n$ any positive integer, there are no counterexamples to the conjectures such that the associated oriented product structures are of type $(m,n)$. With the aid of computer, we prove that, in fact, there are no such counterexamples of the length combination $(m,n)$ where $1\le m \le 13$ and $1\le n \le 13$.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-13T19:11:56Z</published>
+    <arxiv:comment>Added definition of isomorphism of product structure and complexity of the algorithm</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Manisha Garg</name>
+    </author>
+    <author>
+      <name>Igor Mineyev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.08625v1</id>
+    <title>The zero divisor conjecture and Mealy automata</title>
+    <updated>2024-02-13T17:54:03Z</updated>
+    <link href="https://arxiv.org/abs/2402.08625v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.08625v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The zero divisor conjecture is sufficient to prove for certain class of finitely presented groups where the relations are given by a pairing of generators. We associate Mealy automata to such pairings, and prove that the zero divisor conjecture holds for groups corresponding to invertible automata with three states. In particular, there cannot be zero divisors of support three corresponding to invertible pairings.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-13T17:54:03Z</published>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Ievgen Bondarenko</name>
+    </author>
+    <author>
+      <name>Kate Juschenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.02880v3</id>
+    <title>Homogeneity of zero-divisors, units and idempotents in a graded ring</title>
+    <updated>2025-07-16T08:39:49Z</updated>
+    <link href="https://arxiv.org/abs/2309.02880v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.02880v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article we prove several important results on graded rings, especially monoid-rings, that are motivated and inspired by Kaplansky's zero-divisor, unit and idempotents conjectures. Among the main results, we first generalize Kaplansky's zero-divisor conjecture of group-rings $K[G]$ (with $K$ a field) to the more general setting of $G$-graded rings $R=\bigoplus\limits_{n\in G}R_{n}$ with $G$ a torsion-free group. Then we prove that ...</summary>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-06T10:13:37Z</published>
+    <arxiv:comment>23 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AC"/>
+    <author>
+      <name>Abolfazl Tarizadeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.15907v3</id>
+    <title>Group rings of three-manifold groups</title>
+    <updated>2023-11-05T17:05:43Z</updated>
+    <link href="https://arxiv.org/abs/2303.15907v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.15907v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be the fundamental group of a three-manifold. By piecing together many known facts about three manifold groups, we establish two properties of the group ring $\mathbb{C}G$. We show that if $G$ has rational cohomological dimension two, then $\mathbb{C}G$ is coherent. We also show that if $G$ is torsion-free, then $G$ satisfies the Strong Atiyah Conjecture over $\mathbb{C}$ and hence that $\mathbb{C}G$ satisfies Kaplansky's Zero Divisor Conjecture.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-28T11:53:16Z</published>
+    <arxiv:comment>10 pages, v2 incorporating referee's comments. To appear in Proc. Amer. Math. Soc</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Dawid Kielak</name>
+    </author>
+    <author>
+      <name>Marco Linton</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.08165v4</id>
+    <title>Division rings for group algebras of virtually compact special groups and $3$-manifold groups</title>
+    <updated>2025-02-20T14:41:43Z</updated>
+    <link href="https://arxiv.org/abs/2303.08165v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.08165v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $k$ be a division ring and let $G$ be either a torsion-free virtually compact special group or a finitely generated torsion-free $3$-manifold group. We embed the group algebra $kG$ in a division ring and prove that the embedding is Hughes-free whenever $G$ is locally indicable. In particular, we prove that Kaplansky's Zero Divisor Conjecture holds for all group algebras of torsion-free $3$-manifold groups. The embedding is also used to confirm a conjecture of Kielak and Linton. Thanks to the work of Jaikin-Zapirain and Linton, another consequence of the embedding is that $kG$ is coherent whenever $G$ is a virtually compact special one-relator group.
+  If $G$ is a torsion-free one-relator group, let $\overline{kG}$ be the division ring containing $kG$ constructed by Lewin and Lewin. We prove that $\overline{kG}$ is Hughes-free whenever a Hughes-free $kG$-division ring exists. This is always the case when $k$ is of characteristic zero; in positive characteristic, our previous result implies that this happens when $G$ is virtually compact special.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-14T18:24:11Z</published>
+    <arxiv:comment>32 pages. Corrected title</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Sam P. Fisher</name>
+    </author>
+    <author>
+      <name>Pablo Sánchez-Peralta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2108.10235v9</id>
+    <title>Homogeneity of zero-divisors, units and colon ideals in a graded ring</title>
+    <updated>2025-07-16T08:23:52Z</updated>
+    <link href="https://arxiv.org/abs/2108.10235v9" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.10235v9" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we first generalize Kaplansky's zero-divisor conjecture of group-rings $K[G]$ (with $K$ a field) to the more general setting of $G$-graded rings $R=\bigoplus\limits_{n\in G}R_{n}$ with $G$ a torsion-free group. Then we prove that if $I$ is an unfaithful left ideal of a $G$-graded ring $R$ with $G$ a totally ordered group, then there exists a (nonzero) homogeneous element $g\in R$ such that $gI=0$. This theorem gives an affirmative answer to the new conjecture in the case that the group involved in the grading is a totally ordered group. Our result also generalizes McCoy's famous theorem on polynomial rings to the more general setting of $G$-graded rings. Then we focus on Kaplansky's unit conjecture. Although this conjecture was recently disproved by a counterexample in the general case, we discovered quite useful and general results that give an affirmative answer to the generalized version of the unit conjecture in the case that the group involved in the grading is a totally ordered group. Especially, we show that every invertible element of a $G$-graded domain with $G$ a totally ordered group is homogeneous. This key result enables us to provide a characterization of invertible elements in $G$-graded commutative rings. This theorem, in particular, tells us that the homogeneous components of an invertible element form a co-maximal ideal and all distinct double products are nilpotent. Next, we prove that if $I$ is a graded radical ideal of a $G$-graded commutative ring $R$ with $G$ a torsion-free Abelian group and $J$ an arbitrary ideal of $R$, then the colon ideal $I:_{R}J$ is a graded ideal. Our theorem vastly generalizes Armendariz' result on reduced polynomial rings to the more general setting of graded rings.</summary>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-08-23T15:13:57Z</published>
+    <arxiv:comment>We have combined this article and another article (arXiv:2309.02880) into a single one. So in order to avoid any confusion for the readers, please withdraw this article</arxiv:comment>
+    <arxiv:primary_category term="math.AC"/>
+    <author>
+      <name>Abolfazl Tarizadeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.06503v1</id>
+    <title>On solvability of certain equations of arbitrary length over torsion-free groups</title>
+    <updated>2019-03-15T12:50:34Z</updated>
+    <link href="https://arxiv.org/abs/1903.06503v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.06503v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a non-trivial torsion free group and $s(t)=g_{1}t^{ε_{1}}g_{2}t^{ε_{2}} \cdots g_{n}t^{ε_{n}}=1 \; (g_{i} \in G,\ ε_i=\pm 1)$ be an equation over $G$ containing no blocks of the form $t^{-1}g_{i}t^{-1}, \; g_{i} \in G$. In this paper we show that $s(t)=1$ has a solution over $G$ provided a single relation on coefficients of $s(t)$ holds. We also generalize our results to equations containing higher powers of $t$. The later equations are also related to Kaplansky zero-divisor conjecture \cite{K}.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-15T12:50:34Z</published>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>M. Fazeel Anwar</name>
+    </author>
+    <author>
+      <name>Mairaj Bibi</name>
+    </author>
+    <author>
+      <name>M. Saeed Akram</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.04330v1</id>
+    <title>Entropy on modules over the group ring of a sofic group</title>
+    <updated>2017-10-11T23:50:46Z</updated>
+    <link href="https://arxiv.org/abs/1710.04330v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.04330v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We partially generalize Peters' formula on modules over the group ring ${\mathbb F} Γ$ for a given finite field ${\mathbb F}$ and a sofic group $Γ$. It is also discussed that how the values of entropy are related to the zero divisor conjecture.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-11T23:50:46Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Proc. Amer. Math. Soc. 147 (2019), no. 2, 727-734</arxiv:journal_ref>
+    <author>
+      <name>Bingbing Liang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1709.08204v2</id>
+    <title>Zero divisor and unit elements with support of size 4 in group algebras of torsion free groups</title>
+    <updated>2017-10-15T13:14:20Z</updated>
+    <link href="https://arxiv.org/abs/1709.08204v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1709.08204v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kaplansky Zero Divisor Conjecture states that if $G $ is a torsion free group and $ \mathbb{F} $ is a field, then the group ring $\mathbb{F}[G]$ contains no zero divisor and Kaplansky Unit Conjecture states that if $G $ is a torsion free group and $ \mathbb{F} $ is a field, then $\mathbb{F}[G]$ contains no non-trivial units. The support of an element $ α= \sum_{x\in G}α_xx$ in $\mathbb{F}[G] $, denoted by $supp(α)$, is the set $ \{x \in G|α_x\neq 0\} $. In this paper we study possible zero divisors and units with supports of size $ 4 $ in $\mathbb{F}[G]$. We prove that if
+  $ α, β$ are non-zero elements in $ \mathbb{F}[G] $ for a possible torsion free group $ G $ and an arbitrary field $ \mathbb{F} $ such that $ |supp(α)|=4 $ and $ αβ=0 $, then $|supp(β)|\geq 7 $. In [J. Group Theory, $16$ $ (2013),$ no. $5$, $667$-$693$], it is proved that if $ \mathbb{F}=\mathbb{F}_2 $ is the field with two elements, $ G $ is a torsion free group and $ α,β\in \mathbb{F}_2[G]\setminus \{0\}$ such that $|supp(α)|=4 $ and $ αβ=0 $, then $|supp(β)|\geq 8$. We improve the latter result to $|supp(β)|\geq 9$. Also, concerning the Unit Conjecture, we prove that if $\mathsf{a}\mathsf{b}=1$ for some $\mathsf{a},\mathsf{b}\in \mathbb{F}[G]$ and $|supp(\mathsf{a})|=4$, then $|supp(\mathsf{b})|\geq 6$.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-09-24T14:43:53Z</published>
+    <arxiv:comment>97 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Alireza Abdollahi</name>
+    </author>
+    <author>
+      <name>Fatemeh Jafari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.03980v2</id>
+    <title>Auslander Modules</title>
+    <updated>2018-01-25T10:25:42Z</updated>
+    <link href="https://arxiv.org/abs/1705.03980v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.03980v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we introduce the notion of Auslander modules, inspired from Auslander's zero-divisor conjecture (theorem) and give some interesting results for these modules. We also investigate torsion-free modules.</summary>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-11T01:04:24Z</published>
+    <arxiv:comment>Major updates, First Online: 24 January 2018, Published at Beitr. Algebra Geom., Dedicated to my father, Maestro Nasrollah Nasehpour</arxiv:comment>
+    <arxiv:primary_category term="math.AC"/>
+    <author>
+      <name>Peyman Nasehpour</name>
+    </author>
+    <arxiv:doi>10.1007/s13366-018-0378-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s13366-018-0378-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1612.00934v1</id>
+    <title>Kaplansky's zero divisor and unit conjectures on elements with supports of size $3$</title>
+    <updated>2016-12-03T07:19:27Z</updated>
+    <link href="https://arxiv.org/abs/1612.00934v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1612.00934v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kaplansky's zero divisor conjecture (unit conjecture, respectively) states that for a torsion-free group $G$ and a field $\mathbb{F}$, the group ring $\mathbb{F}[G]$ has no zero divisors (has no unit with support of size greater than $1$). In this paper, we study possible zero divisors and units in $\mathbb{F}[G]$ whose supports have size $3$. For any field $\mathbb{F}$ and all torsion-free groups $G$, we prove that if $αβ=0$ for some non-zero $α, β\in \mathbb{F}[G]$ such that $|supp(α)|=3$, then $|supp(β)|\geq 10$. If $\mathbb{F}=\mathbb{F}_2$ is the field with 2 elements, the latter result can be improved so that $|supp(β)|\geq 20$. This improves a result in [J. Group Theory, 16 (2013), no. 5, 667-693]. Concerning the unit conjecture, we prove that if $αβ=1$ for some $α, β\in \mathbb{F}[G]$ such that $|supp(α)|=3$, then $|supp(β)|\geq 9$. The latter improves a part of a result in [Exp. Math., 24 (2015), 326-338] to arbitrary fields.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-12-03T07:19:27Z</published>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Alireza Abdollahi</name>
+    </author>
+    <author>
+      <name>Zahra Taheri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.07635v1</id>
+    <title>Amenable groups of finite cohomological dimension and the zero divisor conjecture</title>
+    <updated>2016-09-24T15:05:29Z</updated>
+    <link href="https://arxiv.org/abs/1609.07635v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.07635v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that every amenable group of cohomological dimension two whose integral group ring is a domain is solvable and investigate certain homological finiteness properties of groups that satisfy the analytic zero divisor conjecture and act on an acyclic CW-complex with amenable stabilisers.</summary>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-24T15:05:29Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.GR"/>
+    <author>
+      <name>Dieter Degrijse</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.8306v2</id>
+    <title>Algebraic entropy of amenable group actions</title>
+    <updated>2017-10-23T16:08:45Z</updated>
+    <link href="https://arxiv.org/abs/1410.8306v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.8306v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $R$ be a ring, let $G$ be an amenable group and let $R\ast G$ be a crossed product. The goal of this paper is to construct, starting with a suitable additive function $L$ on the category of left modules over $R$, an additive function on a subcategory of the category of left modules over $R\ast G$, which coincides with the whole category if $L({}_RR) &lt;\infty$. This construction can be performed using a dynamical invariant associated with the original function $L$, called algebraic $L$-entropy. We apply our results to two classical problems on group rings: the Stable Finiteness and the Zero-Divisors Conjectures.</summary>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-30T10:11:19Z</published>
+    <arxiv:primary_category term="math.RA"/>
+    <author>
+      <name>Simone Virili</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1312.3098v1</id>
+    <title>Ergodicity of principal algebraic group actions</title>
+    <updated>2013-12-11T09:51:42Z</updated>
+    <link href="https://arxiv.org/abs/1312.3098v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1312.3098v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An \textit{algebraic} action of a discrete group $Γ$ is a homomorphism from $Γ$ to the group of continuous automorphisms of a compact abelian group $X$. By duality, such an action of $Γ$ is determined by a module $M=\widehat{X}$ over the integer group ring $\mathbb{Z}Γ$ of $Γ$. The simplest examples of such modules are of the form $M=\mathbb{Z}Γ/\mathbb{Z}Γf$ with $f\in \mathbb{Z}Γ$; the corresponding algebraic action is the \textit{principal algebraic $Γ$-action} $α_f$ defined by $f$.
+  In this note we prove the following extensions of results by Hayes \cite{Hayes} on ergodicity of principal algebraic actions: If $Γ$ is a countably infinite discrete group which is not virtually cyclic, and if $f\in\mathbb{Z}Γ$ satisfies that right multiplication by $f$ on $\ell ^2(Γ,\mathbb{R})$ is injective, then the principal $Γ$-action $α_f$ is ergodic (Theorem \ref{t:ergodic2}). If $Γ$ contains a finitely generated subgroup with a single end (e.g. a finitely generated amenable subgroup which is not virtually cyclic), or an infinite nonamenable subgroup with vanishing first $\ell ^2$-Betti number (e.g., an infinite property $T$ subgroup), the injectivity condition on $f$ can be replaced by the weaker hypothesis that $f$ is not a right zero-divisor in $\mathbb{Z}Γ$ (Theorem \ref{t:ergodic1}). Finally, if $Γ$ is torsion-free, not virtually cyclic, and satisfies Linnell's \textit{analytic zero-divisor conjecture}, then $α_f$ is ergodic for every $f\in \mathbb{Z}Γ$ (Remark \ref{r:analytic zero divisor}).</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-12-11T09:51:42Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Hanfeng Li</name>
+    </author>
+    <author>
+      <name>Jesse Peterson</name>
+    </author>
+    <author>
+      <name>Klaus Schmidt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1202.6645v1</id>
+    <title>On Zero Divisors with Small Support in Group Rings of Torsion-Free Groups</title>
+    <updated>2012-02-29T18:57:42Z</updated>
+    <link href="https://arxiv.org/abs/1202.6645v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1202.6645v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kaplanski's Zero Divisor Conjecture envisions that for a torsion-free group G and an integral domain R, the group ring R[G] does not contain non-trivial zero divisors. We define the length of an element a in R[G] as the minimal non-negative integer k for which there are ring elements r_1,...,r_k in R and group elements g_1,...,g_k in G such that a = r_1 g_1+...+r_k g_k. We investigate the conjecture when R is the field of rational numbers. By a reduction to the finite field with two elements, we show that if ab = 0 for non-trivial elements in the group ring of a torsion-free group over the rationals, then the lengths of a and b cannot be among certain combinations. More precisely, we show for various pairs of integers (i,j) that if one of the lengths is at most i then the other length must exceed j. Using combinatorial arguments we show this for the pairs (3,6) and (4,4). With a computer-assisted approach we strengthen this to show the statement holds for the pairs (3,16) and (4,7). As part of our method, we describe a combinatorial structure, which we call matched rectangles, and show that for these a canonical labeling can be computed in quadratic time. Each matched rectangle gives rise to a presentation of a group. These associated groups are universal in the sense that there is no counterexample to the conjecture among them if and only if the conjecture is true over the rationals.</summary>
+    <category term="math.RA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-02-29T18:57:42Z</published>
+    <arxiv:comment>20 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="math.RA"/>
+    <author>
+      <name>Pascal Schweitzer</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,27 @@
+||R h(R .)||_2 / ||h||_2 at R = 3.7 (= R^(-1/2))                                                 got 0.51987524491  stated 0.51987524491  PASS
+exponents: 1 - 3/2 = -1/2 and 1 + 4 - 3/2 = 7/2                                                  PASS
+int_{s-h}^s (s - u)^(-1/2) du, h = 1/400 (= 2 sqrt h)                                            got 0.1  stated 0.1  PASS
+int_0^inf r^4 (1 + r^2)^-3 dr (finite, = 3 pi/16)                                                got 0.589048622548  stated 0.589048622548  PASS
+int_0^inf r^2 (1 + r^2)^-4 dr (finite, = pi/32)                                                  got 0.0981747704247  stated 0.0981747704247  PASS
+int_0^inf r^2 (1 + r^2)^-2 dr (degree 0 is already in H^-2, = pi/4)                              got 0.785398163397  stated 0.785398163397  PASS
+e^{C A t_p} at C = 2.5, Theta = 0.5 (= e^{2C} A^{C Theta})                                       got 265489.530007  stated 265489.530007  PASS
+Theta = 0.5, A = 400: s >= t_p/2 on (s_* - 2/A, s_*), d <= 17 A^2 R^-2, s <= d leaves t_p - s >= t_p/2 PASS
+int_{1/A}^{s_*} A R^-2 s^-2 ds, Theta = 0.5 (= A R^-2 (A - 1/s_*), at most A^2 R^-2)             got 2.52809716074e-09  stated 2.52809716074e-09  PASS
+e^{C A t_p} at C = 2.5, Theta = 1.0 (= e^{2C} A^{C Theta})                                       got 474922109.128  stated 474922109.128  PASS
+Theta = 1.0, A = 400: s >= t_p/2 on (s_* - 2/A, s_*), d <= 17 A^2 R^-2, s <= d leaves t_p - s >= t_p/2 PASS
+int_{1/A}^{s_*} A R^-2 s^-2 ds, Theta = 1.0 (= A R^-2 (A - 1/s_*), at most A^2 R^-2)             got 2.7652767423e-09  stated 2.7652767423e-09  PASS
+e^{C A t_p} at C = 2.5, Theta = 3.0 (= e^{2C} A^{C Theta})                                       got 4.86320239747e+21  stated 4.86320239747e+21  PASS
+Theta = 3.0, A = 400: s >= t_p/2 on (s_* - 2/A, s_*), d <= 17 A^2 R^-2, s <= d leaves t_p - s >= t_p/2 PASS
+int_{1/A}^{s_*} A R^-2 s^-2 ds, Theta = 3.0 (= A R^-2 (A - 1/s_*), at most A^2 R^-2)             got 3.00255695488e-09  stated 3.00255695488e-09  PASS
+rates (7.48), (7.50), (7.51) exceed rho; (7.54); moment cost < 5 rho/32 < gamma; (8.10); series  PASS
+2 c_* - 3 rho - (13 rho + rho/32) in units of rho (= -1/32)                                      got -0.03125  stated -0.03125  PASS
+-12 rho + c_* in units of rho (= -4)                                                             got -4  stated -4  PASS
+alpha = 7/4 < s_* - 1/2 = 15/8, s_* - alpha = 5/8 > 1/2, s_* + 1/16 = 39/16 < 5/2, rho_c = 3 rho/8 = 12 rho/32 < 13 rho/32 PASS
+powers of R: 6 - 1 - 2 = 3; 3 + 1 + 7/2 = 15/2; 1 + 7/2 + 3 = 15/2; 4 - 3/2 = 5/2 and 5/2 + 2 = 9/2 PASS
+(R^4/m) w - a S, times m R^-3 (= R w + a |m| R^-3 S for m < 0)                                   got 1.25308455994  stated 1.25308455994  PASS
+Gamma_src increasing, Gamma_src(t_f) < c_* A; int_{t_p}^t e^{-2(m-1)(Gamma(t) - Gamma(u))} du <= t - t_p PASS
+Gamma_src'(t) at t = 1.7 (= c_* A/(1 + t)^2)                                                     got 17.3143318776  stated 17.3143318879  PASS
+d_m = Catalan(m-1) L^(2m-1) and d_m <= 4^(m-1) L^(2m-1) for m = 1..15, L = 1.7                   PASS
+sum d_m z^m at 4 L^2 z = 0.2 (= (1 - sqrt(1 - 4 L^2 z))/(2 L))                                   got 0.0310508261765  stated 0.0310508261765  PASS
+D = L z + L D^2 at the same point                                                                got 0.0310508261765  stated 0.0310508261765  PASS
+ALL PASS
