@@ -1,0 +1,1 @@
+Frozen dimension14 three-slab FPP proof candidate SHA 5489019ce25b821c1992e94faa79427e5750a1fd1678e4e30d24de85c9907510, NOT ADMITTED. Native and independent unbounded integer full16777216-state constructive bias checks pass; only65536base values stored. Newphysical proof plus retained diagonal premise needs two full distinct-account audits. No priority/fullT170 claim.

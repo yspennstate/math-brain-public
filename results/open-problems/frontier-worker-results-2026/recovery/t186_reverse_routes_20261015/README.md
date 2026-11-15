@@ -1,0 +1,1 @@
+Proposed conditional ideal-tree reverse ancestry and deterministic coordinate-coalescing repair,15October2026. No new finite WP transfer, onset, or circumference cutoff. Full source identities retained; finite-network controls are falsification attempts, not a proof of stochastic sampling. Independent review pending.

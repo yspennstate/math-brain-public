@@ -1,0 +1,55 @@
+# T170-LEAD-D16-001 v1: PASS (mathematical correctness; admission separate)
+
+Kind: audit. Target: T170 target3 upper boundary method, target4 dimension16.
+Exact proof SHA256: `4bf76e502ca43bfa05331ff3f97a50fe07ef3b36db22cf9fd7754f7c1f94b8fe`.
+Source: `~\crash_recovery_20261014\workers_1015\term_362ebe34\T170-LEAD-D16-001_v1.md`. Audit time: 2026-10-15T18:13:24.676336+03:00.
+
+## Exact statement and scope
+
+For independent Exp(1) unoriented nearest-neighbor bond FPP on Z16, with both directions normalized to Euclidean length1, the submitted conditional certificate is correct:
+
+mu_axis <= 1019722296067/12094627905536 < 10649701413/125000000000 <= mu_diag.
+
+The exact positive margin is2615017357267518989/2952790016000000000000. The shape therefore cannot be a Euclidean ball, conditional on the explicitly pinned previously checked physical and diagonal premises. This audit does not itself admit a new dimension or establish literature priority. This account4 crosscheck does not add a second review account; a qualifying separate-account/model review and the authorized ledger process remain necessary.
+
+## New finite boundary argument
+
+Read the complete frozen main proof and its complete auxiliary note. Write m15, N10000 and f(n)=sum_(j<n)popcount(j). Our Python data constructor builds this by direct bit_count increments. Separately the native checker computes f via the binary-block identity f(h+r)=k*h/2+r+f(r), h2^k<=n,0<=r<h. These independently specified constructions agree at every n0..10000. The native checker exhausts EVERY n2..10000 and1<=b<=floor(n/2): f(n-b)+f(b)+b<=f(n). It checks exactly25000000 inequalities, with minimum slack0. Zero splits are identities and symmetry covers the other splits. The endpoint is f10000=64608 and sigma10000=170784. All arithmetic here fits checked Int32; no logarithm or floating point appears.
+
+Induction on arbitrary hypercube dimension is valid: the two coordinate slices have sizes a,b<=N and internal edges at mostf(a),f(b), while cross edges form a matching with at mostmin(a,b) edges. The checked split inequality gives f(a)+f(b)+min(a,b)<=f(a+b). Empty slices and Q0 are included. The induction dimension need not be bounded by N.
+
+For any finite lattice set choose its finite coordinate box, translate it, and replace coordinate k in a block of lengthL by k initial ones followed by zeros. Two such blocks have Hamming distance exactly|k-l|, so concatenation is an injective L1-isometry. It preserves INTERNAL nearest-neighbor edges exactly, even for disconnected sets and boxes of arbitrarily large side length. Boundary is then counted in the original lattice of degree30: boundary=30n-2*internal>=30n-2f(n). There is no substitution of the ambient hypercube degree for30. The initial binary segment0..n-1 lies in14 binary coordinates since10000<16384; clearing one1-bit gives exactlypopcount(j) earlier neighbors. It attains f(n) edges inside Z15, so the stated attainment within this finite range is also correct. Novelty of this auxiliary mechanism is unjudged; the finite proof is self-contained.
+
+All count caps are<=10000, so every horizontal rate used in the recurrence lies inside the certified range, including capped faces. Sigma0=0 and all nonempty rates are positive. As an additional exact encoding check, our constructor verifies sigma(n)^15>=30^15*n^14 for every n1..10000. That comparison is not needed for validity of the new rate; the new boundary proof supplies it directly.
+
+## Physical comparison and every face
+
+The inherited C004v1 proof is pinned by SHA c30f9a46b2c55ec46cc5ca2da33e97ecf11736a9767e4f2a63fbcf6c43488b88 and received our earlier PASS. Its count supremum ranges over arbitrary finite physical seed sets. Removing a seed on common edge clocks gives T(c+e_k)<=T(c). A straight path bounds T(c)<=n, ensuring finiteness. Physical rate tuples are integers bounded at fixed counts, so a near-supremum sequence has a constant-tuple subsequence. These facts justify replacing actual horizontal rates by ANY valid lower rate in the negative child-minus-parent differences. Thus substituting the proved sigma is legitimate; no monotonicity of a computed numerical table is presumed. The killing rate is exactlyc_last and lower births are sigma(c_k)+(c_(k-1)-c_k)_+, with no backward vertical infection in the slower comparison model. It remains dominated by unrestricted bond FPP. Invalid-prefix children have zero rate and are omitted.
+
+Checked all11 cap profiles against the independent static caps, including the exceptional profile2 first cap10000 and profile5 second/third caps100. At the first-coordinate cap, N distinct transverse sites supply N edge-disjoint straight columns to the target; their independent Gamma(n,1) passage times bound the remaining mean from above. Other occupied sites can only reduce this time. N10000 is used only for profile2, otherwise N1000. Whenever c1>0, suppressing the old first slab gives the previous-profile upper bound. This handles every capped tail coordinate and can also improve interior states. At all-zero tails only the Gamma face is used. Taking a minimum of these valid upper bounds preserves validity.
+
+Every previous profile retains the COMPLETE tail rectangle needed by the next profile, as specified in the proof, not merely its root. Our independent flattened index construction saves these complete faces. C0 descends and tail indices descend reverse lexicographically. Increasing a tail count raises its index, so every positive-rate current-layer child was already computed; the c0 child is in the preceding complete c0 layer. Prefix checks and cap tests keep all child accesses in range. The final root is c0=1 and all other counts0. All11 profiles start from our stage1; no submitted face or table was imported.
+
+## Exact terminal data, independent full recurrence and precision
+
+The11 Gamma ceilings coincide exactly with our OWN completed earlier C012 calculation, whose proof/binding and full source inputs are pinned in checks/t170_c012_binding_own.json and checks/t170_axis11_inputs_own.json. That calculation expands the positive finite polynomial P(t)^N and integrates every coefficient c_k*k!/(N^(k+1)*F^N) exactly before upward dyadic rounding. Shape/path counts are unchanged by dimension, so reusing these exact checked constants is justified. The present preparation checks every shape, N and full polynomial degree, plus the unchanged own receipt hash. No new quadrature estimate substitutes for those constants.
+
+Wrote checks/t170_d16_discrete_own.cs from OUR frozen independently written D17 evaluator. The new main reads our own separately constructed integer rates and the already checked Gamma ceilings. It imports no peer native code or cache. Compilation uses C# /checked+. Every Bellman numerator, product, sum, denominator and ceil operation is exact checked UInt64. The update is ceil((2^40+sum rate*child_units)/(kill+sum rate)); all coefficients are nonnegative, so backward induction preserves an upper bound. No overflow occurred. Float is used only for the elapsed-time display.
+
+The three native chunks completed normally in approximately13.87,20.63 and36.27 seconds. The full independent evaluation visits172008828 Bellman states. All11 ROOT VALUES and all11 cumulative Bellman COUNTS agree exactly with the frozen submission. Individual author state tables were not compared: this is a complete independent recomputation, with comparisons explicitly scoped to roots/counters. The own retained faces make the calculation reproducible from stage1. Largest dense face has1564288 UInt64 entries; the program has a900MB memory guard and480second chunk guard, uses two-core affinity, and all owned evaluators exited.
+
+Final root1019722296067 at scale2^40, divided by11, gives exactly1019722296067/12094627905536. The separate Fraction comparator checks every cumulative count and root, computes the exact diagonal floor and strict margin, and pins all own source/input/stage receipts in checks/t170_d16_binding_own.json. This is exact arithmetic, so there is no missing floating error or truncation term.
+
+## Restart, diagonal and matching units
+
+C007v2 is pinned by SHA 7f68473d914cbc52d1f6c44e97d691043d372245a5f3c9f352f52466509d52e1 and received our earlier PASS. First-hit restart in fresh unused forward slabs and translation invariance bound axis speed by E[tau11]/11; finite Gamma domination gives integrability. Reflection and convexity identify the first-coordinate plane time constant with the axis direction. The proof uses the actual fresh-block argument, with no decreasing-increment premise.
+
+The diagonal premise is the previously checked C003v2 proof SHA 9a0d7617781f2496d2e1fc3cae58ee718b3878198d47102262715b6678b7de96 and data SHA e78ecf283aa59fbfd46b237bcd5dc82d52335b8ff56cf2d56ca9be347a16d7af. It is an inherited exact positive-vector bound, not newly re-audited here. We verified the source bytes and extracted the exact dimension16 rational lower bound. Integer division DOWN at10^12 gives precisely10649701413/125000000000; it does not round a float. The data already uses Euclidean normalization: a coordinate-sum-N hyperplane has distanceN/sqrt(d), so its per-N lower constant is multiplied bysqrt(d), equal4 here. Axis displacement11 has Euclidean length11. Thus both sides of the strict comparison use the same units. No superiority over Kumar-Dhar diagonal estimates is asserted; the audited new step is the axis boundary/certificate.
+
+## Primary literature and unresolved novelty
+
+Fetched and checked Bertrand-Pertinand arXiv1705.08143v2, Dimension improvement in Dhar's refutation of the Eden conjecture: Theorem1 states dimension22; Section2 gives the unidirectional axis comparison, Section3.1 Eq9 the two-slab recursion, Section3.2 Gamma terminal conditions, Section3.3 higher-slab extension. The source PDF/hash are in checks/t170_bp_primary_own.json. Our mathematical justification uses the explicitly checked C004/C007 premises at their pinned versions.
+
+Reviewed the cached primary Kumar-Dhar arXiv1909.12001v1, SHA 096cc2b18744cb901928cb4350292c4c502b16c3a101076173061c0808c525e4: its abstract/summary describe IBP1 and culling improvements to directional velocity upper bounds; its introduction cites the earlier22 benchmark. It is included because the all-time citing search identifies it, not because a margin over CEG alone establishes novelty.
+
+The search receipt checks/t170_d16_literature_own.json records recent90day arXiv cap12, widened all-time arXiv cap20 with the known BP source as positive control, and OpenAlex all-time citing cap50. The index returned two citing entries, including Kumar-Dhar. These bounded/indexed searches do not establish absence of other work. Global priority remains UNCLEAR, and the candidate is NOT ADMITTED by this receipt. Account4 crosschecks do not create the missing distinct-account review. The initial preparation mistakenly tagged target2 (the lower-bound side); this report correctly tags upper-method target3 and dimension target4, with a corrective route log.

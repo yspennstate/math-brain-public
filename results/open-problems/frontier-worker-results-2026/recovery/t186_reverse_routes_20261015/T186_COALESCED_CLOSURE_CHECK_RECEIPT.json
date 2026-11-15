@@ -1,0 +1,128 @@
+{
+  "at": "2026-10-15T16:36:43.174604+03:00",
+  "status": "PASS finite adversarial controls; general lemma still requires analytic review",
+  "counts": {
+    "boolean_networks": 216,
+    "boolean_fixed_baselines": 304,
+    "boolean_forcings": 2432,
+    "ternary_networks": 2500,
+    "ternary_forcings": 20000,
+    "strict_actual_drops": 48368,
+    "closures_below_actual": 2600
+  },
+  "ternary_monotone_table_count": 175,
+  "broken_skip_reevaluation_rejected": {
+    "fixture": "four-coordinate feedback and downstream copy",
+    "seed": 2,
+    "tables": [
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "deps": [
+      [
+        3,
+        3
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "baseline": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "forced": [
+      0
+    ],
+    "actual": [
+      0,
+      0,
+      0,
+      2
+    ],
+    "broken": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "correct": [
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  "constant_controls": [
+    {
+      "sites": 10,
+      "old_second_token_flags": 10,
+      "coalesced_distinct_coordinate_flags": 1
+    },
+    {
+      "sites": 100,
+      "old_second_token_flags": 100,
+      "coalesced_distinct_coordinate_flags": 1
+    },
+    {
+      "sites": 1000,
+      "old_second_token_flags": 1000,
+      "coalesced_distinct_coordinate_flags": 1
+    }
+  ],
+  "checker_sha256": "67b4aed7096151a6c45c5feeebe5a51a92ee0be36e043df6c72364d828f97962",
+  "scope": "Exhaustive Boolean 3-site two-input monotone networks at all fixed baselines/forcing sets; 2500 seeded ternary networks at greatest fixed baseline/all forcing sets. These controls do not establish stochastic sparsity or finite WP transfer."
+}
