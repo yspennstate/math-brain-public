@@ -1,0 +1,80 @@
+~/agent_run/D0004A/code/experiments.py:102: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  result = linprog(cost,A_eq=aeq,b_eq=ps,bounds=(0,None),method='highs',
+[
+  {
+    "n": 3,
+    "floor": false,
+    "m": 20,
+    "kind": "band_feasibility",
+    "columns": 220,
+    "status": 0,
+    "objective": 0.0,
+    "residual": 6.938893903907228e-18,
+    "seconds": 0.0287,
+    "mean": 0.5,
+    "band": 0.075
+  },
+  {
+    "n": 3,
+    "floor": false,
+    "m": 40,
+    "kind": "band_feasibility",
+    "columns": 840,
+    "status": 0,
+    "objective": 0.0,
+    "residual": 2.7755575615628914e-17,
+    "seconds": 0.2533,
+    "mean": 0.5,
+    "band": 0.0375
+  },
+  {
+    "n": 3,
+    "floor": false,
+    "m": 1000,
+    "restart": 2,
+    "sweeps": 7,
+    "mse": 2.499999999999803e-07,
+    "min_sum": 1.4994999999999998,
+    "max_sum": 1.5005000000000002,
+    "quantile_mean": 0.5,
+    "target": 1.5
+  },
+  {
+    "n": 4,
+    "floor": false,
+    "m": 20,
+    "kind": "band_feasibility",
+    "columns": 1373,
+    "status": 0,
+    "objective": 0.0,
+    "residual": 9.020562075079397e-17,
+    "seconds": 0.565,
+    "mean": 0.5,
+    "band": 0.1
+  },
+  {
+    "n": 4,
+    "floor": false,
+    "m": 40,
+    "kind": "band_feasibility",
+    "columns": 9912,
+    "status": 0,
+    "objective": 0.0,
+    "residual": 2.7755575615628914e-17,
+    "seconds": 43.1685,
+    "mean": 0.5,
+    "band": 0.05
+  },
+  {
+    "n": 4,
+    "floor": false,
+    "m": 1000,
+    "restart": 3,
+    "sweeps": 8,
+    "mse": 1.4599999999996782e-07,
+    "min_sum": 1.9989999999999999,
+    "max_sum": 2.001,
+    "quantile_mean": 0.5,
+    "target": 2.0
+  }
+]

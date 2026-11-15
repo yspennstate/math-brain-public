@@ -1,0 +1,15 @@
+# D0007 work log
+
+2026-11-13 02:35 Asia/Tbilisi — Began literature search and read prior D0007 memory. Shared mesh and checklist registration were attempted; both databases are outside the writable sandbox and rejected writes. No subagents or worker pools started.
+
+2026-11-13 02:37 — Found Yin–Zhu arXiv:1706.05499v4 (counterexample claim), Komisarski–Labuschagne (2023 online / 2024 volume), and an existing author-owned November 2026 repository with an affirmative proof. Downloaded primary sources for a mathematical audit. A repository posting is distinguished from settlement in a refereed publication.
+
+2026-11-13 02:40 — Verified the monotone-density inputs against Wang–Wang (2011, Theorem 2.4 / Corollary 2.9) and (2016, Theorem 3.2). Wrote numerics.py: column-generation LP with dynamic-programming pricing, plus rearrangement algorithm. Pricing checked against exhaustive enumeration on small cases, uniform positive controls and a mean-condition negative control passed. One process and one computational thread. macOS sandbox rejected nice/setpriority; no escalation attempted.
+
+2026-11-13 02:41:05 +04 — Analytic audit: the uniform-piece proof handles general remainders by finite approximation and compactness, avoiding measurable selection. Pair-sum disintegration handles all parities. Derived a separate finite bound for all Lp versions of Theorem 5 for any nondegenerate bounded law. Narrow two-band example has an odd-n obstruction through n=17, with a possible explicit n=19 construction under verification.
+
+2026-11-13T02:45:32+04:00 — Completed 90 LP/RA cases (five laws, n=3..20), 80 equal bins and 2048 quantile rows. Peak process RSS 105349120 bytes. All 1000 exact rational reservoir checks passed. The coarse LP is feasible at two-band n=15,17 although the analytic obstruction excludes them; refinement to 400 bins at n=15,17,19 is running. The default RA also has a local minimum for the known-CM case n=16. REPORT.md contains the full proof and exact two-band threshold.
+
+2026-11-13T02:50:05+04:00 — Refined two-band LP: n=15 has L1 error 0.1611111111; n=17 has 0.01220588235; n=19 is feasible at 400 bins. At 16384 quantile rows the power4 n=5 RA RMS rose to 0.000756, while n=6 fell to 0.00000669. Independently derived the continuous n=5 RMS lower bound sqrt(1/(21*6^7))=0.000412440188, explaining why the smaller 2048-row residual was misleading. Exact rational checks confirm the n=19 gluing constants.
+
+2026-11-13T02:54:16+04:00 — DONE: REPORT.md begins PROVED and contains the affirmative theorem, complete proofs, explicit all-parity convolution argument, Lp norm analysis, correction of the Yin–Zhu claim, sharp two-band threshold, and 95 LP/RA cases. Final LP recheck with native HiGHS threads=1 reproduced every classification. Largest measured RSS 129826816 bytes (123.8 MiB). Re-ran meaningful control tests after the solver-thread change; all passed. Source hashes, table entries, theorem/proof presence, exact-rational constants, and output completeness checked. Shared checklist/brain updates remain unavailable under the sandbox; findings are retained in this folder.

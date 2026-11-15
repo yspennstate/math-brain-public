@@ -1,0 +1,89 @@
+{
+  "seed": 13320261113,
+  "priority": 15,
+  "peak_rss_bytes_macos": 47841280,
+  "workers": 1,
+  "models": {
+    "simple": {
+      "runs": 64,
+      "horizon": 65536,
+      "return_in_second_half_count": 1,
+      "frequency": 0.015625,
+      "wilson_95": [
+        0.002763541923337505,
+        0.08334101600094265
+      ],
+      "median_returns": 2.0,
+      "max_completed_excursion": 45852,
+      "median_censored_excursion_length": 65459.0,
+      "max_late_abs_x_over_n": 0.010998720370483212
+    },
+    "finite_two": {
+      "runs": 64,
+      "horizon": 65536,
+      "return_in_second_half_count": 0,
+      "frequency": 0.0,
+      "wilson_95": [
+        0.0,
+        0.05662405979280534
+      ],
+      "median_returns": 0.0,
+      "max_completed_excursion": 304,
+      "median_censored_excursion_length": 65536.0,
+      "max_late_abs_x_over_n": 0.10578033054593575
+    },
+    "infinite_periodic": {
+      "runs": 64,
+      "horizon": 65536,
+      "return_in_second_half_count": 0,
+      "frequency": 0.0,
+      "wilson_95": [
+        0.0,
+        0.05662405979280534
+      ],
+      "median_returns": 0.0,
+      "max_completed_excursion": 452,
+      "median_censored_excursion_length": 65536.0,
+      "max_late_abs_x_over_n": 0.17701368990767272
+    },
+    "infinite_blocks": {
+      "runs": 64,
+      "horizon": 65536,
+      "return_in_second_half_count": 0,
+      "frequency": 0.0,
+      "wilson_95": [
+        0.0,
+        0.05662405979280534
+      ],
+      "median_returns": 0.0,
+      "max_completed_excursion": 398,
+      "median_censored_excursion_length": 65536.0,
+      "max_late_abs_x_over_n": 0.10649752145408027
+    }
+  },
+  "counting_checks": {
+    "paths": 100,
+    "path_length": 2000,
+    "sum_checks": 400,
+    "strict_growth_implication": "passed"
+  },
+  "trap": {
+    "trials": 20000,
+    "mark_pairs": 1274,
+    "survivals": 845,
+    "frequency": 0.04225,
+    "wilson_95": [
+      0.03954891647853988,
+      0.045126892530823914
+    ],
+    "cookies_per_site": 80,
+    "event_probability_product": 0.04242660227895439,
+    "event_probability_via_logs": 0.04242660227895439,
+    "conditional_tail_error_bound": 3.101927297073854e-25,
+    "completed_two_step_excursions_on_success": 80,
+    "maximum_distance_on_success": 1,
+    "maximum_abs_x_over_n_after_time_2k": "1/(2k+1)"
+  },
+  "elapsed_seconds": 6.582164583989652,
+  "interpretation": "Return frequencies are finite-horizon proxies, not estimates of infinite recurrence probability."
+}

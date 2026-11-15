@@ -1,0 +1,20 @@
+# D0004 research log
+
+- Started 2026-11-12T22:31:24Z (local 2026-11-13T02:31:24.155361+04:00). Task: “when do the law-determined-norm inequalities imply complete mixability?”
+- Shared mesh hello/digest/claim and checklist registration were attempted; sandbox denies writes to their databases. Read-only inspection found no live claim overlapping this task folder. All deliverables and local coordination records stay here. No helper agents.
+- Compute state: ok, owner_away_open; numerical jobs will use nice 10 and one thread.
+- Located Ruodu Wang, Current Open Questions in Complete Mixability, arXiv:1411.6190 (first submitted 2014), Probability Surveys 12 (2015), 13–32. Definition 5 includes positive monotonicity but does not assume Fatou continuity.
+
+- Analytic reduction: L1 at every threshold gives X <=cx n*mu-(n-1)*X. Convex increasing hinge transforms give the integrated-quantile conditions; bounded variables permit all Definition 5 norms without Fatou. For arbitrary unbounded arguments a Fatou qualification is essential.
+- Candidate exact counterexamples: n=3 symmetric endpoint-uniform mixture; n=4 p=2/5 endpoint-uniform mixture with width 1/20. Both can be mixed with a same-mean positive full-support density while preserving convex-order condition. Core-support gap plus a union bound obstructs mixing.
+- Numerical plan: exchangeable sparse transport LPs on midpoint meshes 20,40,80,160 with a rigorous n/(2M) quantization band; exact-cell probabilities. Separate finite-grid quadratic-cost LP and rearrangement diagnostics. A degenerate cost LP at M=40 took 66 seconds, so cost runs are capped at 20 seconds and use M=10,20; the fine band-feasibility runs remain.
+- Exact SymPy checks passed: all call-gap polynomial pieces are nonnegative; positive-density examples have means 1/2 and 81/200, core gaps 3/10 and 7/25, outside probabilities 2/25 and 9/100, and universal squared-error bounds 171/2500 and 784/15625.
+- Main numerical run completed. Peak RSS 822,984,704 bytes; numerical threads=1. Inherited process nice priority is 10; attempted nice adjustment printed EPERM in this sandbox but the inherited priority already meets the author rule.
+- Literature: Yin–Zhu arXiv:1706.05499v4 (2023 revision of 2017 preprint), Examples 2.1 and 2.3, gives the odd-dimensional mass obstruction and symmetric polynomial counterexamples. Their Proposition 3.1 asserts an invalid universal finite-variance criterion, contradicted by Bernoulli(1/2), n=3, and by their own Example 2.3; it is not usable as a converse. No valid general converse located.
+- Added analytic full-support polynomial f(x)=1/10+(27/10)(2x-1)^2, n=3. Its central-half probability is 13/80<1/3. Smooth compact-support examples also follow by symmetric convolution and rescaling, retaining a strict core gap.
+- Completed REPORT.md: bounded/Fatou majorization lemma with proof; non-Fatou counterexample; reflected-dilation reduction; n=2 proof; Bernoulli and lattice characterization; positive-density and smooth counterexamples at n=3,4; norm characterization and remaining scope.
+- Tables cross-checked against both CSV and JSON. All 16 fine-band counterexample LPs report infeasible; all 8 coarse cost LPs solved with marginal residual at most 1.77e-16. Uniform controls feasible at M=20,40.
+- Exact support and probability bounds were checked independently by rational integration and by the count-of-high-endpoint intervals. The affine filler also has an explicit positive Bernstein certificate. Peak main-run RSS 0.823 GB.
+- Saved pinned requirements and SHA-256 source manifest. Shared mesh/checklist/brain writes remain unavailable in this sandbox; no shared-state bypass was used.
+- Completed 2026-11-12T22:50:26.476529+00:00.
+- Final referee audit sharpened the a.e. argument in the non-Fatou counterexample and identified empty-column LP rows explicitly. Local durable findings saved to data/durable_findings.json because the shared brain is not writable. Task clock: 13 Nov 2026, 02:28 Asia/Tbilisi, from session launch log.
