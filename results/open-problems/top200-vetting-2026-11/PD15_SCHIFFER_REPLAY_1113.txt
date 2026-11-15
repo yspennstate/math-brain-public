@@ -1,0 +1,21 @@
+PD15 (Schiffer / Pompeiu) - replay of the published certificates, 13 Nov 2026, an agent
+Source: github.com/aster2024/schiffer-pompeiu-counterexamples (arXiv 2609.35419 v2), shallow clone 13 Nov.
+Machine: laptop, Windows 11, Python 3.14.3, python-flint 0.9.0. Checkout with core.autocrlf=false
+(the CRLF checkout fails the authors' frozen-bundle hash, which is the correct fail-closed behaviour);
+sha256sum -c of verification/r10/SHA256SUMS: all OK.
+
+n = 8   verify_r8.py --stage final        PROVED; verify_convex_r8.py  PROVED_CONVEX [0.83153153907625301655 +/- 2.45e-21]
+n = 10  verify_r10.py                     PROVED; verify_convex_r10.py PROVED_CONVEX [0.97305365889140304527 +/- 4.47e-21]
+n = 14  verify_r14.py                     PROVED; verify_convex_r14.py PROVED_CONVEX [0.89406714320973174750 +/- 4.79e-21]
+r10 test_fail_closed_r10.py               FAIL-CLOSED TESTS PASSED (NaN and changed receipts are rejected)
+
+What this is: the authors' code replayed on a second platform. It is not an independent proof: the
+Harish-Chandra reduction, the tail bounds written in the paper and the verifier logic were not re-derived.
+Note from verification/README.md: the planar case (n = 2) verifier ends in NUMERICAL_GATES_PASS, with
+analytic lemmas in the text, not PROVED; the repo also claims n = 19 (dimension-19/) and infinitely many
+dimensions (second paper, analytic proofs). Not run: n = 2, 3, 5, 7 (40 min to 1.8 h each) and the gd/ family.
+
+n = 5 (verification/r5/verify_r5.py): not replayed. On Windows the verifier stops at os.nice (receipt NOT_CERTIFIED,
+"module 'os' has no attribute 'nice'") and it compiles n5native.c with gcc, which this laptop lacks; both Mac minis have
+Python 3.9, below python-flint 0.9.0's requirement. Replaying it needs a Linux or macOS host with Python >= 3.10, gcc and
+python-flint. The vetting decision rests on n = 8, 10, 14 above.
