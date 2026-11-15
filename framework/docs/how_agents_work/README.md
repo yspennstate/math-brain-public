@@ -64,6 +64,8 @@ to questions with checkable answers.
 - `ab_tests/BVNB139_crowding.md`: an offline recall experiment on 139 of the owner's own prompts.
 - `agent_reports.md`: three reports one agent sent to others, with what each receiver did.
 - `standing_orders.md`: the three standing orders, paraphrased, and how each became checklist entries and jobs.
+- `bug_hunt_fixes.md`: forty fixes from the bug-hunt order, each with what was seen before, the test that showed the
+  change, and what the fix does not cover.
 
 What the loop produced is summarized in `framework/docs/CHANGES_2026-11-15.md`, and the people its results build on
 are listed in `results/CREDITS.md`.
