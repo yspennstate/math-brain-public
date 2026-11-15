@@ -1,0 +1,13 @@
+# T067-COMPENSATED-CUBIC-001 v1: PASS
+
+Exact proof SHA256: `fde2080aa7178b05e755b90d758738608cddf5532dac51edb768bb5dfb37bbfe`. Kind: audit; target: T067 compensated degree91 dependency. No finite-degree cutoff is inferred here.
+
+I read all four sections. The simplex variable is p, A=||3p-1||^2, J=sum(3p_i-1)^3, beta=49/4. Every hypothesis in the conditional replacement interpretation is retained: full permutation symmetry, calibrated auxiliary experiment, branch and auxiliary independence conditional on the root, and nonnegative branch cubic moment T.
+
+Independent derivation: in coordinates p=(x,y,1-x-y), I implemented D_i=p0(delta_0i-p_i)partial_x+p1(delta_1i-p_i)partial_y, then directly computed the cubic operator in the statement. Exact symbolic expansion reproduces S_A=-(6-A)(A-J)/18 and the full stated S_Q polynomial, and verifies linearity for Q+beta*A. No solver code is imported. Receipt: checks/t067_compensated_cubic_own.json; derivation checks/t067_compensated_cubic_own.py.
+
+The moment-domain identity A^3/6-J^2=product_(i<j)(a_i-a_j)^2/3 is verified exactly, giving J<=A^(3/2)/sqrt6. Nonnegativity of p0*p1*p2 gives J>=3A/2-3; 0<=A<=6 follows from the simplex. For B(A)>=0 substitution A=6t^2 and J<=6t^3 yields exactly -2t^2(1-t)^2[48(t-23/384)^2+239/3072+60t^3]. For B(A)<0 the reversed bound gives exactly -(6-A)^2(24A+25)/144. Both factorizations were independently checked by exact expansion. The constants are strictly positive in the required interior; both bounds are strict for0<A<6. Uniform and pure endpoints give zero directly. The two cases cover B=0 without a gap.
+
+For the replacement interpretation, common-logit invariance gives D_vi=D_i/2. The conditional-root raw-moment expansion is the same expansion individually checked in PIECEWISE PartA; replacing its test function by Phi retains the stated operator. Calibration weights an auxiliary posterior by3p_i, and averaging the uniform root produces sum_i p_i ell_i, without an extra factor3. Conditional independence separates the branch cubic T. Thus lambda^3*T times the nonpositive auxiliary expectation has the required sign. All logit derivatives are polynomials on the compact simplex and hence bounded; Gaussian hybrid expectations and Taylor terms remain integrable. No pointwise sign for the unmodified Q, fourth-order remainder, or canonical fourth-moment ceiling is asserted.
+
+PASS for the exact lemma. It is a directly proved algebraic inequality, with no external theorem imported beyond the already checked replacement calculation; priority is unverified. This supporting-lemma verdict does not admit the new degree91 theorem. Another required independent exact-content review remains necessary.

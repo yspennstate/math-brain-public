@@ -1,0 +1,33 @@
+--- 
++++ 
+@@ -1,6 +1,6 @@
+ # Piecewise certified three-state regular-tree cutoff: d >= 156
+ 
+-Claim T067-PIECEWISE-D0-001, version 2. Status: proof (unaudited).
++Claim T067-PIECEWISE-D0-001, version 3. Status: proof (unaudited).
+ No novelty or priority assertion. All previously submitted versions are unchanged.
+ 
+ For every integer d>=156 and every 0<lambda<=1/sqrt(d), the uniform-root
+@@ -16,7 +16,7 @@
+ sampled gap, or fitted moment ceiling is used.
+ 
+ Dependencies, all version 1: SOFTMAX-DERIVATIVES, CUBIC-FUSION,
+-TERNARY-MOMENTS (F2), UNIFORM-LOCAL, RESCALE, FIXEDPOINT and GAUSSIAN-QUAD.
++TERNARY-MOMENTS (F2), UNIFORM-LOCAL, RESCALE identity (R) only, FIXEDPOINT and GAUSSIAN-QUAD.
+ Their full claim ids have prefix T067- and suffix -001. Audit receipts must be
+ consulted individually: separate w683 receipts under the exact RESCALE and
+ GAUSSIAN-QUAD claim ids were not located. The lead analytic audit rederives
+@@ -473,3 +473,13 @@
+ passed the v1 mathematics while flagging the blanket two-review assertion.
+ This version corrects that assertion; it does not inherit an exact-version
+ external PASS. No v1 proof, endpoint, certificate or review receipt is edited.
++
++## Version3 dependency-scope clarification
++
++Only RESCALE identity(R) is imported in D.4. Its false unrestricted F1
++corollary is not used. D.3 instead uses TERNARY-MOMENTS F2 with actual
++critical right branches supported on p_i>=(1-eta_ref)/3, eta_ref=2887/5000,
++since lambda<=16013/200000<eta_ref. All mathematical inequalities, the
++cutoff156 statement and frozen finite inputs are unchanged. The separate
++review-status qualification in v2 remains in force. Versions1 and2 survive
++unchanged; no exact-version PASS is inherited automatically by this v3.
