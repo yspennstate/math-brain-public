@@ -22,17 +22,7 @@ import time
 from multiprocessing import Pool
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-def _proj():
-    """The session transcripts sit beside the memory folder: <projects>/<slug>/*.jsonl."""
-    try:
-        sys.path.insert(0, HERE)
-        import spread_recall as _sr
-        return os.path.dirname(_sr.MEM)
-    except Exception:
-        return os.path.join(os.path.expanduser("~"), ".claude", "projects", "default")
-
-
-PROJ = os.environ.get("BRAIN_PROJECT_DIR") or _proj()
+PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"))
 BIN = os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "bin")
 
 

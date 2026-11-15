@@ -20,11 +20,6 @@ A step whose justification is written beside it (the report's "clean near-miss")
 per file per session, at most two per tool call. Patch hunks and MultiEdit entries are evaluated independently.
 Logged to verify_ops_log.jsonl. Fail-safe silent.
 """
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import hashlib
 import io
 import json
@@ -37,7 +32,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 _DIR = os.environ.get("VERIFY_HOOKS_STATE_DIR") or HERE   # a test's state stays out of the live log
 STATE = os.path.join(_DIR, ".verify_ops_state.json")
 LOG = os.path.join(_DIR, "verify_ops_log.jsonl")
-LEAN = "python " + os.path.join(os.path.expanduser("~"), ".claude", "dreaming", "lean_check.py").replace(chr(92), "/")
+LEAN = "python ~/.claude/dreaming/lean_check.py"
 MATH_MD = re.compile(r"\$[^$\n]{2,}\$|\\\(|\\\[|\\begin\{|\\frac|\\sum|\\int|\\lim|\\forall|\\exists|[∀∃∫∑≤≥]")
 WINDOW = 320   # characters either side of the operation searched for its justification
 

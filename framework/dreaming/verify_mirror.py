@@ -63,7 +63,7 @@ def _uncovered_subdirs():
 
     This only COUNTS them. Syncing would mean deciding which build outputs belong in the
     repository - strong_nodes/runtime is content-addressed generations - and that is the
-    owner's call, not a mirror maintainer's. But an unreported gap grows silently, which
+    the author's call, not a mirror maintainer's. But an unreported gap grows silently, which
     is exactly what happened for three weeks, so the number is printed every run.
     """
     skip = ("__pycache__", ".pytest_cache", "state", "logs", "strong_nodes")
@@ -103,10 +103,10 @@ def _repo_side_newer(repo, live):
     """True when the repo copy holds content newer than the live file.
 
     Judged by git, not by the file's mtime (2026-09-24). A checkout rewrites a file with the
-    current time, so an old committed copy looks new: on 09-24 two files (one a 09-09 commit with
-    its mtime bumped 09-19 by a checkout, the other a 07-31 commit bumped 09-08) were flagged
-    "REPO-SIDE NEWER" and left alone for weeks, while the live files carried two newer rules that
-    never reached git.
+    current time, so an old committed copy looks new: on 09-24 voice_guard_hook.py (repo copy =
+    the 09-09 commit, mtime bumped 09-19 by a checkout) and brain_startup.md (the 07-31 commit,
+    bumped 09-08) were flagged "REPO-SIDE NEWER" and left alone for weeks, while the live files
+    carried his 09-15 paper rule and his 09-02 hint rule that never reached git.
 
     When the repo copy is byte-for-byte a committed version (at HEAD or at origin/main - agents
     push by plumbing, so the checkout's HEAD often lags), the time that version was committed is

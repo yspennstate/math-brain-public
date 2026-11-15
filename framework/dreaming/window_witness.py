@@ -3,7 +3,7 @@
 The rule (owner, 2026-06-07) is that no background process may flash a console, not even for ~100 ms,
 and the stated verification is a poll of 50 ms or faster. The polling instrument can no longer hold that
 bar on this machine - flash_hunt.ps1's own last runs report 50.6, 61.4 and 57.6 ms per sample and end
-"treat a clean run as INCONCLUSIVE" - and an 18-minute run of it raised ui_freeze with the owner at the
+"treat a clean run as INCONCLUSIVE" - and an 18-minute run of it raised ui_freeze with the author at the
 keyboard. Polling faster is the wrong direction: it costs more of exactly the resource whose starvation
 the rule exists to prevent, and a sampler can always miss something shorter than its interval.
 

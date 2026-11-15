@@ -19,11 +19,6 @@ sys.path.insert(0, HERE)
 import hook_dispatch as hd          # noqa: E402
 import test_verify_hooks as tvh     # noqa: E402
 
-# On a clone with no installed brain the dispatcher has no list of its own yet; read the one in this folder,
-# which is what an install copies into place.
-if not os.path.exists(hd.LIST):
-    hd.LIST = os.path.join(HERE, "hook_dispatch_list.json")
-
 FAILS = []
 
 

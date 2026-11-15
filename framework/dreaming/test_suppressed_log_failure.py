@@ -1,4 +1,4 @@
-"""The show-or-hold trial's outcome log must not lose a row silently:
+"""The show-or-hold trial's outcome log must not lose a row silently (dot D7CB6565's round-6 disposition, path 1):
 _log_suppressed records a refused or failed append in EMIT_ERRORS as 'suppressed_log', and records nothing when the
 write lands. Controls both ways, in a temporary directory. Run: python test_suppressed_log_failure.py"""
 import importlib.util

@@ -1,5 +1,5 @@
 """test_supersession_target_existence.py - a prose supersession pointer routes exactly while its target exists, whatever the
-frontmatter cache holds (28 Sep 2026).
+frontmatter cache holds (28 Sep 2026, an agent; interactive audit IA-20260928-04).
 
     python test_supersession_target_existence.py [--module SUPERSESSION.py] [--old OLD_SUPERSESSION.py]
 
@@ -64,6 +64,7 @@ def cases(path, tag):
         cache_home = os.path.join(td, "cache")
         os.makedirs(cache_home)
         m.HERE = cache_home
+        m._FM_OTHER_MIN = 0   # lever 17: a small folder reads uncached unless told; these controls test the cache
         mem = os.path.join(td, "memory")
         os.makedirs(mem)
         note(mem, "old_note_2026_09_28", '"new_note_2026_09_28"')

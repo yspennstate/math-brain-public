@@ -2,10 +2,9 @@
 (eval_S_rows.npy, cols S/n_eff/rank/is_seed), reproducing eval_S_v2_partial.main's verdict
 block verbatim, plus a bootstrap CI on the partial S coefficient (break-it-before-believe-it).
 No embeddings, no re-run - the heavy row generation already finished on the box at 06:21 UTC."""
-import os
 import numpy as np
 
-ROWS = os.path.expanduser("~/AppData/Local/Temp/claude/{{BRAIN_SLUG}}/731a0c26-f54e-48ff-bc32-a9f1d4cb4d97/scratchpad/eval_S_rows.npy")
+ROWS = r"~/AppData/Local/Temp/claude/{{BRAIN_SLUG}}/731a0c26-f54e-48ff-bc32-a9f1d4cb4d97/scratchpad/eval_S_rows.npy"
 
 
 def _z(x):

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 """verify_sense.py - UserPromptSubmit: when the work will produce a proof, a code change or a number, hand the agent
-the checks that could fail on it before it starts (30 Sep 2026).
+the checks that could fail on it before it starts (owner, 30 Sep 2026 01:10).
 
-The design goal: hooks prompt agents to check proofs, ideas and code with Lean, to audit their
-work, and to plan how to verify it in more than one way. The card is short and concrete - the route for
+Written at the author's request.. The card is short and concrete - the route for
 this kind of work, the command that runs it, and the rung the claim is allowed to reach - because a reminder to be
 careful measured as noise (the 30 Sep design review: "a reminder is not a verifier"). verify_gate.py is the other end:
 at the Stop it blocks once when the report claims more than the turn checked.
@@ -11,11 +10,6 @@ at the Stop it blocks once when the report claims more than the turn checked.
 One card per kind of work (math, code, result) per session, again after three hours. Silent on status questions and
 errands. Runs for Claude (hook_dispatch) and Codex (hooks.json); the output is the JSON both accept. Fail-safe silent.
 """
-import sys as _sys
-if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
-    # Asking for help must not run the script's real work.
-    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
-    raise SystemExit(0)
 import hashlib
 import io
 import json
@@ -29,7 +23,7 @@ _DIR = os.environ.get("VERIFY_HOOKS_STATE_DIR") or HERE   # a test's state stays
 STATE = os.path.join(_DIR, ".verify_sense_state.json")
 LOG = os.path.join(_DIR, "verify_sense_log.jsonl")
 REARM_S = 3 * 3600
-LEAN = "python " + os.path.join(os.path.expanduser("~"), ".claude", "dreaming", "lean_check.py").replace(chr(92), "/")
+LEAN = "python ~/.claude/dreaming/lean_check.py"
 
 WORK = re.compile(r"\b(?:prove|proving|proof|show\s+that|derive|verify|check|audit|fix|fixing|implement|build|write|make|"
                   r"create|add|solve|solving|compute|calculate|measure|test|run|improve|refactor|debug|formali[sz]e|port|"

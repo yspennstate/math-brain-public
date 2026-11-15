@@ -10,7 +10,7 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     print(__doc__ or os.path.basename(__file__))
     raise SystemExit(0)
 
-MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+MEM = r"~\.claude\projects\{{BRAIN_SLUG}}\memory"
 APPLY = len(sys.argv) > 1 and sys.argv[1] == "apply"
 SKIP = {"MEMORY.md", "INDEX_ARCHIVE.md", "OPEN_QUESTIONS.md"}
 
@@ -19,8 +19,10 @@ PREFIX = [
     ("project_", "project"), ("audit_", "audit"), ("audit", "audit"),
     ("gist_", "project"), ("session_", "transient"), ("crash_", "project"),
     ("migration", "project"), ("theory_", "project"), ("open_problem", "project"),
-    ("paper", "project"), ("aws_", "project"), ("azure_", "project"),
-    ("codex_", "project"), ("agent", "project"),
+    ("paper", "project"), ("grid", "project"), ("acct", "project"),
+    ("account", "project"), ("aws_", "project"), ("azure_", "project"),
+    ("cnc_", "project"), ("tadpole", "project"), ("xnd_", "project"),
+    ("codex_", "project"), ("agent", "project"), ("arnold_", "project"),
 ]
 
 def infer(fn):
