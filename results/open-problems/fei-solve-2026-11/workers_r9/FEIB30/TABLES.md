@@ -1,0 +1,55 @@
+# Tables generated from saved outputs
+
+All costs, logK, L and overheads are in bits per erased spectral element. Posterior mean ratios are deleted elements per unit influence.
+
+## Largest finite overheads
+
+|lambda|predictor|overhead|function|n|source|
+|---|---|---:|---|---:|---|
+|0.1|thin|1.930746671631|majority|12801|majority.jsonl|
+|0.1|ratio|1.966087933761|majority|12801|majority.jsonl|
+|0.1|lrat|2.483499945408|majority|12801|majority.jsonl|
+|0.25|thin|1.967011221661|majority|12801|majority.jsonl|
+|0.25|ratio|2.002143305309|majority|12801|majority.jsonl|
+|0.25|lrat|2.133863401061|majority|12801|majority.jsonl|
+|0.5|thin|2.028145875734|majority|12801|majority.jsonl|
+|0.5|ratio|2.062926588124|majority|12801|majority.jsonl|
+|0.5|lrat|2.011555886771|majority|12801|majority.jsonl|
+
+## Towers at depth six, lambda 0.1
+
+|gate|n|L|logK thin|cost thin|Ov thin|Ov ratio|Ov lrat|
+|---|---:|---:|---:|---:|---:|---:|---:|
+|MAJ3|729|0.000000000|-0.224661052|0.704451288|0.479790235|0.437563568|0.856110666|
+|AND2/OR2 alternating|64|2.470633849|-0.078288947|2.551974622|0.003051827|0.028718793|0.028718793|
+|tribes2x2|4096|2.471610444|-0.078486546|2.553143653|0.003046663|0.028757309|0.028757309|
+|tribes3x3|531441|1.862723530|-0.094199621|1.960566079|0.003642928|0.018913789|0.018913789|
+|PMK33|531441|3.231227966|-0.066172267|3.309465324|0.012065091|0.022025098|0.055255418|
+|balanced4_aaaa|4096|0.000000000|-0.152003093|0.152003093|0.000000000|0.000000000|0.000000000|
+|balanced4_e8e8|4096|0.000000000|-0.224661052|0.704451288|0.479790235|0.437563568|0.856110666|
+|balanced4_eaa8|4096|0.000000000|-0.326511776|0.874321145|0.547809369|0.522278455|0.728986256|
+|balanced4_eca8|4096|2.400450635|-0.119017368|2.622935070|0.103467066|0.126543881|0.237952816|
+
+## Last deeper tower evaluation, lambda 0.1
+
+These are finite-depth values; convergence is proved only for fixed balanced bases.
+
+|gate|depth|n|L|Ov thin|Ov ratio|Ov lrat|
+|---|---:|---:|---:|---:|---:|---:|
+|MAJ3|30|205891132094649|0.000000000|0.505004886|0.462829280|0.880959201|
+|balanced4_aaaa|6|4096|0.000000000|0.000000000|0.000000000|0.000000000|
+|balanced4_e8e8|12|16777216|0.000000000|0.504616006|0.462440600|0.880571952|
+|balanced4_eaa8|12|16777216|0.000000000|0.576976712|0.551968482|0.761555458|
+|balanced4_eca8|12|16777216|2.474985707|0.080970516|0.102117275|0.212365694|
+|AND2|15|32768|2.471301528|0.003046060|0.028757321|0.028757321|
+|OR2|16|65536|2.471301528|0.003046060|0.028757321|0.028757321|
+|tribes2x2|8|65536|2.471301528|0.003046060|0.028757321|0.028757321|
+|PMK33|8|43046721|3.231183554|0.012065083|0.022025100|0.055255422|
+
+## Largest posterior mean ratios
+
+|lambda|ratio|function|n|source|
+|---|---:|---|---:|---|
+|0.1|0.101471824498|PMK33 depth 5|59049|towers.jsonl|
+|0.25|0.272647988560|PMK33 depth 5|59049|towers.jsonl|
+|0.5|0.650063965449|PMK33 depth 5|59049|towers.jsonl|
