@@ -1,0 +1,33 @@
+{
+  "task": "E0030",
+  "created_local": "2026-11-13 approximately 13:21 +04",
+  "point_generator": "NumPy PCG64",
+  "point_seed": "300013+n*1000000+index",
+  "solver_seed": "point_seed+177; second start xor 0x9e3779b97f4a7c15",
+  "main_samples": {
+    "100": 400,
+    "300": 400,
+    "1000": 300,
+    "3000": 200,
+    "10000": 120
+  },
+  "epochs_per_start": 80,
+  "short_kicks_per_epoch": "max(1,n//50)",
+  "baseline_checkpoint_epochs": 20,
+  "candidate_neighbors": 32,
+  "or_opt_neighbors": 16,
+  "strong_calibration_epochs": 320,
+  "nice": 10,
+  "numerical_threads": 1,
+  "python": "3.13.2",
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "hashes": {
+    "code/torus_tsp.cpp": "380a2e80d045e769d075a5efe8db67e749d0da3f359330b6f83141b154ead867",
+    "code/torus_tsp": "48c54ffb21df2060c245a0bfa32a06e367286c85b9645a610c0274f9135356bb",
+    "code/experiment.py": "8e06056207e4dd18e8d1014cddbd49cabbc7786cf4a4f8f794a00c43bc09351f",
+    "code/calibrate.py": "0451080131ab5ef0f7b6e088bc7d96400bf5b123c2cfe0ddbacae0994e4b8cd6",
+    "code/held_karp_bound.cpp": "50512086906097bc3a9b48c22d6ef707e333d613f3ca28f493386ecfd04aad15",
+    "code/held_karp_bound": "777e95a00d24f0123e64bc226a2b7b509ce8dd19975e15d56a113503454db104",
+    "code/validate.py": "173cd8d6ca542567fdd11021d15c67040352702cf69ffefb1a029bfaef73457a"
+  }
+}

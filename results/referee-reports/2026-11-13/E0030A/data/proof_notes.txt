@@ -1,0 +1,138 @@
+E0030: checked partial results, before computation
+
+Notation: T_n is the minimum closed tour length, with T(empty)=T(singleton)=0
+and T({x,y})=2 dist(x,y). Distances are either Euclidean on the unit square
+or geodesic on the flat unit two-torus. All statements here use true optima.
+
+1. Insertion: for any nonempty A, 0 <= T(A+x)-T(A) <= 2 dist(x,A).
+Lower bound: remove x from a tour and shortcut by the triangle inequality.
+Upper bound: insert x next to a nearest point y, replacing an incident edge yz
+by yx,xz. The increase <= 2 dist(x,y). The singleton case follows directly.
+
+2. Let R be the distance from an independent uniform x to m uniform points.
+For the square, S=min_j ||x-X_j||_infinity satisfies
+ P(S>r | x) <= (1-r^2)^m, 0<=r<=1,
+because each coordinate interval cut out by an infinity ball has length >=r.
+Thus E R^2 <= 2 E S^2 <= 2/(m+1).
+For the torus, the infinity ball has area 4r^2, 0<=r<=1/2, so
+ E S^2=1/[4(m+1)] and E R^2 <= 1/[2(m+1)].
+
+3. Efron-Stein: delete point i, call the remaining set A, and write
+ delta=T(A+X_i)-T(A), delta'=T(A+X_i')-T(A).
+Conditional on A, these are iid and nonnegative. Hence
+ E[(delta-delta')^2] <= 2 E[delta^2] <= 8 E R^2.
+Applying the 1/2 factor in Efron-Stein gives Var(T_n)<=8 (square), <=2
+(torus), n>=2; n=0,1 have zero variance.
+
+4. Under the natural nested coupling T_{n+1}=T_n+Delta_n, insertion gives
+ E Delta_n^2 <= K/(n+1), where K=8 (square) or 2 (torus).
+Reverse triangle inequality in centered L2 gives
+ |sqrt(Var T_{n+1})-sqrt(Var T_n)| <= sqrt(K/(n+1)),
+so |Var T_{n+1}-Var T_n| <= 2K/sqrt(n+1).
+The bounded sequence of variances has subsequences converging to its liminf
+and limsup. Since consecutive differences tend to zero, its cluster set is the
+whole closed interval between them (cross any interior value infinitely often;
+at a crossing the distance from that value is at most the step size).
+In the square the known fluctuation lower bound makes the liminf positive.
+This neither proves the interval is a singleton nor asserts a torus lower bound.
+
+5. Conditional Poisson block criterion (all d>=2). Let P be rate-one Poisson
+in Q_L=[0,L]^d. Let H_L be the global TSP cost, with cube or torus distance.
+For each integer r>=1 partition Q_L into floor(L/r)^d side-r cubes and the
+remaining rectangular cells, and let B_{L,r} be the SUM of independent
+Euclidean TSP costs inside these cells. (This is a surrogate, not a single tour.)
+For D_x F(P)=F(P+x)-F(P), assume
+ e_r^2 := limsup_{L->infinity} L^{-d} integral_{Q_L}
+          E[(D_x H_L-D_x B_{L,r})^2] dx ->0 as r->infinity.
+This is an explicit unproved L2 locality hypothesis for the true TSP.
+
+Conclusion: lim_{L->infinity} Var(H_L)/L^d exists and is finite, and equals
+ lim_{r->infinity} Var(T(P intersect [0,r]^d))/r^d.
+
+Proof: Poisson Poincare gives
+ Var(H_L-B_{L,r}) <= integral E[(D_x H_L-D_x B_{L,r})^2] dx.
+For fixed r, independence of Poisson restrictions implies
+ lim_{L->infinity} Var(B_{L,r})/L^d = a_r,
+ a_r=Var(T(P intersect [0,r]^d))/r^d.
+To check rectangular remainders, their total volume is O_d(r L^{d-1});
+each has diameter <=sqrt(d)r. Its add-one cost is <=2 sqrt(d)r, so by
+Poincare the total remainder variance is <=4 d r^2 times that volume,
+which is o(L^d) for fixed r. Empty/singleton conventions preserve this bound.
+Reverse triangle inequality now gives
+ limsup_L |sqrt(Var H_L/L^d)-sqrt(a_r)| <= e_r.
+Compare r,s through the same L: |sqrt(a_r)-sqrt(a_s)|<=e_r+e_s.
+Thus sqrt(a_r) is Cauchy. Its finite limit and the preceding bound prove
+the conclusion for all real L->infinity, not only a divisible subsequence.
+
+Poisson Poincare used here can be proved from Efron-Stein without a
+stabilization assumption. At fixed bounded Q divide it into m equal-volume
+cells and independently replace one Poisson restriction at a time. In the
+1/2 sum of squared replacements, the leading events have a single point
+in exactly one of the old/new restrictions. Their two equal contributions
+give integral E[(D_x F)^2]dx in the mesh limit. If |D_x F|<=C deterministically,
+events with at least two old/new points have total contribution O(m*(|Q|/m)^2)
+and vanish. Deleting a shrinking cell changes the Palm integrand by o(1),
+by coupling and boundedness. This proves the inequality for every functional
+used above, whose add-one costs are deterministically bounded at fixed L,r.
+
+Scaling: H_L has law L*T(P_{L^d}) on the unit cube or unit torus. Therefore
+ Var(H_L)/L^d = n^{2/d-1} Var(T(P_n)), n=L^d.
+This conditional theorem addresses Poisson input only. Binomial variance
+needs a de-Poissonization hypothesis as well; Poisson convergence alone does
+not imply the binomial assertion.
+
+6. Conditional de-Poissonization, stated precisely for the plane. Let
+N_n~Poisson(n) independent of an iid point sequence, and suppose constants
+a and sigma_P^2 satisfy Var(T_{N_n})->sigma_P^2 and
+ || (T_{N_n}-T_n-a*(N_n-n)/sqrt(n)) -
+    E[T_{N_n}-T_n-a*(N_n-n)/sqrt(n)] ||_2 ->0.
+Then Var(T_n)->sigma_P^2-a^2.
+Indeed T_n and N_n are independent. Center the displayed identity; the two
+main terms are orthogonal, with variances Var(T_n) and a^2. The error has
+L2 norm o(1). Var(T_n) is uniformly bounded by step 3, so all error
+covariances vanish by Cauchy-Schwarz. No such approximation is proved here.
+
+The same formula works in d dimensions with n^{1/d-1/2}T costs and a fixed
+coefficient of (N_n-n)/sqrt(n), if the corresponding centered L2 remainder
+vanishes and the scaled binomial variances are bounded. The plane statement
+is all that is used in the report.
+
+7. A sufficient stabilization condition for the block criterion is explicit.
+For the cube model, suppose the rate-one whole-space Poisson process admits
+an a.s. finite add-one stabilization radius R at the origin: once P inside
+the Euclidean ball of radius R is fixed, D_0 T(S) has the same value for every
+finite completion S of those interior points outside the ball. Translate this
+condition to each deterministic x. Then global and block add-one costs agree
+whenever x is at distance >=s from its cell boundary and the translated R<=s.
+
+The requisite higher moments are automatic for ordinary TSP insertion costs.
+For a rate-one Poisson process in a side-r cube, put S=min infinity-distance
+from x to a point, assigning S=r if the process is empty. For 0<=t<r,
+ P(S>t)<=exp(-t^d), because the intersection infinity ball has volume >=t^d.
+For every p>0, E S^p <= Gamma(1+p/d), uniformly in r and x. Euclidean nearest
+distance is <=sqrt(d) S, and |D_x T|<=2sqrt(d)S (also when the process is empty).
+Thus E|D_x T|^p <= (2sqrt(d))^p Gamma(1+p/d), uniformly in r,x. The torus has
+the analogous uniform bound, with infinity ball volume (2t)^d, t<r/2.
+
+Take p>2 and theta=1-2/p. Holder and these moments imply that the average
+gradient error in step 5 is <=C_{d,p} [s/r+P(R>s)^theta], apart from a remainder
+that vanishes as L->infinity for fixed r,s. The boundary fraction estimate is
+at most 2ds/r for s<=r/2. First let r->infinity with s=sqrt(r), then use R<infinity
+a.s. This proves the block criterion from the stated stabilization property
+for the Euclidean cube functional. No tail rate is needed for this implication.
+For the periodic global functional one must additionally assume compatibility
+with periodic completion: its add-one cost agrees with the same stabilized
+local cost off the radius event. Euclidean strong stabilization alone is not
+silently asserted to imply that compatibility.
+
+Alternative remainder check in step 5: in a rectangular cell of diameter
+<=sqrt(d)r and volume v<=r^d, T<=sqrt(d)r N, N~Poisson(v). Therefore
+ Var(T)<=d r^2 (v^2+v)<=d r^2(r^d+1)v. Summing over independent remainder
+cells gives o(L^d) directly, agreeing with the Poincare bound.
+
+Failure of the tempting proof: a deterministic boundary patching error or a
+relative error o(E T_n) does not control its centered L2 norm on the constant
+fluctuation scale. Removing the boundary by periodic distance does not prove
+locality of the optimizer. Short incident edges do not rule out global changes
+of the Hamiltonian cycle. No claim of nonexistence of a stabilizing radius is
+made; what is missing is a proof of a radius, or an adequate weaker L2 property.
