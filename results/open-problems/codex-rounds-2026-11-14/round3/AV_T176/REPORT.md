@@ -1,0 +1,4 @@
+VERDICT: PARTIAL conditional-flow and averaged-marginal input to the dyadic mixing claim checked
+New beyond the earlier report: PROOF.md re-derives Sections 3–4 of OpenAI's short preprint, including path conditioning, opposite-half independence, the exact energy recurrence, and the 200d averaged-marginal bound. No defect was found in this local check; the whole proof is not certified.
+The earlier scope verdict holds: all three candidates claim optimal full-deck TV mixing only for n=2^d. The brief follow-up search found no all-even solution or Thorp-specific correction; VERIFY.md records exact statements and sources.
+Commands and source reads are in LOG.md. The sandbox denied nice's priority adjustment and process inspection; no substantial computation or Lean build ran. The next check should audit Lemma 5.1 (reciprocal representation degrees) and the final eight-factor/sign comparison, without treating local checks as independent review of the whole theorem.

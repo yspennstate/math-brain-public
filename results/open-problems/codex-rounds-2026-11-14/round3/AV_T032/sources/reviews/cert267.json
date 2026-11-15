@@ -1,0 +1,57 @@
+{
+  "family": "267",
+  "title": "Positive-temperature Bose–Einstein condensation and exact quantum depletion",
+  "headline": "Proves Bose–Einstein condensation for the exact canonical Gibbs state of the three-dimensional hard-sphere gas: each fixed exclusion distance and sufficiently small fixed density admit a strictly positive temperature, independent of volume, with positive condensate fraction in the thermodynamic limit. At zero temperature, proves the Bogoliubov leading quantum-depletion law for hard spheres and fixed bounded nonnegative radial finite-range potentials of positive scattering length, taking the thermodynamic limit before the dilute limit.",
+  "challenges": [
+    "HardSphere"
+  ],
+  "word": "NARROWER — UNLINKED",
+  "firstWord": "NARROWER — UNDECLARED",
+  "secondWord": "NARROWER — UNLINKED",
+  "disagreement": {
+    "first": "NARROWER — UNDECLARED",
+    "second": "NARROWER — UNLINKED",
+    "kind": "the word only: the first readers had no UNLINKED (amendment 3)"
+  },
+  "clauses": [
+    {
+      "clause": "Proves Bose–Einstein condensation for the exact canonical Gibbs state of the three-dimensional hard-sphere gas: each fixed exclusion distance and sufficiently small fixed density admit a strictly positive temperature, independent of volume, with positive condensate fraction in the thermodynamic limit.",
+      "status": "declared",
+      "coveredBy": [],
+      "manuscript": "Bose-Einstein-condensation-at-positive-temperature-in-the-dilute-hard-sphere-gas-October-5-2026",
+      "evidence": [
+        "lean/docs/267.md:11: It is uniform in the gas parameter within this range and concerns ground states, without a positive-temperature assertion.",
+        "lean/docs/267.md:5: - [Ground-state condensation in the dilute hard-sphere gas](../../preprints/Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026/paper.pdf)",
+        "CONTENTS.md:6704: there is a strictly positive temperature, independent of the volume, at which the exact canonical Gibbs state has a positive condensate fraction in the thermodynamic limit."
+      ],
+      "note": "Both DECLARED and UNLINKED fit: the note names the omission ('without a positive-temperature assertion'), and the clause comes from an October-5 manuscript the note does not link. I record the less severe, more informative DECLARED. No Gibbs state or temperature appears in HardSphere."
+    },
+    {
+      "clause": "At zero temperature, proves the Bogoliubov leading quantum-depletion law for hard spheres and fixed bounded nonnegative radial finite-range potentials of positive scattering length, taking the thermodynamic limit before the dilute limit.",
+      "status": "unlinked",
+      "coveredBy": [],
+      "manuscript": "Quantum-Depletion-and-Momentum-Distribution-in-the-Dilute-Hard-Sphere-Bose-Gas-October-5-2026 (hard spheres); Quantum-Depletion-for-Fixed-Bounded-Repulsive-Potentials-October-5-2026 (bounded potentials)",
+      "evidence": [
+        "lean/docs/267.md:5: - [Ground-state condensation in the dilute hard-sphere gas]",
+        "CONTENTS.md:6713: giving the depletion fraction $`\\frac{8}{3\\sqrt\\pi}\\sqrt{\\rho a^3}+o(\\sqrt{\\rho a^3})`$ for density <i>ρ</i> and hard-sphere exclusion distance <i>a</i>.",
+        "CONTENTS.md:6722: We prove the Bogoliubov quantum-depletion asymptotic for the ground state of a three-dimensional Bose gas with a fixed bounded, nonnegative, radial interaction of finite range and positive scattering length <i>a</i>.",
+        "preprints/Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026/build/sections/introduction.tex:65: We prove a positive fraction; we do not",
+        "preprints/Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026/build/sections/introduction.tex:66: estimate the optimal depletion or show that the fraction tends to one",
+        "lean/ComparatorChallenges/HardSphere.lean:380: c₀≤liminf (fun k ↦ occupation (hN k) (Ψ k).1) atTop) ∧"
+      ],
+      "note": "Stated is only a uniform ground-state lower bound liminf (condensate fraction) ≥ c₀ for ρa³ < ε₀, for hard spheres, pure and ground-supported mixed states. The hard-sphere depletion law implies this (for small ρa³ the depleted fraction is < 1/2), so the challenge is a strict weakening, not something DIFFERENT. Nothing is stated for soft potentials. The linked paper itself disclaims the depletion law, and both depletion manuscripts are unlinked."
+    }
+  ],
+  "gap": "Neither headline claim is stated. What is stated — ground-state condensation with a uniform positive lower bound c₀ on the condensate fraction in the dilute hard-sphere gas (the 'Ground-state condensation' manuscript) — is weaker than the zero-temperature depletion law (sentence 2) and says nothing at positive temperature (sentence 1). The positive-temperature omission is declared; the depletion-law omission (hard spheres and bounded potentials) is not.",
+  "scopeNoteOnGap": "partly declared: docs/267.md:11 'It is uniform in the gas parameter within this range and concerns ground states, without a positive-temperature assertion.' — silent on the Bogoliubov depletion law and on bounded soft potentials; docs/267.md:5 lists only the ground-state-condensation manuscript of the family's five.",
+  "note": "Neither headline sentence is stated. The challenge is the linked September-24 ground-state condensation theorem, which the depletion law implies (so NARROWER, not DIFFERENT). The positive-temperature omission is declared in docs/267.md:11, and the depletion law comes from two unlinked October-5 manuscripts, so the family is UNLINKED. The first reader had the depletion gap as UNDECLARED, before amendment 3.",
+  "firstSuspicious": "The family title is 'Positive-temperature Bose–Einstein condensation and exact quantum depletion', and the only challenge states neither: it is the September ground-state-condensation result. OpenAI's scope note discloses the missing temperature but not the missing depletion law.",
+  "confidence": "high",
+  "conditionalOnLaneK": null,
+  "flags": [],
+  "flagReadings": null,
+  "readings": [
+    "first/batch2.json",
+    "second/second2.json"
+  ]
+}

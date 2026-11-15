@@ -1,0 +1,60 @@
+{
+  "precision_digits": 45,
+  "I_closed": "0.073904652375245286251900741971234977965",
+  "I_log_moment_quadrature": "0.073904652375245286251900741971234977965",
+  "I_heat_overlap_quadrature": "0.073904652375245286251900741971234977965",
+  "tuning_shift_4piI": "0.92871325187271221849482034039921997821",
+  "checks": {
+    "moment_vs_closed_abs_error": "2.1895288505075266733183274738904939551e-47",
+    "heat_vs_closed_abs_error": "0.0"
+  },
+  "heat_kernel_checks": [
+    {
+      "r": "0.7",
+      "N": "13.0",
+      "direct_vs_E1_error": "0.0",
+      "remainder": "0.00074810182025755459511317524489795203126",
+      "upper_bound": "0.00074986463572142994737262542358203882112"
+    },
+    {
+      "r": "2.0",
+      "N": "1000.0",
+      "direct_vs_E1_error": "0.0",
+      "remainder": "0.000079557581598203023024438375290612853612",
+      "upper_bound": "0.000079577471545947667884441881686257181017"
+    }
+  ],
+  "finite_N_overlap_checks": [
+    {
+      "N": 10,
+      "renormalized_heat_overlap": "0.074263905388638087252685349549710433323",
+      "error_from_I": "0.00035925301339280100078460757847545535804"
+    },
+    {
+      "N": 100,
+      "renormalized_heat_overlap": "0.073908591518484692404556059409304592873",
+      "error_from_I": "0.0000039391432394061526553174380696149084875"
+    },
+    {
+      "N": 1000,
+      "renormalized_heat_overlap": "0.073904692124197386272523469170568497342",
+      "error_from_I": "0.000000039748952100020622727199333519377708665"
+    },
+    {
+      "N": 10000,
+      "renormalized_heat_overlap": "0.073904652773092855744120253762330800092",
+      "error_from_I": "0.00000000039784756949221951179109582212722280931"
+    }
+  ],
+  "getpriority": 20,
+  "getpriority_errno": 0,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "wall_seconds": 0.102,
+  "max_rss_bytes_macos": 21512192,
+  "scope": "Constant checks only; no numerical proof of an operator limit."
+}

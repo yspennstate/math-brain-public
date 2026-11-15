@@ -1,0 +1,4 @@
+VERDICT: PARTIAL characteristic-length reduction verified conditional on rare-fast crossings and localized travel
+The earlier Gamma-only claim-scope finding and conditional endpoint check hold on independent rechecking; no full continuous-law solution or new specific refutation was located in the bounded update search.
+New: PROOF.md re-derives the cubic-length change of measure and record scales. `OMP_NUM_THREADS=1 nice -n 15 python3 audit.py` passed source/theorem checks, 36 exact Gamma integrals, 30 edge counts, and 50 exact tail identities; the process runs at nice 20.
+No gap was found in this reduction, conditional on its two crossing inputs; the full preprint and T095 remain unverified. Next: check `df:cr:rare-fast`, especially trial amplification and the finite-dependence oriented-path argument. Task: “take the NEXT checkable step on this problem, building on that work” — 15 November 2026, 00:52 Asia/Tbilisi.

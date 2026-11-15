@@ -1,0 +1,6 @@
+VERDICT: PARTIAL conditional verification of the path-factor insertion and separation hypotheses in the positive-temperature paper's cancellation argument
+The earlier scope result holds: the paper claims low-positive-temperature condensation for dilute three-dimensional hard spheres; the documented Lean theorem concerns ground states. The brief follow-up search found no later resolution or paper-specific correction.
+New: PROOF.md derives the shared-midpoint insertion/deletion bounds and R=30 separation from the stated deterministic one-path estimate, with the explicit sufficient constant chi_D=159014*M*e_D; this verifies one dependency transition, not the condensation proof.
+Commands and source openings are in LOG.md; audit command: nice -n 15 env OMP_NUM_THREADS=1 python3 audit.py. No many-body numerical computation or Lean build was attempted. The GitHub directory web open failed; the read-only GitHub reader supplied the sources.
+The underlying single-replacement estimate, thermal certificate supply and route encounter estimate remain unverified. Next check Lemma 6.3 (single replacement), especially its mesh-interval collision estimate and uniformity for all permitted deterministic opponents.
+Task: “Verify: has open problem T032 been settled by the OpenAI math release?” — report time 2026-11-15T00:58:01.774186+04:00 (request clock time not supplied).

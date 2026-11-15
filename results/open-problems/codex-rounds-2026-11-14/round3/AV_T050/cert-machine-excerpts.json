@@ -1,0 +1,165 @@
+[
+  {
+    "family": "072",
+    "title": "Brennan's conjecture and the integral-means spectrum",
+    "headline": "Proves Brennan's conjecture: for every conformal bijection ϕ from a simply connected plane domain onto the disk, $`|\\phi'|^s`$ is area-integrable for $`4/3\\lt s\\lt 4`$. The sharp universal integral-means identity is $`B_{\\mathcal S}(t)=|t|-1`$ for t ≤ −2. A strict bound $`B_b(-1)\\lt 1/4`$ for bounded univalent functions disproves Kraetzer's prediction at that parameter.",
+    "challenges": [
+      "Brennan",
+      "BrennanSharp",
+      "StrictMeans"
+    ],
+    "word": "NARROWER — UNDECLARED",
+    "firstWord": "NARROWER — UNDECLARED",
+    "secondWord": "NARROWER — UNDECLARED",
+    "disagreement": null,
+    "clauses": [
+      {
+        "clause": "Proves Brennan's conjecture: for every conformal bijection ϕ from a simply connected plane domain onto the disk, $`|\\phi'|^s`$ is area-integrable for $`4/3\\lt s\\lt 4`$.",
+        "status": "stated",
+        "coveredBy": [
+          "Brennan"
+        ],
+        "evidence": [
+          "lean/ComparatorChallenges/Brennan.lean:38: (∀ W : Set ℂ, IsOpen W → IsConnected W → SimplyConnectedSpace W →",
+          "lean/ComparatorChallenges/Brennan.lean:40: DifferentiableOn ℂ φ W → Set.BijOn φ W disk →",
+          "lean/ComparatorChallenges/Brennan.lean:41: ∀ s : ℝ, 4 / 3 < s → s < 4 →",
+          "lean/ComparatorChallenges/Brennan.lean:42: IntegrableOn (fun z => ‖deriv φ z‖ ^ s) W volume) ∧"
+        ],
+        "note": "The extra hypothesis SphericalBoundaryNontrivial W is redundant: a holomorphic bijection onto the disk forces W ≠ ℂ (Liouville), and a simply connected W ≠ ℂ has more than one boundary point on the sphere. BrennanSharp adds endpoint sharpness via the Koebe map."
+      },
+      {
+        "clause": "The sharp universal integral-means identity is $`B_{\\mathcal S}(t)=|t|-1`$ for t ≤ −2.",
+        "status": "undeclared",
+        "coveredBy": [
+          "Brennan"
+        ],
+        "manuscript": "Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026",
+        "evidence": [
+          "lean/ComparatorChallenges/Brennan.lean:36: integralMean f (-2) r ≤ C * (1 - r) ^ (-1 - ε)) ∧",
+          "lean/ComparatorChallenges/Brennan.lean:37: spectrum (-2) = 1 ∧",
+          "lean/docs/072.md:5: - [Brennan's conjecture and sharp inverse-square integral means](../../preprints/Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026/paper.pdf)",
+          "lean/docs/072.md:12: It also gives the uniform inverse-square radial-mean bound with exponent $-1-\\varepsilon$ for every $\\varepsilon>0$ and the spectrum value $B_{\\mathcal S}(-2)=1$.",
+          "preprints/Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026/build/sections/06-integrability.tex:47: \\begin{corollary}[The full negative linear tail]\\label{cor:negative-linear-tail}",
+          "preprints/Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026/build/sections/06-integrability.tex:56: B_{\\SSS}(t)=|t|-1\\qquad(t\\leq-2).",
+          "preprints/Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026/build/sections/06-integrability.tex:61: Put $a=|t|-2\\geq0$.  The distortion lower bound"
+        ],
+        "note": "Only t = −2 is stated. The identity for t < −2 follows from the stated t = −2 bound only through the Koebe distortion theorem (|f'(z)| ≥ (1−|z|)/(1+|z|)³, not formalized here or in Mathlib) plus the Koebe-map lower bound — exactly the manuscript's corollary proof. The linked manuscript claims the full range; docs/072.md:12 describes the t = −2 part and never names the omission."
+      },
+      {
+        "clause": "A strict bound $`B_b(-1)\\lt 1/4`$ for bounded univalent functions disproves Kraetzer's prediction at that parameter.",
+        "status": "stated",
+        "coveredBy": [
+          "StrictMeans"
+        ],
+        "evidence": [
+          "lean/ComparatorChallenges/StrictMeans.lean:39: boundedSpectrum (-1) < (1 / 4 : EReal) ∧",
+          "lean/ComparatorChallenges/StrictMeans.lean:40: (¬ ∀ p : ℝ, boundedSpectrum p = kraetzerPrediction p) := by",
+          "lean/ComparatorChallenges/StrictMeans.lean:31: if |p| ≤ 2 then ((p ^ (2 : ℕ) / 4 : ℝ) : EReal)"
+        ],
+        "note": "kraetzerPrediction (−1) = 1/4, so boundedSpectrum (−1) < 1/4 is the failure at that parameter; B_b is taken over normalized bounded univalent maps (normalization does not change the growth exponent)."
+      }
+    ],
+    "gap": "The headline claims B_S(t) = |t| − 1 for every t ≤ −2. Lean states it only at t = −2 (Brennan.lean:37). The manuscript states the full range as a corollary (sections/06-integrability.tex:56), so the headline matches the paper and the Lean is narrower by that corollary. Mathematically the gap is a short classical step (B_S(t)+t is nondecreasing by the distortion theorem, and the Koebe function gives the lower bound), but it is not stated.",
+    "scopeNoteOnGap": "silent on t < −2. The nearest text describes only t = −2: lean/docs/072.md:12: \"It also gives the uniform inverse-square radial-mean bound with exponent $-1-\\varepsilon$ for every $\\varepsilon>0$ and the spectrum value $B_{\\mathcal S}(-2)=1$.\"",
+    "note": "Brennan and the Kraetzer clause are stated; the negative linear tail B_S(t) = |t|−1 is stated only at t = −2. The full range is a corollary in a manuscript the note links, and the note describes only t = −2 without naming the omission. Agrees with the first reader.",
+    "firstSuspicious": "The omitted range t < −2 is a short corollary in the manuscript; a second reader may judge it an honest scoping choice, but neither the scope note nor the challenge says it is left out, and the CONTENTS headline states the full range.",
+    "confidence": "high",
+    "conditionalOnLaneK": null,
+    "flags": [
+      {
+        "challenge": "Brennan",
+        "flag": "VACUITY? checked, none: SphericalBoundaryNontrivial is automatically true for simply connected W ≠ ℂ, and W ≠ ℂ follows from a holomorphic bijection onto the disk (Liouville); the hypothesis is redundant, not restrictive."
+      },
+      {
+        "challenge": "Brennan",
+        "flag": "JUNK? checked, none: for schlicht f and r < 1 the integrand |f'|^t is continuous and positive on the circle, so the interval integral and the log are genuine."
+      },
+      {
+        "challenge": "BrennanSharp",
+        "flag": "JUNK? checked, none: ¬IntegrableOn could hold for a non-measurable function, but deriv of any function is measurable, so it means infinite integral."
+      }
+    ],
+    "flagReadings": null,
+    "readings": [
+      "first/batch5.json",
+      "second/second2.json"
+    ]
+  },
+  {
+    "family": "212",
+    "title": "Planar first-passage geometry and the absence of bigeodesics",
+    "headline": "Proves that planar first-passage percolation has no doubly infinite geodesic for iid nonnegative nonatomic edge weights when the minimum of four weights has finite second moment. For exponential weights, the limit shape is strictly convex with C1 boundary. Differentiability also holds for every Gamma law with positive shape and rate.",
+    "challenges": [
+      "PlanarFirstPassage",
+      "GammaPassage"
+    ],
+    "word": "NARROWER — UNLINKED",
+    "firstWord": "NARROWER — UNDECLARED",
+    "secondWord": "NARROWER — UNLINKED",
+    "disagreement": {
+      "first": "NARROWER — UNDECLARED",
+      "second": "NARROWER — UNLINKED",
+      "kind": "the word only: the first readers had no UNLINKED (amendment 3)"
+    },
+    "clauses": [
+      {
+        "clause": "Proves that planar first-passage percolation has no doubly infinite geodesic for iid nonnegative nonatomic edge weights when the minimum of four weights has finite second moment.",
+        "status": "unlinked",
+        "coveredBy": [],
+        "manuscript": "No-bigeodesics-in-planar-first-passage-percolation-September-24-2026",
+        "evidence": [
+          "CONTENTS.md:4891: [No bigeodesics in planar first-passage percolation]",
+          "CONTENTS.md:4893: We prove that planar first-passage percolation with independent identically distributed nonnegative nonatomic edge weights has almost surely no doubly infinite geodesic, provided the minimum of four independent weights has finite second moment.",
+          "lean/docs/212.md:5: - [Strict convexity and differentiability of the planar exponential first-passage limit shape](../../preprints/Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026/main.pdf)",
+          "lean/docs/212.md:1: # Planar first-passage geometry and the absence of bigeodesics"
+        ],
+        "note": "No challenge mentions geodesics; the note's title names bigeodesics, but a title alone does not declare, and the only linked paper is the strict-convexity/differentiability one."
+      },
+      {
+        "clause": "For exponential weights, the limit shape is strictly convex",
+        "status": "declared",
+        "coveredBy": [],
+        "manuscript": "Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026",
+        "evidence": [
+          "lean/docs/212.md:11: The paper also claims strict convexity for the exponential limit shape. Strict convexity is outside these selected differentiability statements."
+        ]
+      },
+      {
+        "clause": "with C1 boundary.",
+        "status": "stated",
+        "coveredBy": [
+          "PlanarFirstPassage"
+        ],
+        "evidence": [
+          "lean/ComparatorChallenges/PlanarFirstPassage.lean:62: marginal : ∀ e, Measure.map (τ e) P = expMeasure 1",
+          "lean/ComparatorChallenges/PlanarFirstPassage.lean:94: DifferentiableAwayFromOrigin μ ∧ UniqueNormalizedSupports μ ∧ C1UnitSphere μ ∧",
+          "lean/ComparatorChallenges/PlanarFirstPassage.lean:97: (∀ v ∈ frontier {z | μ z ≤ 1}, HasC1CurveChart (frontier {z | μ z ≤ 1}) v) := by"
+        ],
+        "note": "Encoding: rate-1 exponential weights (other rates by scaling, and GammaPassage with shape 1 covers every rate); the limit shape is the unit ball of the a.s. radial time constant μ."
+      },
+      {
+        "clause": "Differentiability also holds for every Gamma law with positive shape and rate.",
+        "status": "stated",
+        "coveredBy": [
+          "GammaPassage"
+        ],
+        "evidence": [
+          "lean/ComparatorChallenges/GammaPassage.lean:97: ∀ (shape rate : ℝ), 0 < shape → 0 < rate →",
+          "lean/ComparatorChallenges/GammaPassage.lean:103: DifferentiableAwayFromOrigin μ ∧"
+        ]
+      }
+    ],
+    "gap": "The no-bigeodesics theorem (the headline's first sentence) is not stated; strict convexity of the exponential limit shape is not stated (declared).",
+    "scopeNoteOnGap": "No-bigeodesics: silent — the bigeodesics paper is not linked; only the title mentions it: lean/docs/212.md:1: the absence of bigeodesics. Strict convexity: lean/docs/212.md:11: Strict convexity is outside these selected differentiability statements.",
+    "note": "C¹ boundary (exponential) and Gamma differentiability are stated; strict convexity is declared (docs/212.md:11); the no-bigeodesics theorem comes from a manuscript docs/212.md does not link: NARROWER — UNLINKED. The first reader recorded the same three facts and called the bigeodesics gap UNDECLARED before amendment 3; the difference is the amendment.",
+    "firstSuspicious": "Pattern seen across this batch: the CONTENTS.md headline was widened to manuscripts the scope note does not link, and the scope note never says those manuscripts are unformalized. Strictly that is silence, hence UNDECLARED; a second reader should weigh whether the scope note's paper list counts as a declaration. Here: the September 24 no-bigeodesics paper.",
+    "confidence": "high",
+    "conditionalOnLaneK": null,
+    "flags": [],
+    "flagReadings": null,
+    "readings": [
+      "first/batch4.json",
+      "second/second7.json"
+    ]
+  }
+]
