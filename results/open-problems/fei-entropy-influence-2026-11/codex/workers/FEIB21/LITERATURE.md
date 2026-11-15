@@ -1,0 +1,17 @@
+# Literature and prior-work scope
+
+Read the specified local FLOW sections, FEIB18 and FEIB19 reports/proofs, and the provisional brain memory fei_readk_dnf_theorem_2026_09_23. The math recall script returned "math store not found". Brain recall helped locate the September manuscript and prevented treating the read-k class as unexplored. No external memory files were edited.
+
+The local September source is ~/brain/math-brain/results/open-problems/proofnet24/P03-fei/continuations/2026-09-23-readk-dnf/paper/fei_readk_regular.tex (sections beginning at the labels thm:readk-main and thm:readk-log); its companion REPORT.md records the claims. It claims Shannon FEI for read-k DNF/CNF with min(2.89+9.9k,30+5.6 log2 k), and stronger composition statements. Its brain status is provisional. I read its witness-density argument, cover/reference-measure proof and rooted-animal argument, but have not independently refereed the whole manuscript. None of the proofs in this folder assumes that result. Its dependence on k would not settle a coefficient uniform in unbounded D in the target class.
+
+Primary literature checked online:
+
+- [Guy Shalev, On the Fourier Entropy Influence Conjecture for Extremal Classes](https://arxiv.org/html/1806.03646v2), section 6.1. The paper gives FMEI for regular read-k DNFs and proposes a Shannon-entropy encoding route for read-k DNFs. It does not prove the full Shannon statement for that DNF class. Its read-k decision-tree statement is a different representation class.
+- [Arunachalam, Chakraborty, Koucky, Saurabh and de Wolf, Improved bounds on Fourier entropy and Min-entropy](https://arxiv.org/html/1809.09819v2), Theorems 1.9 and 4.9: H_infinity <= O(log k) I for read-k DNFs. This is min-entropy, not Shannon entropy or one-coordinate erasure.
+- [Wan, Wright and Wu, Decision Trees, Protocols, and the Fourier Entropy-Influence Conjecture](https://arxiv.org/html/1312.3003v1), main results and section 1.3: Shannon FEI for read-k decision trees and bounds involving expected decision-tree depth; also an FEI+ composition argument. A read-k DNF need not have a read-k decision tree.
+- [Kelman, Kindler, Lifshitz, Minzer and Safra, Towards a Proof of the Fourier–Entropy Conjecture?](https://arxiv.org/html/1911.10579v2), Theorems 1.2 and 1.3: concentration and a weighted log-level entropy bound, rather than FEI itself. This does not remove the logarithmic factor needed here.
+- [Lecomte and Tan, Sharper bounds on the Fourier concentration of DNFs](https://arxiv.org/abs/2109.04525), abstract checked as additional context: a Fourier concentration theorem with improved dependence on read number. Concentration is not automatically the required Shannon or coordinate-erasure theorem.
+
+The numerical summaries and proofs here are an investigation of a particular witness and tree model, with attribution to those prior results in this neutral clause; no new general FEI class or first result for read-k DNFs is asserted. The scoped literature check did not establish whether the acyclic-incidence coordinate asymptotic already appears elsewhere. An exhaustive novelty search was not performed.
+
+One combinatorial correction to FLOW 12(o) is independent of literature: linearity does not imply D<=2^(w/2). A star with D width-w terms meeting only at their center is linear for arbitrary D. Taking D=floor(2^(3w/4)) still gives D 2^-w ->0 while violating the proposed square-root ceiling. The balance ceiling in the supplied two-level model comes from its many attached terms, not from the definition of a linear hypergraph.

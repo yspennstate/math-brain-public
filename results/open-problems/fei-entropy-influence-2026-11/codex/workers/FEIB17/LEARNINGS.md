@@ -1,0 +1,19 @@
+# Durable findings for the launching session
+
+Status: PROVED unless a narrower scope is stated. These are saved locally for later brain publication because RULES.md prohibits this worker from publishing or modifying shared memory.
+
+1. A bounded-influence erasure theorem would resolve FEI. The switch g=1_B f+(1-1_B)z has E_i(g)=2^-k E_i(f) on every original coordinate and I(g)=1+2^-k(I(f)+k-1). Together with tensor additivity, a bound H^-<=M only for 1<=I<=9/4 gives H^-<=2MI everywhere. In particular H^-<=CI^2 for I>=1 is equivalent in strength to FEI. Without I>=1 it is false on AND_n. Evidence: PROOFS.md section 1; exhaustive four-variable base checks in reductions.json.
+
+2. Never replace log(1+r) by log(r) inside a spectral KL average without controlling zeros and the negative part. Real Boolean examples have infinite raw derivative-to-restriction KL and unbounded E_i/Inf_i. The correct reference is a mixture: m=a^2+b^2 gives G_i=delta[log(1/delta)-KL(b^2/delta||m)] exactly. Using a restriction u instead gives q=(uhat^2+b^2)/(1+delta). Evidence: REFEREE (e), singular_examples.json. This corrects FLOW 7(f), the last “i.e.” of 7(g), and 9(b).
+
+3. The largest-influence counterexample is already an older brain result. The current bent construction verifies it, but its exact coordinate influences depend on the chosen replaced point. At all-zero bits the outer influences are 1/2+2^-m, giving minimal odd r=7,53,695 for m=2,4,6. At all-one bits they are 1/2-2^-m, giving r=3,33,613. The E_i/Inf_i product formula is unchanged. Thus r=41 at m=4 is not a point-independent sufficient statement. Evidence: exact_families.json, full composed n=15 check in final_checks.json, and the recalled September card named in RUNS.md.
+
+4. A small census can endorse a false correction even when its integrated budget is exactly right. The vertex candidate F_A<=c rho_A+k I(g)+l Var(g) fits the supplied five-variable representatives with objective 3.226406123311145. It fails already at a 256-variable biased threshold. Thresholds displaced n^(1/4) from the median prove that no fixed c,k,l work: F is of order sqrt(n)log n while rho and I are of order sqrt(n). Evidence: PROOFS.md section 4, vertex_lp.json. This rules out that correction family, not vertex averaging itself.
+
+5. Real Booleanity gives a useful normalized edge budget. Each derivative coefficient has magnitude at most its pivotal density, so one chosen spectral edge per coordinate, or any weighted average of edges with total weight at most one per coordinate, costs at most [2/(e ln 2)]I. The complex unimodular product violates this bound. The full G still needs control of edge multiplicity. Evidence: PROOFS.md section 2; edge_budget.json. Singleton upper endpoints therefore cannot supply an unbounded erasure ratio.
+
+6. Two local constants in FLOW need correction. For q>=2^-c p, Phi(p,q) is bounded by [log(1+2^c)+2^c log(1+2^-c)]q, not (c+1)q. For a block witness, the exact entropy is A h((delta-eta)/A)+(1-A)h(eta/(1-A)); replacing its logarithmic bound by delta log(e A/delta)+eta log(e/eta) needs delta<=A. A universal replacement uses A+eta. A fully relevant Boolean counterexample makes the original right side negative. Evidence: REFEREE (h), final_checks.json and reductions.json.
+
+7. Majority block influence scales as sqrt(k/n), not k/sqrt(n), for 1<<k<<n. Its residual pivotality eta/Inf_i scales as 1/sqrt(pi k), so k of order log^2 n is indeed needed by the stated block-witness criterion, but then I_N/Inf_i grows like sqrt(k). Symmetric biased majorities also show that comparable consecutive low-level weights are possible. Evidence: exact binomial formulas in REFEREE and witnesses.json.
+
+Open: a universal unweighted edge budget; a vertex correction that survives the threshold family and has O(I) spectral expectation; FEI itself. No finite census or high-precision numerical value here closes any of those questions.
