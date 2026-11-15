@@ -1,0 +1,12 @@
+#!/bin/bash
+# cores: 1
+# mem_mb: 1500
+# gpu: 1
+# an agent: T104 GPU counterexample search: 3+5 positive control (known zero at k=8), then 4+5 and 5+5 (isolates and lower trace), MLX batch 32768; corroboration only
+cd /Users/yitz/agent_run/gpu_t104 || exit 1
+P=/Users/yitz/gpu_venv/bin/python
+for sp in "3 5 4" "4 5 20" "5 5 20"; do
+  [ -e STOP ] && exit 3
+  set -- $sp; t=$1$2
+  /usr/bin/time -l nice -n 10 $P -I gpu_t104_search.py $1 $2 32768 3000 $3 $((100+t)) run_$t > run_$t.out 2> run_$t.time || exit 4
+done
