@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8YWWM+xH+/ydInXJJ/ch+QWkDiw</id>
+  <title>arXiv Query: search_query=&amp;id_list=2110.02195,2607.06290&amp;start=0&amp;max_results=3</title>
+  <updated>2026-11-11T01:41:10Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=3&amp;id_list=2110.02195,2607.06290" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>3</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2110.02195v2</id>
+    <title>TensorPlan and the Few Actions Lower Bound for Planning in MDPs under Linear Realizability of Optimal Value Functions</title>
+    <updated>2022-03-10T13:24:39Z</updated>
+    <link href="https://arxiv.org/abs/2110.02195v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.02195v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the minimax query complexity of online planning with a generative model in fixed-horizon Markov decision processes (MDPs) with linear function approximation. Following recent works, we consider broad classes of problems where either (i) the optimal value function $v^\star$ or (ii) the optimal action-value function $q^\star$ lie in the linear span of some features; or (iii) both $v^\star$ and $q^\star$ lie in the linear span when restricted to the states reachable from the starting state. Recently, Weisz et al. (2021b) showed that under (ii) the minimax query complexity of any planning algorithm is at least exponential in the horizon $H$ or in the feature dimension $d$ when the size $A$ of the action set can be chosen to be exponential in $\min(d,H)$. On the other hand, for the setting (i), Weisz et al. (2021a) introduced TensorPlan, a planner whose query cost is polynomial in all relevant quantities when the number of actions is fixed. Among other things, these two works left open the question whether polynomial query complexity is possible when $A$ is subexponential in $\min(d,H)$. In this paper we answer this question in the negative: we show that an exponentially large lower bound holds when $A=Ω(\min(d^{1/4},H^{1/2}))$, under either (i), (ii) or (iii). In particular, this implies a perhaps surprising exponential separation of query complexity compared to the work of Du et al. (2021) who prove a polynomial upper bound when (iii) holds for all states. Furthermore, we show that the upper bound of TensorPlan can be extended to hold under (iii) and, for MDPs with deterministic transitions and stochastic rewards, also under (ii).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-05T17:42:46Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Gellért Weisz</name>
+    </author>
+    <author>
+      <name>Csaba Szepesvári</name>
+    </author>
+    <author>
+      <name>András György</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.06290v1</id>
+    <title>Quantitative Gaussian-Process limits of Tensor Programs</title>
+    <updated>2026-07-07T13:59:56Z</updated>
+    <link href="https://arxiv.org/abs/2607.06290v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.06290v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the infinite-width Gaussian-process limit of random neural networks
+  through the lens of tensor programs, and we provide a quantitative convergence
+  theory in Wasserstein distance.
+  Our main result gives explicit finite-width error bounds, of order inverse square-root of the widths
+  between finite-network executions and their
+  Gaussian-process limits. The framework is architecture-agnostic and covers feed-forward models together
+  with weight-sharing schemes relevant for recurrent and transformer-type
+  architectures.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-07T13:59:56Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Andrea Agazzi</name>
+    </author>
+    <author>
+      <name>Eloy Mosig García</name>
+    </author>
+    <author>
+      <name>Dario Trevisan</name>
+    </author>
+  </entry>
+</feed>

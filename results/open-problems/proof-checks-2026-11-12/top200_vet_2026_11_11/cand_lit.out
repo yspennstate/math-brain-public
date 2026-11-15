@@ -1,0 +1,98 @@
+== N01
+2611.07973v1 | Tight Asymptotic Bounds on the Maximum Number of Linear Regions of Piecewise-Linear Kolmogorov--Arnold network | Ye Su, Yong Liu 
+      Schoots et al.~\citep{schoots2025relating} (AISTATS 2025) established a generally loose upper bound on the number of linear regions of continuous piecewise-linear (CPWL) Kolmogorov--Arnold networks (KANs), without providing a lower bound. We consider a $T$-lay
+2610.38281v2 | A Witnessing Duality for ReLU Network Depth | Dimitrios Myrisiotis 
+      A depth lower bound for ReLU networks asserts that every sufficiently shallow network fails on some input. What does a proof of such a bound compute? We study this question for exact computation of the maximum of $n$ real inputs, with depth measured by the num
+2610.26795v1 | Two hidden layer suffice: the caterpillar net | Jakob Paul Zimmermann 
+      Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. A now-disproved conjecture predicted logarithmic depth 
+2610.04256v1 | A Hand-Checkable Proof That Two Hidden ReLU Layers Compute the Maximum of Six Numbers | Dimitrios Myrisiotis 
+      Exactly computing the maximum function is a standard test case for studying depth in ReLU networks. Two hidden layers are known to suffice for up to twelve inputs through computer-assisted constructions. For six real inputs, we give an explicit hexagon identit
+2607.21651v2 | Shallower ReLU Network Representations via Exact Linear Algebra | Kilian Rueß, Gennadiy Averkov, Florestan Brunck, Moritz Gril 
+      We study the depth required by ReLU networks to exactly represent piecewise linear functions, focusing specifically on the maximum function. This problem has recently received significant attention in both the ML and TCS literature. We prove that $\max_n(x)=\m
+2601.01417v1 | A Depth Hierarchy for Computing the Maximum in ReLU Networks via Extremal Graph Theory | Itay Safran 
+      We consider the problem of exact computation of the maximum function over $d$ real inputs using ReLU neural networks. We prove a depth hierarchy, wherein width $Ω\big(d^{1+\frac{1}{2^{k-2}-1}}\big)$ is necessary to represent the maximum for any depth $3\le k\l
+== N02
+2608.03197v1 | On the Implicit Flatness Bias of Sharpness-Aware Minimization: A Linear Stability Analysis with Quantitative H | Jiaxin Deng, Junbiao Pang 
+      Sharpness-Aware Minimization (SAM) improves generalization by seeking parameters whose loss is robust to local adversarial perturbations, but the quantitative mechanism underlying its implicit bias toward flat minima remains unclear. In particular, the perturb
+2603.08290v2 | Minor First, Major Last: A Depth-Induced Implicit Bias of Sharpness-Aware Minimization | Chaewon Moon, Dongkuk Si, Chulhee Yun 
+      We study the implicit bias of Sharpness-Aware Minimization (SAM) when training $L$-layer linear diagonal networks on linearly separable binary classification. For linear models ($L=1$), both $\ell_\infty$- and $\ell_2$-SAM recover the $\ell_2$ max-margin class
+2508.10435v1 | Unpacking the Implicit Norm Dynamics of Sharpness-Aware Minimization in Tensorized Models | Tianxiao Cao, Kyohei Atarashi, Hisashi Kashima 
+      Sharpness-Aware Minimization (SAM) has been proven to be an effective optimization technique for improving generalization in overparameterized models. While prior works have explored the implicit regularization of SAM in simple two-core scale-invariant setting
+2410.14802v1 | Implicit Regularization of Sharpness-Aware Minimization for Scale-Invariant Problems | Bingcong Li, Liang Zhang, Niao He 
+      Sharpness-aware minimization (SAM) improves generalization of various deep learning tasks. Motivated by popular architectures such as LoRA, we explore the implicit regularization of SAM for scale-invariant problems involving two groups of variables. Instead of
+2410.10373v2 | Sharpness-Aware Minimization Efficiently Selects Flatter Minima Late in Training | Zhanpeng Zhou, Mingze Wang, Yuchen Mao, Bingrui Li, Junchi Y 
+      Sharpness-Aware Minimization (SAM) has substantially improved the generalization of neural networks under various settings. Despite the success, its effectiveness remains poorly understood. In this work, we discover an intriguing phenomenon in the training dyn
+2311.17539v5 | Critical Influence of Overparameterization on Sharpness-aware Minimization | Sungbin Shin, Dongyeop Lee, Maksym Andriushchenko, Namhoon L 
+      Sharpness-Aware Minimization (SAM) has attracted considerable attention for its effectiveness in improving generalization in deep neural network training by explicitly minimizing sharpness in the loss landscape. Its success, however, relies on the assumption t
+== N03
+2610.00332v1 | The Weakest Link: Distilling LLM Reasoning with Worst-Case Constrained Reinforcement Learning | Matthieu Zimmer, Xiaotong Ji, Tu Nguyen, Haitham Bou-Ammar 
+      Distilling the reasoning capabilities of large language models (LLMs) into smaller students is a central challenge for efficient deployment. Current approaches face a fundamental tension: optimizing purely for verifiable task rewards (e.g., via GRPO) leads to 
+2605.12426v1 | Geometric Factual Recall in Transformers | Shauli Ravfogel, Gilad Yehudai, Joan Bruna, Alberto Bietti 
+      How do transformer language models memorize factual associations? A common view casts internal weight matrices as associative memories over pairs of embeddings, requiring parameter counts that scale linearly with the number of facts. We develop a theoretical a
+2605.18820v1 | Emergence of Frontier Superposition: Möbius attractor and Cascade Supervision | Hongyu Gu, Jingwen Fu 
+      Superposition allows Transformers to reason in depth, carrying an entire reasoning frontier in parallel through a bounded-depth forward pass instead of unrolling serial chain-of-thought tokens. While Zhu et al. (2025) hand-crafted an equal-weight breadth-first
+2511.07378v1 | Transformers Provably Learn Chain-of-Thought Reasoning with Length Generalization | Yu Huang, Zixin Wen, Aarti Singh, Yuejie Chi, Yuxin Chen 
+      The ability to reason lies at the core of artificial intelligence (AI), and challenging problems usually call for deeper and longer reasoning to tackle. A crucial question about AI reasoning is whether models can extrapolate learned reasoning patterns to solve
+2508.08222v2 | Multi-head Transformers Provably Learn Symbolic Multi-step Reasoning via Gradient Descent | Tong Yang, Yu Huang, Yingbin Liang, Yuejie Chi 
+      Transformers have demonstrated remarkable capabilities in multi-step reasoning tasks. However, understandings of the underlying mechanisms by which they acquire these abilities through training remain limited, particularly from a theoretical standpoint. This w
+2505.19531v1 | Minimalist Softmax Attention Provably Learns Constrained Boolean Functions | Jerry Yao-Chieh Hu, Xiwen Zhang, Maojiang Su, Zhao Song, Han 
+      We study the computational limits of learning $k$-bit Boolean functions (specifically, $\mathrm{AND}$, $\mathrm{OR}$, and their noisy variants), using a minimalist single-head softmax-attention mechanism, where $k=Θ(d)$ relevant bits are selected from $d$ inpu
+== N04
+2610.36090v2 | Setting Things Straight: On the Straightness and Non-Straightness of Two-Step Rectified Flow | Tuan Pham, Saptarshi Roy, Alessandro Rinaldo, Purnamrita Sar 
+      Rectified flow (RF) is an ODE-based generative modeling framework that has achieved remarkable success in practice over the past few years. By design, RF seeks to produce flows that have a high degree of straightness, in the sense that the resulting ODE trajec
+2607.29100v1 | StraightDP: Geometry-Aware Differential Privacy for Rectified-Flow Transformers | Xujun Che, Depeng Xu, Xintao Wu 
+      Differentially private (DP) training of text-conditioned generative models suffers a utility cliff at strong privacy. We revisit this problem through the geometry of rectified flows: along the straight interpolation between noise and data, the Bayes-optimal ve
+2607.12171v1 | Self-Consistent Flow: Unifying Velocity and Endpoint Prediction for Rectified Flow Models | Xu Han, Jiajing Hu, Li-Ping Liu 
+      In rectified-flow-based generative models, the neural network can be trained to predict two different targets, such as the instantaneous velocity or the data endpoint, to perform denoising. Although prior work shows that these parameterizations lead to differe
+2606.17584v2 | Root-Selecting Fixed-Point Inversion for Rectified Flows via Trajectory Straightness | Semin Kim, Jihwan Yoon, Seunghoon Hong 
+      Finding the initial noise that generates a given data sample, known as inversion, is a key component for downstream applications such as training-free image editing. Existing fixed-point inversion methods improve inversion accuracy by formulating each inversio
+2605.17733v1 | Divergence-Suppressing Couplings for Rectified Flow | Yimeng Min, Carla P. Gomes 
+      The promise of Rectified Flow rests on producing self-generated couplings whose trajectories are straight, or nearly so. In practice, trajectories generated by the base flow model can bend and intertwine, and the resulting coupling inherits this distortion. In
+2605.09433v1 | Offline Preference Optimization for Rectified Flow with Noise-Tracked Pairs | Yunhong Lu, Qichao Wang, Hengyuan Cao, Xiaoyin Xu, Min Zhang 
+      Existing preference datasets for text-to-image models typically store only the final winner/loser images. This representation is insufficient for rectified flow (RF) models, whose generation is naturally indexed by a specific prior noise sample and follows a n
+== N05
+2608.20183v1 | Exact Algebraic Computation of Learning Coefficients for Two-Dimensional Singular Models | Grégoire Sergeant-Perthuis, Elias Tsigaridas, Jules Tsukahar 
+      Classical information criteria such as the Bayesian Information Criterion (BIC) rely on regularity assumptions that break down for singular models, leading to incorrect model selection in settings such as deep learning. The Widely Applicable Bayesian Informati
+2606.21158v1 | Dead-Direction Signatures: A Cheap Spectral Reading of Singular Complexity | Tejas Pradeep Shirodkar, P. J. Narayanan 
+      Singular learning theory characterises the complexity of a deep network through the geometry of its loss singularities. The local learning coefficient (LLC), the standard estimator of Watanabe's real log canonical threshold (RLCT, $λ$), reads this geometry as 
+2606.05957v2 | Dead Directions: Geometric Singular Learning | Tejas Pradeep Shirodkar 
+      Singular learning theory and information geometry study the same spaces: the former in resolved coordinates, the latter in original coordinates under a non-degeneracy assumption that overparameterised models violate. This paper carries one direction of the bri
+2411.19920v2 | Geometry of fibers of the multiplication map of deep linear neural networks | Simon Pepin Lehalleur, Richárd Rimányi 
+      We study the geometry of the algebraic set of tuples of composable matrices which multiply to a fixed matrix, using tools from the theory of quiver representations. In particular, we determine its codimension $C$ and the number $θ$ of its top-dimensional irred
+== N06
+2610.09196v1 | Exact Dynamics and Finite-Sample Trajectory Recovery of Linear Recursive Feature Machines | Andrew Cheng, Bobak T. Kiani, Yue M. Lu, Adityanarayanan Rad 
+      Recursive feature machines (RFMs) learn representations of data by alternating between fitting a predictor to a dataset and updating features of that predictor using the average gradient outer product (AGOP). Connections between AGOPs and feature learning in n
+2610.01095v1 | Explaining El Niño Forecasts with the Average Gradient Outer Product | Yuan Hui, Dorian S. Abbot, Robert J. Webber 
+      An important and unresolved problem in the physical sciences is explaining the predictions made by neural networks. Several explainable artificial intelligence (XAI) methods have been proposed to address this problem, including gradient XAI, Integrated Gradien
+2609.39408v1 | Awakening of the Buddha: Subspace Learning During Population-Loss Plateaus | Akash Kumar 
+      Population loss can remain nearly constant while a neural network learns a substantially more predictive representation. We establish this separation for two-layer ReLU and leaky-ReLU networks trained on Gaussian inputs by simultaneous fixed-step population gr
+2609.36240v1 | Can Representation Learning Decouple from Loss Minimization? Polar Updates Have an Answer | Akash Kumar 
+      Does representation learning stop when the training loss stops improving? We study this question for matrix Muon, whose polar-normalised updates have a step length set by the gradient's rank rather than its norm. Near the edge of stability, full-batch Muon on 
+2608.22910v1 | A Commutator Framework for Selective Spectral Alignment in Deep Neural Networks | Kaj Nyström 
+      We develop a finite-width geometric framework describing how learned feature geometries are organized, transported, and selectively aligned in deep neural networks. Incompatibility among weight-generated covariance, gates, and backward sensitivities is quantif
+2607.00329v1 | K-Inverse-RFM: A Modified RFM that Bridges the Gap to Neural Networks for Data-Corrupted Mathematical Tasks | Gil Pasternak 
+      Recursive Feature Machines (RFMs) are a class of kernel machines that utilize the Average Gradient Outer Product (AGOP) as a mechanism for feature learning. They have been shown to effectively replicate the learning dynamics and feature representations of Feed
+== N07
+2606.11946v2 | Neuro-Relational Programs: Unifying Queries and Neural Computation over Structured Data | Arie Soeteman, Balder ten Cate, Maurice Funk, Benny Kimelfel 
+      The conventional approach to deep learning over relational databases applies neural models, such as Graph Neural Networks (GNNs), to a graph representation of the database. Recent approaches instead operate on databases directly, associating tuples with embedd
+2605.30523v1 | Revisiting Padded Transformer Expressivity: Which Architectural Choices Matter and Which Don't | Anej Svete, William Merrill, Ryan Cotterell, Ashish Sabharwa 
+      Recent work describes what transformers can and cannot compute through connections to boolean circuits, but existing results lack exact characterizations and are sensitive to modeling choices. Padded transformers -- to whose input filler symbols such as ``...'
+2603.23823v1 | Circuit Complexity of Hierarchical Knowledge Tracing and Implications for Log-Precision Transformers | Naiming Liu, Richard Baraniuk, Shashank Sonkar 
+      Knowledge tracing models mastery over interconnected concepts, often organized by prerequisites. We analyze hierarchical prerequisite propagation through a circuit-complexity lens to clarify what is provable about transformer-style computation on deep concept 
+2505.21024v1 | Pause Tokens Strictly Increase the Expressivity of Constant-Depth Transformers | Charles London, Varun Kanade 
+      Pause tokens, simple filler symbols such as "...", consistently improve Transformer performance on both language and mathematical tasks, yet their theoretical effect remains unexplained. We provide the first formal separation result, proving that adding pause 
+2505.18948v2 | Exact Expressive Power of Transformers with Padding | William Merrill, Ashish Sabharwal 
+      Chain of thought is a natural inference-time method for increasing the computational power of transformer-based large language models (LLMs), but comes at the cost of sequential decoding. Are there more efficient alternatives to expand a transformer's expressi
+2501.04299v1 | Circuit Complexity Bounds for Visual Autoregressive Model | Yekun Ke, Xiaoyu Li, Yingyu Liang, Zhenmei Shi, Zhao Song 
+      Understanding the expressive ability of a specific model is essential for grasping its capacity limitations. Recently, several studies have established circuit complexity bounds for Transformer architecture. Besides, the Visual AutoRegressive (VAR) model has r
+== N08
+2611.01929v1 | Watch Your Step: Adam's Margin Maximization Bias Depends on the Learning Rate Schedule | Eitan Gronich, Gal Vardi 
+      We study the implicit bias of Adam and its similarity to sign gradient descent on homogeneous models in binary classification tasks. Perhaps surprisingly, we uncover that these depend on the learning rate schedule. While previous works studied strongly decayin
+2602.16340v3 | The Implicit Bias of Adam and Muon on Smooth Homogeneous Neural Networks | Eitan Gronich, Gal Vardi 
+      We study the implicit bias of momentum-based optimizers on smooth homogeneous models. We show that \textit{momentum steepest descent} algorithms like Muon (spectral norm), MomentumGD ($\ell_2$ norm), and Signum ($\ell_\infty$ norm) are \textit{approximate} ste
+2510.26303v3 | Implicit Bias of Per-sample Adam on Separable Data: Departure from the Full-batch Regime | Beomhan Baek, Minhak Song, Chulhee Yun 
+      Adam [Kingma &amp; Ba, 2015] is the de facto optimizer in deep learning, yet its theoretical understanding remains limited. Prior analyses show that Adam favors solutions aligned with $\ell_\infty$-geometry, but these results are restricted to the full-batch r
+2505.24022v2 | The Rich and the Simple: On the Implicit Bias of Adam and SGD | Bhavya Vasudeva, Jung Whan Lee, Vatsal Sharan, Mahdi Soltano 
+      Adam is the de facto optimization algorithm for several deep learning applications, but an understanding of its implicit bias and how it differs from other algorithms, particularly standard first-order methods such as (stochastic) gradient descent (GD), remain
+2406.10650v1 | The Implicit Bias of Adam on Separable Data | Chenyang Zhang, Difan Zou, Yuan Cao 
+      Adam has become one of the most favored optimizers in deep learning problems. Despite its success in practice, numerous mysteries persist regarding its theoretical understanding. In this paper, we study the implicit bias of Adam in linear logistic regression. 

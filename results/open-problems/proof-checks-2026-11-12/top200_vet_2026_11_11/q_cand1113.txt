@@ -1,0 +1,18 @@
+C01 edge of stability|(abs:"edge of stability" OR abs:"self-stabilization") AND (abs:prove OR abs:proof OR abs:theorem OR abs:provably)
+C02 attention clustering|(abs:"self-attention" OR abs:transformers) AND abs:clustering AND (abs:sphere OR abs:"interacting particle" OR abs:"mean-field") AND (abs:prove OR abs:convergence)
+C03 leap complexity|(abs:"leap complexity" OR abs:"merged-staircase" OR abs:"staircase property") AND (abs:SGD OR abs:"gradient descent")
+C04 depth 3 vs 4|(abs:"depth separation" OR abs:"depth-separation") AND (abs:"depth 3" OR abs:"depth-3" OR abs:"depth three" OR abs:"three-layer" OR abs:"depth 4" OR abs:"depth-4")
+C05 grokking modular|abs:grokking AND (abs:modular OR abs:"modular addition") AND (abs:prove OR abs:provable OR abs:provably OR abs:theory OR abs:theoretical)
+C06 deep relu minimal width GD|(abs:"minimum width" OR abs:"minimal width" OR abs:"subquadratic" OR abs:"mild overparameterization") AND abs:"gradient descent" AND (abs:deep OR abs:"multi-layer") AND abs:"global convergence"
+C07 benign overfitting relu|abs:"benign overfitting" AND (abs:ReLU OR abs:"two-layer" OR abs:"leaky ReLU") AND abs:"gradient descent"
+C08 adam convergence|abs:Adam AND (abs:"converge" OR abs:convergence OR abs:divergence OR abs:counterexample) AND (abs:"problem-independent" OR abs:"hyperparameter" OR abs:"beta2" OR abs:"second-moment")
+C09 catapult|(abs:catapult OR abs:"catapult phase" OR abs:"catapult dynamics") AND (abs:"neural network" OR abs:"neural networks")
+C10 diffusion steps dimension|(abs:"diffusion models" OR abs:"score-based") AND (abs:"iteration complexity" OR abs:"dimension dependence" OR abs:"sqrt(d)" OR abs:"linear in the dimension" OR abs:"number of steps")
+C11 neural collapse deep|abs:"neural collapse" AND (abs:"gradient descent" OR abs:"gradient flow") AND (abs:prove OR abs:provably OR abs:theorem) AND (abs:deep OR abs:"end-to-end")
+C12 minimal width uniform|(abs:"minimum width" OR abs:"minimal width") AND (abs:"universal approximation" OR abs:"uniform approximation") AND abs:ReLU
+C13 ICL nonlinear|abs:"in-context" AND (abs:"single-index" OR abs:nonlinear) AND abs:transformer AND (abs:"gradient flow" OR abs:"gradient descent" OR abs:trained)
+C14 deep matrix factorization bias|(abs:"matrix factorization" OR abs:"matrix sensing" OR abs:"matrix completion") AND abs:"implicit bias" AND (abs:deep OR abs:depth) AND (abs:"small initialization" OR abs:"greedy low-rank" OR abs:"incremental learning")
+C15 parity transformer lower bound|abs:parity AND abs:transformer AND (abs:"lower bound" OR abs:hardness OR abs:"sample complexity") AND (abs:"gradient descent" OR abs:"chain of thought" OR abs:"chain-of-thought")
+C16 mean field resnet|(abs:"mean-field" OR abs:"mean field") AND (abs:"residual networks" OR abs:ResNet OR abs:"infinite depth") AND (abs:"global convergence" OR abs:convergence)
+C17 label noise sgd trace|abs:"label noise" AND (abs:SGD OR abs:"stochastic gradient") AND (abs:"trace of the Hessian" OR abs:sharpness OR abs:"implicit regularization" OR abs:"flat minima")
+C18 exact relu representation width|(abs:"piecewise linear" OR abs:"CPWL") AND abs:ReLU AND (abs:"exact representation" OR abs:"exactly represent" OR abs:"depth lower bound" OR abs:"width")

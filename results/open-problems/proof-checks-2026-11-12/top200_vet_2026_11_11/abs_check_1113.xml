@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/KfDk5fz/VOsfnxfX2ObUfSkxTZA</id>
+  <title>arXiv Query: search_query=&amp;id_list=2405.18273,2610.28800,2610.22593,2609.26679,2309.10402,2511.06837,2610.26795,2403.12887,2110.04878,1904.09237&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-13T17:56:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2405.18273,2610.28800,2610.22593,2609.26679,2309.10402,2511.06837,2610.26795,2403.12887,2110.04878,1904.09237" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2110.04878v2</id>
+    <title>Automatic Text Extractive Summarization Based on Graph and Pre-trained Language Model Attention</title>
+    <updated>2022-07-26T16:14:22Z</updated>
+    <link href="https://arxiv.org/abs/2110.04878v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.04878v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Representing a text as a graph for obtaining automatic text summarization has been investigated for over ten years. With the development of attention or Transformer on natural language processing (NLP), it is possible to make a connection between the graph and attention structure for a text. In this paper, an attention matrix between the sentences of the whole text is adopted as a weighted adjacent matrix of a fully connected graph of the text, which can be produced through the pre-training language model. The GCN is further applied to the text graph model for classifying each node and finding out the salient sentences from the text. It is demonstrated by the experimental results on two typical datasets that our proposed model can achieve a competitive result in comparison with sate-of-the-art models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-10T18:49:19Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yuan-Ching Lin</name>
+    </author>
+    <author>
+      <name>Jinwen Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.06837v2</id>
+    <title>Minimum Width of Deep Narrow Networks for Universal Approximation</title>
+    <updated>2025-11-23T08:39:29Z</updated>
+    <link href="https://arxiv.org/abs/2511.06837v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.06837v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Determining the minimum width of fully connected neural networks has become a fundamental problem in recent theoretical studies of deep neural networks. In this paper, we study the lower bounds and upper bounds of the minimum width required for fully connected neural networks in order to have universal approximation capability, which is important in network design and training. We show that $w_{min}\leq\max(2d_x+1, d_y)$ also holds true for networks with ELU, SELU activation functions, and the upper bound of this inequality is attained when $d_y=2d_x$, where $d_x$, $d_y$ denote the input and output dimensions, respectively. Besides, we show that $d_x+1\leq w_{min}\leq d_x+d_y$ for networks with LeakyReLU, ELU, CELU, SELU, Softplus activation functions, by proving that ReLU activation function can be approximated by these activation functions. In addition, in the case that the activation function is injective or can be uniformly approximated by a sequence of injective functions (e.g., ReLU), we present a new proof of the inequality $w_{min}\ge d_y+\mathbf{1}_{d_x&lt;d_y\leq2d_x}$ by constructing a more intuitive example via a new geometric approach based on Poincaré-Miranda Theorem.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-10T08:29:14Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xiao-Song Yang</name>
+    </author>
+    <author>
+      <name>Qi Zhou</name>
+    </author>
+    <author>
+      <name>Xuan Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26679v1</id>
+    <title>A Spectral Theory of Grokking: Weight Decay induces Feature Learning</title>
+    <updated>2026-09-22T16:38:16Z</updated>
+    <link href="https://arxiv.org/abs/2609.26679v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26679v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In grokking an early fit to the training data separates from a much later improvement in generalization. During this delay, training can move from a fixed neural tangent kernel (NTK) regime to one in which task-relevant kernel eigendirections continue to evolve. We provide a quantitative theory for how this transition from lazy to rich learning can produce delayed generalization. For homogeneous networks trained with squared loss and $L_2$ weight decay, we show that a finite residual remains after memorization, with larger residual fractions in target components associated with smaller NTK eigenvalues. These residuals feed back into the dynamics of the NTK itself, and projecting the resulting dynamics onto task-relevant spectral directions yields a reduced system in which residual-driven kernel growth competes with weight decay. This system predicts that the grokking timescale is controlled by the product of learning rate and weight decay, that feature learning slows logarithmically near a critical decay above which task-aligned NTK structure can no longer support generalization, and that stronger decay can prevent fitting altogether. We test these predictions in modular addition. In a homogeneous MLP, task-aligned Fourier structure continues to emerge in the NTK after training accuracy has saturated, and an 84$\times$90-grid of trained networks across varying learning rate and weight decay recovers the predicted phase geometry and inverse-product scaling of the generalization time with learning rate and weight decay. A one-block Transformer shows similar macroscopic phase structure in a 42$\times$45-grid, as well as the same transition-time scaling despite violating exact homogeneity. Together, these results provide a mechanistic derivation connecting post-fit feature learning to both the onset of generalization and its phase structure in the learning rate and weight decay plane.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T16:38:16Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lenz Pracher</name>
+    </author>
+    <author>
+      <name>Pascal de Jong</name>
+    </author>
+    <author>
+      <name>Oskar Lieshaus</name>
+    </author>
+    <author>
+      <name>Alan Jeffares</name>
+    </author>
+    <author>
+      <name>Steffen Rulands</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.10402v2</id>
+    <title>Minimum width for universal approximation using ReLU networks on compact domain</title>
+    <updated>2024-03-05T06:55:28Z</updated>
+    <link href="https://arxiv.org/abs/2309.10402v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.10402v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It has been shown that deep neural networks of a large enough width are universal approximators but they are not if the width is too small. There were several attempts to characterize the minimum width $w_{\min}$ enabling the universal approximation property; however, only a few of them found the exact values. In this work, we show that the minimum width for $L^p$ approximation of $L^p$ functions from $[0,1]^{d_x}$ to $\mathbb R^{d_y}$ is exactly $\max\{d_x,d_y,2\}$ if an activation function is ReLU-Like (e.g., ReLU, GELU, Softplus). Compared to the known result for ReLU networks, $w_{\min}=\max\{d_x+1,d_y\}$ when the domain is $\smash{\mathbb R^{d_x}}$, our result first shows that approximation on a compact domain requires smaller width than on $\smash{\mathbb R^{d_x}}$. We next prove a lower bound on $w_{\min}$ for uniform approximation using general activation functions including ReLU: $w_{\min}\ge d_y+1$ if $d_x&lt;d_y\le2d_x$. Together with our first result, this shows a dichotomy between $L^p$ and uniform approximations for general activation functions and input/output dimensions.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-19T08:04:48Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Namjun Kim</name>
+    </author>
+    <author>
+      <name>Chanho Min</name>
+    </author>
+    <author>
+      <name>Sejun Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.12887v2</id>
+    <title>Understanding the training of infinitely deep and wide ResNets with Conditional Optimal Transport</title>
+    <updated>2025-07-21T14:49:38Z</updated>
+    <link href="https://arxiv.org/abs/2403.12887v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.12887v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the convergence of gradient flow for the training of deep neural networks. If Residual Neural Networks are a popular example of very deep architectures, their training constitutes a challenging optimization problem due notably to the non-convexity and the non-coercivity of the objective. Yet, in applications, those tasks are successfully solved by simple optimization algorithms such as gradient descent. To better understand this phenomenon, we focus here on a ``mean-field'' model of infinitely deep and arbitrarily wide ResNet, parameterized by probability measures over the product set of layers and parameters and with constant marginal on the set of layers. Indeed, in the case of shallow neural networks, mean field models have proven to benefit from simplified loss-landscapes and good theoretical guarantees when trained with gradient flow for the Wasserstein metric on the set of probability measures. Motivated by this approach, we propose to train our model with gradient flow w.r.t. the conditional Optimal Transport distance: a restriction of the classical Wasserstein distance which enforces our marginal condition. Relying on the theory of gradient flows in metric spaces we first show the well-posedness of the gradient flow equation and its consistency with the training of ResNets at finite width. Performing a local Polyak-Łojasiewicz analysis, we then show convergence of the gradient flow for well-chosen initializations: if the number of features is finite but sufficiently large and the risk is sufficiently small at initialization, the gradient flow converges towards a global minimizer. This is the first result of this type for infinitely deep and arbitrarily wide ResNets.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-19T16:34:31Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Raphaël Barboni</name>
+      <arxiv:affiliation>ENS-PSL</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gabriel Peyré</name>
+      <arxiv:affiliation>CNRS and ENS-PSL</arxiv:affiliation>
+    </author>
+    <author>
+      <name>François-Xavier Vialard</name>
+      <arxiv:affiliation>LIGM</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.22593v1</id>
+    <title>Flat Loss, Evolving Features: Grokking in Modular Addition</title>
+    <updated>2026-10-15T19:43:24Z</updated>
+    <link href="https://arxiv.org/abs/2610.22593v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.22593v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Can a network keep learning while its training cross-entropy stays nearly flat at a positive level? We show that it can. On modular addition, a standard testbed for grokking, ReLU networks trained with supported-Polar hidden updates, normalized output-layer updates and weight decay can keep 100% training accuracy while their hidden features change and held-out accuracy rises from zero to above 90%, at relatively flat training cross-entropy. Correct classification need not minimize cross-entropy, which still depends on prediction confidence. We prove this coexistence for one-hidden-layer networks in two finite-window theorems from constructed initializations: one gives a constant gain in the Fourier fraction of the hidden features, and the other holds at arbitrarily low positive loss, where a readout refitted on the training data generalizes before the network. Experiments from random initialization show the same coexistence on a window fixed in advance, and in deeper networks held-out accuracy also rises over post-hoc windows with a net increase in training cross-entropy. With a last-layer rate set per training fraction and head decay scaled with the prime, deeper networks at p=47 and 61 meet a criterion on post-hoc windows, fixed in advance, in nearly all fresh runs. A one-block transformer trained with the same updates and a slowly decaying output gain keeps every training pair correct at every logged checkpoint while its training cross-entropy rises and its held-out accuracy approaches one; with two blocks this holds through the held-out rise, after which training pairs begin to flip. A plateau in training loss need not be a plateau in learning. Code: https://github.com/akashkumar-d/flat-loss-evolving-features.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-15T19:43:24Z</published>
+    <arxiv:comment>97 pages, 17 figures. Code: https://github.com/akashkumar-d/flat-loss-evolving-features</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Akash Kumar</name>
+    </author>
+    <author>
+      <name>Karthik Sankaranarayanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.28800v1</id>
+    <title>Depth Separation for Neural Networks under Gaussian Measure</title>
+    <updated>2026-10-20T18:24:52Z</updated>
+    <link href="https://arxiv.org/abs/2610.28800v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.28800v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We revisit the problem of depth separation for neural networks, as studied by Eldan and Shamir, Daniely, and others. Specifically, we consider the natural setting of $L^2$ approximation of radial functions under the standard Gaussian measure in $d$ dimensions. We show that there is a radial function in $L^2$ under the standard Gaussian measure that can be approximated to a fixed sufficiently small $L^2$ error by a depth-3 ReLU neural network of polynomial size in $d$ but can only be approximated by depth-2 networks with subexponentially bounded weights if their size is at least exponential in $d$. For that, we prove a general result showing that if a radial function has substantial mass in the high frequencies of its Hermite expansion, then it cannot be well approximated by a depth-2 neural network with small width and bounded weights. All theorems, lemmas, propositions, and corollaries are verified in Lean~4.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-20T18:24:52Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Cynthia Bortolotto</name>
+    </author>
+    <author>
+      <name>Francisco Ganacim</name>
+    </author>
+    <author>
+      <name>Roberto I. Oliveira</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.09237v1</id>
+    <title>On the Convergence of Adam and Beyond</title>
+    <updated>2019-04-19T16:21:38Z</updated>
+    <link href="https://arxiv.org/abs/1904.09237v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.09237v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Several recently proposed stochastic optimization methods that have been successfully used in training deep networks such as RMSProp, Adam, Adadelta, Nadam are based on using gradient updates scaled by square roots of exponential moving averages of squared past gradients. In many applications, e.g. learning with large output spaces, it has been empirically observed that these algorithms fail to converge to an optimal solution (or a critical point in nonconvex settings). We show that one cause for such failures is the exponential moving average used in the algorithms. We provide an explicit example of a simple convex optimization setting where Adam does not converge to the optimal solution, and describe the precise problems with the previous analysis of Adam algorithm. Our analysis suggests that the convergence issues can be fixed by endowing such algorithms with `long-term memory' of past gradients, and propose new variants of the Adam algorithm which not only fix the convergence issues but often also lead to improved empirical performance.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-19T16:21:38Z</published>
+    <arxiv:comment>Appeared in ICLR 2018</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sashank J. Reddi</name>
+    </author>
+    <author>
+      <name>Satyen Kale</name>
+    </author>
+    <author>
+      <name>Sanjiv Kumar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.18273v2</id>
+    <title>Synchronization on circles and spheres with nonlinear interactions</title>
+    <updated>2026-01-27T10:06:47Z</updated>
+    <link href="https://arxiv.org/abs/2405.18273v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.18273v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the dynamics of $n$ points on a sphere in $\mathbb{R}^d$ ($d \geq 2$) which attract each other according to a function $\varphi$ of their inner products. When $\varphi$ is linear ($\varphi(t) = t$), the points converge to a common value (i.e., synchronize) in various connectivity scenarios: this is part of classical work on Kuramoto oscillator networks. When $\varphi$ is exponential ($\varphi(t) = e^{βt}$), these dynamics correspond to a limit of how idealized transformers process data, as described by Geshkovski et al. (2025). Accordingly, they ask whether synchronization occurs for exponential $\varphi$.
+  The answer depends on the dimension $d$. In the context of consensus for multi-agent control, Markdahl et al. (2018) show that for $d \geq 3$ (spheres), if the interaction graph is connected and $\varphi$ is increasing and convex, then the system synchronizes. We give a separate proof of this result.
+  What is the situation on circles ($d=2$)? First, we show that $\varphi$ being increasing and convex is no longer sufficient (even for complete graphs). Then we identify a new condition under which we do have synchronization on the circle (namely, if the Taylor coefficients of $\varphi'$ are decreasing). As a corollary, this provide synchronization for exponential $\varphi$ with $β\in (0, 1]$. The proofs are based on nonconvex landscape analysis.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-28T15:24:30Z</published>
+    <arxiv:comment>30 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Christopher Criscitiello</name>
+    </author>
+    <author>
+      <name>Quentin Rebjock</name>
+    </author>
+    <author>
+      <name>Andrew D. McRae</name>
+    </author>
+    <author>
+      <name>Nicolas Boumal</name>
+    </author>
+    <arxiv:doi>10.1137/24M1699759</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1137/24M1699759" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.26795v1</id>
+    <title>Two hidden layer suffice: the caterpillar net</title>
+    <updated>2026-10-19T17:40:37Z</updated>
+    <link href="https://arxiv.org/abs/2610.26795v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.26795v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Every continuous piecewise linear (CPWL) function is a finite signed sum of maxima of affine functions, making maximum representation a central problem in the study of the expressiveness of ReLU networks. A now-disproved conjecture predicted logarithmic depth for maxima. Inspired by the proof by Brunck et al. (2026) that two hidden layers suffice for general CPWL functions, we give the Caterpillar Net, a nonrecursive construction for the maximum of $N$ inputs with two hidden layers of widths $O(N^2)$ and $2^{O(N\log N)}$. The construction has a direct geometric interpretation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-19T17:40:37Z</published>
+    <arxiv:comment>17 pages. Lean formalization and paper sources: https://github.com/JayPiZimmermann/Max_Caterpillar</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jakob Paul Zimmermann</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/KUBLYnY/eg+ZNjdXQb/ZLgWESkM</id>
+  <title>arXiv Query: search_query=au:Brunck AND abs:ReLU&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-11-11T01:28:25Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:Brunck+AND+abs:ReLU&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.28587v1</id>
+    <title>Two $\operatorname{ReLU}$ Layers is All You Need</title>
+    <updated>2026-10-20T17:40:21Z</updated>
+    <link href="https://arxiv.org/abs/2610.28587v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.28587v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that every $\operatorname{ReLU}$ network can be exactly simulated by a $\operatorname{ReLU}$ network with two hidden layers. We present two proofs: one that is based on fillings in homological algebra and a direct combinatorial proof.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-20T17:40:21Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Florestan Brunck</name>
+    </author>
+    <author>
+      <name>Christoph Hertrich</name>
+    </author>
+    <author>
+      <name>Kilian Ruess</name>
+    </author>
+    <author>
+      <name>Jack Stade</name>
+    </author>
+    <author>
+      <name>Amir Yehudayoff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.21651v2</id>
+    <title>Shallower ReLU Network Representations via Exact Linear Algebra</title>
+    <updated>2026-09-01T17:59:31Z</updated>
+    <link href="https://arxiv.org/abs/2607.21651v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.21651v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the depth required by ReLU networks to exactly represent piecewise linear functions, focusing specifically on the maximum function. This problem has recently received significant attention in both the ML and TCS literature. We prove that $\max_n(x)=\max\{x_1,\ldots,x_n\}$ is exactly representable with two hidden layers for every $n\leq 12$. Previously, this was only known up to $n\leq5$ [Bakaev, Brunck, Hertrich, Stade, Yehudayoff, STOC'26]. We obtain our constructions through an exact computer-assisted search within a space of candidate solutions: After a symmetry reduction, we obtain a finite system of linear equations over $\mathbb{Q}$ such that any solution yields a valid representation of the maximum function. The resulting constructions have a structured first hidden layer, which enables recursive substitution into deeper networks. This yields an exact ReLU representation of $\max_n$ with at most $\lceil \log_6(n/2) \rceil+1$ hidden layers. Consequently, every continuous piecewise-linear function on $\mathbb{R}^d$ admits an exact representation with at most $\lceil\log_6((d+1)/2)\rceil+1$ hidden layers; in particular, two hidden layers suffice for $d\leq 11$. Again, these results improve upon [Bakaev, Brunck, Hertrich, Stade, Yehudayoff, STOC'26], who proved analogous logarithmic bounds with base three.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-22T16:58:02Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Kilian Rueß</name>
+    </author>
+    <author>
+      <name>Gennadiy Averkov</name>
+    </author>
+    <author>
+      <name>Florestan Brunck</name>
+    </author>
+    <author>
+      <name>Moritz Grillo</name>
+    </author>
+    <author>
+      <name>Christoph Hertrich</name>
+    </author>
+    <author>
+      <name>Georg Loho</name>
+    </author>
+    <author>
+      <name>Jack Stade</name>
+    </author>
+    <author>
+      <name>Moritz Stargalla</name>
+    </author>
+    <author>
+      <name>Matthew Sun</name>
+    </author>
+    <author>
+      <name>Martin Winter</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.14338v3</id>
+    <title>Better Neural Network Expressivity: Subdividing the Simplex</title>
+    <updated>2026-02-19T23:17:42Z</updated>
+    <link href="https://arxiv.org/abs/2505.14338v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.14338v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work studies the expressivity of ReLU neural networks with a focus on their depth. A sequence of previous works showed that $\lceil \log_2(n+1) \rceil$ hidden layers are sufficient to compute all continuous piecewise linear (CPWL) functions on $\mathbb{R}^n$. Hertrich, Basu, Di Summa, and Skutella (NeurIPS'21 / SIDMA'23) conjectured that this result is optimal in the sense that there are CPWL functions on $\mathbb{R}^n$, like the maximum function, that require this depth. We disprove the conjecture and show that $\lceil\log_3(n-1)\rceil+1$ hidden layers are sufficient to compute all CPWL functions on $\mathbb{R}^n$.
+  A key step in the proof is that ReLU neural networks with two hidden layers can exactly represent the maximum function of five inputs. More generally, we show that $\lceil\log_3(n-2)\rceil+1$ hidden layers are sufficient to compute the maximum of $n\geq 4$ numbers. Our constructions almost match the $\lceil\log_3(n)\rceil$ lower bound of Averkov, Hojny, and Merkert (ICLR'25) in the special case of ReLU networks with weights that are decimal fractions. The constructions have a geometric interpretation via polyhedral subdivisions of the simplex into ``easier'' polytopes.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-20T13:23:57Z</published>
+    <arxiv:comment>12 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Egor Bakaev</name>
+    </author>
+    <author>
+      <name>Florestan Brunck</name>
+    </author>
+    <author>
+      <name>Christoph Hertrich</name>
+    </author>
+    <author>
+      <name>Jack Stade</name>
+    </author>
+    <author>
+      <name>Amir Yehudayoff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.06169v2</id>
+    <title>On the Depth of Monotone ReLU Neural Networks and ICNNs</title>
+    <updated>2026-11-07T11:34:49Z</updated>
+    <link href="https://arxiv.org/abs/2505.06169v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.06169v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two models of $\mathsf{ReLU}$ neural networks: monotone networks ($\mathsf{ReLU}^+$) and input convex neural networks ($\mathsf{ICNN}$). Our focus is on expressivity, mostly in terms of depth, and our motivation is to gain a better understanding of the depth required to exactly represent functions using neural networks with ReLU activations, a subject that has received a lot of attention lately. We prove several lower bounds on the depth required to represent functions by monotone ReLU networks and $\mathsf{ICNN}$. For the maximum function $\mathsf{MAX}_n$ computing the maximum of $n$ real numbers, we show that $\mathsf{ReLU}^+$ networks cannot compute $\mathsf{MAX}_n$, or even approximate it. We prove a sharp lower bound of $n-1$ on the $\mathsf{ICNN}$ depth complexity of $\mathsf{MAX}_n$. We also prove depth separations between $\mathsf{ReLU}$ networks and $\mathsf{ICNN}$s; for every $k$, there is a depth-$2$ $\mathsf{ReLU}$ network of size $O(k^2)$ that cannot be simulated by a depth-$k$ $\mathsf{ICNN}$. The proofs are based on deep connections between neural networks and polyhedral geometry, and also use isoperimetric properties of triangulations.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-09T16:19:34Z</published>
+    <arxiv:comment>NeurIPS 2026 Spotlight</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Egor Bakaev</name>
+    </author>
+    <author>
+      <name>Florestan Brunck</name>
+    </author>
+    <author>
+      <name>Christoph Hertrich</name>
+    </author>
+    <author>
+      <name>Daniel Reichman</name>
+    </author>
+    <author>
+      <name>Amir Yehudayoff</name>
+    </author>
+  </entry>
+</feed>

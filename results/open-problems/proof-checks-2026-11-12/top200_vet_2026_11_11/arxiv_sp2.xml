@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/g8+LjXeXY5KhUdrZg1NsROAKvKc</id>
+  <title>arXiv Query: search_query=&amp;id_list=2305.06986,2202.06233,2403.03880,1904.12191&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-10T22:16:41Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2305.06986,2202.06233,2403.03880,1904.12191" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2202.06233v2</id>
+    <title>The Sample Complexity of One-Hidden-Layer Neural Networks</title>
+    <updated>2022-09-22T11:23:42Z</updated>
+    <link href="https://arxiv.org/abs/2202.06233v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.06233v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study norm-based uniform convergence bounds for neural networks, aiming at a tight understanding of how these are affected by the architecture and type of norm constraint, for the simple class of scalar-valued one-hidden-layer networks, and inputs bounded in Euclidean norm. We begin by proving that in general, controlling the spectral norm of the hidden layer weight matrix is insufficient to get uniform convergence guarantees (independent of the network width), while a stronger Frobenius norm control is sufficient, extending and improving on previous work. Motivated by the proof constructions, we identify and analyze two important settings where (perhaps surprisingly) a mere spectral norm control turns out to be sufficient: First, when the network's activation functions are sufficiently smooth (with the result extending to deeper networks); and second, for certain types of convolutional networks. In the latter setting, we study how the sample complexity is additionally affected by parameters such as the amount of overlap between patches and the overall number of patches.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-13T07:12:02Z</published>
+    <arxiv:comment>Bug fixed in proof of Theorem 2 (resulting in different log factors); Other minor edits</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Gal Vardi</name>
+    </author>
+    <author>
+      <name>Ohad Shamir</name>
+    </author>
+    <author>
+      <name>Nathan Srebro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.12191v3</id>
+    <title>Linearized two-layers neural networks in high dimension</title>
+    <updated>2020-02-17T01:27:56Z</updated>
+    <link href="https://arxiv.org/abs/1904.12191v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.12191v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the problem of learning an unknown function $f_{\star}$ on the $d$-dimensional sphere with respect to the square loss, given i.i.d. samples $\{(y_i,{\boldsymbol x}_i)\}_{i\le n}$ where ${\boldsymbol x}_i$ is a feature vector uniformly distributed on the sphere and $y_i=f_{\star}({\boldsymbol x}_i)+\varepsilon_i$. We study two popular classes of models that can be regarded as linearizations of two-layers neural networks around a random initialization: the random features model of Rahimi-Recht (RF); the neural tangent kernel model of Jacot-Gabriel-Hongler (NT). Both these approaches can also be regarded as randomized approximations of kernel ridge regression (with respect to different kernels), and enjoy universal approximation properties when the number of neurons $N$ diverges, for a fixed dimension $d$.
+  We consider two specific regimes: the approximation-limited regime, in which $n=\infty$ while $d$ and $N$ are large but finite; and the sample size-limited regime in which $N=\infty$ while $d$ and $n$ are large but finite. In the first regime we prove that if $d^{\ell + δ} \le N\le d^{\ell+1-δ}$ for small $δ&gt; 0$, then \RF\, effectively fits a degree-$\ell$ polynomial in the raw features, and \NT\, fits a degree-$(\ell+1)$ polynomial. In the second regime, both RF and NT reduce to kernel methods with rotationally invariant kernels. We prove that, if the number of samples is $d^{\ell + δ} \le n \le d^{\ell +1-δ}$, then kernel methods can fit at most a a degree-$\ell$ polynomial in the raw features. This lower bound is achieved by kernel ridge regression. Optimal prediction error is achieved for vanishing ridge regularization.</summary>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-27T18:42:02Z</published>
+    <arxiv:comment>65 pages; 17 pdf figures</arxiv:comment>
+    <arxiv:primary_category term="math.ST"/>
+    <author>
+      <name>Behrooz Ghorbani</name>
+    </author>
+    <author>
+      <name>Song Mei</name>
+    </author>
+    <author>
+      <name>Theodor Misiakiewicz</name>
+    </author>
+    <author>
+      <name>Andrea Montanari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.06986v3</id>
+    <title>Provable Guarantees for Nonlinear Feature Learning in Three-Layer Neural Networks</title>
+    <updated>2025-04-01T21:11:53Z</updated>
+    <link href="https://arxiv.org/abs/2305.06986v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.06986v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>One of the central questions in the theory of deep learning is to understand how neural networks learn hierarchical features. The ability of deep networks to extract salient features is crucial to both their outstanding generalization ability and the modern deep learning paradigm of pretraining and finetuneing. However, this feature learning process remains poorly understood from a theoretical perspective, with existing analyses largely restricted to two-layer networks. In this work we show that three-layer neural networks have provably richer feature learning capabilities than two-layer networks. We analyze the features learned by a three-layer network trained with layer-wise gradient descent, and present a general purpose theorem which upper bounds the sample complexity and width needed to achieve low test error when the target has specific hierarchical structure. We instantiate our framework in specific statistical learning settings -- single-index models and functions of quadratic features -- and show that in the latter setting three-layer networks obtain a sample complexity improvement over all existing guarantees for two-layer networks. Crucially, this sample complexity improvement relies on the ability of three-layer networks to efficiently learn nonlinear features. We then establish a concrete optimization-based depth separation by constructing a function which is efficiently learnable via gradient descent on a three-layer network, yet cannot be learned efficiently by a two-layer network. Our work makes progress towards understanding the provable benefit of three-layer neural networks over two-layer networks in the feature learning regime.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-11T17:19:30Z</published>
+    <arxiv:comment>v3: Improved sample complexity and width dependence (see comment on page 1)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Eshaan Nichani</name>
+    </author>
+    <author>
+      <name>Alex Damian</name>
+    </author>
+    <author>
+      <name>Jason D. Lee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.03880v3</id>
+    <title>Almost Surely Asymptotically Constant Graph Neural Networks</title>
+    <updated>2024-11-08T12:26:43Z</updated>
+    <link href="https://arxiv.org/abs/2403.03880v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.03880v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new angle on the expressive power of graph neural networks (GNNs) by studying how the predictions of real-valued GNN classifiers, such as those classifying graphs probabilistically, evolve as we apply them on larger graphs drawn from some random graph model. We show that the output converges to a constant function, which upper-bounds what these classifiers can uniformly express. This strong convergence phenomenon applies to a very wide class of GNNs, including state of the art models, with aggregates including mean and the attention-based mechanism of graph transformers. Our results apply to a broad class of random graph models, including sparse and dense variants of the Erdős-Rényi model, the stochastic block model, and the Barabási-Albert model. We empirically validate these findings, observing that the convergence phenomenon appears not only on random graphs but also on some real-world graphs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-06T17:40:26Z</published>
+    <arxiv:comment>NeurIPS '24 camera-ready version; 10 body pages, 29 appendix pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sam Adam-Day</name>
+    </author>
+    <author>
+      <name>Michael Benedikt</name>
+    </author>
+    <author>
+      <name>İsmail İlkan Ceylan</name>
+    </author>
+    <author>
+      <name>Ben Finkelshtein</name>
+    </author>
+  </entry>
+</feed>
