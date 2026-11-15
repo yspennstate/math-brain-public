@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-13",
+  "replicas_per_configuration": 24,
+  "configurations": 9,
+  "steps_per_replica": 2000000,
+  "total_walk_steps": 432000000,
+  "fresh_pairs_per_configuration": 1000000,
+  "total_fresh_pairs": 9000000,
+  "base_seed": 13620261113,
+  "worker_threads": 1,
+  "nice": 10,
+  "observed_max_rss_bytes": 166297600,
+  "observed_max_rss_MiB": 158.59375,
+  "memory_measurement": "getrusage(RUSAGE_SELF).ru_maxrss reported by the original C++ run on macOS",
+  "compiler_command": "clang++ -std=c++17 -O2 -Wall -Wextra -pedantic code/simulate.cpp -o code/simulate",
+  "sha256": {
+    "code/simulate.cpp": "8652769d026d08593470ef877f8b010d8830b2a4ad4bfe4f5c6ecc71bed33121",
+    "code/get_source.py": "f625d05c2b75eb64e0ec69a661ca9a969bb271162f9c5432f173cfba38084796",
+    "code/analyze.py": "21493cb41a84045977681ae68568262be242960513fd50798643a2f1e8560caf",
+    "code/audit_artifacts.py": "736e56d92ea5e5c28c8a6162834d65547865f43ca560f5eefd61bdef7333f3fb",
+    "code/run.py": "705174d8566023589d83e7a3578533c3f6ee0c9e3e5c1dc08ff62a6ced709e73",
+    "data/paths.csv": "95b7d271620a105d8d4fec903eb175886470434e88594c823d33a3491b7439ff",
+    "data/episodes.csv": "9f0992a6400707ae0397024a0af5e867fa0eec07bc85f5ab3690b96d15fca0fb",
+    "data/traps.csv": "4de4098c5a3156afe1185e9d4af83b12fc498d6f108a8b6b748a3f738fc8a38a",
+    "data/parameters.csv": "0c00771746ed82dce4e80985c4dfbe8f0055dcb771e9d722334afc43c9f454ed"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "main_fine.csv": {
+    "final": [
+      {
+        "kernel": "bump",
+        "t": 8192.0,
+        "n": 64,
+        "rms": 628.3954473394415,
+        "mean_abs": 487.1802930844875,
+        "mean_speed": -0.011138821397650343,
+        "mean_abs_speed": 0.05947025062066498,
+        "rms_speed": 0.07670842863030292,
+        "mean_drift_energy_per_t": 135.6793819489006,
+        "msd_standard_error": 66237.27680387118
+      },
+      {
+        "kernel": "sign",
+        "t": 8192.0,
+        "n": 64,
+        "rms": 598.5426166802529,
+        "mean_abs": 514.6678134637821,
+        "mean_speed": -0.00018152561686753804,
+        "mean_abs_speed": 0.06282566082321558,
+        "rms_speed": 0.07306428426272618,
+        "mean_drift_energy_per_t": 0.8846453399704459,
+        "msd_standard_error": 43673.254880135115
+      },
+      {
+        "kernel": "spline",
+        "t": 8192.0,
+        "n": 64,
+        "rms": 632.3230604104385,
+        "mean_abs": 543.3329078969684,
+        "mean_speed": 0.006416904116652933,
+        "mean_abs_speed": 0.06632481785851665,
+        "rms_speed": 0.07718787358525861,
+        "mean_drift_energy_per_t": 0.9431900524780896,
+        "msd_standard_error": 48590.38326276482
+      },
+      {
+        "kernel": "two_bump",
+        "t": 8192.0,
+        "n": 64,
+        "rms": 705.4307331052779,
+        "mean_abs": 568.7894275976066,
+        "mean_speed": -0.006855606107323208,
+        "mean_abs_speed": 0.06943230317353596,
+        "rms_speed": 0.08611215003726537,
+        "mean_drift_energy_per_t": 1.142711000801775,
+        "msd_standard_error": 71755.94462025071
+      },
+      {
+        "kernel": "zero",
+        "t": 8192.0,
+        "n": 64,
+        "rms": 105.26780594283171,
+        "mean_abs": 83.50820973691722,
+        "mean_speed": -0.00025647877586283457,
+        "mean_abs_speed": 0.010193873258901028,
+        "rms_speed": 0.012850073967630824,
+        "mean_drift_energy_per_t": 0.0,
+        "msd_standard_error": 1934.6229398749804
+      }
+    ],
+    "max_negative_slope_dt": {
+      "bump": 13.60816444376276,
+      "sign": 0.12135048940279392,
+      "spline": 0.08598323610767361,
+      "two_bump": 0.5138722282947833,
+      "zero": 0.0
+    },
+    "max_drift_step": {
+      "bump": 1.9210480053187606,
+      "sign": 0.02583600600658888,
+      "spline": 0.029063311357522714,
+      "two_bump": 0.04536891595934415,
+      "zero": 0.0
+    }
+  },
+  "stiff_refine.csv": {
+    "final": [
+      {
+        "kernel": "annular",
+        "t": 1024.0,
+        "n": 32,
+        "rms": 89.46493334411073,
+        "mean_abs": 62.12885609596696,
+        "mean_speed": 0.0004941223608070232,
+        "mean_abs_speed": 0.060672711031217734,
+        "rms_speed": 0.08736809896885814,
+        "mean_drift_energy_per_t": 44.588642784156335,
+        "msd_standard_error": 3049.186189504629
+      },
+      {
+        "kernel": "bump",
+        "t": 1024.0,
+        "n": 32,
+        "rms": 157.26227900612426,
+        "mean_abs": 139.59592574519328,
+        "mean_speed": -0.0013630711676968846,
+        "mean_abs_speed": 0.13632414623554032,
+        "rms_speed": 0.15357644434191822,
+        "mean_drift_energy_per_t": 1.4784382009074848,
+        "msd_standard_error": 4237.689790895436
+      }
+    ],
+    "max_negative_slope_dt": {
+      "annular": 2.5529400514713227,
+      "bump": 0.040112669345353215
+    },
+    "max_drift_step": {
+      "annular": 0.6944149729210788,
+      "bump": 0.006952261923370628
+    }
+  },
+  "annular_short.csv": {
+    "final": [
+      {
+        "kernel": "annular",
+        "t": 256.0,
+        "n": 32,
+        "rms": 61.818876592844745,
+        "mean_abs": 50.83703626362491,
+        "mean_speed": -0.006135622981335125,
+        "mean_abs_speed": 0.1985821729047848,
+        "rms_speed": 0.24147998669079979,
+        "mean_drift_energy_per_t": 3.7447758980565244,
+        "msd_standard_error": 702.3453050509024
+      }
+    ],
+    "max_negative_slope_dt": {
+      "annular": 0.021481165366415013
+    },
+    "max_drift_step": {
+      "annular": 0.005022116777975568
+    }
+  }
+}

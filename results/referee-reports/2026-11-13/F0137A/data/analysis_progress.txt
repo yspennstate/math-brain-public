@@ -1,0 +1,229 @@
+{
+  "models": {
+    "d2_moderate": {
+      "alpha": [
+        0.55,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "S": 2.05,
+      "drift": [
+        0.050000000000000044,
+        0.0
+      ],
+      "kappa": 3.05
+    },
+    "d3_moderate": {
+      "alpha": [
+        0.55,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "S": 3.05,
+      "drift": [
+        0.050000000000000044,
+        0.0,
+        0.0
+      ],
+      "kappa": 5.05
+    },
+    "d2_trapping": {
+      "alpha": [
+        0.1,
+        0.08,
+        0.08,
+        0.08
+      ],
+      "S": 0.34,
+      "drift": [
+        0.020000000000000004,
+        0.0
+      ],
+      "kappa": 0.5
+    },
+    "d3_trapping": {
+      "alpha": [
+        0.07,
+        0.05,
+        0.05,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "S": 0.32,
+      "drift": [
+        0.020000000000000004,
+        0.0,
+        0.0
+      ],
+      "kappa": 0.52
+    }
+  },
+  "fits": [
+    {
+      "model": "d2_moderate",
+      "gamma": 0.5,
+      "intercept": -0.3950631658870659,
+      "slope": 0.49952340530064476,
+      "rms_residual": 0.16693623707954008,
+      "warning": "descriptive small-scale fit, not an asymptotic gamma estimate"
+    },
+    {
+      "model": "d2_moderate",
+      "gamma": 0.75,
+      "intercept": 0.2864693296453454,
+      "slope": 0.151436304365505,
+      "rms_residual": 0.07719050743067055,
+      "warning": "descriptive small-scale fit, not an asymptotic gamma estimate"
+    },
+    {
+      "model": "d2_moderate",
+      "gamma": 1.0,
+      "intercept": 0.6235530942237983,
+      "slope": 0.049506798553616845,
+      "rms_residual": 0.05269998874154726,
+      "warning": "descriptive small-scale fit, not an asymptotic gamma estimate"
+    },
+    {
+      "model": "d3_moderate",
+      "gamma": 0.5,
+      "intercept": -1.332523402769031,
+      "slope": 0.8467226367525723,
+      "rms_residual": 0.4402103228118783,
+      "warning": "descriptive small-scale fit, not an asymptotic gamma estimate"
+    },
+    {
+      "model": "d3_moderate",
+      "gamma": 0.75,
+      "intercept": -0.1984762170808424,
+      "slope": 0.2587445925838406,
+      "rms_residual": 0.27782729288332775,
+      "warning": "descriptive small-scale fit, not an asymptotic gamma estimate"
+    },
+    {
+      "model": "d3_moderate",
+      "gamma": 1.0,
+      "intercept": 0.3619332743327117,
+      "slope": 0.08521381732104893,
+      "rms_residual": 0.13138092996119555,
+      "warning": "descriptive small-scale fit, not an asymptotic gamma estimate"
+    }
+  ],
+  "geometry_checks": [
+    {
+      "d": 2,
+      "S": 0.5,
+      "n": 200000,
+      "exact": 1.0,
+      "empirical": 1.0,
+      "z_error": 0.0
+    },
+    {
+      "d": 2,
+      "S": 1.0,
+      "n": 200000,
+      "exact": 1.0,
+      "empirical": 1.0,
+      "z_error": 0.0
+    },
+    {
+      "d": 2,
+      "S": 2.0,
+      "n": 200000,
+      "exact": 0.5,
+      "empirical": 0.50178,
+      "z_error": 1.5920803999798536
+    },
+    {
+      "d": 2,
+      "S": 4.0,
+      "n": 200000,
+      "exact": 0.15625,
+      "empirical": 0.155575,
+      "z_error": -0.8313843876330721
+    },
+    {
+      "d": 2,
+      "S": 10.0,
+      "n": 200000,
+      "exact": 0.028000000000000004,
+      "empirical": 0.027495,
+      "z_error": -1.3689709356639292
+    },
+    {
+      "d": 3,
+      "S": 0.5,
+      "n": 200000,
+      "exact": 1.0,
+      "empirical": 1.0,
+      "z_error": 0.0
+    },
+    {
+      "d": 3,
+      "S": 1.0,
+      "n": 200000,
+      "exact": 1.0,
+      "empirical": 1.0,
+      "z_error": 0.0
+    },
+    {
+      "d": 3,
+      "S": 2.0,
+      "n": 200000,
+      "exact": 0.5,
+      "empirical": 0.498125,
+      "z_error": -1.6770509831248561
+    },
+    {
+      "d": 3,
+      "S": 4.0,
+      "n": 200000,
+      "exact": 0.103515625,
+      "empirical": 0.10289,
+      "z_error": -0.918448429905137
+    },
+    {
+      "d": 3,
+      "S": 10.0,
+      "n": 200000,
+      "exact": 0.008560000000000002,
+      "empirical": 0.008575,
+      "z_error": 0.07281756568008446
+    }
+  ],
+  "explicit_constants": [
+    {
+      "d": 2,
+      "a": 0.25,
+      "transverse_each": 0.1,
+      "r": 0.05,
+      "M": 36,
+      "p": 0.1724137931034483,
+      "log_eta": 0.7143588727495893,
+      "log10_C": 670159.8208570774,
+      "log10_example_b": -24795925.713941686,
+      "kappa_at_b_zero": 0.65
+    },
+    {
+      "d": 3,
+      "a": 0.25,
+      "transverse_each": 0.1,
+      "r": 0.05,
+      "M": 51,
+      "p": 0.15151515151515152,
+      "log_eta": 0.7235275868417297,
+      "log10_C": 1032757.9425275255,
+      "log10_example_b": -53703429.869111076,
+      "kappa_at_b_zero": 1.05
+    }
+  ],
+  "checks": {
+    "proxy_horizon_monotonicity": true,
+    "sampler_largest_abs_z": 2.315731069130194,
+    "all_slab_counts_sum": true
+  }
+}
