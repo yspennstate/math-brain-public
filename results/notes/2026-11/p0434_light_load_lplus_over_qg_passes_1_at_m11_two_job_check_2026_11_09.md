@@ -1,0 +1,41 @@
+---
+name: p0434_light_load_lplus_over_qg_passes_1_at_m11_two_job_check_2026_11_09
+description: "No (9 Nov, P0434): light-load L+/Q_G reaches 1.1268 at m 11, confirmed by an independent two-job sim; L+ <= T_G is what is left"
+metadata:
+  type: project
+  created: 2026-11-09
+  created_at: 2026-11-09T00:47:22+04:00
+  status: verified
+  evidence: "research-repo decbe2ed54 two_job_m11.out; d7eae41129 NOTE_MAC.md"
+  originSessionId: c410f4d2-88bf-445a-b9bf-b7031a39fbf5
+---
+
+Does the light-load sup of L+/Q_G (M-SERPT against Gittins, SOAP, P0434) stay below 1, so that L+ <= Q_G could be the lemma? No (9 Nov 00:5x, an agent on the Mac mini, for yitz8 / an agent): an 11-atom law (10 effective) gives 1.1268.
+
+The chain: m 7 0.8291, 8 0.8538, 9 0.8912 (yitz8's seeded adv_lowload_mac.py), m 10 0.9684, m 11 1.1268 (adv_lowload_mac_ext.py, which also starts a new atom as a near-twin of every atom and past the tail). The 0.78 leveling guess in their NOTE.md was wrong; the seeded chain also undershoots, since the near-twin atoms of mass ~1e-7 in the m 7-9 optima carry nothing (sup(m) >= the next row).
+
+Checks on the m 11 law: the same to six digits at rho 1e-5, 1e-6, 1e-7; an open neighbourhood (every atom moved +-1e-9 or +-1e-6, position and mass jitter 1e-6, all leave 1.1268; +-1e-3 moves leave >= 1.057); carried by a tail atom (s 136489, p 2.2e-6, p*s 0.3 of E[S] 3.5; dropped, 0.016). The optimizer always ends about 1e-3 from a cliff where the two heavy atoms close up and the value falls to 0.1-0.2.
+
+The second implementation is what settles it: at light load a tagged job meets at most one other job, so running the two-job system exactly under each rank policy (ranks from their definitions, FCFS ties) and integrating the delay over the other job's age (Q) and arrival time (residence) gives the first-order terms with no SOAP machinery. It matched soap.py class by class to 1e-8 on small laws and gave 1.126870 on the m 11 law (soap 1.126803). That two-job reduction is a cheap independent referee for any light-load SOAP claim.
+
+Files: ~/p0434_runs/mac_20261109 and research-repo codex-fleet/tools/runs/own_p0434/ (6e11481698 m 7-9, d7eae41129 m 10-11 and checks, decbe2ed54 two-job check). L+ <= T_G is the form left to prove.
+
+Related: [[fei19_reserve_floor_pi2_over_2_2026_11_09]] (the same night's other Mac-side conjecture work).
+
+Same problem, other question: [[p0434_least_beta_is_at_least_0_0677_once_a_passes_one_half_2026_11_08]] (the beta in E T_MS <= 2 Q_G + (1+beta) R_G, heavy traffic).
+
+A third check (an agent, 9 Nov 00:5x): soap_indep.py, SOAP Thm 5.5 written out again without reading soap.py, in exact rationals, gives 1.126841884 / 1.126803770 / 1.126803388 at rho 1e-3 / 1e-5 / 1e-7 and an exact rho->0 limit of 1.126803383998, so soap.py is right to 7 digits and the two-job value's 6e-5 excess most likely sits in its integration (not checked). That SOAP code also matched an exact event simulation of the queue at rho 0.6 (2M jobs, 2 seeds, within 0.5 pct per class, M-SERPT's near-twin class included). research-repo 0c4d49054f, own_p0434/agent_run/.
+
+Third confirmation (yitz8, an agent, 8 Nov 15:46 -0500, a fleet message): their own two-job code (own_p0434/lowload_twojob.py) matches split.py class by class to ~4 figures at rho 1e-6, L+/rho 0.69669 vs 0.69676. Q_G here is SOAP's waiting term (to worst future rank); measured against first-service waiting instead, the ratio is 1.78. They have moved to L+ <= T_G.
+Fourth (an agent, 9 Nov 00:5x, research-repo 0c4d49054f agent_run/): written from SOAP Thm 5.5 in exact rationals, exact rho->0 limit 1.126803383998; L+/T_G only 2.0e-4 at rho 1e-3, so Conjecture 8.1 is untouched. Their event simulation (2M jobs, 2 seeds) also checked the SOAP code within 0.5 pct per class.
+
+Update 9 Nov 02:3x (an agent). The light-load chain went on to m 15 1.2603 and m 16 1.2639. The steps halve, so the light-load sup looks near 1.267. The ratio is larger at moderate load. With load free as well as the law (adv_rho.py), it reaches 1.274334116 on a 14-atom law at rho 0.3137, and 1.272082296 on an 11-atom law at rho 0.6258. Both values are exact in an agent's soap_indep.py and equal soap.py at every digit it prints (check_rho_indep.out).
+Where L+ comes from (class_split.out): M-SERPT never waits longer than Gittins in any class. The whole excess is residence, and the heavy atom (s ~1.86, mass 0.54) gives ~63% of it. The far tail atom gives under 1% of L+ directly; it matters because it moves every atom's M-SERPT rank. L+/T_G peaks near 0.30 at rho 0.9-0.95 on these laws. At light load, L+ <= T_G holds trivially (L+ = O(rho)), so the earlier "L+/T_G ~2e-4" says nothing.
+The store card claim_335e13e9 is superseded by claim_2541ae0ff9114d51b3fde9fa49a9b812, which corrects m 14 (1.2535, not ~1.245). The files are pushed to own_p0434 (659772591e, 68cec15c48): NOTE_MAC_v3.md and NOTE_MAC_v4.md.
+Update 9 Nov 02:5x (an agent): L+ <= T_G fails too. Near critical load a 5-atom law (s = [1, 1.14257, 2.19089, 2.19426, 17258.97], p = [0.69658, 0.29451, 0.0088786, 3.657e-5, 2.224e-9]) gives L+/T_G = 1.950217761 at rho 1 - 1e-6, exact in soap_indep.py, and T_MS/T_G = 1.9668 there. So M-SERPT's worst-case ratio against Gittins is at least 1.9668 (SOAP formulas only; loads that close to 1 cannot be simulated). Mechanism: Gittins gives classes 1-4 one response time. M-SERPT makes class 4 (mass 3.7e-5, size just above class 3) wait behind the far atom, whose load p s = 3.8e-5 is larger than 1 - rho. A first family, in which the far atom carries no load, only reaches 0.9978 and cannot cross 1, since T_MS - T_G stays bounded there. Identity: L+ = T_MS - sum p min(T_MS,k, T_G,k). I first posted 'route survives' (a fleet message) and replaced it three minutes later (a fleet message). Files: own_p0434/tg_near_critical/ NOTE_TG_v2.md (0c280637f4).
+Fix 9 Nov 03:0x: the T_MS/T_G = 1.9668 above is not a new lower bound. Scully, Harchol-Balter and Scheller-Wolf (arXiv 1907.10792, Sec. 7) have a 3-atom family with T_MS/T_G -> 2, so M-SERPT's ratio is known to lie in [2, 5]. What is new is the L+ <= T_G failure. On their family M/T_G stays near 1 (L+/T_G 0.8869 at d 0.001, rho 1-1e-4, exact), so it does not refute the lemma; our 5-atom law has M/T_G 0.0166. Lesson: read the source paper's lower-bound section before calling a ratio new. Pushed ec03260d67; fleet a fleet message.
+9 Nov 06:3x (an agent): more atoms raise the fixed-load worst case, exact: 0.64 1.2334 (6 atoms), 0.8 1.3436 (10), 8/9 1.4503 (12), 0.95 1.5974 (9), 0.98 1.6849 (6; the 5-atom search there had not converged), 0.99 1.6872 (8). A second round of added atoms gained only 0.0002-0.002 where the first had already run, so this local search levels off near 1.45 at 8/9. Card claim_2a0712274084413492355cd54d2f638a (DEPENDS_ON the load card claim_a3b75b96), runs own_p0434/atoms (0520557c52, e3ddfc67c7).
+9 Nov 04:4x (an agent): at a FIXED load the worst M-SERPT/Gittins ratio found is far below the proven factors: 1.2277 at rho 0.64 (proven 2.5), 1.4191 at 8/9 (proven 3), 1.5684 at 0.95 (3.3), 1.6281 at 0.98 (4), 1.8501 at 0.999; all exact rationals, all above the paper's Sec. 7 family. Card claim_a3b75b964cee4f82bf327bb3b56faa53, runs research-repo own_p0434/load_curve (ffd288119b), NOTE_LOAD.md.
+9 Nov 03:43: T_MS/T_G itself reaches 1.998175385 exact at 1 - rho = 1e-11 (adv_ms2.py, 6 atoms, law_ms_m6k11.txt; M/T_G = 1, the Scully kind, third and fourth atoms 1.6e-10 apart). The gap to 2 shrinks with 1 - rho (0.0045, 0.0027, 0.0018 at 1e-8, 1e-9, 1e-11); nothing passes 2. Pushed c8b897a5e3.
+
+9 Nov 03:1x: L+/T_G goes to 2 as well. adv_tg5.py at fixed 1 - rho = 1e-9 found a 6-atom law (law_m6k9.txt) with L+/T_G 1.994571372 exact, T_MS/T_G 1.997322 (the highest T_MS/T_G any search here reached, still under 2), M/T_G 0.00275. Since L+ <= T_MS, any lemma L+ <= c T_G needs c >= 1.9945, so the L+ route gains nothing over bounding T_MS/T_G directly. Pushed 5518d8ce82 (own_p0434/tg_near_critical). It also replaces [[p0434_gross_loss_stays_under_gittins_time_and_is_tight_2026_11_08]], whose 384 sampled laws topped out at 0.068.
