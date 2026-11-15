@@ -1,0 +1,12 @@
+nice: setpriority: Operation not permitted
+Traceback (most recent call last):
+  File "~/codex_op_1114r3/briefs/T089/check_certificate.py", line 246, in <module>
+    main()
+    ~~~~^^
+  File "~/codex_op_1114r3/briefs/T089/check_certificate.py", line 230, in main
+    GOE_analytic_tail_bounds=audit_tail())
+                             ~~~~~~~~~~^^
+  File "~/codex_op_1114r3/briefs/T089/check_certificate.py", line 212, in audit_tail
+    assert direct == recurrence
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError
