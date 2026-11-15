@@ -1,0 +1,22 @@
+nice: setpriority: Operation not permitted
+priority: 20
+thread env: 1
+M6-M3^2 coefficients in t=1/d: [((1,), Fraction(18, 1)), ((2,), Fraction(288, 1)), ((3,), Fraction(1704, 1)), ((4,), Fraction(4320, 1)), ((5,), Fraction(3840, 1))]
+h coefficients in t=1/d: [((2,), Fraction(12, 1)), ((3,), Fraction(488, 1)), ((4,), Fraction(2848, 1)), ((5,), Fraction(3840, 1))]
+exact Wick check d=1 k=1: PASS; E[V]=30; E[(V-1)^2]=52339
+exact Wick check d=1 k=3: PASS; E[V]=30; E[(V-1)^2]=19183
+exact Wick check d=2 k=1: PASS; E[V]=21/2; E[(V-1)^2]=6053/2
+exact Wick check d=2 k=2: PASS; E[V]=21/2; E[(V-1)^2]=6391/4
+exact Wick check d=3 k=2: PASS; E[V]=56/9; E[(V-1)^2]=9556/27
+rate checks k=d; columns: d, d^2*A, d^2*D, d^2*upper bound, d^2*true MSE
+16 88.491455078 22.504394531 200.247104339 190.990966797
+64 60.953934669 11.028848648 123.838418304 115.800574303
+256 55.646715764 9.442034282 110.932755015 102.876148071
+1024 54.406130105 9.106710687 108.030742202 99.949717755
+4096 54.101188604 9.026444528 107.324527949 99.236236293
+16384 54.025275701 9.006596626 107.149164441 99.058984724
+limits: 54 9 107.090815370 99
+other ratio: 1/2 d= 16384 d^2*A= 72.042860063 limit= 72.0 d^2*true MSE= 117.093063334 limit= 117.0
+other ratio: 2 d= 16384 d^2*A= 45.016483520 limit= 45.0 d^2*true MSE= 90.041945419 limit= 90.0
+peak RSS bytes: 15056896
+ALL CHECKS PASSED

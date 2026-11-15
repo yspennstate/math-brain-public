@@ -1,0 +1,5 @@
+VERDICT: PARTIAL verified Lemma 7.2's exact conditional reference law from the displayed thermal slab density
+New beyond round 4: PROOF.md derives allocation-weight cancellation, exact removal of torus winding weights by confinement, and almost-everywhere positivity; the earlier deterministic collision estimate survives independent re-derivation.
+Checks: nice -n 15 env OMP_NUM_THREADS=1 python3 -B audit.py passed, including exact rational agreement on 346 positive exposed fibers; peak RSS 18,956,288 bytes, inherited nice 20. macOS rejected RLIMIT_DATA setup twice before its removal; no mathematical check failed.
+The bounded follow-up search found no later settlement, and the Lean statement remains ground-state-only. This does not verify the full positive-temperature proof or general row; thermal certificates and route encounters remain unchecked. Next check Section 8's Skeleton encounters lemma, especially the conditional density and exponential moment.
+Task: “Verify: has open problem T032 been settled by the OpenAI math release?” — report time 2026-11-15T07:31:49.278354+04:00 (request clock time not supplied).

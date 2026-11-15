@@ -1,0 +1,10 @@
+# Bounded literature check, 15 November 2026
+
+The search and paper inspection took less than five minutes, ending by 01:13 UTC. No solution of the nonlinear joint depth–width question was verified. This is a bounded search, not a claim that no such paper exists.
+
+- Jeffrey Pennington, Samuel S. Schoenholz, Surya Ganguli, *Resurrecting the sigmoid in deep learning through dynamical isometry: theory and practice*, [arXiv:1711.04735](https://arxiv.org/abs/1711.04735). Opened the arXiv page. This is the stated free-probability source.
+- Benoit Collins, Tomohiro Hayase (names as on the arXiv abstract page; the full paper writes Benoît), *Asymptotic Freeness of Layerwise Jacobians Caused by Invariance of Multilayer Perceptron: The Haar Orthogonal Case*, [arXiv:2103.13466v4](https://arxiv.org/abs/2103.13466v4), [full HTML](https://arxiv.org/html/2103.13466v4). Opened both. Establishes the orthogonal layerwise freeness result; no quantitative growing-depth theorem was verified here.
+- Boris Hanin, Tianze Jiang, *Global Universality of Singular Values in Products of Many Large Random Matrices*, [arXiv:2503.07872](https://arxiv.org/abs/2503.07872). Opened the arXiv page. The stated any-relative-rate joint limit concerns products of independent matrices with i.i.d. entries and normalized squared singular values on a depth-root scale, rather than nonlinear derivative-dependent orthogonal layers.
+- Benjamin Dadoun, Soufiane Hayou, Hanan Salam, Mohamed El Amine Seddik, Pierre Youssef, *On the Stability of the Jacobian Matrix in Deep Neural Networks*, [arXiv:2506.08764v3](https://arxiv.org/abs/2506.08764v3), [full HTML](https://arxiv.org/html/2506.08764v3). Opened both. Its introduction explicitly specifies fixed-depth infinite-width analysis; its architecture uses ReLU and it studies spectral norm universality for sparse or weakly correlated weights. It does not prove the requested orthogonal tanh joint-limit isometry theorem. The version history lists revision 17 June 2026.
+
+No paper is cited here without opening its arXiv page or paper. No SOLVED_ELSEWHERE.md is warranted by the inspected sources.
