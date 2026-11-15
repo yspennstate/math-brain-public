@@ -1,0 +1,44 @@
+{
+  "constants": {
+    "bounded_random_sizes": {
+      "T": "8",
+      "K": 512,
+      "R0": "65536",
+      "B": "65552",
+      "d_upper": "-13/20",
+      "error": "643/2048",
+      "drift_upper": "-3441/10240"
+    },
+    "infinite_variance_local_sizes": {
+      "T": "192",
+      "K": 4096,
+      "R0": "1048576",
+      "B": "1048960",
+      "mean_local_size": "3/2",
+      "local_second_moment": "infinite",
+      "cap_h": "16",
+      "cap_second_moment": "4",
+      "eta": "1/48",
+      "d_upper": "-108/5",
+      "error": "2121/256",
+      "drift_upper": "-17043/1280"
+    },
+    "dyadic_moment_checks": 17
+  },
+  "path_checks": {
+    "paths": 1176,
+    "events": 7583,
+    "threshold_checks": 3780,
+    "high_count_barrier_checks": 9667,
+    "original_departure_events": 1206,
+    "mixed_cohort_intervals": 3020,
+    "Q_greater_than_m": 520,
+    "positive_empty_time": 180,
+    "large_local_paths": 476
+  },
+  "status": "all exact checks passed",
+  "elapsed_seconds": 0.6716,
+  "peak_RSS_bytes": 16171008,
+  "process_nice": 20,
+  "cpu_limit_seconds": 60
+}
