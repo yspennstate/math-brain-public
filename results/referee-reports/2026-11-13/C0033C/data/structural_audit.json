@@ -1,0 +1,26 @@
+{
+  "conditioning_example": {
+    "Q": "Matrix([[1/2, 0, 0, 0], [0, 1/2, 0, 0], [0, 0, 1/2, 0], [0, 0, 0, 1/2]])",
+    "A": "Matrix([[1/8, 3/16, 0, -1/16], [3/16, 5/16, -1/16, -3/16], [0, -1/16, 1/8, 3/16], [-1/16, -3/16, 3/16, 5/16]])",
+    "rank": 2,
+    "pattern_probability": "5*t/16 + 1/2",
+    "conditional_second_derivative": "Matrix([[-1/64, -3/64, 3/64], [-3/64, -9/64, 9/64], [3/64, 9/64, -9/64]])",
+    "woodbury_exact": true
+  },
+  "singular_R_example": {
+    "Q": "Matrix([[2/5, 1/10, 0], [1/10, 1/2, 0], [0, 0, 3/5]])",
+    "exp_gamma": "1",
+    "exp_ell0": [
+      "1",
+      "1",
+      "651/551"
+    ],
+    "rank_R": 1
+  },
+  "scalar_identity": {
+    "trials": 100,
+    "max_difference": 9.43689570931383e-16
+  },
+  "seconds": 0.0934367919981014,
+  "peak_rss_mib": 104.578125
+}

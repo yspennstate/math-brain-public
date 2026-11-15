@@ -1,0 +1,53 @@
+{
+  "resources": {
+    "nice": 15,
+    "threads": 1,
+    "preflight_bytes": 200005400,
+    "cap_bytes": 4000000000
+  },
+  "checks": [
+    {
+      "N": 4,
+      "covariance_max_error": 4.440892098500626e-16,
+      "diagonal_max_error": 6.661338147750939e-16
+    },
+    {
+      "N": 7,
+      "covariance_max_error": 1.1102230246251565e-15,
+      "diagonal_max_error": 8.881784197001252e-16
+    },
+    {
+      "N": 12,
+      "covariance_max_error": 1.7763568394002505e-15,
+      "diagonal_max_error": 1.3322676295501878e-15
+    }
+  ],
+  "float32": {
+    "N": 128,
+    "max_error": 1.0822471399052347e-06,
+    "rms_error": 2.1815792164260966e-07
+  },
+  "gaussian_cancellation": [
+    {
+      "t": 50,
+      "cancelled_kernel": 0.0005193239629192048,
+      "t2_kernel": 1.298309907298012
+    },
+    {
+      "t": 100,
+      "cancelled_kernel": 0.00013949416810044024,
+      "t2_kernel": 1.3949416810044024
+    },
+    {
+      "t": 200,
+      "cancelled_kernel": 3.624507213839667e-05,
+      "t2_kernel": 1.449802885535867
+    },
+    {
+      "t": 400,
+      "cancelled_kernel": 9.24487889297776e-06,
+      "t2_kernel": 1.4791806228764415
+    }
+  ],
+  "peak_bytes": 74432512
+}
