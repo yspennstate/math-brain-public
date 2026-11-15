@@ -1,0 +1,27 @@
+You are refereeing a mathematical paper that is already public but has had no outside audit. Be a hard, independent referee: your job is to find a gap or an error if there is one, not to confirm.
+
+Rules for this run (the author's standing laws): work only inside your own folder (the current directory); READ anything in it, but never edit or delete anything outside it, never git push, never start other agents, never open a visible window. Do not use web search or browsing. This machine is shared and busy: run nothing that needs more than 1 GB of RAM, keep every computation under five minutes, one process at a time. Save as you go: append each verdict to LOG.md the moment you reach it, so that a stop loses nothing. Do not edit PAPER.tex.
+
+What to referee: PAPER.tex in this folder (LaTeX source). Setting: independent continuous costs on the edges of K_n; each vertex i has a budget D_i (independent, law P on the positive integers, or a deterministic array whose empirical laws converge weakly to P); vertex i prefers its D_i cheapest incident edges; an edge is kept when both endpoints prefer it (the bilateral preference graph G_n). Moharrami, Subramanian, Liu and Sundaresan (Random Structures Algorithms 64, 2024) proved that the local limit is the Erlang weighted tree, which gives limsup L_1(G_n)/n <= rho(P), the survival probability of that tree, and asked for the reverse inequality. Claimed (thm:main): if P has a finite mean and P({1}) < 1, then L_1(G_n)/n -> rho(P) in probability and in L^1, also for deterministic budget arrays.
+
+Numbering: the source is not compiled for you, so statements are named below by their LaTeX label in square brackets.
+
+Do these steps, in this order, and write each verdict in LOG.md as you reach it. For every numbered statement, display and proof step give one of: CORRECT, GAP (quote the line and say what is missing), WRONG (give the counterexample or the correct statement).
+
+1. Section sec:intro and sec:time. Is the model stated without ambiguity (ties, the role of n in the cost scale, budgets larger than n-1)? Is the "cost time" truncation well defined, is the truncated graph a subgraph of G_n in the way the later sections need (monotonicity in the cutoff: check carefully whether deleting expensive edges can CREATE kept edges, since preferences are ranks), and is the local limit of the truncated graph quoted or proved correctly? Check [lem:conc-t]: the sensitivity bound, the concentration inequality used and its hypotheses.
+
+2. Section sec:active: [lem:active] and [lem:cover], line by line.
+
+3. Section sec:sprinkle: [prop:lower-t], line by line. This is the place where a sprinkling argument must cope with the fact that the kept edges are not independent: identify exactly which independence or conditional independence is used, on which sigma-field the argument conditions, and whether the edges added in the sprinkling window can destroy edges already kept (a new cheap edge can push an old edge out of a vertex's preferred set). State plainly whether the argument handles this.
+
+4. Section sec:return: the compact set of types, [lem:outside], the mean kernel, the symmetry claim, [lem:eigen] (existence and positivity of the eigenfunction, which theorem is used and whether its hypotheses hold), [lem:return], [cor:lambda].
+
+5. Section sec:continuity: [prop:bounded] and [prop:cont], line by line; in particular every exchange of limits, and whether the truncated survival probabilities converge to rho(P) under only a finite mean and P({1}) < 1 (what happens when rho(P) = 0, and at criticality).
+
+6. Section sec:proof and sec:upper: the assembly of thm:main, [lem:conc], [prop:upper]; convergence in L^1 from convergence in probability; the deterministic-array version (where is weak convergence of empirical laws used, and is a uniform integrability or finite-mean condition on the array needed that the statement does not assume?).
+
+7. Your own computations. (a) Exhaustively verify the two sensitivity bounds the paper uses for concentration (over all simple graphs on 5 vertices: changing one edge changes the number of vertices in components of size at least k by at most 2(k-1); for the preference graph on 4 or 5 vertices: moving one edge's cost rank changes the kept graph in at most how many edges?) with your own code. (b) Simulate G_n for n = 500 and 2000 under budget laws constant 2, constant 3, and {1 w.p. 0.6, 5 w.p. 0.4}, and estimate rho(P) for the Erlang weighted tree by your own Monte Carlo of the tree as the paper defines it; report L_1/n against rho. A clear mismatch is evidence of an error in the tree description or the theorem.
+
+8. Attributions and novelty, from memory only: is the description of the Moharrami-Subramanian-Liu-Sundaresan paper and of the La-Kabkab / b-matching-type model fair as far as you know? Do you know a paper that already proves the reverse inequality (giant component density equals the survival probability) for this model or contains it as a special case? Are the cited tools (sprinkling, Alon-Spencer, van der Hofstad) cited at the point of use with a theorem number? Say plainly what you cannot check without browsing.
+
+When finished write REPORT.md: a verdict table (statement or step, verdict, one-line reason), the numerical tables from step 7 with the commands that produced them, a list of every typo or unclear sentence you noticed with its location, anything you could not check, and your overall verdict in one of three words: SOUND, GAP or WRONG.
