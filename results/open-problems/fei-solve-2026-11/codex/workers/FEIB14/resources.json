@@ -1,0 +1,246 @@
+{
+  "rows": [
+    {
+      "unit": "census",
+      "command": [
+        "python3",
+        "run_census.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.304636240005493,
+      "cpu_seconds": 14.046932,
+      "maxrss_bytes": 57737216,
+      "log": "census.reproduce.log"
+    },
+    {
+      "unit": "samples",
+      "command": [
+        "python3",
+        "experiments.py",
+        "general"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 17.994706869125366,
+      "cpu_seconds": 16.783345,
+      "maxrss_bytes": 41648128,
+      "log": "samples.reproduce.log"
+    },
+    {
+      "unit": "ltf",
+      "command": [
+        "python3",
+        "experiments.py",
+        "ltf"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 12.736207962036133,
+      "cpu_seconds": 11.903904,
+      "maxrss_bytes": 79249408,
+      "log": "ltf.reproduce.log"
+    },
+    {
+      "unit": "monotone",
+      "command": [
+        "python3",
+        "experiments.py",
+        "monotone"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.5419199466705322,
+      "cpu_seconds": 1.4492779999999998,
+      "maxrss_bytes": 100089856,
+      "log": "monotone.reproduce.log"
+    },
+    {
+      "unit": "extrema",
+      "command": [
+        "python3",
+        "experiments.py",
+        "extrema"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.08724617958068848,
+      "cpu_seconds": 0.075962,
+      "maxrss_bytes": 28180480,
+      "log": "extrema.reproduce.log"
+    },
+    {
+      "unit": "audit",
+      "command": [
+        "python3",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.6552441120147705,
+      "cpu_seconds": 1.4857879999999999,
+      "maxrss_bytes": 164560896,
+      "log": "audit.reproduce.log"
+    },
+    {
+      "unit": "composition",
+      "command": [
+        "python3",
+        "composition.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.147002696990967,
+      "cpu_seconds": 1.948323,
+      "maxrss_bytes": 35815424,
+      "log": "composition.reproduce.log"
+    },
+    {
+      "unit": "highprecision",
+      "command": [
+        "python3",
+        "highprecision.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.9898269176483154,
+      "cpu_seconds": 0.8936959999999999,
+      "maxrss_bytes": 32751616,
+      "log": "highprecision.reproduce.log"
+    },
+    {
+      "unit": "compile_symmetric",
+      "command": [
+        "cc",
+        "-O3",
+        "symmetric.c",
+        "-o",
+        "symmetric"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3444371223449707,
+      "cpu_seconds": 0.313925,
+      "maxrss_bytes": 51052544,
+      "log": "compile_symmetric.reproduce.log"
+    },
+    {
+      "unit": "symmetric",
+      "command": [
+        "./symmetric"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.1935689449310303,
+      "cpu_seconds": 0.560716,
+      "maxrss_bytes": 1212416,
+      "log": "symmetric.reproduce.log"
+    },
+    {
+      "unit": "symmetric_audit",
+      "command": [
+        "python3",
+        "structured.py",
+        "symmetric_audit"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.9781458377838135,
+      "cpu_seconds": 0.9369219999999999,
+      "maxrss_bytes": 38944768,
+      "log": "symmetric_audit.reproduce.log"
+    },
+    {
+      "unit": "families",
+      "command": [
+        "python3",
+        "structured.py",
+        "families"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6246018409729004,
+      "cpu_seconds": 0.5997399999999999,
+      "maxrss_bytes": 36421632,
+      "log": "families.reproduce.log"
+    },
+    {
+      "unit": "cardinality_dilution",
+      "command": [
+        "python3",
+        "structured.py",
+        "cardinality"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.12167596817016602,
+      "cpu_seconds": 0.107682,
+      "maxrss_bytes": 37568512,
+      "log": "cardinality_dilution.reproduce.log"
+    },
+    {
+      "unit": "majority_meets",
+      "command": [
+        "python3",
+        "structured.py",
+        "majority"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.618612289428711,
+      "cpu_seconds": 5.374107,
+      "maxrss_bytes": 31293440,
+      "log": "majority_meets.reproduce.log"
+    },
+    {
+      "unit": "quantized",
+      "command": [
+        "python3",
+        "quantized.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.7834930419921875,
+      "cpu_seconds": 3.63205,
+      "maxrss_bytes": 36765696,
+      "log": "quantized.reproduce.log"
+    },
+    {
+      "unit": "inherited_audit",
+      "command": [
+        "python3",
+        "inherited_audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.06823515892028809,
+      "cpu_seconds": 0.049353999999999995,
+      "maxrss_bytes": 20086784,
+      "log": "inherited_audit.reproduce.log"
+    },
+    {
+      "unit": "large_audit",
+      "command": [
+        "python3",
+        "run_large_audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 11.288933038711548,
+      "cpu_seconds": 10.701133,
+      "maxrss_bytes": 53428224,
+      "log": "large_audit.reproduce.log"
+    },
+    {
+      "unit": "final_audit",
+      "command": [
+        "python3",
+        "final_audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.708290815353394,
+      "cpu_seconds": 8.446956,
+      "maxrss_bytes": 157646848,
+      "log": "final_audit.reproduce.log"
+    },
+    {
+      "unit": "make_results",
+      "command": [
+        "python3",
+        "make_results.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5980007648468018,
+      "cpu_seconds": 0.555497,
+      "maxrss_bytes": 128270336,
+      "log": "make_results.reproduce.log"
+    }
+  ],
+  "nice": 10,
+  "maximum_simultaneous_units": 1,
+  "thread_limit": 1,
+  "elapsed_seconds": 85.79919481277466
+}

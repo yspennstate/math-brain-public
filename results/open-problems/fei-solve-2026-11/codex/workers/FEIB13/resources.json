@@ -1,0 +1,140 @@
+[
+  {
+    "name": "compile",
+    "command": [
+      "clang++",
+      "-O3",
+      "-std=c++17",
+      "npn.cpp",
+      "-o",
+      "npn"
+    ],
+    "elapsed_seconds": 1.3047374580055475,
+    "max_rss_bytes": 112787456,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "npn1",
+    "command": [
+      "./npn",
+      "1"
+    ],
+    "elapsed_seconds": 0.4860747079947032,
+    "max_rss_bytes": 1212416,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "npn2",
+    "command": [
+      "./npn",
+      "2"
+    ],
+    "elapsed_seconds": 0.010905416012974456,
+    "max_rss_bytes": 1212416,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "npn3",
+    "command": [
+      "./npn",
+      "3"
+    ],
+    "elapsed_seconds": 0.009338166011730209,
+    "max_rss_bytes": 1245184,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "npn4",
+    "command": [
+      "./npn",
+      "4"
+    ],
+    "elapsed_seconds": 0.012606666976353154,
+    "max_rss_bytes": 1540096,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "npn5",
+    "command": [
+      "./npn",
+      "5"
+    ],
+    "elapsed_seconds": 23.825365875003627,
+    "max_rss_bytes": 270745600,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "census",
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "experiment.py",
+      "census"
+    ],
+    "elapsed_seconds": 17.68806683301227,
+    "max_rss_bytes": 97157120,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "structured",
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "experiment.py",
+      "structured"
+    ],
+    "elapsed_seconds": 0.6608265420072712,
+    "max_rss_bytes": 46153728,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "families",
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "families.py"
+    ],
+    "elapsed_seconds": 6.380509249982424,
+    "max_rss_bytes": 102580224,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "mux",
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "mux.py"
+    ],
+    "elapsed_seconds": 2.8632992089842446,
+    "max_rss_bytes": 36175872,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "audit",
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "audit.py"
+    ],
+    "elapsed_seconds": 4.537904291995801,
+    "max_rss_bytes": 169279488,
+    "exit_code": 0,
+    "nice": 10
+  },
+  {
+    "name": "finalize",
+    "command": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "finalize.py"
+    ],
+    "elapsed_seconds": 0.24972583400085568,
+    "max_rss_bytes": 40452096,
+    "exit_code": 0,
+    "nice": 10
+  }
+]
