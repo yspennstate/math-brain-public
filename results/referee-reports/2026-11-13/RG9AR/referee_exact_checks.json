@@ -1,0 +1,75 @@
+{
+  "marked_balance": {
+    "service_law": "B=1(4/5),4(1/5)",
+    "m": "8/5",
+    "H_original_mark": {
+      "1": "1/2",
+      "4": "1/2"
+    },
+    "level_balance_identities": 24,
+    "exact_residual": "0",
+    "deletion_boundary_checks": 2568,
+    "note": "Finite exact diagnostics; general proof is the integration-by-parts identity."
+  },
+  "exponents": {
+    "inequality_checks": 360,
+    "largest_ratio_relative_error": 1.887379141862766e-15,
+    "c": 0.0005504660872530195,
+    "dominating_sequence_log_successive_ratios": {
+      "10": 1.3789980245129576,
+      "20": 1.1528115896980387,
+      "40": -237.70006357485642,
+      "60": -244823.04423207862
+    },
+    "powers": {
+      "cycles": "r",
+      "arrivals_per_cycle": "r*p_j*pi(S_j)",
+      "union": "r^2*p_j*pi(S_j)",
+      "mark_bound": "r^2*p_j <= 4^(j+1)*w_j",
+      "x_j": "epsilon*(1-q)*r*2^(-j/4)",
+      "variance": "<= (C/m)*r*b_j*w_j",
+      "exponent": ">= c*2^(j/2), independent of r",
+      "conclusion": "o_P(r), with no general polynomial rate"
+    }
+  },
+  "initial_state_remark": {
+    "model": "PS; arriving B=1; r initial jobs with residual 1/2",
+    "initial_collapse_exact": true,
+    "all_initial_jobs_leave": "O_P(r)",
+    "limiting_departure_time_over_r": 0.6487212707001282,
+    "limiting_D_before_over_r": -0.3243606353500641,
+    "limiting_D_after_over_r": 0.1756393646499359,
+    "deterministic_jump_over_r": 0.5,
+    "simulations": [
+      {
+        "r": 64,
+        "repetitions": 256,
+        "mean_departure_time_over_r": 0.6450933705449126,
+        "mean_D_before_over_r": -0.32929747210741256,
+        "mean_D_after_over_r": 0.17070252789258747
+      },
+      {
+        "r": 256,
+        "repetitions": 256,
+        "mean_departure_time_over_r": 0.6485581165382338,
+        "mean_D_before_over_r": -0.32543036995620256,
+        "mean_D_after_over_r": 0.1745696300437974
+      },
+      {
+        "r": 1024,
+        "repetitions": 256,
+        "mean_departure_time_over_r": 0.648690860675967,
+        "mean_D_before_over_r": -0.3240162543527249,
+        "mean_D_after_over_r": 0.17598374564727512
+      },
+      {
+        "r": 4096,
+        "repetitions": 256,
+        "mean_departure_time_over_r": 0.6486898021346399,
+        "mean_D_before_over_r": -0.3243356303817102,
+        "mean_D_after_over_r": 0.17566436961828982
+      }
+    ]
+  },
+  "elapsed_seconds": 0.28568624999024905
+}

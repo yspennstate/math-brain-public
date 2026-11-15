@@ -1,0 +1,25 @@
+# C0033E running log
+
+Task received 14 November 2026, approximately 03:48 Asia/Tbilisi.
+
+- Initial orientation: read C0033D, C0033C, C0033B, C0033A reports in requested order; inspected inherited scalar and interval implementations.
+- Shared mesh registration/claim and global checklist writes fail because their databases are outside the writable sandbox (readonly database / Operation not permitted). No live conflict was reported. All artifacts are confined to C0033E. Local log serves as the task record.
+- Compute state: warn, owner_away_open; use a single numerical process, one BLAS thread, nice 20, no pools or subagents.
+- Copied six requested code files verbatim from C0033D; hashes in data/inherited_manifest.json. Previous mathematical results will be credited without re-proving.
+- Independent exact determinant calculation completed in exact_cyclic.py: full 9 by 9 Hessian/J determinant ratio agrees identically with C0033D (12). All symbolic differences are zero; data/exact_cyclic.json contains the factorization.
+- High precision sweep completed: 4,722 constructed candidates tested, 4,479 strict accepted, 243 rejected by Sylvester strictness (not numerical failures); some spectral parameter proposals were rejected before construction. Five cyclic scales through L=1000, 870 ambient coordinate/dense perturbations, generic spectral/graph orientations and complex mixed connections. No negative margin. Checkpoints: data/search_mp.json.
+- Derived a candidate exact weak-connection limit for equal real links to a balanced two-point block. Its limiting margin admits a lower bound 1/(2 log k+1). Developing a uniform Cauchy remainder on a restricted mixed collar; no claim of all-face coverage.
+- Finite high-precision differential-evolution and local searches on specified spectral collars are running sequentially, using one process and one thread.
+- 04:07: Uniform restricted-collar proof drafted: Cauchy bounds give |m-m0| <= 4e13 e^2/nu^8, nu=a(1-a)h(1-h), with positive margin under the explicit small-connection condition. A fixed-a family gives (-log p_min)m -> 1/2. This does not cover arbitrary mixed faces.
+- POSIX getpriority confirms the numerical processes inherit nice 20. No priority escalation, worker pool, or additional language-model process was used.
+- Full-precision generator parameters and coordinates are now retained at every sweep extremum; the fixed-seed sweep is being regenerated before independent precision audits.
+- Final sweep metadata audit: all 243 constructed rejections are non-strict kernels, verified by an independent replay of parameter draws in audit_inputs.py. The other 377 rejections were unordered spectral proposals. No feasible arithmetic failure remains recorded.
+- Completed finite collar optimization: 14,182 margin objective calls and 5,821 scaled-margin calls. At L=400 the smallest scaled attained value is about 0.506110818670; these are finite attained values, not certified global minima.
+- The exact weak-connection limit and its uniform remainder are proved in REPORT.md, Theorem 2. Corollary 3 proves Lambda*m -> 1/2, so any global c/(Lambda+C) bound must have c <= 1/2. Coverage is restricted; arbitrary boundary collars remain open.
+- All 36 sweep-extremum precision audits passed, including agreement with saved full-precision generators; maximum doubled-precision difference is about 1.14e-103. Both optimized L=400 extrema also passed doubled precision.
+- Six exact rational points passed interval feasibility, R positivity, full negative Hessian LDL, and both scalar formulations. Weak-connection seven-atom enclosures required retries to 3,952 digits (two sweep points) and 10,400 digits (special minimum). Failed enclosures were not accepted as sign certificates.
+- Certified special minimum: 0.0002500241457294097 < m < 0.0002500241457294098 at the saved rational rounding of Q(1-exp(-2000),exp(-2000),exp(-2100)). Exact integer coordinates are in data/verification.json.
+- Deep-connection probes e=t^16 initially lost digits in the full ambient solve despite high nominal spectral precision. Adaptive recomputation resolves the explicit remainder at final precisions 292,344,1104,4080,9296,21800 for L=10,20,60,150,400,1000; all observed differences then fall below the proved bound. The durable numerical lesson is to size precision using graph scales as well as the smallest atom.
+- Reproduced C0033D's existing small cover: 7 nodes, 4 certified leaves, no pending cells. It remains a cover of its original box only.
+- Final code syntax checks, inherited-file hash checks, report math formatting checks, and compiled-library product-kernel check passed. Peak reported RSS is 113.44 MiB; all numerical processes inherit nice 20 and use one thread.
+- Deliverable status: PARTIAL. REPORT.md contains complete scoped proofs, tables and remaining gaps; all code, certificates, checkpoints and logs are local. Shared mesh/checklist/brain writes remain unavailable outside this sandbox, so this log records task completion locally.

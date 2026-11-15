@@ -1,0 +1,29 @@
+Independent referee numerical checks; finite simulations are not proofs.
+Input SHA256 PAPER.tex=e5a894142d0911c941b99157f09d4efed1542ecef5958fd3f9ebd18120055664
+Python/numpy versions: numpy=2.2.3
+FRACTIONS: 1715 samples, n=1..6; tied ranks, flat a/b, signed linearity: PASS
+INTEGRATION beta=0.1666666667: max relative error, 16 nodes=8.44e-06, 24 nodes=1.12e-06, 48 nodes=3.61e-08
+INTEGRATION beta=0.2000000000: max relative error, 16 nodes=1.18e-05, 24 nodes=1.58e-06, 48 nodes=5.06e-08
+P2 PARETO n=1 analytic cell check: max abs error=8.1e-13; E loss=2 Var(X)=0.208333333333
+PARAMETERS p=1.5, c_p=0.860039987325, seed=20261114, replicates=3000, batch=24
+ATOM theta=0.35: J_p=0.341407418931 (beta function and adaptive integral agree); c_p J_p=0.29362403225
+PARETO Q(t)=(1-t)^(-beta): J_p=beta^p * integral t^(p/2)(1-t)^(-p*beta-p/2)dt
+Critical beta=1/6: J_p=infinity (log divergence); beta=1/5: J_p=infinity (power exponent 1.05).
+Both Pareto laws have finite p-th moments. Their full BL bound and E||qB||_p^p are infinity.
+law,n,mean,Monte_Carlo_SE,BL_bound,bridge_mean,truncated_bridge_integral_to_1_minus_1_over_n
+atom,32,0.279952888,0.003777,6.70066869,0.293624032,-
+critical,32,0.34042764,0.005408,inf,inf,0.15592387576276867
+beyond,32,0.545704255,0.01003,inf,inf,0.22675881171920403
+atom,128,0.2877364,0.003896,6.93130185,0.293624032,-
+critical,128,0.42749003,0.006001,inf,inf,0.23601630099456875
+beyond,128,0.710104182,0.01146,inf,inf,0.3564178116890558
+atom,512,0.293482241,0.00398,6.99189634,0.293624032,-
+critical,512,0.505101611,0.005571,inf,inf,0.31688258505676475
+beyond,512,0.867028909,0.01096,inf,inf,0.4967150125347659
+atom,2048,0.291220563,0.003984,7.0072388,0.293624032,-
+critical,2048,0.574605162,0.005951,inf,inf,0.397941887024161
+beyond,2048,1.024677,0.01269,inf,inf,0.6474379445460304
+atom,8192,0.292591766,0.003938,7.0110867,0.293624032,-
+critical,8192,0.653411937,0.00562,inf,inf,0.47904941579471516
+beyond,8192,1.20340423,0.01133,inf,inf,0.8090741476342286
+RESOURCE elapsed=89.84s, process_peak_RSS=135.00 MiB; no workers spawned

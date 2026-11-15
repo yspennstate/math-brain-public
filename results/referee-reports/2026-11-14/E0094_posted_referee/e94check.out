@@ -1,0 +1,15 @@
+words n=5 h=3 longest transposition word 17 (bound 27)
+words n=7 h=3 longest transposition word 21 (bound 27)
+words n=9 h=4 longest transposition word 27 (bound 39)
+words n=101 h=7 longest transposition word 69 (bound 75)
+words n=301 h=9 longest transposition word 87 (bound 99)
+words: odd n 5..301 - every c^i word and every (i,i+d) word length within 3h-2 / 12h-9; transposition words evaluated for all i when n <= 61, six i per n above
+n=5 base 29 92  P_T 13 44
+n=7 base 103 281  P_T 42 113
+n=9 base 254 633  P_T 74 171
+n=5 all pi: min time 9, attained by 14; (1,2,4,0,3) -> 9; doubling -> 13
+
+real	7m6.627s
+user	0m0.062s
+sys	0m0.389s
+exit 0

@@ -1,0 +1,78 @@
+T Matrix([[-(-U*b**2*c**2*r**2 + U*b**2*c*r**2 + U*b*c**2*r**2 - U*b*c*r**2 + U*r**6 + V*b**4*c**2 - V*b**4*c - 2*V*b**3*c**2 - 4*V*b**3*c*r**2 + 2*V*b**3*c + 2*V*b**3*r**2 + V*b**2*c**2 + 6*V*b**2*c*r**2 - V*b**2*c + 3*V*b**2*r**4 - 3*V*b**2*r**2 - 2*V*b*c*r**2 - 3*V*b*r**4 + V*b*r**2 + V*r**4 + 4*b**2*c*r**3*t - 2*b**2*r**3*t - 4*b*c*r**3*t - 4*b*r**5*t + 2*b*r**3*t + 2*r**5*t)/((-b*c + r**2)*(-b*c + b + r**2)*(-b*c + c + r**2)*(-b*c + b + c + r**2 - 1)), r**2*(2*U*b*c**2*r - 2*U*b*c*r - U*c**2*r - 2*U*c*r**3 + U*c*r + U*r**3 + 2*V*b**2*c*r - V*b**2*r - 2*V*b*c*r - 2*V*b*r**3 + V*b*r + V*r**3 - 2*b**2*c**2*t + 2*b**2*c*t + 2*b*c**2*t - 2*b*c*t + 2*r**4*t)/((-b*c + r**2)*(-b*c + b + r**2)*(-b*c + c + r**2)*(-b*c + b + c + r**2 - 1))], [r**2*(2*U*b*c**2*r - 2*U*b*c*r - U*c**2*r - 2*U*c*r**3 + U*c*r + U*r**3 + 2*V*b**2*c*r - V*b**2*r - 2*V*b*c*r - 2*V*b*r**3 + V*b*r + V*r**3 - 2*b**2*c**2*t + 2*b**2*c*t + 2*b*c**2*t - 2*b*c*t + 2*r**4*t)/((-b*c + r**2)*(-b*c + b + r**2)*(-b*c + c + r**2)*(-b*c + b + c + r**2 - 1)), -(U*b**2*c**4 - 2*U*b**2*c**3 + U*b**2*c**2 - U*b*c**4 - 4*U*b*c**3*r**2 + 2*U*b*c**3 + 6*U*b*c**2*r**2 - U*b*c**2 - 2*U*b*c*r**2 + 2*U*c**3*r**2 + 3*U*c**2*r**4 - 3*U*c**2*r**2 - 3*U*c*r**4 + U*c*r**2 + U*r**4 - V*b**2*c**2*r**2 + V*b**2*c*r**2 + V*b*c**2*r**2 - V*b*c*r**2 + V*r**6 + 4*b*c**2*r**3*t - 4*b*c*r**3*t - 2*c**2*r**3*t - 4*c*r**5*t + 2*c*r**3*t + 2*r**5*t)/((-b*c + r**2)*(-b*c + b + r**2)*(-b*c + c + r**2)*(-b*c + b + c + r**2 - 1))]])
+detT -(U**2*c**2*r**2 - U**2*c*r**2 - U*V*b**2*c**2 + U*V*b**2*c + U*V*b*c**2 + 4*U*V*b*c*r**2 - U*V*b*c - 2*U*V*b*r**2 - 2*U*V*c*r**2 - U*V*r**4 + U*V*r**2 - 4*U*c*r**3*t + 2*U*r**3*t + V**2*b**2*r**2 - V**2*b*r**2 - 4*V*b*r**3*t + 2*V*r**3*t + 4*r**4*t**2)/((-b*c + r**2)*(-b*c + b + r**2)*(-b*c + c + r**2)*(-b*c + b + c + r**2 - 1))
+Traceback (most recent call last):
+  File "~/agent_run/C0033F/symbolic_general.py", line 15, in <module>
+    num=s.factor((z.T*N.adjugate()*z)[0]);dn=s.factor(N.det())
+                      ~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3068, in adjugate
+    return _adjugate(self, method=method)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/determinant.py", line 328, in _adjugate
+    return M.cofactor_matrix(method=method).transpose()
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3077, in cofactor_matrix
+    return _cofactor_matrix(self, method=method)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/determinant.py", line 504, in _cofactor_matrix
+    return M._new(M.rows, M.cols,
+           ~~~~~~^^^^^^^^^^^^^^^^
+            lambda i, j: M.cofactor(i, j, method))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3995, in _handle_creation_inputs
+    [cls._sympify(op(cls._sympify(i), cls._sympify(j)))
+                  ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/determinant.py", line 505, in <lambda>
+    lambda i, j: M.cofactor(i, j, method))
+                 ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3074, in cofactor
+    return _cofactor(self, i, j, method=method)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/determinant.py", line 470, in _cofactor
+    return S.NegativeOne**((i + j) % 2) * M.minor(i, j, method)
+                                          ~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3086, in minor
+    return _minor(self, i, j, method=method)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/determinant.py", line 979, in _minor
+    return M.minor_submatrix(i, j).det(method=method)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3080, in det
+    return _det(self, method=method, iszerofunc=iszerofunc)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/determinant.py", line 687, in _det
+    return _get_intermediate_simp(_dotprodsimp)(m)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/matrices/utilities.py", line 27, in _dotprodsimp
+    return dps(expr, withsimp=withsimp)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/simplify/simplify.py", line 2099, in dotprodsimp
+    expr3 = cancel(expr2)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/polys/polytools.py", line 7182, in cancel
+    R, (F, G) = sring((p, q), *gens, **args)
+                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/polys/rings.py", line 163, in sring
+    reps, opt = _parallel_dict_from_expr(exprs, opt)
+                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/polys/polyutils.py", line 344, in _parallel_dict_from_expr
+    exprs = [ expr.expand() for expr in exprs ]
+              ~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/expr.py", line 3673, in expand
+    expr, hit = Expr._expand_hint(expr, hint, deep=deep, **hints)
+                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/expr.py", line 3604, in _expand_hint
+    arg, arghit = Expr._expand_hint(arg, hint, **hints)
+                  ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/expr.py", line 3612, in _expand_hint
+    newexpr = getattr(expr, hint)(**hints)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/mul.py", line 948, in _eval_expand_mul
+    terms = self.func._expandsums(sums)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/mul.py", line 912, in _expandsums
+    terms = [Mul(a, b) for a in left for b in right]
+             ~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/operations.py", line 101, in __new__
+    obj = cls._exec_constructor_postprocessors(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sympy/core/basic.py", line 2109, in _exec_constructor_postprocessors
+    for k, v in chain.from_iterable(postprocessor_mappings):
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
