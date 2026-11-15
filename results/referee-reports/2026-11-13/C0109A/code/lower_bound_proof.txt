@@ -1,0 +1,102 @@
+FIXED-LAW OBSTRUCTION FROM UNSAMPLED VARIANCE
+
+Statement. Let 0<epsilon<2/3, p=2+epsilon, and b=2epsilon/(2+epsilon).
+There exist a fixed symmetric real law X, E X=0, E X^2=1,
+E|X|^p<infinity, and E|X|^(p+r)=infinity for every r>0,
+and integers n_k tending to infinity such that, for iid-entry matrices,
+
+ P(d_K(mu_{n_k},sigma_1) >= n_k^(-b)/(32*pi*k^4)) -> 1,
+ P(D_disc(mu_{n_k},sigma_1) >= n_k^(-b)/(4*k^4)) -> 1.
+
+Here sigma_v is uniform on the disk of radius sqrt(v), d_K uses lower-left
+orthants, D_disc uses all disks, and mu_n is the ESD of n^(-1/2) M_n.
+In particular neither distance is O_P(n^(-delta)) for any delta>b.
+This is an obstruction, not a matching convergence theorem.
+
+Input theorem. Götze--Jalowy, arXiv:1807.00489v3, Theorems 6 and 7,
+p.6: for any fixed centered variance-one real law with all moments finite,
+and any gamma<1/2, each of the two distances is <=n^(-gamma) with
+probability >=1-n^(-2), for every sufficiently large n. Constants and the
+threshold may depend on the fixed law. No uniformity over truncations is used.
+
+Proof. Put gamma=(b+1/2)/2. Let G be standard real Gaussian. Inductively,
+having fixed n_1,...,n_{k-1}, define independent symmetric variables Z_j by
+
+ a_j=n_j^(-b)/j^4, q_j=n_j^(-2)/j^2, B_j=n_j^(2/p)/j,
+ P(Z_j=B_j)=P(Z_j=-B_j)=q_j/2, P(Z_j=0)=1-q_j.
+
+Then q_j B_j^2=a_j, since 4/p-2=-b. Let
+Y_k=G+sum_{j<k} Z_j, v_k=Var(Y_k)=1+sum_{j<k}a_j.
+This finite sum has all moments. Choose n_k so large that
+
+ (i) n_k>=exp(k^2), n_k>=2 n_{k-1}, a_k<=2^(-k);
+ (ii) both input-theorem conclusions for Y_k/sqrt(v_k), with exponent gamma,
+      hold at n_k, each with failure probability <=n_k^(-2);
+ (iii) n_k^(-gamma)<=n_k^(-b)/(32*pi*k^4).
+
+All these are possible because b<gamma<1/2 and Y_k is already fixed.
+The variance parameters satisfy 1<=v_k<=V:=1+sum_j a_j<=2.
+
+Define W=G+sum_{j>=1}Z_j and X=W/sqrt(V). The series converges in L^p:
+
+ E|Z_j|^p=q_j B_j^p=j^(-p-2)=j^(-4-epsilon),
+ sum_j ||Z_j||_p=sum_j j^(-(p+2)/p)<infinity.
+
+Consequently W is centered, Var(W)=V, and E|X|^p<infinity. For r>0,
+let R_k=W-Z_k, independent of Z_k and with variance <=2. Since B_k->infinity,
+Chebyshev gives P(|R_k|<=B_k/2)>=1/2 for all sufficiently large k. Therefore
+
+ E|W|^(p+r)>= (q_k/2)*(B_k/2)^(p+r)
+             = 2^(-p-r-1)*n_k^(2r/p)/k^(p+r+2) -> infinity.
+
+The left side does not depend on k, so it is infinite. Scaling by sqrt(V)
+preserves this conclusion.
+
+Couple an n_k-by-n_k W-matrix with its Y_k-matrix using the same Gaussian
+and rare variables. The probability that ANY variable Z_j with j>=k is active
+in ANY of its n_k^2 entries is at most
+
+ n_k^2 sum_{j>=k}q_j <= k^(-2) sum_{l>=0}4^(-l) = 4/(3k^2).
+
+Outside that event the two matrices, hence their eigenvalues, coincide exactly.
+The input theorem and a union bound imply that, with probability at least
+1-4/(3k^2)-2*n_k^(-2), their ESD nu_k satisfies
+
+ d_K(nu_k,sigma_{v_k})<=a_k/(32*pi),
+ D_disc(nu_k,sigma_{v_k})<=a_k/(32*pi).
+
+For this step, rescaling the standardized Y_k-matrix multiplies every eigenvalue
+by sqrt(v_k); both metrics are invariant under common positive dilations.
+
+We now compare the TWO DETERMINISTIC disk laws. For s=sqrt(v_k)/2, the
+CDF of the real marginal of sigma_u, u in [v_k,V], is
+
+ F_u(s)=1/2+[arcsin(s/sqrt(u))+s*sqrt(u-s^2)/u]/pi,
+ dF_u(s)/du=-s*sqrt(u-s^2)/(pi*u^2).
+
+Since 1<=v_k<=u<=2, s>=1/2 and u-s^2>=3/4, the derivative's absolute
+value is at least sqrt(3)/(16*pi)>1/(16*pi). Hence
+
+ d_K(sigma_{v_k},sigma_V)>=F_{v_k}(s)-F_V(s)
+                          >=(V-v_k)/(16*pi)>=a_k/(16*pi).
+
+Real-marginal CDF differences are bounded by d_K, by letting the second
+orthant threshold tend to infinity. The triangle inequality yields
+
+ d_K(nu_k,sigma_V)>=a_k/(32*pi).
+
+For disks, take the centered disk of radius sqrt(v_k). Its probabilities
+under sigma_{v_k} and sigma_V are 1 and v_k/V respectively, so
+
+ D_disc(sigma_{v_k},sigma_V)>=(V-v_k)/V>=a_k/2.
+
+Thus D_disc(nu_k,sigma_V)>=a_k/2-a_k/(32*pi)>=a_k/4.
+Finally divide all eigenvalues and the reference disk by sqrt(V). This gives
+the asserted bounds for the variance-one law X. For any delta>b,
+n_k^(delta-b)/k^4 tends to infinity by (i), proving failure of O_P(n^(-delta)).
+This also rules out O(n^(-delta)) almost surely with an almost surely finite
+constant, since that would imply O_P(n^(-delta)). QED.
+
+Audit. The entries form ONE law independent of n. The asymptotics are along a
+subsequence; there is no claim at every n. The law has exactly p finite moments
+in the endpoint sense stated. Rare variance, not outliers, is the mechanism.

@@ -1,0 +1,29 @@
+{
+  "numpy": "2.2.3",
+  "scipy": "1.15.2",
+  "python": "3.13.2 (v3.13.2:4f8bb3947cf, Feb  4 2025, 11:51:10) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "replicates": 16,
+  "expected_counts": [
+    1024,
+    4096,
+    16384
+  ],
+  "base_seed": 1132026,
+  "nice": 10,
+  "numerical_threads": 1,
+  "elapsed_seconds": 30.923982750013238,
+  "peak_rss_bytes": 759021568,
+  "validation": [
+    "d=3, periodic=False: sparse Kruskal equals full-metric Prim",
+    "d=3: exterior wire equals full Prim and every retained edge has a strict cut certificate",
+    "d=3, periodic=True: sparse Kruskal equals full-metric Prim",
+    "d=4, periodic=False: sparse Kruskal equals full-metric Prim",
+    "d=4: exterior wire equals full Prim and every retained edge has a strict cut certificate",
+    "d=4, periodic=True: sparse Kruskal equals full-metric Prim",
+    "d=5, periodic=False: sparse Kruskal equals full-metric Prim",
+    "d=5: exterior wire equals full Prim and every retained edge has a strict cut certificate",
+    "d=5, periodic=True: sparse Kruskal equals full-metric Prim"
+  ],
+  "observations": 288,
+  "note": "Far pairs within a sample are dependent. CIs use independent replicate fractions. Fixed roots and inner windows are held constant within each nested realization. Full MST connectivity is tautological."
+}

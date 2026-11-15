@@ -1,0 +1,135 @@
+AN EXPLICIT NONOPTIMAL UPPER RATE BY HERMITIZATION
+
+Statement. Suppose x is a fixed complex or real law with E x=0, E|x|^2=1,
+and E|x|^(2+epsilon)<infinity. Let kappa=min(epsilon,1). For each
+0<delta<kappa/24 and each D>0 there is C<infinity such that, for all
+sufficiently large n,
+
+ P(max(d_K(mu_n,sigma),D_disc(mu_n,sigma)) > C n^(-delta)) <= C n^(-D).
+
+Here sigma is the uniform probability law on the unit disk. Consequently these
+bounds hold almost surely for all sufficiently large n, for any coupling of the
+matrices, with an almost surely finite prefactor. One concrete choice is
+delta(epsilon)=min(epsilon,1)/25. No optimality is asserted.
+
+Printed inputs (all read in sources/).
+
+(A) Götze--Tikhomirov, arXiv:0709.3995v4, Theorem 2.2, equation (2.2),
+p.7 (electronic-reprint pagination). In the dense case p_n=1, the expected
+CDF of squared singular values of A_n-zI differs uniformly in its real
+argument from its deterministic limiting CDF by at most
+C E[|x|^2 phi(x)] phi(sqrt(n))^(-1/6), provided phi tends to infinity
+and t/phi(t) is nondecreasing. Choose phi(t)=(1+|t|)^kappa. This gives
+O(n^(-kappa/12)). The limiting (unsquared) singular-value law has bounded
+density and compact support for z in a fixed compact set: Remark 2.1,
+p.6. These bounds and the constants in the proof of Theorem 2.2 can be
+taken uniformly for z in that compact set. Its log integral is the circular
+law log potential; see their Section 3, equation (3.15).
+
+(B) Tao--Vu, arXiv:0708.2895, Theorem 2.1, p.6. For every fixed compact
+set of z and every Q>0, some B<infinity gives
+P(s_min(A_n-zI)<n^(-B))<=C n^(-Q), pointwise in z, with constants uniform
+on that compact set. To obtain the normalized version apply the theorem
+with deterministic matrix -sqrt(n) z I and absorb sqrt(n) into n^B.
+It assumes only a fixed entry law with nonzero finite variance.
+
+(C) Götze--Jalowy, arXiv:1807.00489v3, Theorem 5, p.5, and Corollary 13,
+pp.11--12. For each fixed 1<=r<infinity, and a>=2, they bound disk
+discrepancy and the orthant metric by
+
+ C_r [ a^(1+1/r) ||U_mu-U_sigma||_{L^r(K)} + a^(-1) ],
+
+where K can be a fixed square containing the disk and a neighborhood.
+For disks one can enlarge the ball in Theorem 5 to this square. The remainder
+is O(1/a) because sigma has bounded density and compact support.
+U_mu(z)=-integral log|z-w| dmu(w).
+
+Proof, including the probabilistic passage from (A) to (C).
+Write alpha=kappa/12, q=n^(-alpha). Fix a compact square K and Q>0.
+Let F_n(s,z) be the RANDOM empirical CDF of the UNSQUARED singular
+values of A_n-zI, and F(s,z) its deterministic limit. Taking square roots
+of the threshold in (A) gives
+
+ sup_s |E F_n(s,z)-F(s,z)| <= C q.
+
+For a fixed z and threshold s, replacing a row of M_n changes the Hermitian
+dilation of A_n-zI by rank at most 2. Hermitian interlacing therefore changes
+F_n(s,z) by at most 2/n. To see the factor, the dilation has size 2n and its
+CDF changes by at most 2/(2n); recovering the positive singular-value CDF
+costs at most another factor 2. McDiarmid's bounded-differences inequality
+applied to the n independent rows yields
+
+ P(|F_n(s,z)-E F_n(s,z)|>t) <= 2 exp(-n*t^2/2).
+
+Pick deterministic quantile cutpoints of the continuous F(.,z) with increments
+at most q, including endpoints of its compact support. There are O(q^(-1))
+cutpoints. A union bound with t=q, followed by monotonic interpolation between
+cutpoints, gives
+
+ P(sup_s |F_n(s,z)-F(s,z)|>C' q)
+       <= C q^(-1) exp(-n*q^2/2) <= C_Q n^(-Q).
+
+The last inequality uses alpha<=1/12, so n*q^2>=n^(5/6). The constants
+are uniform in z in K. This is a pointwise-in-z probability assertion, not
+a simultaneous assertion about every z.
+
+Next E||A_n||_F^2=n. Hence for any L>0,
+P(||A_n||>n^L)<=n^(1-2L). Choose L large enough, and combine this with
+(B). Outside an event of probability O(n^(-Q)), all singular values of
+A_n-zI lie in [n^(-B),n^L+sup_K|z|]. Increase L by 1 to absorb the shift.
+Clamp log(s) below n^(-B) and above n^(L+1), obtaining a continuous
+nondecreasing function ell_n with total variation (B+L+1)log n.
+Stieltjes integration by parts gives, on this event,
+
+ |integral ell_n(s) d(F_n-F)(s,z)| <= C q log n.
+
+The lower-clamp error for F is at most C n^(-B), since its density is
+bounded and integral_0^h log(h/s)ds=h. The upper-clamp error vanishes
+for large n because F has uniformly compact support. Increase B if needed
+so B>alpha. Thus
+
+ P(|U_n(z)-U_sigma(z)|>C_Q q log n)<=C_Q n^(-Q)                 (1)
+
+uniformly pointwise in z in K.
+
+Fix a finite r>=1. We now justify the spatial L^r estimate needed in (C).
+For a deterministic matrix with ||A_n||<=n^L,
+
+ ||U_n-U_sigma||_{L^(2r)(K)} <= C_{r,K,L} log n.               (2)
+
+Indeed |lambda_j|<=||A_n|| and Minkowski bounds the norm of the average
+of -log|z-lambda_j| by the average of their norms. The integral of
+|log|z-w||^(2r) over |z-w|<=1 is uniformly finite in w, and on the rest
+of K its size is O(1+log(1+|w|)). This proves (2). Infinite values at the
+finite set of eigenvalues do not affect these Lebesgue norms.
+
+Define E_n={z in K: |U_n(z)-U_sigma(z)|>C_Q q log n}. By (1),
+Fubini gives E|E_n|<=C_Q n^(-Q). For any H>0 Markov yields
+P(|E_n|>n^(-H))<=C_Q n^(-Q+H). On its complement and the norm event,
+Hölder and (2) give
+
+ ||U_n-U_sigma||_{L^r(K)}
+ <= C q log n + |E_n|^(1/(2r))*||U_n-U_sigma||_{L^(2r)(K)}
+ <= C log n [q+n^(-H/(2r))].
+
+Take H>=2r alpha, Q>=H+D+2, and L with 2L-1>=D+2. We have proved
+
+ P(||U_n-U_sigma||_{L^r(K)}>C q log n)<=C n^(-D)               (3)
+
+for arbitrary fixed D. Crucially, (3) did not take a supremum over z
+or assert a lower singular-value bound simultaneously at every z.
+
+Finally use (C) with a=n^s and s=alpha/(2+1/r). From (3), with failure
+probability at most C n^(-D), each metric is at most C n^(-s) log n.
+Given delta<kappa/24=alpha/2, choose a finite r large enough that delta<s.
+Then n^(-s)log n=O(n^(-delta)), proving the assertion. A union bound covers
+both metrics. Choose D=2 and sum failure probabilities to obtain the almost
+sure assertion by Borel--Cantelli; independence between matrix sizes is not
+needed. QED.
+
+Audit of limitations. This is a synthesis of printed input theorems, not a
+claim to solve the optimal-rate problem or a claim that this exponent is new.
+The proof tracks a nonoptimal exponent of the mean Hermitized law; the
+smallest-singular-value exponent B affects constants and logarithms, not the
+power displayed. All entry-law and moment-bound constants may affect the
+threshold in n. No all-moment local law is applied to an n-dependent truncation.
