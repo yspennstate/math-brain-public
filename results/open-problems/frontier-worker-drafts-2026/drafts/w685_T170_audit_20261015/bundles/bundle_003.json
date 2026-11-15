@@ -1,0 +1,160 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w685",
+  "bundle_slug": "t170-unique-height-renewal-own-drafts-003",
+  "entries": [
+    {
+      "key": "unique-height-squares",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-w685-fpp-unique-height-odd-square-disjointness",
+      "kind": "concept",
+      "title": "Draft: unique heights give disjoint odd square alternatives in FPP (w685)",
+      "statement": "OWNER WORKING DRAFT: proof (unaudited); novelty unverified. Fix a finite vertex-simple nearest-neighbour path x_0,...,x_n in Z^d, d>=2, and set h(x)=sum_i x_i. Retain an odd-start two-step corner when its directions use different axes, both signs are positive, and the middle vertex's height is visited exactly once by the entire path. The other midpoint has the same height and is off the path. The even family uses only even-start corners satisfying the chord and adjacent-four-step exclusions in source section 1. The selected odd square alternatives are mutually edge-disjoint and disjoint from all actual edges, all three-step chords, and the retained even square alternatives. Conditional on the fixed path's actual edge times, the off-path exponential edge sets are independent; each square contributes Gamma(2,1) survival exp(-(t_i+t_(i+1)))(1+t_i+t_(i+1)). Overlapping actual-edge times must still be integrated jointly. No independence after conditioning on a random geodesic is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "fixed vertex-simple nearest-neighbour path on Z^d, d>=2",
+        "height is coordinate sum",
+        "odd middle height globally unique along that path",
+        "two positive directions on different axes",
+        "even family has both exclusions in source section 1",
+        "independent Exp(1) edge times; condition only on fixed-path actual times"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:T170-w685-C013-v4",
+        "url": "urn:owner-math-work:T170:w685:C013:v4",
+        "revision": "2026-10-15; exact claim C013-v4",
+        "license": "owner-own-work",
+        "excerpt": null,
+        "locator": "proofs/unique_height_renewal.md, section 1"
+      },
+      "dedup_evidence": [
+        "recall/q014.txt",
+        "recall/q015.txt",
+        "recall/q016.txt",
+        "recall/q017.txt",
+        "recall/q018.txt",
+        "logs/height_queued_dedup.json"
+      ]
+    },
+    {
+      "key": "scalar-height-bridges",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-w685-exact-scalar-strict-irreducible-height-bridge-mass",
+      "kind": "concept",
+      "title": "Draft: exact scalar mass of strict irreducible FPP height bridges (w685)",
+      "statement": "OWNER WORKING DRAFT: proof (unaudited); novelty unverified. For d=21, a=36948977/500000 and z=1619525573/500000000, weight a sign walk of length n and final height ell by (d/a)^n z^ell. A strict positive bridge has ell>=1 and 0<h<ell at intermediate times; it is irreducible when every interior height is visited at least twice. The total scalar mass of strict irreducible height bridges is enclosed by [1.012131014753350940, 1.012131014753350947]. Integer reflection counts and the formal coefficient recurrence A=B+BA compute all length coefficients through 400. The omitted mass is at most (7/5)(9/10)^401/(1-9/10), using 4m>=n-1 for m negative steps and d(z+(7/5)^4/z)/(a(7/5))<9/10. The exact rational enclosure has width less than 10^-15. This is a scalar sign-profile calculation, not by itself an FPP diagonal theorem; no analytic continuation is used.",
+      "proof_text": null,
+      "assumptions": [
+        "d=21, a=36948977/500000 and z=1619525573/500000000",
+        "all finite strict positive sign bridges included",
+        "irreducibility means repeated visits to every interior height",
+        "weight (d/a)^n z^ell",
+        "exact reflection counts and explicit tail bound"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:T170-w685-C014-v2",
+        "url": "urn:owner-math-work:T170:w685:C014:v2",
+        "revision": "2026-10-15; exact claim C014-v2",
+        "license": "owner-own-work",
+        "excerpt": null,
+        "locator": "proofs/scalar_bridge_mass.md; logs/scalar_bridge_mass_certificate.json"
+      },
+      "dedup_evidence": [
+        "recall/q014.txt",
+        "recall/q015.txt",
+        "recall/q016.txt",
+        "recall/q017.txt",
+        "recall/q018.txt",
+        "logs/height_queued_dedup.json"
+      ]
+    },
+    {
+      "key": "gamma-transfer-norm",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-w685-fpp-erlang-two-square-transfer-common-norm",
+      "kind": "concept",
+      "title": "Draft: weighted norm for overlapping Erlang(2) square FPP transfers (w685)",
+      "statement": "OWNER WORKING DRAFT: proof (unaudited); novelty unverified. For the 641-state pending-moment graph at d=21, a=36948977/500000 and z=1619525573/500000000, let I be its incoming odd-square flag and p its moment, where I,p are zero or one and p=0 when I=0. Put w(I,p)=(a/(a+I))^(p+1). For every encoded state, mark and sign, M_(mark,sign) w <= (d z^sign/a) w. The two-by-two pair transfer integrates the joint polynomial t0^p(1+t0+t1)^E(1+t1+t2)^O against the exponential densities, using exact factorial moments; E and O are the outgoing even and odd flags. All 2564 state/mark/sign inequalities were checked by independent monomial expansion in exact rational arithmetic. This norm bounds arbitrary products and their omitted profile tails without resetting pending actual-edge times at cuts. The statement certifies the encoded operator; the graph's correspondence with lattice paths is a separate mathematical step.",
+      "proof_text": null,
+      "assumptions": [
+        "d=21, a=36948977/500000 and z=1619525573/500000000",
+        "graph scripts/height_renewal_graph.json at its recorded hash",
+        "pending moments and eligibility flags have source-defined meanings",
+        "positive balanced Gamma(2)/Erlang(2) transfer",
+        "no factorization of overlapping actual-edge marginals"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:T170-w685-C015-v1",
+        "url": "urn:owner-math-work:T170:w685:C015:v1",
+        "revision": "2026-10-15; exact claim C015-v1",
+        "license": "owner-own-work",
+        "excerpt": null,
+        "locator": "proofs/renewal_boundary_norm.md; logs/height_renewal_norm_certificate.json"
+      },
+      "dedup_evidence": [
+        "recall/q014.txt",
+        "recall/q015.txt",
+        "recall/q016.txt",
+        "recall/q017.txt",
+        "recall/q018.txt",
+        "logs/height_queued_dedup.json"
+      ]
+    },
+    {
+      "key": "diagonal-height-renewal",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-w685-fpp-d21-diagonal-lower-bound-unique-height-renewal",
+      "kind": "concept",
+      "title": "Draft: FPP diagonal lower bound in dimension 21 by unique height renewal (w685)",
+      "statement": "OWNER WORKING DRAFT: proof (unaudited); novelty unverified. For independent Exp(1) nearest-neighbour edge times on Z^21, the Euclidean diagonal time constant satisfies mu_diag(21) >= 0.073881518494. The proof uses disjoint three-step chords, eligible even Gamma(2) squares and odd positive squares at globally unique heights. It keeps unfinished moments across cuts in a 641-state operator. At s=36448977/500000 and z=1619525573/500000000, the strict irreducible bridge operator on 330 positive-last-sign boundary states contracts with certified upper ratio 999987264585312187/10^18<1. Its all-length completion uses exact scalar tails and prefix/no-cut quota 4m>=n-17, suffix quota 4m>=n-1. Hence the tilted path first moment is finite and mu_diag>=sqrt(21)log(z)/s; an exact downward evaluation gives the displayed floor, more than 2.17% above the CEG coefficient divided by sqrt(21). The hardest step is the all-length path decomposition in source section 4. Independent review of that step, the path encoding and novelty is pending. No newly certified non-ball dimension is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "unoriented nearest-neighbour FPP on Z^21",
+        "independent rate-one exponential edge times",
+        "Euclidean diagonal normalisation: coordinate-sum height divided by sqrt(21)",
+        "all-length decomposition and operator/path correspondence as proved in the unaudited manuscript",
+        "recorded exact rational parameter and computational certificates"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:T170-w685-C013-v4",
+        "url": "urn:owner-math-work:T170:w685:C013:v4",
+        "revision": "2026-10-15; exact claim C013-v4",
+        "license": "owner-own-work",
+        "excerpt": null,
+        "locator": "proofs/unique_height_renewal.md; logs/height_renewal_delivery_manifest.json; logs/height_renewal_mu_floor.json"
+      },
+      "dedup_evidence": [
+        "recall/q014.txt",
+        "recall/q015.txt",
+        "recall/q016.txt",
+        "recall/q017.txt",
+        "recall/q018.txt",
+        "logs/height_queued_dedup.json"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "diagonal-height-renewal",
+      "to_key": "unique-height-squares",
+      "kind": "depends_on",
+      "rationale": "The bound card states \"For independent Exp(1) nearest-neighbour edge times on Z^21, the Euclidean diagonal time constant satisfies mu_diag(21) >= 0.073881518494.\". The supporting card states \"The selected odd square alternatives are mutually edge-disjoint and disjoint from all actual edges, all three-step chords, and the retained even square alternatives.\", which supplies the disjoint off-path edge families needed for the conditional survival weights."
+    },
+    {
+      "from_key": "diagonal-height-renewal",
+      "to_key": "scalar-height-bridges",
+      "kind": "depends_on",
+      "rationale": "The bound card states \"For independent Exp(1) nearest-neighbour edge times on Z^21, the Euclidean diagonal time constant satisfies mu_diag(21) >= 0.073881518494.\". The supporting card states \"The total scalar mass of strict irreducible height bridges is enclosed by [1.012131014753350940, 1.012131014753350947].\", which bounds the all-length omitted bridge profiles."
+    },
+    {
+      "from_key": "diagonal-height-renewal",
+      "to_key": "gamma-transfer-norm",
+      "kind": "depends_on",
+      "rationale": "The bound card states \"For independent Exp(1) nearest-neighbour edge times on Z^21, the Euclidean diagonal time constant satisfies mu_diag(21) >= 0.073881518494.\". The supporting card states \"For every encoded state, mark and sign, M_(mark,sign) w <= (d z^sign/a) w.\", which carries unfinished moments through cuts and controls profile products."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+--- T170/scripts/certify_scalar_bridge_mass.py
++++ T170/dimension_extension/d19/scripts/certify_scalar_bridge_mass.py
+@@ -40,10 +40,10 @@
+     point_path = ROOT/'logs/height_bridge_tail_certificate.json'
+     point = json.loads(point_path.read_text(encoding='utf-8'))
+     get = lambda key: Q(int(point[key]['n']), int(point[key]['d']))
+-    a, z, d = get('s') + 1, get('z'), 21
++    a, z, d = get('s') + 1, get('z'), int(point['d'])
+     t = Q(7, 5)
+     r = d * (z + t**4/z) / (a*t)
+-    assert r < Q(9, 10)
++    assert r < Q(91, 100)
+     K, scale = 400, 10**40
+     R = a.numerator * z.denominator
+     bnum = d * a.denominator
+@@ -70,7 +70,7 @@
+         lo_units += B[n]*scale//rpow[n]
+         if n in (9, 11, 13, 15, 17, 19, 21, 25, 31, 51, 101, 201, 400):
+             short_units[str(n)] = str(lo_units)
+-    tail = t * Q(9,10)**(K+1) / Q(1,10)
++    tail = t * Q(91,100)**(K+1) / Q(9,100)
+     lower = Q(lo_units, scale)
+     upper = lower + Q(K, scale) + tail
+     # Independent finite profile enumeration checks the renewal coefficients.

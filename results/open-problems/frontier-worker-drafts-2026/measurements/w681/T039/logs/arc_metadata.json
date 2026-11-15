@@ -1,0 +1,23 @@
+{
+  "command": [
+    "scripts/check_arcs.py"
+  ],
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.4.3",
+  "scipy": "1.17.1",
+  "script_sha256": "f7b8d92a7cb14f737cce3f291279f254c7f9af307c4f05407852524f7e69df2c",
+  "paper_sha256": "225a538b41d36176f70f166df6f412e6459826f08048393ba317cc6d8c1ee25b",
+  "rng": "none",
+  "seed": null,
+  "cpu_affinity": [
+    2,
+    3
+  ],
+  "threads": 1,
+  "status": "numerical evidence",
+  "a_grid": "81 per rho: zero, 40 uniform positive values to 98*rho/(1-rho\u00b2), 40 geometric values from 1e-7 to same maximum",
+  "p_grid": "uniform scalar grid plus 1/3 and symmetric near-1/3 perturbations 1e-8 through .02; all simplex grid coordinates",
+  "hypotheses": "p,q in [0,1] for stronger scalar inequality; p,q in Delta_3 for equations 139 and 142",
+  "tolerance": 1e-10,
+  "reproduction": "double precision comparison; no outward rounding, no theorem claim"
+}

@@ -1,0 +1,87 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w681",
+  "bundle_slug": "t039-target2-rigorous-extension-draft-2026-10-15",
+  "entries": [
+    {
+      "key": "complete-hs-tail",
+      "namespace": "analysis.operator_bounds",
+      "logical_name": "operator-norm-hilbert-schmidt-complete-tail-completion",
+      "kind": "lemma",
+      "title": "Operator norm and Hilbert-Schmidt tail: Cauchy-Schwarz block completion",
+      "statement": "Elementary inequality; proof unaudited. Let T be a bounded linear operator on a Hilbert space H and P an orthogonal projection on H. Let lambda,tau>=0. Assume T-PTP is Hilbert-Schmidt. If ||PTP||<=lambda and ||T-PTP||_HS^2<=tau, then ||T||<=sqrt(lambda^2+tau). For a kernel on [0,infinity)^2 with P multiplication by the indicator of [0,L], tau must bound the squared-kernel integral over the entire complement of [0,L]^2: both cross rectangles as well as the outside corner. No positivity, positive semidefiniteness or self-adjointness assumption on T is needed.",
+      "proof_text": "For unit f,g set s=||Pf|| ||Pg||. The Hilbert-Schmidt orthogonal projection of the rank-one operator f g* onto P-to-P operators is Pf (Pg)*, of squared Hilbert-Schmidt norm s^2. Its orthogonal remainder has squared norm 1-s^2. Hence |<f,Tg>|<=lambda s+sqrt(tau)sqrt(1-s^2)<=sqrt(lambda^2+tau) by Hilbert-Schmidt and two-dimensional Cauchy-Schwarz. Take the supremum over unit f,g. This is an elementary completion lemma, not a claim of novelty.",
+      "assumptions": [
+        "T bounded on H",
+        "P an orthogonal projection",
+        "lambda,tau>=0",
+        "T-PTP Hilbert-Schmidt with its ENTIRE squared norm <=tau",
+        "Status: T039-C004 v2, proof (unaudited)"
+      ],
+      "domain": "operator norm certificates",
+      "source": {
+        "source_id": "owner-work:w681:T039-C004:v2",
+        "url": "~/brain_workers/w681/T039/proofs/BLOCK_COMPLETION.md",
+        "revision": "2026-10-15T03:40:05.164744+00:00",
+        "license": "owner-own-work (elementary proof; audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "simplex-extension-draft",
+      "namespace": "probability.gaussian_noise_stability",
+      "logical_name": "draft-heilman-three-cell-simplex-extension-rho-043-w681-2026-10-15",
+      "kind": "concept",
+      "title": "DRAFT: Heilman k=3 Plurality is Stablest / Standard Simplex extension through rho=0.43",
+      "statement": "DRAFT COMPUTER-ASSISTED CLAIM, T039-C005 v2; status proof (unaudited), not independently checked. Let n>=2, let X,Z be independent standard Gaussian vectors in R^n, and set Y=rho X+sqrt(1-rho^2)Z. For every measurable partition Omega_1,Omega_2,Omega_3 of R^n with each cell of standard Gaussian measure 1/3, and every rho in [1/10,43/100], the sum over i of Pr[X in Omega_i,Y in Omega_i] is at most that for three congruent 120-degree planar sectors, extended by R^(n-2). The assigned primary source, Heilman arXiv:2608.00333v1 Theorem A.1, covers [1/10,2/5]. The campaign interval certificate extends the operator criterion over [2/5,43/100] using 61 adjacent slabs, with worst directed operator upper 1.9994729860206248<2. The full-operator upper bound uses sqrt(lambda^2+tau), where tau includes both omitted cross rectangles. Finite positive radial-cell matrices, exact binary64 positive witnesses and outward-rounded Arb integral tables enclose discretization and truncation. This replaces the suggested Laguerre route; the source sphere-valued Theorem 1.6 is not directly assumed for the simplex operator. Independent review of the source reduction and interval implementation is still pending; this does not settle larger correlations. Here lambda bounds the operator on the retained radial square and tau bounds the entire omitted squared-kernel integral.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2",
+        "Three measurable Gaussian partition cells of measure exactly 1/3",
+        "rho in [1/10,43/100]",
+        "X,Z independent standard Gaussian",
+        "Status: proof (unaudited); independent audit pending",
+        "Source theorem plus new radial operator certificate; no priority claim beyond the assigned source"
+      ],
+      "domain": "Gaussian noise stability",
+      "source": {
+        "source_id": "owner-work:w681:T039-C005:v2",
+        "url": "~/brain_workers/w681/T039/proofs/TARGET2_EXTENSION.md",
+        "revision": "2026-10-15T03:40:05.164744+00:00",
+        "license": "owner-own-work (computer-assisted draft; Heilman source attributed; independent audit pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "heilman-weight-floor",
+      "namespace": "probability.gaussian_noise_stability",
+      "logical_name": "heilman-positive-simplex-radial-weight-lower-bound",
+      "kind": "lemma",
+      "title": "Heilman positive simplex radial weight lower bound (153): J_+/sqrt(t)",
+      "statement": "Let S(b)=4 integral from 0 to infinity of u^2 exp(-u^2-2bu) du for real b, and H(q)=(pi/2) integral from 0 to 2/3 of v(1-3v/2)sin(pi v)S(-q cos(pi v))dv for q>=0. Let 0<rho<1, d=1-rho^2, alpha=rho/sqrt(d), kappa=rho^2/d, and j1=(9-pi sqrt(3))/(4pi^2). Define Jtilde(x)=alpha exp(-kappa x^2)[H(alpha x)+(j1/2)S(alpha x)] for x>=0. This is the positive simplex radial weight J_+(x^2)/x for x>0, with continuous extension at zero. For every x>=0, Jtilde(x)>=(6-pi)/(4pi^(3/2)) alpha exp(-kappa x^2)>0. This denominator lower bound alone implies no operator or Hilbert-Schmidt norm bound.",
+      "proof_text": "The integral defining S is positive. If b<=0, its integrand dominates the b=0 integrand, so S(b)>=sqrt(pi). For 0<=v<=1/2, -q cos(pi v)<=0. The integrand for H is nonnegative on the whole interval [0,2/3]; restrict it to [0,1/2] and use S>=sqrt(pi). Direct integration gives integral_0^(1/2) v(1-3v/2)sin(pi v)dv=(6-pi)/(2pi^3), hence H(q)>=(6-pi)/(4pi^(3/2)). Finally j1>0 and S(q)>0. Multiplication by alpha exp(-kappa x^2) proves the bound. This expands the primary source bound, not a new result.",
+      "assumptions": [
+        "0<rho<1",
+        "x>=0",
+        "S and H defined by the displayed convergent integrals",
+        "Primary-source bound (153); proof expansion unaudited"
+      ],
+      "domain": "Gaussian noise stability",
+      "source": {
+        "source_id": "arxiv:2608.00333v1:equation-153-positive-radial-weight",
+        "url": "https://arxiv.org/abs/2608.00333v1",
+        "revision": "v1; author code commit 6b720fe57bfe2a3c8fffc51521d00b31011aa1a3; read 2026-10-15",
+        "license": "arxiv-nonexclusive (mathematical fact restated and proof expanded in original words)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "simplex-extension-draft",
+      "to_key": "complete-hs-tail",
+      "kind": "depends_on",
+      "rationale": "The draft states: \"The full-operator upper bound uses sqrt(lambda^2+tau), where tau includes both omitted cross rectangles.\" The lemma states: \"If ||PTP||<=lambda and ||T-PTP||_HS^2<=tau, then ||T||<=sqrt(lambda^2+tau).\""
+    }
+  ]
+}

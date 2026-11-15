@@ -1,0 +1,11 @@
+--- T170/scripts/certify_height_renewal_interval.py
++++ T170/dimension_extension/d19/scripts/certify_height_renewal_interval.py
+@@ -23,7 +23,7 @@
+     if free is not None and free<2*1024**3:raise SystemExit('WAIT: under 2GB free.')
+     import numpy as np
+     start=time.monotonic()
+-    K=21;d=21
++    K=21;d=int(load('logs/height_bridge_tail_certificate.json')['d'])
+     graph=load('scripts/height_renewal_graph.json');point=load('logs/height_bridge_tail_certificate.json')
+     scalar=load('logs/scalar_bridge_mass_certificate.json');norm=load('logs/height_renewal_norm_certificate.json')
+     point_sha=sha('logs/height_bridge_tail_certificate.json')

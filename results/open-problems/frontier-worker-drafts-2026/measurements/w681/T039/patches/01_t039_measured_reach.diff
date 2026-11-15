@@ -1,0 +1,34 @@
+--- ~\brain-repo\06_math_research\frontier\rows\T039\DOSSIER.md
++++ ~\brain-repo\06_math_research\frontier\rows\T039\DOSSIER.md
+@@ -35,12 +35,16 @@
+    outward-rounded interval arithmetic; finite square [0,7]^2 plus analytic tails), on slabs of rho in [0.1, 0.4].
+ 
+ ## FAILURE POINT
+-Step 5, measured: the certified worst slab is h_+^2 = 3.99929 on rho in [0.38625, 0.3875] (Lemma A.4 output; margin
+-0.0007). The Hilbert-Schmidt bound is at the edge of 4 just below 2/5, so the stated range is where the HS norm
+-crosses 2, not necessarily where the true operator norm does. Not known from the paper: whether the true operator
+-norm in step 4 stays below 2 past 0.4, and whether step 3's linearisation (the aligned-arc bound) is itself what
+-fails at larger rho. For rho -> 1 the problem becomes isoperimetric (multi-bubble), where step 3's second-order
+-expansion around p = 1/3 should be worthless (the optimiser's p_i(r) are 0/1 far out).
++Step 5's published certificate is a slab upper bound: h_+^2 <= 3.99929096609 on its worst slab
++[0.38625,0.3875]. It does not locate the actual HS crossing. Target-1 numerical instrument w681/T039 estimates
++the literal (151) HS crossing at rho_HS = 0.43251274 and the weighted mean-zero operator crossing at
++rho_op = 0.44101422. Root estimates agree across 256,512,768 radial nodes (cutoffs 20,20,30; angular nodes
++128,192,256). At rho=.4, HS is about 1.89736807 and operator about 1.87963496 (ratio 1.00943434).
++These are uncertified numerical estimates, not a theorem on a new rho interval. Evidence: w681/T039/SUMMARY.json,
++REPORT.md and logs/operator_roots.jsonl; independent J/K normalization and centering controls are recorded.
++Lemma A.2 (139) and Corollary A.3 (142) state all a>=0; rho enters via a only. The requested rho=.45,.5,.6,.7,.8,.9
++grids show no failure. The remaining certification target is a rigorous full-operator upper bound over an interval
++above .4. The unmodified quadratic operator is numerically above 2 by rho=.45.
+ 
+ ## SHAPE
+ Two-ended interval problem, per k. For k = 3 the near-0 end is done to 2/5 by operator bounds plus certified
+@@ -49,7 +53,7 @@
+ the perceptron shape over rho, if step 4's operator norm really stays < 2 for a while.
+ 
+ ## OBSTRUCTION
+-(a) The HS-norm relaxation in step 5 has no slack past ~0.39. (b) Unknown: the true reach of the step 1-4 reduction.
++(a) The published-center HS norm numerically reaches 2 near .43251274; the mean-zero operator near .44101422 (target-1 instrument, not yet certified). (b) Unknown: the true reach of the step 1-4 reduction.
+ (c) No quantitative near-1 theorem (multi-bubble is only the limit). (d) k >= 4: the circular rearrangement of step 2
+ has no analogue on S^2 (four sets into four spherical triangles; Heilman: "the main obstruction to progress").
+ 

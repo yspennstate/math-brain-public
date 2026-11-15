@@ -1,0 +1,120 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w681",
+  "bundle_slug": "t039-heilman-positive-reach-2026-10-15",
+  "entries": [
+    {
+      "key": "aligned-arc",
+      "namespace": "probability.gaussian_noise_stability",
+      "logical_name": "heilman-aligned-arc-bound",
+      "kind": "lemma",
+      "title": "Heilman aligned-arc bound (Lemma A.2)",
+      "statement": "Let I0(a)=(1/(2pi)) integral from -pi to pi of exp(a cos u) du. For a>=0 and u,v in [0,1], let L_a(u,v) be the integral of exp(a cos(theta-phi))/I0(a) over theta in [-pi u,pi u] and phi in [-pi v,pi v], with each angular measure dtheta/(2pi). Put b=1/3, k(a)=L_a(b,b), P(a)=partial_1 L_a(b,b), tau(a)=4P(a)-3k(a), and w(a)=3k(a)-P(a). Let Delta_3={p in R^3: p_i>=0 and sum_i p_i=1}. For every a>=0 and p,q in Delta_3, with x=p-b(1,1,1) and y=q-b(1,1,1), sum_i L_a(p_i,q_i)-3k(a) <= tau(a)<x,y>-w(a)(||x||^2+||y||^2). For a>0, w(a)>0; for a=0 there is equality and w(0)=0. This attributed source lemma has no correlation parameter restriction.",
+      "proof_text": "The even, 2-periodic angular density exp(a cos(pi u))/I0(a) decreases on [0,1]. Its integral formulas imply w>0 and tau>=1. For scalar u,v define Phi=L_a(u,v)-tau uv-w[u(1-u)+v(1-v)]. Boundary values are nonpositive. At an off-diagonal interior critical point, the second derivative in direction (1,-1) is positive, so the point is not a maximum. On the diagonal, Phi has value and first derivative zero at 1/3; its middle concave interval contains 1/3, and the outer convex pieces lie below nonpositive endpoint chords. Thus Phi<=0. Summing its three coordinate inequalities and using the simplex sums gives the stated bound. See the primary proof on pp.39-40; this is an attributed proof sketch, not a new result.",
+      "assumptions": [
+        "a>=0",
+        "p,q in Delta_3; in particular equal unit coordinate sums",
+        "Euclidean inner product and norm",
+        "Primary preprint source; card audit pending"
+      ],
+      "domain": "Gaussian noise stability",
+      "source": {
+        "source_id": "arxiv:2608.00333v1:Lemma-A.2-pp38-40",
+        "url": "https://arxiv.org/abs/2608.00333v1",
+        "revision": "v1-2026-07-31; read 2026-10-15",
+        "license": "arxiv-nonexclusive (mathematical facts restated in original words; metadata verified)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "sharpened-aligned-arc",
+      "namespace": "probability.gaussian_noise_stability",
+      "logical_name": "heilman-sharpened-aligned-arc-bound",
+      "kind": "lemma",
+      "title": "Heilman sharpened aligned-arc bound (Corollary A.3)",
+      "statement": "Let I0(a)=(1/(2pi)) integral from -pi to pi of exp(a cos u) du. For a>=0 and u,v in [0,1], let L_a(u,v) be the integral of exp(a cos(theta-phi))/I0(a) over theta in [-pi u,pi u] and phi in [-pi v,pi v], with each angular measure dtheta/(2pi). Put b=1/3, k(a)=L_a(b,b), P(a)=partial_1 L_a(b,b), tau(a)=4P(a)-3k(a), and w(a)=3k(a)-P(a). Let Delta_3={p in R^3: p_i>=0 and sum_i p_i=1}. Put j1=(9-sqrt(3)pi)/(4pi^2) and theta(a)=(j1/2) a exp(-a)/I0(a). For every a>=0 and p,q in Delta_3, with x=p-b(1,1,1) and y=q-b(1,1,1), sum_i L_a(p_i,q_i)-3k(a) <= (tau(a)-4theta(a))<x,y> -(w(a)+theta(a))(||x||^2+||y||^2). There is no separate rho restriction in this attributed scalar/vector bound.",
+      "proof_text": "Write the angular density as exp(-a)/I0(a) times [1+a(1+cos(pi u))] plus a decreasing nonnegative remainder. Lemma A.2 bounds the constant and the decreasing nonnegative remainder. The simplex first-mode estimate (140), obtained from Lemma 8.3, bounds the 1+cos(pi u) term with its additional gain. Adding the homogeneous estimates gives the cross-coefficient decrease 4theta and diagonal-penalty increase theta. This is the source proof on p.40.",
+      "assumptions": [
+        "a>=0",
+        "p,q in Delta_3",
+        "j1=(9-sqrt(3)pi)/(4pi^2)>0",
+        "Primary preprint source; card audit pending"
+      ],
+      "domain": "Gaussian noise stability",
+      "source": {
+        "source_id": "arxiv:2608.00333v1:Corollary-A.3-p40",
+        "url": "https://arxiv.org/abs/2608.00333v1",
+        "revision": "v1-2026-07-31; read 2026-10-15",
+        "license": "arxiv-nonexclusive (mathematical facts restated in original words; metadata verified)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "positive-simplex",
+      "namespace": "probability.gaussian_noise_stability",
+      "logical_name": "heilman-positive-correlation-standard-simplex-theorem",
+      "kind": "theorem",
+      "title": "Heilman positive-correlation Standard Simplex theorem (three cells, rho <= 2/5)",
+      "statement": "Let n>=2 and 0<rho<=2/5. Let X,Z be independent standard Gaussian vectors in R^n and Y=rho X+sqrt(1-rho^2) Z. For every measurable partition (Omega_1,Omega_2,Omega_3) of R^n with standard Gaussian measure 1/3 for each cell, sum_i Pr[X in Omega_i,Y in Omega_i] is at most the corresponding sum for the three congruent 120-degree planar sectors, extended by R^(n-2). Boundaries may be allocated arbitrarily on their Gaussian-null sets. The Gaussian noise-stability inequality holds for 0 < rho <= 2/5. This is the attributed Theorem A.1 of arXiv:2608.00333v1; it requires no Unique Games assumption.",
+      "proof_text": "The previous positive-correlation result covers rho<1/10. For rho in [1/10,2/5], Heilman-Tarter dimension reduction reduces the optimization to R^2, and circular rearrangement replaces each pair of conditional angular sets by aligned arcs. Corollary A.3 supplies the sharpened aligned-arc bound. Radial integration gives sum_i [<x_i,K_+x_i>-2<x_i,J_+x_i>]. Equal Gaussian measures give integral x_i dnu=0. The weighted Hilbert-Schmidt estimate (152) and the directed certificate of Lemma A.4, h_+<2 uniformly on [1/10,2/5], make the expression nonpositive. See the source pp.38 and 43; this is a known result, not an extension by this worker.",
+      "assumptions": [
+        "n>=2",
+        "0<rho<=2/5",
+        "Three measurable partition cells each of Gaussian measure exactly 1/3",
+        "X,Z independent standard Gaussian",
+        "Primary preprint source; card audit pending"
+      ],
+      "domain": "Gaussian noise stability",
+      "source": {
+        "source_id": "arxiv:2608.00333v1:Theorem-A.1-pp38-43",
+        "url": "https://arxiv.org/abs/2608.00333v1",
+        "revision": "v1-2026-07-31; read 2026-10-15",
+        "license": "arxiv-nonexclusive (mathematical facts restated in original words; metadata verified)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "numerical-reach",
+      "namespace": "probability.gaussian_noise_stability",
+      "logical_name": "draft-heilman-positive-radial-operator-reach-w681-2026-10-15",
+      "kind": "concept",
+      "title": "DRAFT: Heilman positive radial operator reach (HS .43251; mean-zero norm .44101)",
+      "statement": "DRAFT NUMERICAL EVIDENCE, T039-C002 v1; independently unaudited. Let I0(a)=(1/(2pi)) integral from -pi to pi of exp(a cos u) du. For a>=0 and u,v in [0,1], let L_a(u,v) be the integral of exp(a cos(theta-phi))/I0(a) over theta in [-pi u,pi u] and phi in [-pi v,pi v], with each angular measure dtheta/(2pi). Put b=1/3, k(a)=L_a(b,b), P(a)=partial_1 L_a(b,b), tau(a)=4P(a)-3k(a), and w(a)=3k(a)-P(a). Let Delta_3={p in R^3: p_i>=0 and sum_i p_i=1}. Put j1=(9-sqrt(3)pi)/(4pi^2) and theta(a)=(j1/2) a exp(-a)/I0(a). For 0<rho<1 put d=1-rho^2, dnu(t)=exp(-t)dt on t>0, a(t,s)=2rho sqrt(ts)/d, R0(t,s)=exp(-rho^2(t+s)/d) I0(a(t,s))/d, K_+(t,s)=R0(t,s)[tau(a(t,s))-4theta(a(t,s))], and J_+(t)=integral R0(t,s)[w(a(t,s))+theta(a(t,s))] dnu(s). Define Lambda(rho) as the supremum, over nonzero bounded real z with integral z dnu=0, of |double integral z(t)K_+(t,s)z(s)dnu(t)dnu(s)| / integral J_+(t)z(t)^2dnu(t). The kernels are the ones obtained from Corollary A.3. For the published center, let ell_rho(x)=sum_{n=0}^4 sum_{m=0}^4 C_nm rho^m x^n, where C is parsed as binary64 from [[0.5001276609531384, -0.04839192730072833, 0.3420752274381793, -0.02840693452661011, 0.3929215251696178], [0.002071160433249207, 0.11278766504365427, 0.42921652164107776, -1.4633497642462785, 2.392753763954644], [-0.00657914712574693, 0.1533613436474771, -1.6052209990260096, 4.917034579755538, -7.5025494501524435], [0.00509284321106939, -0.11817713264541818, 0.9939294369107601, -4.02653695935449, 4.798761639440846], [-0.00111590812093279, 0.02578645463758624, -0.21531279149872498, 0.776584990984738, -0.6977289068083498]]. Define h_+(rho)^2 as the double integral of [K_+(t,s)-ell_rho(sqrt(t))-ell_rho(sqrt(s))]^2 /[J_+(t)J_+(s)] with respect to dnu(t)dnu(s). Nyström estimates on rho in [.4,.95] give the observed h_+=2 crossing at 0.43251274 and the observed Lambda=2 crossing at 0.44101422. At rho=.4, h_+ is about 1.89736807 and Lambda about 1.87963496. Three radial/angular/cutoff refinements agree, as do independent radial-marginal J and Bessel K controls. The computation uses finite domains and binary64 quadrature; its stable values are not rigorous infinite-dimensional bounds or a new stability interval.",
+      "proof_text": null,
+      "assumptions": [
+        "Status: numerical evidence, T039-C002 v1; not independently checked",
+        "Published binary64 polynomial center held fixed and extrapolated as defined",
+        "Finite Gauss-Legendre Nystrom quadrature with weighted mean-zero projection",
+        "RNG none; thread caps 1, CPU affinity [2,3]; no rigorous tail/discretization enclosure"
+      ],
+      "domain": "Gaussian noise stability",
+      "source": {
+        "source_id": "owner-work:w681:T039-C002:v1",
+        "url": "~/brain_workers/w681/T039/REPORT.md",
+        "revision": "2026-10-14T22:34:19.654581+00:00",
+        "license": "owner-own-work (numerical draft; attributed Heilman kernels)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "sharpened-aligned-arc",
+      "to_key": "aligned-arc",
+      "kind": "depends_on",
+      "rationale": "Source proof uses: \"Lemma A.2 bounds the constant and the decreasing nonnegative remainder.\""
+    },
+    {
+      "from_key": "positive-simplex",
+      "to_key": "sharpened-aligned-arc",
+      "kind": "depends_on",
+      "rationale": "Source proof uses: \"Corollary A.3 supplies the sharpened aligned-arc bound.\""
+    },
+    {
+      "from_key": "numerical-reach",
+      "to_key": "sharpened-aligned-arc",
+      "kind": "cites",
+      "rationale": "The instrument states: \"The kernels are the ones obtained from Corollary A.3.\""
+    }
+  ]
+}

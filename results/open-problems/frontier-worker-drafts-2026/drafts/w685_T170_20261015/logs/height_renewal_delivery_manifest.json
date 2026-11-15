@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-15T02:40:17.236435+00:00",
+  "producer_runs": [
+    {
+      "script": "build_height_renewal.py",
+      "producer_exit": 0,
+      "required_marker": "DONE states"
+    },
+    {
+      "script": "certify_height_tail.py",
+      "producer_exit": 0,
+      "required_marker": "PASS scalar tail"
+    },
+    {
+      "script": "certify_scalar_bridge_mass.py",
+      "producer_exit": 0,
+      "required_marker": "PASS exact scalar"
+    },
+    {
+      "script": "certify_renewal_norm.py",
+      "producer_exit": 0,
+      "required_marker": "PASS exact renewal norm"
+    },
+    {
+      "script": "validate_height_renewal_words.py",
+      "producer_exit": 0,
+      "required_marker": "PASS full-coordinate"
+    },
+    {
+      "script": "validate_height_cut_boundaries.py",
+      "producer_exit": 0,
+      "required_marker": "PASS height-cut"
+    },
+    {
+      "script": "certify_height_renewal_interval.py",
+      "producer_exit": 0,
+      "required_marker": "PASS outward"
+    },
+    {
+      "script": "compute_renewal_mu_floor.py",
+      "producer_exit": 0,
+      "required_marker": "PASS exact diagonal"
+    }
+  ],
+  "seconds": 369.86322699999437,
+  "hashes": {
+    "proofs/unique_height_renewal.md": "28a760d8cfee5d9cc4ad17f2d126b56fd36813781f2a0010ce8a7c017ce76f8c",
+    "proofs/scalar_bridge_mass.md": "364cf1a7ca654e4f4d3689fbb49f90591f812dbd014614c5d62d12d27d54f112",
+    "proofs/renewal_boundary_norm.md": "6fdfc955692a060e63a7dd08dd63ed559bcbfbb5bb435b8ad10b11647aa13923",
+    "scripts/height_renewal_graph.json": "f0855497a62d0cad29bcdf960d4158a8d7533a5f8d26590d7faaa94d9c37fbab",
+    "scripts/height_profiles.py": "540ca7b701e51c3ff1a742500f5098bc833e55ac6b2e84b9b80452af2f79eb3d",
+    "scripts/measure_chord5.py": "c80abc3d8a512dd80e76d9751061313c6df95bd1ed797b425cbda25d72d0cc14",
+    "scripts/certify_bounds.py": "fde99fd1e4fd66c8a70feb7698422e9e5702a98ac1f18ae4ce0d6c6e3172d5f2",
+    "scripts/hybrid2_certificate_parameters.json": "58f46eaf7c0315dfc48e6da30459396c518bd2e7c9a528a28636207ac3baca6a",
+    "logs/height_renewal_measure_K21.json": "8c4932286e52b6e9a441ab0b95e3613440d0dc86b2242039debf983f63e62967",
+    "logs/height_bridge_tail_certificate.json": "f4a98d1e2a31eefcb66f6d3d1ca721733141ff4076387ace1c6ab91ef46fa117",
+    "logs/scalar_bridge_mass_certificate.json": "473ffb70792e868a04b1bc6f5cb80bb9a5ec231b20bad35cf46ba1fa9be9e1fd",
+    "logs/height_renewal_norm_certificate.json": "cf8439134eac416b5396a75dd0720052e5898e35e19a02e4c9280a452bd9d321",
+    "logs/height_renewal_word_validation.json": "1e47789804a597ae9aeaa973bef0f889cc883a13b5f28acb0fbf0169d3b3cec1",
+    "logs/height_cut_boundary_validation.json": "d61ce90140515856803af04903c5e7d2e52882d620a03d8f6ea9a22a32ca7e7a",
+    "logs/height_renewal_interval_certificate.json": "b18b33d08bde6e881c6a1e0a4f963a6057f2e5197b6841dff4ead5fe424597a3",
+    "logs/height_renewal_mu_floor.json": "e79de9b6627de90fa1a69cd65d39cc1c57769b12c47aa2a0e2f4b208112b07a1",
+    "scripts/build_height_renewal.py": "6c513737197e85f96dd212833ef4db0abe71419807edd7a7a17d0a447bf62f2f",
+    "scripts/certify_height_tail.py": "87dbd66d9a46994e74d3e72cf0909eef71c495fdc92725096ed48f3cfdb9d50a",
+    "scripts/certify_scalar_bridge_mass.py": "77db734c38e2b6847134737eec8df161d010b51a595a1aaec99bbd224c9bcb00",
+    "scripts/certify_renewal_norm.py": "55339165031822092209573f9b0e50b053d19c5a9edd185aca663d0e691bdd81",
+    "scripts/validate_height_renewal_words.py": "f25c0eec7067811b52bedb48aa67f81f646d388dff99cb5468bbbfad9cf1a5e4",
+    "scripts/validate_height_cut_boundaries.py": "34fa2560c32834c678a7b2216135aba5a06b09788e1458633e73c545632dae5a",
+    "scripts/certify_height_renewal_interval.py": "7be657579e30bc3d5a8e1824c9440a533aa9e6988583d84eee09b32abfd541e6",
+    "scripts/compute_renewal_mu_floor.py": "5db3c219f70a3f1a0c571ceaa3d7468784409545195a7883559141a0968a9eba",
+    "scripts/run_height_renewal_certificate.py": "3bf76fcce13ac0bf0000da2e5d2465ca0c11d6a105d86fba693a86fce9f1a4f3"
+  },
+  "scope": "from-scratch computational checks; full FPP proof and novelty await independent review"
+}

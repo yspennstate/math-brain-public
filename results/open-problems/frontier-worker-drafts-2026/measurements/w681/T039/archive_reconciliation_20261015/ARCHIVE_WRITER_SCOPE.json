@@ -1,0 +1,211 @@
+{
+  "at": "2026-10-15T04:27:38.785318+00:00",
+  "inspected_scripts": [
+    {
+      "script": "scripts\\publish_target2_progress.py",
+      "sha256": "2bcb36f6a74075f9942c9539d479495ea72a48ac0e05554be05e604a8bbd8e4c",
+      "destination_evidence": [
+        {
+          "line": 18,
+          "text": "CHECKOUT = Path(prepared[\"checkout\"])"
+        },
+        {
+          "line": 20,
+          "text": "RESOURCE = \"file:~/brain-repo/\" + PREFIX"
+        },
+        {
+          "line": 21,
+          "text": "MESH = [\"python\", \"-X\", \"utf8\", \"~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py\"]"
+        },
+        {
+          "line": 31,
+          "text": "        result = subprocess.run(args, cwd=CHECKOUT, env=env, capture_output=True,"
+        },
+        {
+          "line": 45,
+          "text": "        manifest = json.loads((CHECKOUT / prefix / 'SNAPSHOT_MANIFEST.json').read_text(encoding='utf-8'))"
+        },
+        {
+          "line": 52,
+          "text": "            data = (CHECKOUT / name).read_bytes()"
+        }
+      ]
+    },
+    {
+      "script": "scripts\\publish_snapshot.py",
+      "sha256": "73b9ae81542c6b333237ddf86b69da117873d32eb25a1380b40055d8542845b3",
+      "destination_evidence": [
+        {
+          "line": 11,
+          "text": "CHECKOUT = Path(prepared[\"checkout\"])"
+        },
+        {
+          "line": 13,
+          "text": "RESOURCE = \"file:~/brain-repo/\" + PREFIX"
+        },
+        {
+          "line": 14,
+          "text": "MESH = [\"python\", \"-X\", \"utf8\", \"~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py\"]"
+        },
+        {
+          "line": 24,
+          "text": "        result = subprocess.run(args, cwd=CHECKOUT, env=env, capture_output=True,"
+        }
+      ]
+    },
+    {
+      "script": "scripts\\prepare_target2_archive.py",
+      "sha256": "9c23368c248e370dbae349c29defcbfb9750f703994ee1a72ec739f8390f93fc",
+      "destination_evidence": [
+        {
+          "line": 11,
+          "text": "CHECKOUT=ROOT/'publication_checkout'"
+        },
+        {
+          "line": 21,
+          "text": "            p=subprocess.run(argv,cwd=CHECKOUT,env=ENV,capture_output=True,text=True,encoding='utf-8',timeout=min(120,remaining))"
+        },
+        {
+          "line": 30,
+          "text": "        run(['python','-X','utf8','~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py','assert','--agent','w681','--resource','file:~/brain-repo/06_math_research/frontier/measurements"
+        },
+        {
+          "line": 66,
+          "text": "            destination=(CHECKOUT/PREFIX/name).resolve();assert destination.is_relative_to((CHECKOUT/PREFIX).resolve())"
+        },
+        {
+          "line": 67,
+          "text": "            destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(data)"
+        },
+        {
+          "line": 68,
+          "text": "            assert destination.read_bytes()==data;paths.append(PREFIX+'/'+name)"
+        },
+        {
+          "line": 80,
+          "text": "        prepared={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'repository':'https://github.com/yspennstate/brain-repo.git','checkout':str(CHECKOUT),'base':base,'head':head,'files':len(payload),'changed_files':len(changed),'"
+        }
+      ]
+    },
+    {
+      "script": "scripts\\complete_ancestry_and_publish.py",
+      "sha256": "d3a3f2b16685b399c1119b48a4ecb1de60497cedfd256a293b655acc4c038462",
+      "destination_evidence": [
+        {
+          "line": 13,
+          "text": "CHECKOUT = Path(prepared[\"checkout\"])"
+        },
+        {
+          "line": 14,
+          "text": "SOURCE = Path(\"~/brain-repo\")"
+        },
+        {
+          "line": 19,
+          "text": "    def run(args, cwd=CHECKOUT, limit=120):"
+        },
+        {
+          "line": 42,
+          "text": "    alternate_file = CHECKOUT / \".git/objects/info/alternates\""
+        }
+      ]
+    },
+    {
+      "script": "scripts\\repair_and_publish.py",
+      "sha256": "479ddc23365ebb244d566c7651acaa747f8cbf8a42974fed7ff15931c2ed9bbd",
+      "destination_evidence": [
+        {
+          "line": 14,
+          "text": "CHECKOUT = Path(prepared[\"checkout\"])"
+        },
+        {
+          "line": 16,
+          "text": "RESOURCE = \"file:~/brain-repo/\" + PREFIX"
+        },
+        {
+          "line": 17,
+          "text": "MESH = [\"python\", \"-X\", \"utf8\", \"~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py\"]"
+        },
+        {
+          "line": 21,
+          "text": "    def run(args, cwd=CHECKOUT):"
+        },
+        {
+          "line": 45,
+          "text": "    destination = CHECKOUT / PREFIX"
+        },
+        {
+          "line": 46,
+          "text": "    original = json.loads((destination / \"SNAPSHOT_MANIFEST.json\").read_text(encoding=\"utf-8\"))"
+        },
+        {
+          "line": 50,
+          "text": "        target = destination / entry[\"file\"]"
+        },
+        {
+          "line": 53,
+          "text": "        target.write_bytes(data)"
+        },
+        {
+          "line": 55,
+          "text": "    (destination / \".gitattributes\").write_bytes(b\"* -text\\n\")"
+        },
+        {
+          "line": 58,
+          "text": "    paths.write_bytes(b\"\".join((PREFIX + \"/\" + name).encode(\"utf-8\") + b\"\\0\" for name in names))"
+        },
+        {
+          "line": 71,
+          "text": "    blobs = subprocess.run([\"git\", \"cat-file\", \"--batch\"], cwd=CHECKOUT, env=env,"
+        }
+      ]
+    },
+    {
+      "script": "scripts\\publish_target2_snapshot.py",
+      "sha256": "7b38e14699c6ede9b0b0ab1d6969ca390e8775075a876debfd6b07a3e72e6bbb",
+      "destination_evidence": [
+        {
+          "line": 18,
+          "text": "CHECKOUT = Path(prepared[\"checkout\"])"
+        },
+        {
+          "line": 20,
+          "text": "RESOURCE = \"file:~/brain-repo/\" + PREFIX"
+        },
+        {
+          "line": 21,
+          "text": "MESH = [\"python\", \"-X\", \"utf8\", \"~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py\"]"
+        },
+        {
+          "line": 31,
+          "text": "        result = subprocess.run(args, cwd=CHECKOUT, env=env, capture_output=True,"
+        },
+        {
+          "line": 45,
+          "text": "        manifest = json.loads((CHECKOUT / prefix / 'SNAPSHOT_MANIFEST.json').read_text(encoding='utf-8'))"
+        },
+        {
+          "line": 52,
+          "text": "            data = (CHECKOUT / name).read_bytes()"
+        }
+      ]
+    },
+    {
+      "script": "scripts\\resolve_target2_archive.py",
+      "sha256": "3daf9194efde920b2f845b2e11a1ba18bf01c5c23c43f029a0dcfb090614e056",
+      "destination_evidence": [
+        {
+          "line": 4,
+          "text": "R=Path(__file__).resolve().parents[1]; C=R/'publication_checkout'; P='06_math_research/frontier/measurements/w681/T039/target2/'"
+        },
+        {
+          "line": 25,
+          "text": "  (C/name).write_bytes(data)"
+        },
+        {
+          "line": 48,
+          "text": " for name in changed_names:(C/P/name).write_bytes((R/name).read_bytes())"
+        }
+      ]
+    }
+  ]
+}

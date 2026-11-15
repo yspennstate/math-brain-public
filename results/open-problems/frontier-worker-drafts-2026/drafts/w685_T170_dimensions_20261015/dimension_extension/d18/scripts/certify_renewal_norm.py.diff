@@ -1,0 +1,11 @@
+--- T170/scripts/certify_renewal_norm.py
++++ T170/dimension_extension/d18/scripts/certify_renewal_norm.py
+@@ -15,7 +15,7 @@
+     graph=json.loads(graph_path.read_text(encoding='utf-8'))
+     point=json.loads((ROOT/'logs/height_bridge_tail_certificate.json').read_text(encoding='utf-8'))
+     a=Q(int(point['s']['n']),int(point['s']['d']))+1
+-    d=21
++    d=int(point['d'])
+     states=graph['states']
+     w=[(a/(a+state[6]))**(state[7]+1) for state in states]
+ 

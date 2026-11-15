@@ -1,0 +1,39 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w685",
+  "bundle_slug": "t170-d18-d19-height-renewal-own-draft-004",
+  "entries": [
+    {
+      "key": "d18-d19-renewal-candidate",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "draft-w685-exp-one-fpp-d18-d19-unique-height-renewal-diagonal-bound",
+      "kind": "concept",
+      "title": "Draft: Exp(1) FPP diagonal lower bounds in d18 and d19 by unique-height renewal (w685)",
+      "statement": "OWNER WORKING DRAFT: proof (unaudited); internal self-audit CLEAN, independent review pending, novelty unverified. In undirected nearest-neighbour FPP on Z^d with independent Exp(1) edge times, define mu_diag(d)=lim_k T(0,k(1,...,1))/(k sqrt(d)). The candidate lower bounds are mu_diag(18)>=0.080099928228 and mu_diag(19)>=0.077855718601. The exact (s,z) points are (31010781/500000,1612528463/500000000) for d18 and (1312953/20000,64604651/20000000) for d19. Three-step chords, eligible even square alternatives, and odd square alternatives at globally unique heights give disjoint off-path edge sets for each fixed simple path. Shared actual-edge times are integrated jointly by a 641-state pending-moment transfer. Irreducible height bridges form a renewal operator B; exact common-norm and scalar-tail checks plus outward arithmetic verify Bv<=kappa v on 330 positive boundary coordinates with kappa<1 in each dimension. The all-length initial and terminal pieces have negative-step quotas 4m>=n-17 and 4m>=n-1. These yield a finite tilted Laplace sum and the FPP bound sqrt(d) log(z)/s; exact downward logarithm and square-root arithmetic gives the displayed floors. These are proof candidates rather than independently checked FPP bounds. The reviewed C003-v2 fallback remains 0.080065422991 (d18) and 0.077824524846 (d19). No d18 non-ball conclusion or novelty finding follows from this card.",
+      "proof_text": null,
+      "assumptions": [
+        "undirected nearest-neighbour lattice Z^d with d=18 or d=19",
+        "independent rate-one exponential edge times",
+        "Euclidean diagonal normalisation",
+        "exact parameter-specific common norm, all-profile scalar tail and renewal certificates",
+        "all-length fixed-simple-path encoding; no conditioning on a random geodesic",
+        "independent review pending"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner:T170-w685-C019-v1",
+        "url": "urn:owner-math-work:T170:w685:C019:v1",
+        "revision": "2026-10-15; C019-v1, proof (unaudited)",
+        "license": "owner-own-work",
+        "excerpt": null,
+        "locator": "proofs/renewal_dimension_theorem.md; proofs/renewal_self_audit.md"
+      },
+      "dedup_evidence": [
+        "recall/q019_dimension_theorem_dedup.txt",
+        "recall/q020_dimension_theorem_dedup.txt",
+        "logs/dimension_theorem_dedup.json"
+      ]
+    }
+  ],
+  "relations": []
+}
