@@ -1,0 +1,29 @@
+# D0043 work log
+
+Task received: “Open problem D0043”, 2026-11-13, approximately 10:40 Asia/Tbilisi (first recorded shell time 10:41:11).
+
+2026-11-13 10:43 +04 — Working: literature first, then scaling, rigorous partial results and bounded numerical evidence. No subagents, publication or pushes. All task writes confined to this directory. Shared mesh hello/digest were attempted and returned “attempt to write a readonly database”; shared checklist and memory writes are outside the allowed scope and will not be attempted. Local log serves as checklist. Startup memory and compute state read; host busy, owner away. Numerical work will use nice 10 and one numerical thread.
+
+Source acquisition will pipe PDF bytes held in memory through pdftotext; only plain text is saved, with form-feed page separators. No PDFs or page images are written.
+
+2026-11-13 10:46 +04 — Saved Virág, KRV, CIK and RRV source texts. Shell inherits nice=10; an initial attempt to add another 10 was denied, so source acquisition now checks the inherited priority. One numerical thread planned. Verified exact conjecture on Virág PDF p.14, KRV Conjecture 45 p.57, KRV Theorem 9 pp.14–15, RRV Theorem 5.1 p.21 (downloaded preprint numbering).
+
+2026-11-13 10:49 +04 — Potential decisive obstruction found: proposed singular Gaussian operator has upper tail at least exp(−C s^{7/6}) for k=1, while CIK eqs.(1.23)–(1.24), p.5, give critical unitary kernel tail at most exp(−c s^{7/2}). Auditing with Claeys–Vanlessen kernel theorem; no reliance on a claimed general-k Fredholm convergence result (CIK explicitly does not prove that result).
+
+2026-11-13 10:54 +04 — Verified Claeys–Vanlessen Theorem 1.7, pp.6–7, including uniform convergence on compact sets and their explicit quartic Example 1.2. Wrote PROOF.md: construction of the operator, Gaussian Rayleigh-quotient lower tail, and a portmanteau/expected-count contradiction requiring only local kernel convergence. This bypasses the Fredholm-convergence gap explicitly mentioned by CIK. Independent bump at t=1 gives a weaker s^{3/2} obstruction and checks the argument without the singular endpoint.
+
+2026-11-13, before 10:56:53 +04 — Expanded search found Baslingker, arXiv:2304.09236v2, Theorem 4 p.7, Section 3 pp.10–12: this very refutation was already in the literature. Published in J. Math. Phys.66,053303 (2025), DOI10.1063/5.0254593, publisher page dated May12,2025. No novelty claim. Journal PDF returned403; exact theorem/page references are to the downloaded arXiv v2, not guessed journal pagination. Status will be COUNTEREXAMPLE, since the prescribed positive-theorem early-stop condition is not met.
+
+2026-11-13, before 10:56:53 +04 — Initial quartic HMC: n=256,1000,10000; β=1,2,4; two chains, 240 warm-up trajectories, 160 retained draws per chain with thinning2. Acceptance high but split R-hat1.06–2.60 and severe autocorrelation; these runs are not adequate equilibrium estimates. Artificial independent-chi profiles: n=10000,100000; Gaussian operator meshes .025,.0125 on length128; 96 independent samples per configuration. All three low eigenvalues saved.
+
+2026-11-13, after 10:56:53 +04 — Audited exact quartic target, log-coordinate Jacobian, trace identities, gradients (finite-difference max error6.1e−10), and eigenvalues against sparse shift-invert solver (error1.9e−14). Initial diagonal HMC under-mixing justifies a second run with a fixed banded Hessian mass; its independent Hessian check gave max error7.4e−10. Second run uses300 warm-up,400 retained draws per chain, thinning2. No numerical inference enters the proof.
+
+2026-11-13 11:05 +04 — Banded runs complete: n=256,1000,10000, all β=1,2,4, two chains each. Split R-hat0.9995–1.0323, basic ESS118–601 per800 retained draws, zero recorded divergences and zero Hessian shifts. Genuine sampled coefficients saved. Coupled Gaussian mesh check RMS ground-eigenvalue change .0044–.0165; observed length64/128 differences for first three eigenvalues below5e−12.
+
+2026-11-13 11:05 +04 — Independent finite-n β=2 determinantal check n=256: initial weight-then-square-root implementation underflowed near the edge and was rejected. Corrected to exponentiate half the exponent.4096/8192-node CDF difference .00613 on45 points; orthogonality below3.2e−15; HMC empirical CDF difference .0362. This is finite-n quadrature evidence, not a computation of the limiting higher-order TW law. BLAS emitted floating flags on subnormal-containing arrays despite finite outputs; final code explicitly verifies finiteness and orthogonality while suppressing those local flags.
+
+2026-11-13 11:09 +04 — Assembled self-contained REPORT.md with COUNTEREXAMPLE first line; full proofs, scaling and artificial convergence theorem, literature locators and numerical limitations. Inspected original CDF plots. Source files are text only, no PDFs retained. Final audit and reproducibility checks in progress.
+
+2026-11-13 11:13 +04 — DONE: REPORT.md records the existing Baslingker counterexample at k=1,β=2, exact theorem/page locators, full self-contained verification, operator form construction, conditional scaling analysis and artificial independent-chi convergence theorem. Quartic simulations reach n=10000; artificial profiles reach n=100000, all β=1,2,4. Repeated model and finite-unitary checks pass. Final artifact audit passes:19 source hashes, all CSV counts,18 sampled-matrix files, no PDFs and no report control characters. Kept the failed-mixing first HMC results with explicit exclusion. No publication, pushes, subagents or writes outside the task directory. Shared checklist/memory/mesh updates remain unavailable under the workspace-only restriction; this local log records completion.
+
+Task completed: “Open problem D0043” — 13 November2026, approximately10:40 Asia/Tbilisi (first recorded session time).

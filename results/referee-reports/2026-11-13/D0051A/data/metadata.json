@@ -1,0 +1,43 @@
+{
+  "seed": 51053,
+  "sizes": [
+    128,
+    256,
+    512
+  ],
+  "replicates": 12,
+  "xis": [
+    0.0,
+    0.2,
+    0.4082482904638631,
+    0.8
+  ],
+  "nice": 10,
+  "thread_limit": 1,
+  "numpy": "2.2.3",
+  "scipy": "1.15.2",
+  "elapsed_seconds": 11.272193908691406,
+  "peak_rss_bytes": 498499584,
+  "path_count": 144,
+  "checks": {
+    "zero_field_path": true,
+    "independent_heap": true,
+    "gff_covariance_relative_frobenius_error": 0.043877273301219384,
+    "circle_average_constant": true
+  },
+  "timestamp_utc": "2026-11-13T04:21:41.756525+00:00",
+  "covariance": "2*pi*(4I-adjacency)^-1, zero exterior Dirichlet",
+  "path_domain": "central [N/8,7N/8)^2 of the sampled field",
+  "edge_weights": "(exp(xi*h[u])+exp(xi*h[v]))/2; omitted global mesh factor does not change paths",
+  "circle_average": "uniform angular quadrature, bilinear interpolation",
+  "raw_estimator": "h_r / log((N+1)/radius_pixels)",
+  "increment_estimator": "(h_r-h_R)/log(R/r), R=N/8-1 pixels",
+  "sampling": "vertex uniform and incident-half-edge LFPP length; each replicate separately normalized",
+  "limitations": [
+    "finite mesh",
+    "lattice anisotropy",
+    "constrained path domain",
+    "few decades of scale",
+    "histogram modes are not Hausdorff-spectrum maximisers"
+  ]
+}

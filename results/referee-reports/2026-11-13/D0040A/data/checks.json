@@ -1,0 +1,1489 @@
+{
+  "metadata": {
+    "seed": 400020261113,
+    "samples_per_case": 30000,
+    "nmax": 4,
+    "betas": [
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "a_values": [
+      -0.25,
+      1.5
+    ],
+    "python": "3.13.2",
+    "numpy": "2.2.3",
+    "scipy": "1.15.2",
+    "niceness": 10,
+    "threads": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "elapsed_seconds": 1.6286088750057388,
+    "peak_rss_bytes": 203128832,
+    "max_nesting_error": 7.105427357601002e-15,
+    "max_interlace_violation": 3.981032418956999e-15,
+    "positive_tests": 108,
+    "holm_rejections_005": 0,
+    "min_raw_p": 0.007308687087963155,
+    "max_abs_logdet_z": 1.8485035962350855,
+    "code_sha256": "aaa9f93e662db6e2eade6014e53c05415a1ee9e9d7db9a3c76ec198d775b43cf"
+  },
+  "positive_checks": [
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 1,
+      "statistic": 0.003401497646774887,
+      "p": 0.8770942105202365,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.004768418028935684,
+      "p": 0.5010996727216561,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.005260981585965163,
+      "p": 0.37612157588408557,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.007666666666666655,
+      "p": 0.3395039275405126,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.006500000000000006,
+      "p": 0.5483118925821461,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.006800000000000028,
+      "p": 0.48965482311616226,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.005924843972357263,
+      "p": 0.24200123370199922,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.003966666666666674,
+      "p": 0.971564627900459,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.007666666666666655,
+      "p": 0.3395039275405126,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.007133333333333325,
+      "p": 0.4281442611748517,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.00993333333333335,
+      "p": 0.10292385466148302,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.0038538348037709946,
+      "p": 0.7628861076193095,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 15.838333333333335,
+      "p": 0.893822745575992,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 1,
+      "statistic": 0.0032900956711704454,
+      "p": 0.9004057681236697,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.0052122400920428524,
+      "p": 0.3875774392271396,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.0038450590738724616,
+      "p": 0.7653211433837483,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.008033333333333337,
+      "p": 0.2861613517270062,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.009799999999999975,
+      "p": 0.11138330518129269,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.008599999999999997,
+      "p": 0.21596175376282034,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.004559689220292373,
+      "p": 0.5593100626074522,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.005666666666666653,
+      "p": 0.7189163999200692,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.00546666666666662,
+      "p": 0.7589985671044499,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.009399999999999992,
+      "p": 0.1402571849788511,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.005800000000000027,
+      "p": 0.6916677693626831,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.0026819269720437244,
+      "p": 0.981870745464878,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 32.87833333333334,
+      "p": 0.1066667582934388,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 1,
+      "statistic": 0.007090875711090516,
+      "p": 0.09743807508104263,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.005987479417639274,
+      "p": 0.2314484199477217,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.0033265345709005967,
+      "p": 0.8930386097710922,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.008400000000000019,
+      "p": 0.239076305305993,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.004733333333333339,
+      "p": 0.8883167062920003,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.0044000000000000705,
+      "p": 0.9322785036107363,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.005591654889668507,
+      "p": 0.3041794704698172,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.010366666666666663,
+      "p": 0.079033114286716,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.005500000000000005,
+      "p": 0.7524049946947224,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.009533333333333394,
+      "p": 0.13002462863714448,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.007733333333333314,
+      "p": 0.3293369554957244,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.006408733726539495,
+      "p": 0.1693056806233213,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 24.124999999999996,
+      "p": 0.45446827380499794,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 1,
+      "statistic": 0.0061238671713059745,
+      "p": 0.20967446035285575,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.004570374371238861,
+      "p": 0.5562736603599971,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.005381681994327314,
+      "p": 0.3486845163064264,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.008266666666666644,
+      "p": 0.2554835659038749,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.007333333333333358,
+      "p": 0.3934154697015634,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.00830000000000003,
+      "p": 0.2513059078542821,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.0043364887239086825,
+      "p": 0.6236972508575431,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.004966666666666675,
+      "p": 0.8512612216223295,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.006800000000000028,
+      "p": 0.48965482311616226,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.009866666666666662,
+      "p": 0.10708445401811895,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.011133333333333328,
+      "p": 0.048177175401595496,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.00464913785685428,
+      "p": 0.5340652578714679,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 18.48166666666667,
+      "p": 0.7790376381159937,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 1,
+      "statistic": 0.004808990671234303,
+      "p": 0.4900935518775592,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.0034523366238342623,
+      "p": 0.8657083162083986,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.003610669920834253,
+      "p": 0.827598437243655,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.006300000000000028,
+      "p": 0.588718025638533,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.006633333333333324,
+      "p": 0.5219083427375018,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.0034000000000000002,
+      "p": 0.994892658716205,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.005369543637642082,
+      "p": 0.3513830844011908,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.005333333333333357,
+      "p": 0.7849289890854864,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.007233333333333314,
+      "p": 0.4105640354033594,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.0069666666666666766,
+      "p": 0.45836332043959016,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.004200000000000037,
+      "p": 0.9529719703947859,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.0036645556497327814,
+      "p": 0.8138222482783966,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 14.785,
+      "p": 0.9268921760992798,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 1,
+      "statistic": 0.003898107470639789,
+      "p": 0.7505134484901997,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.005013057783748054,
+      "p": 0.436559339110957,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.0055568426162087015,
+      "p": 0.3112726126735158,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.008566666666666722,
+      "p": 0.21969134315356942,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.006699999999999928,
+      "p": 0.508899688235444,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.0086666666666666,
+      "p": 0.20864777787686628,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.003824187500982845,
+      "p": 0.7710875237780275,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.008433333333333404,
+      "p": 0.23510017788792337,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.0037333333333332552,
+      "p": 0.9845126482949577,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.01103333333333334,
+      "p": 0.05149329485075227,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.005333333333333329,
+      "p": 0.7849289890854916,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.006123761837501962,
+      "p": 0.20969064936828619,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 28.340000000000003,
+      "p": 0.24596075809331192,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 1,
+      "statistic": 0.003674176260319323,
+      "p": 0.8113246905917628,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.004831384220168933,
+      "p": 0.48406739423018696,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.00625178667290166,
+      "p": 0.19071341530191332,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.0040999999999999925,
+      "p": 0.9616640472856633,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.007900000000000018,
+      "p": 0.30482975587208005,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 3,
+      "statistic": 0.0059999999999999915,
+      "p": 0.6504243985393888,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.005847951452370964,
+      "p": 0.2554413517840399,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.006533333333333391,
+      "p": 0.5416659364706897,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.0074666666666666215,
+      "p": 0.371242153087015,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.010233333333333344,
+      "p": 0.08582764651081964,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 4,
+      "statistic": 0.004833333333333335,
+      "p": 0.873010380828003,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 0.004353162157573309,
+      "p": 0.6188407083185687,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 2,
+      "statistic": 22.034999999999997,
+      "p": 0.5771776565537927,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 1,
+      "statistic": 0.004923088201463477,
+      "p": 0.45976927574249393,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.006317739393051247,
+      "p": 0.1814732754128202,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.005230329445733317,
+      "p": 0.3833008917913353,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.007933333333333348,
+      "p": 0.30008460527436776,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.01036666666666669,
+      "p": 0.07903311428671445,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 3,
+      "statistic": 0.00413333333333335,
+      "p": 0.9588887530639767,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "trace_exact_gamma",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.004270611268414548,
+      "p": 0.6429210337949175,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_1_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.0069666666666666766,
+      "p": 0.45836332043959016,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_2_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.010299999999999976,
+      "p": 0.08237136887682484,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_3_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.009933333333333322,
+      "p": 0.10292385466148501,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "eigenvalue_4_vs_DE",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 4,
+      "statistic": 0.0038333333333333275,
+      "p": 0.9796131116122989,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_gap_ratio_exact_beta",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 0.00626171903887518,
+      "p": 0.18929887238735166,
+      "holm_p": 1.0
+    },
+    {
+      "model": "laguerre",
+      "kind": "n2_joint_PIT_5x5",
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 2,
+      "statistic": 25.278333333333336,
+      "p": 0.39076420002678713,
+      "holm_p": 1.0
+    },
+    {
+      "model": "direct_KN_Jacobi",
+      "kind": "n1_exact_beta",
+      "beta": 0.5,
+      "a": null,
+      "n": 1,
+      "statistic": 0.006743093549545165,
+      "p": 0.1300560952474339,
+      "holm_p": 1.0
+    },
+    {
+      "model": "direct_KN_Jacobi",
+      "kind": "n1_exact_beta",
+      "beta": 1.0,
+      "a": null,
+      "n": 1,
+      "statistic": 0.009665505778612582,
+      "p": 0.007308687087963155,
+      "holm_p": 0.7893382055000208
+    },
+    {
+      "model": "direct_KN_Jacobi",
+      "kind": "n1_exact_beta",
+      "beta": 2.0,
+      "a": null,
+      "n": 1,
+      "statistic": 0.005890313770457012,
+      "p": 0.24797024321567163,
+      "holm_p": 1.0
+    },
+    {
+      "model": "direct_KN_Jacobi",
+      "kind": "n1_exact_beta",
+      "beta": 4.0,
+      "a": null,
+      "n": 1,
+      "statistic": 0.0046971669693370854,
+      "p": 0.5206877686323739,
+      "holm_p": 1.0
+    }
+  ],
+  "moments": [
+    {
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 1,
+      "logdet_mean": -4.24163499955383,
+      "target": -4.252037622253343,
+      "z": 0.3304471218183024,
+      "trace_mean": 0.7549555025605611,
+      "trace_target": 0.75
+    },
+    {
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 2,
+      "logdet_mean": -5.138429529616901,
+      "target": -5.175071090853036,
+      "z": 1.0585663680483421,
+      "trace_mean": 3.519251314609164,
+      "trace_target": 3.5
+    },
+    {
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 3,
+      "logdet_mean": -5.009112301669578,
+      "target": -5.044737205770081,
+      "z": 0.9898212389395213,
+      "trace_mean": 8.26410017411582,
+      "trace_target": 8.25
+    },
+    {
+      "beta": 0.5,
+      "a": -0.25,
+      "n": 4,
+      "logdet_mean": -4.317420364406932,
+      "target": -4.343443519145887,
+      "z": 0.7067781067013857,
+      "trace_mean": 14.946401465402634,
+      "trace_target": 15.0
+    },
+    {
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 1,
+      "logdet_mean": -0.06786727897294134,
+      "target": -0.06641440345667604,
+      "z": -0.1364501513110086,
+      "trace_mean": 2.5044821506578283,
+      "trace_target": 2.5
+    },
+    {
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 2,
+      "logdet_mean": 0.5081037098206804,
+      "target": 0.5158628861155194,
+      "z": -0.5779644271043525,
+      "trace_mean": 6.989576003257824,
+      "trace_target": 7.0
+    },
+    {
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 3,
+      "logdet_mean": 1.5057198556431861,
+      "target": 1.5136645839395548,
+      "z": -0.5278896001589286,
+      "trace_mean": 13.499413334253303,
+      "trace_target": 13.5
+    },
+    {
+      "beta": 0.5,
+      "a": 1.5,
+      "n": 4,
+      "logdet_mean": 2.7967191484423077,
+      "target": 2.8126265625809728,
+      "z": -0.9836570281530393,
+      "trace_mean": 21.975746541500293,
+      "trace_target": 22.0
+    },
+    {
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 1,
+      "logdet_mean": -2.032720413117442,
+      "target": -2.060851868585194,
+      "z": 1.705534270987766,
+      "trace_mean": 0.7609520250807449,
+      "trace_target": 0.75
+    },
+    {
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 2,
+      "logdet_mean": -2.150443687862343,
+      "target": -2.171721759572944,
+      "z": 1.1558072331148048,
+      "trace_mean": 3.5163206245506533,
+      "trace_target": 3.5
+    },
+    {
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 3,
+      "logdet_mean": -1.542783977862886,
+      "target": -1.5659069614914718,
+      "z": 1.1957577326538207,
+      "trace_mean": 8.263380558767855,
+      "trace_target": 8.25
+    },
+    {
+      "beta": 1.0,
+      "a": -0.25,
+      "n": 4,
+      "logdet_mean": -0.5012029225534338,
+      "target": -0.5339197096220789,
+      "z": 1.6414708032606453,
+      "trace_mean": 15.048930507564533,
+      "trace_target": 15.0
+    },
+    {
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 1,
+      "logdet_mean": 0.46132551875841,
+      "target": 0.4656936471836799,
+      "z": -0.6914316367037652,
+      "trace_mean": 2.492499762871206,
+      "trace_target": 2.5
+    },
+    {
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 2,
+      "logdet_mean": 1.3984845335771026,
+      "target": 1.4063132812904864,
+      "z": -0.9682029577879955,
+      "trace_mean": 6.9744767112932715,
+      "trace_target": 7.0
+    },
+    {
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 3,
+      "logdet_mean": 2.664251760239498,
+      "target": 2.672006928474166,
+      "z": -0.8463664538845168,
+      "trace_mean": 13.461694382232455,
+      "trace_target": 13.5
+    },
+    {
+      "beta": 1.0,
+      "a": 1.5,
+      "n": 4,
+      "logdet_mean": 4.17894805503269,
+      "target": 4.184055134009544,
+      "z": -0.5144659550982632,
+      "trace_mean": 22.002761103136287,
+      "trace_target": 22.0
+    },
+    {
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 1,
+      "logdet_mean": -1.0884716476401937,
+      "target": -1.0858608797864722,
+      "z": -0.2836294952245681,
+      "trace_mean": 0.750021435449741,
+      "trace_target": 0.75
+    },
+    {
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 2,
+      "logdet_mean": -0.8380278563798336,
+      "target": -0.8383884262396111,
+      "z": 0.03434787215238774,
+      "trace_mean": 3.503976444186171,
+      "trace_target": 3.5
+    },
+    {
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 3,
+      "logdet_mean": -0.01800865076720824,
+      "target": -0.019487401264178583,
+      "z": 0.13237730977561335,
+      "trace_mean": 8.251592858250957,
+      "trace_target": 8.25
+    },
+    {
+      "beta": 2.0,
+      "a": -0.25,
+      "n": 4,
+      "logdet_mean": 1.1682059082846923,
+      "target": 1.1630499873476177,
+      "z": 0.44381169932692915,
+      "trace_mean": 15.025778491896007,
+      "trace_target": 15.0
+    },
+    {
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 1,
+      "logdet_mean": 0.701411164588102,
+      "target": 0.7031566406452432,
+      "z": -0.4317357368364423,
+      "trace_mean": 2.4901883613387383,
+      "trace_target": 2.5
+    },
+    {
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 2,
+      "logdet_mean": 1.8021594050738232,
+      "target": 1.8063132812904863,
+      "z": -0.7941780086822408,
+      "trace_mean": 6.988497254492356,
+      "trace_target": 7.0
+    },
+    {
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 3,
+      "logdet_mean": 3.18414753886665,
+      "target": 3.195184207650015,
+      "z": -1.8485035962350855,
+      "trace_mean": 13.475588365552714,
+      "trace_target": 13.5
+    },
+    {
+      "beta": 2.0,
+      "a": 1.5,
+      "n": 4,
+      "logdet_mean": 4.799368041181629,
+      "target": 4.806277356231766,
+      "z": -1.0624339681159367,
+      "trace_mean": 21.99008781704073,
+      "trace_target": 22.0
+    },
+    {
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 1,
+      "logdet_mean": -0.6524924353169895,
+      "target": -0.6566572065813687,
+      "z": 0.7460912017314042,
+      "trace_mean": 0.7510694683682249,
+      "trace_target": 0.75
+    },
+    {
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 2,
+      "logdet_mean": -0.2429403359428374,
+      "target": -0.24664774649607102,
+      "z": 0.57089809041682,
+      "trace_mean": 3.5030006383433423,
+      "trace_target": 3.5
+    },
+    {
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 3,
+      "logdet_mean": 0.6714779208119643,
+      "target": 0.6712982215257348,
+      "z": 0.025719465799863863,
+      "trace_mean": 8.244422627391529,
+      "trace_target": 8.25
+    },
+    {
+      "beta": 4.0,
+      "a": -0.25,
+      "n": 4,
+      "logdet_mean": 1.9236437713066217,
+      "target": 1.9249085252118765,
+      "z": -0.17279960337783973,
+      "trace_mean": 14.989925080866017,
+      "trace_target": 15.0
+    },
+    {
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 1,
+      "logdet_mean": 0.8093154915197306,
+      "target": 0.812970487871855,
+      "z": -1.3456569056252976,
+      "trace_mean": 2.489583305678892,
+      "trace_target": 2.5
+    },
+    {
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 2,
+      "logdet_mean": 1.9884536738163163,
+      "target": 1.9926076424103767,
+      "z": -1.1751263756069175,
+      "trace_mean": 6.987979505913097,
+      "trace_target": 7.0
+    },
+    {
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 3,
+      "logdet_mean": 3.4326268285416464,
+      "target": 3.4401019398060417,
+      "z": -1.845134465983208,
+      "trace_mean": 13.48224286210301,
+      "trace_target": 13.5
+    },
+    {
+      "beta": 4.0,
+      "a": 1.5,
+      "n": 4,
+      "logdet_mean": 5.092982557033707,
+      "target": 5.098707348312818,
+      "z": -1.2935975035770002,
+      "trace_mean": 21.99468784510381,
+      "trace_target": 22.0
+    }
+  ],
+  "negative_controls": [
+    {
+      "model": "reversed_KN_Jacobi",
+      "beta": 0.5,
+      "p": 0.3,
+      "q": 1.1,
+      "observed_mean": 0.39779152519058214,
+      "candidate_mean": 0.39743589743589747,
+      "target_mean": 0.38235294117647056,
+      "mean_se": 0.0012760352302235028,
+      "statistic": 0.04372546974085631,
+      "pvalue": 2.8018876073643095e-50
+    },
+    {
+      "model": "reversed_KN_Jacobi",
+      "beta": 1.0,
+      "p": 0.3,
+      "q": 1.1,
+      "observed_mean": 0.40892913816932147,
+      "candidate_mean": 0.40909090909090906,
+      "target_mean": 0.38235294117647056,
+      "mean_se": 0.0012218634558031698,
+      "statistic": 0.07738871414866738,
+      "pvalue": 1.0272025149643539e-156
+    },
+    {
+      "model": "reversed_KN_Jacobi",
+      "beta": 2.0,
+      "p": 0.3,
+      "q": 1.1,
+      "observed_mean": 0.42599062037557583,
+      "candidate_mean": 0.42592592592592593,
+      "target_mean": 0.38235294117647056,
+      "mean_se": 0.0011260445834888125,
+      "statistic": 0.13244075337217107,
+      "pvalue": 0.0
+    },
+    {
+      "model": "reversed_KN_Jacobi",
+      "beta": 4.0,
+      "p": 0.3,
+      "q": 1.1,
+      "observed_mean": 0.44640588134798975,
+      "candidate_mean": 0.44594594594594594,
+      "target_mean": 0.38235294117647056,
+      "mean_se": 0.000988486791160893,
+      "statistic": 0.20467100830870288,
+      "pvalue": 0.0
+    }
+  ]
+}

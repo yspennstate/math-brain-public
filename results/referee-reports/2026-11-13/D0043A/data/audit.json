@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "source_texts_verified": 19,
+  "csv_rows": {
+    "artificial_eigenvalues.csv": 1152,
+    "quartic_eigenvalues.csv": 2880,
+    "quartic_banded_eigenvalues.csv": 7200,
+    "rayleigh_tail.csv": 117,
+    "finite_unitary_cdf.csv": 45
+  },
+  "sampled_matrices_verified": 18,
+  "no_pdfs": true,
+  "no_report_control_characters": true,
+  "tail_power_checks": [
+    {
+      "k": 0,
+      "measured_loglog_slope": 1.499995176092318,
+      "formula": 1.5
+    },
+    {
+      "k": 1,
+      "measured_loglog_slope": 1.1665929340489247,
+      "formula": 1.1666666666666667
+    },
+    {
+      "k": 2,
+      "measured_loglog_slope": 1.099873471668245,
+      "formula": 1.1
+    }
+  ],
+  "nice": 10,
+  "maxrss_bytes": 43253760,
+  "proof_audit": "Manual: equilibrium transform, Gaussian variance scaling, and portmanteau argument checked independently; matches Baslingker Theorem 4 and eq.(22)."
+}

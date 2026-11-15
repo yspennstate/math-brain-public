@@ -1,0 +1,56 @@
+PDE 1 600 0.004 12 seconds 0.15
+PDE 1 1200 0.002 12 seconds 0.36
+PDE 1 2400 0.001 12 seconds 1.11
+PDE 1 2400 0.001 16 seconds 1.42
+PDE 2 600 0.004 12 seconds 0.12
+PDE 2 1200 0.002 12 seconds 0.37
+PDE 2 2400 0.001 12 seconds 1.14
+PDE 2 2400 0.001 16 seconds 1.44
+PDE 4 600 0.004 12 seconds 0.13
+PDE 4 1200 0.002 12 seconds 0.37
+PDE 4 2400 0.001 12 seconds 1.14
+PDE 4 2400 0.001 16 seconds 1.43
+{
+  "painleve_left_boundary_refinement_max_q_difference": 2.686739719592879e-12,
+  "painleve_hamiltonian_max_residual": 1.2709833185908792e-12,
+  "nice": 10,
+  "threads": "one BLAS thread",
+  "1": {
+    "points": 120,
+    "control_points": 15,
+    "max_control_abs_error_n2400": 1.925078053155449e-05,
+    "max_n1200_n2400_difference": 2.9202676986750387e-05,
+    "max_T12_T16_difference": 7.107647803650252e-13,
+    "coarse_control_max_errors": [
+      0.00012105129919348645,
+      4.8453457518304877e-05,
+      1.925078053155449e-05
+    ]
+  },
+  "2": {
+    "points": 120,
+    "control_points": 120,
+    "max_control_abs_error_n2400": 4.020237578447605e-05,
+    "max_n1200_n2400_difference": 5.93839604992874e-05,
+    "max_T12_T16_difference": 9.847678228425139e-13,
+    "coarse_control_max_errors": [
+      0.0002458345587021682,
+      9.958633628376345e-05,
+      4.020237578447605e-05
+    ]
+  },
+  "4": {
+    "points": 120,
+    "control_points": 120,
+    "max_control_abs_error_n2400": 8.283789201574132e-05,
+    "max_n1200_n2400_difference": 0.00011952526696590304,
+    "max_T12_T16_difference": 1.3564704914870163e-12,
+    "coarse_control_max_errors": [
+      0.0005007386863644381,
+      0.00020236315898164436,
+      8.283789201574132e-05
+    ]
+  },
+  "seconds": 26.384653091430664,
+  "maxrss_bytes_macos": 306741248
+}
