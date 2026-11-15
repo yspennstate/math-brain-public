@@ -1,0 +1,4 @@
+#!/bin/bash
+# cores: 1
+# mem_mb: 700
+cd ~/fei_p8 && /usr/bin/time -l python3 census_mono.py 6 > census_n6.json 2> census_n6.err; echo rc=$? >> census_n6.err
