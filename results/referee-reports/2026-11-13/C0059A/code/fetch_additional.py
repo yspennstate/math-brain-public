@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Download papers in memory; at most three workers, plain text output only."""
+import io,json,hashlib,urllib.request,subprocess
+from pathlib import Path
+from datetime import datetime,timezone
+from concurrent.futures import ThreadPoolExecutor
+items=[
+('le_gall_miermont_2011','https://arxiv.org/pdf/0907.3262'),
+('budzinski_lehericy','https://arxiv.org/pdf/1912.08790'),
+('curien_saintflour','https://dl.dropboxusercontent.com/s/bfjbuxiv4ms1gdl/StFlour.pdf'),
+('curien_saintflour_current','https://dl.dropboxusercontent.com/scl/fi/gn449ms8xsekqmctyav4o/StFlour.pdf?rlkey=7vie1up33jwjnena818gsy4y6'),
+]
+
+def fetch(item):
+ name,url=item
+ try:
+  r=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=45)
+  b=r.read(45_000_000)
+  assert b.startswith(b'%PDF'), 'Response is not PDF'
+  p=subprocess.run(['pdftotext','-layout','-','-'],input=b,capture_output=True,check=True)
+  pages=p.stdout.decode('utf-8').split('\f')
+  out='SOURCE: '+url+'\nEXTRACTED UTC: '+datetime.now(timezone.utc).isoformat()+'\nPDF SHA256 (not retained): '+hashlib.sha256(b).hexdigest()+'\n'
+  for i,s in enumerate(pages,1):
+   if s.strip():out+='\n========== PDF PAGE '+str(i)+' ==========\n\n'+s
+  path=Path('sources')/(name+'.txt');path.write_text(out)
+  return {'name':name,'url':url,'sha256_pdf':hashlib.sha256(b).hexdigest(),'pages':len(pages)-1,'characters':len(out),'ok':True}
+ except Exception as e:return {'name':name,'url':url,'ok':False,'error':str(e)}
+with ThreadPoolExecutor(max_workers=2) as pool:
+ results=list(pool.map(fetch,items))
+Path('data/fetch_manifest_additional.json').write_text(json.dumps(results,indent=2)+'\n')
+for r in results:print(json.dumps(r),flush=True)
