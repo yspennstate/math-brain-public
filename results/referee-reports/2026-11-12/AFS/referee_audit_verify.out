@@ -1,0 +1,46 @@
+EXACT ORDERED-CONFIGURATION CHECKS
+30 exact maps PASS (k=2,3; s=0,1 included)
+
+EXACT PIVOTALITY AND MERGING
+511 binary configurations through degree 8 PASS; 9841 three-state merges PASS
+binary: s=1/2, M=[['1', '1'], ['1', '1']], rho=2 PASS
+unary_binary: s=1/2, M=[['1', '3/5'], ['3/5', '1']], rho=8/5 PASS
+leaf_supercritical: s=2/3, M=[['1', '1'], ['1/4', '1']], rho=3/2 PASS
+
+SYMBOLIC CHECKS
+RZ equation (21) at (a,b,c)=(0,0,1); fixed segment; r-mixture; Poisson root and rho; characteristic polynomial: PASS
+Binary fixed equations: x(1-2(x+y))=y(1-2(x+y))=0; locus origin or x+y=1/2
+
+NUMERICAL SERIES CHECKS (deterministic summation, no simulation)
+leaf .25/unary .25/ternary .50: s*=0.707106781187, rho=1.621320343560, max map error=1.11e-16, pivot matrix PASS
+Poisson(2): s*=0.653426409720, rho=1.693147180560, max map error=2.78e-17, pivot matrix PASS
+1/[n(n-1)] infinite mean: s*=0.632120558829, rho=2.000000000000, max map error=1.39e-17, pivot matrix PASS
+.25 delta0 + .75 heavy tail: s*=0.736402861884, rho=1.750000000000, max map error=2.78e-17, pivot matrix PASS
+infinite-log sparse law: s*=0.777256783668, rho=2.069070965232; omitted G' tail <10^(-470021793)
+sparse normalization telescopes; E log N = log(2) sum 2^j/[j(j+1)] = infinity
+
+TWO-STATE IDENTITY AND MOMENTS
+p=0: partial Psi_80 = p-p^80/80 EXACT PASS
+p=1/4: partial Psi_80 = p-p^80/80 EXACT PASS
+p=1/2: partial Psi_80 = p-p^80/80 EXACT PASS
+p=9/10: partial Psi_80 = p-p^80/80 EXACT PASS
+p=1: partial Psi_80 = p-p^80/80 EXACT PASS
+mean partial through 100000: 12.090136129863 (harmonic, divergent)
+E log(1+N) partial=1.553642244083; remaining <= 0.000264121453 (finite)
+
+FINITE-EXPLORATION SPINE CHECK (leaf/binary law)
+survival probabilities: a=0.500000000000, b=1; conditional E[W]: a=0.750000000000, b=0.750000000000
+conditional E[W_i W_(i+1)] from as=0.562500000000<1 PASS
+conditional E[W_i W_(i+1)] from bs=0.562500000000<1 PASS
+Selecting a surviving child uses its label and independent choice only; unrevealed subtree retains its conditional RST law.
+
+FULL-SPINE CONDITIONING COUNTERCHECK (binary XOR)
+original=(0, 0), chosen=0, switched=(1, 0): P(first child b | G)=1, RST_bs=0.5
+original=(0, 0), chosen=1, switched=(0, 1): P(first child b | G)=0, RST_bs=0.5
+original=(1, 1), chosen=0, switched=(0, 1): P(first child b | G)=0, RST_bs=0.5
+original=(1, 1), chosen=1, switched=(1, 0): P(first child b | G)=1, RST_bs=0.5
+All four finite exploration histories retain the correct conditional subtree law: EXACT PASS
+
+ALL CHECKS PASSED
+elapsed_seconds=0.074
+peak_RSS_MiB=56.44 (macOS bytes)

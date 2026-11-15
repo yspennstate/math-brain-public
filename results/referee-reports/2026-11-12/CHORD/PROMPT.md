@@ -1,0 +1,19 @@
+You are refereeing a mathematical paper that has been posted. Be a hard, independent referee: your job is to find a gap or an error if there is one, not to confirm.
+
+Rules for this run (the author's standing laws): work only inside your own folder (the current directory); READ anything in it, but never edit or delete anything outside it, never git push, never start other agents, never open a visible window. Do not use web search or browsing. This machine is shared and busy: run nothing that needs more than 1 GB of RAM, keep every computation under five minutes, and use at most two processes at a time. Write your own programs (Python with fractions, mpmath, sympy, numpy or scipy if they are installed; C if you need speed); do not assume any program of the authors is correct. Save every program you run in this folder.
+
+What to referee: PAPER.tex in this folder. The authors' checks are in code/ and evidence/, and a Lean file in lean/; you may read them, but check the claims yourself.
+
+The model: the cycle C_n, n = 2m >= 4, with unit conductances, plus one chord {0,k}, 2 <= k <= m, of conductance w > 0; P = D^{-1}A the random walk on the weighted graph and gamma = 1 - lambda_2(P); and the Metropolis-Hastings chain K(i,j) = c_ij / max(d_i, d_j) with uniform target. The paper claims:
+- Lemma (path): the Dirichlet path inequality with constant 2a, a = 1 - cos(pi/m).
+- Theorem 1: gamma(C_{2m} + w{0,m}) = a for every w > 0; for 2 <= k < m the explicit bound (eq:strict), strictly below a; so the antipodal chords and only they maximise the gap among single chords of a given weight, and no chord raises the gap of the cycle.
+- Theorem 2: for every chord and every w > 0 the Metropolized gap satisfies the stated bound with b = w/(2+w), theta = 2 pi/n, alpha = pi k/n, strictly below a.
+- The introduction places these as one-edge cases of questions of Diaconis.
+
+What to do:
+1. Check every lemma and theorem line by line: the half-turn decomposition and the orthogonality of the even and odd parts for both forms, the treatment of Var_D (a minimum over constants, not a plain sum), the even-part and odd-part bounds (in particular the step that uses a <= 1, and whether the odd part's Poincare inequality is applied to a function with the right mean), the test functions behind (eq:strict) and Theorem 2 and the algebra from them to the stated bounds, and the strictness claims for every k and w (including k = 2, k = m - 1, small m such as m = 2 and m = 3, w tending to 0 and to infinity). For each result write SOUND, GAP (a missing step that can be filled: give the fix) or ERROR (false as stated: give a counterexample or the failing step).
+2. Compute the spectral gaps exactly or to high precision yourself (mpmath or exact characteristic polynomials) for n = 4, 6, 8, 10, 12, 20, 30, every k, and a grid of w from 0.01 to 100: confirm gamma = a for the antipodal chord, compare each bound with the true gap (is it ever violated, how tight is it), and check the "only they" and "no chord raises the gap" claims, and the Metropolis claim for every chord. Say whether anything changes for odd n, which the paper excludes.
+3. Read the Lean file and say exactly what it proves and whether that is the statement the paper relies on.
+4. Report wording problems only where they make a statement wrong or ambiguous, and say whether the cited results (Diaconis, Hermon-Sly-Sousi, Eldan-Racz-Schramm, Ghosh-Boyd, Kim, Deng et al.) are described accurately as far as the text shows, and whether "the antipodal chords, and only they" and "every other chord strictly lowers the gap" are both proved.
+
+Write your report to REPORT.md in this folder: first line "Overall verdict: SOUND", "Overall verdict: SOUND WITH GAPS" or "Overall verdict: NOT SOUND"; then one section per numbered result with its verdict and reasons; then the checks with the programs' names and outputs; then a list of corrections, each with the line or display it concerns.

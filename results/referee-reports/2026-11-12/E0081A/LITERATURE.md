@@ -1,0 +1,19 @@
+# Literature check for E0081
+
+Checked 2026-11-13 (Asia/Tbilisi). The theorem in `REPORT.md` establishes the order stated in Peres's conjecture. No claim is made that this search is exhaustive.
+
+1. **Supplied source.** Pitman–Tang, *Patterns in random walks and Brownian motion*, arXiv:1411.0041v3. Read the definitions and main results, Theorem 1.6, the matching-matrix method, and Sections 2.3–2.5. Local files: `src/pt.pdf`, `src/pt.txt`. Its first-passage bounds leave the stated exponent gap.
+
+2. **Published chapter.** [Author-hosted PDF](https://www.columbia.edu/~wt2319/Patterns.pdf), DOI [10.1007/978-3-319-18585-9_4](https://doi.org/10.1007/978-3-319-18585-9_4), printed pp. 49–88. Checked in the browser, especially printed p. 65. Conjecture 1 (Peres, personal communications), equation (30), states the matching `n log n` bounds. This material is absent from the supplied arXiv version. The PDF footer says 2015; the citation-index metadata reports 2016. No result here depends on resolving that bibliographic date discrepancy.
+
+3. **Thesis.** Wenpin Tang, *Continuous paths in Brownian motion and related problems*, Berkeley, Spring 2017. [Repository](https://escholarship.org/uc/item/51j6244c), [PDF](https://escholarship.org/content/qt51j6244c/qt51j6244c_noSplash_0d298bb720a71e482d931510dcf532d2.pdf). Checked Chapter 2, especially p. 18: Conjecture 2.5.2 repeats Peres's `n log n` conjecture, without a proof there.
+
+4. **Citation-index check.** The OpenAlex work lookup for the chapter DOI returned `W1851725789`. Query `https://api.openalex.org/works?filter=cites:W1851725789&per-page=100` returned four records. Raw responses are saved in `data/openalex_work.json` and `data/openalex_citations.json`. The records were the thesis and the following three papers. Their full texts were downloaded, the introductions and relevant citation contexts inspected, and the text searched for first-passage, waiting-time, pattern, and conjecture terminology:
+
+   - Pitman–Tang, [*The Slepian zero set, and Brownian bridge embedded in Brownian motion by a spacetime shift*](https://arxiv.org/abs/1411.0040), EJP 20 (2015), paper 61. Files: `src/slepian.pdf`, `src/slepian.txt`. Its first-passage terminology concerns decompositions of the Slepian process. No proof of the discrete waiting-time conjecture was located.
+   - Evans–Pitman–Tang, [*The spans in Brownian motion*](https://arxiv.org/abs/1506.02021), AIHP 53 (2017), 1108–1135. Files: `src/spans.pdf`, `src/spans.txt`. The main results concern Brownian span sets; no proof of the waiting-time conjecture was located.
+   - Pitman–Tang, [*The argmin process of random walks, Brownian motion and Lévy processes*](https://arxiv.org/abs/1610.01524), EJP 23 (2018), paper 60. Files: `src/argmin.pdf`, `src/argmin.txt`. The main results concern the argmin process and extrema; no proof of the waiting-time conjecture was located.
+
+5. **Targeted searches.** Searched the source title and arXiv identifier, the first-passage waiting-time terminology, Peres's name, `n log n`, and the thesis conjecture number. No newer resolution was located. An additional OpenAlex title search returned the same chapter record as the only exact-title match among its first ten results; raw results are in `data/openalex_title_search.json`. A Semantic Scholar API lookup was rate-limited (HTTP 429). OpenAlex may omit citations or fail to merge versions, so its four records are not treated as a complete citation list.
+
+`fetch_literature.py` reproduces the downloads and text extraction for the three arXiv papers. Programmatic downloads of the thesis and published chapter failed (HTML challenge and HTTP 403 respectively); they were read through the web tool, which exposed both complete PDFs. No purported local copies of those failed downloads are included.
