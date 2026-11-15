@@ -1,0 +1,9 @@
+L=Sop+A, Sop=1/2 nearest-neighbor Laplacian, A skew adjoint.
+E(u)=1/2 sum_unordered_edges (du)^2.
+h(x,y)=(S(y)-T(x))/2; ca(edge)=h(left face)-h(right face).
+B_q(u,v)=(u0-u2)(v1-v3)-(u1-u3)(v0-v2).
+|<u,Av>| <=4 sqrt(W(u) E(v)), W(u)=sum_q h(q)^2 E_q(u).
+So <Au,(lambda-Sop)^-1 Au> <=16 W(u).
+G_lambda(0,0)>=u(0)^2/[lambda||u||^2+E(u)+16W(u)].
+Choose dyadic radial cutoffs with drops proportional to (1+M(2^(m+3))^2)^-1.
+Their weighted energy tends to zero if sum reciprocals diverges.

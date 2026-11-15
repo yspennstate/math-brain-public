@@ -1,0 +1,46 @@
+G0010 proof audit — 2026-11-13
+
+1. Source proof distinction checked against the complete text: Lemma 2.4
+   uses a walk resolvent; Lemma 3.1(a) is a weighted tail; Theorem 1.3(II)
+   instead uses an expected global path count. No O_P statement promoted
+   to a high-probability fixed-constant bound.
+2. Tree norm re-derived from the edge quadratic inequality and checked by
+   direct full-matrix spectra for a finite clique/tree. Bridge norm is 1.
+3. Independent replacement gives A_H tensor J_m exactly. Degrees multiply
+   by m. Direct full-matrix eigenvalues agree with this product formula to
+   3.6e-14 in the small check.
+4. The clique connector has degree k+1; the tree root has b+1. The choice
+   b>=k ensures Delta(H)=b+1, including the bridge.
+5. Child-set tests use distinct edges. Selecting a vertex with the parent
+   edge does not expose its outgoing edges. Distinct descendant trees at
+   a fixed level use disjoint edge sets, so amplification is independent.
+6. The binomial mean floor uses 1-(1-p)^m >= 1-exp(-mp), with mp >= q/(k+1).
+   Its sign is in the required direction. No assertion that root survival
+   tends to one is used.
+7. Second moments re-derived by conditional variance and checked against
+   the recurrence for 59 generations. Paley-Zygmund is proved directly by
+   Cauchy-Schwarz. The explicit exponent is checked both as log(mu)/(2 log b)
+   and by finite log graph-size and generation-size formulas at h=1000.
+8. Boundary upper bound: susceptibility vector u=1+pAu, maximum U=O(log n).
+   For a=1/(2U^2), theta=1/(4U^2), theta+a^2 U^2=a. The branching exponential
+   moment induction is therefore valid, yielding O(U^2 log n), hence log^3 n.
+9. Refined weighted bound: at parameter a>1, use theta=1-q a>0, not the
+   original epsilon. The exponential tail exponent has the correct sign.
+   The crossover sum uses floor(log B/log R), and the geometric tail starts
+   at that integer plus one.
+10. Dense clique path lower bound: candidate paths are unordered up to
+    reversal, (N)_ell/2; all other internal and outgoing edges must be
+    absent. Disjoint pair events double-count exactly ell^2 closed edges
+    in their product. Distinct overlapping path-component events cannot
+    coexist. This gives the stated second moment bound.
+11. Separate star/core construction attaches the bridge to a star leaf,
+    not the center, to preserve maximum degree D exactly. The core's largest
+    percolated component is logarithmic; one bridge merges at most two
+    pre-bridge components.
+12. Source Theorem 1.4 is consistent with the counterexamples: k>=2 sqrt(b)
+    forces mu < sqrt(b), so the lower exponent lies below its polynomial
+    upper exponent. No contradiction to the source theorems is asserted.
+
+Independent computational checks and deliverable checks are recorded in
+verification.json and artifact_audit.json. These checks supplement the proofs;
+they do not constitute machine verification of an arbitrary-size theorem.

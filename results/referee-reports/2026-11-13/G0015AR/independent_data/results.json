@@ -1,0 +1,208 @@
+{
+  "parameters": {
+    "integration": {
+      "method": "Gauss-Legendre",
+      "points": 480,
+      "cutoff": 12.0
+    },
+    "potential_children": 2,
+    "Gamma": "w1(x)N(-0.8,1)+(1-w1(x))N(0.8,1); w1=.5+.2tanh(x)",
+    "p": "tau*(.55+.15tanh(y))",
+    "tau": 0.9143526654772415,
+    "M": [
+      [
+        0.376269973759777,
+        0.6477161791687779
+      ],
+      [
+        0.5331607386098465,
+        0.4463360396855891
+      ]
+    ],
+    "a": [
+      0.46085659494303505,
+      0.539143405056965
+    ],
+    "b": [
+      1.020372240050881,
+      0.9825859296559155
+    ],
+    "sigma2": 0.5004365328073691,
+    "scale": 0.3537076945753969,
+    "poisson_claim_check": {
+      "nu": 1.828705330954483,
+      "sigma2": 1.000873065614738,
+      "scale": 0.5002182187842467,
+      "spine_mean_count": 1.0010279422046602,
+      "spine_raw_count_variance": 1.0022463134323247
+    },
+    "p0": [
+      0.23835864592669523,
+      0.2605121716933989
+    ],
+    "p1": [
+      [
+        0.18508858047576787,
+        0.31420797474228657
+      ],
+      [
+        0.27314261550070296,
+        0.22633626281706382
+      ]
+    ],
+    "p2": [
+      [
+        [
+          0.037980083373449866,
+          0.05761061326855474
+        ],
+        [
+          0.05761061326855474,
+          0.10914348894469098
+        ]
+      ],
+      [
+        [
+          0.07299846640121702,
+          0.057010595153354784
+        ],
+        [
+          0.057010595153354784,
+          0.052989293280908
+        ]
+      ]
+    ],
+    "checks": {
+      "left_residual": 1.1102230246251565e-16,
+      "right_residual": 0.0,
+      "continuous_vs_factorial": 1.1102230246251565e-16
+    },
+    "second_quadrature_scale_difference": 1.1102230246251565e-16
+  },
+  "seed": 1515202611130917,
+  "root_law": "mu_1, integrated exactly into latent root class 0",
+  "predictions": {
+    "max_excursion_mean": 1.2533141373155001,
+    "mean_excursion_area": 0.6266570686577501
+  },
+  "enumeration": [
+    {
+      "n": 1,
+      "root_type": 0,
+      "typed_trees": 1,
+      "max_probability_error": 0.0
+    },
+    {
+      "n": 1,
+      "root_type": 1,
+      "typed_trees": 1,
+      "max_probability_error": 0.0
+    },
+    {
+      "n": 2,
+      "root_type": 0,
+      "typed_trees": 2,
+      "max_probability_error": 0.0
+    },
+    {
+      "n": 2,
+      "root_type": 1,
+      "typed_trees": 2,
+      "max_probability_error": 0.0
+    },
+    {
+      "n": 3,
+      "root_type": 0,
+      "typed_trees": 8,
+      "max_probability_error": 5.551115123125783e-17
+    },
+    {
+      "n": 3,
+      "root_type": 1,
+      "typed_trees": 8,
+      "max_probability_error": 2.7755575615628914e-17
+    },
+    {
+      "n": 4,
+      "root_type": 0,
+      "typed_trees": 32,
+      "max_probability_error": 1.3877787807814457e-17
+    },
+    {
+      "n": 4,
+      "root_type": 1,
+      "typed_trees": 32,
+      "max_probability_error": 2.7755575615628914e-17
+    },
+    {
+      "n": 5,
+      "root_type": 0,
+      "typed_trees": 144,
+      "max_probability_error": 6.938893903907228e-18
+    },
+    {
+      "n": 5,
+      "root_type": 1,
+      "typed_trees": 144,
+      "max_probability_error": 1.0408340855860843e-17
+    },
+    {
+      "n": 6,
+      "root_type": 0,
+      "typed_trees": 672,
+      "max_probability_error": 3.469446951953614e-18
+    },
+    {
+      "n": 6,
+      "root_type": 1,
+      "typed_trees": 672,
+      "max_probability_error": 3.469446951953614e-18
+    }
+  ],
+  "summaries": [
+    {
+      "n": 500,
+      "replicates": 600,
+      "height_mean": 1.1351731451724818,
+      "height_se": 0.00990541786168683,
+      "mean_depth_mean": 0.5767970877133659,
+      "mean_depth_se": 0.005578476126910564,
+      "height_KS_to_CRT": 0.1886917839597907,
+      "size_probability_root0": 5.135045408168556e-05,
+      "size_probability_asymptotic_ratio": 0.9977117742040911
+    },
+    {
+      "n": 2000,
+      "replicates": 600,
+      "height_mean": 1.1775529777440077,
+      "height_se": 0.010505721376871724,
+      "mean_depth_mean": 0.5943695788098,
+      "mean_depth_se": 0.00589069380096374,
+      "height_KS_to_CRT": 0.12505200119122895,
+      "size_probability_root0": 6.429842261820329e-06,
+      "size_probability_asymptotic_ratio": 0.9994270852114939
+    },
+    {
+      "n": 10000,
+      "replicates": 600,
+      "height_mean": 1.2269471460713797,
+      "height_se": 0.010704013169714683,
+      "mean_depth_mean": 0.6133581181280778,
+      "mean_depth_se": 0.006040446828070328,
+      "height_KS_to_CRT": 0.05530383017340812,
+      "size_probability_root0": 5.753662878059485e-07,
+      "size_probability_asymptotic_ratio": 0.9998853711785911
+    }
+  ],
+  "nice": 10,
+  "numerical_threads": 1,
+  "governor_start": {
+    "ts": "2026-11-13 11:21:17",
+    "status": "warn",
+    "mode": "owner_away_open",
+    "mem_free_pct": 49
+  },
+  "elapsed_seconds": 28.698109500022838,
+  "max_rss_bytes_macos": 51200000,
+  "finished_utc": "2026-11-13T07:22:17.885271+00:00"
+}
