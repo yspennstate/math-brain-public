@@ -1,0 +1,22 @@
+/bin/sh ./libtool --mode=compile gcc -c -O3  -march=native -o gtoolsW.lo -DWORDSIZE=32 gtools.c
+libtool: compile:  gcc -c -O3 -march=native -DWORDSIZE=32 gtools.c  -fno-common -DPIC -o .libs/gtoolsW.o
+libtool: compile:  gcc -c -O3 -march=native -DWORDSIZE=32 gtools.c -o gtoolsW.o >/dev/null 2>&1
+/bin/sh ./libtool --mode=compile gcc -c -O3  -march=native -o nautyW1.lo -DMAXN=WORDSIZE -DWORDSIZE=32 nauty.c
+libtool: compile:  gcc -c -O3 -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 nauty.c  -fno-common -DPIC -o .libs/nautyW1.o
+libtool: compile:  gcc -c -O3 -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 nauty.c -o nautyW1.o >/dev/null 2>&1
+/bin/sh ./libtool --mode=compile gcc -c -O3  -march=native -o nautilW1.lo -DMAXN=WORDSIZE -DWORDSIZE=32 nautil.c
+libtool: compile:  gcc -c -O3 -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 nautil.c  -fno-common -DPIC -o .libs/nautilW1.o
+libtool: compile:  gcc -c -O3 -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 nautil.c -o nautilW1.o >/dev/null 2>&1
+/bin/sh ./libtool --mode=compile gcc -c -O3  -march=native -o naugraphW1.lo -DMAXN=WORDSIZE -DWORDSIZE=32 naugraph.c
+libtool: compile:  gcc -c -O3 -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 naugraph.c  -fno-common -DPIC -o .libs/naugraphW1.o
+libtool: compile:  gcc -c -O3 -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 naugraph.c -o naugraphW1.o >/dev/null 2>&1
+/bin/sh ./libtool --mode=compile gcc -c -O3  -march=native -o schreier.lo schreier.c
+libtool: compile:  gcc -c -O3 -march=native schreier.c  -fno-common -DPIC -o .libs/schreier.o
+libtool: compile:  gcc -c -O3 -march=native schreier.c -o schreier.o >/dev/null 2>&1
+gcc -O3  -march=native   -c -o schreier.o schreier.c
+/bin/sh ./libtool --mode=compile gcc -c -O3  -march=native -o naurng.lo naurng.c
+libtool: compile:  gcc -c -O3 -march=native naurng.c  -fno-common -DPIC -o .libs/naurng.o
+libtool: compile:  gcc -c -O3 -march=native naurng.c -o naurng.o >/dev/null 2>&1
+gcc -O3  -march=native   -c -o naurng.o naurng.c
+gcc -o geng -O3  -march=native -DMAXN=WORDSIZE -DWORDSIZE=32 geng.c gtoolsW.o nautyW1.o \
+		nautilW1.o naugraphW1.o schreier.o naurng.o 

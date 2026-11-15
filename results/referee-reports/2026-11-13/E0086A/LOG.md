@@ -1,0 +1,21 @@
+# E0086 work log
+
+- Started 2026-11-13 07:32 +04. User task: Open problem E0086.
+- Work confined to this directory. No subagents, publication, or pushes. Compute will use nice 10 and one thread.
+- Read startup memory and compute state (warn/cpu_saturated, owner_away_open); avoid heavy parallel work. Shared mesh registration/digest failed: readonly database. No shared claims or checklist/memory writes are possible under this sandbox; use this local log.
+- Downloaded arXiv:1606.03787 and converted PDF bytes in memory through pdftotext. Only plain text saved. The author is Izumi Okada, not Hu and Shi.
+- Read Sections 1–2 in full. Critical mismatch: M_H(n) is max K(n,x) over generalized range boundary ∂_H R(n)={x∈R(n):x+H⊂R(n)^c}, not max over x∈H. H has cardinality ≤ fixed M and must not surround 0. Open problem 2 PDF p.6 has a time-n versus τ_n inconsistency. τ_n is first hit of inner boundary of radius-n disc (not exact exterior exit).
+- Source reference [7] for largest covered disc is Dembo–Peres–Rosen 2007, distinct from DPRZ 2004 torus cover time. No close brain recall found.
+- Literature search covered all requested authors and titles, plus Csáki–Földes–Révész (2005), maximal local times on subsets, and Hao–Li–Okada–Zheng (2024/2026). No theorem resolving the moving-pattern problem was found. Citation discovery is not exhaustive. Downloaded relevant papers as text.
+- nice -n 10 emitted a sandbox setpriority error; direct os.getpriority confirms inherited niceness is already 10. Continue at inherited nice 10, one computational thread.
+- Candidate annulus theorem: for every fixed 0<α<1, max_{n^α<|x|≤2n^α}K(τ_n,x)/(log n)^2 →4α²/π in probability. Checking proof using a first visit to an embedded ball for the lower bound, and geometric counts of 3a↔4a excursions plus exact geometric local-time mgf for upper bound. No claim of a.s. convergence.
+- Main literature stage completed before proof/simulation; a final search found Collin–Popov, arXiv:2610.26640 (19 October 2026). Read Sections 1–2, Theorem 2.3, equation (19), Corollary 3.10 and surrounding scope. Different independent-excursion model; no exact source-problem resolution located.
+- Proved the separate annulus maximum in probability for every fixed 0<α<1: Q_n/(log n)^2 →4α²/π. Upper bound uses 3a↔4a episodes, escape probability c/log n, a log n log log n episode cutoff, and a per-episode mgf 1+O(1/log a). Lower bound uses the established DPRZ theorem in a fresh radius-a/8 disc entirely inside the annulus.
+- The proof uses the established multiscale second-moment theorem as an input; it does not purport to re-prove DPRZ or solve the moving-pattern problem. No a.s. upgrade is asserted.
+- Proved annulus covered-radius lower exponent α/2 in probability using DPR 2007. Upper exponent proved is min(α,1/2). Matching α/2 remains heuristic in this report.
+- Literal printed conjecture has a contradiction: M_H(n)≤global maximum at time n∼(1/π)log²n, versus stopped global maximum∼(4/π)log²n. Recorded a singleton-pattern example and distinguished two possible time repairs.
+- Simulated 120 paths through exit radii 128–4096, five α values each (600 data rows). Serial nice 10, 30.6 s, parent peak RSS 1.133 GB, simulation child peak 0.270 GB. No PDFs ever saved.
+- Simulation checks passed: 12 C/Python full-path/count comparisons, 30 exhaustive lattice-disc mask comparisons, and count conservation/exit checks for all main paths. Detailed checks and resources saved in data/.
+- REPORT.md written with PARTIAL status, explicit statements/proofs, literature theorem locations, simulation table, and remaining questions. Final mathematical and artifact audit in progress.
+- Final audit completed: all 21 source hashes verified; 600 simulation rows/120 paths checked; report local links and math delimiters checked; no PDF or image files in the directory. Re-derived constants via time/radius conversion and entropy × local Green scale. Added explicit point-centered circle excursion expectations to the heuristic.
+- Done: E0086 delivered as PARTIAL, with a proved annulus limit in probability, literal-source contradiction, coverage bounds/heuristic, literature review and reproducible simulations. No shared-brain/checklist mutations were made because writes there are outside the permitted directory and the mesh database is readonly.
