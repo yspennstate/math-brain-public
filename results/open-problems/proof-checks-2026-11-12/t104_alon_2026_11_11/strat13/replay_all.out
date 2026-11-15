@@ -1,0 +1,231 @@
+
+STRAT12 full replay
+OPEN: running exact check verify_sources.py
+PASS: verify_sources.py
+OPEN: running exact check inherited_replay.py verify_provenance.py
+PASS: inherited_replay.py verify_provenance.py
+OPEN: running exact check inherited_replay.py verify_frame.py
+PASS: inherited_replay.py verify_frame.py
+OPEN: running exact check inherited_replay.py verify_filters.py
+PASS: inherited_replay.py verify_filters.py
+OPEN: running exact check inherited_replay.py verify_cone.py
+PASS: inherited_replay.py verify_cone.py
+OPEN: running exact check inherited_replay.py verify_corner.py
+PASS: inherited_replay.py verify_corner.py
+OPEN: running exact check inherited_replay.py verify_examples.py
+PASS: inherited_replay.py verify_examples.py
+OPEN: running exact check inherited_replay.py verify_rotation.py
+PASS: inherited_replay.py verify_rotation.py
+OPEN: running exact check inherited_replay.py verify_corner_faces.py
+PASS: inherited_replay.py verify_corner_faces.py
+OPEN: running exact check inherited_replay.py verify_overlay.py
+PASS: inherited_replay.py verify_overlay.py
+OPEN: running exact check verify_formulation.py
+PASS: verify_formulation.py
+OPEN: running exact check verify_obstruction.py
+PASS: verify_obstruction.py
+OPEN: running exact check verify_samples.py
+PASS: verify_samples.py
+OPEN: running exact check verify_certificates.py
+PASS: verify_certificates.py
+OPEN: running exact check verify_sources.py
+PASS: verify_sources.py
+PROVED: all exact partial claims replayed; OPEN: global sign
+
+original-cover premise verify_provenance.py
+PROVED: every inherited local dependency matches its copied source hash.
+
+original-cover premise verify_elementary.py
+PROVED: diagonal-contraction constants, extreme-pair norm algebra and scalar Bernstein identity checked exactly.
+
+original-cover premise verify_moments.py
+PROVED: A>=7/30 by nonnegative exact ordered-cone coefficients.
+PROVED: A+C>=1/4 by 84 exact PSD coefficient matrices and exact coefficient matching.
+
+original-cover premise verify_polya_moments.py
+PROVED: 3/2 A + C <= 27/25 and its u/w swap; power 4 PSD matrices 286
+PROVED: 2 A + C <= 7/5 and its u/w swap; power 4 PSD matrices 286
+PROVED: 2 A + C <= 11/8 and its u/w swap; power 14 PSD matrices 1771
+PROVED: 3 A + C <= 81/40 and its u/w swap; power 9 PSD matrices 816
+PROVED: 4 A + C <= 107/40 and its u/w swap; power 9 PSD matrices 816
+PROVED: 1 A - C <= 5/8 and its u/w swap; power 7 PSD matrices 560
+PROVED: 2 A - C <= 51/40 and its u/w swap; power 6 PSD matrices 455
+PROVED: 3 A - C <= 77/40 and its u/w swap; power 6 PSD matrices 455
+PROVED: 5445 coefficient matrices and all seven principal minors checked exactly.
+
+original-cover premise prior_scale.py
+PROVED: moment vertices 16
+PROVED: T_N > 0 for a five-vertex double carrier with internal a<=11/25, padded to N>=6; coefficient margin 94/3125
+
+original-cover premise verify_algebra.py
+PROVED: all-N moment extension coefficients and nonnegative cubic remainder matched exactly.
+PROVED: all-N padded frame formula from exact ordered-pair expansion.
+PROVED: T6(0)=9/80; L6 >= 3(1+r)/32 > 0.
+PROVED: T_N(a)=(1-t^2)T_N(0)+a(1-t)L_N+t^2 T_N(E), t=a/E; T_N(0),L_N>0 for N>=6.
+
+original-cover premise verify_cell_identities.py
+PROVED: directional first/second weighted moments and both padded cubic residual blocks matched exactly.
+
+original-cover premise verify_cells.py
+PROVED: r in 0 1/10 a <= 66/125 all N>=6 True
+PROVED: r in 1/10 1/5 a <= 71/125 all N>=6 True
+PROVED: r in 1/5 3/10 a <= 119/200 all N>=6 True
+PROVED: r in 3/10 2/5 a <= 76/125 all N>=6 False
+PROVED: r in 2/5 1/2 a <= 76/125 all N>=6 False
+PROVED: r in 1/2 3/5 a <= 603/1000 all N>=6 False
+PROVED: r in 3/5 7/10 a <= 119/200 all N>=6 False
+PROVED: r in 7/10 4/5 a <= 293/500 all N>=6 False
+PROVED: r in 4/5 9/10 a <= 287/500 all N>=6 False
+PROVED: r in 9/10 1 a <= 14/25 all N>=6 False
+PROVED: 10 cells; uniform N=6 ceiling 66/125; 3 cells extend to every N>=6.
+
+original-cover premise zero_face.py
+PROVED: zero-face normalization and projector identities, and original N=6 matrix definitions matched exactly.
+PROVED: C_N=10(N-2)^2 D^2 Delta T_N is quadratic in q=N-6; coefficients have [1255, 1255, 1253] terms.
+
+original-cover premise verify_domain.py
+PROVED: canonical root bounds, degree identities, ratio and connectedness algebra replayed.
+
+original-cover premise axis_bernstein.py
+PROVED: all 28 monomial-to-Bernstein conversion identities through degree six replayed.
+
+original-cover premise verify_cubic_moment.py
+PROVED: homogeneous sextic = 625 K(z)^2 + 65 nonnegative monomials on the ordered cone; d^2>=3A-3/2, including all scalar combinations alpha u+beta w.
+
+original-cover premise verify_cubic_sos.py
+PROVED: all rational orthant Gram matrices PSD and every sextic coefficient matched.
+
+original-cover premise verify_cubic_identities.py
+PROVED: all five sextic multipliers, paired rotations, 2x2 residual matrices and affine moment lower terms matched exactly.
+
+original-cover premise verify_extensions.py
+PROVED: fine_cells.json 42 rational cells replayed; N=6
+PROVED: cubic_cells.json 42 rational cells replayed; N=6
+PROVED: stacked_cells.json 11 rational cells replayed; N=6
+PROVED: cubic_allN_cells.json 44 rational cells replayed; all N>=6
+
+original-cover premise verify_cover.py
+PROVED partial replay: 4000 nodes, {'split': 2005, 'excluded': 962, 'open': 564, 'positive': 469}.
+PROVED partial replay: 16000 nodes, {'split': 8006, 'excluded': 2107, 'open': 1152, 'positive': 4735}.
+PROVED partial replay: 20000 nodes, {'split': 10005, 'excluded': 2559, 'open': 1233, 'positive': 6203}.
+PROVED partial replay: 28000 nodes, {'split': 14005, 'excluded': 3822, 'open': 1726, 'positive': 8447}.
+PROVED partial replay: 36000 nodes, {'split': 18006, 'excluded': 4978, 'open': 2148, 'positive': 10868}.
+PROVED partial replay: 44000 nodes, {'split': 22005, 'excluded': 5798, 'open': 2533, 'positive': 13664}.
+PROVED partial replay: 48000 nodes, {'split': 24005, 'excluded': 6322, 'open': 2635, 'positive': 15038}.
+PROVED partial replay: 56000 nodes, {'split': 28005, 'excluded': 7369, 'open': 3357, 'positive': 17269}.
+PROVED partial replay: 60000 nodes, {'split': 30003, 'excluded': 8048, 'open': 3606, 'positive': 18343}.
+PROVED partial replay: 68000 nodes, {'split': 34004, 'excluded': 8883, 'open': 4053, 'positive': 21060}.
+PROVED partial replay: 72000 nodes, {'split': 36005, 'excluded': 9211, 'open': 4192, 'positive': 22592}.
+PROVED: complete partition replay {'label': 'PROVED partition and accepted leaves; OPEN sign on open leaves', 'counts': {'split': 40177, 'excluded': 10226, 'open': 5244, 'positive': 24708}, 'volumes': {'excluded': '1062587817/1048576', 'open': '15467841/131072', 'positive': '21629007/1048576', 'all_N_subset': '21522843/1048576'}, 'root_volume': '1152', 'all_N_positive_leaves': 24458}
+
+STRAT13 local theorems and collar partition
+PROVED (verify_collars.py): both physical local theorems, 256 signed Farkas identities, exact remainders, matrix balls, and all nine algebraic chart expansions.
+{
+  "label": "PROVED (verify_collars.py): all nine retained boxes closed on their feasible connected parts",
+  "counts": {
+    "positivity": 366,
+    "exclusion": 216,
+    "collar": 17
+  },
+  "volumes": {
+    "positivity": "3871711000842811958259/4951760157141521099596496896",
+    "exclusion": "99237064288620753626247/158456325028528675187087900672",
+    "collar": "56601/158456325028528675187087900672"
+  },
+  "split_nodes": 590,
+  "max_additional_depth": 72,
+  "rows": [
+    {
+      "node": 15773,
+      "type": "edges",
+      "counts": {
+        "positivity": 31,
+        "exclusion": 28,
+        "collar": 2
+      },
+      "max_additional_depth": 60
+    },
+    {
+      "node": 19750,
+      "type": "triangle",
+      "counts": {
+        "positivity": 35,
+        "exclusion": 30,
+        "collar": 2
+      },
+      "max_additional_depth": 66
+    },
+    {
+      "node": 20736,
+      "type": "edges",
+      "counts": {
+        "positivity": 61,
+        "exclusion": 5,
+        "collar": 2
+      },
+      "max_additional_depth": 67
+    },
+    {
+      "node": 21058,
+      "type": "triangle",
+      "counts": {
+        "positivity": 35,
+        "exclusion": 30,
+        "collar": 2
+      },
+      "max_additional_depth": 66
+    },
+    {
+      "node": 21550,
+      "type": "edges",
+      "counts": {
+        "positivity": 31,
+        "exclusion": 28,
+        "collar": 2
+      },
+      "max_additional_depth": 60
+    },
+    {
+      "node": 12091,
+      "type": "edges",
+      "counts": {
+        "positivity": 63,
+        "exclusion": 5,
+        "collar": 2
+      },
+      "max_additional_depth": 69
+    },
+    {
+      "node": 12407,
+      "type": "triangle",
+      "counts": {
+        "positivity": 38,
+        "exclusion": 29,
+        "collar": 2
+      },
+      "max_additional_depth": 68
+    },
+    {
+      "node": 14175,
+      "type": "edges",
+      "counts": {
+        "positivity": 33,
+        "exclusion": 28,
+        "collar": 2
+      },
+      "max_additional_depth": 62
+    },
+    {
+      "node": 15603,
+      "type": "triangle",
+      "counts": {
+        "positivity": 39,
+        "collar": 1,
+        "exclusion": 33
+      },
+      "max_additional_depth": 72
+    }
+  ],
+  "open_leaves": 0,
+  "elapsed_seconds_NUMERICAL": 14.991478666983312
+}

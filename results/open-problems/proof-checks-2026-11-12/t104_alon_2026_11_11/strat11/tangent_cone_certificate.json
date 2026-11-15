@@ -1,0 +1,286 @@
+{
+  "label": "PROVED by verify_cone.py",
+  "cone": "beta>=0 and all eight active weight derivatives in frame_expansion.json >=0; theta free",
+  "redundant_scale_inequality": "2alpha-beta=5*(g01+g02+g03+g04)>=0",
+  "strict_direction": [
+    "1",
+    "1/10",
+    "0",
+    "1/10",
+    "0",
+    "0",
+    "0"
+  ],
+  "strict_weight_derivatives": [
+    "3/40",
+    "3/40",
+    "23/200",
+    "23/200",
+    "13/100",
+    "3/25",
+    "3/25",
+    "11/100"
+  ],
+  "cayley_witness_parameter": "1/1000",
+  "pressure_witness_parameter": "20000/19999999",
+  "endpoint_cut_witnesses": [
+    {
+      "side": [
+        0
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        1
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "difference": "799999960000/133333346666667"
+    },
+    {
+      "side": [
+        0,
+        1
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        2
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "difference": "799999960000/133333346666667"
+    },
+    {
+      "side": [
+        0,
+        2
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        1,
+        2
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "difference": "177688880000/44444448888889"
+    },
+    {
+      "side": [
+        0,
+        1,
+        2
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "difference": "-1600799920000/400000040000001"
+    },
+    {
+      "side": [
+        3
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "difference": "-1600799920000/400000040000001"
+    },
+    {
+      "side": [
+        0,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        1,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        0,
+        1,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        2,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        0,
+        2,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        1,
+        2,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "difference": "3199999840000/400000040000001"
+    },
+    {
+      "side": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "difference": "3998399600080010/400000040000001"
+    }
+  ],
+  "density_lemma": "A disconnected endpoint has all crossing D_ij equal for some nontrivial cut. Each such equality set is a proper algebraic set in the rational Cayley chart, as witnessed here. Its complement is dense. Strictify any cone direction and perturb by o(t) into that complement. Strict filter inactivity is checked by verify_filters.py."
+}

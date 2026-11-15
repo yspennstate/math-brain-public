@@ -1,0 +1,29 @@
+OPEN: replay running unchanged STRAT14 full replay
+{'check': 'unchanged STRAT14 full replay', 'status': 'PASS', 'seconds_NUMERICAL': 698.6891722499859}
+OPEN: replay running unchanged STRAT13 full replay
+{'check': 'unchanged STRAT13 full replay', 'status': 'PASS', 'seconds_NUMERICAL': 1364.2148881669855}
+OPEN: replay running all-N premise verify_allN_ratio.py
+{'check': 'all-N premise verify_allN_ratio.py', 'status': 'PASS', 'seconds_NUMERICAL': 13.284345834021224}
+OPEN: replay running all-N premise verify_allN_cells.py
+{'check': 'all-N premise verify_allN_cells.py', 'status': 'PASS', 'seconds_NUMERICAL': 22.92737987500732}
+OPEN: replay running all-N premise verify_analytic.py
+{'check': 'all-N premise verify_analytic.py', 'status': 'PASS', 'seconds_NUMERICAL': 0.3736021659860853}
+OPEN: replay running all-N premise verify_summary.py
+{'check': 'all-N premise verify_summary.py', 'status': 'PASS', 'seconds_NUMERICAL': 0.0705015420098789}
+OPEN: replay running verify_target.py
+{'check': 'verify_target.py', 'status': 'PASS', 'seconds_NUMERICAL': 0.6223057079769205}
+OPEN: replay running verify_padding.py
+{'check': 'verify_padding.py', 'status': 'PASS', 'seconds_NUMERICAL': 0.3920334999857005}
+OPEN: replay running verify_new.py
+{'check': 'verify_new.py', 'status': 'FAIL', 'seconds_NUMERICAL': 38.440816291986266}
+Traceback (most recent call last):
+  File "~/agent_run/STRAT15/replay_all.py", line 50, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "~/agent_run/STRAT15/replay_all.py", line 41, in main
+    run(script,[script],HERE)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "~/agent_run/STRAT15/replay_all.py", line 33, in run
+    if proc.returncode:raise RuntimeError(name+' failed')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: verify_new.py failed
