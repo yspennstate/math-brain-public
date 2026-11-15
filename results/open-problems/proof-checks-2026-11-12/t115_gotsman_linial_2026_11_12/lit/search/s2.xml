@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/o1kcuCeJj6qhT7FQE95JCd/50n4</id>
+  <title>arXiv Query: search_query=abs:"polynomial threshold functions" AND abs:sensitivity&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-11-12T00:38:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22polynomial+threshold+functions%22+AND+abs:sensitivity&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.09909v1</id>
+    <title>Learning Partition Trees for Nearest Neighbor Search</title>
+    <updated>2026-07-10T18:59:31Z</updated>
+    <link href="https://arxiv.org/abs/2607.09909v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.09909v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study nearest neighbor search from the perspective of data-driven algorithm design: given a dataset $P \subset \mathbb{R}^d$ of size $n$ and sample access to a query distribution over $\mathbb{R}^d$, the goal is to learn a data structure optimized for queries drawn from that specific distribution. We focus on the class of balanced halfspace trees, which naturally abstracts space-partitioning frameworks like locality-sensitive hashing. Assuming Gaussian-like marginal conditions on the dataset and query distribution, we give an efficient algorithm that learns a tree achieving $o(nd)$ query time, provided that a perfect tree exists.
+  At the core of our algorithmic approach is the balanced halfspace cut problem, where we are given a distribution over $\mathbb{R}^d \times \mathbb{R}^d$ and must find a balanced halfspace that minimizes the fraction of cut pairs. We prove that without distributional assumptions, finding the optimal balanced halfspace is NP-hard. To circumvent this computational barrier, we design an efficient improper learning algorithm: if the optimal halfspace cuts an $α$ fraction of pairs, our algorithm outputs a balanced polynomial threshold function of degree $\tilde{O}(1/\varepsilon^2)$ that cuts at most an $O(\sqrt{α+\varepsilon})$ fraction.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-10T18:59:31Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Sanjeev Khanna</name>
+    </author>
+    <author>
+      <name>Ashwin Padaki</name>
+    </author>
+    <author>
+      <name>Erik Waingarten</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16004v2</id>
+    <title>Small moments of the sensitivity of polynomial threshold functions</title>
+    <updated>2026-06-21T17:31:54Z</updated>
+    <link href="https://arxiv.org/abs/2606.16004v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16004v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the first version of Chang, Slote, Volberg, and Zhang's paper \cite{BSA_of_PTF}, the authors modify a nice recursive approach due to Kane in \cite{Correct_exponent_for_AS} where he bounded the average sensitivity of polynomial threshold functions. In \cite{BSA_of_PTF} Kane's argument was adopted to estimate the boolean surface area of polynomial threshold function. The bridge is a combinatorial averaging lemma considering all balanced partitions. The lemma serves as a substitute for an additive property of average sensitivity. With the lemma, one can apply a Kane-type algorithm to derive a recurrence. Solving the recurrence then gives an upper bound of $e^{C_d \sqrt{\log n}}$ for the boolean surface area.
+  In the second version of the same paper, the authors derive a polylog upper bound for BSA of PTFs. The difference is that they use a tail estimate for the sensitivity function. With the help of a polynomial restriction lemma in \cite{poly_restriction} they sharpen the upper bound. It is noteworthy that when applying the polynomial restriction, each coordinate is put into each part independently with equal probability. As a result, a partition does not necessarily have equal-size blocks. In other words, it may not be balanced.
+  In this note, we first investigate the effect of different partitioning. Second, we use the recursive method in the first version to derive a polylog upper bound for $\mathbb E[s(x)^η]$ where $η&lt; 1/2$. It is interesting to note the phase transition that happens at $η=1/2$ in both versions of the proof (but in a completely different form). Section 2.5 treats that.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-14T20:18:11Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Chun-Kai Tseng</name>
+    </author>
+    <author>
+      <name>Alexander Volberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08095v3</id>
+    <title>The estimates for Boolean surface area of polynomial threshold functions</title>
+    <updated>2026-10-26T17:09:35Z</updated>
+    <link href="https://arxiv.org/abs/2604.08095v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08095v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Polynomial threshold functions (PTFs) are an important low-complexity class of Boolean functions, with strong connections to learning theory and approximation theory. Recent work on learning and testing PTFs has exploited structural and isoperimetric properties of the class, especially bounds on average sensitivity, one of the central themes in the study of PTFs since the Gotsman--Linial conjecture recently solved by OpenAI, \cite{GLsol}.
+  In this work we study PTFs through the lens of the Boolean surface area (or Talagrand boundary) \[ \mathbf{BSA}[f]=\mathbb{E}|\nabla f|=\mathbb{E}\sqrt{s_{f}(x)}, \] a natural measure of vertex-boundary complexity on the discrete cube. Our main result is that every degree-$d$ PTF has polylogarithmic Boolean surface area: \[ \mathbf{BSA}[f]\le C_d(\log(en))^{C_d}. \] The proof is based on the PTF Restriction Lemma of Kabanets, Kane, and Lu \cite{KKL2017} and proceeds through a tail bound for the pointwise sensitivity. In particular, it controls all subcritical fractional moments of the sensitivity. We also record a random block partition principle for Boolean surface area and an alternative recursive argument following Kane's work \cite{DK} on average sensitivity, which independently yields the second bound \[ \mathbf{BSA}[f]\le \exp(C(d)\sqrt{\log n}). \] This bound was obtained in \cite{FSVZ} without clarifying the magnitude of $C(d)$, which we do below. For lower moments $\bE |\nabla f|^η \le C(d, η)$ there is no dependence on $n$ for $0&lt;η&lt;1$.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T11:11:06Z</published>
+    <arxiv:comment>25 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Fan Chang</name>
+    </author>
+    <author>
+      <name>Joseph Slote</name>
+    </author>
+    <author>
+      <name>Chun-Kai Tseng</name>
+    </author>
+    <author>
+      <name>Alexander Volberg</name>
+    </author>
+    <author>
+      <name>Haonan Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.13708v1</id>
+    <title>Robust learning of halfspaces under log-concave marginals</title>
+    <updated>2025-05-19T20:12:16Z</updated>
+    <link href="https://arxiv.org/abs/2505.13708v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.13708v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We say that a classifier is \emph{adversarially robust} to perturbations of norm $r$ if, with high probability over a point $x$ drawn from the input distribution, there is no point within distance $\le r$ from $x$ that is classified differently. The \emph{boundary volume} is the probability that a point falls within distance $r$ of a point with a different label. This work studies the task of computationally efficient learning of hypotheses with small boundary volume, where the input is distributed as a subgaussian isotropic log-concave distribution over $\mathbb{R}^d$.
+  Linear threshold functions are adversarially robust; they have boundary volume proportional to $r$. Such concept classes are efficiently learnable by polynomial regression, which produces a polynomial threshold function (PTF), but PTFs in general may have boundary volume $Ω(1)$, even for $r \ll 1$.
+  We give an algorithm that agnostically learns linear threshold functions and returns a classifier with boundary volume $O(r+\varepsilon)$ at radius of perturbation $r$. The time and sample complexity of $d^{\tilde{O}(1/\varepsilon^2)}$ matches the complexity of polynomial regression.
+  Our algorithm augments the classic approach of polynomial regression with three additional steps: a) performing the $\ell_1$-error regression under noise sensitivity constraints, b) a structured partitioning and rounding step that returns a Boolean classifier with error $\textsf{opt} + O(\varepsilon)$ and noise sensitivity $O(r+\varepsilon)$ simultaneously, and c) a local corrector that ``smooths'' a function with low noise sensitivity into a function that is adversarially robust.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-19T20:12:16Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Jane Lange</name>
+    </author>
+    <author>
+      <name>Arsen Vasilyan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2108.02288v1</id>
+    <title>The Gotsman-Linial Conjecture is False</title>
+    <updated>2021-08-04T21:19:31Z</updated>
+    <link href="https://arxiv.org/abs/2108.02288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2108.02288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 1991, Craig Gotsman and Nathan Linial conjectured that for all $n$ and $d$, the average sensitivity of a degree-$d$ polynomial threshold function on $n$ variables is maximized by the degree-$d$ symmetric polynomial which computes the parity function on the $d$ layers of the hypercube with Hamming weight closest to $n/2$. We refute the conjecture for almost all $d$ and for almost all $n$, and we confirm the conjecture in many of the remaining cases.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-08-04T21:19:31Z</published>
+    <arxiv:comment>Appeared in SODA 2018</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Proceedings of the 2018 Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), pp. 692-699, 2018</arxiv:journal_ref>
+    <author>
+      <name>Brynmor Chapman</name>
+    </author>
+    <arxiv:doi>10.1137/1.9781611975031.45</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1137/1.9781611975031.45" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.08141v2</id>
+    <title>Positive spectrahedra: Invariance principles and Pseudorandom generators</title>
+    <updated>2021-06-01T19:56:24Z</updated>
+    <link href="https://arxiv.org/abs/2101.08141v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.08141v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a recent work, O'Donnell, Servedio and Tan (STOC 2019) gave explicit pseudorandom generators (PRGs) for arbitrary $m$-facet polytopes in $n$ variables with seed length poly-logarithmic in $m,n$, concluding a sequence of works in the last decade, that was started by Diakonikolas, Gopalan, Jaiswal, Servedio, Viola (SICOMP 2010) and Meka, Zuckerman (SICOMP 2013) for fooling linear and polynomial threshold functions, respectively. In this work, we consider a natural extension of PRGs for intersections of positive spectrahedrons. A positive spectrahedron is a Boolean function $f(x)=[x_1A^1+\cdots +x_nA^n \preceq B]$ where the $A^i$s are $k\times k$ positive semidefinite matrices. We construct explicit PRGs that $δ$-fool "regular" width-$M$ positive spectrahedrons (i.e., when none of the $A^i$s are dominant) over the Boolean space with seed length $\textsf{poly}(\log k,\log n, M, 1/δ)$.
+  Our main technical contributions are the following: We first prove an invariance principle for positive spectrahedra via the well-known Lindeberg method. As far as we are aware such a generalization of the Lindeberg method was unknown. Second, we prove an upper bound on noise sensitivity and a Littlewood-Offord theorem for positive spectrahedra. Using these results, we give applications for constructing PRGs for positive spectrahedra, learning theory, discrepancy sets for positive spectrahedra (over the Boolean cube) and PRGs for intersections of structured polynomial threshold functions.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-20T14:05:49Z</published>
+    <arxiv:comment>63 pages. v2: Minor revisions and Improvements in presentation</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Srinivasan Arunachalam</name>
+    </author>
+    <author>
+      <name>Penghui Yao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.5425v1</id>
+    <title>Heat and Noise on Cubes and Spheres: The Sensitivity of Randomly Rotated Polynomial Threshold Functions</title>
+    <updated>2014-08-22T20:58:16Z</updated>
+    <link href="https://arxiv.org/abs/1408.5425v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.5425v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish a precise relationship between spherical harmonics and Fourier basis functions over a hypercube randomly embedded in the sphere. In particular, we give a bound on the expected Boolean noise sensitivity of a randomly rotated function in terms of its "spherical sensitivity," which we define according to its evolution under the spherical heat equation. As an application, we prove an average case of the Gotsman-Linial conjecture, bounding the sensitivity of polynomial threshold functions subjected to a random rotation.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-22T20:58:16Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Cristopher Moore</name>
+    </author>
+    <author>
+      <name>Alexander Russell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1210.1283v1</id>
+    <title>The Correct Exponent for the Gotsman-Linial Conjecture</title>
+    <updated>2012-10-04T03:08:19Z</updated>
+    <link href="https://arxiv.org/abs/1210.1283v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1210.1283v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a new bound on the average sensitivity of polynomial threshold functions. In particular we show that a polynomial threshold function of degree $d$ in at most $n$ variables has average sensitivity at most $\sqrt{n}(\log(n))^{O(d\log(d))}2^{O(d^2\log(d)}$. For fixed $d$ the exponent in terms of $n$ in this bound is known to be optimal. This bound makes significant progress towards the Gotsman-Linial Conjecture which would put the correct bound at $Θ(d\sqrt{n})$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-10-04T03:08:19Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1204.0543v2</id>
+    <title>A Structure Theorem for Poorly Anticoncentrated Gaussian Chaoses and Applications to the Study of Polynomial Threshold Functions</title>
+    <updated>2012-08-15T21:08:39Z</updated>
+    <link href="https://arxiv.org/abs/1204.0543v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1204.0543v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a structural result for degree-$d$ polynomials. In particular, we show that any degree-$d$ polynomial, $p$ can be approximated by another polynomial, $p_0$, which can be decomposed as some function of polynomials $q_1,...,q_m$ with $q_i$ normalized and $m=O_d(1)$, so that if $X$ is a Gaussian random variable, the probability distribution on $(q_1(X),...,q_m(X))$ does not have too much mass in any small box.
+  Using this result, we prove improved versions of a number of results about polynomial threshold functions, including producing better pseudorandom generators, obtaining a better invariance principle, and proving improved bounds on noise sensitivity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-04-02T21:37:49Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1107.2444v1</id>
+    <title>Private Data Release via Learning Thresholds</title>
+    <updated>2011-07-13T00:53:23Z</updated>
+    <link href="https://arxiv.org/abs/1107.2444v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1107.2444v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work considers computationally efficient privacy-preserving data release. We study the task of analyzing a database containing sensitive information about individual participants. Given a set of statistical queries on the data, we want to release approximate answers to the queries while also guaranteeing differential privacy---protecting each participant's sensitive data.
+  Our focus is on computationally efficient data release algorithms; we seek algorithms whose running time is polynomial, or at least sub-exponential, in the data dimensionality. Our primary contribution is a computationally efficient reduction from differentially private data release for a class of counting queries, to learning thresholded sums of predicates from a related class.
+  We instantiate this general reduction with a variety of algorithms for learning thresholds. These instantiations yield several new results for differentially private data release. As two examples, taking {0,1}^d to be the data domain (of dimension d), we obtain differentially private algorithms for:
+  (*) Releasing all k-way conjunctions. For any given k, the resulting data release algorithm has bounded error as long as the database is of size at least d^{O(\sqrt{k\log(k\log d)})}. The running time is polynomial in the database size.
+  (*) Releasing a (1-γ)-fraction of all parity queries. For any γ\geq \poly(1/d), the algorithm has bounded error as long as the database is of size at least \poly(d). The running time is polynomial in the database size.
+  Several other instantiations yield further results for privacy-preserving data release. Of the two results highlighted above, the first learning algorithm uses techniques for representing thresholded sums of predicates as low-degree polynomial threshold functions. The second learning algorithm is based on Jackson's Harmonic Sieve algorithm [Jackson 1997].</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-07-13T00:53:23Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Moritz Hardt</name>
+    </author>
+    <author>
+      <name>Guy N. Rothblum</name>
+    </author>
+    <author>
+      <name>Rocco A. Servedio</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0912.2709v1</id>
+    <title>The Gaussian Surface Area and Noise Sensitivity of Degree-$d$ Polynomials</title>
+    <updated>2009-12-14T19:14:03Z</updated>
+    <link href="https://arxiv.org/abs/0912.2709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0912.2709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We provide asymptotically sharp bounds for the Gaussian surface area and the Gaussian noise sensitivity of polynomial threshold functions. In particular we show that if $f$ is a degree-$d$ polynomial threshold function, then its Gaussian sensitivity at noise rate $ε$ is less than some quantity asymptotic to $\frac{d\sqrt{2ε}}π$ and the Gaussian surface area is at most $\frac{d}{\sqrt{2π}}$. Furthermore these bounds are asymptotically tight as $ε\to 0$ and $f$ the threshold function of a product of $d$ distinct homogeneous linear functions.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-12-14T19:14:03Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0909.5175v4</id>
+    <title>Bounding the Sensitivity of Polynomial Threshold Functions</title>
+    <updated>2009-11-09T23:23:19Z</updated>
+    <link href="https://arxiv.org/abs/0909.5175v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0909.5175v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We give the first non-trivial upper bounds on the average sensitivity and noise sensitivity of polynomial threshold functions. More specifically, for a Boolean function f on n variables equal to the sign of a real, multivariate polynomial of total degree d we prove
+  1) The average sensitivity of f is at most O(n^{1-1/(4d+6)}) (we also give a combinatorial proof of the bound O(n^{1-1/2^d}).
+  2) The noise sensitivity of f with noise rate δis at most O(δ^{1/(4d+6)}).
+  Previously, only bounds for the linear case were known. Along the way we show new structural theorems about random restrictions of polynomial threshold functions obtained via hypercontractivity. These structural results may be of independent interest as they provide a generic template for transforming problems related to polynomial threshold functions defined on the Boolean hypercube to polynomial threshold functions defined in Gaussian space.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-09-28T19:55:46Z</published>
+    <arxiv:comment>Fixed an important flaw. Some proofs are simplified from last version</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <arxiv:journal_ref>Theory of Computing, 10(1):1-26, 2013</arxiv:journal_ref>
+    <author>
+      <name>Prahladh Harsha</name>
+    </author>
+    <author>
+      <name>Adam Klivans</name>
+    </author>
+    <author>
+      <name>Raghu Meka</name>
+    </author>
+    <arxiv:doi>10.4086/toc.2014.v010a001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4086/toc.2014.v010a001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0909.5011v2</id>
+    <title>Average sensitivity and noise sensitivity of polynomial threshold functions</title>
+    <updated>2009-10-19T20:43:09Z</updated>
+    <link href="https://arxiv.org/abs/0909.5011v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0909.5011v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We give the first non-trivial upper bounds on the average sensitivity and noise sensitivity of degree-$d$ polynomial threshold functions (PTFs). These bounds hold both for PTFs over the Boolean hypercube and for PTFs over $\R^n$ under the standard $n$-dimensional Gaussian distribution. Our bound on the Boolean average sensitivity of PTFs represents progress towards the resolution of a conjecture of Gotsman and Linial \cite{GL:94}, which states that the symmetric function slicing the middle $d$ layers of the Boolean hypercube has the highest average sensitivity of all degree-$d$ PTFs. Via the $L_1$ polynomial regression algorithm of Kalai et al. \cite{KKMS:08}, our bounds on Gaussian and Boolean noise sensitivity yield polynomial-time agnostic learning algorithms for the broad class of constant-degree PTFs under these input distributions.
+  The main ingredients used to obtain our bounds on both average and noise sensitivity of PTFs in the Gaussian setting are tail bounds and anti-concentration bounds on low-degree polynomials in Gaussian random variables \cite{Janson:97,CW:01}. To obtain our bound on the Boolean average sensitivity of PTFs, we generalize the ``critical-index'' machinery of \cite{Servedio:07cc} (which in that work applies to halfspaces, i.e. degree-1 PTFs) to general PTFs. Together with the "invariance principle" of \cite{MOO:05}, this lets us extend our techniques from the Gaussian setting to the Boolean setting. Our bound on Boolean noise sensitivity is achieved via a simple reduction from upper bounds on average sensitivity of Boolean PTFs to corresponding bounds on noise sensitivity.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-09-28T06:45:31Z</published>
+    <arxiv:comment>added proofs for non-multilinear PTFs over Gaussian random variables, added discussion section</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Ilias Diakonikolas</name>
+    </author>
+    <author>
+      <name>Prasad Raghavendra</name>
+    </author>
+    <author>
+      <name>Rocco A. Servedio</name>
+    </author>
+    <author>
+      <name>Li-Yang Tan</name>
+    </author>
+  </entry>
+</feed>

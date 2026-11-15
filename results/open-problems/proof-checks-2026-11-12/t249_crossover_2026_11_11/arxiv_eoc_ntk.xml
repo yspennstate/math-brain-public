@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api//MJ8NEG6GNPHJBy2Anoz/hSeg1s</id>
+  <title>arXiv Query: search_query=all:"neural tangent kernel" AND all:"edge of chaos"&amp;id_list=&amp;start=0&amp;max_results=40</title>
+  <updated>2026-11-10T22:37:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22neural+tangent+kernel%22+AND+all:%22edge+of+chaos%22&amp;start=0&amp;max_results=40&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>40</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2501.14724v1</id>
+    <title>MLPs at the EOC: Concentration of the NTK</title>
+    <updated>2025-01-24T18:58:50Z</updated>
+    <link href="https://arxiv.org/abs/2501.14724v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.14724v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the concentration of the Neural Tangent Kernel (NTK) $K_θ: \mathbb{R}^{m_0} \times \mathbb{R}^{m_0} \to \mathbb{R}^{m_l \times m_l}$ of $l$-layer Multilayer Perceptrons (MLPs) $N : \mathbb{R}^{m_0} \times Θ\to \mathbb{R}^{m_l}$ equipped with activation functions $φ(s) = a s + b \vert s \vert$ for some $a,b \in \mathbb{R}$ with the parameter $θ\in Θ$ being initialized at the Edge Of Chaos (EOC). Without relying on the gradient independence assumption that has only been shown to hold asymptotically in the infinitely wide limit, we prove that an approximate version of gradient independence holds at finite width. Showing that the NTK entries $K_θ(x_{i_1},x_{i_2})$ for $i_1,i_2 \in [1:n]$ over a dataset $\{x_1,\cdots,x_n\} \subset \mathbb{R}^{m_0}$ concentrate simultaneously via maximal inequalities, we prove that the NTK matrix $K(θ) = [\frac{1}{n} K_θ(x_{i_1},x_{i_2}) : i_1,i_2 \in [1:n]] \in \mathbb{R}^{nm_l \times nm_l}$ concentrates around its infinitely wide limit $\overset{\scriptscriptstyle\infty}{K} \in \mathbb{R}^{nm_l \times nm_l}$ without the need for linear overparameterization. Our results imply that in order to accurately approximate the limit, hidden layer widths have to grow quadratically as $m_k = k^2 m$ for some $m \in \mathbb{N}+1$ for sufficient concentration. For such MLPs, we obtain the concentration bound $\mathbb{P}( \Vert K(θ) - \overset{\scriptscriptstyle\infty}{K} \Vert \leq O((Δ_φ^{-2} + m_l^{\frac{1}{2}} l) κ_φ^2 m^{-\frac{1}{2}})) \geq 1-O(m^{-1})$ modulo logarithmic terms, where we denoted $Δ_φ= \frac{b^2}{a^2+b^2}$ and $κ_φ= \frac{\vert a \vert + \vert b \vert}{\sqrt{a^2 + b^2}}$. This reveals in particular that the absolute value ($Δ_φ=1$, $κ_φ=1$) beats the ReLU ($Δ_φ=\frac{1}{2}$, $κ_φ=\sqrt{2}$) in terms of the concentration of the NTK.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-24T18:58:50Z</published>
+    <arxiv:comment>36 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dávid Terjék</name>
+    </author>
+    <author>
+      <name>Diego González-Sánchez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.13225v1</id>
+    <title>MLPs at the EOC: Spectrum of the NTK</title>
+    <updated>2025-01-22T21:12:51Z</updated>
+    <link href="https://arxiv.org/abs/2501.13225v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.13225v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the properties of the Neural Tangent Kernel (NTK) $\overset{\scriptscriptstyle\infty}{K} : \mathbb{R}^{m_0} \times \mathbb{R}^{m_0} \to \mathbb{R}^{m_l \times m_l}$ corresponding to infinitely wide $l$-layer Multilayer Perceptrons (MLPs) taking inputs from $\mathbb{R}^{m_0}$ to outputs in $\mathbb{R}^{m_l}$ equipped with activation functions $φ(s) = a s + b \vert s \vert$ for some $a,b \in \mathbb{R}$ and initialized at the Edge Of Chaos (EOC). We find that the entries $\overset{\scriptscriptstyle\infty}{K}(x_1,x_2)$ can be approximated by the inverses of the cosine distances of the activations corresponding to $x_1$ and $x_2$ increasingly better as the depth $l$ increases. By quantifying these inverse cosine distances and the spectrum of the matrix containing them, we obtain tight spectral bounds for the NTK matrix $\overset{\scriptscriptstyle\infty}{K} = [\frac{1}{n} \overset{\scriptscriptstyle\infty}{K}(x_{i_1},x_{i_2}) : i_1, i_2 \in [1:n]]$ over a dataset $\{x_1,\cdots,x_n\} \subset \mathbb{R}^{m_0}$, transferred from the inverse cosine distance matrix via our approximation result. Our results show that $Δ_φ= \frac{b^2}{a^2+b^2}$ determines the rate at which the condition number of the NTK matrix converges to its limit as depth increases, implying in particular that the absolute value ($Δ_φ=1$) is better than the ReLU ($Δ_φ=\frac{1}{2}$) in this regard.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-22T21:12:51Z</published>
+    <arxiv:comment>18 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dávid Terjék</name>
+    </author>
+    <author>
+      <name>Diego González-Sánchez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.00553v2</id>
+    <title>Neural Tangent Kernel Beyond the Infinite-Width Limit: Effects of Depth and Initialization</title>
+    <updated>2022-07-21T09:14:07Z</updated>
+    <link href="https://arxiv.org/abs/2202.00553v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.00553v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neural Tangent Kernel (NTK) is widely used to analyze overparametrized neural networks due to the famous result by Jacot et al. (2018): in the infinite-width limit, the NTK is deterministic and constant during training. However, this result cannot explain the behavior of deep networks, since it generally does not hold if depth and width tend to infinity simultaneously. In this paper, we study the NTK of fully-connected ReLU networks with depth comparable to width. We prove that the NTK properties depend significantly on the depth-to-width ratio and the distribution of parameters at initialization. In fact, our results indicate the importance of the three phases in the hyperparameter space identified in Poole et al. (2016): ordered, chaotic and the edge of chaos (EOC). We derive exact expressions for the NTK dispersion in the infinite-depth-and-width limit in all three phases and conclude that the NTK variability grows exponentially with depth at the EOC and in the chaotic phase but not in the ordered phase. We also show that the NTK of deep networks may stay constant during training only in the ordered phase and discuss how the structure of the NTK matrix changes during training.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-01T16:52:16Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Proceedings of the 39th International Conference on Machine Learning, PMLR 162:19522-19560, 2022</arxiv:journal_ref>
+    <author>
+      <name>Mariia Seleznova</name>
+    </author>
+    <author>
+      <name>Gitta Kutyniok</name>
+    </author>
+  </entry>
+</feed>

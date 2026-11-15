@@ -1,0 +1,19 @@
+# t104_gpu_hsearch.py 6 1024 300 4 22 --cpu --control 10 (laptop CPU, 12 Nov)
+device cpu  n 6  pop 1024  iters 300  minutes 4  seed 22
+round   0 H     ends 1024  below -1e-10: 0  min +4.147793e-12 (slack +3.845e-06 gap12 1.00e+00)  min ratio 0.00069 (slack 0.0027)  26s
+round   0 c10   ends 1024  below -1e-10: 85  min -4.711764e-08 (slack +7.664e-04 gap12 1.00e+00)  min ratio -0.00004 (slack 0.0011)  63s
+   NEGATIVE c10 S -4.711764e-08 slack +7.6639e-04 gap12 1.00e+00 weights 14:0.19985272 24:0.19999226 34:0.19997671 45:0.20014952 46:0.20002879
+   NEGATIVE c10 S -4.708855e-08 slack +7.9131e-04 gap12 1.00e+00 weights 13:0.20002893 23:0.19999322 34:0.19984693 35:0.19998511 36:0.20014580
+   NEGATIVE c10 S -4.707412e-08 slack +7.7191e-04 gap12 1.00e+00 weights 13:0.19999486 23:0.20014762 34:0.20003066 35:0.19985154 36:0.19997531
+round   1 H     ends 1024  below -1e-10: 0  min +1.374900e-12 (slack +3.248e-06 gap12 1.00e+00)  min ratio 0.00050 (slack 0.0039)  128s
+round   1 c10   ends 1024  below -1e-10: 85  min -4.713028e-08 (slack +7.797e-04 gap12 1.00e+00)  min ratio -0.00003 (slack 0.0010)  173s
+   NEGATIVE c10 S -4.713028e-08 slack +7.7972e-04 gap12 1.00e+00 weights 12:0.19997289 23:0.20001909 24:0.20000632 25:0.19985002 26:0.20015168
+   NEGATIVE c10 S -4.712767e-08 slack +7.9195e-04 gap12 1.00e+00 weights 12:0.20014556 23:0.20001218 24:0.19997409 25:0.19984708 26:0.20002108
+   NEGATIVE c10 S -4.712431e-08 slack +7.9534e-04 gap12 1.00e+00 weights 15:0.20002690 25:0.20014790 35:0.20000021 45:0.19984637 56:0.19997862
+round   2 H     ends 1024  below -1e-10: 0  min +2.427392e-12 (slack +5.183e-06 gap12 1.00e+00)  min ratio 0.00079 (slack 0.0061)  204s
+round   2 c10   ends 1024  below -1e-10: 84  min -4.714417e-08 (slack +7.916e-04 gap12 1.00e+00)  min ratio -0.00004 (slack 0.0010)  248s
+   NEGATIVE c10 S -4.714417e-08 slack +7.9163e-04 gap12 1.00e+00 weights 16:0.19984734 26:0.20002540 36:0.19998511 46:0.20015299 56:0.19998916
+   NEGATIVE c10 S -4.707715e-08 slack +8.0685e-04 gap12 1.00e+00 weights 12:0.20000465 23:0.20001980 24:0.19997214 25:0.19984489 26:0.20015852
+   NEGATIVE c10 S -4.706375e-08 slack +7.6794e-04 gap12 1.00e+00 weights 14:0.20003147 24:0.19997399 34:0.19999333 45:0.20014866 46:0.19985256
+totals: H ends 3072 below -1e-10 0; control ends 3072 below -1e-10 254
+done in 248s

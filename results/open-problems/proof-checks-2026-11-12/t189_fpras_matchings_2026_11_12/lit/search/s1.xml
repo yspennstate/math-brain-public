@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/bvtBj3MLv2oqvTAFUSv3t5BgxtQ</id>
+  <title>arXiv Query: search_query=all:"perfect matchings" AND all:"general graphs" AND (all:FPRAS OR all:"approximation scheme" OR all:"approximately counting")&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-11-12T00:55:23Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22perfect+matchings%22+AND+(all:%22general+graphs%22+AND+(all:FPRAS+OR+(all:%22approximation+scheme%22+OR+all:%22approximately+counting%22)))&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.26803v1</id>
+    <title>A simplified proof of the FPRAS for counting perfect matchings</title>
+    <updated>2026-10-19T17:46:19Z</updated>
+    <link href="https://arxiv.org/abs/2610.26803v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.26803v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give a simplified, self-contained proof of OpenAI's FPRAS for counting perfect matchings in general graphs. As in the original proof, we use a restricted Poincaré inequality for two matchings to sample weighted perfect matchings and estimate their total weight. We simplify the proof of this inequality by isolating parts of alternating cycles directly on the original vertex set and controlling the resulting error terms. This avoids the auxiliary vertices and tree constructions used in the original proof. The argument preserves the required parameter bounds and yields the same FPRAS guarantee.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-19T17:46:19Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Chenghua Liu</name>
+    </author>
+    <author>
+      <name>Boning Meng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.06393v1</id>
+    <title>Faster Exponential-Time Approximate Counting via Bounded Self-Reductions</title>
+    <updated>2026-07-07T15:25:53Z</updated>
+    <link href="https://arxiv.org/abs/2607.06393v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.06393v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give faster exponential-time randomised approximation algorithms for counting problems where polynomial-time approximation is unavailable and exact exponential-time counting remains expensive. For general \(n\)-vertex graphs, our independent-set counter runs in \(O^{\ast}(1.1869^{n})\) time, improving the previous \(O^{\ast}(1.2041^{n})\) general-graph bound. For \(n\)-variable \#\textsc{2-SAT}, we obtain an \(O^{\ast}(1.2373^{n})\)-time approximation algorithm, narrowly below Wahlstr{ö}m's currently cited \(O^{\ast}(1.2377^{n})\) variable-parameter exact bound.
+  The new algorithmic point is to take the square root after decomposition. For a single bounded unweighted self-reduction with \(f(x)\) positive leaves and recursion-compatible upper bound \(b(x)\), an enumerate-or-sample estimator gives an \((\varepsilon,δ)\)-approximation in \[
+  O^{\ast}\!\left(\sqrt{b(x)}\,\varepsilon^{-2}\log \tfrac1δ\right) \] time. After preprocessing decomposes an input into many bounded cores, the combined estimator pays \[
+  O^{\ast}\!\left(\sqrt{\sum_i b_i(x_i)}\,\varepsilon^{-2}\log \tfrac1δ\right), \] rather than estimating the cores separately at cost \(\sum_i \sqrt{b_i(x_i)}\).
+  The same conversion improves the bases for counting maximal cliques, minimal separators, and perfect matchings in subcubic graphs. Bounded unweighted self-reductions provide the formal language; at the level of counting classes, the resulting unweighted formulation has the same Karp closure as TotP. With explicit recursion-tree access, the framework yields black-box quantum speed-ups.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-07T15:25:53Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Katie Clinch</name>
+    </author>
+    <author>
+      <name>Serge Gaspers</name>
+    </author>
+    <author>
+      <name>Simon Mackenzie</name>
+    </author>
+    <author>
+      <name>Qi Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1712.07504v1</id>
+    <title>On Counting Perfect Matchings in General Graphs</title>
+    <updated>2017-12-20T14:53:56Z</updated>
+    <link href="https://arxiv.org/abs/1712.07504v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1712.07504v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Counting perfect matchings has played a central role in the theory of counting problems. The permanent, corresponding to bipartite graphs, was shown to be #P-complete to compute exactly by Valiant (1979), and a fully polynomial randomized approximation scheme (FPRAS) was presented by Jerrum, Sinclair, and Vigoda (2004) using a Markov chain Monte Carlo (MCMC) approach. However, it has remained an open question whether there exists an FPRAS for counting perfect matchings in general graphs. In fact, it was unresolved whether the same Markov chain defined by JSV is rapidly mixing in general. In this paper, we show that it is not. We prove torpid mixing for any weighting scheme on hole patterns in the JSV chain. As a first step toward overcoming this obstacle, we introduce a new algorithm for counting matchings based on the Gallai-Edmonds decomposition of a graph, and give an FPRAS for counting matchings in graphs that are sufficiently close to bipartite. In particular, we obtain a fixed-parameter tractable algorithm for counting matchings in general graphs, parameterized by the greatest "order" of a factor-critical subgraph.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-12-20T14:53:56Z</published>
+    <arxiv:comment>To appear in LATIN 2018</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Daniel Štefankovič</name>
+    </author>
+    <author>
+      <name>Eric Vigoda</name>
+    </author>
+    <author>
+      <name>John Wilmes</name>
+    </author>
+  </entry>
+</feed>

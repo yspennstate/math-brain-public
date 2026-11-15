@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/QkaqIyD+Kj+a/d2/kHTCYcCt1/4</id>
+  <title>arXiv Query: search_query=abs:"random polynomials" AND abs:irreducible AND abs:coefficients&amp;id_list=&amp;start=0&amp;max_results=25</title>
+  <updated>2026-11-11T23:54:47Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22random+polynomials%22+AND+(abs:irreducible+AND+abs:coefficients)&amp;start=0&amp;max_results=25&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+  <opensearch:totalResults>11</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2611.02039v1</id>
+    <title>Factor Closure in Noncommutative Algebraic Complexity</title>
+    <updated>2026-11-01T16:35:40Z</updated>
+    <link href="https://arxiv.org/abs/2611.02039v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.02039v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that $\VPnc$ is closed under taking factors over every field. If a noncommutative circuit of size $s$ computes a nonconstant polynomial of degree at most $D$, then each left or right factor has a circuit of size $O(sD^3)$. A central factor $g$ in a decomposition $f=agb$, with nonconstant outer factors $a,b$, has a circuit of size $O(sD^6)$.
+  The proof uses a small weighted nondeterministic finite automaton (NFA) with replacement labels. Given $f=gh$, its labels depend on a word of maximum degree in $h$ and the coefficients of its suffixes. A pairing of accepting paths proves that the induced linear map $T$ satisfies $T(gh)=g$. Matrix substitution implements $T$ in a circuit. Applying the same substitution to a Boolean-sum verifier proves $\VNPnc$ closure.
+  The construction also proves formula closure. The automaton has one copying state and, after leaving it, uses only scalar replacements. This structure gives formulas of size $O(s^2)$ for one-sided factors and $O(s^4)$ for central factors of a size-$s$ formula. The same map proves that polynomial-size noncommutative algebraic branching programs are closed under taking factors. Polynomial-size ABP factorizations over finite fields are already known from~\cite{AJ25}.
+  These are arithmetic size bounds, with arbitrary field constants at unit cost, including over $\Q$. Over finite fields, combining the formula construction with~\cite{AJ22} gives randomized polynomial-time complete factorization of formula inputs, with factors output as formulas. For polynomial-degree circuit inputs, we obtain polynomial-length succinct ABP descriptions with polynomial-time edge queries. We also give two algorithms that output complete ordered irreducible factorizations as polynomial-size circuits: a deterministic $\FP^{\SigTwo}$ algorithm and a zero-error randomized algorithm with an NP oracle and expected polynomial running time.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-01T16:35:40Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>V. Arvind</name>
+    </author>
+    <author>
+      <name>Pushkar S. Joglekar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.03292v1</id>
+    <title>The distribution of prime values of random polynomials</title>
+    <updated>2025-12-02T23:06:34Z</updated>
+    <link href="https://arxiv.org/abs/2512.03292v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.03292v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Bateman--Horn Conjecture predicts how often an irreducible polynomial $f(x) \in \mathbb{Z}[x]$ assumes prime values. We demonstrate that with sufficient averaging in the coefficients of $f$ (viz. exponential in the size of the inputs), one can not only prove Bateman--Horn results on average but also pin down precise information about the distribution of prime values. We show that 100\% of polynomials (in an $L^k$ sense for all $k \in \mathbb{N}$) satisfy the Bateman--Horn Conjecture, and that that 100\% of polynomials (in an $L^2$ sense) satisfy an appropriate polynomial analogue of the Hardy--Littlewood Prime Tuples Conjecture. We use the latter to prove that 100\% of polynomials satisfy the appropriate analogue of the Poisson Tail Conjecture, in the sense that the distribution of the gaps between consecutive prime values around the average spacing is Poisson.
+  We also study the frequencies of sign patterns of the Liouville function evaluated at the consecutive outputs of $f$; viewing $f$ as a random variable, we establish the limiting distribution for every sign pattern. The Chowla problem along random polynomials is a special case. A key input behind all of our arguments is Leng's recent quantitative work on the higher-order Fourier uniformity of the von Mangoldt and Möbius functions (in turn relying on Leng, Sah, and Sawhney's quantitative inverse theorem for the Gowers norms).</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-02T23:06:34Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Noah Kravitz</name>
+    </author>
+    <author>
+      <name>Katharine Woo</name>
+    </author>
+    <author>
+      <name>Max Wenqiang Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.16814v1</id>
+    <title>Irreducibility of Polynomials with Square Coefficients over Finite Fields</title>
+    <updated>2024-10-22T08:41:01Z</updated>
+    <link href="https://arxiv.org/abs/2410.16814v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.16814v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a random polynomial of degree $n$ over the finite field $\mathbb{F}_q$, where the coefficients are independent and identically distributed and uniformly chosen from the squares in $\mathbb{F}_q$. Our main result demonstrates that the likelihood of such a polynomial being irreducible approaches $1/n + O(q^{-1/2})$ as the field size $q$ grows infinitely large. The analysis we employ also applies to polynomials with coefficients selected from other specific sets.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-22T08:41:01Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Lior Bary-Soroker</name>
+    </author>
+    <author>
+      <name>Roy Shmueli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.14862v3</id>
+    <title>Probabilistic Galois Theory in Function Fields</title>
+    <updated>2024-07-04T12:22:59Z</updated>
+    <link href="https://arxiv.org/abs/2311.14862v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.14862v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the irreducibility and Galois group of random polynomials over function fields. We prove that a random polynomial $f=y^n+\sum_{i=0}^{n-1}a_i(x)y^i\in\mathbb F_q[x][y]$ with i.i.d coefficients $a_i$ taking values in the set $\{a(x)\in\mathbb{F}_q[x]: \mathrm{deg}\, a\leq d\}$ with uniform probability, is irreducible with probability tending to $1-\frac{1}{q^d}$ as $n\to\infty$, where $d$ and $q$ are fixed. We also prove that with the same probability, the Galois group of this random polynomial contains the alternating group $A_n$. Moreover, we prove that if we assume a version of the polynomial Chowla conjecture over $\mathbb{F}_q[x]$, then the Galois group of this polynomial is actually equal to the symmetric group $S_n$ with probability tending to $1-\frac{1}{q^d}$. We also study the other possible Galois groups occurring with positive limit probability. Finally, we study the same problems with $n$ fixed and $d\to\infty$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-24T22:39:42Z</published>
+    <arxiv:comment>v2: changed conditional results to depend on a more standard version of Chowla's conjecture. Added references acknowledgments. Fixed small errors, typos and style issues. v3: fixed a few small errors</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Alexei Entin</name>
+    </author>
+    <author>
+      <name>Alexander Popov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.08233v2</id>
+    <title>On the probability of irreducibility of random polynomials with integer coefficients</title>
+    <updated>2022-04-28T02:54:30Z</updated>
+    <link href="https://arxiv.org/abs/2203.08233v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.08233v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article we study asymptotic behavior of the probability that a random monic polynomial with integer coefficients is irreducible over the integers. We consider the cases where the coefficients grow together with the degree of the random polynomials. Our main result is a generalization of a theorem proved by Konyagin in 1999. We also generalize Hilbert's Irreducibility Theorem and present an analog of this result with centered Binomial distributed coefficients.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-15T20:14:56Z</published>
+    <arxiv:comment>17 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Grigory Terlov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.06156v2</id>
+    <title>Universality for low degree factors of random polynomials over finite fields</title>
+    <updated>2022-02-23T04:08:13Z</updated>
+    <link href="https://arxiv.org/abs/2201.06156v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.06156v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the counts of low degree irreducible factors of a random polynomial $f$ over $\mathbb{F}_q$ with independent but non-uniform coefficients behave like that of a uniform random polynomial, exhibiting a form of universality for random polynomials over finite fields. Our strongest results require various assumptions on the parameters, but we are able to obtain results requiring only $q=p$ a prime with $p\leq \exp({n^{1/13}})$ where $n$ is the degree of the polynomial. Our proofs use Fourier analysis, and rely on tools recently applied by Breuillard and Varjú to study the $ax+b$ process, which show equidistribution for $f(α)$ at a single point. We extend this to handle multiple roots and the Hasse derivatives of $f$, which allow us to study the irreducible factors with multiplicity.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-16T23:33:19Z</published>
+    <arxiv:comment>v2: updated introduction, 34 pages, 4 figures. Comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Jimmy He</name>
+    </author>
+    <author>
+      <name>Huy Tuan Pham</name>
+    </author>
+    <author>
+      <name>Max Wenqiang Xu</name>
+    </author>
+    <arxiv:doi>10.1093/imrn/rnac239</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/imrn/rnac239" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.14567v3</id>
+    <title>Irreducibility of random polynomials: general measures</title>
+    <updated>2023-06-02T17:55:36Z</updated>
+    <link href="https://arxiv.org/abs/2007.14567v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.14567v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $μ$ be a probability measure on $\mathbb{Z}$ that is not a Dirac mass and that has finite support. We prove that if the coefficients of a monic polynomial $f(x)\in\mathbb{Z}[x]$ of degree $n$ are chosen independently at random according to $μ$ while ensuring that $f(0)\neq0$, then there is a positive constant $θ=θ(μ)$ such that $f(x)$ has no divisors of degree $\le θn$ with probability that tends to 1 as $n\to\infty$.
+  Furthermore, in certain cases, we show that a random polynomial $f(x)$ with $f(0)\neq0$ is irreducible with probability tending to 1 as $n\to\infty$. In particular, this is the case if $μ$ is the uniform measure on a set of at least 35 consecutive integers, or on a subset of $[-H,H]\cap\mathbb{Z}$ of cardinality $\ge H^{4/5}(\log H)^2$ with $H$ sufficiently large. In addition, in all of these settings, we show that the Galois group of $f(x)$ is either $\mathcal{A}_n$ or $\mathcal{S}_n$ with high probability.
+  Finally, when $μ$ is the uniform measure on a finite arithmetic progression of at least two elements, we prove a random polynomial $f(x)$ as above is irreducible with probability $\geδ$ for some constant $δ=δ(μ)&gt;0$. In fact, if the arithmetic progression has step 1, we prove the stronger result that the Galois group of $f(x)$ is $\mathcal{A}_n$ or $\mathcal{S}_n$ with probability $\geδ$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-29T03:12:28Z</published>
+    <arxiv:comment>65 pages. Minor corrections. Final version, to apper in Inventiones Mathematicae</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Lior Bary-Soroker</name>
+    </author>
+    <author>
+      <name>Dimitris Koukoulopoulos</name>
+    </author>
+    <author>
+      <name>Gady Kozma</name>
+    </author>
+    <arxiv:doi>10.1007/s00222-023-01193-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00222-023-01193-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.13360v2</id>
+    <title>Irreducibility of random polynomials of large degree</title>
+    <updated>2019-10-16T12:26:29Z</updated>
+    <link href="https://arxiv.org/abs/1810.13360v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.13360v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider random polynomials with independent identically distributed coefficients with a fixed law. Assuming the Riemann hypothesis for Dedekind zeta functions, we prove that such polynomials are irreducible and their Galois groups contain the alternating group with high probability as the degree goes to infinity. This settles a conjecture of Odlyzko and Poonen conditionally on RH for Dedekind zeta functions.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-31T15:55:19Z</published>
+    <arxiv:comment>50 pages, this is the accepted version for publication in Acta Math., minor changes and corrections based on referees' reports</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Acta Math. 223(2): 195-249 (December 2019)</arxiv:journal_ref>
+    <author>
+      <name>Emmanuel Breuillard</name>
+    </author>
+    <author>
+      <name>Péter P. Varjú</name>
+    </author>
+    <arxiv:doi>10.4310/ACTA.2019.v223.n2.a1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/ACTA.2019.v223.n2.a1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.05165v2</id>
+    <title>Irreducible polynomials of bounded height</title>
+    <updated>2019-08-08T19:22:30Z</updated>
+    <link href="https://arxiv.org/abs/1710.05165v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.05165v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of this paper is to prove that a random polynomial with i.i.d. random coefficients taking values uniformly in $\{1,\ldots, 210\}$ is irreducible with probability tending to $1$ as the degree tends to infinity. Moreover, we prove that the Galois group of the random polynomial contains the alternating group, again with probability tending to $1$.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-14T11:44:41Z</published>
+    <arxiv:comment>Some revisions</arxiv:comment>
+    <arxiv:primary_category term="math.NT"/>
+    <arxiv:journal_ref>Duke Math. J. 169, no. 4 (2020), 579-598</arxiv:journal_ref>
+    <author>
+      <name>Lior Bary-Soroker</name>
+    </author>
+    <author>
+      <name>Gady Kozma</name>
+    </author>
+    <arxiv:doi>10.1215/00127094-2019-0047</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1215/00127094-2019-0047" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.03709v1</id>
+    <title>Irreducibility of Random Polynomials</title>
+    <updated>2017-05-10T11:51:28Z</updated>
+    <link href="https://arxiv.org/abs/1705.03709v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.03709v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the probability that a random polynomial with integer coefficients is reducible when factored over the rational numbers. Using computer-generated data, we investigate a number of different models, including both monic and non-monic polynomials. Our data supports conjectures made by Odlyzko and Poonen and by Konyagin, and we formulate a universality heuristic and new conjectures that connect their work with Hilbert's Irreducibility Theorem and work of van der Waerden. The data indicates that the probability that a random polynomial is reducible divided by the probability that there is a linear factor appears to approach a constant and, in the large-degree limit, this constant appears to approach one. In cases where the model makes it impossible for the random polynomial to have a linear factor, the probability of reducibility appears to be close to the probability of having a non-linear, low-degree factor. We also study characteristic polynomials of random matrices with +1 and -1 entries.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-10T11:51:28Z</published>
+    <arxiv:comment>14 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Christian Borst</name>
+    </author>
+    <author>
+      <name>Evan Boyd</name>
+    </author>
+    <author>
+      <name>Claire Brekken</name>
+    </author>
+    <author>
+      <name>Samantha Solberg</name>
+    </author>
+    <author>
+      <name>Melanie Matchett Wood</name>
+    </author>
+    <author>
+      <name>Philip Matchett Wood</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.01938v2</id>
+    <title>Low-degree factors of random polynomials</title>
+    <updated>2018-05-22T14:57:09Z</updated>
+    <link href="https://arxiv.org/abs/1608.01938v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.01938v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the question of whether a random polynomial with integer coefficients is likely to be irreducible, we study the probability that a monic polynomial with integer coefficients has a low-degree factor over the integers, which is equivalent to having a low-degree algebraic root. It is known in certain cases that random polynomials with integer coefficients are very likely to be irreducible, and our project can be viewed as part of the general program of testing whether this is a universal behavior exhibited by many random polynomial models.
+  Our main result shows that pointwise delocalization of the roots of a random polynomial can be used to imply that the polynomial is unlikely to have a low-degree factor over the integers. We apply our main result to a number of models of random polynomials, including characteristic polynomials of random matrices, where strong delocalization results are known. Studying a variety of random matrix models---including iid matrices, symmetric matrices, elliptical matrices, and adjacency matrices of random graphs and digraphs---we show that, for a random square matrix with integer entries, the characteristic polynomial is unlikely to have a low-degree factor over the integers, which is equivalent to the matrix having an eigenvalue that is algebraic with low degree. Having a low-degree algebraic eigenvalue generalizes the questions of whether the matrix has a rational eigenvalue and whether the matrix is singular (i.e., has an eigenvalue equal to zero).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-05T17:01:25Z</published>
+    <arxiv:comment>Theorem 2.1 strengthened and improved following comments from a referee. 30 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Sean O'Rourke</name>
+    </author>
+    <author>
+      <name>Philip Matchett Wood</name>
+    </author>
+  </entry>
+</feed>
