@@ -1,0 +1,21 @@
+VERDICT: PROVED sparse injection energy bound on the full cubic lattice, with sharp displacement power and sparsity threshold
+
+The round 4 boundary-coloring estimate holds. LOG.md gives an independent partition-sum recheck, including its continuous-time coefficient and conditional magnetization implication. The initial literature check found the same previously known solution claim; no new resolution or correction was established. T078 remains unproved by this work.
+
+The new result in [PROOF.md](PROOF.md) is spatial. Suppose m source labels on Z^3 satisfy the local counting bound L(1+r)^alpha, with 0<=alpha<1. Each label may distribute mass at most one within distance R. There are unit currents from the injection sites to infinity whose aggregate energy, counting each undirected edge once, is at most
+
+    1000 L (1+R)^alpha m/(1-alpha).
+
+The same estimate holds for the killed Dirichlet problem in every finite containing volume. Its proof derives the lattice Green bound explicitly, then uses a counting integral. It implies a linear capacity lower bound for sparse sets. The displacement exponent alpha is necessary: labels at floor(j^(1/alpha)) can send all mass to zero and require energy at least m^2/6. At alpha=1 a line segment has energy at least m log(m)/(16pi^2), ruling out a uniform linear estimate even with R=0. No novelty claim is made for these potential-theory arguments.
+
+This verifies the unperforated three-dimensional special case of the spatial injection estimate identified in [RegularKernels.lean](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/MathematicalPhysics/Heisenberg/RegularKernels.lean), and allows every alpha<1 in that case. The source uses alpha=1/100 and additionally handles removed sites under regularity hypotheses. Those hypotheses and the detour construction remain unverified. The full-lattice Green comparison cannot prove that extension: removing conductances can increase the required energy. No source error or improved temperature threshold is claimed.
+
+Checks: a dyadic derivation independently verifies the displacement power and exponent threshold; two different Fourier integration regions verify the endpoint logarithm; the one-site test and the walk's initial holding time independently check the factor six. Edge summation and the Fourier symbol check the energy convention. All estimates and endpoint cases are written out in PROOF.md.
+
+Commands: `rg --files` and `ls -la` inventoried prior work; `OMP_NUM_THREADS=1 nice -n 15 cat ...`, `sed ...`, and `wc -l -c ...` read and checked files. Web search/open performed the brief literature check; read-only GitHub connector fetch/search located the spatial dependencies. The immutable RegularKernels.lean content was fetched and matched to the inspected main-branch content. `apply_patch` wrote only this folder. The sandbox denied priority adjustments; no numerical script, heavy program, Lean build, git command, or subagent was run. No shared memory/checklist/mesh store was mutated because the task forbids writes outside this folder.
+
+Access failures: the previously readable manuscript PDF and several guessed source paths failed; the actual source directory and theorem locations were subsequently found with the connector. These failures supply no evidence against the manuscript. The proof here is independent of the manuscript's correctness.
+
+Next worker: audit `regular_component_envelope` in [RegularComponents.lean](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/MathematicalPhysics/Heisenberg/RegularComponents.lean) and `connected_envelope` in [FlowCongestion.lean](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/MathematicalPhysics/Heisenberg/FlowCongestion.lean). These are the calls in `regular_injection_energy` that replace the full lattice by the complement of removed sites. Establish a uniform current construction under their exact assumptions, or locate a failed assumption. The source's random regularity and return comparison would still require separate checks afterward.
+
+Task: “take the NEXT checkable step on this problem, building on that work” — session start 2026-11-15 08:03 +04; exact user-message clock time unavailable.

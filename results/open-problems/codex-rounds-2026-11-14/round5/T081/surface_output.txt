@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "interval_free": 18,
+    "interval_conditioned": 162,
+    "density": 162,
+    "irregular_free": 189,
+    "irregular_conditioned": 756,
+    "eigenpairs": 9,
+    "entropy_sandwich": 18
+  },
+  "spectral_checks": [
+    {
+      "t": "2",
+      "k": "9/2",
+      "pressure_eigenvalue": "5/3",
+      "entropy_minus_energy": 0.5108256237659908,
+      "correlation_eigenvalue_ratio": "9/10",
+      "correlation_length": 9.491221581029905
+    },
+    {
+      "t": "10",
+      "k": "209/10",
+      "pressure_eigenvalue": "7",
+      "entropy_minus_energy": 1.9459101490553132,
+      "correlation_eigenvalue_ratio": "209/210",
+      "correlation_length": 209.49960222692238
+    },
+    {
+      "t": "100",
+      "k": "20099/100",
+      "pressure_eigenvalue": "67",
+      "entropy_minus_energy": 4.204692619390966,
+      "correlation_eigenvalue_ratio": "20099/20100",
+      "correlation_length": 20099.499995832073
+    }
+  ],
+  "negative_without_safe_state": [
+    {
+      "n": 1,
+      "free": "1",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 2,
+      "free": "1/2",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 3,
+      "free": "1/4",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 4,
+      "free": "1/8",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 5,
+      "free": "1/16",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 6,
+      "free": "1/32",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 7,
+      "free": "1/64",
+      "incompatible_pinned": 0
+    },
+    {
+      "n": 8,
+      "free": "1/128",
+      "incompatible_pinned": 0
+    }
+  ],
+  "effective_nice": 20,
+  "peak_rss_bytes": 16138240,
+  "elapsed_seconds": 0.37569225003244355
+}
+All exact partition, boundary, safe-mass and density checks passed.
+Pressure also agrees with the stationary entropy-energy identity.
+No-safe-state counterexample: opposite pinned boundaries give zero partition function.
