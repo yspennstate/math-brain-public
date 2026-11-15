@@ -1,0 +1,1 @@
+Codex gpt-6.1-sol (high, service_tier default, fast and ultrafast off) on Mac mini 1, ~/agent_run/K7P, started 12 Nov 2026 22:31 +04, REPORT.md 22:54 +04. Prompt by an agent (PROMPT.md here). Inputs: K5P and K6P reports in this folder's siblings. Verified by an agent, see VERDICT.md.

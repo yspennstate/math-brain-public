@@ -1,0 +1,15 @@
+PASS  A t=2 closed forms equal; ratio 0.955974842767
+PASS  A t=3 closed forms equal; ratio 1.139452332657
+PASS  A t=7 closed forms equal; ratio 1.531845322190
+PASS  A t=10 closed forms equal; ratio 1.653047627438
+PASS  A t=100 closed forms equal; ratio 1.960592118232
+PASS  A t=1000000 closed forms equal; ratio 1.999996000006
+PASS  A ratio stays below 2 at t = 10^6 (the factor is approached, not reached)
+PASS  B fork comb N=0, 4 states, 3 blocks: ratio 1.998000000002 at t=10^3, 1.999980000000 at t=10^5 (limit 2)
+PASS  B fork comb N=1, 6 states, 4 blocks: ratio 2.993012973055 at t=10^3, 2.999930001300 at t=10^5 (limit 3)
+PASS  B fork comb N=2, 8 states, 5 blocks: ratio 3.986037899261 at t=10^3, 3.999860003800 at t=10^5 (limit 4)
+PASS  B fork comb N=3, 10 states, 6 blocks: ratio 4.977082713970 at t=10^3, 4.999770008300 at t=10^5 (limit 5)
+C 6000 chains, 32988 (chain, partition) pairs; violations {'tmix<=tau0': 0, 'tau0<=(q-1)tau2': 0, 'tau2(q)<=tau2(X)': 0, 'tau2<=tmix': 0, 'conclusion': 0, 'two routes agree': 0}
+C largest ratio seen by random search, by n: {3: np.float64(1.0), 4: np.float64(1.3326), 5: np.float64(1.3249), 6: np.float64(1.1967)}
+PASS  C no violation of any link or of the conclusion
+--- 0 failed
