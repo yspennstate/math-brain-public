@@ -1,0 +1,103 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-tree-gtw-mathews-source-gaps-002",
+  "entries": [
+    {
+      "key": "guo-tang-wei-biased-frog-loop-erasure-lower-coupling",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "guo-tang-wei-biased-frog-loop-erasure-lower-coupling",
+      "kind": "theorem",
+      "title": "Guo–Tang–Wei biased frog model lower coupling: loop erasure and converted inward probabilities",
+      "statement": "Fix integer d>=2 and original inward drift p in (0,1/2). In the ordinary frog model on the infinite rooted d-ary tree start one active root frog and one sleeper per non-root vertex, with independent walks moving to the parent with probability p and otherwise to a uniformly chosen child, and a reflecting root. Set pi=p(d-1)/(d-(d+1)p). A newborn frog in the coupled non-backtracking model moves up with probability pi; after an upward move its next upward probability is beta=pi/(pi+(1-pi)(d-1)/d)=p/(1-p), with its remaining probability divided uniformly among the other d-1 children. After a downward move it always moves downward, and root returns are killed. Additionally cap entry into each descendant subtree at one frog to obtain the self-similar model. Its root-return count is stochastically dominated by the ordinary model root-return count. Thus recurrence of this lower model implies ordinary recurrence. The parameter pi is the newborn probability, not the original drift p.",
+      "proof_text": "Embed the rooted tree in an oriented homogeneous tree and assign independent biased paths. Trim portions outside the rooted tree to get paths that can be coupled below the reflecting ordinary model. Erase loops and terminate at the first root visit; the erased path is contained in the original range and activates no additional sites. GTW Lemma 2.1 computes its initial upward probability pi and the conditional continuation probability beta, including paths whose upward run reaches the root. Enforcing a single entry into each subtree removes further frogs. These pathwise comparisons give the root-visit stochastic domination in Proposition 1.4.",
+      "assumptions": [
+        "Integer d>=2; original drift 0<p<1/2",
+        "One active root frog, one sleeping frog at each non-root vertex",
+        "Independent common biased walk laws",
+        "Root stopping and single-entry restrictions in the lower model"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2008.09226",
+        "url": "https://arxiv.org/pdf/2008.09226",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (mathematical paraphrase)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Proposition 1.4, manuscript p. 3; Section 2, Lemma 2.1, pp. 4-7",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "guo-tang-wei-ternary-single-entry-frog-pgf-equation",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "guo-tang-wei-ternary-single-entry-frog-pgf-equation",
+      "kind": "theorem",
+      "title": "Guo–Tang–Wei ternary self-similar frog root-return PGF equation",
+      "statement": "On the rooted 3-ary tree take one active root frog and one sleeper at each non-root vertex. In the single-entry self-similar non-backtracking model, a newborn has inward probability u in (0,1/2], a frog continuing upward has inward probability beta=u/(u+2(1-u)/3), and outward paths subsequently stay outward. Frogs are killed at root returns and excess subtree entries. Let gamma=(1-beta)/2, q=(1-u)/3, V be total root returns, and f(x)=E[x^V] for 0<=x<1 with x^infinity=0. For A=f(beta*x+2*gamma), C=f(beta*x+gamma), B=f(beta*x), the exact fixed-point identity is f(x)=(u*x+3*q)*A^3+(u*x+q)*B*(1-A^2)+2*(1-A)*[(u*x+2*q)*C^2-(u*x+q)*B*C]. This is the d=3 expansion of the published self-consistency equation, and its u denotes the newborn non-backtracking probability.",
+      "proof_text": "GTW Proposition 3.1 states the root-return fixed point. Equations (6)-(8) specialize to P1=B, P2=C^2-CB, P3=A^3-A^2B-2AP2, Q2=C^2 and Q3=A^3-AC^2. The d=3 transform is (u*x+q)(P1+2P2+P3)+2q(Q2+Q3); expanding gives the statement. The polynomials enumerate the reachable child-subtree set in a star exploration. Prospective subtrees have independent return counts, while their activation events can be dependent; the recursive subtraction handles these dependencies.",
+      "assumptions": [
+        "Rooted infinite ternary tree; one sleeper per non-root vertex",
+        "Newborn inward parameter 0<u<=1/2",
+        "Independent non-backtracking paths",
+        "Frogs stopped on root return and after the first subtree entry"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2008.09226",
+        "url": "https://arxiv.org/pdf/2008.09226",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (mathematical paraphrase)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Proposition 3.1, manuscript p. 8; equations (5)-(8), pp. 7-8; Lemma 3.4 for outlet conditioning",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "poly-mathews-self-similar-frog-degree-monotonicity",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "poly-mathews-self-similar-frog-degree-monotonicity",
+      "kind": "theorem",
+      "title": "Poly Mathews Jr. self-similar frog root visits are monotone in tree degree",
+      "statement": "Fix original inward drift p in (0,1/2), integer d>=2, and a common nonnegative integer sleeping-count law eta, independent and identically distributed at non-root vertices and independent of paths. Let SFM(d,p,eta) be the single-entry non-backtracking lower model on the rooted d-ary tree with one active root frog, newborn inward probability p(d-1)/(d-(d+1)p), continuation inward probability p/(1-p), outward paths staying outward, root returns killed and excess outward subtree entries killed. If V_d is its total number of root visits, then V_d is stochastically dominated by V_(d+1). In particular, recurrence of SFM(m,p,eta) at one integer m>=2 implies recurrence of SFM(d,p,eta), and hence of the corresponding ordinary frog models, for every integer d>=m. The original drift p and the entire sleeping law eta are held fixed; this theorem does not assert degree monotonicity of ordinary frog models directly.",
+      "proof_text": "Mathews Theorem 2 constructs a coupling in which extra-degree frogs can be removed to match all relevant active frogs at their distances from the root. Downward-moving frogs are advanced to a freezing barrier before newborn choices are coupled, ensuring that at least one child of an activated site has already been visited. A probability inequality then couples both movement toward the root and movement into a new child despite the degree dependence of the newborn inward probability. The coupling preserves a copy of the lower-degree process and gives root-visit domination. Iteration over consecutive degrees yields the stated recurrence transfer; the ordinary-model conclusion uses the separately established lower coupling.",
+      "assumptions": [
+        "Integer d>=2; fixed original drift 0<p<1/2",
+        "Same independent initial sleeping-count law eta at every degree",
+        "The converted single-entry non-backtracking model as defined in the statement"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2309.14443",
+        "url": "https://arxiv.org/pdf/2309.14443",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (mathematical paraphrase)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Theorem 2, manuscript p. 4; coupling proof in Section 2",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "guo-tang-wei-ternary-single-entry-frog-pgf-equation",
+      "to_key": "guo-tang-wei-biased-frog-loop-erasure-lower-coupling",
+      "kind": "semantic_association",
+      "rationale": "\"its u denotes the newborn non-backtracking probability\" and \"The parameter pi is the newborn probability, not the original drift p.\" The fixed-point equation uses precisely this converted local path law; mixing the two parameters changes the model.",
+      "quote_check": {
+        "from_quote": "its u denotes the newborn non-backtracking probability",
+        "to_quote": "The parameter pi is the newborn probability, not the original drift p."
+      }
+    },
+    {
+      "from_key": "poly-mathews-self-similar-frog-degree-monotonicity",
+      "to_key": "guo-tang-wei-biased-frog-loop-erasure-lower-coupling",
+      "kind": "semantic_association",
+      "rationale": "\"The original drift p and the entire sleeping law eta are held fixed\" and \"Set pi=p(d-1)/(d-(d+1)p).\" Degree monotonicity is at fixed original drift, so the newborn parameter changes with degree.",
+      "quote_check": {
+        "from_quote": "The original drift p and the entire sleeping law eta are held fixed",
+        "to_quote": "Set pi=p(d-1)/(d-(d+1)p)."
+      }
+    }
+  ]
+}

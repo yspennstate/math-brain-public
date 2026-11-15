@@ -1,0 +1,325 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-tree-t127-source-and-route-obstructions-001",
+  "entries": [
+    {
+      "key": "hjj-one-frog-tree-phase-transition",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "hjj-one-frog-tree-phase-transition",
+      "kind": "theorem",
+      "title": "Hoffman–Johnson–Junge frog model tree phase transition: binary recurrence, d>=5 transience",
+      "statement": "On the infinite rooted d-ary tree with one initially active root frog and one sleeping frog at every non-root vertex, all active frogs follow independent simple random walks and activate every sleeping frog they encounter. The root is visited infinitely often almost surely for d=2 and only finitely often almost surely for every integer d>=5. The theorem does not classify d=3 or d=4.",
+      "proof_text": "The recurrence proof uses the single-entry self-similar model and a monotone PGF bootstrap. Its root-return PGF is a fixed point of the binary recursion; iterates starting at the PGF 1 tend to zero on [0,1), forcing infinitely many returns in the lower model and hence in the ordinary model. The transience proof couples the frog model to a multitype branching random walk and certifies a contracting exponential weight. A simple comparison covers d>=6; the d=5 case uses 27 types, exact two-step transition probabilities and an exact matrix contraction.",
+      "assumptions": [
+        "Infinite rooted d-ary tree with integer d>=2",
+        "One initially active frog at the root and one sleeping frog at each non-root vertex",
+        "Independent simple random walk paths; every visited sleeping frog activates"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1404.6238",
+        "url": "https://arxiv.org/pdf/1404.6238",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Theorem 1, manuscript p. 2; proofs in Sections 2 and 3",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "hjj-binary-self-similar-pgf-bootstrap",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "hjj-binary-self-similar-pgf-bootstrap",
+      "kind": "theorem",
+      "title": "Hoffman–Johnson–Junge binary self-similar frog PGF recursion and Poisson bootstrap",
+      "statement": "In the single-entry self-similar non-backtracking frog model on the rooted binary tree, with one active root frog and one sleeping frog at each non-root vertex, frogs are stopped at their first root return and all but the first entrant into each descendant subtree are stopped. If V is the number of root returns and f(x)=E[x^V] with x^infinity=0 for 0<=x<1, then f=A f, where (A g)(x)=(x+2)g((x+1)/2)^2/3+(x+1)g(x/2)(1-g((x+1)/2))/3. A is monotone for pointwise comparisons between PGFs, and A^n 1 tends to zero for every 0<=x<1. Hence V=infinity almost surely.",
+      "proof_text": "Condition on whether the second child subtree is activated by the central sleeping frog or by a return from the first subtree. Subtree return counts can be sampled independently, but activation and root thinning are dependent; conditioning gives the displayed PGF identity. HJJ prove operator monotonicity and show that A applied to a Poisson PGF lies below a Poisson PGF of strictly larger mean. Iteration from mean zero makes the means unbounded and the PGFs tend to zero. The fixed-point relation then forces f=0 on [0,1).",
+      "assumptions": [
+        "Rooted binary tree",
+        "Independent uniform non-backtracking paths, first neighbor uniform",
+        "One sleeping frog per non-root vertex",
+        "Frogs stopped at root return and after excess subtree entries"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1404.6238",
+        "url": "https://arxiv.org/pdf/1404.6238",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Proposition 9, equation (1), manuscript p. 7; Lemmas 10–14, pp. 10–13",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "johnson-junge-linear-frog-critical-density",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "johnson-junge-linear-frog-critical-density",
+      "kind": "theorem",
+      "title": "Johnson–Junge frog model critical Poisson density is linear in tree degree",
+      "statement": "For the frog model on the rooted d-ary tree, d>=2, start one active frog at the root and independent Poisson(mu) sleeping frogs at every non-root vertex, with independent simple random walk paths. There is a critical density mu_c(d) in (0,infinity) separating almost sure transience for mu<mu_c(d) from almost sure recurrence for mu>mu_c(d). Johnson and Junge prove that, for all sufficiently large d, 0.24d <= mu_c(d) <= 2.28d. The sufficiently-large-d qualifier is essential; these constants do not settle the deterministic one-frog cases d=3 or d=4, and no assertion is made at mu=mu_c(d).",
+      "proof_text": "Existence of the critical value is the earlier Hoffman–Johnson–Junge Poisson phase-transition theorem. The lower linear bound follows from a transient branching-random-walk comparison. For the upper bound, a self-similar subprocess has an independent Poisson-thinning description. A two-stage activation estimate for children makes its return law stochastically dominate a Poisson law with a uniformly increased mean; iteration yields recurrence at density 2.28d for sufficiently large d. This removes the logarithm from the earlier O(d log d) upper bound.",
+      "assumptions": [
+        "Integer d>=2; quantitative constants require sufficiently large d",
+        "Independent Poisson(mu) counts at non-root vertices",
+        "Independent simple random walks; one active root frog"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1607.07914",
+        "url": "https://arxiv.org/pdf/1607.07914",
+        "revision": "as-read-2026-10-14",
+        "license": "cc-by",
+        "license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "locator": "Theorem 1, manuscript/journal p. 2; critical-value existence cited in introduction and HJJ arXiv:1501.05874 Theorem 1",
+        "excerpt": "For all sufficiently large d"
+      }
+    },
+    {
+      "key": "johnson-junge-frog-root-visits-stochastic-orders",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "johnson-junge-frog-root-visits-stochastic-orders",
+      "kind": "theorem",
+      "title": "Johnson–Junge frog model root visits: increasing concave and PGF order comparison",
+      "statement": "Consider the frog model on a fixed countable locally finite graph with a distinguished root and fixed initial active frogs. At each other vertex v, let N_v and M_v be nonnegative integer sleeping counts; all counts and frog paths are mutually independent, and paths of frogs born at a given vertex have the same law. If N_v is below M_v in increasing concave order at every v, meaning E[phi(N_v)]<=E[phi(M_v)] for every bounded increasing concave phi, then the corresponding total root-return counts R_N and R_M obey the same order. If instead E[t^N_v]>=E[t^M_v] for every t in (0,1) at every v (PGF order), then E[t^R_N]>=E[t^R_M] for every such t, with t^infinity=0. In particular, if an i.i.d. sleeping-count law of finite mean mu gives almost sure recurrence, any deterministic count k>=mu also gives almost sure recurrence under the same path law.",
+      "proof_text": "Root visits form a continuous increasing concave statistic and also a continuous PGF statistic (Proposition 4). Adding frogs at one vertex has diminishing contributions, and the higher alternating differences have the PGF-statistic signs. Theorem 3 replaces one independent site count at a time and extends by continuity, preserving the chosen order. Jensen gives a constant k increasing-concave domination of any count law of mean at most k; Corollary 5 transfers recurrence. Ordinary stochastic dominance between Poisson(mu) and a constant is not assumed.",
+      "assumptions": [
+        "Fixed graph and common path laws",
+        "Mutual independence of counts and frog paths; paths i.i.d. by frog index at each vertex",
+        "Sitewise increasing concave or PGF comparison as stated",
+        "Fixed common initial active configuration"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1602.04411",
+        "url": "https://arxiv.org/pdf/1602.04411",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Theorem 3 and Proposition 4, manuscript pp. 3–4; Corollary 5, p. 4",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "poly-mathews-frog-critical-drift-bounds",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "poly-mathews-frog-critical-drift-bounds",
+      "kind": "theorem",
+      "title": "Poly Mathews Jr. critical frog model drift bounds: S3<=42/145 and S4<=40/153",
+      "statement": "On the rooted d-ary tree start one active root frog and one sleeping frog at each non-root vertex. Active frogs move to their parent with probability p and otherwise to a uniformly chosen child (the root moves to a child). Let p_d be the infimum of p for which root returns are infinite almost surely, and S_m=sup_{d>=m}p_d. Poly Mathews Jr. proves S_3<=42/145 and S_4<=40/153 by a computer-assisted exact polynomial argument. The unbiased simple random walk has p=1/(d+1): 1/4<42/145 and 1/5<40/153, so these upper bounds do not classify the unbiased d=3 or d=4 models.",
+      "proof_text": "A self-similar non-backtracking lower comparison and Poisson initial-count comparison reduce recurrence to a uniform inequality in an auxiliary Poisson mean. An efficient star-activation distribution recursion produces the necessary function. At the rational drifts in Theorem 1, a change of variable turns it into a polynomial with rational coefficients; exact root counting certifies its maximum is below one. These are the paper's rigorous bounds; its additional floating-point approximations for larger m are not theorem bounds.",
+      "assumptions": [
+        "Integer d>=2; drift p in [0,1]",
+        "One active root frog and one sleeper per non-root vertex",
+        "Independent biased nearest-neighbor frog walks"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2309.14443",
+        "url": "https://arxiv.org/pdf/2309.14443",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Definition of S_m, introduction p. 2; Theorem 1 table p. 3; Section 3 and Appendix",
+        "excerpt": null
+      },
+      "publication": "Electronic Communications in Probability 29 (2024), DOI 10.1214/24-ECP606",
+      "attribution_note": "Poly Mathews Jr. is the collective pseudonym listed in the paper footnote."
+    },
+    {
+      "key": "rosenberg-frog-alternating-three-two-recurrence",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "rosenberg-frog-alternating-three-two-recurrence",
+      "kind": "theorem",
+      "title": "Rosenberg recurrence of the frog model on the 3,2-alternating tree",
+      "statement": "Let T_(3,2) be the rooted infinite tree in which vertices at even distance from the root have three children and vertices at odd distance have two children. Start one active frog at the root and one sleeping frog at each non-root vertex, with independent simple random walks and activation upon visits. The root is visited infinitely often almost surely. This is the alternating tree, not the regular ternary tree; deleting branches also changes walk probabilities and gives no automatic conclusion on T3.",
+      "proof_text": "Rosenberg couples a stopped non-backtracking self-similar process below the ordinary frog model. Two return PGFs, one for each level parity, satisfy coupled recursion identities. Monotonicity and a Poisson-type bootstrap drive the iterates to zero on [0,1), forcing infinitely many returns in the lower process and hence the ordinary model.",
+      "assumptions": [
+        "Alternating 3-child even levels and 2-child odd levels",
+        "One active root frog and one sleeping frog per non-root vertex",
+        "Independent unbiased simple random walk paths"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1701.02813",
+        "url": "https://arxiv.org/pdf/1701.02813",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Introduction definition of T_(3,2), p. 2; Theorem 1.1; proof in Section 2",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "hjj-weighted-multitype-brw-transience",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "hjj-weighted-multitype-brw-transience",
+      "kind": "lemma",
+      "title": "Hoffman–Johnson–Junge weighted multitype branching random walk transience certificate",
+      "statement": "For a discrete-generation branching random walk with finitely many particle types and integer positions, start finitely many particles. Offspring are independent across particles with finite expected exponentially weighted counts. Let M(theta)_(ij)=E[sum over type-j children of a type-i parent of exp(-theta X)], where X is the child displacement. If there exist a real theta>0, a strictly positive vector v, and 0<=c<1 with M(theta)v<=cv, then the expected total number of particles at any fixed position, summed over all generations, is finite; every fixed position is visited only finitely often almost surely. Applying this to a frog model requires a separate valid upper coupling. The spectral calculation alone supplies no frog-model comparison.",
+      "proof_text": "Use W_n=sum over particles at generation n of exp(-theta position) v_type. Conditional expectation gives E[W_(n+1)|generation n]<=c W_n, hence E[W_n]<=c^n W_0. At a fixed position k each particle contributes at least exp(-theta k) min(v), so its expected generation count is bounded by a constant times c^n. Sum this geometric bound and use Tonelli. Finite expectation implies finitely many visits almost surely. For rho(M)<1, v=(I-M)^(-1)1>0 supplies such an inequality, connecting the criterion with nonnegative-matrix spectral theory.",
+      "assumptions": [
+        "Finitely many particle types and finitely many initial particles",
+        "Independent reproduction by type and finite exponential first moments",
+        "theta>0, v>0, 0<=c<1 and M(theta)v<=cv"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1404.6238",
+        "url": "https://arxiv.org/pdf/1404.6238",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Section 3, Propositions 18–19 and proof of Theorem 1(ii), pp. 15–20",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "open-frog-model-ternary-quaternary-t127",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "open-frog-model-ternary-quaternary-t127",
+      "kind": "concept",
+      "title": "Open problem T127: recurrence of the one-frog model on 3-ary and 4-ary trees",
+      "statement": "On the infinite rooted d-ary tree, start one active frog at the root and one sleeping frog at every non-root vertex. Frogs perform independent simple random walks and activate sleeping frogs upon visits. Decide for d=3 and d=4 whether the root receives infinitely many returns almost surely or finitely many almost surely. HJJ Conjecture 2 predicts recurrence for d=3 and transience for d=4. The inspected later primary discussion (Poly Mathews Jr., arXiv:2309.14443v2, published 2024) still cites these as simulation predictions. No resolution was located in the bounded 2026-10-14 literature search; citation APIs were rate-limited, so coverage is incomplete.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite rooted d-ary tree with integer d>=2",
+        "One initially active frog at the root and one sleeping frog at each non-root vertex",
+        "Independent simple random walk paths; every visited sleeping frog activates"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1404.6238",
+        "url": "https://arxiv.org/pdf/1404.6238",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (original mathematical paraphrase; paper not reproduced)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Conjecture 2, manuscript p. 3; later status in arXiv:2309.14443v2 introduction p. 2",
+        "excerpt": null
+      },
+      "research_status": "OPEN in inspected literature; not an exhaustive current-status guarantee",
+      "status_evidence": "~/brain_workers/w677/SOURCE_STATUS.json"
+    },
+    {
+      "key": "draft-w677-uniform-t4-two-step-obstruction",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-uniform-t4-two-step-obstruction",
+      "kind": "concept",
+      "title": "Draft (unaudited): w677 uniform spectral obstruction for HJJ-style T4 two-step comparison",
+      "statement": "PROOF (UNAUDITED), C1_uniform_obstruction v1. The explicitly specified 27-type two-step reset upper comparison on T4, with cluster size cap 3 and empty-child/sibling caps 2, has rho(M(r))>1 for every real r>0. A positive rational vector yields row expressions A_i r^2+B_i+C_i/r^2; exact inequalities establish B_i+2 sqrt(A_i C_i)>v_i (or the immediate B_i>=v_i case) in all rows. This eliminates only this exponential-weight comparison, and proves neither recurrence nor transience of the ordinary frog model. Novelty unestablished; no independent audit PASS.",
+      "proof_text": null,
+      "assumptions": [
+        "The matrix is precisely the algorithm in exact_two_step.py",
+        "r>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C1_uniform_obstruction_v1",
+        "url": "~/brain_workers/w677/proofs/C1_uniform_obstruction_v1.md",
+        "revision": "2026-10-14",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "claim_id": "C1_uniform_obstruction",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    },
+    {
+      "key": "draft-w677-ternary-single-entry-transience",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-ternary-single-entry-transience",
+      "kind": "concept",
+      "title": "Draft (unaudited): w677 ternary single-entry frog model finite root-return mean",
+      "statement": "PROOF (UNAUDITED), C2_ternary_single_entry v2. In the HJJ single-entry self-similar non-backtracking model on the rooted 3-ary tree, one active root frog and one sleeper per non-root vertex, all frogs stopped on root return and every excess subtree entry stopped, the draft proves E[V]<=3 log((7+sqrt(17))/8)<1. It derives the exact ternary star PGF operator, proves its monotonicity, and constructs a Poisson PGF g with g<=Tg. Every finite cutoff has the same mean bound; finite-time agreement transfers it to the infinite model. This only shows transience of this restricted model and does not classify the ordinary T3 frog model. Novelty unestablished; no independent audit PASS.",
+      "proof_text": null,
+      "assumptions": [
+        "Rooted infinite 3-ary tree",
+        "Independent uniform non-backtracking paths, first step uniform among neighbors",
+        "One sleeping frog per non-root vertex",
+        "Stop at root and permit only the first entry into each descendant subtree"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C2_ternary_single_entry_v2",
+        "url": "~/brain_workers/w677/proofs/C2_ternary_single_entry_v2.md",
+        "revision": "2026-10-14",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "claim_id": "C2_ternary_single_entry",
+      "claim_version": 2,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "hjj-one-frog-tree-phase-transition",
+      "to_key": "hjj-binary-self-similar-pgf-bootstrap",
+      "kind": "depends_on",
+      "rationale": "\"The recurrence proof uses the single-entry self-similar model and a monotone PGF bootstrap.\" and \"A is monotone for pointwise comparisons between PGFs\". The known binary recurrence proof uses this actual recursion and bootstrap.",
+      "quote_check": {
+        "from_quote": "The recurrence proof uses the single-entry self-similar model and a monotone PGF bootstrap.",
+        "to_quote": "A is monotone for pointwise comparisons between PGFs"
+      }
+    },
+    {
+      "from_key": "hjj-one-frog-tree-phase-transition",
+      "to_key": "hjj-weighted-multitype-brw-transience",
+      "kind": "depends_on",
+      "rationale": "\"The transience proof couples the frog model to a multitype branching random walk and certifies a contracting exponential weight.\" and \"M(theta)v<=cv\". The known transience proof verifies a contraction for the mean matrix of its separately coupled upper process.",
+      "quote_check": {
+        "from_quote": "The transience proof couples the frog model to a multitype branching random walk and certifies a contracting exponential weight.",
+        "to_quote": "M(theta)v<=cv"
+      }
+    },
+    {
+      "from_key": "open-frog-model-ternary-quaternary-t127",
+      "to_key": "hjj-one-frog-tree-phase-transition",
+      "kind": "cites",
+      "rationale": "\"HJJ Conjecture 2 predicts recurrence for d=3 and transience for d=4.\" and \"The theorem does not classify d=3 or d=4.\". The open middle cases are exactly the degrees left by the cited theorem.",
+      "quote_check": {
+        "from_quote": "HJJ Conjecture 2 predicts recurrence for d=3 and transience for d=4.",
+        "to_quote": "The theorem does not classify d=3 or d=4."
+      }
+    },
+    {
+      "from_key": "poly-mathews-frog-critical-drift-bounds",
+      "to_key": "johnson-junge-frog-root-visits-stochastic-orders",
+      "kind": "depends_on",
+      "rationale": "\"Poisson initial-count comparison\" and \"any deterministic count k>=mu also gives almost sure recurrence\". The published drift argument transfers a Poisson-based sufficient recurrence estimate to the deterministic initial condition.",
+      "quote_check": {
+        "from_quote": "Poisson initial-count comparison",
+        "to_quote": "any deterministic count k>=mu also gives almost sure recurrence"
+      }
+    },
+    {
+      "from_key": "draft-w677-uniform-t4-two-step-obstruction",
+      "to_key": "hjj-weighted-multitype-brw-transience",
+      "kind": "analogous_to",
+      "rationale": "\"This eliminates only this exponential-weight comparison\" and \"The spectral calculation alone supplies no frog-model comparison.\". The draft refutes this comparison certificate, while leaving the ordinary frog model unclassified.",
+      "quote_check": {
+        "from_quote": "This eliminates only this exponential-weight comparison",
+        "to_quote": "The spectral calculation alone supplies no frog-model comparison."
+      }
+    },
+    {
+      "from_key": "draft-w677-ternary-single-entry-transience",
+      "to_key": "hjj-binary-self-similar-pgf-bootstrap",
+      "kind": "analogous_to",
+      "rationale": "\"This only shows transience of this restricted model\" and \"single-entry self-similar non-backtracking frog model\". These concern the same restriction at different degrees; the ternary draft is not an extension of binary recurrence.",
+      "quote_check": {
+        "from_quote": "This only shows transience of this restricted model",
+        "to_quote": "single-entry self-similar non-backtracking frog model"
+      }
+    },
+    {
+      "from_key": "hjj-weighted-multitype-brw-transience",
+      "to_existing_logical": "math:algebra.linear:perron-frobenius-theorem",
+      "kind": "semantic_association",
+      "rationale": "\"Perron-Frobenius Theorem\" concerns positive eigenvectors for nonnegative matrices. This card verifies a positive vector inequality for a nonnegative offspring mean matrix; applicability of the frog coupling remains separate."
+    }
+  ]
+}

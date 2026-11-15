@@ -1,0 +1,78 @@
+{
+  "problem_id": "T127",
+  "statement_verbatim": "On the rooted d-ary tree, place one sleeping frog at each vertex and an active frog at the root; active frogs perform independent simple random walks and wake every frog they visit. Decide for d = 3 and d = 4 whether the root is visited infinitely often almost surely (recurrence) or finitely often (transience).",
+  "locator": "HJJ Theorem 1 and Conjecture 2, manuscript pp. 2–3",
+  "source_url": "https://arxiv.org/pdf/1404.6238",
+  "file_sha256": "80174751726549e87e6bf038ad768991a91bb867c1a31ed1e1df1fdf46993fd4",
+  "openness": "OPEN",
+  "best_known": [
+    {
+      "bound or case": "One-frog simple-random-walk model: recurrent on T_2; transient on T_d for every integer d >= 5.",
+      "citation": "Hoffman, Johnson, Junge (2017), arXiv:1404.6238",
+      "locator": "Theorem 1, manuscript p. 2",
+      "rigorous": true
+    },
+    {
+      "bound or case": "Recurrence for d=3 and transience for d=4 are conjectured, based on simulations.",
+      "citation": "Hoffman, Johnson, Junge (2017), arXiv:1404.6238",
+      "locator": "Conjecture 2, manuscript p. 3; Section 5",
+      "rigorous": false
+    },
+    {
+      "bound or case": "For all sufficiently large d, the Poisson critical density satisfies 0.24 d <= mu_c(d) <= 2.28 d.",
+      "citation": "Johnson and Junge, The critical density for the frog model is the degree of the tree, ECP 21 (2016), paper 82; arXiv:1607.07914",
+      "locator": "Theorem 1, journal/manuscript p. 2",
+      "rigorous": true
+    },
+    {
+      "bound or case": "For one frog per site with inward drift p, p_d <= 42/145 for d>=3 and p_d <= 40/153 for d>=4. These are greater than unbiased p=1/4 and p=1/5 respectively and do not classify T3 or T4.",
+      "citation": "Poly Mathews Jr., Improved critical drift estimates for the frog model on trees, ECP 29 (2024); arXiv:2309.14443v2; DOI 10.1214/24-ECP606",
+      "locator": "Introduction p. 2 and Theorem 1 table p. 3; S_m=sup_{d>=m}p_d",
+      "rigorous": true
+    },
+    {
+      "bound or case": "The one-frog simple-random-walk model is recurrent on the 3,2-alternating tree, with 3 children at even depths and 2 children at odd depths. This is a different tree and does not settle T3.",
+      "citation": "Josh Rosenberg, Recurrence of the frog model on the 3,2-alternating tree, arXiv:1701.02813",
+      "locator": "Definition in introduction p. 2; Theorem 1.1",
+      "rigorous": true
+    },
+    {
+      "bound or case": "Already-known ordinary p_d>=1/(d+1), by the all-particles-initially-active upper process; specifically p4>=1/5. A transience certificate below p=0.17 does not improve this.",
+      "citation": "Mathews arXiv:2309.14443v2",
+      "locator": "Introduction, manuscript p.2",
+      "rigorous": true
+    }
+  ],
+  "verify_marks": [
+    {
+      "fact": "With i.i.d. Poisson(mu) sleeping frogs per non-root vertex, critical mu grows linearly in d.",
+      "checked": true,
+      "citation": "Johnson–Junge arXiv:1607.07914, Theorem 1: 0.24d <= mu_c(d) <= 2.28d for sufficiently large d; HJJ arXiv:1501.05874 Theorem 1 supplies the critical value."
+    },
+    {
+      "fact": "Mathews S_m is the supremum of ordinary-model critical drifts p_d over d>=m, not the self-similar critical drift.",
+      "checked": true,
+      "citation": "arXiv:2309.14443v2, manuscript p. 2: definition of p_d and S_m."
+    }
+  ],
+  "checked_at": "2026-10-14T16:31:35.405854+00:00",
+  "status_note": "No settlement located. Latest explicit primary discussion inspected: Poly Mathews Jr., arXiv:2309.14443v2, introduction p. 2, published ECP 29 (2024). This is a bounded literature-status finding, not an exhaustive proof of present-day openness.",
+  "literature_searches": [
+    "papers/arxiv_frog_recent.xml",
+    "papers/arxiv_junge_later.xml",
+    "papers/arxiv_middle_cases.xml",
+    "papers/arxiv_broad_frog_tree.xml",
+    "papers/arxiv_self_similar.xml",
+    "papers/crossref_mathews.json"
+  ],
+  "excluded_recent_variant": {
+    "citation": "Angel, de la Riva, Hermon, Shi, arXiv:2512.06640, revised September 2026",
+    "reason": "Abstract studies Poisson frogs with a fixed finite lifetime in continuous time and survival/sharpness; it is not the immortal one-frog recurrence question."
+  },
+  "limitations": [
+    "OpenAlex title and DOI requests returned HTTP 429 twice; Semantic Scholar citations request returned HTTP 429. Citing-paper coverage is incomplete.",
+    "Broad arXiv queries search metadata and returned unrelated biological papers; absence of a hit is not evidence of a theorem.",
+    "The journal DOI page returned an anti-bot/access placeholder (1164 bytes), so theorem content is attributed to the arXiv PDF actually inspected. Crossref verifies publication metadata only."
+  ],
+  "root_convention": "Primary sources use one active root frog and one sleeping frog per non-root vertex. The list text also says a sleeper at the root. A finite extra root seed does not alter the recurrence/transience classification; if needed justify by union of seed-reachable activation closures."
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-15T13:29:48.854316+03:00",
+  "claim_id": "C32_forced_input_child_coverage",
+  "version": 1,
+  "verdict": "PASS",
+  "reason": "Independent correctness PASS on C32 proof sha256 9a912fe60b9851a8631aa7d03600aabd72c02798a387e677565f9604bffa1aa6. Scope is deterministic fresh forced queries only, conditional on the exact C31v1 retained-motion construction (source hash cdac60ca... independently matched to its prior PASS). First-step decomposition before the first visit to c gives r=q+(d-1)q*beta*r, hence r=(1-p)/(d-(d-1)p) in (0,1). The k prescribed inputs and one resident have independent ordinary path segments up to their parent hits or escape; strong Markov supplies a fresh future if a physical frog later supplies another deterministic input. Their target-hit indicators are iid Bernoulli(r). For each first target hit, any prior suppressed excursion into another child must have returned through v and cleared suppression. Thus the hit is enabled unless the target budget B is already full. Distinct path segments contribute distinct entries, proving N_c>=min(B,S) and the binomial lower-tail bound. Taking a union bound over d children requires no cross-child independence. At ordinary T3, r=3/10. Integer dyadic grouping gives ratios 49/50 and 2401/5000 for alpha4 and alpha8; the alpha8 tail from j>=62 is exactly 4023205858991894702421/81218750000000000000000 <1/20. Independent Fraction controls:1372 binomial/first-step cases and8192 quota checks, check_c32_independent.py. The final Chebyshev obstruction is scoped correctly: B/k->1 but original paths have mean0.3(k+1); it only shows this certificate cannot supply the next full quota. No adaptive-input conditional probability, amplification, positive linear mean, recurrence, threshold improvement or novelty is proved.",
+  "proof_sha256": "9a912fe60b9851a8631aa7d03600aabd72c02798a387e677565f9604bffa1aa6",
+  "source": "AUDITS_FROM_REVIEWER.tsv",
+  "reviewer": "codex-term-agent (post-crash reviewer)",
+  "scope": "Fresh deterministic forced queries only; no adaptive input supply, amplification, mean growth or recurrence.",
+  "cross_model_audit": "Not asserted: recovery reviewer is a Codex worker."
+}

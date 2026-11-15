@@ -1,0 +1,93 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-nearby-drift-cases-005",
+  "entries": [
+    {
+      "key": "draft-w677-frog-recurrence-2649-10000",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-recurrence-2649-10000",
+      "kind": "theorem",
+      "title": "Owner result (independently checked): w677 biased frog recurrence at 2649/10000 with an exact finite start",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C10_finite_start_bootstrap v3; novelty unverified. For every integer d>=3, ordinary and self-similar one-sleeper frog models on the rooted d-ary tree are recurrent at original inward drift p=2649/10000=0.2649, with independent paths, uniform outward choices and uniform ordinary-root reflection. Put p_d=inf{p: ordinary FM(d,p,1) is recurrent} and S_3=sup_{d>=3}p_d, as in Mathews p.2; the proof implies S_3<=2649/10000. Its specific self-similar ternary PGF operator has newborn pi=883/3234 and continuation beta=2649/7351. Two thousand exact upward grid iterations with N=10000 and scale 2^50 certify T^2000 1<=g_20 on the full interval, then the analytic tail gives Tg_a<=g_(a+1/1000) for every a>=20. Published GTW lower coupling and Mathews fixed-original-drift degree monotonicity transfer recurrence. A separate expanded-operator replay and a fresh byte-identical reproduction pass locally. Reviewer an agent wrote PASS on this exact version in AUDITS_FROM_REVIEWER.tsv; novelty was not judged. Unbiased T3 p=1/4 and T4 p=1/5 remain open.",
+      "proof_text": "The ternary physical fixed-point PGF satisfies f=Tf. Monotonicity of the exact operator and convex chord interpolation let2000 upward-rounded rational iterations dominate T^2000 1 and certify continuous domination by g20(x)=exp(-20(1-x)), including the endpoint cell through its slope. The exact analytic tail proves Tg_a<=g_(a+1/1000) for every a>=20. Repeated fixed-point domination gives f(x)=0 for every x<1, hence almost-sure recurrence in the self-similar model. GTW loop-erasure domination and Mathews degree coupling at the same original drift transfer this to every ordinary d>=3. The designated reviewer independently reran the rounded grid and checked the tail and published transfers.",
+      "assumptions": [
+        "Infinite rooted d-ary tree, d>=3",
+        "One active root frog and one sleeper per non-root vertex",
+        "Independent parent-probability 2649/10000 walks with uniform outward moves and root reflection",
+        "Published GTW lower coupling/fixed point and Mathews degree monotonicity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C10_finite_start_bootstrap_v3",
+        "url": "~\\brain_workers\\w677\\proofs\\C10_finite_start_bootstrap_v3.md",
+        "revision": "2026-10-14 version 3",
+        "license": "owner-own-work",
+        "locator": "Full proof, exact rational code, input tables and receipts in the named draft",
+        "excerpt": null
+      },
+      "claim_id": "C10_finite_start_bootstrap",
+      "claim_version": 3,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "reviewer": "an agent",
+          "verdict": "PASS",
+          "version": 3,
+          "file": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "Correctness PASS (independent recomputation and hand check). Hand: the substitution A=u, C=ut, B=ut^2 (u=exp(-a beta z), t=exp(-a gamma)) gives R=c1 e^{a(1-beta)z}+c2 e^{a(1-2beta)z}+c3 e^{-a eta z} with c3 needing 2K=L+J, sum c_i=L=1-pi z; case x<=1/2 (the c2 exponent is -a(beta+(2gamma-beta)x)<=-a beta) and case x>=1/2 (bracket 1-pi z+c1(e^{2a beta z}-1)+c2(e^{a beta z}-1), exponents -a(1-2beta), -a(1-3beta/2), K(a) decreasing in a) re-derived; T g_a<=g_{a+1/1000} then iterates to f=0 on [0,1). Reviewer's own code (reviewer_audits/t127/audit_c10_upper.py, nothing imported, own rounding: chord of h at each composition point rounded up, exact T on the upper triple rounded up, cap at S, running max) re-ran the 2000-step upper iteration from h_0=S: every tail cell i<=N-2 has h_2000(i+1)/S below the rigorous (mpmath interval) lower end of exp(-20(1-i/N)), final-cell slope >=20; exact Taylor partial sums give exp(10eta)>2, exp(20beta)>1000, exp(20(1-2beta))>100, exp(20(1-3beta/2))>1000; 4270601/4851000<999/1000 and eta-K>=43480527/566027000>=1/20 exactly as claimed. Same model check (asked for in the T127 dossier): C10 v3 and C12 v1 use the identical GTW ternary single-entry self-similar operator (1) with the identical parameter map pi=2p/(3-4p), beta=p/(1-p), gamma=(1-beta)/2, q=(1-pi)/3 (reviewer re-derived both fraction sets), the same map C4 v3's PASS checked against GTW (6)-(8) symbolically and by frog-by-frog simulation. Reviewer's float iteration (t127/float_sanity.py) shows a saddle-node: at p=0.2648 T^n 1 converges to a nontrivial fixed point with slope 1.366 at x=1 (C12's bound 1.407 sits above it), at p=0.2649 it collapses to 0 within 500 steps. So the self-similar model's critical drift lies in (0.2648, 0.2649], consistent with both claims; the SFM bootstrap cannot reach p=1/4 on T3 (target 1 of the dossier is forced). Transfers (GTW Prop 1.4, Mathews Thm 2) are the ones C4 v3's PASS accepted. Kind: bound (S_3<=0.2649), not a row move. Novelty not judged."
+        }
+      ],
+      "proof_sha256": "649250abbd74be6d7b3fd6152345c1a3854b063adc7dd9f57b163556698dcc1b"
+    },
+    {
+      "key": "draft-w677-ternary-self-similar-transience-331-1250",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-ternary-self-similar-transience-331-1250",
+      "kind": "theorem",
+      "title": "Owner result (independently checked): w677 ternary self-similar frog transience at 331/1250, finite return mean",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C12_self_similar_transience v1; novelty unverified. In the single-entry self-similar model on the rooted ternary tree, one active root frog and one sleeper per non-root vertex, at original p=331/1250=0.2648, newborn inward probability is 331/1213, continuing inward probability 331/919, and each eligible sibling probability 294/919. Downward frogs stay downward; stop root returns and every excess subtree entry. For returns V after the initial root departure the proof proves E[V]<=49510542141875/35184372088832<141/100, hence transience almost surely. The specific self-similar ternary PGF operator has an exact monotone polygon g with Tg>=g, g(1)=1 and finite left derivative. All 20772 affine-knot intervals pass rational quartic Bernstein positivity; a separate checker verifies exact coverage, knot exclusions and 103860 point identities, and a fresh run reproduces the leaf log. Finite cutoff PGFs satisfy T^n 1>=g, bounding their means; finite-time agreement and monotone convergence give the infinite-model mean bound. Node-only tests and a positive numerical fixed point are insufficient. This is one transient restricted-model case: no ordinary-model transience or critical-parameter lower bound follows without further comparison or parameter monotonicity. Reviewer an agent wrote PASS on this exact version in AUDITS_FROM_REVIEWER.tsv; novelty was not judged.",
+      "proof_text": "An exact monotone polygon g with Tg>=g and g(1)=1 is certified on all20772 affine-composition intervals by nonnegative rational quartic Bernstein coefficients. Operator monotonicity gives f_n=T^n1>=g for every finite cutoff. The endpoint quotient (1-f_n(x))/(1-x) is at most the finite polygon endpoint slope M, so E[V_n]<=M. Every time-K return count agrees with a cutoff n>K and is at most V_n; monotone convergence gives E[V]<=M<141/100. The reviewer independently rederived the operator derivatives and recomputed every exact polynomial piece. This transience statement concerns only the specified single-entry lower model.",
+      "assumptions": [
+        "Rooted ternary tree, one active root frog and one sleeper per non-root vertex",
+        "GTW converted newborn pi=331/1213, upward continuation beta=331/919, sibling probability gamma=294/919",
+        "Downward frogs stay downward; stop root returns and excess subtree entries",
+        "V counts returns after initial root departure"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C12_self_similar_transience_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C12_self_similar_transience_v1.md",
+        "revision": "2026-10-14 version 1",
+        "license": "owner-own-work",
+        "locator": "Full proof, exact rational code, input tables and receipts in the named draft",
+        "excerpt": null
+      },
+      "claim_id": "C12_self_similar_transience",
+      "claim_version": 1,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "reviewer": "an agent",
+          "verdict": "PASS",
+          "version": 1,
+          "file": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "Correctness PASS (independent recomputation and hand check). Hand: T=J F1+2q F2 expanded; the five partial derivatives on 0<=B<=C<=A<=1 re-derived (dF1/dA=3A^2-2AB-2C^2+2BC=A^2+2(A-C)(A+C-B)); g<=1, Tg>=g and monotonicity give g<=T^n 1 for all n; (1-f_n)/(1-x)<=(1-g)/(1-x) gives E[V_n]<=M with M the last cell's slope; the time-K coupling and monotone convergence give E[V]<=M. Reviewer's own code (reviewer_audits/t127/audit_c12_exact.py, nothing imported): polygon SHA256 700a701f... matches; G nondecreasing, G_N=S; breakpoints = knots plus preimages under beta x + k gamma, k=0,1,2: exactly 20772 pieces as claimed; Tg-g as an exact quartic per piece, Bernstein coefficients all >=0 with no subdivision; M=49510542141875/35184372088832=1.40717<141/100. Same model check (asked for in the T127 dossier): C10 v3 and C12 v1 use the identical GTW ternary single-entry self-similar operator (1) with the identical parameter map pi=2p/(3-4p), beta=p/(1-p), gamma=(1-beta)/2, q=(1-pi)/3 (reviewer re-derived both fraction sets), the same map C4 v3's PASS checked against GTW (6)-(8) symbolically and by frog-by-frog simulation. Reviewer's float iteration (t127/float_sanity.py) shows a saddle-node: at p=0.2648 T^n 1 converges to a nontrivial fixed point with slope 1.366 at x=1 (C12's bound 1.407 sits above it), at p=0.2649 it collapses to 0 within 500 steps. So the self-similar model's critical drift lies in (0.2648, 0.2649], consistent with both claims; the SFM bootstrap cannot reach p=1/4 on T3 (target 1 of the dossier is forced). Scope: transience of this lower model only, as the claim says; no ordinary-model statement. Novelty not judged."
+        }
+      ],
+      "proof_sha256": "05467c8546e428a93fc88a15bff8c6ba601cdf297f5e1d9111cc338303f13382"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-frog-recurrence-2649-10000",
+      "to_key": "draft-w677-ternary-self-similar-transience-331-1250",
+      "kind": "analogous_to",
+      "rationale": "Both use the \"specific self-similar ternary PGF operator\" at different original drifts. \"T^2000 1<=g_20\" starts a recurrence bootstrap, while \"Tg>=g, g(1)=1 and finite left derivative\" bounds cutoff return means for a transient case. The directions differ, and the relation asserts no monotonicity in the drift.",
+      "quote_check": {
+        "from_quote": "T^2000 1<=g_20",
+        "to_quote": "Tg>=g, g(1)=1 and finite left derivative"
+      }
+    }
+  ]
+}

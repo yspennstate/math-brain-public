@@ -1,0 +1,143 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-comparison-routes-007",
+  "entries": [
+    {
+      "key": "draft-w677-origin-star-all-r-obstruction",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-origin-star-all-r-obstruction",
+      "kind": "concept",
+      "title": "Draft (unaudited): origin-star frog matrix obstruction by cubic AMGM",
+      "statement": "PROOF (UNAUDITED), w677 C13 v1; no novelty asserted. Let M(r)=rU+r^(-2)D, r>0, for finite nonnegative square matrices U,D. If a positive vector v satisfies A_i=(Uv)_i>0, C_i=(Dv)_i>0 and 27A_i^2 C_i>4v_i^3 for every row, then rho(M(r))>1 for every positive spatial weight r. Indeed A_i r+C_i/r^2>=3(A_i^2 C_i/4)^(1/3)>v_i by three-term AMGM, and iteration of the positive-vector inequality gives the spectral-radius lower bound without irreducibility. The specified 48-type cap6 T4 origin-and-children first-exit matrix meets these exact rational inequalities in every row; a separate direct-file Fraction replay passes. This is a finite comparison obstruction, not an ordinary frog-model transience/recurrence classification; the full infinite-process coupling is not asserted. Independent exact-version review pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite nonnegative square matrices U,D",
+        "Positive v with (Uv)_i,(Dv)_i>0 and 27(Uv)_i^2(Dv)_i>4v_i^3 for every row",
+        "Spatial r>0; specified48-type application is independently unaudited"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C13_star_exit_obstruction_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C13_star_exit_obstruction_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "Exact matrix definition, all48 cubic inequalities and independent replay receipt",
+        "excerpt": null
+      },
+      "claim_id": "C13_star_exit_obstruction",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "3609d6eff908e096a4203b79ec6d042b0c178d795347997678e0cd1f2f872cad"
+    },
+    {
+      "key": "draft-w677-adjacent-pair-price-obstruction",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-adjacent-pair-price-obstruction",
+      "kind": "concept",
+      "title": "Draft (unaudited): adjacent-pair frog price obstruction at weight 27/10",
+      "statement": "PROOF (UNAUDITED), w677 C14 v1; no novelty asserted. For an order-preserving, positively homogeneous map F on finite positive vectors, F(v)>v in every coordinate for some v>0 excludes every w>0 with F(w)<=w. Choose t=max_i v_i/w_i and a maximizing i; then F(v)_i<=tF(w)_i<=tw_i=v_i is a contradiction. For the specified T4 asynchronous adjacent-pair maps, each outcome is repartitioned conservatively into single-site or edge clusters at its minimum type-price cost. At r=27/10, exact rational proposed prices have all-row bulk ratios at least 10495927509121/10092536982000 for caps(3,2), and 20032454105291/19263440343150 for caps(5,3), both greater than1. Independent labeled-set-partition enumeration checks all2540 and5610 outcome option lists and exact frog-count controls. This is a finite comparison obstruction at one spatial weight; other weights and an ordinary-model upper coupling are not certified. Independent exact-version review pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite-dimensional positive vectors",
+        "F coordinatewise monotone and positively homogeneous",
+        "Some v>0 has F(v)>v in every coordinate; the stated finite applications use r=27/10"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C14_pair_cluster_obstruction_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C14_pair_cluster_obstruction_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "Finite minimum-partition maps, exact costs and homogeneous-map contradiction",
+        "excerpt": null
+      },
+      "claim_id": "C14_pair_cluster_obstruction",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "cdde1c971890f83cd11e0ae830a1ca47466cd654a7c504f29ffdd170156cf7aa"
+    },
+    {
+      "key": "draft-w677-pgf-subsolution-cutoff-mean",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-pgf-subsolution-cutoff-mean",
+      "kind": "concept",
+      "title": "Draft (unaudited): PGF subsolution and cutoff mean criterion",
+      "statement": "PROOF (UNAUDITED), a method in w677 C16 v1; novelty unverified. Suppose T is order preserving on nondecreasing functions [0,1]->[0,1], the finite-valued cutoff return counts V_n have PGFs f_n=T^n1 with f_n(1)=1, and for every time K the infinite return count R_K through K agrees with a cutoff n>K, whose total V_n bounds R_K. If a nondecreasing g:[0,1]->[0,1] has Tg>=g, g(1)=1 and finite endpoint quotient M=lim_(x->1-)[1-g(x)]/(1-x), then E[V]<=M for V=lim_K R_K. The endpoint condition in particular requires continuity at1. Induction gives f_n>=g. Thus [1-f_n(x)]/(1-x)<=[1-g(x)]/(1-x), yielding E[V_n]<=M; finite-time agreement and monotone convergence give the infinite bound. The polygon need not be a PGF or convex. Node checks and a positive numerical fixed point do not establish the required continuous Tg>=g. Split at every affine-composition/grid knot, certify nonnegative Bernstein coefficients, and verify the exact polynomial identities. No parameter monotonicity or ordinary-model classification follows from a single restricted-model case.",
+      "proof_text": null,
+      "assumptions": [
+        "T monotone on nondecreasing functions valued in[0,1]",
+        "Finite-valued cutoff counts with PGFs f_n=T^n1, f_n(1)=1",
+        "Monotone g with Tg>=g, g(1)=1 and finite endpoint quotient",
+        "For every K a cutoff n>K agrees on R_K and R_K<=V_n; R_K increases to V"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C16_four_child_transience_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C16_four_child_transience_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "Uniform finite-height means and infinite finite-time agreement sections",
+        "excerpt": null
+      },
+      "claim_id": "C16_four_child_transience",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "feb46b8d3f5925918d4fcf913216969fb6324ea96ce0c680058705a0363ef746"
+    },
+    {
+      "key": "draft-w677-quaternary-transience-2367-10000",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-quaternary-transience-2367-10000",
+      "kind": "concept",
+      "title": "Draft (unaudited): four-child self-similar frog transience at 2367/10000",
+      "statement": "PROOF (UNAUDITED), w677 C16_four_child_transience v1; novelty unverified. In the four-ary single-entry self-similar frog model with one active root frog and one sleeper per non-root vertex, original p=2367/10000=0.2367, newborn pi=7101/28165, upward continuation beta=2367/7633 and each eligible sibling probability 5266/22899, the draft proves E[V]<=69386982371875/70368744177664<99/100. Downward frogs stay downward; stop root returns and excess downward subtree entries; V counts returns after initial root departure. A fixed rational monotone polygon satisfies Tg>=g, g(1)=1 and finite left derivative. All22402 affine-knot intervals pass exact quintic Bernstein positivity. A separate checker verifies exact coverage, knot exclusions and134412 rational point identities; fresh generation gives a byte-identical leaf log. The cutoff mean criterion gives transience almost surely in this restricted model. No ordinary-model transience or critical-parameter lower bound is claimed; one transient parameter does not establish those. Independent exact-version review pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite rooted four-ary tree, one active root frog and one sleeper per non-root vertex",
+        "GTW newborn pi=7101/28165, upward continuation beta=2367/7633, eligible-sibling probability 5266/22899",
+        "Downward frogs stay downward; stop root returns and excess downward subtree entries",
+        "V counts returns after initial root departure"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C16_four_child_transience_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C16_four_child_transience_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "All22402 quintic intervals, local six-point replay, finite-time mean proof",
+        "excerpt": null
+      },
+      "claim_id": "C16_four_child_transience",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "feb46b8d3f5925918d4fcf913216969fb6324ea96ce0c680058705a0363ef746"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-adjacent-pair-price-obstruction",
+      "to_key": "draft-w677-origin-star-all-r-obstruction",
+      "kind": "analogous_to",
+      "rationale": "Both state a \"finite comparison obstruction\". The matrix statement applies \"for every positive spatial weight r\", while the minimum-partition map is checked \"at one spatial weight\"; the relation asserts no equivalence or original-model theorem.",
+      "quote_check": {
+        "from_quote": "finite comparison obstruction",
+        "to_quote": "for every positive spatial weight r"
+      }
+    },
+    {
+      "from_key": "draft-w677-quaternary-transience-2367-10000",
+      "to_key": "draft-w677-pgf-subsolution-cutoff-mean",
+      "kind": "depends_on",
+      "rationale": "The case provides \"Tg>=g, g(1)=1 and finite left derivative\". The method uses \"finite-time agreement and monotone convergence\" to turn the continuous subsolution into an infinite return-mean bound.",
+      "quote_check": {
+        "from_quote": "Tg>=g, g(1)=1 and finite left derivative",
+        "to_quote": "finite-time agreement and monotone convergence"
+      }
+    }
+  ]
+}

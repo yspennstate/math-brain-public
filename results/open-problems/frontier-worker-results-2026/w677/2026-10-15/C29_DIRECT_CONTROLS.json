@@ -1,0 +1,34 @@
+{
+  "status": "PASS: local controls, not a coupling proof",
+  "at": "2026-10-15T01:01:21.371421+00:00",
+  "source_sha256": "de781b2c091084b5a5fcfc10e902a7948f9d6f7c34be95f8ef941a5bbfcbe944",
+  "constant_cap_rng_prefix": "bit-identical",
+  "zero_drift": "zero returns",
+  "resident_duplicate_fault_rejected": true,
+  "direct_controls": [
+    {
+      "horizon": 1,
+      "direct_samples": 12000,
+      "population_samples": 100000,
+      "direct_pgf": 0.620328125,
+      "population_pgf": 0.6229225,
+      "combined_conditional_se": 0.0028064246354541603,
+      "z": -0.9244413575995398
+    },
+    {
+      "horizon": 2,
+      "direct_samples": 12000,
+      "population_samples": 100000,
+      "direct_pgf": 0.5804296875,
+      "population_pgf": 0.5770478125,
+      "combined_conditional_se": 0.0028290839285661593,
+      "z": 1.1953957837206992
+    }
+  ],
+  "seconds": 5.981714399997145,
+  "resources": {
+    "free_ram_bytes": 18629382144,
+    "free_disk_bytes": 28766580736
+  },
+  "scope": "Direct scalar finite trees are independent numerical checks; population child-law bias is not bounded and no infinite-depth conclusion follows."
+}

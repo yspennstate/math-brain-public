@@ -1,0 +1,71 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "w677-t127-copied-site-block-upper-and-return-obstruction",
+  "entries": [
+    {
+      "key": "w677-frog-site-block-upper-range-closure",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "frog-site-block-upper-range-closure",
+      "kind": "concept",
+      "title": "Frog model site-counting block upper comparison and independent-range closure (w677 C33)",
+      "statement": "OWNER-OWN-WORK DRAFT; proof (unaudited); C33_site_block_upper_comparison v1. A finite prefix-closed block is copied at every input; on an upward entry only its already visited ancestral path is guaranteed warm, while every other allowed resident wakes once in that episode. All ordinary walks and boundary continuations are retained, with degree d at the global root and d+1 elsewhere. The first upper birth at a physical nonroot site can use its independent original resident path; later clones add frogs. For a seed and independent stopped resident ranges on cold sites C, closure masses satisfy g_s(S)*prod_(v in S)g_v(S)=sum_(T subset S)q_T*prod_(v in S minus T)g_v(S). Finite rational absorption systems give the g values, and unused-own-path independence gives exact site offspring means. A positive-potential contraction at every bulk attachment context and root-block entry, with root potentials bounded below, implies finite expected upper root visits and hence ordinary transience. No ordinary T4 certificate is supplied. The weighted branching method is known from HJJ Section3.2; novelty of this particular finite-site formulation is unassessed. C34 uses the finite episode coefficients of the C33 copied site-counting upper comparison.",
+      "proof_text": null,
+      "assumptions": [
+        "Ordinary rooted d-ary tree, d>=2, one sleeping frog away from the root, finitely many initial root frogs",
+        "Finite rooted prefix-closed block and all ordinary motion retained",
+        "Only the ancestral path of an upward entry is guaranteed warm; other permitted residents wake once per episode",
+        "Potential criterion must cover every attachment context and returning entry into the global-root block"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C33_site_block_upper_comparison:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C33_site_block_upper_comparison_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "proofs/C33_site_block_upper_comparison_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C33_site_block_upper_comparison",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    },
+    {
+      "key": "w677-frog-copied-site-block-return-obstruction",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "frog-copied-site-block-infinite-mean",
+      "kind": "concept",
+      "title": "Frog model copied block returns: infinite-mean obstruction to the C33 upper comparison (w677 C34)",
+      "statement": "OWNER-OWN-WORK DRAFT; proof (unaudited); C34_copied_block_infinite_mean v1. In exactly the C33 copied episode law, use direct upward means A_T,A_c, downward means B_T,e,B_c,e, and root-block downward means D_c,e. Let m_*=min_c sum_e D_c,e>=1. Starting at zero, the nonnegative polynomial rows x_next=A_T+sum_e B_T,e*x*y_e and y_c_next=A_c+sum_e B_c,e*x*y_e count finite pruned first-parent-return families. Fresh copied environments at return boundaries justify the products by the tower property. Downward rational rounding keeps lower bounds. If a finite x_n*m_*>=1, root episode generations have nondecaying expected size and the copied process has infinite expected root visits. Ordinary T4 five-site star and nine-site one-expanded-child blocks have exact n4 witnesses x4=843518480447/10^12,m_*>=119/100 and x4=216299500219/(250*10^9),m_*>=121/100, with both products greater than one. Thus these two upper comparisons cannot yield a finite-first-moment proof under any C33 potential. This does not imply recurrence or transience of the ordinary frog model or close other block shapes. C34 uses the finite episode coefficients of the C33 copied site-counting upper comparison.",
+      "proof_text": null,
+      "assumptions": [
+        "Precisely the C33 independent copied-block law with all ordinary walks and unbounded entries",
+        "Only the ancestral path is guaranteed warm on upward entry; other allowed residents wake once per fresh episode",
+        "Global root degree d and bulk degree d+1",
+        "Positive probability of reaching a returning root episode; finite set of entry categories"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C34_copied_block_infinite_mean:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C34_copied_block_infinite_mean_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "proofs/C34_copied_block_infinite_mean_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C34_copied_block_infinite_mean",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "w677-frog-copied-site-block-return-obstruction",
+      "to_key": "w677-frog-site-block-upper-range-closure",
+      "kind": "depends_on",
+      "rationale": "C34 uses the finite episode coefficients of the C33 copied site-counting upper comparison."
+    }
+  ]
+}

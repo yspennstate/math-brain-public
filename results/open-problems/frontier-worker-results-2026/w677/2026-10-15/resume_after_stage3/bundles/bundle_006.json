@@ -1,0 +1,112 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-four-child-bootstrap-006",
+  "entries": [
+    {
+      "key": "gtw-general-self-consistency-operator",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "guo-tang-wei-general-self-consistency-operator",
+      "kind": "theorem",
+      "title": "Guo--Tang--Wei self-consistency operator on d-ary trees (2022, Proposition 3.1)",
+      "statement": "Let d>=2 and 0<pi<=1/2. Use one active root frog and one sleeper per non-root vertex in the GTW single-entry non-backtracking self-similar model. A newborn moves upward with probability pi and otherwise to a uniform child; after an upward step its next upward probability is pi/[pi+(1-pi)(d-1)/d], with uniform permissible siblings, while downward paths stay downward. Stop root returns and excess subtree entries. Let V be the total returns and g(x)=E[x^V], x<1, with x^infinity=0. Then g=A_(d,pi)g on 0<=x<1. For z_k=h([pi*x+(1-pi)(k-1)/d]/[pi+(1-pi)(d-1)/d]), define P_1=z_1, Q_2=z_2^2, P_(k+1)=z_(k+1)^(k+1)-sum_(l=1)^k binom(k,l-1)z_(k+1)^(k+1-l)P_l, and Q_(k+1)=z_(k+1)^(k+1)-sum_(l=2)^k binom(k-1,l-2)z_(k+1)^(k+1-l)Q_l. The operator is A_(d,pi)h=(pi*x+(1-pi)/d)sum_(k=1)^d binom(d-1,k-1)P_k+[(d-1)(1-pi)/d]sum_(k=2)^d binom(d-2,k-2)Q_k. This is a physical-PGF identity; no general monotonicity property of the operator is asserted here.",
+      "proof_text": "The single-entry restriction makes the child return processes independent fresh copies when first activated. Decompose the first star by the number of visited child vertices. Lemma 3.7 identifies one-seed and two-seed closure probabilities as the universal P/Q polynomials in the displayed PGF compositions. Subtract closures on proper child subsets to obtain equations (7),(8); sum with the binomial multiplicities and the root-neighbor newborn first-step probabilities to obtain equation (6). Proposition 3.1 gives the physical fixed point.",
+      "assumptions": [
+        "d>=2",
+        "0<pi<=1/2 is the newborn non-backtracking parameter",
+        "One sleeper per non-root vertex; independent paths",
+        "Single downward entry per subtree, root returns stopped"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2008.09226",
+        "url": "https://arxiv.org/pdf/2008.09226",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (mathematical paraphrase)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Proposition 3.1, equations (5)-(8), manuscript pp.7-8; Lemma 3.7 and Section 3.4",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "draft-w677-four-child-monotone-bootstrap",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-four-child-monotone-bootstrap",
+      "kind": "concept",
+      "title": "Draft (unaudited): four-child Guo--Tang--Wei frog PGF monotonicity and Poisson tail",
+      "statement": "PROOF (UNAUDITED), a lemma of w677 C15 v1; novelty unverified. For the four-child one-sleeper self-similar model at original p=19/80, pi=19/75, beta=19/61, gamma=14/61 and q=14/75. Write B=f(beta*x), C=f(beta*x+gamma), D=f(beta*x+2gamma), A=f(beta*x+3gamma), L=C^2-BC and H=D^3-BD^2-2C^2D+2BCD. The GTW polynomial is Tf=(pi*x+q)[A^4+B(1-A^3)+3(1-A^2)L+3(1-A)H]+3q[A^4+(1-A^2)C^2+2(1-A)(D^3-C^2D)]. It is monotone on 0<=B<=C<=D<=A<=1, as shown by eight explicitly factored partial derivatives. It maps finite-support PGFs to finite-support PGFs by finite star closure. For g_a(x)=exp[-a(1-x)], the draft proves Tg_a<=g_(a+1/1000) for every a>=20. With eta=15/61, exact exponential partial sums bound the small-z correction by 16739/1525000 and leave eta-K>=358261/1525000; for z>=1/2 the ratio is at most 14299/25000. These are exact rational analytic checks; no independent exact-version PASS has arrived. This lemma needs a separate finite-start domination before implying recurrence.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite rooted d-ary tree, d>=4",
+        "One active root frog and one sleeper at each non-root vertex",
+        "Independent walks with original inward drift 19/80 and root reflection",
+        "Published GTW fixed point/lower coupling and Mathews degree monotonicity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C15_four_child_bootstrap_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C15_four_child_bootstrap_v1.md",
+        "revision": "2026-10-14 version 1",
+        "license": "owner-own-work",
+        "locator": "Sections 1-4, exact grid and tail receipts; independent review pending",
+        "excerpt": null
+      },
+      "claim_id": "C15_four_child_bootstrap",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "b14fc512be994ced500274305eceb67778d7438ce9014e33ac4f41f916d32b15"
+    },
+    {
+      "key": "draft-w677-frog-recurrence-19-80",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-recurrence-19-80",
+      "kind": "concept",
+      "title": "Draft (unaudited): w677 biased frog recurrence at 19/80 for every d>=4",
+      "statement": "PROOF (UNAUDITED), w677 C15_four_child_bootstrap v1; novelty unverified. For every integer d>=4, the ordinary and self-similar one-sleeper frog models on the infinite rooted d-ary tree are recurrent at original inward drift p=19/80=0.2375, with independent paths, uniform outward choices and ordinary-root reflection. Set p_d=inf{p: ordinary FM(d,p,1) is recurrent} and S_4=sup_{d>=4}p_d, as in Mathews; the draft implies S_4<=19/80. The four-child operator has newborn pi=19/75 and continuation beta=19/61. With N=10000 and scale 2^50, 1000 exact upward grid iterations certify T^1000 1<=g_20 on the full interval, including a final-cell slope of 327869939578746875/70368744177664>=20. The all-a>=20 Poisson improvement then forces the physical root-return PGF to vanish on x<1. GTW lower coupling and Mathews fixed-original-drift degree monotonicity transfer recurrence to every d>=4. A separate expanded-quartic replay matches all final integers; a fresh computation reproduces the input checkpoint byte for byte. The inspected published S_4 bound is 40/153; independent correctness and priority checks remain pending. Unbiased T4 has original p=1/5 and is not settled by this draft.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite rooted d-ary tree, d>=4",
+        "One active root frog and one sleeper at each non-root vertex",
+        "Independent walks with original inward drift 19/80 and root reflection",
+        "Published GTW fixed point/lower coupling and Mathews degree monotonicity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C15_four_child_bootstrap_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C15_four_child_bootstrap_v1.md",
+        "revision": "2026-10-14 version 1",
+        "license": "owner-own-work",
+        "locator": "Sections 1-4, exact grid and tail receipts; independent review pending",
+        "excerpt": null
+      },
+      "claim_id": "C15_four_child_bootstrap",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "b14fc512be994ced500274305eceb67778d7438ce9014e33ac4f41f916d32b15"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-four-child-monotone-bootstrap",
+      "to_key": "gtw-general-self-consistency-operator",
+      "kind": "specializes",
+      "rationale": "The draft uses the \"GTW polynomial\" at d=4. The published statement provides \"g=A_(d,pi)g on 0<=x<1\"; the draft separately proves its four-child monotonicity and tail.",
+      "quote_check": {
+        "from_quote": "GTW polynomial",
+        "to_quote": "g=A_(d,pi)g on 0<=x<1"
+      }
+    },
+    {
+      "from_key": "draft-w677-frog-recurrence-19-80",
+      "to_key": "draft-w677-four-child-monotone-bootstrap",
+      "kind": "depends_on",
+      "rationale": "The draft finite start \"T^1000 1<=g_20\" becomes recurrence by the method statement \"Tg_a<=g_(a+1/1000) for every a>=20\" and its monotone physical fixed point.",
+      "quote_check": {
+        "from_quote": "T^1000 1<=g_20",
+        "to_quote": "Tg_a<=g_(a+1/1000) for every a>=20"
+      }
+    }
+  ]
+}

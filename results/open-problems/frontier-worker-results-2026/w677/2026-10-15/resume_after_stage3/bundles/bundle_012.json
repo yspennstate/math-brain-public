@@ -1,0 +1,87 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "t127-inherited-range-obstruction-drafts-012",
+  "entries": [
+    {
+      "key": "w677-inherited-range-upper",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "frog-inherited-range-upper-many-to-one",
+      "kind": "concept",
+      "title": "Frog model inherited-range upper comparison and range-weighted many-to-one identity (w677 C36)",
+      "statement": "OWNER-OWN-WORK DRAFT; C36 v1 proof (unaudited), novelty unassessed. On rooted T4 start one particle at o with remembered set {o}. Every particle takes ordinary SRW steps; a destination already in its inherited visited set gives one successor, and a new destination gives two successors inheriting the enlarged set. All ancestry history is remembered without a cap, but post-split discoveries are not shared. First physical upper births can use unused original resident paths, yielding an upper coupling in the unstopped process. For the auxiliary count Z stopped on each lineage first returning to o, E Z = sum_n E[2^(|R_n|-1) 1_{tau_o=n}], where R_n is the range of one ordinary SRW from o. The inherited-range first-return count has the range-weighted many-to-one series. These comparisons address the ordinary one-sleeper frog model on T4. This does not give a finite mean or a conclusion for ordinary T4.",
+      "proof_text": null,
+      "assumptions": [
+        "Rooted 4-ary tree, root degree4 and other degrees5",
+        "Independent ordinary future steps and the precise inherited-memory birth rule",
+        "No post-split discovery sharing; first-hit stopping only for auxiliary Z"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w677:frog-inherited-range-upper-many-to-one",
+        "url": "owner-own-work:w677/proofs/C36_inherited_range_obstruction_v1.md",
+        "revision": "47f41a953c641fb87e6a9a0364c97b7ebc0df2baa74cd70ec7fc4b7974c7a114",
+        "license": "owner-own-work (draft; exact claim status appears in statement)",
+        "excerpt": "Status: proof (unaudited). Kind: route-failure. Targets: 2 and 3."
+      }
+    },
+    {
+      "key": "w677-inherited-range-obstruction",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "frog-inherited-range-depth-first-obstruction",
+      "kind": "concept",
+      "title": "Frog model T4 obstruction for full ancestry-range memory: distinct-child DFS quartic (w677 C36)",
+      "statement": "OWNER-OWN-WORK DRAFT; C36 v1 proof (unaudited), novelty unassessed. In the inherited-range upper process on ordinary rooted T4, each lineage remembers every ancestor visit but receives no discoveries made after a split. Its expected first-root-hit absorption count is infinite. A depth-first subfamily visits an ordered list of distinct children at each fresh nonroot vertex and then its parent. Its weighted masses obey Y_0=0, Y_(h+1)=F(Y_h), F(y)=(2/5)[1+(4/5)y+(12/25)y^2+(24/125)y^3+(24/625)y^4]. For every y>=0, F(y)-y=P(y)/3125>=39/12500, where P=48y^4+240y^3+600y^2-2125y+1250. Two explicit nonnegative polynomial decompositions prove the global inequality. Thus E Z>=Y_h>=39h/12500 for every h. The inherited-range first-return count has the range-weighted many-to-one series. This rules out a finite-first-moment transience proof using this comparison, not other comparisons, not ordinary T4 transience, and not almost-sure recurrence. Exact rational algebra and 65 explicit excursions pass; independent audit pending.",
+      "proof_text": null,
+      "assumptions": [
+        "The precise inherited-range process and auxiliary Z in C36 v1",
+        "Ordinary d=4; no truncation of remembered ancestry",
+        "Only the stated DFS subfamily is used for the lower estimate"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w677:frog-inherited-range-depth-first-obstruction",
+        "url": "owner-own-work:w677/proofs/C36_inherited_range_obstruction_v1.md",
+        "revision": "47f41a953c641fb87e6a9a0364c97b7ebc0df2baa74cd70ec7fc4b7974c7a114",
+        "license": "owner-own-work (draft; exact claim status appears in statement)",
+        "excerpt": "Status: proof (unaudited). Kind: route-failure. Targets: 2 and 3."
+      }
+    },
+    {
+      "key": "w677-persistent-star-screen",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "frog-persistent-star-candidate-numerical-screen",
+      "kind": "concept",
+      "title": "Frog model persistent-star candidate: unfavorable T4 return-law screen (w677 C35)",
+      "statement": "OWNER-OWN-WORK DRAFT; C35 v1 numerical evidence only. A proposed star-block upper candidate retains each parent-copy resident mask across returns, but creates fresh child copies on downward exits. Its coupling and scalar response operator are not independently audited. Starting from sterile-tail Bernoulli(1/4) responses at ordinary T4 p=q=1/5, float PGF-grid iteration gives layer-four input means 1.3523258764 (grid512) and 1.3523287595 (grid2048), above its candidate finite-clan-mean boundary 1.05. The screen stops there and is unfavorable. Linear interpolation and rounding errors are not bounded; this is no threshold estimate, rigorous infinite-mean result, or conclusion about ordinary T4. These comparisons address the ordinary one-sleeper frog model on T4.",
+      "proof_text": null,
+      "assumptions": [
+        "The candidate and equations in C35_PERSISTENT_BLOCK_NOTES.md",
+        "Float interpolation/bisection on grids512 and2048",
+        "No certified interval enclosure; no independently checked comparison"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w677:frog-persistent-star-candidate-numerical-screen",
+        "url": "owner-own-work:w677/C35_PERSISTENT_BLOCK_NOTES.md",
+        "revision": "C35-v1-numerical-screen-2026-10-15",
+        "license": "owner-own-work (draft; exact claim status appears in statement)",
+        "excerpt": "Status: sketch, not audited. Target: 2. No T4 conclusion."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "w677-inherited-range-obstruction",
+      "to_key": "w677-inherited-range-upper",
+      "kind": "depends_on",
+      "rationale": "The inherited-range first-return count has the range-weighted many-to-one series."
+    },
+    {
+      "from_key": "w677-persistent-star-screen",
+      "to_key": "w677-inherited-range-upper",
+      "kind": "semantic_association",
+      "rationale": "These comparisons address the ordinary one-sleeper frog model on T4."
+    }
+  ]
+}

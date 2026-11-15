@@ -1,0 +1,173 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-growing-excursion-mean-criterion-010",
+  "entries": [
+    {
+      "key": "draft-w677-frog-logarithmic-depth-entry-caps",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-logarithmic-depth-entry-caps",
+      "kind": "concept",
+      "title": "Frog model logarithmic depth budgets: retained-excursion numerical candidate (w677)",
+      "statement": "NUMERICAL EVIDENCE, C29 v2;24 complete roots. Exact-version PASS covers the numerical table and sanity envelopes; the simulator was not rerun. T3 ordinary motion with parent probability p, one resident per vertex, one incoming seed and an absorbing recursive parent. Use absolute-depth K_j=min{K>=1:4^K>=(j+2)^2}, persistent cumulative child responses and each resident once; overflow retains motion but suppresses all waking until return, and waking below horizon H is suppressed. Three independent M4000 empirical-population runs give mean R1=2.6894167 +/-0.1214646 at H20 (ratio0.366739 to(H+2)/3),5.84075 +/-0.4245182 at H32 (ratio0.515360), 15.6561667 +/-0.2624811 at H64 (ratio0.711644) and34.898 +/-0.7998780 at H128 (ratio0.805338), at p=1/4. At p=6/25, H128 gives3.96875 +/-0.1623476 (ratio0.091587). Bars are between-run SD; inherited recursive population bias is unbounded, so these are not confidence bounds for the exact law. The general all-active first moment rules out any physical-p recurrence threshold below1/4 for original-path T3 lower models; the boundary1/4 remains unresolved for this family. C29v1 PASS covered its separate16-root numerical/model-note stage only, and was not a construction audit or a verdict on C29v2. C31 v1 supplies the separately audited unequal-cap original-path lower coupling for deterministic absolute-depth budgets. The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied.",
+      "proof_text": null,
+      "assumptions": [
+        "Ordinary T3 motion; one original resident and incoming seed; absorbing parent",
+        "K_j minimal positive integer with4^K_j>=(j+2)^2; persistent joint response maps",
+        "All waking suppressed throughout overflow excursions and below finite horizon",
+        "Frozen C29v2:24 roots, M4000; inherited empirical-law bias unbounded"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C29_logarithmic_caps:v2",
+        "url": "~\\brain_workers\\w677\\proofs\\C29_logarithmic_caps_v2.md",
+        "revision": "2026-10-15 version2",
+        "license": "owner-own-work (exact status given in card; novelty unassessed)",
+        "locator": "proofs/C29_logarithmic_caps_v2.md",
+        "excerpt": null
+      },
+      "claim_id": "C29_logarithmic_caps",
+      "claim_version": 2,
+      "claim_status": "numerical evidence",
+      "audits": [
+        {
+          "version": 2,
+          "verdict": "PASS",
+          "reviewer": "an agent",
+          "at": "2026-10-15T03:16:57.347566+00:00",
+          "source": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "PASS as numerical evidence on sha256 cc2958bfdd95077c. The table was recomputed from the 24 root records in C29_STAGE_v2.json (sha 0cb66059, every root absolute level 0, M=4000, replicates 0-2 for each of the 8 cells): every mean R1, between-run SD, PGF(1/2) mean and SD matches to the printed digits. Exact envelopes checked by hand against C30 v1: mu_H = 1/3 + (H+1)/3 = (H+2)/3. On E (the incoming seed and the resident at u both step inward, prob 1/16) both hit o at once, nothing enters the subtree, R_H = 2. The level n>=1 indicators are independent of E with total mean H/3, so E R_H <= mu_H - (1/16)(2+H/3) + 2/16 = (H+2)/3 - H/48, which is 122/3 at H=128, above the observed 34.898. At p=6/25, beta = p/(1-p) = 6/19 and 3beta = 18/19, so E C_H < beta + beta/(1-3beta) = 120/19. The floor of 1/4 for any genuine lower family's threshold is correct (3beta<1 gives finite expected hits). Scope stated correctly: no exact-law mean growth and no threshold are claimed; C29 v1's PASS is not transferred; the unfinished M=16000 campaign is excluded. Not re-run: the simulator itself.",
+          "proof_sha256": "cc2958bfdd95077cbf18441b26be2e237da09a474f9dd41b53b9c4f1f709fd0a",
+          "scope": "Numerical table and exact sanity envelopes; simulator not rerun."
+        }
+      ]
+    },
+    {
+      "key": "w677-frog-linear-finite-height-mean-recurrence-criterion",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "w677-frog-linear-finite-height-mean-recurrence-criterion",
+      "kind": "concept",
+      "title": "Frog model recurrence from linear finite-height mean (w677, correctness PASS)",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C30 v1; standard sufficient criterion, novelty unassessed. In the ordinary one-frog model on rooted T_d, d>=2, let W be full root returns and u the first child entered by the initial root frog. For each H let R_H be a legitimate lower exploration on the same original ordinary personal paths, with one incoming seed at u, only original resident origins at levels0..H below u, no extra/cloned frogs, retained motion or killing, and at most one first root absorption per frog. Require R_H<=W. Then the all-active hit-indicator sum C_H for those residents plus that incoming seed satisfies R_H<=C_H, E C_H=(H+2)/d and Var(C_H)<=E C_H: the personal hit indicators are independent Bernoulli variables with level-n probability d^(-(n+1)). No independence of C_H and W is assumed. For A={W>=M}, Cauchy-Schwarz gives E R_H<=M+mu_H P(A)+sqrt(mu_H P(A)). Divide by H, take limsup, then M->infinity to obtain P(W=infinity)>=d limsup E R_H/H. A positive limsup, even along an unbounded subsequence of heights, implies full ordinary recurrence by HJJ Theorem4. A divergent untruncated expectation or finitely many growing sample means is insufficient. The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied.",
+      "proof_text": null,
+      "assumptions": [
+        "Ordinary rooted d-ary one-frog model, integer d>=2",
+        "Lower counts on the original independent personal paths, no cloned frogs",
+        "Only resident origins at relative levels0..H plus one incoming original root frog",
+        "One first-hit absorption per frog; lower root absorptions contained in full activity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C30_linear_truncated_mean_criterion:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C30_linear_truncated_mean_criterion_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work (exact status given in card; novelty unassessed)",
+        "locator": "proofs/C30_linear_truncated_mean_criterion_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C30_linear_truncated_mean_criterion",
+      "claim_version": 1,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "version": 1,
+          "verdict": "PASS",
+          "source": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "Correctness PASS (hand + exact checks, reviewer_audits/t127_c27v2_c29_c30/chk.py; sha256 cbf97dc1..). Hitting probability d^-m from distance m (distance chain 1/(d+1) in, d/(d+1) out; finite gambler's ruin checked against d^-m). Envelope: seed 1/d plus d^n residents at distance n+1, so E C_H=(H+2)/d and Var<=mean (Fractions, d=2,3,5, H<7; d=2 variances 1/2, 7/8, 21/16, 57/32 match their file). Pathwise R_H<=C_H holds because each counted hit is the same frog's preassigned path, and R_H<=W because the counted first hits are distinct visits. (4) is right: R_H<W<M off A_M, and Cauchy-Schwarz gives E[(C-mu)1_A]<=sigma sqrt(q). sigma_H/H<=sqrt(mu_H)/H->0, so c<=q_M/d for every M, then continuity from above. The zero-one law is used only for the ordinary SRW rooted-tree model, which is HJJ's setting. A sound sufficient criterion: the open piece is exactly a proved linear lower mean for an audited lower family (C29's unequal caps), as C30 says.",
+          "recorded_at": "2026-10-15T01:35:36.541650+00:00"
+        }
+      ]
+    },
+    {
+      "key": "w677-frog-unequal-entry-budgets-cumulative-response-operator",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "w677-frog-unequal-entry-budgets-cumulative-response-operator",
+      "kind": "concept",
+      "title": "Frog model unequal entry budgets: cumulative response operator and lower coupling (w677, correctness PASS)",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C31 v1, construction only; novelty unassessed. Fix integer d>=2,0<p<1/2,q=(1-p)/d,beta=p/(1-p), one original resident per vertex and deterministic finite positive budgets K_j indexed by absolute depth and fixed across horizons. Use serial enabled inputs with persistent counters; overflow retains ordinary motion but suppresses all waking until return and consumes no enabled instructions or counters below that edge. For any positive A,B, independent child cumulative B-vectors r extend as F(0)=0,F(n)=r_n for1<=n<=B and F(n)=r_B+sum_(i=1)^(n-B)Z_i thereafter, with independent Bernoulli(beta) Z_i. With iid parent departure counts U,D_j, define P_k(t)=k+1+sum_j F_j(D_j(t))-t, tau_k its first zero and R_k=U(tau_k),1<=k<=A. All tau_k are finite almost surely, R is cumulative, and its law T_(A,B) is monotone in cumulative child maps, not necessarily their increments. At height H the leaf law is(Z_0+sum_(i=1)^k Z_i)_(k=1)^K_H, resident once, and mu_j^H=T_(K_j,K_(j+1))(mu_(j+1)^H). Fixed-profile laws are stochastically nondecreasing in H. At ordinary p=1/(d+1), embedding the root frog at its first entered child gives a genuine original-personal-path lower count R_H<=W, with only original resident origins at depths0..H and one first root hit per frog, so C30 applies. No positive linear mean bound, model phase threshold, code/formal certification or full T3/T4 classification is asserted. C31 v1 supplies the separately audited unequal-cap original-path lower coupling for deterministic absolute-depth budgets. The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied.",
+      "proof_text": null,
+      "assumptions": [
+        "Integer d>=2; 0<p<1/2; independent ordinary directions",
+        "One original resident per vertex, persistent counters and joint serial input responses",
+        "Deterministic absolute-depth finite positive budgets, fixed across horizons",
+        "Overflow suppresses ALL waking until return and consumes no enabled counters or departure stack",
+        "Only original resident origins through horizon H; each first root hit counted once",
+        "The full-model comparison and C30 application here use ordinary p=1/(d+1)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C31_unequal_cap_response_operator:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C31_unequal_cap_response_operator_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work (exact-version correctness PASS; novelty unassessed)",
+        "locator": "proofs/C31_unequal_cap_response_operator_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C31_unequal_cap_response_operator",
+      "claim_version": 1,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "version": 1,
+          "verdict": "PASS",
+          "source": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "Correctness PASS on sha256 cdac60ca6217703f for claims (i)-(iv) as stated (construction only; no mean bound claimed). Hand: Sec 1 gambler's ruin return prob beta=p/(1-p); suppression flag and budget are known before the next direction, so separate streams give fresh ordinary steps. Sec 2 queue identity P_k(t)=k+1+sum F_j(D_j(t))-t, decrements <=1, tau_(k+1)>tau_k, R on S_A for any A,B. Sec 3 closure: non-loop departures <= A+1+C, loops (exhausted child and return) have prob c q beta <= p < 1, eliminated law p, q, c q(1-beta) over 1-c q beta sums to one. Sec 4 common streams give F<=G pointwise, the larger residual cannot hit zero first, U monotone; the coupling holds simultaneously in k and needs no increment order. Sec 5 leaf law Z_0+Z_1+..+Z_k exact (independent paths, all deeper waking suppressed); dimensions T_(K_j,K_(j+1)) match the absolute-depth profile. Sec 6: by tau_k the inputs 1..k and the resident are resolved on the same paths, so R_k^(H+1)>=L_k; then Sec 4 upward with unchanged dimensions. Sec 7 meets C30 v1 (PASS) hypotheses: law is the same under preassigned personal paths (each step taken is a fresh increment; a suppressed excursion's return/no-return is a function of that frog's own future, unused elsewhere); lower awake set inside the stopped closure; each counted frog counted once at its first hit of o, so R_H<=W and R_H<=C_H. p=1/(d+1) gives q=p, beta=1/d. Not checked numerically by the reviewer; the limsup E[R_H]/H>0 bound is not claimed and remains the open piece.",
+          "recorded_at": "2026-10-15T02:44:10.935408+00:00"
+        }
+      ]
+    },
+    {
+      "key": "w677-frog-forced-input-binomial-child-coverage",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "frog_forced_input_binomial_child_coverage",
+      "kind": "concept",
+      "title": "Frog model child coverage from deterministic incoming inputs (w677 C32, unaudited draft)",
+      "statement": "OWNER-OWN-WORK DRAFT, proof (unaudited), C32 v1; novelty unassessed. In the C31 finite-horizon retained-path serial query, fix d>=2,0<p<1/2,q=(1-p)/d,beta=p/(1-p),k>=1 deterministically supplied enabled inputs and one original resident. For a child with positive enabled-entry budget B, its enabled entry count N admits N>=min(B,S),S~Bin(k+1,r),r=q/(1-(d-1)*q*beta). Hence P(N<ell) is at most the binomial lower tail for 1<=ell<=B; all-children no-entry failure is at most min(1,d*(1-r)^(k+1)), without independence across children. On ordinary T3 r=3/10. Forced-query coverage-error bounds are summable for K_j=min{K>=1:4^K>=(j+2)^alpha},alpha=4 or8, but the real exploration has not been proved to deliver these inputs. No conditional-on-adaptive-input-count bound is asserted. The source seed paths alone cannot reliably supply a next-child quota of order k; activated residents must provide the missing amplification. The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied. Reviewer correctness PASS recorded for C32 v1 on proof SHA256 9a912fe60b9851a8631aa7d03600aabd72c02798a387e677565f9604bffa1aa6; recovery reviewer codex-term-agent. The PASS covers deterministic fresh forced inputs only. No different-model audit, adaptive supply, positive mean growth, amplification or recurrence is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "C31 finite-horizon serial retained-path model, d>=2 and 0<p<1/2",
+        "k is prescribed deterministically in a fresh query; each input begins enabled; one resident only",
+        "B>=1; cumulative counters persist; ordinary suppressed motion retained"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C32_forced_input_child_coverage:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C32_forced_input_child_coverage_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "proofs/C32_forced_input_child_coverage_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C32_forced_input_child_coverage",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-frog-logarithmic-depth-entry-caps",
+      "to_key": "w677-frog-linear-finite-height-mean-recurrence-criterion",
+      "kind": "semantic_association",
+      "rationale": "The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied."
+    },
+    {
+      "from_key": "draft-w677-frog-logarithmic-depth-entry-caps",
+      "to_key": "w677-frog-unequal-entry-budgets-cumulative-response-operator",
+      "kind": "cites",
+      "rationale": "C31 v1 supplies the separately audited unequal-cap original-path lower coupling for deterministic absolute-depth budgets."
+    },
+    {
+      "from_key": "w677-frog-unequal-entry-budgets-cumulative-response-operator",
+      "to_key": "w677-frog-linear-finite-height-mean-recurrence-criterion",
+      "kind": "semantic_association",
+      "rationale": "The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied."
+    },
+    {
+      "from_key": "w677-frog-forced-input-binomial-child-coverage",
+      "to_key": "w677-frog-linear-finite-height-mean-recurrence-criterion",
+      "kind": "semantic_association",
+      "rationale": "The remaining sufficient target is limsup_(H->infinity) E[R_H]/H>0 for the exact lower law; no such inequality is supplied."
+    }
+  ]
+}

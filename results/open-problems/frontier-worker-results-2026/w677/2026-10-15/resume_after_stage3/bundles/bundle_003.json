@@ -1,0 +1,64 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-reviewed-biased-recurrence-003",
+  "entries": [
+    {
+      "key": "w677-biased-frog-recurrence-original-drift-133-500",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "w677-biased-frog-recurrence-original-drift-133-500",
+      "kind": "theorem",
+      "title": "Owner draft (independently checked): w677 biased frog recurrence at drift 133/500 via Guo–Tang–Wei and Mathews",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C4_biased_bootstrap version 3; novelty unverified. For every integer d>=3, on the infinite rooted d-ary tree put one active frog at the root and one sleeping frog at each non-root vertex. Frogs have independent nearest-neighbor paths with parent probability p=133/500 at non-root vertices and probability (1-p)/d to each child, and at the root move uniformly to a child. Each visited sleeping frog wakes and follows its assigned path. The root is visited infinitely often almost surely. Let p_d be the ordinary-model critical original drift and S_3=sup_{d>=3}p_d, as defined by Mathews. Then S_3<=133/500=0.266. This theorem concerns biased walks; it does not settle the ordinary simple-random-walk 3-ary (p=1/4) or 4-ary (p=1/5) problems. Correctness was passed by an independent Claude reviewer on the exact version; citation coverage is incomplete, so no priority claim is established.",
+      "proof_text": "For d=3, Guo–Tang–Wei Proposition 1.4 provides a single-entry non-backtracking lower model with newborn upward probability pi=133/484 and continuation upward probability beta=133/367. Put gamma=117/367 and q=117/484. Its root-return PGF f satisfies the published Proposition 3.1 fixed point: with A=f(beta*x+2*gamma), C=f(beta*x+gamma), B=f(beta*x), T f=(pi*x+3*q)*A^3+(pi*x+q)*B*(1-A^2)+2*(1-A)*[(pi*x+2*q)*C^2-(pi*x+q)*B*C]. The operator is monotone on valid PGFs. For g_a(x)=exp(a*(x-1)), z=1-x, t=exp(-a*gamma), write R=(T g_a)/g_a as sum_i (w_i-d_i*z)*exp(lambda_i*z), with w=(125*t^2/242,2*t^2*(367/484-125*t/242),(1-t)*(1+t-125*t^2/121)), d=(pi*t^2,2*pi*t^2*(1-t),pi*(1-t)^2*(1+2*t)), and lambda=(234*a/367,101*a/367,-32*a/367). The continuous extension H=(1-R)/z is at least 1/1000 for all a>=0, z in [0,1]. On [0,20]x[0,1] the saved generator and coverage checker certify this with 41,258 exact outward dyadic leaf intervals; a separate reviewer implementation using ball arithmetic certifies it with 8,495 leaves. For a>=20 and x<=1/2, exact positive Taylor sums yield R<1370819/1694000<999/1000. For x>=1/2 they yield R<=exp(-z) and H>=2/3. Hence T g_a<=g_(a+1/1000). Monotonicity gives f=T^n f<=T^n 1<=g_(n/1000), so f(x)=0 for x<1, implying infinitely many root returns almost surely. The lower coupling transfers recurrence to the ordinary ternary model. Mathews Theorem 2, at fixed original drift and deterministic sleeping law one, transfers lower-model recurrence to every d>=3, followed by the same ordinary-model lower coupling. The reviewed proof's Section 7 has an authorized editorial erratum: 1/1000 replaces 1/100 and inequality (2) supplies the reference. Its displayed bootstrap already uses 1/1000; the theorem and certificate are unchanged.",
+      "assumptions": [
+        "Infinite rooted d-ary tree, integer d>=3",
+        "One active root frog, one sleeper per non-root vertex",
+        "Independent walks with parent probability 133/500 and uniform outward choices",
+        "Published GTW lower coupling and Mathews degree monotonicity",
+        "Uniform root reflection; recurrence concerns total root visits",
+        "Exact-version reviewer PASS; novelty not established"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C4_biased_bootstrap_v3",
+        "url": "~\\brain_workers\\w677\\proofs\\C4_biased_bootstrap_v3.md",
+        "revision": "2026-10-14 version 3, exact-version PASS with authorized textual erratum",
+        "license": "owner-own-work",
+        "locator": "Sections 1-7; erratum proofs/C4_biased_bootstrap_v3_errata.md; AUDITS_FROM_REVIEWER.tsv C4 version 3 PASS",
+        "excerpt": null
+      },
+      "claim_id": "C4_biased_bootstrap",
+      "claim_version": 3,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "file": "AUDITS_FROM_REVIEWER.tsv",
+          "claim_id": "C4_biased_bootstrap",
+          "version": 3,
+          "verdict": "PASS",
+          "scope": "Correctness, including an independent operator derivation, independent interval proof, exact tail and probabilistic transfer; novelty not judged.",
+          "errata": "proofs/C4_biased_bootstrap_v3_errata.md",
+          "proof_sha256": "14a1030eadcb1d11fa4ef2a8f8e1046624721e51a5f3c9afce35e1e4799fa2af"
+        }
+      ],
+      "proof_sha256": "14a1030eadcb1d11fa4ef2a8f8e1046624721e51a5f3c9afce35e1e4799fa2af",
+      "primary_sources": [
+        {
+          "url": "https://arxiv.org/pdf/2008.09226",
+          "locator": "Proposition 1.4; Section 2 Lemma 2.1; Proposition 3.1 equations (5)-(8)"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2309.14443",
+          "locator": "Theorem 2, manuscript p. 4"
+        },
+        {
+          "file": "computations/biased_certificate/p133_500_bits50_delta001/recheck.json",
+          "locator": "41,258 exact leaf intervals and coverage/tail checks"
+        }
+      ],
+      "novelty": "Unverified; no exhaustive priority claim."
+    }
+  ],
+  "relations": []
+}

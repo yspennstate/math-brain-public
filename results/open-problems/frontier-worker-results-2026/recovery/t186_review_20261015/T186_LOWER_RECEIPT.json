@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-15T14:20:35.556000+03:00",
+  "claim": "T186-W674-C013 v1 with C005 v1/C007 v2",
+  "status": "PASS reviewed-version reconciliation, own exact coverage/stopping audit and lead union-bound derivation",
+  "reviews": [
+    {
+      "proof": "~\\brain_workers\\w674\\T186\\proofs\\C005_four_message_core.md",
+      "proof_sha256": "c300345293448cb73e7e5f32d2afc66b36c0d58d8f124cc12b217c5e76a5e5da",
+      "first_review_rows": [
+        "T186-W674-C005\t1\tPASS\tCorrectness PASS on sha256 c300345293448cb7. Hand: the update is monotone in 000<001<011<111 and keeps a<=b<=h; iteration from 111 decreases to the greatest fixed point (local finiteness). Lemma, forward: v in S(m) sends b=1 on every edge; a neighbour u with b(u->v)=1 is in S(m); a neighbour with b(u->v)=0 has h(u->v)=1, hence >= k-1 other incoming a's, and a(v->u)=1 because removing u's b=0 message leaves v's k b's; every w with a(w->u)=1 then gets h(u->w)=1 and lies in S(m), so u has k neighbours in S(m). Reverse: the lower messages (a: v in S with k other S-neighbours; b: v in S; h: v in S u N(S)) are a subsolution, the v in N(S) minus S case using that each S-neighbour w of v has |N(w) n S| >= k and v not in S; a subsolution lies below the greatest fixed point, so S is inside S(m*). Poisson recursion: child types 111/011/001/000 with probabilities p, q-p, s-q, 1-s thin into independent Poisson counts; A is inside B and Z is disjoint from B, so P(a)=d Q_k(cq), P(b)=d Q_(k-1)(cq), and b=0 with A>=k-1 is exactly Z>=1 with A>=k-1 (A>=k-1 forces B>=k-1), giving (1-d)Q_(k-1)(cp); the root has no parent, so its core probability is lim p_t. The finite-graph bound uses K inside S(m_t) for every t (monotone in m) and local weak convergence, upper direction only, as stated. Reviewer brute force (brute.py, own code): 3000 random graphs, n <= 9, k in {2,3,4}; the greatest strong set by exhaustive search equals S(m*) every time (729 with nonempty K), 0 mismatches."
+      ],
+      "second_review": "~\\brain_workers\\w683\\audits\\w674_T186-C005_v1.md",
+      "second_review_sha256": "8a89063b2d55a301a487569f24ff3bea40677d4a6e402eb9d707bc126597091e",
+      "second_verdict": "2026-10-15T13:18:34+03:00\tw674\tT186-C005\t1\tPASS\taudits/w674_T186-C005_v1.md\tFixed-point reconstruction and nested Poisson thinning checked; own 3300 finite cases agree; no positive finite transfer asserted."
+    },
+    {
+      "proof": "~\\brain_workers\\w674\\T186\\proofs\\C007v2_tree_certificates.md",
+      "proof_sha256": "8e8cbdb850b13175f88f2f599e9a7eba216a5ef8174e2d5a0ffb71057d9f14e3",
+      "first_review_rows": [
+        "T186-W674-C007v2\t2\tPASS\tPASS on sha256 8e8cbdb850b13175 for the tree-onset enclosures 9.23414 <= theta_4 <= 9.23415, 6.84256 <= theta_3 <= 6.84257 and the zero-side finite-graph consequence. Not checked: the complement-growth table (C006's capped Palm matrices), which C013 does not use. Hand: a nonzero nested fixed point has q <= Q_(k-1)(cq) <= (cq)^(k-1)/(k-1)! (1{N>=j} <= binom(N,j)), so b^(k-1) u_q^(k-2) < (k-1)! forces q = 0, then p = s = 0; the box iteration with coordinatewise minimum and re-nesting keeps every fixed point below u by monotonicity in (p,q,s) only; the three c-derivative formulas re-derived (Q_j' = P_(j-1), d' = -A d). Positive side: T_c(L) >= L with L nested and p > 0 gives a fixed point above L by iteration from the top. Reviewer's own rigorous cover (zero_cover.py, python-flint arb, own simpler corner bound: d <= exp(-a(1-u_s)), Q at b u, T_s increasing in d since Q(cq) >= Q(cp); no derivative sharpening): [0, 6.84256] for k=3 and [0, 9.23414] for k=4 each certified with 20 dyadic boxes, contiguous, endpoints included. Controls: boxes [9.23415, 9.234151] and [6.84257, 6.842571] stall and fail as they must; float iteration from (1,1,1) reaches (0.829, 0.856, 0.985) at c=9.23415 and 0 at 9.23414, (0.775, 0.823, 0.975) at 6.84257 and 0 at 6.84256. positive.py: the saved rational witnesses satisfy T_c(L) - L >= (1.03e-7, 1.30e-7, 5.0e-8) for k=4 and (1.10e-7, 1.36e-7, 3.4e-8) for k=3 in 300-bit arb. With C005 v1 also PASS, the C013 v1 PASS no longer depends on unaudited premises."
+      ],
+      "second_review": "~\\brain_workers\\w683\\audits\\w674_T186-C007_v2.md",
+      "second_review_sha256": "50d8f03ec405d2b4ff93ff4253433b12526663aad20ae555814f5727f2efd546",
+      "second_verdict": "2026-10-15T13:53:30+03:00\tw674\tT186-C007\t2\tPASS\taudits/w674_T186-C007_v2.md\tOwn full 1419-box Arb replay, both positive witnesses, all 900 Palm kernel and 81 Jacobian entries passed."
+    },
+    {
+      "proof": "~\\brain_workers\\w674\\T186\\proofs\\C013_finite_subcritical_emptiness.md",
+      "proof_sha256": "9c127b0e5c3825d994b570eb636602f029b3c798838331cc7f02ad58c513562a",
+      "first_review_rows": [
+        "T186-W674-C013\t1\tPASS\tCorrectness PASS on sha256 9c127b0e5c3825d9 for the statement as written, i.e. CONDITIONAL on C005 v1 and C007 v2, neither of which has a reviewer PASS yet (only T186-C003 v1 does in this file). Hand: union over t=ceil(ks/2)-edge subsets; binom(n,s) <= (en/s)^s and binom(binom(s,2),t) <= (es^2/(2t))^t <= (es/k)^t since t >= ks/2; x = ecs/(kn) <= 1/2 gives x^t <= x^(ks/2), so the count is at most [B (s/n)^a]^s with B = e(ec/k)^(k/2), a = k/2-1; for s <= sqrt n the bracket is at most B n^(-a/2) and the sum from s = k+1 is O(n^(-a(k+1)/2)); for sqrt n < s <= eps n it is at most B eps^a <= 1/4. A strong set has every vertex of S union N(S) with k neighbours in S (C005's definition, Anastos 2105.13828v5 Sec. 3), so S induces minimum degree >= k; limsup E|K|/n <= p = 0 gives |K|/n -> 0 in probability by Markov; the split Pr(K nonempty) <= Pr(small min-degree-k set) + Pr(|K| > eps n) closes it. The claim is a lower bound on the onset only and says so. The cutoffs 9.23414 and 6.84256 come from C007 v2 and were not checked here."
+      ],
+      "second_review": "~\\brain_workers\\w683\\audits\\w674_T186-W674-C013_v1.md",
+      "second_review_sha256": "a9190ee24dfbaafd60681058eb837bb57319199021c64b9444f6e255a3cec441",
+      "second_verdict": "2026-10-15T13:53:30+03:00\tw674\tT186-W674-C013\t1\tPASS\taudits/w674_T186-W674-C013_v1.md\tCeiling exponent, both union-bound sums and zero-density-to-emptiness implication checked; dependencies now PASS."
+    }
+  ],
+  "covers": [
+    {
+      "k": 3,
+      "cutoff": "21383/3125",
+      "boxes": 733,
+      "raw_sha256": "176047f16169a53ff6d2de14efc6393b2ede49322edaf9bf402e15d252557d40",
+      "auditor_receipt_sha256": "015397d608c34d523b69b66340b8114fedccd4a61ad8f4b7be50d4a5f365428c",
+      "coverage": "exact closed cover from zero to cutoff",
+      "stopping_tests": "all strict exact integer inequalities pass",
+      "limit": "Interval domination is supplied by the independent full Arb replay, not proved by the integer stopping check alone."
+    },
+    {
+      "k": 4,
+      "cutoff": "461707/50000",
+      "boxes": 686,
+      "raw_sha256": "19a4d8d59e316eb0d9fc879b76b3d222036e2e0506c0795bdedaede26b48f6dd",
+      "auditor_receipt_sha256": "32ac031c7247384716cb912c3894f4602476bd8bbb1b4aed3474aa24615ddd18",
+      "coverage": "exact closed cover from zero to cutoff",
+      "stopping_tests": "all strict exact integer inequalities pass",
+      "limit": "Interval domination is supplied by the independent full Arb replay, not proved by the integer stopping check alone."
+    }
+  ],
+  "analytic_check": "For k>=3, a=k/2-1>0; count min-degree sets by t=ceil(ks/2) edge witnesses. With eps<=k/(2ec), base ecs/(kn)<=1/2, so rounding t down increases bound. Bound is [e(ec/k)^(k/2)(s/n)^a]^s. Split at sqrt(n): two geometric tails vanish. Zero density plus absence of small min-degree-k sets implies emptiness without independence among candidate sets.",
+  "result": "For each fixed c<=9.23414 strong4-core empty whp; for each fixed c<=6.84256 strong3-core empty whp, including endpoints.",
+  "scope": "Lower-side target3 move only; no positive finite transfer, exact finite onset, simultaneous/varying-c assertion or priority claim."
+}

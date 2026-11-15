@@ -1,0 +1,101 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-finite-start-and-first-exit-drafts-004",
+  "entries": [
+    {
+      "key": "draft-w677-finite-start-poisson-frog-bootstrap",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-finite-start-poisson-frog-bootstrap",
+      "kind": "concept",
+      "title": "Draft (unaudited): w677 finite-start Poisson frog bootstrap with exact convex PGF interpolation",
+      "statement": "PROOF (UNAUDITED), C11_finite_start_criterion v1; elementary technique, novelty not asserted. Let T map finite-support probability generating functions to finite-support PGFs and have a monotone extension including the physical PGF f=T f, 0<=f<=1, and g_a(x)=exp(-a*(1-x)). Suppose Tg_a<=g_(a+delta) for every a>=a0>=0 with delta>0. For integers n>=0,N>=2,S>=1, let nondecreasing h_i/S bound (T^n 1)(i/N) upward, with h_N=S. If h_(i+1)/S<=exp(-a0*(1-i/N)) for i=0,...,N-2 and N*(S-h_(N-1))/S>=a0, monotonicity and the final-cell convex chord give f<=g_a0. Iteration then forces f(x)=0 for every x<1 and an extended integer return count is infinite almost surely. The bootstrap is needed only for a>=a0; an exact finite start can bypass failure at smaller means. Grid computations must round interpolation and exponential comparisons outward; a sample or floating interpolation is not a certificate. PGF convexity suffices, and universal log-convexity is not assumed.",
+      "proof_text": null,
+      "assumptions": [
+        "T maps finite-support PGFs to finite-support PGFs and has the stated monotone extension",
+        "Physical PGF f=T f and 0<=f<=1",
+        "Upward exact finite-grid bounds, all nonfinal-cell exponential comparisons and final-cell slope condition",
+        "Tg_a<=g_(a+delta) for every a>=a0, delta>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C11_finite_start_criterion_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C11_finite_start_criterion_v1.md",
+        "revision": "2026-10-14 version 1",
+        "license": "owner-own-work",
+        "locator": "Full hypotheses, proof and checkable scripts in the named local draft",
+        "excerpt": null
+      },
+      "claim_id": "C11_finite_start_criterion",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    },
+    {
+      "key": "draft-w677-frog-recurrence-drift-53-200-finite-start",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-recurrence-drift-53-200-finite-start",
+      "kind": "concept",
+      "title": "Draft (unaudited): w677 biased frog recurrence at 53/200 using a finite-start bootstrap",
+      "statement": "PROOF (UNAUDITED), C10_finite_start_bootstrap v1; priority unverified. Candidate ordinary frog recurrence at fixed inward probability p=53/200 for every integer d>=3, on the infinite rooted d-ary tree with one active root frog, one sleeper per non-root vertex, independent uniform outward moves and uniform root reflection. For d=3, the published GTW lower model has newborn probability 53/194 and continuation probability 53/147. The exact ternary transform starts from a 600-step upper PGF grid with N=10000 and scale 2^50. Outward continuum checks prove T^600 1<=g_20; an exact analytic tail gives Tg_a<=g_(a+1/1000) for every a>=20. This supplies the finite-start Poisson criterion, then GTW lower coupling and Mathews fixed-original-drift degree monotonicity transfer recurrence. An independent local expanded-operator replay matches all final integers and a fresh run reproduces the grid byte-for-byte. These are local checks, not a different-model audit; the exact C10 version has no reviewer PASS yet. The unbiased T3 p=1/4 and T4 p=1/5 cases remain open.",
+      "proof_text": null,
+      "assumptions": [
+        "Integer d>=3; original inward drift exactly 53/200",
+        "One sleeper per non-root vertex, independent paths, uniform root reflection",
+        "Exact finite-start and tail checks, published GTW/Mathews transfers"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C10_finite_start_bootstrap_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C10_finite_start_bootstrap_v1.md",
+        "revision": "2026-10-14 version 1",
+        "license": "owner-own-work",
+        "locator": "Full hypotheses, proof and checkable scripts in the named local draft",
+        "excerpt": null
+      },
+      "claim_id": "C10_finite_start_bootstrap",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    },
+    {
+      "key": "draft-w677-first-exit-t4-uniform-obstruction",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-first-exit-t4-uniform-obstruction",
+      "kind": "concept",
+      "title": "Draft (unaudited): w677 exact first-exit frog neighborhood PGFs and T4 matrix obstruction",
+      "statement": "PROOF (UNAUDITED), C7_first_exit_comparison v2; no ordinary-model classification or established novelty. In a finite radius-one neighborhood on a d-ary tree, start a frogs at its origin, take b children already empty, and one sleeper at each other child. Run independent ordinary simple walks, including woken residents, until first exit. For allowed child set B union T, n=b+|T|, terminal-outlet sums Z_parent,Z_j, the origin transform is F0_T=(Z_parent+sum_allowed Z_j)/((d+1)^2-1-n), and a resident transform is Fj_T=(F0_T+Z_j)/(d+1). A reflecting-root cell instead has F0_T=sum_allowed Z_j/(d*(d+1)-n). Activation-closure transforms satisfy A_T=F0_T^a product_(j in T)Fj_T-sum_(H proper_subset T) A_H product_(j in T minus H)Fj_T; summing A_T gives the exit-count PGF and handles dependent child activations. Exact projected expectations define the specified 48-type d=4, cluster-cap-six matrix. A positive rational vector and rowwise exact AM-GM inequalities certify rho(M(r))>1 for every r>0. Eight separate rational absorbing-chain controls match the finite distributions. This only eliminates that finite matrix as an exponential-weight contraction route; a full-process upper coupling and root contraction are not asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite neighborhood, one sleeper per unknown child; ancestors empty",
+        "Independent ordinary walk paths stopped at first boundary exit",
+        "Specific 48-type matrix in first_exit_matrix.py with cap six; r>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C7_first_exit_comparison_v2",
+        "url": "~\\brain_workers\\w677\\proofs\\C7_first_exit_comparison_v2.md",
+        "revision": "2026-10-14 version 2",
+        "license": "owner-own-work",
+        "locator": "Full hypotheses, proof and checkable scripts in the named local draft",
+        "excerpt": null
+      },
+      "claim_id": "C7_first_exit_comparison",
+      "claim_version": 2,
+      "claim_status": "proof (unaudited)",
+      "audits": []
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-frog-recurrence-drift-53-200-finite-start",
+      "to_key": "draft-w677-finite-start-poisson-frog-bootstrap",
+      "kind": "depends_on",
+      "rationale": "\"This supplies the finite-start Poisson criterion\" uses \"The bootstrap is needed only for a>=a0\" with a0=20: the exact finite-depth start supplies the initial domination before the uniform analytic tail is iterated.",
+      "quote_check": {
+        "from_quote": "This supplies the finite-start Poisson criterion",
+        "to_quote": "The bootstrap is needed only for a>=a0"
+      }
+    }
+  ]
+}

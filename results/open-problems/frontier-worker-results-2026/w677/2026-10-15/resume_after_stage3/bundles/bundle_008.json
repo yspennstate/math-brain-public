@@ -1,0 +1,112 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-upper-comparison-methods-008",
+  "entries": [
+    {
+      "namespace": "probability.interacting_particles.frog_model",
+      "domain": "probability theory",
+      "key": "frog-all-initially-active-critical-drift-comparison",
+      "logical_name": "frog-all-initially-active-critical-drift-comparison",
+      "kind": "theorem",
+      "title": "All-initially-active frog comparison: lower critical drift bound (Mathews)",
+      "statement": "Let d>=2 be an integer. On the rooted d-ary tree, put one active frog at the root and one sleeper at each non-root vertex. Walks are independent, move to the parent with probability p and to each child with probability(1-p)/d away from the root, and choose a root child uniformly. For every0<=p<1/(d+1), the ordinary frog model has finite expected root visits and is transient almost surely. Consequently p_d=inf{p: this one-per-site model is recurrent} satisfies p_d>=1/(d+1). In particular, the4-ary transience range strictly below1/5 is already known; certifying only p<=0.17 is not a new critical bound. The comparison makes all frogs initially active, rather than relying on an unproved monotonicity in p.",
+      "proof_text": "Use the same independent paths but start all frogs immediately. This contains every root visit made by the ordinary activated subset. For0<=p<1/2, a path started at depth n hits the root with probability[p/(1-p)]^n. Its expected number of subsequent root visits, conditional on hitting, is(1-p)/(1-2p). There are d^n starting sites at depth n, so summing this nonnegative expectation over n>=0 is a convergent geometric series whenever dp/(1-p)<1. Thus the all-active expected count, and therefore the ordinary count, is finite. This proves the stated range and the infimum bound without parameter monotonicity.",
+      "assumptions": [
+        "Integer d>=2",
+        "One frog initially assigned to each vertex; one active root frog in the ordinary process",
+        "Independent parent-biased nearest-neighbor paths with root reflection",
+        "0<=p<1/(d+1)"
+      ],
+      "source": {
+        "source_id": "arxiv:2309.14443",
+        "url": "https://arxiv.org/pdf/2309.14443",
+        "revision": "as-read-2026-10-14",
+        "license": "arxiv-nonexclusive (mathematical paraphrase)",
+        "license_url": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+        "locator": "Introduction, manuscript p.2, definition of p_d and all-particles-initially-active comparison",
+        "excerpt": "transient whenever p < 1/(d + 1)."
+      }
+    },
+    {
+      "namespace": "probability.interacting_particles.frog_model",
+      "domain": "probability theory",
+      "key": "draft-w677-fair-cluster-activation-closure",
+      "logical_name": "draft-w677-fair-cluster-activation-closure",
+      "kind": "concept",
+      "title": "Draft (unaudited): fair frog cluster activation closure and weighted transience",
+      "statement": "PROOF (UNAUDITED), w677 C19 v1; no novelty asserted. Consider the specified four-ary ordinary-walk upper exploration with positive-occupancy S/E/C/F groups: singleton cap3, and cap2 per occupied site in an edge, chain or fork of at most3 sites. Retain all original frogs and their path increments. Store only true visited-child/sibling facts and visited ancestors; a locally unknown child hit adds its original resident on the first global visit, and an independent extra copy on later local visits. After one update per group, repartition all frogs conservatively. Choose the update site before its next increment with a fixed epsilon>0 mixture of uniform frog selection. Every group has at most6 frogs, so each frog has conditional update probability at least epsilon/6 each generation. If positive finite type prices v and r>0 give E[sum_output v(type)*r^(-displacement)|source]<=lambda*v(source) with one lambda<1 for every bulk and reflecting-root type, then the ordinary model has finite expected root visits. Fairness follows by successive conditioning, without independent selection events. The original activated set is the finite-chain reachability closure of its full preassigned paths; fairness makes the upper original set contain that closure. Expected total cluster weight is at most W0/(1-lambda), and every root-bearing group has a positive minimum weight, bounding root arrivals. Using the same policies at every p extends the implication to any interval with a uniform strict row bound. The exact finite model and its complete upper coupling await independent review; a floating price or an arbitrary different cluster law does not meet the hypothesis.",
+      "proof_text": null,
+      "assumptions": [
+        "One original sleeper per non-root vertex; independent ordinary walks with parent probability p in [0,1/2) and reflecting root",
+        "Singleton cap3, cap2 at every occupied site of an edge or connected triple; no original frog or path increment discarded",
+        "True visited-child/sibling metadata only; one update per group per generation; site choice before the next increment",
+        "A positive uniform-selection mixture and exact strict bulk/root conditional row-price inequalities"
+      ],
+      "source": {
+        "source_id": "owner:w677:C19_fair_cluster_upper_coupling_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C19_fair_cluster_upper_coupling_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "Sections1-5: true visited facts, original paths, fairness, activation closure and expected-weight bound",
+        "excerpt": null
+      },
+      "claim_id": "C19_fair_cluster_upper_coupling",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "90bbada41fb33e237fa7211205d6d2a8c751bac5c3fb9b1b791f1d748c6af912"
+    },
+    {
+      "namespace": "probability.interacting_particles.frog_model",
+      "domain": "probability theory",
+      "key": "draft-w677-fixed-policy-endpoint-certificate",
+      "logical_name": "draft-w677-fixed-policy-endpoint-certificate",
+      "kind": "concept",
+      "title": "Draft (unaudited): fixed-policy endpoint checks for frog cluster intervals",
+      "statement": "PROOF (UNAUDITED), interval argument of w677 C19 v1. In a finite frog cluster comparison, fix positive type prices, one allowed partition for each realized outcome, and one distribution of update sites before the next walk increment. If only the parent probability p varies, each row cost is affine in p (a reflecting-root update is constant). One fixed policy whose row ratios are strictly below1 at both endpoints has the same uniform strict contraction at every intermediate parameter, by affine interpolation. This supplies the interval hypothesis of the fair upper comparison without assuming parameter monotonicity. Optimizing a different site policy at each endpoint cannot establish this: the minimum of affine functions is concave and can peak inside, as min(p,1-p) on[0,1] has zero endpoints and value1/2 at the midpoint. Choose and save one rational pre-step policy per row, then check that same policy at both endpoints. For a subsequent ordinary critical bound, compare the entire certified range with known transience results; one transient parameter alone gives no stronger infimum bound.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite type/outcome set",
+        "Fixed positive prices and admissible post-outcome partitions",
+        "A fixed pre-increment site distribution used throughout the parameter interval",
+        "True row probabilities affine in the varying parent probability"
+      ],
+      "source": {
+        "source_id": "owner:w677:C19_fair_cluster_upper_coupling_v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C19_fair_cluster_upper_coupling_v1.md",
+        "revision": "2026-10-15 version1",
+        "license": "owner-own-work",
+        "locator": "Section6: fixed-policy affine endpoint interpolation",
+        "excerpt": null
+      },
+      "claim_id": "C19_fair_cluster_upper_coupling",
+      "claim_version": 1,
+      "claim_status": "proof (unaudited)",
+      "audits": [],
+      "proof_sha256": "90bbada41fb33e237fa7211205d6d2a8c751bac5c3fb9b1b791f1d748c6af912"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-fair-cluster-activation-closure",
+      "to_key": "draft-w677-fixed-policy-endpoint-certificate",
+      "kind": "semantic_association",
+      "rationale": "The upper-comparison draft says \"Using the same policies at every p\" for interval transfer. The endpoint note certifies \"One fixed policy\" throughout the interval by affine interpolation; the relation concerns interval verification only.",
+      "quote_check": {
+        "from_quote": "Using the same policies at every p",
+        "to_quote": "One fixed policy"
+      }
+    },
+    {
+      "from_key": "draft-w677-fair-cluster-activation-closure",
+      "to_key": "frog-all-initially-active-critical-drift-comparison",
+      "kind": "analogous_to",
+      "rationale": "Both give \"finite expected root visits\" by upper explorations of the same ordinary paths. The all-active source already covers drift strictly below1/(d+1); a fair-cluster certificate must be compared with that known range before claiming improvement.",
+      "quote_check": {
+        "from_quote": "finite expected root visits",
+        "to_quote": "finite expected root visits"
+      }
+    }
+  ]
+}

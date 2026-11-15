@@ -1,0 +1,165 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w677",
+  "bundle_slug": "frog-ordinary-excursion-barriers-009",
+  "entries": [
+    {
+      "key": "draft-w677-frog-persistent-joint-ordinary-excursion-response",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-persistent-joint-ordinary-excursion-response",
+      "kind": "concept",
+      "title": "Frog model persistent joint ordinary-excursion response queue (w677, correctness PASS)",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C27 v2; novelty unverified. On a rooted ternary tree put one resident per vertex, one incoming ordinary seed at a fresh recursive root, and independent parent-biased paths with 0<p<1/2, child probability (1-p)/3. Frogs stop on first reaching the parent of the fresh recursive root. On every edge only the first K awakening-enabled entrances can wake residents; later excursions retain ordinary motion but suppress all waking. Suppressed visits use private independent instructions and never consume the vertex awakening-enabled stream. The resident is consumed once, and k=1,...,K serial inputs share the same persistent child environments and counters. If F_j(n) is the cumulative return count of child j after n inputs, extended beyond K by independent Bernoulli(p/(1-p)) increments, and U(t),D_j(t) count upward and child-j directions in one independent ordinary parent stack, the residual is k+1+sum_j F_j(D_j(t))-t. Its first zero tau_k gives R_k=U(tau_k). Finite child maps give finite closure. Pointwise ordered cumulative maps give ordered first-zero times and responses, even if individual increments are not ordered. This yields a monotone exact finite-depth recursive operator and an ordinary lower comparison. At p=1/4, a uniform positive return-tail mass through arbitrarily large finite heights would imply full recurrence via HJJ Theorem 4; that hypothesis is unverified and C28 rules it out for every fixed K in this family. No biased zero-one conclusion is attributed to HJJ, and no Lean verification PASS is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Ternary tree; 0<p<1/2",
+        "One resident per vertex; K>=1 fixed enabled-entry budget",
+        "Serial inputs preserve child counters and resident identity",
+        "All waking suppressed during an overflow excursion; ordinary motion retained",
+        "Independent unused steps; absorbing recursive parent"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C27_joint_response_queue:v2",
+        "url": "~\\brain_workers\\w677\\proofs\\C27_joint_response_queue_v2.md",
+        "revision": "2026-10-15 version 2",
+        "license": "owner-own-work (research result; exact-version correctness PASS, novelty unassessed)",
+        "locator": "proofs/C27_joint_response_queue_v2.md",
+        "excerpt": null
+      },
+      "claim_id": "C27_joint_response_queue",
+      "claim_version": 2,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "version": 2,
+          "verdict": "PASS",
+          "source": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "PASS. v2 differs from my v1 PASS only in section 8 (sha256 d27afe78..): the HJJ 1404.6238 Theorem 4 zero-one law is now used only at the ordinary p=1/4, and at other p the conclusion is positive probability of infinite returns. That is the correct narrowing; nothing else changed (diff checked).",
+          "recorded_at": "2026-10-15T01:35:36.541650+00:00"
+        }
+      ],
+      "audit_scope_note": "Version2 has its own exact-version correctness PASS, including the ordinary-only zero-one citation clarification."
+    },
+    {
+      "key": "draft-w677-frog-absorbing-parent-extinction-atom",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-absorbing-parent-extinction-atom",
+      "kind": "concept",
+      "title": "Frog model absorbing-parent extinction atom and PGF screening (w677, correctness PASS)",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C26 v1; elementary screening fact, no novelty claim. In an absorbing-parent ordinary frog lower exploration with exactly one incoming frog and one resident initially active, all other frogs asleep, independent parent-step probability 0<=p<1/2, and no reactivation after parent absorption, the event that both initial steps go upward has probability p^2 and ends the exploration with exactly two returns. Hence P(V=2)>=p^2, E[s^V]>=p^2 s^2 for 0<s<1 with s^infinity=0, and P(V=infinity)<=1-p^2. At p=1/4 and s=1/2 the PGF is at least 1/64. A positive limiting PGF alone cannot exclude positive-probability infinite returns. The event argument does not apply to root reflection, an incoming nonbacktracking frog forced downward, or an additional active frog. Fraction arithmetic verifies 1/64; neither the probability argument nor that arithmetic has a Lean verification PASS.",
+      "proof_text": null,
+      "assumptions": [
+        "Exactly two initial active ordinary frogs; one incoming plus the unique resident",
+        "Independent first steps; no other initial activity",
+        "Parent absorbing; 0<=p<1/2; 0<s<1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C26_absorbing_extinction_floor:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C26_absorbing_extinction_floor_v1.md",
+        "revision": "2026-10-15 version 1",
+        "license": "owner-own-work (research result; exact-version correctness PASS, novelty unassessed)",
+        "locator": "proofs/C26_absorbing_extinction_floor_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C26_absorbing_extinction_floor",
+      "claim_version": 1,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "version": 1,
+          "verdict": "PASS",
+          "source": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "Correctness PASS (hand). On E = both initial ordinary steps go to the absorbing parent, P(E)=p^2 by independence, both frogs stop and no child is visited, so nothing else can wake and V=2; the three bounds follow by nonnegativity (1/4^2 * 1/2^2 = 1/64). Scope as stated: absorbing parent, ordinary (backtracking) incoming frog, no third active frog.",
+          "recorded_at": "2026-10-15T01:35:36.541650+00:00"
+        }
+      ]
+    },
+    {
+      "key": "draft-w677-frog-fixed-entry-cap-sterile-barriers",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-fixed-entry-cap-sterile-barriers",
+      "kind": "concept",
+      "title": "Frog model fixed ordinary entry caps: independent sterile barriers (w677, correctness PASS)",
+      "statement": "INDEPENDENTLY CHECKED PROOF, C28 v1, target1 route-failure; novelty unverified. Consider one sleeping resident per vertex of a rooted ternary subtree, one ordinary incoming frog at its root, absorbing parent, p=1/4 to the parent and 1/4 to each child. On every edge only the first K awakening-enabled entrances can wake residents; later excursions retain ordinary motion but suppress all waking. At every fixed vertex preassign independent enabled-departure directions separately from suppressed-excursion motion. A prefix of K+1 upward enabled directions has probability delta=4^(-(K+1)) and prevents every awakening below that vertex: there are at most K enabled arrivals from its parent and its single resident, and no child can send an enabled arrival before a first enabled downward departure. A specified level-n resident can awaken only if all n fixed strict ancestors lack this independent sterile prefix, so its activation probability is at most (1-delta)^n. A resident awakening event is independent of its own unused ordinary path; its subsequent parent-hit chance is (1/3)^(n+1). Summing these nonnegative contributions over 3^n residents gives sup_h E R_h(1)<=(1+4^(K+1))/3. At p=1/4 and K=4, E R_h(1)<=1025/3 uniformly in h. Markov inequality rules out uniformly positive return tails across arbitrary finite heights for every fixed K. This is a lower-family obstruction, not transience of the full ordinary T3/T4 model. It does not cover forced-down nonbacktracking inputs, unbounded or growing depth budgets, or overflow excursions permitted to wake residents. The independent reviewer passed the probabilistic independence, representation equivalence and exact arithmetic of C28 v1. Novelty was not assessed. The local exact checks alone certify algebra only.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed finite K>=1 enabled entries at every child edge",
+        "Ordinary p=1/4 ternary motion; one resident; one incoming root seed",
+        "Overflow excursions retain motion and suppress ALL waking until return",
+        "Independent enabled vertex streams; suppressed steps use separate fresh streams",
+        "Causal rule never queries sleeping resident walks"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C28_fixed_cap_sterile_barriers:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C28_fixed_cap_sterile_barriers_v1.md",
+        "revision": "2026-10-15 version 1",
+        "license": "owner-own-work (research result; exact-version correctness PASS, novelty unassessed)",
+        "locator": "proofs/C28_fixed_cap_sterile_barriers_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C28_fixed_cap_sterile_barriers",
+      "claim_version": 1,
+      "claim_status": "independently checked proof",
+      "audits": [
+        {
+          "version": 1,
+          "verdict": "PASS",
+          "source": "AUDITS_FROM_REVIEWER.tsv",
+          "reason": "Correctness PASS (hand audit + exact arithmetic, reviewer_audits/t127_c26_c28/chk.py). Barrier: before the first enabled departure from v to a child, the only enabled presences at v are its resident and at most K enabled entries from the parent (an enabled arrival from a child, or a frog re-enabled on returning from an overflow excursion into a child, needs an earlier enabled child departure; overflow frogs from above stay suppressed below their edge), so at most K+1 enabled departures, all upward on E_v. At the subtree root, k<=K seeds plus the resident and no arrivals from the absorbing parent. E_v uses only v's enabled stream, so fixed-vertex events are independent and P(w wakes)<=(1-delta)^n. First moment: w's resident's walk is not consulted before it wakes (any non-anticipating schedule), so its contribution is P(wake) beta^(n+1); summing gives (1)-(3); at p=1/4, beta=1/3, r=1-delta, bound (k+4^(K+1))/3 (17/3, 65/3, 1025/3, 262145/3 checked). Markov closes C27's criterion for every fixed K. Reviewer note for the next family: with level caps K_j the same bound is sum_n (1/3) prod_(j<n)(1-4^-(K_j+1)), which diverges once K_j+1 >= ceil(log_4(j+2)) (partial sums 15.9, 133.8, 531.9 at n=1e3, 1e5, 2e6), so logarithmically growing caps escape this obstruction (no positive result implied).",
+          "recorded_at": "2026-10-15T01:35:36.541650+00:00"
+        }
+      ]
+    },
+    {
+      "key": "draft-w677-frog-fixed-cap-population-error-record",
+      "namespace": "probability.interacting_particles.frog_model",
+      "logical_name": "draft-w677-frog-fixed-cap-population-error-record",
+      "kind": "concept",
+      "title": "Frog model ordinary excursion populations and inherited sampling error (w677, numerical evidence)",
+      "statement": "NUMERICAL EVIDENCE, C25 v1, not a phase bound. For the persistent ordinary excursion protocol with one resident, absorbing parent, p=1/4 and a permanent enabled-entry cap K, a frozen empirical-population stage used 20000 samples per level. At K=2 and height28 it reported mean R1=2.1373 and E[2^(-R1)] estimate 0.3275755859375 with conditional SE 0.00186176855. At K=4 and height27 it reported mean R1=4.65335 and PGF estimate 0.1048420398712 with conditional SE 0.00103853284. The errors describe fresh parent sampling conditional on the empirical child pool; they do not bound inherited recursive population bias. Independent direct small-tree checks agree numerically, not as a proof of the infinite recursion. C28 supplies a separate unaudited finite-mean obstruction for this fixed-cap family; growing finite-depth means are not a recurrence or threshold certificate. The full T127 cases remain open in this work.",
+      "proof_text": null,
+      "assumptions": [
+        "Numerical empirical-child-law recursion, not exact-law sampling",
+        "One persistent resident and joint responses; ordinary p=1/4",
+        "Frozen stage heights28/27, 20000 samples",
+        "Conditional errors omit inherited bias; no numerical phase classification"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w677:C25_joint_ordinary_excursions:v1",
+        "url": "~\\brain_workers\\w677\\proofs\\C25_joint_ordinary_excursions_v1.md",
+        "revision": "2026-10-15 version 1",
+        "license": "owner-own-work (research draft; independent review pending)",
+        "locator": "proofs/C25_joint_ordinary_excursions_v1.md",
+        "excerpt": null
+      },
+      "claim_id": "C25_joint_ordinary_excursions",
+      "claim_version": 1,
+      "claim_status": "numerical evidence",
+      "audits": []
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-w677-frog-fixed-entry-cap-sterile-barriers",
+      "to_key": "draft-w677-frog-persistent-joint-ordinary-excursion-response",
+      "kind": "depends_on",
+      "rationale": "On every edge only the first K awakening-enabled entrances can wake residents; later excursions retain ordinary motion but suppress all waking."
+    },
+    {
+      "from_key": "draft-w677-frog-absorbing-parent-extinction-atom",
+      "to_key": "draft-w677-frog-persistent-joint-ordinary-excursion-response",
+      "kind": "semantic_association",
+      "rationale": "Frogs stop on first reaching the parent of the fresh recursive root."
+    },
+    {
+      "from_key": "draft-w677-frog-fixed-cap-population-error-record",
+      "to_key": "draft-w677-frog-fixed-entry-cap-sterile-barriers",
+      "kind": "semantic_association",
+      "rationale": "At p=1/4 and K=4, E R_h(1)<=1025/3 uniformly in h."
+    }
+  ]
+}
