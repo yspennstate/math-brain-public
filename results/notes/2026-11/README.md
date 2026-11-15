@@ -155,6 +155,7 @@ introductions which results are earlier work and which are new.
 - [P0452](p0452_ewt_giant_component_paper_public_2026_11_05.md) (checked): P0452 (EWT reverse inequality: L1/n -> rho(P) for finite-mean random budgets) published 5 Nov: yspennstate/bilateral-preference-giant-component 4825d09; publish script papers_agent/P0452/build/publish.py (adapted from P0
 - [P0452](p0452_p0243_independent_referee_passes_what_they_found_2026_11_12.md) (provisional): Posted paper never audited by an outside referee - what did the passes on P0452 and P0243 find? P0452: gap (cited limit theorem covered iid budgets only, array case needed its own lemma; order-dependent chain state), rep
 - [P0452](p0452_referee_found_proof_scope_gap_2026_11_12.md) (provisional): P0452 iid budget citation used for deterministic arrays and order-dependent chain state
+- [P0175](p0175_free_conv_symmetric_unimodal_cauchy_case_and_cancellation_2026_11_15.md) (provisional): P0175 free convolution of symmetric unimodal laws: which cases are settled (semicircle, free Jurek, Cauchy), what the counterexample search covered, and why the Im G proof route needs cancellation
 
 ## Top-400 list rows (T rows)
 
@@ -398,6 +399,7 @@ introductions which results are earlier work and which are new.
 - [C0133](c0133_cookie_walk_zero_speed_on_non_transience_all_d_resolved_2026_11_13.md) (verified): KZ Problem 4.7 excited random walk Z^d: speed zero on the non-transience event, all d, any iid elliptic stacks: PROVED via consumed-prefix bound + Zerner 2002 Lemma 3
 - [C0134](c0134_positive_cookie_ballisticity_resolved_two_audits_2026_11_13.md) (verified): C0134 positive excited walk ballisticity (KZ13 Problem 5.3): second independent audit MINOR, no math error; counts as resolved; funding lines unverified (the author's call)
 - [C0159](c0159_grandparent_graph_finite_touching_refereed_2026_11_13.md) (provisional): C0159 cluster repulsion, nonunimodular: on grandparent graphs GP_b every p, distinct Bernoulli clusters touch finitely often; refereed ACCEPT, no novelty claimed
+- [C0039](c0039_lyons_thom_dbar_trace_norm_inequality_proved_by_monotone_path_ours_unrefereed_2026_11_13.md) (verified): PAPER POSTED 14 Nov 2026 (github yspennstate/dbar-determinantal-trace-norm b116900, Zenodo doi 10.5281/zenodo.24209165, three independent audits). C0039 (Lyons ICM 2014 arXiv 1406.2707 Sec 5.2 p.23 = ...
 
 ## D rows
 
@@ -505,3 +507,8 @@ introductions which results are earlier work and which are new.
 - [other](smoothing_high_confidence_referee_closed_event_fixed_2026_11_14.md) (verified): Is the posted randomized-smoothing paper (Gaussian optimal at every confidence) correct? Yes (14 Nov referee): one fix, Lemma 3.2 closed event, public 456b478
 - [other](stable_allocation_uniqueness_referee_sound_growth_sentence_fixed_2026_11_14.md) (provisional): stable-allocation-uniqueness (HHP problem (i), d<=2) refereed 14 Nov: proofs sound; intro sentence 'must grow faster than quadratically' fixed to HHP's close-pair count (5a2b87f)
 - [other](toeplitz_hankel_moments_by_aggregate_lattice_counts_2026_11_12.md) (verified): Exact Toeplitz/Hankel moments past order 14: sum lattice points of dilates over all pairings by a left-to-right open-chord scan, then the palindromic aggregate h*; reproduces T m2-m22, H m2-m18
+- [other](codex_swarm_1115_first_wave_three_results_hold_small_scope_2026_11_15.md) (verified): Codex swarm 15 Nov: which results survived two independent checks? PROBM03, COMP01, COMP05 hold (Codex audit + Fable + Claude recompute) but each is small; 74 briefs done on Mac mini 1, Codex audits ...
+- [other](lean_in_prompt_did_not_compile_2026_11_12.md) (provisional): Deploying Lean hooks to a dontAsk math test arm without checking compiles
+- [other](paper_from_refereed_result_check_ab48c0dc_paper_claims_first_2026_11_13.md) (verified): About to write a paper from an open problem we just refereed? an agent publishes papers from those results fast (D0004 and D0017 both published before my paper runs started, 13 Nov). Check mesh ...
+- [other](pd15_schiffer_certificates_replayed_n8_10_14_2026_11_13.md) (provisional): Schiffer/Pompeiu counterexample repo (arXiv 2609.35419): n=8,10,14 certificates replay PROVED + PROVED_CONVEX on Windows Py3.14 flint 0.9.0; CRLF checkout trips their hash (use autocrlf=false); n=2 ...
+- [other](pdftotext_drops_overlines_look_at_the_page_2026_11_12.md) (verified): Identity typed from pdftotext output fails a numerical test on a clean fraction of cases (here 146 of 227)? Look at the PDF page first: pdftotext drops overlines (complex conjugates), hats and ...
