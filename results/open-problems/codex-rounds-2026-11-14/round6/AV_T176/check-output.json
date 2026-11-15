@@ -1,0 +1,184 @@
+{
+  "priority": 20,
+  "earlier_result": {
+    "main_modules": 51,
+    "saved_modules": 55,
+    "acyclic": true,
+    "outside_imports": [
+      "Mathlib"
+    ],
+    "fresh_identity_sources_match": true,
+    "rational_constants": [
+      "881/1000",
+      "16/25",
+      98,
+      3136,
+      96,
+      1600
+    ]
+  },
+  "endpoint_checks": [
+    {
+      "n": 2,
+      "t": 0,
+      "masks": 4,
+      "histories_per_mask": 1,
+      "history_mask_cases": 4,
+      "basis_indicator_equalities": 16,
+      "max_error": 0
+    },
+    {
+      "n": 2,
+      "t": 1,
+      "masks": 4,
+      "histories_per_mask": 2,
+      "history_mask_cases": 8,
+      "basis_indicator_equalities": 28,
+      "max_error": 0
+    },
+    {
+      "n": 2,
+      "t": 2,
+      "masks": 4,
+      "histories_per_mask": 4,
+      "history_mask_cases": 16,
+      "basis_indicator_equalities": 28,
+      "max_error": 0
+    },
+    {
+      "n": 2,
+      "t": 3,
+      "masks": 4,
+      "histories_per_mask": 8,
+      "history_mask_cases": 32,
+      "basis_indicator_equalities": 28,
+      "max_error": 0
+    },
+    {
+      "n": 2,
+      "t": 4,
+      "masks": 4,
+      "histories_per_mask": 16,
+      "history_mask_cases": 64,
+      "basis_indicator_equalities": 28,
+      "max_error": 0
+    },
+    {
+      "n": 4,
+      "t": 0,
+      "masks": 16,
+      "histories_per_mask": 1,
+      "history_mask_cases": 16,
+      "basis_indicator_equalities": 256,
+      "max_error": 0
+    },
+    {
+      "n": 4,
+      "t": 1,
+      "masks": 16,
+      "histories_per_mask": 4,
+      "history_mask_cases": 64,
+      "basis_indicator_equalities": 784,
+      "max_error": 0
+    },
+    {
+      "n": 4,
+      "t": 2,
+      "masks": 16,
+      "histories_per_mask": 16,
+      "history_mask_cases": 256,
+      "basis_indicator_equalities": 2576,
+      "max_error": 0
+    },
+    {
+      "n": 4,
+      "t": 3,
+      "masks": 16,
+      "histories_per_mask": 64,
+      "history_mask_cases": 1024,
+      "basis_indicator_equalities": 3344,
+      "max_error": 0
+    },
+    {
+      "n": 4,
+      "t": 4,
+      "masks": 16,
+      "histories_per_mask": 256,
+      "history_mask_cases": 4096,
+      "basis_indicator_equalities": 3344,
+      "max_error": 0
+    },
+    {
+      "n": 8,
+      "t": 2,
+      "masks": 256,
+      "histories_per_mask": 256,
+      "history_mask_cases": 65536,
+      "basis_indicator_equalities": 1658944,
+      "max_error": 0
+    },
+    {
+      "n": 8,
+      "t": 3,
+      "masks": 8,
+      "histories_per_mask": 4096,
+      "history_mask_cases": 32768,
+      "basis_indicator_equalities": 866880,
+      "max_error": 0
+    }
+  ],
+  "path_checks": [
+    {
+      "n": 4,
+      "t": 4,
+      "B": 3,
+      "tag": 0,
+      "path_cylinders": 128,
+      "max_error": 0
+    },
+    {
+      "n": 8,
+      "t": 3,
+      "B": 15,
+      "tag": 0,
+      "path_cylinders": 1248,
+      "max_error": 0
+    },
+    {
+      "n": 8,
+      "t": 3,
+      "B": 85,
+      "tag": 2,
+      "path_cylinders": 256,
+      "max_error": 0
+    },
+    {
+      "n": 8,
+      "t": 3,
+      "B": 255,
+      "tag": 7,
+      "path_cylinders": 1,
+      "max_error": 0
+    },
+    {
+      "n": 8,
+      "t": 3,
+      "B": 1,
+      "tag": 0,
+      "path_cylinders": 4096,
+      "max_error": 0
+    }
+  ],
+  "invalid_variants": {
+    "free_exposed_point": {
+      "direct": "1",
+      "flow": "1/2"
+    },
+    "coin_dependent_mask_P_one": "1/4"
+  },
+  "total_history_mask_cases": 103884,
+  "total_basis_indicator_equalities": 2536256,
+  "elapsed_seconds": 1.96,
+  "max_rss_bytes": 45662208,
+  "status": "all exact checks passed; no Lean build"
+}

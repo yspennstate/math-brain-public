@@ -1,0 +1,11 @@
+VERDICT: PROVED the local-envelope lemma under the stated calibration and anchor-comparison hypotheses, including simultaneous physical-competitor bounds in a prescribed finite subgraph
+
+New beyond round 5: PROOF.md proves found:lem-envelope, with variable attachment occurrences and signed center arms. For M prescribed anchor comparisons of expected error <=kappa beta and N covered road periods, the local physical lower envelope has mean <=(M kappa+2N) beta. Two arbitrary center adjustments give (M kappa+4N) beta; marked centers allow 2N. A fixed number of signed trips and switches also has an explicit envelope. No microscopic occurrence count enters these constants. The earlier network result was independently rederived and its checks passed again.
+
+Commands: OMP_NUM_THREADS=1 nice -n 15 python3 -B ~/codex_op_1114r5/briefs/AV_T050/check_network.py; OMP_NUM_THREADS=1 nice -n 15 python3 -B check_envelope.py. New checks passed: 2187 interpolation configurations, 54675 signed occurrence pairs, 441 independently computed distances, 5808 endpoint bounds, 17424 center-adjusted bounds, and 480 switch coincidences. Final run: 1.002 seconds, 15.06 MiB peak RSS, nice 20. The toy defect 517/91 was counted independently as 8/7+59/13.
+
+No mathematical check failed. A provisional center bound was restricted to marked centers; the full proof supplies the larger bound for interior centers. Source lookup/query errors (404/422) and one rejected patch context were corrected. Literature status remains PARTIAL-CLAIMED: the named September 24, 2026 preprint claims planar exponential strict convexity only; the selected Lean statements omit it, and the bounded update found no later general solution. This does not assess the full proof as correct.
+
+Uncertainty remains in the calibration input, gauge-tail and phase estimates, links, and improved-road closure. Next worker: audit found:lem-gauge-tail, especially the integrated concentration maximum over box vertex pairs and phase-conditioned deterministic centering. No git, subagents, builds or external writes.
+
+Task: “Verify: has open problem T050 been settled by the OpenAI math release?” — continuation received 15 November 2026, 09:46 +04.

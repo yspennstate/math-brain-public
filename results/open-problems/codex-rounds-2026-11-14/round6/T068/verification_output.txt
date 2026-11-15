@@ -1,0 +1,12 @@
+nice: setpriority: Operation not permitted
+nice=20; OMP_NUM_THREADS=1; CPU limit=120s
+Exact source checks: upper_bounds=11480; geometric_convolutions=100; block_lower_bounds=820; Bellman_steps=288
+All graph inputs n=1..5: source_runs=8792; revision_runs=8792; joint_bounds=560; greedy_exact_matches=30; correct_word_prefixes=13338; mixed_core_D_R=265
+Failure fixture with full future information: n=5, k=3; maximum-clique success=159/256; legal greedy success=55/128
+Late-admission fixture: complete graph n=7; final=7; core=1; D=0; R=6
+Exact constants: eta=1/2; critical_a=1/12; previous_strict_ceiling=1/384; power_ratio=32; interior_a=1/24; interior_coefficient=1/16; endpoint_second_coefficient=2
+x=120; k=180; r=2^10; log2_words=727.788983239; log2_source=-2042.132930370; log2_joint_bound=-1314.343947132; endpoint_ratio=1.585788290; factorial_upper=-1284.648641446; geometric_upper=-2055.851014315; block_lower=-2423.954157454
+x=240; k=360; r=2^20; log2_words=4656.820484689; log2_source=-7800.483661798; log2_joint_bound=-3143.663177109; endpoint_ratio=1.656605263; factorial_upper=-3133.222085515; geometric_upper=-7819.609638194; block_lower=-8550.957196330
+x=480; k=720; r=2^40; log2_words=22998.534358832; log2_source=-30236.686627431; log2_joint_bound=-7238.152268599; endpoint_ratio=1.693013261; factorial_upper=-7226.800732370; geometric_upper=-30262.219995356; block_lower=-31718.471420986
+x=960; k=1440; r=2^80; log2_words=102162.640642063; log2_source=-118548.593310096; log2_joint_bound=-16385.952668033; endpoint_ratio=1.722912001; factorial_upper=-16373.601466100; geometric_upper=-118581.533819085; block_lower=-121486.008017202
+PASS; elapsed=0.448s; peak_RSS=15106048 bytes
