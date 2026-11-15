@@ -156,6 +156,7 @@ introductions which results are earlier work and which are new.
 - [P0452](p0452_p0243_independent_referee_passes_what_they_found_2026_11_12.md) (provisional): Posted paper never audited by an outside referee - what did the passes on P0452 and P0243 find? P0452: gap (cited limit theorem covered iid budgets only, array case needed its own lemma; order-dependent chain state), rep
 - [P0452](p0452_referee_found_proof_scope_gap_2026_11_12.md) (provisional): P0452 iid budget citation used for deterministic arrays and order-dependent chain state
 - [P0175](p0175_free_conv_symmetric_unimodal_cauchy_case_and_cancellation_2026_11_15.md) (provisional): P0175 free convolution of symmetric unimodal laws: which cases are settled (semicircle, free Jurek, Cauchy), what the counterexample search covered, and why the Im G proof route needs cancellation
+- [P0175](p0175_external_proof_candidate_zenodo_22649756_h_checked_2026_11_15.md) (provisional): P0175 free convolution of symmetric unimodal laws: an external unrefereed proof candidate exists (Zenodo 22649756, 7 Sep 2026); its key inequality (H) holds on 300 laws at 50 digits and its ...
 
 ## Top-400 list rows (T rows)
 

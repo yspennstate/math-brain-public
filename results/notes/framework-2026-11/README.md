@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 355 notes.
+out, and requests are paraphrased. 358 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -435,3 +435,13 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 | [writing_brain_ab2_brain_pages_ranked_below_controls_judges_disagree_2026_11_14](writing_brain_ab2_brain_pages_ranked_below_controls_judges_disagree_2026_11_14.md) | provisional | Does the writing brain make better prose? Not yet: WBAB2 (14 Nov) 8 Codex writers, 2 blind judges ranked brain pages 5.08 vs control 3.92 of 8 (p=0.92), 2.65x tokens; judges agree ~0.2 |
 | [writing_brain_card_patterns_audit_fitted_test_vs_shelf_false_alarms_2026_11_13](writing_brain_card_patterns_audit_fitted_test_vs_shelf_false_alarms_2026_11_13.md) | verified | Writing-brain cards audited 13 Nov: 56 of 301 carry a pattern, all pass their own example (a fitted test); on 1,905 shelf passages no literature pattern fires on more than 0.6 pct; one false alarm ... |
 | [zipf_floor_fails_held_out_swaps_wrong_sense_is_the_fault_2026_11_15](zipf_floor_fails_held_out_swaps_wrong_sense_is_the_fault_2026_11_15.md) | provisional | Frequency (zipf) floor on word_slot swaps? No: AUC 0.72 on its own 46 labels, 0.49 on 63 held-out pairs (seed-23 bench); bad offers are common words in the wrong sense; slot pick good 1/10, walk ... |
+
+## Added later on 15 November (3)
+
+GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+
+| note | status | what it says |
+|---|---|---|
+| [codex_pool_usage_limit_grep_matched_quoted_brain_text_2026_11_15](codex_pool_usage_limit_grep_matched_quoted_brain_text_2026_11_15.md) | verified | Codex pool stopped on 'usage limit'? Check the matched line: on 15 Nov round 4 stopped falsely because a worker's log quoted brain text; count a limit only in the tail of an exited worker's log |
+| [prose_surface_measures_catch_2023_ai_not_ours_2026_11_14](prose_surface_measures_catch_2023_ai_not_ours_2026_11_14.md) | verified | Can sentence-length/word-rarity statistics tell our prose from human? They catch 2022-23 models (MAGE stories, held-out AUC 0.937 vs gpt-3.5/davinci-003/GLM/LLaMA-65B; sentence-length CV alone 0.856) ... |
+| [public_push_secret_scan_refuses_npy_in_text_list_2026_11_15](public_push_secret_scan_refuses_npy_in_text_list_2026_11_15.md) | verified | math-brain-public push_rest stops at 'SECRET SCAN ERROR: content had ambiguous NUL-heavy text encoding / REFUSED rc 2' and every later pass repeats it? A binary (.npy) sits in the TEXT order list; ... |
