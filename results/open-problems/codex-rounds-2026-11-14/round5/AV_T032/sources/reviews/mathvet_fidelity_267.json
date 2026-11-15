@@ -1,0 +1,33 @@
+[
+  {
+    "family": "267",
+    "title": "Positive-temperature Bose--Einstein condensation and quantum depletion",
+    "subject": "Mathematical physics",
+    "headline": "Proves Bose--Einstein condensation for the exact canonical Gibbs state of the three-dimensional hard-sphere gas: each fixed exclusion distance and sufficiently small fixed density admit a strictly positive temperature, independent of volume, with positive condensate fraction in the thermodynamic limit. At zero temperature, proves the Bogoliubov leading quantum-depletion law for hard spheres and fixed bounded nonnegative radial finite-range potentials of positive scattering length, taking the thermodynamic limit before the dilute limit.",
+    "verdict": "weaker-statement",
+    "challenges": [
+      "HardSphere"
+    ],
+    "review_note": "`condensation_with_mixed : ∃ ε₀ c₀ > 0, ∀ a ρ, ρ a^3 < ε₀ → ∀ thermodynamic sequences (N_k, L_k), (∀ pure ground vectors Ψ_k, c₀ ≤ liminf occupation Ψ_k) ∧ (∀ density operators supported on the ground space, c₀ ≤ liminf mixedOccupation)` is ZERO-temperature ground-state condensation of the hard-sphere gas with a non-sharp lower bound c₀ (docs: 'concerns ground states, without a positive-temperature assertion'). The summary's headline claims are not stated: BEC for the exact canonical Gibbs state at a strictly positive volume-independent temperature, and the sharp Bogoliubov leading quantum-depletion law (thermodynamic limit before dilute limit) for hard spheres and bounded finite-range potentials.",
+    "definitions_to_check": [
+      "Hand-built hard-sphere gas: Dirichlet form domain `dirichletDomain N L a := closure (range SmoothTest.jet)` (smooth compactly supported functions vanishing on `d(x_i,x_j) ≤ a` on the torus `AddCircle L ^3`), `energy u := Σ ‖∇_p u‖²` (no 1/2), `bosonic`, `IsGroundVector`, `occupation ψ := L^{-3} ∫_Y |∫_x ψ(x,Y)|²` and a custom trace-class `Density.Operator`; the zero-mode occupation fraction matches the standard condensate fraction, but all objects are hand-written."
+    ],
+    "external_packages": [],
+    "cone_lines_max": 71853,
+    "machine_check": "comparator-sandboxed-pass",
+    "lab_scope_note": "The formalization proves ground-state Bose–Einstein condensation in the dilute hard-sphere gas. There are absolute constants $\\varepsilon_0,c_0>0$ such that, whenever the density $\\rho$ and hard-sphere radius $a$ satisfy $\\rho a^3<\\varepsilon_0$, the condensate occupation fraction has limit inferior at least $c_0$ along every thermodynamic sequence with $N/L^3\\to\\rho$.\n\nThe bound covers every pure ground state, every mixed state supported on the ground space, and the normalized ground-space projection. It is uniform in the gas parameter within this range and concerns ground states, without a positive-temperature assertion.",
+    "lab_docs_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/267.md",
+    "overview_entry": "family 267 in overview.pdf / CONTENTS.md",
+    "papers": [
+      {
+        "dir": "Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026",
+        "title": "Ground-state condensation in the dilute hard-sphere gas",
+        "url": "https://github.com/openai/math/tree/4eaee87548250b2682affda7d05d947c05554bae/preprints/Ground-state-condensation-in-the-dilute-hard-sphere-gas-September-24-2026"
+      }
+    ],
+    "audit_part": 2,
+    "second_reader": "",
+    "referee_verdict": "",
+    "upstream_changed": ""
+  }
+]
