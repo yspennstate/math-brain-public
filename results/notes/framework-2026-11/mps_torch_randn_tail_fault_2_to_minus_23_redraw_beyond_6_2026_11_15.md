@@ -6,11 +6,11 @@ metadata:
   created: 2026-11-15
   created_at: 2026-11-15T15:09:58+02:00
   status: verified
-  evidence: "fillq_ctl/t248_mc: 23 of 2e8 draws |z|>7; iid control outliers gone after redraw (out_1115b)"
+  evidence: "T248 Monte Carlo: 23 of 2e8 draws |z|>7; iid control outliers gone after redraw (out_1115b)"
   lesson: true
 ---
 
-On Mac mini 1, `torch.randn` on the Apple GPU (MPS, float32) returns |z| > 7 about once in 2^23 draws.
+On an M-series Mac mini, `torch.randn` on the Apple GPU (MPS, float32) returns |z| > 7 about once in 2^23 draws.
 That is 23 values in 2e8 draws, the largest |z| = 14.37; a true Gaussian gives about 2.6e-12 per draw.
 A Monte Carlo built on it gets fake outliers.
 In the T248 iid control (Hermite-2 entries, N=500), λ_max came out near 43 in 1.5 pct of samples and near 22 in 5.9 pct at N=1000.
@@ -18,10 +18,10 @@ The bulk of the same run matched a float64 CPU run, median 1.44 against 1.30.
 A random-matrix edge statistic sits right on the tail, so a single bad entry moves it by tens of TW units.
 
 **Why:** most likely the float32 uniform reaching its smallest grid value inside the Box-Muller step (not confirmed in the source).
-The fault test is `06_math_research/codex_op_1114/round6/T248/mc/mps_randn_tail.py`.
+The fault test is `mps_randn_tail.py`.
 
 **How to apply:** any MPS Monte Carlo whose statistic reads the tail (extreme eigenvalues, maxima, rare events) redraws every |z| > 6.
-The helper is `randn()` in `round6/T248/mc/tw_rcck_mc.py`; the true probability of |z| > 6 is about 2e-9 per draw.
+The helper is `randn()` in `tw_rcck_mc.py`; the true probability of |z| > 6 is about 2e-9 per draw.
 Or draw on the CPU and copy over.
 Test the generator's tail (count |z| > 6 in 1e8 draws, expect 0.2) before trusting a heavy tail from GPU samples.
 
