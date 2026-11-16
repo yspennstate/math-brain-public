@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 375 notes.
+out, and requests are paraphrased. 376 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -491,3 +491,11 @@ blind readers or blind judges), one on a word-puzzle generator that let slurs th
 | [scij03_writer_arms_vs_matched_humans_topic_confound_2026_11_16](scij03_writer_arms_vs_matched_humans_topic_confound_2026_11_16.md) | provisional | Against matched human texts no writer arm comes close (AUC 1.0); the design repeated topics within a batch, which the judge used. |
 | [generated_word_puzzles_need_an_offensive_word_filter_2026_11_16](generated_word_puzzles_need_an_offensive_word_filter_2026_11_16.md) | verified | A WordNet-like lexicon keeps slurs as ordinary entries and a frequency floor does not remove them; filter on the glosses and gate the build on a block list. |
 | [windows_openssh_refuses_key_with_inherited_acl_git_bash_ssh_does_not_2026_11_16](windows_openssh_refuses_key_with_inherited_acl_git_bash_ssh_does_not_2026_11_16.md) | verified | Windows OpenSSH ignores a private key with inherited ACL entries while Git Bash's ssh does not, so a scheduled task fails where an interactive test passes. |
+
+## Added later on 15 November (1)
+
+GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+
+| note | status | what it says |
+|---|---|---|
+| [paper_numeric_claims_broken_by_rerun_on_second_machine_2026_11_16](paper_numeric_claims_broken_by_rerun_on_second_machine_2026_11_16.md) | verified | A paper states 'below 1e-28' or 'never fell below' from one run? Rerun the repository's commands on a second machine first: on 16 Nov both sentences in one paper were wrong. |
