@@ -48,13 +48,22 @@ with an exact CPU Dijkstra. These are Monte Carlo estimates, not proofs.
    drift by 4^(2/3 - b) between n = 1024 and 4096, 10 percent for b = 0.6, which is too small to see here. The collapse
    supports a scale near n^(2/3) but fixes the exponent only to about 0.6 to 0.73.
 
+4. **Collapse at n = 8192 and 16384** (`fpp_cyl_k.py`, rows `fpp_rows_mac2_n8192k.jsonl` and
+   `fpp_rows_mac1_n16384k_interim_20261116.jsonl`, table `collapse_table_n8192_16384_20261116.txt`). `fpp_cyl_k.py` does
+   the relaxation step as one Metal kernel; its `--selftest` gives passage times bit-identical to `fpp_cyl_c.py`, and it
+   holds far fewer arrays in memory at once, which is what made these sizes fit. At n = 8192 the skewness is -0.135 (se 0.085,
+   840 samples) at c = 0.5, -0.205 (0.124, 392) at c = 1 and -0.219 (0.191, 165) at c = 2, each within about one
+   standard error of the n <= 4096 values for the same c. The n = 16384 run was still going on 16 November (104, 52
+   and 25 samples) and its cells are too small to read. A second n = 8192 batch at c = 1 and 2 is queued.
+
 The data are consistent with a threshold at 2/3 and with n^(2/3) as the transversal scale. They cannot separate 2/3
 from nearby exponents, because finite-size corrections are large at n <= 4096: the growth of the standard deviation
 per doubling of n sits 0.05 to 0.08 below the KPZ heuristic n^(1/2 - a/4).
 
 ## Files
 
-- `fpp_cyl.py`, `fpp_cyl_cuda.py`, `fpp_cyl_c.py`: samplers (W = n^a, the CUDA port, and W = c n^(2/3)).
+- `fpp_cyl.py`, `fpp_cyl_cuda.py`, `fpp_cyl_c.py`, `fpp_cyl_k.py`: samplers (W = n^a, the CUDA port, W = c n^(2/3), and the
+  same with a Metal relaxation kernel).
   Environment: `FPP_NS`, `FPP_AS` or `FPP_CS`, `FPP_ELEMS`; a file `STOP` in the working directory ends a run.
 - `fpp_merge.py`, `fpp_agg.py`, `collapse_agg.py`, `followon_a06.py`: merging and summary scripts.
 - `fpp_rows_*.jsonl`: raw rows. Each row holds n, a or c, W, the batch of passage times T and the seed.
