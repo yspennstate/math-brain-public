@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 459 notes.
+out, and requests are paraphrased. 460 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -722,3 +722,11 @@ Windows long paths in an offload tool, a scheduler that now raises a job when th
 | [gh_offload_hold_secrets_rename_failed_past_260_chars_2026_11_13](gh_offload_hold_secrets_rename_failed_past_260_chars_2026_11_13.md) | verified | gh_offload --hold-secrets died with WinError 3 on codex worktree copies (paths past 260 chars); fixed 13 Nov with the long-path prefix on rename src and dst; nothing uploaded or deleted by the failed ... |
 | [prompt_store_reads_both_histories_and_rechecks_machine_turns_2026_11_14](prompt_store_reads_both_histories_and_rechecks_machine_turns_2026_11_14.md) | verified | Owner-prompt store missing older prompts from the owner or showing agent ticks as the owner's? Since 14 Nov build.py folds ~/.claude and ~/.codex history.jsonl (8,502 more, back to 18 Mar), masks ... |
 | [run_bounded_read_owner_away_once_at_launch_gate_starved_after_he_left_2026_11_13](run_bounded_read_owner_away_once_at_launch_gate_starved_after_he_left_2026_11_13.md) | verified | Bounded job (regression gate, dream, hourly index) starved or INCONCLUSIVE though the owner left hours ago? run_bounded read the away verdict once at launch; since 13 Nov it raises the job to Normal ... |
+
+## Added on 16 November: traps in background jobs (1)
+
+Four ways a background job or a clone reset can leave a file different from what was reported, each with the check that catches it.
+
+| note | status | what it says |
+|---|---|---|
+| [background_job_traps_stopped_shell_refused_heredoc_reset_putback_2026_11_13](background_job_traps_stopped_shell_refused_heredoc_reset_putback_2026_11_13.md) | verified | Output file went empty after stopping a background job, or a job ran a script that was never written, or committed text is back on an old version after a clone reset? Stop the script's bash by id ... |

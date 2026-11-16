@@ -9,7 +9,7 @@ metadata:
   evidence: "this session's own errors of 13 Nov, each seen once and fixed"
 ---
 
-A finished file went empty, a job ran a script that did not exist, and committed text was back on an old version for ten hours. Why? Four traps from one day (13 Nov 2026, loop session an agent), each with the check that catches it.
+A finished file went empty, a job ran a script that did not exist, and committed text was back on an old version for ten hours. Why? Four traps from one day (13 Nov 2026, one loop session), each with the check that catches it.
 
 1. A stopped background job leaves its shell alive. Stopping the job through the harness ended the child (ffmpeg) but not the bash that ran the script; that bash went on to its next line and rewrote an output file that an earlier run had finished, leaving it at 0 bytes. Check: after a stop, list the script's bash by command line and stop it by id first, then its child by id, each stop alone. Then look at the sizes of the files the script writes.
 
