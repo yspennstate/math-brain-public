@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "~/agent_run/STRAT10/replay_all.py", line 17, in main
+    with open(script.replace('.py','.out'),'w')as output,contextlib.redirect_stdout(output):runpy.run_path(script,run_name='__main__')
+                                                                                            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "verify_family.py", line 4, in <module>
+    assert build()==json.load(open('pressure_family.json'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
