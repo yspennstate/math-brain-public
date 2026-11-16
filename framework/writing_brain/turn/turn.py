@@ -63,7 +63,7 @@ THE CUTTING PASS (after the draft, before you save)
    not have come back by itself, the reader sees your hand. Let the ending be something these two do.
 """
 
-# A sixth line, under test. It is printed only by `plan --want`; the default plan is unchanged.
+# A sixth line, tested 16 Nov 2026 with no effect (note wbab7_other_want_plan_line_no_effect_2026_11_16). It is printed only by `plan --want`; the default plan is unchanged.
 WANT = """\
 3. THE OTHER WANT. Name one person on the page, other than the one we follow, who wants something the one
    we follow does not want, and the one thing that person does about it on this page: asks for it, takes
