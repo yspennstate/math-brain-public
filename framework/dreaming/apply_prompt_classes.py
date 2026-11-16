@@ -17,7 +17,7 @@ same normalized-text hash, and rewrites the ledger ONCE, atomically, carrying ov
 live hook appended while we worked (the tail-race guard).
 
 A verdict may carry "scope": "heads" or "refires" (default "all"). The join is by text, and a loop
-re-sends the owner's words unchanged, so one text can be both the prompt he typed (the head: a row
+re-sends the author's words unchanged, so one text can be both the prompt he typed (the head: a row
 with no repeat_of) and hundreds of machine re-fires (rows with repeat_of). Without a scope a single
 verdict labels every copy alike: measured 2026-09-23, 86 re-fired owner texts had the typed head
 classed "automation" with its re-fires, which moved his loop orders out of the action-class views.
@@ -130,15 +130,28 @@ def main():
     # tail-race guard: carry over lines the live hook appended while we rewrote. The slice index is a
     # count of "\n", so the split must be on "\n" too - splitlines() found more lines than that count
     # whenever a record held U+2028, and would have re-appended old lines as "fresh".
-    raw2 = io.open(pa.LEDGER, encoding="utf-8", errors="replace").read()
-    if raw2.count("\n") > n_before:
-        tail = raw2.split("\n")[n_before:]
-        with io.open(tmp, "a", encoding="utf-8") as f:
-            for ln in tail:
-                if ln.strip():
-                    f.write(ln + "\n")
-        print("tail-race guard: carried %d fresh hook lines" % len(tail))
-    os.replace(tmp, pa.LEDGER)
+    # Windows refuses os.replace while a hook holds the ledger open (WinError 5; seen 16 Nov, first try failed and
+    # the pass died with the day still dark). Retry for ~10 s, re-running the tail guard each time so lines the
+    # hook appends during the wait are carried too.
+    import time
+    carried = n_before
+    for attempt in range(40):
+        raw2 = io.open(pa.LEDGER, encoding="utf-8", errors="replace").read()
+        if raw2.count("\n") > carried:
+            tail = raw2.split("\n")[carried:raw2.count("\n")]
+            with io.open(tmp, "a", encoding="utf-8") as f:
+                for ln in tail:
+                    if ln.strip():
+                        f.write(ln + "\n")
+            print("tail-race guard: carried %d fresh hook lines" % len(tail))
+            carried = raw2.count("\n")
+        try:
+            os.replace(tmp, pa.LEDGER)
+            break
+        except PermissionError:
+            if attempt == 39:
+                raise
+            time.sleep(0.25)
     print("merged %d new classifications, %d correction flags, %d origin fixes (%d verdicts matched, %d supplied)"
           % (merged, corrections, origins, seen_keys, sum(len(s) for s in verdicts.values())))
     return 0
