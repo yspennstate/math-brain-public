@@ -37,11 +37,11 @@ with an exact CPU Dijkstra. These are Monte Carlo estimates, not proofs.
 2. **Why more samples at a = 0.6 cannot decide 0.6 against 2/3.** A cylinder of width W holds about n / W^(3/2)
    independent blocks, so below the threshold the skewness should decay like n^(-(1 - 3a/2)/2). At a = 0.6 that is a
    factor of 0.966 per doubling of n, which no feasible n can resolve.
-3. **Scaling collapse** (`fpp_cyl_c.py`, `collapse_agg.py`, table `collapse_table.txt`, rows `fpp_rows_mac1_collapse*.jsonl`
-   and `fpp_rows_cuda_collapse_n4096.jsonl`). If the transversal scale is n^(2/3), then with W = c n^(2/3) the skewness
-   should depend on c alone. For n = 1024, 2048 and 4096 it reads -0.13, -0.08, -0.11 at c = 0.5 (se 0.03 to 0.05),
-   -0.19, -0.08, -0.18 at c = 1 (se 0.05 to 0.07) and -0.30, -0.27, -0.43 at c = 2 (se 0.07 to 0.10). Within each c the
-   values agree to about two standard errors and do not drift with n; across c they move from near zero toward -0.3 to
+3. **Scaling collapse** (`fpp_cyl_c.py`, `collapse_agg.py`, table `collapse_table.txt`, rows `fpp_rows_mac1_collapse*.jsonl`,
+   `fpp_rows_mac2_collapse_n2048.jsonl` and `fpp_rows_cuda_collapse_n4096.jsonl`). If the transversal scale is n^(2/3), then with W = c n^(2/3) the skewness
+   should depend on c alone. For n = 1024, 2048 and 4096 it reads -0.13, -0.12, -0.10 at c = 0.5 (se 0.03 to 0.05),
+   -0.19, -0.12, -0.18 at c = 1 (se 0.04 to 0.07) and -0.30, -0.27, -0.43 at c = 2 (se 0.05 to 0.10). Within each c the
+   values agree to about two standard errors and do not drift with n; across c they move from about -0.1 at c = 0.5 to -0.3 to
    -0.4 (c = 4 has 20 to 64 samples and is only negative). The value off the pattern is c = 0.5 at n = 512 (-0.006).
    This also accounts for item 1: at a = 0.6, c = n^(-1/15) falls only from 0.69 to 0.57 between n = 256 and 4096, so
    those cells stay in the c = 0.5 to 1 band. The test has a limit: if the true scale were n^b, the effective c would
