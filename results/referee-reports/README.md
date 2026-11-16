@@ -280,3 +280,8 @@ Wilson's second-moment method.
 `2026-11-16/G0002_cerf_second_order_pivots/` is a referee report on the counterexample to Cerf's conjecture on
 second-order pivots: nine steps re-derived, the paper's checks reproduced, verdict accept with minor changes. Its
 README credits Cerf, Talagrand and Russo.
+
+`2026-11-16/F0073_pinned_positive_field/` is a partial attempt at Velenik's Open Problem 6 (the two-dimensional
+gradient field pinned at the origin and kept positive), together with a referee note on an earlier attempt. The
+lower bound of order log|i| is reduced to Deuschel and Giacomin's entropic repulsion estimate. The upper bound
+stays open, and the attempt explains where the Gaussian proof breaks for general convex potentials.
