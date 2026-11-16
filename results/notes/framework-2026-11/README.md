@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 392 notes.
+out, and requests are paraphrased. 396 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -557,3 +557,14 @@ Feeding an Apple-silicon GPU on a saturated machine, and a regression gate that 
 |---|---|---|
 | [gpu_feeder_process_must_not_sit_below_cpu_lanes_in_priority_2026_11_10](gpu_feeder_process_must_not_sit_below_cpu_lanes_in_priority_2026_11_10.md) | provisional | Apple-silicon GPU only 59-71 percent busy on a saturated machine? The process feeding the GPU (an MPS search, a model server) ran at a lower CPU priority (nice 10-15) than the CPU-only lanes (nice ... |
 | [regression_gate_counted_hook_load_silence_as_breach_2026_11_16](regression_gate_counted_hook_load_silence_as_breach_2026_11_16.md) | verified | A nightly regression gate over the math-recall hook read BREACH on three nights while the same checks passed by hand an hour later. The hook had gone quiet by its own time budget under load, and the ... |
+
+## Added on 16 November: gates, headless checks and GPU kernels (4)
+
+A remote gate that read an unreadable number as no room, a scheduled check that scored the wrong message, a prompt hook that fired on negated words, and a fused GPU kernel for daily path simulation.
+
+| note | status | what it says |
+|---|---|---|
+| [fused_gpu_kernel_for_memory_bound_daily_path_simulation_2026_11_14](fused_gpu_kernel_for_memory_bound_daily_path_simulation_2026_11_14.md) | provisional | A Monte Carlo simulation that steps many paths one day at a time ran slowly on an Apple-silicon GPU even under torch MPS, because each day's elementwise ops read and wrote the whole state from ... |
+| [headless_check_answer_is_not_the_last_message_2026_11_13](headless_check_answer_is_not_the_last_message_2026_11_13.md) | verified | A weekly scheduled check that runs a headless Claude session and scores its answer gave no verdict for three weeks, and its last verdict scored the wrong text. Two causes: the session inherited a low ... |
+| [remote_gate_unreadable_number_is_not_no_room_2026_11_16](remote_gate_unreadable_number_is_not_no_room_2026_11_16.md) | provisional | A launch gate that waits for free memory on another machine sat idle for hours with that machine nearly empty. The number read over ssh came back on repeated lines, the shell's integer test failed on ... |
+| [writing_hook_fired_on_negated_and_far_apart_words_2026_11_14](writing_hook_fired_on_negated_and_far_apart_words_2026_11_14.md) | verified | The writing-brain hook decided whether a prompt asked for writing by finding a write verb anywhere and a writing noun anywhere. It fired on negated asks ('don't keep rewriting ...') and on prompts ... |
