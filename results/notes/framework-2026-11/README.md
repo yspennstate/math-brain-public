@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 407 notes.
+out, and requests are paraphrased. 410 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -600,3 +600,13 @@ Sheets that set related sentences side by side for a reader, style counts measur
 | [git_bash_tar_reads_drive_letter_as_remote_host_2026_11_16](git_bash_tar_reads_drive_letter_as_remote_host_2026_11_16.md) | verified | In Git Bash on Windows, tar given an archive path with a drive letter (C:/...) reads 'C' as a remote host and fails with 'Cannot connect to C: resolve failed'. Inside a script whose errors are not ... |
 | [reader_sheets_list_places_green_page_checks_miss_2026_11_15](reader_sheets_list_places_green_page_checks_miss_2026_11_15.md) | provisional | A page that passes every machine check is not a read page: on one 10,700-word chapter, 28 pattern checks were silent and a full read then changed 22 sentences. The faults a read finds are mostly ... |
 | [style_counts_need_a_shelf_of_the_drafts_own_period_2026_11_15](style_counts_need_a_shelf_of_the_drafts_own_period_2026_11_15.md) | provisional | A draft standing above published openings on a count of style may be measuring the shelf's date, not the draft. Re-counted on 387 openings by authors born 1880-1945 (about 3 million words of ... |
+
+## Added on 16 November: controls, seeded runs and referee reads (3)
+
+Why a near-neutral dial is not a no-op control, why equal seeds do not mean equal draws, and what sixteen referee reads of one paper found.
+
+| note | status | what it says |
+|---|---|---|
+| [near_neutral_dial_is_not_a_noop_control_2026_11_16](near_neutral_dial_is_not_a_noop_control_2026_11_16.md) | provisional | An acceptance test of the form 'set the new dial a hair off neutral and the result must not move' is not a valid control when the dial triggers an event, such as rebalancing a position to a target: ... |
+| [same_seed_different_chunk_size_different_paths_2026_11_13](same_seed_different_chunk_size_different_paths_2026_11_13.md) | verified | Two bootstrap runs with the same seed but different chunk sizes do not share paths: each chunk of B paths draws rng.random((B, m)) then rng.integers((B, m)), so the stream is consumed in a ... |
+| [sixteen_referee_reads_before_a_paper_release_2026_11_13](sixteen_referee_reads_before_a_paper_release_2026_11_13.md) | verified | A posted paper (the Ising perceptron at nonzero margin, certified bounds along the replica-symmetric curve) went through sixteen independent first-reader referee reads before its v2.1 release. Every ... |
