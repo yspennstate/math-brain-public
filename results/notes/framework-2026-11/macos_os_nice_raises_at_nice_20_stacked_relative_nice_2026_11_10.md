@@ -9,7 +9,7 @@ metadata:
   evidence: "reproduced 10 Nov 00:50-00:56 by the shell: nested nice one-liners; 6/6 launch tests fail at nice 10 for 2 relative-nice launchers, 6/6 pass for an absolute setpriority launcher"
 ---
 
-Does a Python child that calls `os.nice(0)` survive being started at nice 20 on the Mac? No. On macOS (Darwin 24.5,
+Does a Python child that calls `os.nice(0)` survive being started at nice 20 on the worker machine? No. On macOS (Darwin 24.5,
 Python 3.13) `os.nice(0)` at nice 20 raises `PermissionError: [Errno 1] Operation not permitted`, so a script that
 reads its own priority that way dies with exit 1 on its first line. `os.getpriority(os.PRIO_PROCESS, 0)` at the same
 nice returns 20 and does not raise.

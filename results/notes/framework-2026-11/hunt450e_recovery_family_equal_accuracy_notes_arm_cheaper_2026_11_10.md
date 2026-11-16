@@ -15,5 +15,5 @@ hunt450E (recovery family: damaged, moved or stale files, plus one note found fr
 
 **Why:** accuracy is equal again, as on hunt450D ([[hunt450d_brain_equal_accuracy_faster_notes_arm_greps_live_memory_2026_11_10]]). The brain arm pays about 50 pct more tokens, mostly for its one long recall output. A sorted word bag still gives the notes arm literal words to grep for.
 
-**How to apply:** do not quote E as a brain win. To separate the arms, the next family must take away the grep: answers reached only through links between notes, or a note renamed since the clue was written. Count BRUTE flags as a separate failure line. Board page: brain-tasks-board coordination/tasks/AGENTIC-RECALL-HUNT-20261105.md (commit cf873a32).
+**How to apply:** do not quote E as a brain win. To separate the arms, the next family must take away the grep: answers reached only through links between notes, or a note renamed since the clue was written. Count BRUTE flags as a separate failure line. Board page: the private task board coordination/tasks/AGENTIC-RECALL-HUNT-20261105.md (commit cf873a32).
 

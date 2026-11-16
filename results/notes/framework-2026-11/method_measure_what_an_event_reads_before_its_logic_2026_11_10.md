@@ -11,7 +11,7 @@ metadata:
 
 **The move.** When a hook, gate or recall is slow, measure what it READS or SPAWNS per event before you read its logic: bytes touched per call, processes started per call, and whether the work grows with the session or the prompt rather than with the answer. The fix is almost always to stop at the first thing that answers (read backward, return at the first hit) or to stop paying a fixed per-event cost (one interpreter, one index) rather than to make the logic cleverer.
 
-**Where it worked, 10 Nov 2026, three fixes in one morning on the laptop brain:**
+**Where it worked, 10 Nov 2026, three fixes in one morning on the workstation brain:**
 - Stop hooks: registry_refresh.py and resume_checkpoint.py read the whole transcript (up to 80 MB) forward on every Stop to find the last assistant line. Reading backward in 2 MB blocks and returning at the first hit: 0.5 s to 5 ms a file, 806 cases on 120 transcripts with 0 differences. [[stop_hooks_read_the_whole_transcript_backward_read_2026_11_10]]
 - Tool-call hooks: 81 pct of a 2.45 s median PreToolUse wait was four wired hooks missing from hook_dispatch_allow.json, each starting its own Python per call. Adding them: median 1.63 s to 0.56 s, 52 of 52 outputs exact. [[four_wired_hooks_off_the_fast_list_cost_every_tool_call_2026_11_10]]
 - Recall on a long paste: two quadratic paths (stacked-lookahead rows run with search instead of match; a bm25 overlay with no arrays) made a 25 KB prompt take 168 s and blinded the nightly gate for a month (28 of 32 runs at the 900 s cap). Fixed: 24.5 s, parity 0 differences. [[long_pasted_prompt_recall_168s_two_quadratic_paths_blinded_gate_2026_11_10]]

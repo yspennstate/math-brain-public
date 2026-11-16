@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-08
   created_at: 2026-11-08T15:48:38+04:00
   status: verified
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/DIAG8_20261108 (prereg d32de44aca, results 400ccaefd9)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/DIAG8_20261108 (prereg d32de44aca, results 400ccaefd9)"
 ---
 
 Does recall --each (several questions in one call) close the recall-only gap at 5 tool calls? Yes (8 Nov, DIAG8): Codex 26 of 36 planted causes against DIAG7 recall's 16, Claude 29 against 15.
@@ -24,5 +24,5 @@ How to apply: when a task has several separate symptoms or questions, send them 
 
 Caveats: DIAG7 is a same-day, not concurrent, comparison judged in a separate sitting; the memory index has grown since DIAG7.
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG8_20261108 (results 400ccaefd9), with the coverage analysis in DIAG7_20261108/split (depth.py, ceiling.py, ceiling_each.py). Related: [[diag7_grep_32_recall_16_codex_17_15_agent_11_08]], [[recall6_split_bundled_recall_21_to_21_bodies_not_ranking_2026_11_08]], [[diag6_five_calls_brain_27_12_bare_0_2026_11_08]].
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG8_20261108 (results 400ccaefd9), with the coverage analysis in DIAG7_20261108/split (depth.py, ceiling.py, ceiling_each.py). Related: [[diag7_grep_32_recall_16_codex_17_15_agent_11_08]], [[recall6_split_bundled_recall_21_to_21_bodies_not_ranking_2026_11_08]], [[diag6_five_calls_brain_27_12_bare_0_2026_11_08]].
 

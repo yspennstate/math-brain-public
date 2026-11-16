@@ -18,7 +18,7 @@ Measured, same process, same inputs, old sidecar against new: 197.1 -> 162.1 ms 
 tool calls of a live session (box under load); 78.9 -> 67.8 ms on 1,500 calls earlier on a quieter box. 0 fires lost
 on either set.
 
-Soundness: the module's own harness (`instinct_anchors.py --verify`) did not finish in 30-40 min on this laptop,
+Soundness: the module's own harness (`instinct_anchors.py --verify`) did not finish in 30-40 min on this workstation,
 twice. The check that did: the landed filter was already sound, so the regex only has to run where the new filter
 skips a pair the old one passed. 5,500 texts (4,000 prompts, 1,500 memory bodies), 36,309 such pairs, 0 fires, 6 min.
 A filter that skips everything reports 43 unsound pairs on 250 texts, so the check can fail.

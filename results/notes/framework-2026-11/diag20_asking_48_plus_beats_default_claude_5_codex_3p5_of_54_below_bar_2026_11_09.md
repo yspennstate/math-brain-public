@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T05:43:16+04:00
   status: provisional
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/DIAG20_20261109 commit 5a2034c904; prereg 4a5ff03ea4"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/DIAG20_20261109 commit 5a2034c904; prereg 4a5ff03ea4"
 ---
 
 Question: past the default, does asking the brain for more questions (48 or more) help the brain arm?
@@ -22,5 +22,5 @@ How to apply: tell agents not to cap recall low ([[diag19_question_cap_16_costs_
 
 Harness: the DIAG19 slug false positive (a `brain.py node` slug containing "subprocess") voided a Codex run again, because apply_validity17.py has its own copy of the recall rule. Fixed in both places after scoring.
 
-Results: brain-repo 12_cognitive_architecture/brain_improvement/DIAG20_20261109 (prereg 4a5ff03ea4, results 5a2034c904).
+Results: the private repository, 12_cognitive_architecture/brain_improvement/DIAG20_20261109 (prereg 4a5ff03ea4, results 5a2034c904).
 

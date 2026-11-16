@@ -25,7 +25,7 @@ The sign is slightly negative every time and never significant. This is the same
 
 **Answered under other cards:**
 - #2 by [[rereads_already_space_out_x1p4_but_79pct_are_read_once_d3_21_2026_11_01]].
-- #5, #9, #15 and #86 all need a language-model dream pass, which the Mac does not have: [[mac_dream_has_no_llm_pass_so_dream_prompt_items_have_no_host_d1_16_2026_11_01]], which names #15. #9 is also covered by [[gisting_does_not_crowd_out_old_members_reads_0p30_vs_0p43_p0p74_d2_92_2026_11_01]] and [[rem_replay_already_52pct_full_charge_vs_sws_43_corpus_28_d3_32_2026_11_01]].
+- #5, #9, #15 and #86 all need a language-model dream pass, which the worker machine does not have: [[mac_dream_has_no_llm_pass_so_dream_prompt_items_have_no_host_d1_16_2026_11_01]], which names #15. #9 is also covered by [[gisting_does_not_crowd_out_old_members_reads_0p30_vs_0p43_p0p74_d2_92_2026_11_01]] and [[rem_replay_already_52pct_full_charge_vs_sws_43_corpus_28_d3_32_2026_11_01]].
 - #42 by [[surprise_gain_reaches_0p5pct_of_memories_replay_flat_in_bits_d3_3_2026_11_01]] and [[surprise_day_memories_reread_6p4_vs_8p5_no_month_sign_d4_12_2026_11_02]].
 - #52 by [[retrieval_induced_forgetting_has_no_choice_signal_1pct_decided_d3_89_2026_11_01]] and [[recall_already_folds_losers_onto_winners_16_stale_of_211k_slots_d3_42_2026_11_01]].
 - #55 and #77 by [[near_duplicate_memories_are_5pct_and_cost_recall_0_of_317_slots_d1_20_2026_11_01]]; #77 also by [[covered_scar_discount_frees_slots_for_other_memories_not_scars_d3_09_2026_11_01]].

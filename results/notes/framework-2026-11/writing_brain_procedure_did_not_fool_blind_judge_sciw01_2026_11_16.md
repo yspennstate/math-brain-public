@@ -12,7 +12,7 @@ metadata:
 SCIW01/SCIJ02, 16 Nov 2026, an agent.
 Setup:
 - Six briefs from the science hunt (news, letter, methods, explain, essay, referee), each with the facts its station established and the hunt's data.
-- Three Codex writers in a plain arm and three in a writing-brain arm (writing_recall, show_nodes, draft, after_page, revise, logged; card WB-M0017). Both arms: gpt-6.1-sol high, normal tier, Mac mini 1.
+- Three Codex writers in a plain arm and three in a writing-brain arm (writing_recall, show_nodes, draft, after_page, revise, logged; card WB-M0017). Both arms: gpt-6.1-sol high, normal tier, worker machine 1.
 - One blind Codex judge read 48 machine pieces against 48 human paper passages.
 Result:
 - P(machine): brain arm 96.0, 96.7 and 96.3; plain arm 97.0, 97.3 and 97.3. Human controls 4-17.

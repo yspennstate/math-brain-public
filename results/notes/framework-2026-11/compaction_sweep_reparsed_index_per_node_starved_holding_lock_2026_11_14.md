@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Found by an agent at 01:1x on 14 Nov, after the CP52 hook asked for a compaction node and the --sweep it suggests said 'another sweep holds the lock'. The holder (pid 29456, pythonw, compact_nodes.py --sweep --days 1, started 13 Nov 21:37) was not dead and not hung: thread Ready, BelowNormal, 21 s of CPU in 3.5 h on a laptop at 90 pct load. py-spy put it in save_node -> _index_rows, which re-read and json-parsed all of INDEX.jsonl (22 MB, 26,966 rows, 0.45 s CPU) once per compaction the sweep looked at.
+Found by an agent at 01:1x on 14 Nov, after the CP52 hook asked for a compaction node and the --sweep it suggests said 'another sweep holds the lock'. The holder (pid 29456, pythonw, compact_nodes.py --sweep --days 1, started 13 Nov 21:37) was not dead and not hung: thread Ready, BelowNormal, 21 s of CPU in 3.5 h on a workstation at 90 pct load. py-spy put it in save_node -> _index_rows, which re-read and json-parsed all of INDEX.jsonl (22 MB, 26,966 rows, 0.45 s CPU) once per compaction the sweep looked at.
 
 Fix (live md5 553dc912, mirror 12_cognitive_architecture/dreaming/compact_nodes.py): _jsonl_rows keeps the parsed rows per file with its file id, size, mtime and last 64 bytes; it parses only what was appended, re-parses fully on a rewrite (os.replace gives a new file id) or changed bytes, returns but does not keep a half-written last line, and hands callers copies. Same rows as the old reader on a copy of the live index across six cases; 0.027 s a call after the first. Ledger row an agent-20261114-compaction-index-append-cache.
 

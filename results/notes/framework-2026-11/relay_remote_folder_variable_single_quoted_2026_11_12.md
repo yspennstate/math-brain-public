@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-What happened: On 2026-11-12 the first score_relay2.sh invocation read nothing and printed no score. The command passed the folder name inside single quotes to the Mac. After the folder travelled in the command correctly, the scorer reported 87/100 opened, 0 wrong and agreement with the report.
+What happened: On 2026-11-12 the first score_relay2.sh invocation read nothing and printed no score. The command passed the folder name inside single quotes to the worker machine. After the folder travelled in the command correctly, the scorer reported 87/100 opened, 0 wrong and agreement with the report.
 
 Why it happened: Single quoting kept the folder variable literal across the local-to-remote shell boundary, so the scorer did not read the intended run.
 

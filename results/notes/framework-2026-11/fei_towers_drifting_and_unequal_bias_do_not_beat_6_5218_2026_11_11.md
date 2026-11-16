@@ -50,7 +50,7 @@ from the explicit truth table; both give 6.521845710923 for the record). Results
 - Coarse tables differ from the fine one by up to 7e-4 away from 1/2 (golden bias 6.576709 against 6.575957, the
   exact fixed-point value of the two-input gate); believe an explicit rollout, never a table entry.
 
-**Where.** brain-repo/06_math_research/fei_solve_agent_2026_11_10 (STATE.md first; code/
+**Where.** the private repository, 06_math_research/fei_solve_agent_2026_11_10 (STATE.md first; code/
 tower_vi.py, fei_bias.c, zoo.py, het_search.py; results/tower, results/zoo). What would change this note: any gate or
 tree with positive slack that survives expansion to a truth table and a second transform in high precision.
 

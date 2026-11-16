@@ -9,7 +9,7 @@ metadata:
   evidence: "12_cognitive_architecture/brain_improvement/DIAG1_20261108 commit 23cacc648d; commitment 3925b96926"
 ---
 
-Does the brain help an agent name the real cause of a failure this Mac has had before? Yes on both runtimes, but only on the causes that leave no clue in the log, and this round was too easy by its own rule. DIAG1, 8 Nov, an agent. Measured on this Mac: 12 runs, all valid, blind-judged, commitment 3925b96926 before any run, results in 12_cognitive_architecture/brain_improvement/DIAG1_20261108 (23cacc648d).
+Does the brain help an agent name the real cause of a failure this worker machine has had before? Yes on both runtimes, but only on the causes that leave no clue in the log, and this round was too easy by its own rule. DIAG1, 8 Nov, an agent. Measured on this worker machine: 12 runs, all valid, blind-judged, commitment 3925b96926 before any run, results in 12_cognitive_architecture/brain_improvement/DIAG1_20261108 (23cacc648d).
 
 Each of the 24 items was a symptom plus its log lines. 12 plants had causes held in scar memories, and 12 controls had the cause in the log. Arms: Codex gpt-6.1-sol high and Claude opus-5-5 high, brain and bare, 3 runs each. Brain store: brain-graph-full-2026-11-07, 16,811,666 edges.
 

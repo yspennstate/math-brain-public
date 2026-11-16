@@ -1,6 +1,6 @@
 ---
 name: recall_server_started_a_thread_inside_every_call_2026_11_12
-description: "Recall calls that skip the walk slow (20 ms and tails of seconds) on the loaded laptop? The server started a thread inside every call; Thread.start waits for the new thread to run (33 ms median, p90 136). One resident thread woken by an event since 12 Nov 08:25: 2.2 ms median, max 8.6 on 20 live rows"
+description: "Recall calls that skip the walk slow (20 ms and tails of seconds) on the loaded workstation? The server started a thread inside every call; Thread.start waits for the new thread to run (33 ms median, p90 136). One resident thread woken by an event since 12 Nov 08:25: 2.2 ms median, max 8.6 on 20 live rows"
 metadata:
   type: project
   created: 2026-11-12
@@ -12,7 +12,7 @@ metadata:
 
 **What was wrong (found 12 Nov 2026 08:14, an agent).** `spread_server.py` started one `FaultSampler` thread
 inside the timed part of every recall call. Python's `Thread.start()` returns only when the new thread has run, and on
-this laptop with every core busy a new thread waits in the run queue: 33 ms median to start one at 08:14 (p90 136,
+this workstation with every core busy a new thread waits in the run queue: 33 ms median to start one at 08:14 (p90 136,
 max 219), 18 ms median at 08:29 (p75 220, max 507), measured from a fresh Normal-class process. Waking a thread that
 already exists from an event wait cost the caller 0.02 ms in the same minutes. So every per-prompt recall call of
 every Claude session paid a thread start, and the calls that skip the walk (which should take 2 ms) showed it most.

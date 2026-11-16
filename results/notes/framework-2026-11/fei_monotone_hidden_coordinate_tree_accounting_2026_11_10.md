@@ -65,7 +65,7 @@ averaged (tree or sum over i) inequality. Codex workers FEIB23-25 (launched 10 N
 
 What would change this: nothing in 1-3 (exact); 4-5 are identities.
 
-Where: brain-repo/06_math_research/fei_solve_2026_11_09/FLOW.md section 12(u);
+Where: the private repository, 06_math_research/fei_solve_2026_11_09/FLOW.md section 12(u);
 code/mono_hidden.py, code/mono_hidden_comp.py.
 
 

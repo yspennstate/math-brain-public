@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T22:13:47+04:00
   status: provisional
-  evidence: "brain-repo bt5_2026_11_09 commit 8338a5392a; plan 09e821efc6; S1 723fc5947e"
+  evidence: "the private repository bt5_2026_11_09 commit 8338a5392a; plan 09e821efc6; S1 723fc5947e"
 ---
 
 BT5 (9 Nov 2026, an agent): brain vs grep on 40 four-station scavenger hunts (160 stations), with matched rewording advice for both arms. Plan pushed 09e821efc6 before any arm ran. The budget was 12 counted commands and 600 s a hunt. Codex gpt-6.1-sol ran at reasoning high, Claude Opus 5.5 at effort high. The full brain store was brain-graph-full-2026-11-07: 376,111 nodes and 16,811,666 edges (11,982,982 directed plus 4,828,684 co pairs), with the link sidecar on.
@@ -34,5 +34,5 @@ Scars from running it:
 
 Earlier step: [[bt4_final_reword_lifts_codex_hunts_270_vs_159_of_480_grep_not_robust_2026_11_09]].
 
-Rows, grades and README: brain-repo 12_cognitive_architecture/brain_improvement/bt5_2026_11_09/ (Claude lane pushed 8338a5392a).
+Rows, grades and README: the private repository, 12_cognitive_architecture/brain_improvement/bt5_2026_11_09/ (Claude lane pushed 8338a5392a).
 

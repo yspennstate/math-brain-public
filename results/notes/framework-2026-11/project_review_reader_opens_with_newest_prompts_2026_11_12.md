@@ -9,7 +9,7 @@ metadata:
   evidence: "agent_run/project_context/test_digest_result.txt (16 of 16, control fails 7), review_counts.txt, review_digest_live_sizes.txt; ledger row of 12 Nov (k)"
 ---
 
-The hot hook tells every session each hour that project reviews are due and to run `project_memory_cli.py read-latest --project <name> --session <id>` ([[project_review_due_lines_share_one_line_per_call_2026_11_12]]). Until 12 Nov 2026 that command answered with one command line per shard of the review. A review is the project's last 1,000 owner prompts quoted in full: on 12 Nov the sixteen largest ran from 4 MB (83 shards) to 26.8 MB (559 shards), so the answer itself was up to 110,000 characters and each shard behind it 48,000 more.
+The hot hook tells every session each hour that project reviews are due and to run `project_memory_cli.py read-latest --project <name> --session <id>` ([[project_review_due_lines_share_one_line_per_call_2026_11_12]]). Until 12 Nov 2026 that command answered with one command line per shard of the review. A review is the project's last 1,000 plain-language prompts quoted in full: on 12 Nov the sixteen largest ran from 4 MB (83 shards) to 26.8 MB (559 shards), so the answer itself was up to 110,000 characters and each shard behind it 48,000 more.
 
 Nobody reads them. Counted read-only on the live store (`agent_run/project_context/review_counts.txt`): 31 acknowledgements since 22 July, one of them since 1 October; 15 shard reads since 1 November; 269 offers ever taken up. The notice has gone to every session every hour through all of that.
 

@@ -11,7 +11,7 @@ metadata:
 
 Question: the graph membrane's order lookup (live_membrane.order_candidates, run on every prompt with topk=300 and by codex_orders_hook) - where does its time go, and what was cut?
 
-Measured 10 Nov 2026 23:4x on the laptop under a ui_freeze alarm. After bm25.score_postings returns up to 300 hits, the old code ran one `SELECT descr, status, superseded_by FROM memory WHERE slug=?` per hit to keep only the author's orders (slug owner_* or status owner-stated). slug is the primary key, so each is an index probe, but 300 of them cost 0.06-0.09 s cold and 0.015 s warm.
+Measured 10 Nov 2026 23:4x on the workstation under a ui_freeze alarm. After bm25.score_postings returns up to 300 hits, the old code ran one `SELECT descr, status, superseded_by FROM memory WHERE slug=?` per hit to keep only the author's orders (slug owner_* or status owner-stated). slug is the primary key, so each is an index probe, but 300 of them cost 0.06-0.09 s cold and 0.015 s warm.
 
 Change: one `WHERE slug IN (...)` query per 500 hits into a dict before the loop; the superseded_by chain still follows hop by hop with single SELECTs (rare). Batch cost 0.005 s. Backup ~/.claude/brain_graph/bin/live_membrane.py.bak_ordbatch_20261110; mirror 12_cognitive_architecture/brain_graph/bin/live_membrane.py.
 

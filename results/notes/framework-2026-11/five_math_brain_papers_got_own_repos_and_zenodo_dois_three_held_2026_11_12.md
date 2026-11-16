@@ -32,5 +32,5 @@ What a rerun of this recipe needs to know:
 2. Get references from the PDF with the peer's pdf_refs_ay.py, then clean them. It ran past [13] into the back matter on one paper (46 entries). It also glued the address block and an "Israel" line onto the last entry, and it leaves words split at a line-break hyphen (Ad-vances, Psy-chometrika). Keep only the [n] lines and assert the count against \bibitem.
 3. The Zenodo deposit list caps at size=100 (size=200 gives HTTP 400). Page through it for the duplicate-title check; 139 titles were on the account.
 4. A naive TeX-to-text pass flattens nested exponents (2^{2^{2l}}) and subscripted Lip constants. Read every abstract in a dry run before publishing, because a DOI is permanent.
-Scripts are in the session scratchpad: zen8_publish.py, zen8_refs_fix.py, zen8_zenodo.py, zen8_email.py. Related: [[zenodo_bulk_upload_by_own_file_input_and_draft_files_api_2026_11_08]], [[zenodo_refs_from_the_pdf_accents_labels_and_tails_2026_11_11]], [[github_papers_vs_zenodo_24_files_lag_two_old_repos_2026_11_12]].
+Scripts are in the session scratch area: zen8_publish.py, zen8_refs_fix.py, zen8_zenodo.py, zen8_email.py. Related: [[zenodo_bulk_upload_by_own_file_input_and_draft_files_api_2026_11_08]], [[zenodo_refs_from_the_pdf_accents_labels_and_tails_2026_11_11]], [[github_papers_vs_zenodo_24_files_lag_two_old_repos_2026_11_12]].
 

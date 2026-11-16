@@ -37,7 +37,7 @@ What would change this: a gate that raises W at a bias in .30-.40 by about 0.07,
 near 0; the open lever is coin searches on bases with 12 to 16 inputs. The table is one implementation
 (tower_vi2.py); the U values in item 1 and the gate values are checked from explicit truth tables.
 Corrects the frame of [[fei_towers_drifting_and_unequal_bias_do_not_beat_6_5218_2026_11_11]] (its table had no
-negated inputs; its conclusion stands). Files: brain-repo/06_math_research/
+negated inputs; its conclusion stands). Files: the private repository, 06_math_research/
 fei_solve_agent_2026_11_10 (STATE.md, code/, results/tower/W_run8.txt). Record card: math store
 claim_dc791b32e0484ff9a7c3ca145381fcff.
 

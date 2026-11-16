@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-11
   created_at: 2026-11-11T09:04:53+02:00
   status: verified
-  evidence: "scratchpad tc/coal_speed.py + coal_test.py; selftest 0 failed; ledger gaps 8-11 Nov 49 pct under 60 s"
+  evidence: "scratch area tc/coal_speed.py + coal_test.py; selftest 0 failed; ledger gaps 8-11 Nov 49 pct under 60 s"
 ---
 
 Since 11 Nov 2026 09:02 local, task_checklist_hook.py writes a burst of Stops once. Before, every Stop of a session with an open entry took the checklist lock, loaded the whole state.json (16 MB, 7,428 entries; about 85 ms) and saved it back (about 55 ms) to change that entry's last words, and waited seconds whenever another holder had the lock. In the ledger of 8-11 Nov (11,565 repeat Stops on one entry), 44 pct came under 30 s after the previous one and 49 pct under 60 s: a Stop hook sends the agent back to work and it stops again.

@@ -18,7 +18,7 @@ Why it happened: Output equality alone was treated as enough to migrate a hook. 
 
 **How to apply:** Inspect event wiring and PARALLEL_SUBPROC_EVENTS before migration, leave prompt-only children alone, and test allowlist changes on a scratch copy.
 
-Input evidence: item 016 (2026-11-12 03:02, T-20261110-113, [an agent]), item 073 (2026-11-12 02:38, T-20261110-113, [an agent]).
+Input evidence: item 016 (2026-11-12 03:02, [an agent]), item 073 (2026-11-12 02:38, [an agent]).
 
 Source memories: [[extend_tool_leaves_prompt_only_child_hooks_alone_2026_11_12]] [[rank_prompt_hooks_by_wait_parallel_children_are_off_the_critical_path_2026_11_11]]
 

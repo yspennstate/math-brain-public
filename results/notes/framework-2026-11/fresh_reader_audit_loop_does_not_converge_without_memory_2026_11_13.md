@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-Ising perceptron margin paper, 12-13 Nov 2026. Found while auditing a finished checklist line (T-20261112-134,
+Ising perceptron margin paper, 12-13 Nov 2026. Found while auditing a finished checklist line (a checklist task,
 loops/agent_loop_1112/AGENT_AUDIT.md entry 8).
 
 What happened. The paper was put through a loop: a fresh first-reader agent audits main.tex with no memory of

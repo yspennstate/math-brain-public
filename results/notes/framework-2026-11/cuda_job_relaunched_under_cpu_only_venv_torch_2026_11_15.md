@@ -15,7 +15,7 @@ At 15:09 on 15 Nov 2026 the P0108 c12 run was relaunched under ~/venvs/picaudit/
 
 The second relaunch used C:/Python314/python.exe -s. It died at once with "No module named 'torch'". Python314's torch (2.10.0+cu128) lives in the user site, ~/AppData/Roaming/Python/Python314/site-packages, and -s hides that folder. The earlier n4096 run worked because it ran pythonw.exe without -s.
 
-Check before you trust a laptop CUDA launch:
+Check before you trust a workstation CUDA launch:
 - run `& 'C:\Python314\python.exe' -c "import torch;print(torch.version.cuda, torch.cuda.is_available())"`; or
 - confirm that torch_cuda.dll appears in (Get-Process -Id N).Modules.
 

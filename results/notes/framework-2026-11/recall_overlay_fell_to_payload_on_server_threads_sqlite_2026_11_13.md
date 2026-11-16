@@ -6,14 +6,14 @@ metadata:
   created: 2026-11-13
   created_at: 2026-11-13T05:50:01+02:00
   status: verified
-  evidence: "brain commits 1958c1ac (fix) and 30a4b801 (numpy); repro scratchpad why_fallback4.py; recall_log.jsonl 231/800 overlay-fallback"
+  evidence: "brain commits 1958c1ac (fix) and 30a4b801 (numpy); repro scratch area why_fallback4.py; recall_log.jsonl 231/800 overlay-fallback"
 ---
 
 A third of served recalls (231 of the last 800 in brain_graph/live/recall_log.jsonl on 13 Nov) took the lexical path logged as `overlay-fallback`, with lex_s p50 2.08 s and p90 6.83 s. The overlay path had p50 0.57 s and the sidecar path 0.26 s. The log showed the signature: an `overlay` recall followed by an `overlay-fallback` one, again and again.
 
 Cause: a threading bug, not load. `_fc_overlay` in brain.py opened its read-only sqlite connection with the default check_same_thread=True. The recall server memoises the overlay (MEMO_NAMES has `_fc_overlay`) and answers each request on a new socketserver.ThreadingTCPServer thread. The second recall on the same overlay therefore raised `ProgrammingError: SQLite objects created in a thread can only be used in that same thread` inside `_FcOverlay._score`. `score()` caught the error and called `_full()`, which builds the 45 MB payload merge and scores every memory in pure Python. Because `_fallback` is then set, every later recall on that overlay took the slow path until a folder change dropped the memo.
 
-Repro: scratchpad why_fallback4.py builds the overlay in one thread and scores it in another (before the fix: ProgrammingError and fallback set; after: ok, no fallback). A CLI recall never shows it because it runs in a single thread. Replaying logged questions in-process found nothing, and that was the clue that the cause lived in the server.
+Repro: scratch area why_fallback4.py builds the overlay in one thread and scores it in another (before the fix: ProgrammingError and fallback set; after: ok, no fallback). A CLI recall never shows it because it runs in a single thread. Replaying logged questions in-process found nothing, and that was the clue that the cause lived in the server.
 
 Fix (13 Nov 2026, an agent, brain commit 1958c1ac): `check_same_thread=False` on that connection. It is read-only, and the server runs one call at a time under its lock.
 

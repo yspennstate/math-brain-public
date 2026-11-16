@@ -36,6 +36,6 @@ Traps met on the way: pdftotext drops bars, hats, breves, tildes and square root
 e(z) = exp(4 pi i Im z/sqrt 3) is Dunn-Radziwill's e-breve(z/lambda); that is where the factor chi_n(lambda)^2
 in (2.10) comes from.
 
-Files: brain-repo/06_math_research/nt01_quasi_rh_agent_2026_11_12/NT01_CHECK.md (the
+Files: the private repository, 06_math_research/nt01_quasi_rh_agent_2026_11_12/NT01_CHECK.md (the
 check, section by section), STATE.md, nt01_checkA1.py and the earlier test scripts there.
 

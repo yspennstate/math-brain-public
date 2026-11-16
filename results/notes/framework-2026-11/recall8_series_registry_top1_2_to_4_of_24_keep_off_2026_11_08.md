@@ -17,7 +17,7 @@ Registry: 24 series, 67 memberships, 152 source-checked quotes, 41 rejected cand
 
 Next: current-status clauses with provenance in the memories themselves, and series retrieval from user wording, tested on new series.
 
-Pushed to brain-repo 12_cognitive_architecture/brain_improvement/recall8_series_registry_2026_11_08 (commit 2716132120), without bank, keys or events.
+Pushed to the private repository, 12_cognitive_architecture/brain_improvement/recall8_series_registry_2026_11_08 (commit 2716132120), without bank, keys or events.
 
 Related: [[recall7_status_newest_top1_2_of_30_series_head_fails_2026_11_08]], [[recall_status_questions_miss_newest_series_memory_3_of_5_2026_11_08]]
 

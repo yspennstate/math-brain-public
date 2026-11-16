@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Referee of yspennstate/graph-urn-conserved-charges at 69ce6d0 by an agent, 14 Nov 2026. Report: brain-repo/06_math_research/referee_reports/2026-11-14/GU_posted_referee/REPORT.md (commit in gu_push.log).
+Referee of yspennstate/graph-urn-conserved-charges at 69ce6d0 by an agent, 14 Nov 2026. Report: the private repository, 06_math_research/referee_reports/2026-11-14/GU_posted_referee/REPORT.md (commit in gu_push.log).
 
 Verdict SOUND, no edit. Checked: Thm 1 charge martingale and bracket bound; Lemma 2 growth (S_v <= d + clocks of v and neighbours); Thm 3 terminal law via the Gamma-ratio martingale P_theta (generator i theta P sum (B sigma)_v/S_v = 0, |Gamma(x+iy)| <= Gamma(x)), Var <M>_inf = zeta(4) sum sigma^4 via R = [M] - <M>; Remark 4 fibre bijection; Lemma 5 equilibria on C_L (even blocks s = (2k+2)/(k+2), d_e L >= 1/(2k+2)); Thm 5 convergence (K forward invariant since dS_v/dtau >= 1 - S_v, Ben99 Prop 6.4, type-(2) exclusion by internal time, endpoints by Phi -> +-inf); Cor 6 pi^4/(90L); Prop 7 c = zeta(2) by the translation shift.
 

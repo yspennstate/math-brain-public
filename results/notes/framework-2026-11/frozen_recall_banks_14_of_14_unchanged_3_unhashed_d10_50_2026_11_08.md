@@ -1,6 +1,6 @@
 ---
 name: frozen_recall_banks_14_of_14_unchanged_3_unhashed_d10_50_2026_11_08
-description: "[VERIFIED] Yes (8 Nov): D10 #50 frozen recall banks on the Mac, 11 .sha-frozen files and 4 status-line-hashed banks (15: 13 banks, 2 pre-registrations) all unchanged; 3 loose banks had no hash and were hashed then; D10 #76 rerank lift already measured"
+description: "[VERIFIED] Yes (8 Nov): D10 #50 frozen recall banks on the worker machine, 11 .sha-frozen files and 4 status-line-hashed banks (15: 13 banks, 2 pre-registrations) all unchanged; 3 loose banks had no hash and were hashed then; D10 #76 rerank lift already measured"
 metadata:
   type: project
   created: 2026-11-08
@@ -9,7 +9,7 @@ metadata:
   evidence: "d10_50_frozen_banks_unchanged_2026_11_08.py"
 ---
 
-Do the Mac's held-out recall banks stay frozen after they are used, as 1000-ways D10 #50 asks? Yes, all 15 hashed files have stayed the same: 13 banks and 2 pre-registrations (the 14 in this slug is a miscount). Measured 8 Nov by an agent.
+Do the worker machine's held-out recall banks stay frozen after they are used, as 1000-ways D10 #50 asks? Yes, all 15 hashed files have stayed the same: 13 banks and 2 pre-registrations (the 14 in this slug is a miscount). Measured 8 Nov by an agent.
 
 - Under the porting folder, 11 files are frozen by a .sha beside them: W06 rounds f, j and l, and the D2 #25 PREREG and PREREG_B banks with their pre-registrations. All of them still match their sha256.
 - Rounds g, h, i and m have no .sha, but each matches a hash written in a BRAIN_INSTALL_STATUS line.

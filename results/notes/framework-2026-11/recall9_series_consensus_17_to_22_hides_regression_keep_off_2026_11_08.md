@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-08
   created_at: 2026-11-08T23:23:01+04:00
   status: verified
-  evidence: "codex_fleet/20261108_pro/workers/RECALL9 REPORT.md, test_metrics.json, promotion_audit.json, prior_diagnosis.json; brain-repo c970c5c7c1"
+  evidence: "codex_fleet/20261108_pro/workers/RECALL9 REPORT.md, test_metrics.json, promotion_audit.json, prior_diagnosis.json; the private repository c970c5c7c1"
 ---
 
 Can recall find the right series first, then order inside it? (RECALL9, Codex gpt-6.1-sol high, reviewed by an agent 8 Nov 23:2x.) Keep it off.
@@ -17,5 +17,5 @@ Why it stays off: the audit found that the gain partly hides a regression. For "
 
 Two more findings worth keeping. On RECALL8's 24 tune questions the right series was not in the top 20 at all for 14 of them: 12 wrong topic, 3 sibling series, and 7 with no shared content words. A re-ranker cannot fix that; the miss is coverage, as in [[recall6_split_bundled_recall_21_to_21_bodies_not_ranking_2026_11_08]]. And the new bank is much easier (baseline 17/30 against 2/24), because the implementer wrote its questions from the descriptions. Same lesson as [[recall8_series_registry_top1_2_to_4_of_24_keep_off_2026_11_08]] and [[recall7_status_newest_top1_2_of_30_series_head_fails_2026_11_08]]: the next bank must be written independently.
 
-Full graph brain-graph-full-2026-11-07 (376,111 nodes, 16,811,666 edges, 243,031 sidecar links). The bank is burned. Pushed without keys or bank rows to brain-repo 12_cognitive_architecture/brain_improvement/recall9_series_consensus_2026_11_08 (c970c5c7c1).
+Full graph brain-graph-full-2026-11-07 (376,111 nodes, 16,811,666 edges, 243,031 sidecar links). The bank is burned. Pushed without keys or bank rows to the private repository, 12_cognitive_architecture/brain_improvement/recall9_series_consensus_2026_11_08 (c970c5c7c1).
 

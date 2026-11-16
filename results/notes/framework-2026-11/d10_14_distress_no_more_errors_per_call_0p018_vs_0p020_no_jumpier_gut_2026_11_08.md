@@ -1,6 +1,6 @@
 ---
 name: d10_14_distress_no_more_errors_per_call_0p018_vs_0p020_no_jumpier_gut_2026_11_08
-description: "Does distress on the laptop raise the error rate per tool call? No: D10 #14 jumpier reflexes under stress has no premise on the Mac: errors per tool call 0.018 in distress vs 0.020 ok (CIs overlap), fires per call flat; 2 distress episodes"
+description: "Does distress on the workstation raise the error rate per tool call? No: D10 #14 jumpier reflexes under stress has no premise on the worker machine: errors per tool call 0.018 in distress vs 0.020 ok (CIs overlap), fires per call flat; 2 distress episodes"
 metadata:
   type: project
   created: 2026-11-08
@@ -9,7 +9,7 @@ metadata:
   evidence: "hook_dispatch.log calls x body_history.tsv tier x outcomes.jsonl, 3-5 Nov; 8 Nov 03:41"
 ---
 
-1000-ways D10 #14 ("gut-brain coupling") asks that a stressed body lower the reflex firing thresholds, making the brain jumpier, and measures reflex fire rate against tier. Checked by an agent on 8 Nov about 03:41. Not built: the premise fails on the Mac's own data.
+1000-ways D10 #14 ("gut-brain coupling") asks that a stressed body lower the reflex firing thresholds, making the brain jumpier, and measures reflex fire rate against tier. Checked by an agent on 8 Nov about 03:41. Not built: the premise fails on the worker machine's own data.
 
 Each tool call was tagged with the governor status in force (the last body_history.tsv reading in the 7 min before it), over 3 Nov 19:32 to 5 Nov 06:24:
 - ok: 5,329 calls, 105 error signals (0.020 a call, 95% 0.016-0.024), 0.11 reflex fires a call

@@ -18,7 +18,7 @@ Why it happened: The report time predicate had no leading index. The desk OR que
 
 **How to apply:** Inspect EXPLAIN QUERY PLAN, use bounded indexed transactions, compare answers and read bytes on worst-order data, and measure live waits independently.
 
-Input evidence: item 291 (2026-11-12 01:30, T-20261110-113, [an agent]), item 235 (2026-11-12 01:51, T-20261110-113, [an agent]), item 196 (2026-11-12 02:05, T-20261110-113, [an agent]), item 016 (2026-11-12 03:02, T-20261110-113, [an agent]).
+Input evidence: item 291 (2026-11-12 01:30, [an agent]), item 235 (2026-11-12 01:51, [an agent]), item 196 (2026-11-12 02:05, [an agent]), item 016 (2026-11-12 03:02, [an agent]).
 
 Source memories: [[workspace_report_reads_mesh_messages_newest_first_in_chunks_2026_11_12]] [[desk_agent_mail_query_loaded_every_message_now_index_walks_2026_11_12]]
 

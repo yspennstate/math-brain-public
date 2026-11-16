@@ -34,7 +34,7 @@ the `fatal:` / `lkg:` lines yet.
 
 **The mistake made landing it, and the rule.** Replacing the dispatcher changes its mtime, and an allowlist
 (`hook_dispatch_allow.json`) older than the dispatcher is treated as stale: the in-process fast list empties and every
-hook spawns its own process. From 21:55:40 to 22:06:29 that was every session on the laptop: PostToolUse 8.9 s against
+hook spawns its own process. From 21:55:40 to 22:06:29 that was every session on the workstation: PostToolUse 8.9 s against
 0.14 s, PreToolUse calls with 295 hooks over 200 s. The log said `ALLOWLIST STALE` from the first dispatch; it was read
 eleven minutes late. Third time an edit to this file has done it (17 Sep, 18 Sep, 10 Nov;
 [[editing_a_file_can_disable_an_optimisation_keyed_on_its_mtime_2026_09_17]]). After ANY write to hook_dispatch.py: read

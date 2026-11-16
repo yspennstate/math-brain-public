@@ -11,7 +11,7 @@ metadata:
   modified: 2026-11-10T16:05:22.927Z
 ---
 
-Checked 10 Nov 2026 by an agent (loop T-20261110-078), reading the arXiv texts.
+Checked 10 Nov 2026 by an agent (loop a checklist task), reading the arXiv texts.
 
 - Gonzalez, MacManus, Pereyra, 'Further evidence towards the Fourier Entropy-Influence conjecture', arXiv 2606.00246 v2 (9 Jun 2026).
   - Appendix B eq (32): the entropy drop H(f) - (H(f+)+H(f-))/2 when splitting x_m equals sum_S ((f+^2+f-^2)/2) h((f+-f-)^2/(2(f+^2+f-^2))), which is our E_i, plus sum ((f+^2+f-^2)/2)(1 - h(f+^2/(f+^2+f-^2))), which is our J_i.

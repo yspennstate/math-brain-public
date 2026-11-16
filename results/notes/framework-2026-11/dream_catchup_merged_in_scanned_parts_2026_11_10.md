@@ -9,8 +9,8 @@ metadata:
   evidence: ""
 ---
 
-How did the 86 dream commits stuck on the laptop since 21 Oct reach GitHub, and what almost went up with them?
-They are on main of brain-repo as merge commit 7d2359a02332 (10 Nov 2026 07:02 local; parents
+How did the 86 dream commits stuck on the workstation since 21 Oct reach GitHub, and what almost went up with them?
+They are on main of the private repository as merge commit 7d2359a02332 (10 Nov 2026 07:02 local; parents
 f5f56d70a9b1 = main at that moment, 274b521c5e48 = the catch-up). Verified afterwards by a separate fetch: main
 contains the merge and the catch-up, 7,770 paths came in, the side branch is deleted.
 
@@ -32,8 +32,8 @@ snapshots of two monthly prompt logs under sync_carried/, 195 MB. Six of them (1
 file in the same tree did not hold: the October copies were inside PROMPTS_2026-10.jsonl / .p01 / .p02, the older
 November copies inside the newest one. drop_held_carried.py proved that line by line and dropped them. One November
 copy stays (sync_carried/95f7037382/.../PROMPTS_2026-11.jsonl, 32.3 MB, 24,802 lines): main's own
-PROMPTS_2026-11.jsonl is another computer's 47 KB file and the laptop's live prompts/archive folder is gone, so that
-carried copy is the only place the laptop's November prompt log exists on GitHub.
+PROMPTS_2026-11.jsonl is another computer's 47 KB file and the workstation's live prompts/archive folder is gone, so that
+carried copy is the only place the workstation's November prompt log exists on GitHub.
 
 The rule that came out of it, now in dream_tree_replay.py (fixture test_replay_held.py, 18 checks): a .jsonl log is
 carried only when it has a line that no same-stem sibling and no carried copy holds, and an older carried copy goes

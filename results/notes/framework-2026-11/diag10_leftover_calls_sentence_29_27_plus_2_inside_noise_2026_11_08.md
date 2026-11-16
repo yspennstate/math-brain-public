@@ -21,6 +21,6 @@ How to apply: more reading is not the lever. The leftover misses are memories th
 
 Scar from the run: the leak marker bt2_arms/DIAG1 is a prefix of bt2_arms/DIAG10, so every DIAG10 run first read as a leak; mask the run's own folder before matching (leakcheck.py now does).
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG10_20261108 (results ef58c8be80). Related: [[diag9_mixed_each_plus_files_27_25_no_gain_over_best_single_tool_2026_11_08]], [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]], [[diag7_grep_32_recall_16_codex_17_15_agent_11_08]].
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG10_20261108 (results ef58c8be80). Related: [[diag9_mixed_each_plus_files_27_25_no_gain_over_best_single_tool_2026_11_08]], [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]], [[diag7_grep_32_recall_16_codex_17_15_agent_11_08]].
 
 Addendum (8 Nov 16:2x): in DIAG10 every recall call carried 7 or 8 questions because the prompt said 'up to 8'; Claude's 2 recall calls left items unasked (CTIME_REPLACE's memory was in no Claude run's context). DIAG11 lifted the cap to 24 and Claude still asked 14 to 18, so the cap was not the cause; see [[diag11_each_cap_24_claude_still_asks_15_codex_30_claude_29_2026_11_08]].

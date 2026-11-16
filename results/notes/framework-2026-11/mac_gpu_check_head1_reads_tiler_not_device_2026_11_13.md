@@ -1,6 +1,6 @@
 ---
 name: mac_gpu_check_head1_reads_tiler_not_device_2026_11_13
-description: "Mac mini GPU looks idle (0%)? The usual ioreg | head -1 check reads the Tiler counter; MLX compute shows only in Device Utilization %"
+description: "worker-machine GPU looks idle (0%)? The usual ioreg | head -1 check reads the Tiler counter; MLX compute shows only in Device Utilization %"
 metadata:
   type: project
   created: 2026-11-13
@@ -9,13 +9,13 @@ metadata:
   evidence: "mini2 13 Nov 01:5x: head -1 line 0 x20 while Device Utilization 100 with MLX job running"
 ---
 
-The Mac mini GPU check `ioreg -r -d 1 -w 0 -c IOAccelerator | grep -o "Utilization %\"=[0-9]*" | head -1` reads the
+The worker machine GPU check `ioreg -r -d 1 -w 0 -c IOAccelerator | grep -o "Utilization %\"=[0-9]*" | head -1` reads the
 TILER counter, because ioreg prints "Tiler Utilization %" first. Compute work (MLX Metal kernels) does not use the
 tiler, so a GPU running at full compute reads 0 on that line.
 
-Seen 13 Nov 2026 ~01:50 on Mac mini 2: my MLX excited-walk loop was running and the head -1 line read 0 twenty times in
+Seen 13 Nov 2026 ~01:50 on worker machine 2: my MLX excited-walk loop was running and the head -1 line read 0 twenty times in
 ten seconds, while the full counter list showed "Device Utilization %"=100, "Renderer Utilization %"=100,
-"Tiler Utilization %"=0. On Mac mini 1 the three counters happened to agree (96/96/98) because its jobs drive the tiler
+"Tiler Utilization %"=0. On worker machine 1 the three counters happened to agree (96/96/98) because its jobs drive the tiler
 too, which is why the wrong line went unnoticed for days. Earlier "mini2 GPU 0%" readings taken with head -1 may have
 been wrong in the same way; they cannot be re-checked now.
 

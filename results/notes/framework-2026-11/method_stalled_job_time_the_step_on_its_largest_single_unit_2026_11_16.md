@@ -37,7 +37,7 @@ Different agents, machines and languages, one day apart. Neither was found by th
 profiling after hours were lost. The method is what would have found them sooner.
 
 **Where it would not work.**
-- The time is waiting, not computing. On 16 Nov the laptop took 18 s wall to start a bare PowerShell at 0.41 s
+- The time is waiting, not computing. On 16 Nov the workstation took 18 s wall to start a bare PowerShell at 0.41 s
   CPU: a full run queue. Low CPU with long wall time is a queue or a disk, and no loop rewrite helps.
 - The cost is file opens. After the 15 Nov fix `known_secrets()` still took 580 s, put down to file reads on a
   slow disk.

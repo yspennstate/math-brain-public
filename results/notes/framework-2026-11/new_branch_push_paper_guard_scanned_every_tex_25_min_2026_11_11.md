@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-A push of a NEW branch to the brain repo (push_frontier.py and every agent that pushes claude-<id>-<topic> branches) sat 25+ minutes in the pre-push hook on 11 Nov 2026. The cost guard calls paper_release_guard.pre_push first. For a new branch (remote sha all zeros) it listed EVERY .tex in the tree - 8,320 in brain-repo - and, whenever repo_is_public could not get an answer from the anonymous GitHub API (403 rate limit, 60 calls an hour shared by every agent on the box, or a timeout), it treated the private repo as public and ran one `git show <sha>:<path>` per paper. On a box where one process start can take 30 s, that is the whole push window. The same push had taken 56 s an hour earlier.
+A push of a NEW branch to the brain repo (push_frontier.py and every agent that pushes claude-<id>-<topic> branches) sat 25+ minutes in the pre-push hook on 11 Nov 2026. The cost guard calls paper_release_guard.pre_push first. For a new branch (remote sha all zeros) it listed EVERY .tex in the tree - 8,320 in the private repository - and, whenever repo_is_public could not get an answer from the anonymous GitHub API (403 rate limit, 60 calls an hour shared by every agent on the box, or a timeout), it treated the private repo as public and ran one `git show <sha>:<path>` per paper. On a box where one process start can take 30 s, that is the whole push window. The same push had taken 56 s an hour earlier.
 
 Fixed 11 Nov 17:3x (an agent, claim file:~/.claude/dreaming/paper_release_guard.py, backup paper_release_guard.py.bak_20261111_newbranch):
 - a new branch is measured against its merge-base with origin/HEAD, origin/main or origin/master, then its first parent; the whole tree only when none exists;

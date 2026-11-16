@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-In Git Bash on this laptop (14 Nov 2026) grep -P refuses to run: 'grep: -P supports only unibyte and UTF-8 locales', exit code 2. Inside a check like grep -q -P "^$sha\t$path" remote.tsv && ok=... || echo MISMATCH, exit 2 reads the same as no match, so a verify loop reported 'verified 0 of 950' (push 257) and 'still to push 971 of 971' (push 261) while 480 of the files were on main. The push was fine; the check was blind.
+In Git Bash on this workstation (14 Nov 2026) grep -P refuses to run: 'grep: -P supports only unibyte and UTF-8 locales', exit code 2. Inside a check like grep -q -P "^$sha\t$path" remote.tsv && ok=... || echo MISMATCH, exit 2 reads the same as no match, so a verify loop reported 'verified 0 of 950' (push 257) and 'still to push 971 of 971' (push 261) while 480 of the files were on main. The push was fine; the check was blind.
 
 **Why:** a check that cannot run must not read as a failure of the thing checked (or, worse, as a pass); exit 2 from grep is an error, not a miss.
 

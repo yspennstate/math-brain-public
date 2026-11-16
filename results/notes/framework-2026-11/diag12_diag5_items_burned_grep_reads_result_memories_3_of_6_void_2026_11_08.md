@@ -17,7 +17,7 @@ On the 3 valid runs the comparison barely moved. Pooled and scaled to 3 runs, gr
 
 How to apply: before a file-reading arm runs on old items, run leakcheck on a dry grep of the symptoms, or give the arm a copy of the memory folder without the test's result memories. Better, write new items. Do not reuse DIAG5's items for grep or mixed arms.
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG12_20261108 (prereg 17574f282c, results 5db446712d). Related: [[diag11_each_cap_24_claude_still_asks_15_codex_30_claude_29_2026_11_08]], [[blind_test_key_leaks_via_verify_gate_turns_and_session_trees_2026_11_08]] (the same kind of leak through another folder).
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG12_20261108 (prereg 17574f282c, results 5db446712d). Related: [[diag11_each_cap_24_claude_still_asks_15_codex_30_claude_29_2026_11_08]], [[blind_test_key_leaks_via_verify_gate_turns_and_session_trees_2026_11_08]] (the same kind of leak through another folder).
 
 Check (16:3x): DIAG10 and DIAG11 Codex mixed runs did see result-memory slugs (6 of 12 Codex runs, 1 to 5 slugs each), but only as file names in rg --files listings; their content markers were clean, so those runs stand. The names carry scores, not plant labels or mechanisms. The leak needs a content read, which a recursive grep over symptom words gives.
 

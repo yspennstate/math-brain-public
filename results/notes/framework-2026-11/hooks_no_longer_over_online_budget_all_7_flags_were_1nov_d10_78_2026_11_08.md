@@ -9,7 +9,7 @@ metadata:
   evidence: "d10_78_hook_heavy_lint_2026_11_08.py on 13,938 profile dispatches; planted slow/fast PASS; p95 by day; pushed 765257e4e7 blob equal"
 ---
 
-Question: does any live hook on this Mac do work that belongs in the dream (D10 #78, the offline/online split lint)?
+Question: does any live hook on this worker machine do work that belongs in the dream (D10 #78, the offline/online split lint)?
 
 Not any more, measured 8 Nov 05:4x. d10_78_hook_heavy_lint_2026_11_08.py reads hook_dispatch's sampled per-hook timings (~/.claude/compute/hook_profile.jsonl, 13,938 dispatches, 1 to 8 Nov). It flags a hook whose p95 in one event is over an online budget, given at least 20 samples from at least 2 sessions. The budgets are 100 ms per tool hook (it runs on every tool call), 1 s per prompt or Stop hook (hook_dispatch's own SLOW_HOOK_S) and 5 s at SessionStart. Over the default window, the last 3 days, it flags nothing. Over all history it flags 7 hook-event pairs, and every one is a 1 Nov reading, the profile's first day:
 

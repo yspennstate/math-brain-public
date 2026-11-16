@@ -23,5 +23,5 @@ Re-reading the series on that scale:
 
 How to apply: write the close-call rulings down before reading the runmaps and reuse them across sittings, and quote 2 SD of about 4 plants (3 runs a side) as the noise band rather than the old 6-to-9 drift. More runs per arm narrow it: at 6 a side the band is about 2.8.
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG9_20261108/REGRADE_20261108.txt (7e85bc6bec). Related: [[diag11_each_cap_24_claude_still_asks_15_codex_30_claude_29_2026_11_08]], [[diag9_mixed_each_plus_files_27_25_no_gain_over_best_single_tool_2026_11_08]].
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG9_20261108/REGRADE_20261108.txt (7e85bc6bec). Related: [[diag11_each_cap_24_claude_still_asks_15_codex_30_claude_29_2026_11_08]], [[diag9_mixed_each_plus_files_27_25_no_gain_over_best_single_tool_2026_11_08]].
 

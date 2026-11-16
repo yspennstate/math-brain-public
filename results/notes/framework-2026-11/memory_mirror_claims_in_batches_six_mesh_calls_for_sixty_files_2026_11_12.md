@@ -30,7 +30,7 @@ Rollback: copy the backup over the file; nothing to restart. Evidence in
 `12_cognitive_architecture/brain_improvement/agent_run/mesh_lock/` (patch_mirror.py, patch_mirror.diff,
 test_mirror.py, test_mirror_live.txt).
 
-**How it was landed without its editor.** The request to an agent (msg-c971fe4412, 03:23) was never
+**How it was landed without its editor.** The request to an agent (a message, 03:23) was never
 delivered: that session has been offline since 10 Nov. Lesson for the next wait: before waiting on a peer's answer,
 look the peer up in the agents table; a wait on an offline session is a wait on nobody.
 

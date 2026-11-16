@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-On 11 Nov 11:09 laptop time the network dropped for a few minutes (claude -p died with "Can't reach the API server", ENOTFOUND). Three headless Opus arms of the seed-28 grand hunt died with it: the brain arm's session 1 had just opened station 19 but had not filed its handoff memory, the launcher then started session 2 anyway and it ran with no handoff (0 answered rows), and the bare arm's session 2 died after replaying stations 1-18.
+On 11 Nov 11:09 workstation time the network dropped for a few minutes (claude -p died with "Can't reach the API server", ENOTFOUND). Three headless Opus arms of the seed-28 grand hunt died with it: the brain arm's session 1 had just opened station 19 but had not filed its handoff memory, the launcher then started session 2 anyway and it ran with no handoff (0 answered rows), and the bare arm's session 2 died after replaying stations 1-18.
 
 The launcher (pilot_old_A.sh) chained session 2 after session 1 with no check, so a crashed session 1 silently became a "brain arm with nothing to carry" and its score looked like a brain failure.
 
@@ -21,5 +21,5 @@ Fix and rule:
 
 Check before trusting any arm score: the last line of each claude.log is rc=0, and the session has a REPORT.json. An rc=1 line with an ENOTFOUND in claude.err means the run is invalid, not a result.
 
-Scripts: scratchpad resume_A28.sh, resume_C28.sh (session an agent); launcher gate in pilot_old_A.sh lines 39-42.
+Scripts: scratch area resume_A28.sh, resume_C28.sh (session an agent); launcher gate in pilot_old_A.sh lines 39-42.
 

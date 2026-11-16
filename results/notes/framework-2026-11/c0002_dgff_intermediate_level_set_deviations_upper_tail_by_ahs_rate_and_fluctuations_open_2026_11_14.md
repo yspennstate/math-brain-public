@@ -44,6 +44,6 @@ so the shift by M is a constant factor and Z^lambda charges the open subsquare. 
 estimates; still unrefereed (referee read asked of an agent on the mesh, topic referee/C0002). a <= (1-eta)/2: upper open.
 
 Next if reopened: (1) DONE 14 Nov (lower bound, boundary exponent); (2) the matching upper bound via blocks and the Gibbs-Markov decomposition; (3) the fluctuation part
-needs second-order control of Z_N^lambda - Z^lambda and looks hard. Work files: scratchpad c0002/ of session agent
+needs second-order control of Z_N^lambda - Z^lambda and looks hard. Work files: scratch area c0002/ of session agent
 (notes.pdf, ahs.pdf). Related: [[p0254_af_balls_on_circle_tau2_theta_m3_for_k_le_cm_ours_partial_2026_11_14]],
 [[c0006_dgff_cluster_law_depth_growth_conj_16_6_open_2026_11_13]].

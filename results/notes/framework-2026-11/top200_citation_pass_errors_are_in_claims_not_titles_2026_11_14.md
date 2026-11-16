@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-14
   created_at: 2026-11-14T06:17:18+02:00
   status: verified
-  evidence: "Crossref and arXiv lookups 14 Nov (scratchpad look13/16/17/04/07/02.out); ledger VERIFY_RESOLVED_1114.tsv; pushes 182-187 verified on GitHub"
+  evidence: "Crossref and arXiv lookups 14 Nov (scratch look13/16/17/04/07/02.out); ledger VERIFY_RESOLVED_1114.tsv; pushes 182-187 verified on GitHub"
 ---
 
-The [verify] tags on the top-200 probability list (06_math_research/top200_probability_2026_10_14/src/rows_NN.py) were checked against Crossref and arXiv abstracts on 14 Nov 2026, rows_02 to rows_17. About 170 tags were resolved; about 80 remain, mostly content claims (who proved what, exact ranges) rather than bibliographic gaps. Ledger: top200_vet_agent_2026_11_11/VERIFY_RESOLVED_1114.tsv. Pushes 182-187 on brain-repo main.
+The [verify] tags on the top-200 probability list (06_math_research/top200_probability_2026_10_14/src/rows_NN.py) were checked against Crossref and arXiv abstracts on 14 Nov 2026, rows_02 to rows_17. About 170 tags were resolved; about 80 remain, mostly content claims (who proved what, exact ranges) rather than bibliographic gaps. Ledger: top200_vet_agent_2026_11_11/VERIFY_RESOLVED_1114.tsv. Pushes 182-187 on the private repository main.
 
 Most tags were correct citations that only lacked a journal and volume. The errors that turned up were in claims, not titles:
 - Heap-Radziwill-Soundararajan (Q. J. Math. 70, 2019) prove the sharp upper bound for 0 <= k <= 2; the row said 0 <= k <= 1.

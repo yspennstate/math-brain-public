@@ -9,7 +9,7 @@ metadata:
   evidence: "d10_44_ern_missed_failures_2026_11_08.py; ern_calibration.py --since-hours 48"
 ---
 
-Should every felt error go into the prediction ledger as a missed "no error expected" bet, as 1000-ways D10 #44 asks? No. ern_calibration.py already refuses that by design: outcomes.jsonl holds only the calls where the ERN fired, so the bets would add misses and never a hit. It measures against every tool call instead. The open part of D10 #44 is the measure itself, the felt error's coverage of real failures. Measured 8 Nov by an agent over 48 h on the Mac.
+Should every felt error go into the prediction ledger as a missed "no error expected" bet, as 1000-ways D10 #44 asks? No. ern_calibration.py already refuses that by design: outcomes.jsonl holds only the calls where the ERN fired, so the bets would add misses and never a hit. It measures against every tool call instead. The open part of D10 #44 is the measure itself, the felt error's coverage of real failures. Measured 8 Nov by an agent over 48 h on the worker machine.
 
 - Coverage is up from 0 of 280 on 30 Oct, when failed calls never reached the hook ([[the_felt_error_never_saw_a_failed_call_posttoolusefailure_2026_10_30]], wired that day), to 98 of 588 failed calls (17%). Precision is 0.22: 346 of 445 fires land on calls that worked. Every miss is a Bash call. Edit and Write failed 7 times each, with no fire, but those are tool refusals.
 - The 475 missed Bash failures: 467 match no ERN signature, 5 were held by the 120 s same-signature dedup and 3 are unexplained.

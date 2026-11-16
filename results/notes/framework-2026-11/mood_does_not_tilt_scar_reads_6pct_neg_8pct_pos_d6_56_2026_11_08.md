@@ -9,9 +9,9 @@ metadata:
   evidence: "d6_56_mood_vs_scar_reads_2026_11_08.py over 24 Mac sessions"
 ---
 
-Should a cautious or negative mood make recall surface scars first, as 1000-ways D6 #56 (mood-congruent recall tilt) asks? No premise for it on the Mac. No recall path reads mood today (brain.py, spread, fok_probe and instinct_prime never mention it). When the agent's own text mood runs negative, it does not reach for scars any more than usual. Measured 8 Nov by an agent.
+Should a cautious or negative mood make recall surface scars first, as 1000-ways D6 #56 (mood-congruent recall tilt) asks? No premise for it on the worker machine. No recall path reads mood today (brain.py, spread, fok_probe and instinct_prime never mention it). When the agent's own text mood runs negative, it does not reach for scars any more than usual. Measured 8 Nov by an agent.
 
-Mood is computed as in [[d6_97_agent_mood_adds_0p4pt_to_next_error_last_error_8x_no_mood_block_2026_11_08]] (salience FEAR/JOY hits, mean over the last 5 scored text blocks). A read is a Read of a memory file or brain.py node <slug>, and it counts as a scar when the description says Scar. 429 reads with a mood in the Mac transcripts (24 sessions; a 40-day window finds the same ones), 337 distinct memories:
+Mood is computed as in [[d6_97_agent_mood_adds_0p4pt_to_next_error_last_error_8x_no_mood_block_2026_11_08]] (salience FEAR/JOY hits, mean over the last 5 scored text blocks). A read is a Read of a memory file or brain.py node <slug>, and it counts as a scar when the description says Scar. 429 reads with a mood in the worker machine transcripts (24 sessions; a 40-day window finds the same ones), 337 distinct memories:
 - negative third: 9 of 143 scars (0.063 +- 0.020), 17 feedback
 - middle third: 11 of 140 (0.079 +- 0.023), 13 feedback
 - positive third: 12 of 146 (0.082 +- 0.023), 19 feedback

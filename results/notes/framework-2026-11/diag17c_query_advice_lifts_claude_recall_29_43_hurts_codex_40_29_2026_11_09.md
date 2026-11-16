@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T03:23:34+04:00
   status: provisional
-  evidence: "brain-repo brain_improvement/DIAG17_20261109 252219d878"
+  evidence: "the private repository, brain_improvement/DIAG17_20261109 252219d878"
 ---
 
 Does one paragraph of query advice make brain recall work better? For Claude yes, for Codex it hurt (DIAG17
@@ -34,7 +34,7 @@ shorter questions in the item's own words" is worth about 14 points of 66 here; 
 add nothing that spends calls. Caveats: 3 runs per arm, later time slot than the compared runs, run spread unmeasured.
 A registered rerun (more runs, both arms in one wave) would settle it.
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG17_20261109/ (252219d878;
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG17_20261109/ (252219d878;
 PREREG Addendum C bdb7b545d1). Items, key and rulings stay private.
 Related: [[diag17_fresh_draw_recall_beats_bare_loses_to_clean_grep_50_40_37_28_2026_11_09]],
 [[diag16_ten_calls_each_40_35_bare_4_9_of_66_2026_11_09]], [[symlead1_symptom_lines_lift_recall_replicated_2026_11_08]].

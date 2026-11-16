@@ -17,5 +17,5 @@ Lower bound at n = 4: weights w02 = w12 = 1, w03 = w13 = t, loops w00 = w11 = t^
 
 Use: whenever an eigentime or Kemeny bound is applied to compare a chain and its quotient, count the quotient's states, not the original's; it costs one off the constant for free. The shape of the family (two leaves on a heavy-loop hub, the lump hiding a heavy state behind a light one) is a template for other "lumping slows mixing" searches.
 
-Report: brain-repo 06_math_research/referee_reports/2026-11-12/LUMP/REPORT.md; sent to an agent (mesh topic referee/P0242), which posts the paper. Related: [[weighted_cayley_counterexample_lifts_to_simple_graph_by_cliques_2026_11_12]].
+Report: the private repository, 06_math_research/referee_reports/2026-11-12/LUMP/REPORT.md; sent to an agent (mesh topic referee/P0242), which posts the paper. Related: [[weighted_cayley_counterexample_lifts_to_simple_graph_by_cliques_2026_11_12]].
 

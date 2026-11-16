@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Second writing-brain A/B (WBAB2, 14 Nov 2026, an agent). Eight Codex writers (gpt-6.1-sol high, normal speed), four with the writing brain (practice warm-up, writing_recall, after_page, word_walk) and four without, three harder fiction tasks (death telegram at a dinner, sisters dividing the kitchen, a night nurse's last hour). Two blind Codex judges ranked all eight pages per task, letters reshuffled per judge per task, BOM stripped (C2's files carried one, a fingerprint), key kept in the session scratchpad only.
+Second writing-brain A/B (WBAB2, 14 Nov 2026, an agent). Eight Codex writers (gpt-6.1-sol high, normal speed), four with the writing brain (practice warm-up, writing_recall, after_page, word_walk) and four without, three harder fiction tasks (death telegram at a dinner, sisters dividing the kitchen, a night nurse's last hour). Two blind Codex judges ranked all eight pages per task, letters reshuffled per judge per task, BOM stripped (C2's files carried one, a fingerprint), key kept in the session scratch area only.
 
 Result, against the rule written before scoring (brain wins if one-sided Mann-Whitney p < 0.10 and no more misfit flags):
 - mean rank brain 5.08, control 3.92 (1 = best of 8); U = 96, p = 0.92 for "brain better". Brain does not win; the direction favours the controls.

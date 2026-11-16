@@ -11,7 +11,7 @@ metadata:
 
 **What happened.** At 06:21 on 13 Nov 2026 local main of the brain clone was reset to 7fb616b8b5f, a rebuilt copy of the 05:57 tip. Three commits made in the checkout while the dream's sync was running fell off main: 99fdc8fffa9, 22e2c8aab43, f4788ac6a2f. Their owners put the content back by hand (an agent in e419ad5027c, an agent in 1e975d27352). an agent also reported an edit to a tracked file, written at 06:20, as lost.
 
-**Cause.** `Sync-LocalMainToAdvertised` in `~/.claude/dreaming/dream_git_sync.ps1` read HEAD once, replayed the local commits onto the advertised main with `dream_tree_replay.py` (many minutes on this laptop), prepared the index, and then ran `git reset --keep` to the replayed head. A commit made after that first read was not in the replay, so the reset moved main past it. `--keep` refuses on a dirty incoming file but says nothing about commits.
+**Cause.** `Sync-LocalMainToAdvertised` in `~/.claude/dreaming/dream_git_sync.ps1` read HEAD once, replayed the local commits onto the advertised main with `dream_tree_replay.py` (many minutes on this workstation), prepared the index, and then ran `git reset --keep` to the replayed head. A commit made after that first read was not in the replay, so the reset moved main past it. `--keep` refuses on a dirty incoming file but says nothing about commits.
 
 **Fix, landed 13 Nov 07:21.**
 - `dream_tree_replay.py` takes `DREAM_REPLAY_SINCE` (a full commit id) and `DREAM_REPLAY_HEAD`, and replays only that range; without them it behaves as before.

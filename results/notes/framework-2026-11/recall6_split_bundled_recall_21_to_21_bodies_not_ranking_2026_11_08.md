@@ -21,6 +21,6 @@ So recall's ranking was not the bottleneck. The recall arm saw one description l
 
 Next: a recall that prints more of the top hits' bodies (cause and fix lines), scored on the DIAG5 items.
 
-Evidence: brain-repo 12_cognitive_architecture/brain_improvement/DIAG7_20261108/split (5cd868bbaa).
+Evidence: the private repository, 12_cognitive_architecture/brain_improvement/DIAG7_20261108/split (5cd868bbaa).
 
 Correction (15:48): the explanation above does not hold. Most of the recall arm's misses were plants it never asked about (sources beyond rank 60 for every question the run sent: 12 of 20 Codex, 20 of 21 Claude); the limit was questions per call. With recall --each the same arm named 26 and 29 of 36. See [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]].

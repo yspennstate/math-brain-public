@@ -9,7 +9,7 @@ metadata:
   evidence: "P0243 e311262: 4 of 6 lines mismatched the stored blobs; fixed 4acce9f; sums_from_git.py reports 0 mismatches at HEAD for P0032, P0033, P0243"
 ---
 
-SHA256SUMS.txt in a paper repo must list the hashes of the files as git stores them. On this laptop core.autocrlf is true, so a text file in the working copy (tex, py, lean, txt) has CRLF line endings while the stored blob has LF; hashing the working copy gives a hash nobody who clones on Linux or downloads from GitHub can reproduce.
+SHA256SUMS.txt in a paper repo must list the hashes of the files as git stores them. On this workstation core.autocrlf is true, so a text file in the working copy (tex, py, lean, txt) has CRLF line endings while the stored blob has LF; hashing the working copy gives a hash nobody who clones on Linux or downloads from GitHub can reproduce.
 
 What happened: on 12 Nov my helper sha256sums_update.py hashed working files. For P0243 (variation-threshold-stationary-times, commit e311262) four of six lines were wrong for about an hour; PDFs and files without line endings to convert were right, which is why a spot check on the PDF passed. Caught when the same script reported 5 of 6 lines changed on P0033 after I had edited only two files. Fixed in P0243 commit 4acce9f; P0033 went out correct (ae7926d).
 

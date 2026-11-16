@@ -9,7 +9,7 @@ metadata:
   evidence: "12_cognitive_architecture/brain_improvement/DIAG2_20261108 commit da9f4829ea; commitment 8554ea57ba"
 ---
 
-Does the brain still win at naming a past failure's cause when the log gives no clue, and does it make an agent reach for a scar that does not fit? Yes and no. DIAG2, 8 Nov, an agent. Measured on this Mac: 12 runs, 10 valid, blind-judged, commitment 8554ea57ba before any run. Results are in 12_cognitive_architecture/brain_improvement/DIAG2_20261108 (da9f4829ea).
+Does the brain still win at naming a past failure's cause when the log gives no clue, and does it make an agent reach for a scar that does not fit? Yes and no. DIAG2, 8 Nov, an agent. Measured on this worker machine: 12 runs, 10 valid, blind-judged, commitment 8554ea57ba before any run. Results are in 12_cognitive_architecture/brain_improvement/DIAG2_20261108 (da9f4829ea).
 
 Items: 12 plants (scar causes), 6 decoys and 6 controls. A decoy's symptom matches a scar, but its log shows an ordinary cause. Arms: Codex gpt-6.1-sol high and Claude opus-5-5 high, brain and bare, 3 runs each. Store: brain-graph-full-2026-11-07, 16,811,666 edges.
 

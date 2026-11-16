@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-11
   created_at: 2026-11-11T22:16:52+02:00
   status: verified
-  evidence: "scratchpad ck/runidx_test.py (0 mismatches of 543 on index lines and 63,147 names) and ck/warm_ab.py (80/80 identical through Warm().call, lookups 29-44 -> 24 / 2.4 ms); live md5 2d8588e29756"
+  evidence: "scratch area ck/runidx_test.py (0 mismatches of 543 on index lines and 63,147 names) and ck/warm_ab.py (80/80 identical through Warm().call, lookups 29-44 -> 24 / 2.4 ms); live md5 2d8588e29756"
 ---
 
 The spread server (spread_server.py, which answers spread_recall on every prompt) spent its largest self-time on 11 Nov in the run index's word search: each prompt word was found again in the whole run-vocabulary blob, 14,649 `bytes.find` calls over 30 warm calls, about 16 ms of a ~100 ms call, and 140-150 ms a prompt on the 63k memory names on the loaded box. A warm served call was 78 ms of CPU out of 103 ms wall (312 calls, 20:55-21:55), so the time is compute, not waiting.

@@ -10,7 +10,7 @@ metadata:
 
 Third writing-brain A/B (WBAB3, 14 Nov 2026, an agent), rules fixed before any page (WBAB3_PREREG.md, bb74cf84).
 Twelve Codex writers (gpt-6.1-sol high, normal speed), four per arm, three fiction tasks, four blind Codex judges each
-ranking all twelve pages of a task (1 best), key kept in the session scratchpad only.
+ranking all twelve pages of a task (1 best), key kept in the session scratch area only.
 
 - B- (brain without word_walk, after_page prints a stem-repeat count and the writer revises once above 4.0) vs no brain:
   mean rank 6.40 vs 5.73, one-sided p=0.69. No win.

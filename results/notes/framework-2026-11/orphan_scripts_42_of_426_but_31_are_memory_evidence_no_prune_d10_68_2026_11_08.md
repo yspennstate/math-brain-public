@@ -19,7 +19,7 @@ Of 426 top-level scripts:
 
 42 are none of these and older than 10 days, 250 KB in all. 31 of those 42 are cited by memories as their evidence: ascii_lint.py by 36, dream_unthrottle.py by 19, the rest mostly finished evals and tests. That count was taken twice, per file and by one grep -F over the memory folder. Deleting them would repeat [[memories_cited_34_mac_scripts_gone_16_rebuilt_from_transcripts_2026_11_08]]. The 11 uncited ones are under 100 KB and include working tools (remember_from_json.py, the literature_* pipeline).
 
-File age cannot carry this test on the Mac. Every script's mtime is 28 Oct or later, the day the port copied them in, so "not run in N days" has to come from the transcripts, not the file.
+File age cannot carry this test on the worker machine. Every script's mtime is 28 Oct or later, the day the port copied them in, so "not run in N days" has to come from the transcripts, not the file.
 
 Not built: nothing here costs disk or attention, and the main thing a prune list would flag is evidence. If the author wants a smaller folder, the safe set is the 11 uncited files, moved to an archive and never deleted.
 

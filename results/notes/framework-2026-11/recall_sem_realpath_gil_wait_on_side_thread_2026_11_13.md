@@ -17,9 +17,9 @@ Lesson that stands: before acting on a profile, check the same stage's arm in th
 
 Mechanism: the semantic lane runs on a side thread. realpath releases the interpreter lock for its syscall (_getfinalpathname), and getting the lock back waits while the main thread scores. Any lock-releasing call on that thread pays this price. The ~750 per-row os.stat calls paid it too: 9.3 s across 12 calls, falling to 0.67 s once the realpath waits were gone.
 
-Fix (13 Nov 2026, an agent): _real_mem_dir memoizes realpath per process per spelling. Commit bfa540cb on brain-repo main; the live file matches it byte for byte.
+Fix (13 Nov 2026, an agent): _real_mem_dir memoizes realpath per process per spelling. Commit bfa540cb on the private repository main; the live file matches it byte for byte.
 
-Measured with a server-shaped profile: build brain_recall_server.Brain() (all memos, resident listing, embeddings, link lists), make 6 warm calls, then cProfile 12 calls through b.call. Same questions before and after: stage:sem 1669 -> 225 ms, stage:total 3439 -> 2495 ms. Scripts: scratchpad server_prof.py and rp_server.py.
+Measured with a server-shaped profile: build brain_recall_server.Brain() (all memos, resident listing, embeddings, link lists), make 6 warm calls, then cProfile 12 calls through b.call. Same questions before and after: stage:sem 1669 -> 225 ms, stage:total 3439 -> 2495 ms. Scripts: scratch area server_prof.py and rp_server.py.
 
 Lessons:
 - A cold CLI profile, or a warm one without the server memos, points at the wrong lever. Profile through brain_recall_server.Brain.

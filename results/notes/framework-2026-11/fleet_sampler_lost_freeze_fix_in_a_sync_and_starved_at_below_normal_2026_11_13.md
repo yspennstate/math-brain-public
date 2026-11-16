@@ -9,7 +9,7 @@ metadata:
   evidence: "hourly.jsonl row 2026-11-13T02: 111 samples, 55 minutes, gpu_avg 65.1; rows T00 and T01: 1 and 9 samples, gpu null"
 ---
 
-The laptop showed STALE in the fleet resource table (the coordination board's hourly resource file)
+The workstation showed STALE in the fleet resource table (the coordination board's hourly resource file)
 from the 23:00 UTC row of 12 Nov, and its rows had a dash under GPU. Two causes, both fixed 13 Nov 03:57-04:05 by
 an agent under a standing request (rank 4 of the task list, resource reports).
 
@@ -32,12 +32,12 @@ by its exact name.
 
 Measured after the fix: the 02 UTC hour (04:00-05:00 local, 13 Nov) has 111 samples, 55 minutes covered, GPU average
 65.1, max 100. The two hours before had 1 sample / 0 minutes and 9 samples / 6 minutes, GPU empty.
-Not yet confirmed when this was written: the row on the board and the laptop leaving STALE in HOURLY.md (rewritten
-at :12 past by the Mac mini). The board's own copy tools/fleet_board/fleet_resources.py (365 lines, 8 Nov) is older
+Not yet confirmed when this was written: the row on the board and the workstation leaving STALE in HOURLY.md (rewritten
+at :12 past by the worker machine). The board's own copy tools/fleet_board/fleet_resources.py (365 lines, 8 Nov) is older
 than both halves and still to be replaced.
 
 How to apply: when one file is synced between a live folder and a mirror, diff both directions before overwriting; a
-newer date does not mean it holds every fix. A scheduled task on this laptop that must report on time runs at task
+newer date does not mean it holds every fix. A scheduled task on this workstation that must report on time runs at task
 priority 4, not the default 7. A thin hourly row (few samples, minutes_covered far under 60) or an empty GPU field
 is the sign.
 

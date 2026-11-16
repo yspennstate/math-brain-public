@@ -9,7 +9,7 @@ metadata:
   evidence: "d10_46_claims_after_failures_2026_11_08.py"
 ---
 
-Do the Mac's three outcome stores need merging into one bus, as 1000-ways D10 #46 asks, to stay consistent? No. Two of them already join on (session, time), and where they could contradict each other they do not. The bets are the only store that cannot be joined. Measured 8 Nov by an agent.
+Do the worker machine's three outcome stores need merging into one bus, as 1000-ways D10 #46 asks, to stay consistent? No. Two of them already join on (session, time), and where they could contradict each other they do not. The bets are the only store that cannot be joined. Measured 8 Nov by an agent.
 
 The stores:
 - outcomes.jsonl: 2,391 rows, every one a tool call with an error signature. It is a failure log, not a log of every outcome.

@@ -19,7 +19,7 @@ What was measured
 Reading
 The cards, page checks, practice and word walk act on words, sentences and detail. The ranking was decided one level up, in what happens between the people, and at that level every writer of a brief produced the same scene. A random walk on words varies the words of the same page.
 
-What was built from it (writing_brain/turn/, commits 120c4a19 and cf96838c on brain-repo)
+What was built from it (writing_brain/turn/, commits 120c4a19 and cf96838c on the private repository)
 - turn.py plan: five lines before a page (the page everyone writes, who they are, the turn, where it falls, what is left out) and a cutting pass.
 - turn.py draw: a random leaf of a tree of scene shapes (648 for two people) plus a five-step +-1 walk uniform over the paths that end one step from the start; the brief's fixed terms are never drawn. The author's 21:3x ask to use the probability work at writing.
 - turn.py commons: what several drafts of one brief share; evidence/commons_bank.json and evidence/judge_reasons.json.

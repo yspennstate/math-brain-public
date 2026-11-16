@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-12
   created_at: 2026-11-12T01:14:05+02:00
   status: verified
-  evidence: "work_agent/zen_gh/audit.json and match.txt (Zenodo deposition list and GitHub repo list read 12 Nov 00:5x-01:10 laptop; md5 of each PDF)"
+  evidence: "work_agent/zen_gh/audit.json and match.txt (Zenodo deposition list and GitHub repo list read 12 Nov 00:5x-01:10 workstation; md5 of each PDF)"
 ---
 
-Are all the GitHub papers on Zenodo? Checked 12 Nov 2026 about 01:10 laptop for a request to check that every GitHub paper is also on Zenodo.
+Are all the GitHub papers on Zenodo? Checked 12 Nov 2026 about 01:10 workstation for a request to check that every GitHub paper is also on Zenodo.
 
 **What was measured**
 - Zenodo account (authenticated deposition list): 138 records, all published. 114 each link to one paper repo under yspennstate; the other 24 are his earlier arXiv / ResearchGate papers and link only to the site.

@@ -11,7 +11,7 @@ metadata:
 
 The grand hunt is a sealed multi-station test of agentic qualities with no brain content in it, built 10 Nov 2026 on the author's 03:54 order (a request for long multi-step search tests of agentic skill). Status: generator, checker and controls pass; NO agent has been run on it yet, so it has no result about any model.
 
-Where: 12_cognitive_architecture/brain_improvement/upgrade_10h_2026_11_10/grand_hunt/ (gen_grand_hunt.py, grand_checker.py, test_grand_hunt.py, SPEC.md), on main of brain-repo (commits 8a66864c, f3d91aa9, 2008e842, 91f12b76).
+Where: 12_cognitive_architecture/brain_improvement/upgrade_10h_2026_11_10/grand_hunt/ (gen_grand_hunt.py, grand_checker.py, test_grand_hunt.py, SPEC.md), on main of the private repository (commits 8a66864c, f3d91aa9, 2008e842, 91f12b76).
 
 What it is: a folder the worker is left alone in - a vault of invented records (90 outposts, keepers, ledgers, memos, an inbox, event logs, sealed notes, tools) and 35 stations. Each station's file name and cipher key come from PBKDF2(station number, answer), so nothing ahead can be read. Fourteen station kinds: lookup, hop, compute, join, decode (depth); superseded, verify, rule, time, injection (traps that open a dead end with a token); state (needs an earlier answer); abstain (half the question has no answer); broken_tool (a retired tool that prints a wrong number); handoff (write the trail exactly). Scores 0..1: depth, verify, backtrack, honesty, injection, handoff, state, abstain, tool_care, economy; composite = 100 * raw / the largest raw the hunt allows, raw = depth*(30 + 10 backtrack + 10 honesty + 10 injection + 5 economy) + 15 verify + 5 each for handoff, state, abstain, tool_care.
 
@@ -26,7 +26,7 @@ and one crash: the pool of invented names ran dry on some seeds.
 
 Known limit: a worker that already knows the answers can rebuild a shorter log without its misses. That hides wasted calls and dead ends, not a failure to answer; run under a harness that keeps its own transcript where it matters.
 
-How to use: `python gen_grand_hunt.py --seed 7 --out runs --keys keys`, give the worker runs/<hunt>/ and START.md, never the keys folder, then `python grand_checker.py keys/<hunt>.json runs/<hunt>`. Fresh secret per scored agent; the same --seed and --secret for a paired comparison. First arms to run: model alone, model with the brain's hooks, model told to keep notes and audit itself - any gap is working method, not recall of our records. Ask an agent before a Codex run (it owns the laptop Codex ramp).
+How to use: `python gen_grand_hunt.py --seed 7 --out runs --keys keys`, give the worker runs/<hunt>/ and START.md, never the keys folder, then `python grand_checker.py keys/<hunt>.json runs/<hunt>`. Fresh secret per scored agent; the same --seed and --secret for a paired comparison. First arms to run: model alone, model with the brain's hooks, model told to keep notes and audit itself - any gap is working method, not recall of our records. Ask an agent before a Codex run (it owns the workstation Codex ramp).
 
 What would change this: a real agent run that finds a station with two defensible answers, or a way to score 100 without solving.
 

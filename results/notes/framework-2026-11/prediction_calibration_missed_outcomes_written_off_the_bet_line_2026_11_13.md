@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-14
   created_at: 2026-11-14T00:04:12+02:00
   status: verified
-  evidence: "commit 48b33cab; scratchpad pcc_diff.py (13 additions, nothing else moved)"
+  evidence: "commit 48b33cab; scratch area pcc_diff.py (13 additions, nothing else moved)"
 ---
 
 Found by an agent on 13 Nov 23:4x. The evening dream log printed 20 bets as RESOLVED BUT UNSCOREABLE, and one of the ids was "p=0.7". prediction_calibration_check.py read the outcome only from the checkbox line itself. But the ledger often writes resolutions elsewhere:

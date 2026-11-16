@@ -1,6 +1,6 @@
 ---
 name: gist_belownormal_starvation_on_a_saturated_box_2026_11_13
-description: "Gist (SWS 13 Nov 2026): six memories, one mechanism - a BelowNormal child on this saturated laptop is the last job the box runs; watchdogs, timeouts and wall-clock reads on it measure the run queue, not the work. Raise the child by PID or opt out of EcoQoS; never a timeout that kills a writer."
+description: "Gist (SWS 13 Nov 2026): six memories, one mechanism - a BelowNormal child on this saturated workstation is the last job the box runs; watchdogs, timeouts and wall-clock reads on it measure the run queue, not the work. Raise the child by PID or opt out of EcoQoS; never a timeout that kills a writer."
 metadata:
   type: project
 status: verified
@@ -10,7 +10,7 @@ tags: [gist, compute, belownormal, ecoqos, task-scheduler, starvation]
 Six memories from two windows (24-25 Sep, 12-13 Nov 2026) tell one story, and nobody had said it once.
 
 **The mechanism.** Task Scheduler, a VBS launcher and pythonw start the job at BelowNormal, and every child inherits
-the class. When the laptop's cores are full of Normal and AboveNormal work (the usual state now: about a thousand
+the class. When the workstation's cores are full of Normal and AboveNormal work (the usual state now: about a thousand
 processes, 82-87 pct CPU), a BelowNormal process gets a fraction of a percent of a core. It is not hung and not slow at
 its work; it is simply never scheduled. Everything built on top of it then lies:
 

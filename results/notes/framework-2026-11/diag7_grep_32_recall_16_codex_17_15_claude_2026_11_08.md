@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-08
   created_at: 2026-11-08T15:28:06+04:00
   status: verified
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/DIAG7_20261108 (prereg 9bca58d4da, results 052b4ca9e8)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/DIAG7_20261108 (prereg 9bca58d4da, results 052b4ca9e8)"
 ---
 
 Does recall or reading the memory files do the brain's work at 5 tool calls? On Codex the files, two to one; on Claude neither (8 Nov, DIAG7).
@@ -21,7 +21,7 @@ Why: Codex bundled two or three symptoms into each long recall question; Claude 
 
 Next: split a multi-topic recall question into one search per topic inside brain.py and score it on these items; tell agents to ask one symptom per recall.
 
-Rows and scripts: brain-repo 12_cognitive_architecture/brain_improvement/DIAG7_20261108 (last commit 052b4ca9e8). Follows [[diag6_five_calls_brain_27_12_bare_0_2026_11_08]]; harness fault in [[rules_appended_below_main_guard_unseen_by_script_run_2026_11_08]].
+Rows and scripts: the private repository, 12_cognitive_architecture/brain_improvement/DIAG7_20261108 (last commit 052b4ca9e8). Follows [[diag6_five_calls_brain_27_12_bare_0_2026_11_08]]; harness fault in [[rules_appended_below_main_guard_unseen_by_script_run_2026_11_08]].
 
 
 Correction (8 Nov 15:31, RECALL6): the bundling explanation above does not hold. Splitting the questions left the surfaced plant sources at 21 of 36 on Codex, more than Claude's 15. The gap is the recall arm seeing only description lines while the grep arm read bodies. See [[recall6_split_bundled_recall_21_to_21_bodies_not_ranking_2026_11_08]].

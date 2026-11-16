@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-﻿The compute governor died with the laptop's reboot at 16:33 on 10 Nov and stayed down 45 minutes; it is the third time (2 Nov crash, 31 Oct wedge) because both its scheduled tasks had been Disabled since 13 and 17 Sep and nothing started it at logon.
+﻿The compute governor died with the workstation's reboot at 16:33 on 10 Nov and stayed down 45 minutes; it is the third time (2 Nov crash, 31 Oct wedge) because both its scheduled tasks had been Disabled since 13 and 17 Sep and nothing started it at logon.
 
 Fixed 10 Nov 17:1x (an agent, claim topic:compute-governor):
 - relaunched via launch_compute_governor.vbs: one governor, pid 15088, state ok.

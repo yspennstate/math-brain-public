@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-What happened: On 7 Oct 02:43 the pasted diagnosis says every account probe timed out at 180 seconds on the loaded laptop, so Claude readings failed and displayed 0%. A 02:02 table showed 19 running claude2 workers while reporting 0% used; the actual allowance is not established by those failed probes.
+What happened: On 7 Oct 02:43 the pasted diagnosis says every account probe timed out at 180 seconds on the loaded workstation, so Claude readings failed and displayed 0%. A 02:02 table showed 19 running claude2 workers while reporting 0% used; the actual allowance is not established by those failed probes.
 
 Why it happened: The reporting path collapsed failed or unavailable readings into a numeric zero.
 

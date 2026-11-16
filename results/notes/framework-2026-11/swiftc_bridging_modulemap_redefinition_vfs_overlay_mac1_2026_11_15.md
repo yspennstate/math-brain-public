@@ -1,6 +1,6 @@
 ---
 name: swiftc_bridging_modulemap_redefinition_vfs_overlay_mac1_2026_11_15
-description: "[VERIFIED] swiftc on Mac mini 1 fails 'redefinition of module SwiftBridging'? The Command Line Tools ship two modulemaps for it; build with -vfsoverlay that maps bridging.modulemap to an empty file"
+description: "[VERIFIED] swiftc on worker machine 1 fails 'redefinition of module SwiftBridging'? The Command Line Tools ship two modulemaps for it; build with -vfsoverlay that maps bridging.modulemap to an empty file"
 metadata:
   node_type: memory
   status: verified
@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-15T12:04:10.985Z
 ---
 
-Measured on a Mac mini, 15 Nov 2026, building ust_metal.swift (Metal UST sampler for P0133).
+Measured on a worker machine, 15 Nov 2026, building ust_metal.swift (Metal UST sampler for P0133).
 
 - Symptom: `swiftc -O ust_metal.swift -o ust_metal` stops with
   `/Library/Developer/CommandLineTools/usr/include/swift/module.modulemap:13:8: error: redefinition of module 'SwiftBridging'`.

@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-On 15 Nov 2026 at 02:55-03:01 (laptop clock) the dream's git sync (`Sync-LocalMainToAdvertised` in
+On 15 Nov 2026 at 02:55-03:01 (workstation clock) the dream's git sync (`Sync-LocalMainToAdvertised` in
 `~/.claude/dreaming/dream_git_sync.ps1`) moved the shared brain clone from bc60e44 to ba56de8 over 7,789 incoming
 commits and deleted 3,055 local files. Five sessions lost working files; two files written during those six minutes
 lost bytes that were on no other machine (ab4_run.py, gpu_legs_r.py). It was not the GitHub offload tool: its ledger

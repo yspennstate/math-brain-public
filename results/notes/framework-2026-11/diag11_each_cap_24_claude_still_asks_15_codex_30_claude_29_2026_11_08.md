@@ -18,5 +18,5 @@ DIAG10's harness byte for byte, one word changed in the prompt (8 to 24). Store 
 
 How to apply: give agents one prompt, recall --each first and then file reads with the calls left; it comes within 2 plants of the better single tool on both runtimes. Do not spend more test rounds on the prompt; what is still missed (DEPTH_SHALLOW on Codex, CTIME_REPLACE and COPIED_SIDECAR on Claude) is in how the memories are worded.
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG11_20261108 (results ffa621b2c8). Related: [[diag10_leftover_calls_sentence_29_27_plus_2_inside_noise_2026_11_08]] (the cap guess it tests), [[diag9_mixed_each_plus_files_27_25_no_gain_over_best_single_tool_2026_11_08]], [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]].
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG11_20261108 (results ffa621b2c8). Related: [[diag10_leftover_calls_sentence_29_27_plus_2_inside_noise_2026_11_08]] (the cap guess it tests), [[diag9_mixed_each_plus_files_27_25_no_gain_over_best_single_tool_2026_11_08]], [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]].
 

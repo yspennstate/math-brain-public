@@ -11,7 +11,7 @@ metadata:
 
 Writing a section of a paper (abstract, the opening of the introduction, the paragraph that says what is proved, a theorem with its lead-in, the start of a proof, a definition, the idea of a proof in words, prior work, an open question)? The paper shelf shows how refereed papers did it and measures yours against them.
 
-  python -I -X utf8 ~/brain-repo/12_cognitive_architecture/writing_brain/papers/paper_moves.py show contribution "<subject>" --k 3
+  python -I -X utf8 ~/the private repository, 12_cognitive_architecture/writing_brain/papers/paper_moves.py show contribution "<subject>" --k 3
   python -I -X utf8 .../paper_moves.py check contribution <your paragraph file>
 
 Source: arXiv OAI-PMH (math.PR, math.CO, stat.ML, math.ST from 2016), kept only when the licence is CC BY, CC BY-SA or CC0 and there is a journal reference: 4,930 kept of 212,409 records listed (PR 1,224 of 50,084; CO 1,835 of 63,038; stat.ML 1,620 of 76,717; ST 251 of 22,570; every listing ran to its end). Sources fetched from arxiv.org/e-print at one request per 3.5 s (harvest_arxiv.py; data in ~/writing_brain_data/papers). cut_papers.py cuts each main .tex into the ten moves and leaves off any passage that would show LaTeX outside the maths (17 pct did before the cleaner learned \[ \], \( \), font switches, footnotes; now 0 of 2,661).

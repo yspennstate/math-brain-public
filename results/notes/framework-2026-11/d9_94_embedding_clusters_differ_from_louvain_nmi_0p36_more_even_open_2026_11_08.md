@@ -24,4 +24,4 @@ Find-the-memory test. Bank: the 56 user questions with gold memories (eval_brain
 
 So the embedding partition's advantage is smaller clusters, not better grouping. At an equal pool size it ties Louvain within seed noise, and 56 questions cannot separate them. Nothing in recall routes through clusters, so the only consumer would be the TOPICS view a person reads. That gain does not earn a rebuild. One thing is worth keeping: the 17.9% Louvain grab-bag is what lets centroid routing fail (6/56), so if TOPICS readability ever matters, splitting that one community is the cheaper fix. Related: [[community_super_nodes_equal_shuffled_hubs_d2_77_2026_11_03]] found Louvain community hubs added nothing to the walk over shuffled hubs.
 
-Scripts: d9_94_louvain_vs_embedding_clusters.py (premise) and d9_94_route_eval.py (routing test). BLAS matmul warnings on this Mac are noise.
+Scripts: d9_94_louvain_vs_embedding_clusters.py (premise) and d9_94_route_eval.py (routing test). BLAS matmul warnings on this worker machine are noise.

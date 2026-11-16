@@ -33,7 +33,7 @@ relaunch, move the stale REPORT.md and LOG.md out of the folder, or the fresh ru
 And when a test depends on a script, check that the script is on disk at each launch, not only when the test was
 built.
 
-Where the fix is. Second relauncher S/relaunch2.sh (this session's scratchpad; same id at most once in 25 minutes
+Where the fix is. Second relauncher S/relaunch2.sh (this session's scratch area; same id at most once in 25 minutes
 and three times in all, windowless through one VBS), state lister writers_state.py now counting pages, stale notes
 kept under failed_0300/. All six briefs were relaunched at 05:19.
 

@@ -12,7 +12,7 @@ metadata:
 R10, 16 November 2026: can a reader asked one question find the sentences where a narrator passes a verdict on
 what the page has just shown? Yes, by the registered bars (R10_PREREG.md, 8a42de1e), on both test texts.
 
-One gpt-6.1-sol run (high, Mac mini 1) per text, asked only for those sentences, scored against blind readers'
+One gpt-6.1-sol run (high, worker machine 1) per text, asked only for those sentences, scored against blind readers'
 ten-weakest lists (readers who were asked nothing about verdicts):
 
 - current chapter one (4 readings): 54 listed of 439 narrated sentences, 9 faulted. 17 pct against a base rate of

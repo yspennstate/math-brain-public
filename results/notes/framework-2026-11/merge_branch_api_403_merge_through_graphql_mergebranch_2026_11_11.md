@@ -13,9 +13,9 @@ When the GitHub REST quota for the account is spent, `merge_branch_api.py` canno
 
 The fix is GraphQL, which has its own hourly budget (about 5,000 points; one merge costs a few). `math-brain-build/local/ct_e431/gql_merge.py` reuses the token from `~/.claude/dreaming/merge_branch_api.py`, reads the branch head through GraphQL, refuses unless it equals the expected oid, and then calls `mergeBranch`:
 
-    python -s gql_merge.py yspennstate/brain-repo <branch> <full head oid> <message file>
+    python -s gql_merge.py the private repository <branch> <full head oid> <message file>
 
-Exit 0 means merged, 3 a conflict, 4 anything else. Take the mesh claim `git:brain-repo/main` first and gate the merge on it with `&&`.
+Exit 0 means merged, 3 a conflict, 4 anything else. Take the mesh claim `git:the private repository, main` first and gate the merge on it with `&&`.
 
 `gql_readback.py <files>` compares local files with `main:<folder>/<file>` through GraphQL. A DIFF whose byte gap equals the file's line count is CRLF on disk against LF in git (a builder written by Python in text mode on Windows), not a content change.
 

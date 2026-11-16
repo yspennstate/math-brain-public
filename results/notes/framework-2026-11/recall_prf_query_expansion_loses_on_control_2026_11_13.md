@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Pseudo-relevance feedback for brain.py recall (PRF 5,3,6: take the top 5 non-noise BM25 hits, keep terms found in at least 3 of their descriptions, append at most 6 new terms to the question) was tested end to end through the served CLI on 13 Nov 2026 (an agent, scratchpad prf_cli.py / prf_full.py, 498 rows, first 8 printed rows scored for gold).
+Pseudo-relevance feedback for brain.py recall (PRF 5,3,6: take the top 5 non-noise BM25 hits, keep terms found in at least 3 of their descriptions, append at most 6 new terms to the question) was tested end to end through the served CLI on 13 Nov 2026 (an agent, scratch area prf_cli.py / prf_full.py, 498 rows, first 8 printed rows scored for gold).
 
 Result: BVNB139 (gold = key reads) hit@8 32 -> 33 (won q010 q011 q071, lost q052 q084); the 28 Oct control (110 queries, gold = target) 82 -> 79 (won 0, lost 029 050 104). The ship bar was b139 up and the control flat. It fails it: net -2, and every control change is a loss.
 

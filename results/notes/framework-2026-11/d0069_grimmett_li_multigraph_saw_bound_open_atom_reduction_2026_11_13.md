@@ -16,7 +16,7 @@ each vertex with e = lambda/a external edges. If lambda = Delta, Menger plus com
 infinite SAWs, hence GL's condition Pi and the bound. So a counterexample needs a >= 2 and lambda < Delta; a = 2,
 e = 1 forces the bridge graph (equality). Open cases: a = 2 with e >= 2 (heavy edge m = Delta - e > e), and a >= 3.
 
-Numerics (weighted SAW counts by DFS, scratchpad d0069/saw_multi.py, line_pq.py; mu from sqrt(c_N/c_{N-2}), N 14-30).
+Numerics (weighted SAW counts by DFS, scratch area d0069/saw_multi.py, line_pq.py; mu from sqrt(c_N/c_{N-2}), N 14-30).
 Smallest ratio mu/sqrt(Delta-1) off the bridge graph: 1.147 (ladder Z x K2, rung 4, Delta 6); 28 pair-atom line
 graphs with e 2..6 all >= 1.147 and the ratio grows with e. Ladder with rung c satisfies mu^2 = mu + c exactly
 (transfer matrix), which clears the bound for e = 2. Triangle atoms on 3.12^2 with doubled edges: mu ~ 2.565 vs 2.
@@ -24,5 +24,5 @@ The D_inf x Z_2 scan with second-neighbour edges timed out at N = 18 (Python too
 
 How to apply: treat D0069 as open with a plausible yes. The next real step is a proof for a = 2, e >= 2 by a transfer
 argument (cross or skip each atom), which the ladder identity suggests; a counterexample, if any, needs few forward
-external edges per vertex and m close to e. Notes: scratchpad d0069/NOTES.md items 1-6 (move to the brain with the
+external edges per vertex and m close to e. Notes: scratch area d0069/NOTES.md items 1-6 (move to the brain with the
 problem folder when written up).

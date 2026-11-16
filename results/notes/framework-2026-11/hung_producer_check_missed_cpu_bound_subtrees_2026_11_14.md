@@ -13,4 +13,4 @@ slow_probe.hung_producers judged an orphaned producer only by the bytes its subt
 
 Of the six still counted that night, pid 38004 (run_bneg_shards.py) is a real dead waiter: it polls ipm-lowerbound/runlogs/fv_all.done every 30 s, its owner wrote fv_1415.done instead, and the 8 bneg v3 shards it would run were produced by another runner. Harmless if it ever wakes (each shard exists, it would skip). Not killed: no agent stops others' work (18 Sep law); reported.
 
-How to apply: before calling an orphan hung, measure subtree CPU over 20 s (scratchpad hung_cpu_check.py pattern), not just bytes. Ledger row an agent-20261114-hung-producer-cpu-aware. Related: [[slow_probe_named_a_never_started_process_a_hung_producer_2026_11_12]], [[compaction_sweep_reparsed_index_per_node_starved_holding_lock_2026_11_14]].
+How to apply: before calling an orphan hung, measure subtree CPU over 20 s (scratch hung_cpu_check.py pattern), not just bytes. Ledger row an agent-20261114-hung-producer-cpu-aware. Related: [[slow_probe_named_a_never_started_process_a_hung_producer_2026_11_12]], [[compaction_sweep_reparsed_index_per_node_starved_holding_lock_2026_11_14]].

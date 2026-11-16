@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-10
   created_at: 2026-11-10T00:04:59+04:00
   status: provisional
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/long1_2026_11_09/amendment11 (commit 2087b59e09)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/long1_2026_11_09/amendment11 (commit 2087b59e09)"
 ---
 
 Is one pytest pass of a test's hidden suite a grade? No. On 9 Nov 23:53 one pass over a Codex arm's repo failed 7
@@ -16,7 +16,7 @@ then failed 1 test on each of 4 more passes: in place twice, on a copy, and unde
 against 4, and the sign of the comparison flipped.
 
 The cause is not known. The failing pass used pytest's shared temp folder (pytest-of-<user>/pytest-N, the newest
-three kept, shared by every pytest run of this user on the Mac), and that folder had been rotated away before anyone
+three kept, shared by every pytest run of this user on the worker machine), and that folder had been rotated away before anyone
 looked, so its events log was gone. Keep the mechanism open; do not write it down as rotation or load until a probe
 shows it.
 

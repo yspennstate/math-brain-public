@@ -11,7 +11,7 @@ metadata:
   modified: 2026-11-12T20:07:26.508Z
 ---
 
-**What happened (12 Nov 2026, 22:04 laptop time, shared clone ~/brain-repo).**
+**What happened (12 Nov 2026, 22:04 workstation time, shared clone ~/the private repository).**
 A partial commit, `git commit -m ... -- <seven explicit paths>`, printed
 
     fatal: repository has been updated, but unable to write

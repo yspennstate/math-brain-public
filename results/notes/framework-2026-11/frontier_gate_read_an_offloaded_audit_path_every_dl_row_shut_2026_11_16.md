@@ -13,7 +13,7 @@ a month earlier.
 
 Cause. The gate and the board builder both named the auditor's output by an absolute path into a worker's scratch
 folder. When finished worker folders were moved into the repository (the rule that AI outputs live on GitHub, not on
-the laptop), the file moved to `audits/<auditor>_<date>/` inside the problem collection. The reader opened a missing
+the workstation), the file moved to `audits/<auditor>_<date>/` inside the problem collection. The reader opened a missing
 file, got nothing, and raised no error, so every row read as unaudited, and a board rebuild would have printed no
 auditor lines.
 

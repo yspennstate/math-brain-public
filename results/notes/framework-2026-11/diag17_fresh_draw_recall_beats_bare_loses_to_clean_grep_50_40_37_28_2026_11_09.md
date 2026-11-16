@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T03:08:09+04:00
   status: provisional
-  evidence: "brain-repo brain_improvement/DIAG17_20261109 b923489ea4"
+  evidence: "the private repository, brain_improvement/DIAG17_20261109 b923489ea4"
 ---
 
 Does brain recall beat no brain, and beat grep over the same memories, on a fresh draw? Beats no brain by a mile;
@@ -39,7 +39,7 @@ Two traps found on the way, worth keeping:
 
 Judging limits: one judge, who also drew the items; item rulings written before any runmap was opened (private file
 JUDGING_DIAG17.txt), marks hashed before unblinding. Items, key, sheets and rulings stay private.
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG17_20261109/ (b923489ea4).
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG17_20261109/ (b923489ea4).
 Related: [[diag16_ten_calls_each_40_35_bare_4_9_of_66_2026_11_09]], [[diag16b_five_calls_each_28_32_items_carry_lift_2026_11_09]],
 [[bvnb139_brain_recall_ties_grep_on_the_memory_a_session_needed_2026_11_08]], [[audit1_script_audit_brain_ties_bare_2026_11_09]].
 

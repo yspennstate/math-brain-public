@@ -20,7 +20,7 @@ What happened
   mirrored in math-brain-public under papers/public/posterior-cones-reconstruction and is the T067 paper of the
   31 Oct release papers/three-targets-2026-10-31.
 - Working the top-200 review I ranked "Formentin-Kulske Conjecture 2.13" as the closest row, found the 24 Oct proof
-  package in the brain, audited it, and wrote a new 10-page paper. Repo yspennstate/potts-reconstruction-galton-watson
+  package in the brain, audited it, and wrote a new 10-page paper. The repository is private
   was created 10:24, the paper pushed 10:53 (commit 49c84cf7), the overlap found at 11:03 when I opened the public
   math brain to add the entry, and the repo set private at 11:07 (anonymous ls-remote refused). The local clone
   ~/papers_top10/potts-reconstruction-galton-watson is kept.

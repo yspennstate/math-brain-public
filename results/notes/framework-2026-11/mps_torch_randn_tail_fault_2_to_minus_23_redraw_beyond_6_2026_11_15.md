@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-On an M-series Mac mini, `torch.randn` on the Apple GPU (MPS, float32) returns |z| > 7 about once in 2^23 draws.
+On an M-series worker-machine, `torch.randn` on the Apple GPU (MPS, float32) returns |z| > 7 about once in 2^23 draws.
 That is 23 values in 2e8 draws, the largest |z| = 14.37; a true Gaussian gives about 2.6e-12 per draw.
 A Monte Carlo built on it gets fake outliers.
 In the T248 iid control (Hermite-2 entries, N=500), λ_max came out near 43 in 1.5 pct of samples and near 22 in 5.9 pct at N=1000.

@@ -1,6 +1,6 @@
 ---
 name: clock_advisory_repairs_66pct_of_slips_rate_flat_103_left_in_records_2026_11_08
-description: "[VERIFIED] Does the clock-stamp advisory change anything on the Mac? Not the rate (20-96 fires a day, 29 Oct-8 Nov, no trend), but 286 of 436 real slips were repaired within 3 calls; into records 151 of 254, so 103 stayed wrong in ten days"
+description: "[VERIFIED] Does the clock-stamp advisory change anything on the worker machine? Not the rate (20-96 fires a day, 29 Oct-8 Nov, no trend), but 286 of 436 real slips were repaired within 3 calls; into records 151 of 254, so 103 stayed wrong in ten days"
 metadata:
   type: project
   created: 2026-11-08
@@ -9,7 +9,7 @@ metadata:
   evidence: "clock_advisory_follow_2026_11_08.py on 535 fires, 523 matched to their call; control finds the 05:53:20 W111 fire; 10+10 hand-checked samples"
 ---
 
-Does the clock-stamp advisory change anything on the Mac? It does not lower the rate of fast stamps, but it gets about two of every three repaired: of 436 real slips from 29 Oct to 8 Nov, 286 were fixed within the next three calls. Slips into records that stay (status lines, checklist notes, memories, mesh sends) were fixed 151 times of 254, so about 100 stayed wrong in ten days. Measured 8 Nov 2026 by an agent for the REM 2026-10-09 open question.
+Does the clock-stamp advisory change anything on the worker machine? It does not lower the rate of fast stamps, but it gets about two of every three repaired: of 436 real slips from 29 Oct to 8 Nov, 286 were fixed within the next three calls. Slips into records that stay (status lines, checklist notes, memories, mesh sends) were fixed 151 times of 254, so about 100 stayed wrong in ten days. Measured 8 Nov 2026 by an agent for the REM 2026-10-09 open question.
 
 How. clock_advisory_follow_2026_11_08.py reads every fire in ~/.claude/compute/clock_stamp_hook.log (535, 29 Oct to 8 Nov), finds the tool call it fired on in that session's transcript (the last call at or before the fire that carries the flagged stamp; 523 matched), and reads the next three calls. A fire counts as repaired when one of them edits or corrects that stamp (sed, old_string, "Correction", "should read"), or sends the same call again with the stamp gone. A fire is benign when the call it fired on is itself a sed or edit of the stamp (87 of 523). Control: it finds this session's own 05:53:20 fire on the W111 status line stamped 06:03.
 

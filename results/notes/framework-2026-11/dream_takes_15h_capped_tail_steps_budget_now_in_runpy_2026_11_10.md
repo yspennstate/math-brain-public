@@ -15,7 +15,7 @@ Why does a dream take 15 hours, and why are scheduled dreams skipped? Measured 1
 
 **Mechanism.** `run_dream.ps1` runs about sixty steps through `RunPy`, each with a 2700 s cap. The 6-hour tail budget (`TailOver`) was asked by one caller only (bm25). On a starved box each step runs to its cap in turn, the dream holds `dream.lock` for 15+ hours, and the next one or two scheduled starts exit on the lock.
 
-**Fix, live 10 Nov 08:00** (`run_dream.ps1` sha16 628153e0bedff0a9, backup `.bak_stepbudget_20261110`; harness of 16 checks built from the patched RunPy text itself, in the session scratchpad):
+**Fix, live 10 Nov 08:00** (`run_dream.ps1` sha16 628153e0bedff0a9, backup `.bak_stepbudget_20261110`; harness of 16 checks built from the patched RunPy text itself, in the session scratch area):
 1. past the 6-hour budget RunPy skips a step and names it (`TAIL BUDGET: ... skipping <step>`, exit 198), except `verify_mirror` and `hook_liveness`, which the persist and the wake need;
 2. after three capped steps in one dream, later steps get a short cap (1200 s; `DREAM_STEP_SHORT_CAP_S`), logged once as `STEP CAPS: three steps capped in this dream`;
 3. every step appends a row to `~/.claude/dreaming/dream_steps.jsonl` (stamp, step, seconds, exit, state ok / failed / capped / skipped_budget / skipped_stop / threw).

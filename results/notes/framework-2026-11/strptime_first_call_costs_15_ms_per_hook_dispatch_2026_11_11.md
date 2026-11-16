@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-The first time.strptime call in a Python process costs about 15 ms on this laptop (it imports _strptime, then
+The first time.strptime call in a Python process costs about 15 ms on this workstation (it imports _strptime, then
 calendar and locale, and builds a locale regex); later calls are cheap. A hook dispatch is a fresh process, so a
 hook that parses one timestamp with strptime pays those 15 ms on every tool call.
 

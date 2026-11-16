@@ -1,6 +1,6 @@
 ---
 name: no_fatigue_failures_fall_late_17_of_22_sessions_d10_5_2026_11_08
-description: "[VERIFIED] No (8 Nov): D10 #5 session fatigue has no premise on the Mac; calls fail less late in a session (17 of 22 sessions lower in the last fifth, p 0.005), ERN rate flat; the excess is the first 50 calls at 0.067 vs 0.025 later"
+description: "[VERIFIED] No (8 Nov): D10 #5 session fatigue has no premise on the worker machine; calls fail less late in a session (17 of 22 sessions lower in the last fifth, p 0.005), ERN rate flat; the excess is the first 50 calls at 0.067 vs 0.025 later"
 metadata:
   type: project
   created: 2026-11-08
@@ -9,7 +9,7 @@ metadata:
   evidence: "d10_5_fatigue_early_vs_late_2026_11_08.py over 24 sessions / 137,511 calls in 30 days; wall-clock halves agree 17 of 22"
 ---
 
-Do agents on the Mac tire late in a session, so that a fatigue counter should raise the verify bar, as 1000-ways D10 #5 asks? No. Calls fail less late in a session, not more, and the felt error fires at the same rate. This repeats [[no_session_fatigue_late_calls_fail_less_3p6_vs_1p9pct_d10_5_2026_10_31]] (31 Oct, 33,038 calls, late lower in 7 of 9 sessions) on four times the data, and agrees. Measured 8 Nov by an agent over every Mac transcript touched in 30 days: 24 sessions, 137,511 calls with a result. These are mostly long loop sessions (22 of them ran 300+ calls, up to 17,889), so this says nothing about short user sessions.
+Do agents on the worker machine tire late in a session, so that a fatigue counter should raise the verify bar, as 1000-ways D10 #5 asks? No. Calls fail less late in a session, not more, and the felt error fires at the same rate. This repeats [[no_session_fatigue_late_calls_fail_less_3p6_vs_1p9pct_d10_5_2026_10_31]] (31 Oct, 33,038 calls, late lower in 7 of 9 sessions) on four times the data, and agrees. Measured 8 Nov by an agent over every Mac transcript touched in 30 days: 24 sessions, 137,511 calls with a result. These are mostly long loop sessions (22 of them ran 300+ calls, up to 17,889), so this says nothing about short user sessions.
 
 - By the call index pooled across sessions, the first 50 calls fail at 0.067 and calls 50-200 at 0.035. From call 200 on the rate is flat at 0.023-0.032, through calls past 5,000. The felt error (ERN) fires on 0.015-0.024 of calls throughout.
 - Paired within each session (first fifth vs last fifth of its calls), the failure rate is lower late in 17 of 22 sessions and higher in 4 (sign test p 0.005). Bash alone gives the same split. ERN fires: 11 higher, 10 lower (p 0.83).

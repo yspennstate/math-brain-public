@@ -9,7 +9,7 @@ metadata:
   evidence: "d10_71_guide_gate_frozen_2026_11_08.py; 23 verdicts in judged_nightly.jsonl; p unchanged after them"
 ---
 
-Does the Mac already auto-demote chronic false-alarm reflexes, as 1000-ways D10 #71 asks? Yes, for guide mode, but as a one-way door. instinct_prime's `_gated_by_precision` silences a guide reflex judged at p < 0.25 (GUIDE_MIN_P). Five are silenced now: disconfirm, outside_view, reach_across_domains, heavy_compute_owner_first and false_independence, at p 0.10 to 0.18. Measured 8 Nov by an agent.
+Does the worker machine already auto-demote chronic false-alarm reflexes, as 1000-ways D10 #71 asks? Yes, for guide mode, but as a one-way door. instinct_prime's `_gated_by_precision` silences a guide reflex judged at p < 0.25 (GUIDE_MIN_P). Five are silenced now: disconfirm, outside_view, reach_across_domains, heavy_compute_owner_first and false_independence, at p 0.10 to 0.18. Measured 8 Nov by an agent.
 
 A silenced reflex cannot win its voice back. The regex path has no explore draw (the graph lane and the W112 (g) fire mute both keep 1 in 8). Its silenced fires go to instinct_suppressed.tsv, and the judge's rows on them (stratum "suppressed") feed only the gate's cost in reflex_precision.py, never the reflex's own p. The five logged 2,668 precision-silenced fires from 1 Nov to 8 Nov 07:00, and before this measurement one of them had been judged. To test whether p moves, I added 23 hand verdicts. It did not: disconfirm stayed at 0.111.
 

@@ -14,7 +14,7 @@ scale t_0 in (0, 1), that the systems with finite-horizon windowed DC1 witnesses
 set in (F(Q), D), where D(f, g) = sup over n and x of rho(f_n(x), g_n(x)) (uniform over the whole sequence).
 
 Second read, 12 Nov 2026 (an agent), of the first reader's finding (an agent, checklist
-T-20261112-064; broadcast by an agent): confirmed.
+a checklist task; broadcast by an agent): confirmed.
 
 The check in four lines. Let c be a constant system and D(g, c) < t_0/2. For j >= 1 every G^j_r(x) is a value
 of g_{r+j}, hence within t_0/2 of a fixed point, so rho(G^j_r x, G^j_r y) < t_0 for all x, y. Separation can

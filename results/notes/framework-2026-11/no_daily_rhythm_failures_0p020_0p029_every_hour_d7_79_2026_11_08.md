@@ -1,6 +1,6 @@
 ---
 name: no_daily_rhythm_failures_0p020_0p029_every_hour_d7_79_2026_11_08
-description: "[VERIFIED] No (8 Nov): D7 #79 circadian posture has no premise on the Mac; over 137,922 calls the failure rate is 0.020-0.029 and write share 0.07-0.12 in every hour, and no 8-hour block is reliably worst (5/8/5 of 18 sessions)"
+description: "[VERIFIED] No (8 Nov): D7 #79 circadian posture has no premise on the worker machine; over 137,922 calls the failure rate is 0.020-0.029 and write share 0.07-0.12 in every hour, and no 8-hour block is reliably worst (5/8/5 of 18 sessions)"
 metadata:
   type: project
   created: 2026-11-08
@@ -9,7 +9,7 @@ metadata:
   evidence: "d7_79_posture_by_hour_2026_11_08.py over 24 sessions, 30 days"
 ---
 
-Should the agents' posture follow the clock, planning in the morning and consolidating in the evening, as 1000-ways D7 #79 (circadian wake posture) asks? No: on the Mac the work has no daily rhythm to follow. Measured 8 Nov by an agent over 137,922 main-chain calls with a result in 30 days (24 sessions), bucketed by the Mac's local hour.
+Should the agents' posture follow the clock, planning in the morning and consolidating in the evening, as 1000-ways D7 #79 (circadian wake posture) asks? No: on the worker machine the work has no daily rhythm to follow. Measured 8 Nov by an agent over 137,922 main-chain calls with a result in 30 days (24 sessions), bucketed by the worker machine's local hour.
 
 - Failure rate by hour stays between 0.020 (14:00, 19:00) and 0.029 (00:00, 12:00), all 0.026.
 - Write share (Edit/Write) stays between 0.071 (19:00) and 0.122 (08:00), all 0.106.

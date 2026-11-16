@@ -18,7 +18,7 @@ Pool log says "governor check failed for claude2: No module named 'psutil'"? The
 **The fix (dream files only, the pool's files and policy untouched).**
 - `rem_arm_order.py` 90bc603ed551a8ed (was d7701dca5b6fba79): imports `_usersite` (the shim that re-adds the user site) before it loads the pool; prints `# governor: UNAVAILABLE ...` into the `rem arms:` lines of the dream log if the governor still fails open; selftest 21 checks, two of them live (psutil imports under `-s`; the live pool's governor answers).
 - `run_dream.ps1` efa218043cd1b7c6 (was 191eb02cd67d21ca): the pool launch is `python claude_pool.py exec auto`, no `-s`.
-Controls both ways in the scratchpad: without the shim file the selftest fails on the two live checks and the run prints the UNAVAILABLE line; with it 21 of 21 pass and the output is the same with and without `-s`. Backups `*.bak_govshim_20261110`.
+Controls both ways in the scratch area: without the shim file the selftest fails on the two live checks and the run prints the UNAVAILABLE line; with it 21 of 21 pass and the output is the same with and without `-s`. Backups `*.bak_govshim_20261110`.
 
 **What it leaves open.** Any other caller that starts `claude_pool.py` or imports it under `python -s` still fails open (none found in `~/.claude/dreaming` or the pool folder on 10 Nov). The durable fix is in the pool: a missing psutil should be a loud state there, not "allowed". Not mine to change; told on the mesh.
 

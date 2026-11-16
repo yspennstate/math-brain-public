@@ -6,11 +6,11 @@ metadata:
   type: project
   created: 2026-11-10
   status: verified
-  evidence: "scratchpad build_equal.py: live 613.7 s, table order 150.7 s, state sha 7339f7cf.. and heavy sha c70c5452.. equal; profile_build.py with the signals sidecar: 509 s wall, 96 s CPU, read_store 327 s wall / 15 s CPU"
+  evidence: "scratch area build_equal.py: live 613.7 s, table order 150.7 s, state sha 7339f7cf.. and heavy sha c70c5452.. equal; profile_build.py with the signals sidecar: 509 s wall, 96 s CPU, read_store 327 s wall / 15 s CPU"
   modified: 2026-11-10T20:56:27.898Z
 ---
 
-Measured 10 Nov 2026 22:20-22:51 laptop, an agent, on a backup-API snapshot of brain.sqlite3 (92,872 cards) with a copy of its brain.sqlite3.signals.sqlite sidecar.
+Measured 10 Nov 2026 22:20-22:51 workstation, an agent, on a backup-API snapshot of brain.sqlite3 (92,872 cards) with a copy of its brain.sqlite3.signals.sqlite sidecar.
 
 Where the build's time goes: 509 s wall, 96 s CPU. read_store took 327 s wall and 15 s CPU, prefetch_signals 52 s wall and 13 s CPU, and _card_terms 30 s wall and 18 s CPU. Everything else is small. The build waits on the disk; it does not compute. This happened on a contended box: run queue 194, disk 154% busy, about 7,000 hard page-ins a second.
 

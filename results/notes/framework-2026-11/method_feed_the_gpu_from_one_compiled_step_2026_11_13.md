@@ -20,7 +20,7 @@ number of slots or the queue first - measure the HOST cost of one step (user+sys
 step's dozen small framework calls into a single compiled or precomputed unit so the device is fed from one dispatch
 instead of twelve.
 
-**Where it worked, with the number.** Mac mini 1, 13 Nov 2026, MLX TASEP sweep: wrapping one full step in
+**Where it worked, with the number.** worker machine 1, 13 Nov 2026, MLX TASEP sweep: wrapping one full step in
 `mx.compile` - `state = [mx.random.state]`, `@partial(mx.compile, inputs=state, outputs=state)`, and `mx.eval` every few
 hundred steps rather than every step - cut user+sys from 1.71 s to 0.80 s per step with byte-identical output
 (`agent_run/gpu_d0025/tasep_flux_c.py`). Same day, Mac 2, torch MPS vol-pair engine: one host-built mask copied to

@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T05:12:46+04:00
   status: provisional
-  evidence: "brain-repo 33ad52d1de 12_cognitive_architecture/brain_improvement/DIAG19_20261109"
+  evidence: "the private repository 33ad52d1de 12_cognitive_architecture/brain_improvement/DIAG19_20261109"
 ---
 
 Question: does the number of questions an agent asks the brain drive the brain arm's score?

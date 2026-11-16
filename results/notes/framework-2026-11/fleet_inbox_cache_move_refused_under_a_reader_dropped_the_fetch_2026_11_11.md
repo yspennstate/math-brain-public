@@ -9,7 +9,7 @@ metadata:
   evidence: "brain_improvement/agent_run/fleet_cache_swap/patch_fleet_board_swap.py, test_fleet_board_swap.py; ledger_rows_20261111_i.jsonl"
 ---
 
-`fleet_board.py` keeps the fleet inbox in `~/.claude/fleet_board/inbox_cache.json`, which every session on the laptop reads at every prompt. Its refresh wrote `inbox_cache.json.<pid>` and moved it over the copy with one bare `os.replace`. On Windows that move is refused (PermissionError) while another session has the copy open. The error went up out of `_refresh`, so an inbox that had just been fetched was dropped for that prompt, and the temp file stayed: eleven of them between 30 Oct and 8 Nov.
+`fleet_board.py` keeps the fleet inbox in `~/.claude/fleet_board/inbox_cache.json`, which every session on the workstation reads at every prompt. Its refresh wrote `inbox_cache.json.<pid>` and moved it over the copy with one bare `os.replace`. On Windows that move is refused (PermissionError) while another session has the copy open. The error went up out of `_refresh`, so an inbox that had just been fetched was dropped for that prompt, and the temp file stayed: eleven of them between 30 Oct and 8 Nov.
 
 Since 11 Nov 04:27 the four cache writers (inbox copy, page cache, the per-agent seen list, the resurfaced list) use one step, `_swap(tmp, dst, wait_s=1.5)`: the move is tried again while the reader holds the file (1.5 s; 3 s for the per-agent lists), it never raises, and it removes its temp when it gives up. `_refresh` returns the text it fetched whether or not the copy could be written.
 
@@ -19,5 +19,5 @@ Measured (`brain_improvement/agent_run/fleet_cache_swap/test_fleet_board_swap.py
 
 Not covered: what the hook did with the exception on each of the eleven days was not read from a log. The Macs' copies are unchanged (a move over an open file succeeds there).
 
-Same fault, same day, in the math index build: [[math_prefilter_publish_waits_out_a_reader_2026_11_11]]. The shape to look for anywhere on this laptop: a file many processes read, published by one bare `os.replace`. A leftover `<name>.<pid>` or `<name>.tmp` beside a cache file is the trace it leaves.
+Same fault, same day, in the math index build: [[math_prefilter_publish_waits_out_a_reader_2026_11_11]]. The shape to look for anywhere on this workstation: a file many processes read, published by one bare `os.replace`. A leftover `<name>.<pid>` or `<name>.tmp` beside a cache file is the trace it leaves.
 

@@ -21,7 +21,7 @@ Validity: 12 of 12 valid; eachhi asked 64-80 questions; leak check clean; deny c
 
 How to apply: do not quote DIAG16's Codex +11.5 as a settled join gain; quote +5.5 / +7.3. A three-run cell result near the bar needs six runs before it goes in a memory as a finding.
 
-Results: brain-repo 12_cognitive_architecture/brain_improvement/DIAG26_20261109 (7618031105; PREREG d2ea9d61ef).
+Results: the private repository, 12_cognitive_architecture/brain_improvement/DIAG26_20261109 (7618031105; PREREG d2ea9d61ef).
 
 Related: [[diag16_ten_calls_each_40_35_bare_4_9_of_66_2026_11_09]] (the three-run +11.5 this revises for Codex), [[diag24_codex_brain_ties_grep_six_runs_0p5_pooled_2p7_of_72_2026_11_09]] (single-memory Codex tie; its closing advice to try join items is answered here), [[diag25_claude_brain_beats_grep_six_runs_18p5_pooled_17_of_72_2026_11_09]] (the Claude side), [[diag23_hashed_names_cost_grep_nothing_claude_26_28_codex_42_41_of_72_2026_11_09]].
 

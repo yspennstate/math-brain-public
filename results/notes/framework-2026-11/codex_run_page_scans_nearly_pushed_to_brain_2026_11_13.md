@@ -9,7 +9,7 @@ metadata:
   evidence: "arch_d0037a.log staged 7 page-*.png; push killed before commit; archive_run.sh excludes added"
 ---
 
-Codex open-problem runs on Mac mini 1 sometimes rasterise the papers they read into page images under data/ (D0037A, 13 Nov:
+Codex open-problem runs on worker machine 1 sometimes rasterise the papers they read into page images under data/ (D0037A, 13 Nov:
 data/helson_sarason/page-06..12.png, scans of the Helson-Sarason paper). archive_run.sh excluded sources/, literature/ and *.pdf
 but not page images, so the archive staged 7 copyrighted page scans for a brain push. Caught in the staged-file list before the
 commit (the push was killed by PID before its "pushed" line; the scans never reached GitHub), deleted locally, re-pushed without.

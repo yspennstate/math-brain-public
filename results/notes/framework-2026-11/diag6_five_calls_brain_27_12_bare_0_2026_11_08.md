@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-08
   created_at: 2026-11-08T15:07:07+04:00
   status: verified
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/DIAG6_20261108 (prereg 2ebe81f8bd, results 335d29a831)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/DIAG6_20261108 (prereg 2ebe81f8bd, results 335d29a831)"
 ---
 
 Does the brain still lead when an arm gets only 5 tool calls of any kind (search capped as well as recall)? Yes (8 Nov, DIAG6).
@@ -22,5 +22,5 @@ Against DIAG5: Codex 20 to 27, Claude 17 to 12. Claude spent 3 of its 5 calls on
 
 Lesson: at a 5-call budget, grep over the memory folder found more planted causes than three recall calls did. That is a recall result at small budgets, worth a test of its own (recall-only arm against grep-only arm, same budget). Next leak marker: the anchor's FIRE WHEN sentence, not the compaction node name.
 
-Rows and scripts: brain-repo 12_cognitive_architecture/brain_improvement/DIAG6_20261108 (results in 4 commits, the last 335d29a831). Follows [[diag5_capped_recall_brain_20_17_bare_0_2026_11_08]].
+Rows and scripts: the private repository, 12_cognitive_architecture/brain_improvement/DIAG6_20261108 (results in 4 commits, the last 335d29a831). Follows [[diag5_capped_recall_brain_20_17_bare_0_2026_11_08]].
 

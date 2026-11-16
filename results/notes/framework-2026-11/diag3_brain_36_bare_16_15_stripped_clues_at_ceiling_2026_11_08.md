@@ -9,7 +9,7 @@ metadata:
   evidence: "brain_improvement/DIAG3_20261108 951afc9523; commitment 740f6325c0"
 ---
 
-Does the brain still win at naming a past failure's cause when a second reader has stripped the clues from the logs? Yes. DIAG3, 8 Nov, an agent. Measured on this Mac: 12 runs, 11 valid, judged blind, commitment 740f6325c0 pushed before any run. Results are in 12_cognitive_architecture/brain_improvement/DIAG3_20261108 (951afc9523).
+Does the brain still win at naming a past failure's cause when a second reader has stripped the clues from the logs? Yes. DIAG3, 8 Nov, an agent. Measured on this worker machine: 12 runs, 11 valid, judged blind, commitment 740f6325c0 pushed before any run. Results are in 12_cognitive_architecture/brain_improvement/DIAG3_20261108 (951afc9523).
 
 Items: 12 plants (scar causes), 6 decoys and 6 controls. Before the items were frozen, a Codex reader (gpt-6.1-sol high, not an arm) went through each with its cause. It found clues in 11 of my 12 plants and 2 of 6 decoys, and all 13 were rewritten. Arms: Codex gpt-6.1-sol high and Claude opus-5-5 high, brain and bare, 3 runs each, 20 commands. Store: brain-graph-full-2026-11-07, 16,811,666 edges.
 

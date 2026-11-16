@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-On 12 Nov 2026 a research-repo push sat for hours in the pre-push secret gate (~/.claude/dreaming/prepush_secret_gate.py) on this laptop. Three faults, all fixed and pushed (brain 03e94d2b, test_prepush_new_ref.py 10/10 after each):
+On 12 Nov 2026 a research-repo push sat for hours in the pre-push secret gate (~/.claude/dreaming/prepush_secret_gate.py) on this workstation. Three faults, all fixed and pushed (brain 03e94d2b, test_prepush_new_ref.py 10/10 after each):
 1. Lazy fetch. research-repo is a partial clone (blob:none). The gate's cat-file and rev-list ran without --no-lazy-fetch, so an id the clone lacked was downloaded with its history: one push pulled a 452,792-object pack and sat 40 min. Every git object lookup in a hook on a partial clone needs --no-lazy-fetch.
 2. Silent refusal. Under CREATE_NO_WINDOW the scanner's output was lost and a refusal said only "exit 2". The gate now captures and prints it.
 3. Far base. When the remote tip had moved since the last fetch, the gate searched other branch tips for a base and picked one 14,074 commits back, so scan_secrets.py hit its 180 s git timeout on every try. The gate now fetches the missing tip first.

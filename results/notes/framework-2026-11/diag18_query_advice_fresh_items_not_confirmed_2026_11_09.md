@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T04:08:24+04:00
   status: provisional
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/DIAG18_20261109 (08fff47eed)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/DIAG18_20261109 (08fff47eed)"
 ---
 
 Does the query-advice paragraph (DIAG17 Addendum C) hold on items nobody had seen? Same direction, half the size, not confirmed (DIAG18, 9 Nov, pre-registered, N = 9 plants + 6 controls, bar 9 points).
@@ -25,7 +25,7 @@ Validity: 22 of 24 valid, leakcheck clean on all 24. Voids: Codex eachkw run 2 r
 
 **Why:** the advice was written after seeing DIAG17's runs; this was the check before anyone puts it into recall's prompt or the hooks.
 
-**How to apply:** do not add the paragraph to a shared prompt that both runtimes read. If it goes anywhere, it goes into Claude-only recall guidance, and a larger run (5+ runs per cell) should size the effect first. Brain recall beats no brain on every fresh draw so far; it does not beat a clean grep copy without the advice. Follows [[diag17c_query_advice_lifts_claude_recall_29_43_hurts_codex_40_29_2026_11_09]] and [[diag17_fresh_draw_recall_beats_bare_loses_to_clean_grep_50_40_37_28_2026_11_09]]; the index drift is [[recall_refresh_0_does_not_freeze_index_2026_11_09]]. Rows and scripts: brain-repo 12_cognitive_architecture/brain_improvement/DIAG18_20261109/ (prereg e2472268a5, 97ee64e6b3; results 08fff47eed).
+**How to apply:** do not add the paragraph to a shared prompt that both runtimes read. If it goes anywhere, it goes into Claude-only recall guidance, and a larger run (5+ runs per cell) should size the effect first. Brain recall beats no brain on every fresh draw so far; it does not beat a clean grep copy without the advice. Follows [[diag17c_query_advice_lifts_claude_recall_29_43_hurts_codex_40_29_2026_11_09]] and [[diag17_fresh_draw_recall_beats_bare_loses_to_clean_grep_50_40_37_28_2026_11_09]]; the index drift is [[recall_refresh_0_does_not_freeze_index_2026_11_09]]. Rows and scripts: the private repository, 12_cognitive_architecture/brain_improvement/DIAG18_20261109/ (prereg e2472268a5, 97ee64e6b3; results 08fff47eed).
 
 
 Follow-up 9 Nov 04:5x: DIAG18B (runs 4-6) put the Claude difference at +0.0 and Codex at +1.5 of 54; pooled six runs +8.0 and +9.6 of 108, bar 18. Not confirmed: [[diag18b_query_advice_six_runs_not_confirmed_2026_11_09]].

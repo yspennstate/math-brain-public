@@ -19,7 +19,7 @@ Validity: 12 of 12 runs valid; eachhi asked 56 to 72 questions (compliant); leak
 
 How to apply: when quoting a brain-vs-grep result, name the runtime. For Claude agents the recall arm is worth it on diagnosis items like these; for Codex, test items where in-file search cannot reach the answer before claiming a gain.
 
-Results: brain-repo 12_cognitive_architecture/brain_improvement/DIAG25_20261109 (0055e30ef6; PREREG d3c2a235d5).
+Results: the private repository, 12_cognitive_architecture/brain_improvement/DIAG25_20261109 (0055e30ef6; PREREG d3c2a235d5).
 
 Related: [[diag24_codex_brain_ties_grep_six_runs_0p5_pooled_2p7_of_72_2026_11_09]] (the Codex twin of this run), [[diag21_brain_48q_beats_grep_claude_13_codex_ties_1_of_72_2026_11_09]] (first Claude +13), [[diag22_grep_name_listing_not_claudes_gap_brain_beats_grepls_10_and_19_2026_11_09]] (the rows pooled here), [[diag23_hashed_names_cost_grep_nothing_claude_26_28_codex_42_41_of_72_2026_11_09]] (grep's score does not come from file names), [[pgrep_guard_matched_own_launch_shell_and_grep_v_grep_hid_grep_arm_2026_11_09]] (two traps hit launching this run).
 

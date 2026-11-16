@@ -9,7 +9,7 @@ metadata:
   evidence: "d9_88_name_only_recall_2026_11_08.py, 30 memories seed 88"
 ---
 
-Would a name-only recall condition make a standing naming-quality metric, as 1000-ways D9 #88 asks? No. A memory's own name finds it almost every time, so the score sits at its ceiling and cannot tell a good name from a bad one. Measured 8 Nov by an agent on 30 memories sampled from the Mac folder (seed 88, compactions excluded), through brain.py recall at top 10.
+Would a name-only recall condition make a standing naming-quality metric, as 1000-ways D9 #88 asks? No. A memory's own name finds it almost every time, so the score sits at its ceiling and cannot tell a good name from a bad one. Measured 8 Nov by an agent on 30 memories sampled from the worker machine folder (seed 88, compactions excluded), through brain.py recall at top 10.
 
 - The whole name as words (date dropped): rank 1 for 29 of 30.
 - The first half of the words only: rank 1 for 25 of 30, top 10 for 28.

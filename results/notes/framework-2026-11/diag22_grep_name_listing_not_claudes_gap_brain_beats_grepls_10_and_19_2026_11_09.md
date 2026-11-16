@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T07:10:12+04:00
   status: provisional
-  evidence: "brain-repo b1ec45f9a9 DIAG22_20261109/score22.txt"
+  evidence: "the private repository b1ec45f9a9 DIAG22_20261109/score22.txt"
 ---
 
-No (DIAG22, 9 Nov 2026, pushed b1ec45f9a9 to brain-repo 12_cognitive_architecture/brain_improvement/DIAG22_20261109; prereg ce3c82236a).
+No (DIAG22, 9 Nov 2026, pushed b1ec45f9a9 to the private repository, 12_cognitive_architecture/brain_improvement/DIAG22_20261109; prereg ce3c82236a).
 
 Telling Claude's grep arm to list every file name first moved it 23 -> 27 of 72 (+4, inside the bar of 9); the brain arm (eachhi, 48+ questions) still beat it 37 to 27 (+10, items 5 up / 1 down / 6 tied). On Codex the same sentence hurt: grepls 30 against plain grep 42 (-12, 2 up / 6 down), although Codex's plain grep already listed every name in 3 of 3 runs. Brain vs grepls: Codex 49 to 30 (+19, 9/0/3). Brain vs plain grep replicated DIAG21: Claude +14 (was +13), Codex +7 (was +1, still inside the bar).
 

@@ -14,7 +14,7 @@ metadata:
 
 Instrument: d4_99_losing_streak_2026_11_08.py.
 
-- Calls are the main-chain tool calls of the Mac's Claude transcripts, read through ern_calibration.calls; the error flag is is_error.
+- Calls are the main-chain tool calls of the worker machine's Claude transcripts, read through ern_calibration.calls; the error flag is is_error.
 - Each call gets P(error | k errors in the previous W calls of the same session).
 - Control: each session's error flags shuffled 200 times. This keeps every session's own rate and breaks the order, so a difference between sessions cannot pass for a streak.
 

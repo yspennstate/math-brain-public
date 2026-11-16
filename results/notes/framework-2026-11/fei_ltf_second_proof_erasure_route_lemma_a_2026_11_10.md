@@ -15,7 +15,7 @@ functions (10 Nov 2026, session an agent). It is a SECOND proof: the class was a
 and the October preprint is cited at 8.937. Nothing here is a new class. What is new is the route and two tools.
 
 The route (FLOW.md section 11 in 06_math_research/fei_solve_2026_11_09, commit fc812efd1328 of
-brain-repo):
+the private repository):
 1. f = sgn(w.x - theta), restrict the coordinate of largest weight w_1. With s = w'.y - theta and the slab
    S = {|s| < w_1}: D_1 f = 1_S, E_1 f = sgn(s) 1_{S^c}, Inf_1 = P[S] = delta.
 2. Level witness: E_1 <= sum_k Phi(A_k, B_k), A_k, B_k the level weights of E_1 f and 1_S.

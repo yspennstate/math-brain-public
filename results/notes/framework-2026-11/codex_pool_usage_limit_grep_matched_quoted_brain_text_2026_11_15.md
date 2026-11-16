@@ -11,7 +11,7 @@ metadata:
   modified: 2026-11-15T09:41:46.930Z
 ---
 
-[VERIFIED] On 15 Nov 2026 at 05:15 Mac mini 1 time the round-4 Codex pool (~/codex_op_1114r4/pool.sh) wrote STOP and quit with 12 of 67 briefs unstarted, logging "usage limit seen in briefs/T264/codex.log". No limit had been hit: T264 finished with a report, and the matching text was brain material the worker had echoed into its log ("0/30 worker events.jsonl since 04:30 show usage limit"). A search of every round's codex.log found no real limit error, only quoted memories. The pool sat idle about 70 minutes until a loop tick saw 0 codex processes.
+[VERIFIED] On 15 Nov 2026 at 05:15 worker machine 1 time the round-4 Codex pool (~/codex_op_1114r4/pool.sh) wrote STOP and quit with 12 of 67 briefs unstarted, logging "usage limit seen in briefs/T264/codex.log". No limit had been hit: T264 finished with a report, and the matching text was brain material the worker had echoed into its log ("0/30 worker events.jsonl since 04:30 show usage limit"). A search of every round's codex.log found no real limit error, only quoted memories. The pool sat idle about 70 minutes until a loop tick saw 0 codex processes.
 
 Fix (pool.sh, 15 Nov 06:26 mini time): a limit counts only for a worker that has exited (run.exit) without REPORT.md, and only in the last 20 lines of its log. Pool restarted on acc2, max 8, memory floor 35.
 

@@ -11,7 +11,7 @@ metadata:
   modified: 2026-11-10T18:40:48.136Z
 ---
 
-The OPEN2 Codex worker (launched 10 Nov 03:27 laptop, brief codex_local_1108/briefs/OPEN2, gpt-6.1-sol high, normal speed) chose E0095, Diaconis's graph-augmentation problem, not Lyons' conjecture as its first log line suggested. Result is partial: the general problem (best perfect matching, or best stationary-preserving kernel) is not solved.
+The OPEN2 Codex worker (launched 10 Nov 03:27 workstation, brief codex_local_1108/briefs/OPEN2, gpt-6.1-sol high, normal speed) chose E0095, Diaconis's graph-augmentation problem, not Lyons' conjecture as its first log line suggested. Result is partial: the general problem (best perfect matching, or best stationary-preserving kernel) is not solved.
 
 Proved on paper, with two exact computation paths (Fraction polynomials, n = 4..16 even, weights 1/2, 1, 5) and a float sweep (n to 40, weights 0.01 to 1000):
 1. On an even cycle C_n with one added chord of any positive weight, ordinary weighted random walk: the antipodal chord keeps the spectral gap exactly at the cycle's 1 - cos(2 pi/n); every other chord gives a strictly smaller gap. This closes the equality the September E0095 memo had only numerically.

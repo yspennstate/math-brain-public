@@ -11,7 +11,7 @@ metadata:
 ---
 
 **What happened (12 Nov 2026, an agent).** At 04:19 I wrote a tested patch (the memory mirror claims in batches
-of 25) over `brain-repo/12_cognitive_architecture/dreaming/memory_mirror/memory_mirror.py`, recorded
+of 25) over `the private repository, 12_cognitive_architecture/dreaming/memory_mirror/memory_mirror.py`, recorded
 "Live sha 97b3668a" and filed [[memory_mirror_claims_in_batches_six_mesh_calls_for_sixty_files_2026_11_12]]. The task
 BrainMemoryMirror runs `~/.claude/dreaming/memory_mirror/memory_mirror.py` (its `launch_mirror.vbs` names
 that path). The live file stayed at b339529484aa for four more hours: every run still took a claim and an assert per

@@ -14,7 +14,7 @@ metadata:
 Question this answers: `math_transport.py ingest` / `ingest-many` / `revise` says "refused: the transport write lock
 was busy for 120 s; try again" again and again, the queue ages, and the scheduled pass looks hung. What is it?
 
-What happened (12 Nov 2026, laptop). The 15-minute pass (`math_transport.py run`, task BrainMathTransport15m, started
+What happened (12 Nov 2026, workstation). The 15-minute pass (`math_transport.py run`, task BrainMathTransport15m, started
 21:53) took the write lock for its last step (the prefilter rebuild, because two store nodes were newer than the index)
 and was still holding it at 23:48. It was not hung: its one thread was in state Ready, but it had used 47.6 s of CPU in
 1 h 55 min, about 0.3 pct of a core. Task Scheduler starts a task at BelowNormal by default, and every core was busy

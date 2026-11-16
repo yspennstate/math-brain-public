@@ -1,6 +1,6 @@
 ---
 name: metal_wilson_ust_sampler_one_tree_per_gpu_thread_2026_11_14
-description: "[VERIFIED] Uniform spanning trees fast? ust_metal.swift on a Mac mini GPU: Wilson's algorithm, one tree per thread, flattened phase loop; 4,800 trees/s at 160x160, ~2,000x the numba CPU sampler, law matches it (40x40, 48k vs 24k, all < 2 se)"
+description: "[VERIFIED] Uniform spanning trees fast? ust_metal.swift on a worker machine GPU: Wilson's algorithm, one tree per thread, flattened phase loop; 4,800 trees/s at 160x160, ~2,000x the numba CPU sampler, law matches it (40x40, 48k vs 24k, all < 2 se)"
 metadata:
   type: project
   created: 2026-11-14
@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-P0133 (12_cognitive_architecture/math/trio_1011/op/P0133/ust_metal.swift), 14 Nov 2026, an agent, Mac mini 2 (Apple M6, 16 GB).
+P0133 (12_cognitive_architecture/math/trio_1011/op/P0133/ust_metal.swift), 14 Nov 2026, an agent, worker machine 2 (Apple M6, 16 GB).
 
 - Build and run with no Xcode and no torch: swiftc -O ust_metal.swift -o ust_metal; the Metal source is a string compiled at run time with device.makeLibrary(source:). ./ust_metal n1 n2 s samples seed out.tsv 4096. Output lines are those of ust_torus_shear.py (classes of all fundamental cycles on the sheared torus).
 - Design: one tree per GPU thread, per-thread slabs (next direction uint8, in-tree uint8, lifted x/y int32 = 10 bytes a vertex), PCG32 per thread, 2 random bits per step. The walk, the sum pass and the lift pass of Wilson's algorithm run as ONE loop with a phase variable, so a lane that finishes its loop-erased walk does not idle while the other 31 lanes of its SIMD group finish theirs.

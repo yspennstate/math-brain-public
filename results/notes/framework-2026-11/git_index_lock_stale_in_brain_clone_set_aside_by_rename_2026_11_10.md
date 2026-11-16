@@ -12,7 +12,7 @@ metadata:
 ---
 
 Every git write in the brain clone fails with "index.lock exists" and no git is running - what to do?
-On 10 Nov 2026 07:09 the shared clone (~\brain-repo) held a 0-byte .git/index.lock
+On 10 Nov 2026 07:09 the shared clone (~\the private repository) held a 0-byte .git/index.lock
 written at 06:16:48, 53 minutes old, with no git process alive. Some git call had been killed or timed out while it
 held the index. Until it went, every `git add`, `commit`, `reset` or checkout in that clone would refuse, and the
 dream's persist step would have met it at 10:30.

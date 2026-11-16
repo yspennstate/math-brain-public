@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-08
   created_at: 2026-11-08T15:58:57+04:00
   status: verified
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/DIAG9_20261108 (prereg 526a8fd0ba, results e7f7c3f6b2)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/DIAG9_20261108 (prereg 526a8fd0ba, results e7f7c3f6b2)"
 ---
 
 Does giving an agent both recall --each and direct reads of the memory files beat the better single tool at 5 tool calls? No (8 Nov, DIAG9): Codex 27 of 36 planted causes (grep alone 32), Claude 25 (--each alone 29).
@@ -19,5 +19,5 @@ DIAG5's items byte for byte. One arm, mixed: DIAG6's brain arm prompt (recall/no
 
 How to apply: --each is the right first move, but do not stop on it. With calls left, read the memory files for the symptoms recall answered weakly; on Codex the whole-file reads are what found the extra plants (COMPACT_WINDOW, DEPTH_SHALLOW, CTIME_REPLACE, COPIED_SIDECAR). The best single tool per runtime is still grep on Codex and --each on Claude.
 
-Files: brain-repo 12_cognitive_architecture/brain_improvement/DIAG9_20261108 (results e7f7c3f6b2). Related: [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]] (the --each result), [[diag7_grep_32_recall_16_codex_17_15_agent_11_08]], [[diag6_five_calls_brain_27_12_bare_0_2026_11_08]].
+Files: the private repository, 12_cognitive_architecture/brain_improvement/DIAG9_20261108 (results e7f7c3f6b2). Related: [[diag8_recall_each_26_29_of_36_vs_16_15_coverage_not_bodies_2026_11_08]] (the --each result), [[diag7_grep_32_recall_16_codex_17_15_agent_11_08]], [[diag6_five_calls_brain_27_12_bare_0_2026_11_08]].
 

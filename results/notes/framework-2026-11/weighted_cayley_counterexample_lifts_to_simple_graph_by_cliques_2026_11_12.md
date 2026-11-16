@@ -19,5 +19,5 @@ Use: whenever a paper says "the weighted example does not settle the unweighted 
 
 Related trap from the same report: "symmetric chain" read as a symmetric transition matrix does not give P^2(x,x) >= P^2(x,y): M = [[3/10,3/10,2/5],[3/10,1/5,1/2],[2/5,1/2,1/10]] has M^2(0,0) = 17/50 < 7/20 = M^2(0,1). The inequality needs equal diagonal entries (vertex-transitivity).
 
-Report archived at brain-repo 06_math_research/referee_reports/2026-11-12/ARC/; corrections sent to an agent (msg-3ec87f96cf).
+Report archived at the private repository, 06_math_research/referee_reports/2026-11-12/ARC/; corrections sent to an agent.
 

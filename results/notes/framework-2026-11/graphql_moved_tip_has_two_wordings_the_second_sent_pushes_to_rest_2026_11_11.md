@@ -20,14 +20,14 @@ The GraphQL lane of `push_paths_gitdata.py` ([[api_pusher_lands_through_graphql_
 only the first. The second was classed "other", and the push left for the REST lane: on 11 Nov at 03:46 one of my
 pushes made one GraphQL mutation, got wording 2, and then spent 32 REST calls and four ref tries to land seven
 files. The log line was `gitdata: graphql commit failed (other: FORBIDDEN is at 5c3b3e24... but expected
-3d413729...); using the REST lane`; both ids were commits that peers on this laptop had landed four seconds apart.
+3d413729...); using the REST lane`; both ids were commits that peers on this workstation had landed four seconds apart.
 
 **The change (live 11 Nov 03:51; sha 31c3a5a299a1c771, was 9f661f1c5c39cdc9; backup .bak_stale2_20261111).**
 `_gql_kind` reads "is at ... but expected ..." as stale, so the try is repeated on the new tip (still at most 30
 tries, still refused when a peer changed one of our paths). `ledger_append.py`'s GraphQL route
 ([[ledger_append_lands_through_graphql_when_rest_is_spent_2026_11_11]]) reads it the same way.
 
-**The after-measurement that was owed for the GraphQL lane** (this laptop's tally, `gql_lane/lane_fallbacks.py`):
+**The after-measurement that was owed for the GraphQL lane** (this workstation's tally, `gql_lane/lane_fallbacks.py`):
 
 | hour | pusher processes | REST calls | ref tries |
 |---|---|---|---|
@@ -41,7 +41,7 @@ twice, then a landing: six GraphQL requests and no REST call) fails on the old f
 
 **Not covered.** I read the cause in one of the eight fallbacks; the other seven left no log I can open, so how
 many of them had this wording is not measured. The four REST-only runs are not explained. The account's allowance
-is still spent each hour: on 11 Nov 03:43-03:48 it fell by 514 calls in five minutes, of which this laptop's
+is still spent each hour: on 11 Nov 03:43-03:48 it fell by 514 calls in five minutes, of which this workstation's
 tally explains 105 ([[the_rest_quota_hit_zero_local_pushers_raced_each_other_2026_11_11]]).
 
 **How to apply.** When a lane hands over to its fallback, print the error it handed over on and read that line

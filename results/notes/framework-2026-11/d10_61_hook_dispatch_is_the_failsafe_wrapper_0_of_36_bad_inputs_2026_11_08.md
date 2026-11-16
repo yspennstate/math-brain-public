@@ -9,7 +9,7 @@ metadata:
   evidence: "dispatch_bad_input_2026_11_08.py; hook_bad_input_2026_11_08.py and .json; raising control caught 5/5"
 ---
 
-Does a hook that throws ever block a tool call on this Mac? No. That makes 1000-ways D10 #61 ("fail-closed hook wrapper") already true, because hook_dispatch.py is that wrapper. Measured 8 Nov 2026 by an agent.
+Does a hook that throws ever block a tool call on this worker machine? No. That makes 1000-ways D10 #61 ("fail-closed hook wrapper") already true, because hook_dispatch.py is that wrapper. Measured 8 Nov 2026 by an agent.
 
 The dispatcher's contract: a hook that raises or exits non-zero is caught and logged, only exit 2 blocks, and a broken dispatcher exits 0. I checked it as settings.json calls it (python3 -s hook_dispatch.py --event EV), for the 6 wired events, on five broken inputs: empty stdin, non-JSON text, a JSON list, an object with every field the wrong type, and the event name alone. All 36 calls exited 0, including a well-formed control call for each event. Every stdout was empty or one JSON object (dispatch_bad_input_2026_11_08.py).
 

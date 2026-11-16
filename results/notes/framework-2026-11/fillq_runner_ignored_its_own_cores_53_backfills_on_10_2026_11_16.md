@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Seen 16 Nov 2026 ~00:35 laptop time: Mac 1 load 62 on 10 cores, ~/fillq/status running=54 (53 backfill bf_m1_n6/n7 P0245 holding-search runs, owner of the fillers an agent), each python at 15-25 pct CPU, each run taking 2-3 h instead of minutes.
+Seen 16 Nov 2026 ~00:35 workstation time: Mac 1 load 62 on 10 cores, ~/fillq/status running=54 (53 backfill bf_m1_n6/n7 P0245 holding-search runs, owner of the fillers an agent), each python at 15-25 pct CPU, each run taking 2-3 h instead of minutes.
 
 Cause: busy() in ~/fillq/runner.sh returned min(cpu_used, load1) + recent-launch cores. Its own comment said it took our launched cores into account, but the variable 'ours' was computed and never used. With 1-core fillers, a new launch just splits the same cores; top still shows a few percent idle (sys time, stalls), cpu_used stays below NCPU, free_cores stays >= 1 every 20 s cycle, and the backfill branch admits another. Unbounded.
 

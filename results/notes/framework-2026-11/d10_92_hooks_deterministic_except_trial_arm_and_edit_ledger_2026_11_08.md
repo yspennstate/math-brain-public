@@ -9,7 +9,7 @@ metadata:
   evidence: "hook_determinism_2026_11_08.py; .json beside it; INSTINCT_PRIMARY_AB=0 rerun 13/13 same; random control flagged, constant not"
 ---
 
-Are the Mac's hooks deterministic, so a hook's output depends only on its input? Yes, apart from two designed exceptions. Measured 8 Nov 2026 by an agent (1000-ways D10 #92).
+Are the worker machine's hooks deterministic, so a hook's output depends only on its input? Yes, apart from two designed exceptions. Measured 8 Nov 2026 by an agent (1000-ways D10 #92).
 
 How: hook_determinism_2026_11_08.py runs every hook in hook_dispatch_list.json twice on the same payload, each time under a fresh session id. It uses two ids rather than one so that once-per-session suppression doesn't count as a difference. Before comparing, it masks session ids, clock times, dates, durations, hex ids and pids. The harness's one bland payload per event made only 8 of 89 hooks print anything, so I added payloads that real work produces: a math prompt, a push-and-delete prompt, a git push, an rm -rf, a heredoc into python, an Edit of MEMORY.md, and a Bash call that ended in a traceback. That came to 248 hook-payload pairs, 32 of which printed something, in 15 s. A planted hook that prints a random number was flagged and a planted constant hook was not. The first draft's hex mask also swallowed plain 9-digit numbers and passed the random control; the mask now needs a letter.
 

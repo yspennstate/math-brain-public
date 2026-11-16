@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-The laptop Codex rig (12_cognitive_architecture/codex_local_1108) admits one launch per ten minutes through an
+The workstation Codex rig (12_cognitive_architecture/codex_local_1108) admits one launch per ten minutes through an
 O_EXCL file `.launch_slot` (stale after 600 s). It has no order. On 15 Nov at 02:18 eighteen briefs (WBAB4, WBAB5, WBH1,
 WBH2) had waited since 21:40-23:17, each polling once a minute; whoever polls first after the ten minutes wins, so a
 waiter can lose every round until its wait budget runs out.

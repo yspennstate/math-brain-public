@@ -13,14 +13,14 @@ metadata:
 
 status: provisional
 
-12 Nov 2026, an agent (loop T-20261112-103). Three exact speedups to brain recall, each checked by hashing the WHOLE ranked list (30-44k rows) with old and new copies alternating in one process (scratch eq_tail.py), not by the printed top rows:
+12 Nov 2026, an agent (loop a checklist task). Three exact speedups to brain recall, each checked by hashing the WHOLE ranked list (30-44k rows) with old and new copies alternating in one process (scratch eq_tail.py), not by the printed top rows:
 - bm25_fold.score (plural fold): one IN query for every result slug and a key-free heap on (-score, slug) tuples. 75 query x topk cases identical; 24.3 s -> 5.0 s over the set. Brain ae9b0467.
 - bm25 tail: one pass splits ltail/gtail/stail; leaner row loop (bound lookups, inline status memo). tails -25 pct, rows -11 pct (~20 ms). Brain 52237d64.
 - collapse: a slug with no supersession route skips _current_slug and the repeated SKIP/parent_only gates. Loop -24 pct (~20 ms). Brain 1e98b499.
 Measurement lessons: (1) served sub:lex.score (312-1172 ms) is ~3x the in-process figure (59-165 ms) because the query-embed thread and graph prefetch run during it (cpu_ms > ms); a served stage time is not the stage's own cost. (2) cProfile swells per-candidate loops (one call per row) several-fold - time those with perf_counter marks, unprofiled. (3) tail and row costs scale with the candidate count: ~250-350 ms in-process at 30-44k candidates, ~5 ms under 2k. (4) In-process co.superseded_known costs 190-820 ms a call (_load_superseded + set(_corpus_slugs()) rebuilt while peers write); whether the served path pays it was unmeasured at 22:00.
 New timers: sub:lex.*, sub:bm.*, sub:co.* in calls.jsonl arms. What would change this: served rows showing co.superseded_known small (then the next target is bm.graph, ~150-230 ms served).
 Later the same night (22:3x): co.superseded_known (served med 172, p90 806) is almost all _load_superseded, whose cost is the call's one listing of the 64.8k-entry memory folder (set(_corpus_slugs()) is ~45 ms). Fourth speedup: _FastEntry.path is a property (same os.path.join, made when read); the join on every entry was a third of the listing's Python time. Listing CPU median 859 -> 656 ms over 12 paired runs; full scored hash 4/4 equal. Live 22:37, brain 2d5b93db.
-Tried and not shipped: taking the listing on a background thread at _memlist_open. Output equal, but on the loaded laptop the seed stage gained ~400 ms and the other stages gave it back under the GIL.
+Tried and not shipped: taking the listing on a background thread at _memlist_open. Output equal, but on the loaded workstation the seed stage gained ~400 ms and the other stages gave it back under the GIL.
 Equality-test lesson: unfrozen old-vs-new runs on the live folder disagree on the full scored hash 1-3 times in 5 (index refreshes; an old-vs-old control drifts too). Hold one index generation with `python bm25.py freeze 10 "<why>"` for the test, then unfreeze.
 bm.graph split (in-process, non-resident): graph_lane.ranked 107-142 ms, link_ranked 297-421 ms; the link walk already has mmap, prefetch and a resident cache.
 

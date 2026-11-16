@@ -15,5 +15,5 @@ The env default reached only calls where the agent passed no -n. Codex passed -n
 
 In the one cell where lists really grew (Claude R), gold memories shown per run went from 7.5 to 11.8 of 24 (+57%) and points per run from 6.7 to 7.8, at about 35 s more per run. So longer lists put more of the right memories in front of the agent, but turning them into points is the weak step, and the gain is noise-sized. Follow-up DIAG35 uses a floor on -n (BRAIN_EACH_MIN=8) so every call in both runtimes gets the longer list.
 
-Results: brain-repo 12_cognitive_architecture/brain_improvement/DIAG34_20261109/RESULTS.md (commit 89723df607). Graph store brain-graph-full-2026-11-07 (16,811,666 edges), dial lambda 0.30, brain.py 71b8afc7807e for the runs. Related: [[agents_pass_their_own_recall_n_default_list_length_misses_agent_11_09]], [[brain_arm_points_follow_surfacing_agents_rarely_open_codex_gap_is_grep_2026_11_09]].
+Results: the private repository, 12_cognitive_architecture/brain_improvement/DIAG34_20261109/RESULTS.md (commit 89723df607). Graph store brain-graph-full-2026-11-07 (16,811,666 edges), dial lambda 0.30, brain.py 71b8afc7807e for the runs. Related: [[agents_pass_their_own_recall_n_default_list_length_misses_agent_11_09]], [[brain_arm_points_follow_surfacing_agents_rarely_open_codex_gap_is_grep_2026_11_09]].
 

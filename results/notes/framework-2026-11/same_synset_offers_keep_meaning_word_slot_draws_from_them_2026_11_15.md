@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Measured 15 Nov 01:0x-01:3x by an agent (writing brain, creative/ lane), pushed 5cb43c7387e2 on yspennstate/brain-repo.
+Measured 15 Nov 01:0x-01:3x by an agent (writing brain, creative/ lane), pushed 5cb43c7387e2 on the private repository.
 
 - bench/relation_probe.py over ws_labels.json + ws_labels_heldout.json (109 pairs): same synset good 9 of 23, kind-of (hyponym) 4 of 27, broader (hypernym) 2 of 12, other neighbour 4 of 47.
 - word_slot.py: after the walk, if any candidate shares the synset of the sentence's sense (tied by gloss == OEWN synset definition, wn_relations.py, cache writing_brain_data/creative/wn_syn_hypo_hyper_v2.json.gz), draw among those only. Hyponyms kept because spurn/rebuff (good for refused) are hyponyms.

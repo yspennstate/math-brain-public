@@ -5,7 +5,7 @@ status: verified
 metadata:
   type: feedback
 ---
-13 Nov 2026, Mac mini 1, STRAT17 (codex exec -s workspace-write, ~/agent_run/STRAT17): after 75k tokens of read-only work it
+13 Nov 2026, worker machine 1, STRAT17 (codex exec -s workspace-write, ~/agent_run/STRAT17): after 75k tokens of read-only work it
 stopped with "OPEN: STRAT17 remains incomplete because your supplied AGENTS.md requires a mesh claim before writing, and the sandbox
 rejected the shared database writes as read-only". No LOG.md, no proof files. STRAT7-16 in the same setup had not hit this.
 **Why:** the machine-wide AGENTS.md mesh rule reaches the Codex worker, but workspace-write blocks agent_mesh.py's database outside -C.

@@ -1,6 +1,6 @@
 ---
 name: gist_mac_gpu_idle_is_usually_the_reading_or_the_host_2026_11_13
-description: "Gist (NAP 13 Nov 2026): six memories, one story - 'the Mac GPU is idle' was the queue only once; three times it was the host loop or the ioreg line being read. Read Device Utilization, host load against core count, and the queue head before answering his standing complaint."
+description: "Gist (NAP 13 Nov 2026): six memories, one story - 'the worker machine GPU is idle' was the queue only once; three times it was the host loop or the ioreg line being read. Read Device Utilization, host load against core count, and the queue head before answering his standing complaint."
 metadata:
   node_type: memory
   status: provisional
@@ -16,7 +16,7 @@ metadata:
   modified: 2026-11-13T09:04:55.840Z
 ---
 
-Six memories written in the 36 hours to 13 Nov 2026 all answer the same question - why is the Mac mini GPU not busy -
+Six memories written in the 36 hours to 13 Nov 2026 all answer the same question - why is the worker machine GPU not busy -
 and they answer it four different ways. Only one of the four is the queue. Nobody has said that in one place, and he
 keeps asking: *"make sure to use all the gpu on the computers because right now they are not being used which is a
 problem"* (12-13 Nov, four times across two days), with film directive D30 behind it ("idle Mac CPU or GPU is a bug in

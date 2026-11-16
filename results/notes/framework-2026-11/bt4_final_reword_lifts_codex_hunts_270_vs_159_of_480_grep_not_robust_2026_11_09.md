@@ -6,14 +6,14 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T13:37:12+04:00
   status: provisional
-  evidence: "bt4_results_final.txt; brain-repo 12_cognitive_architecture/brain_improvement/bt4_2026_11_09/final"
+  evidence: "bt4_results_final.txt; the private repository, 12_cognitive_architecture/brain_improvement/bt4_2026_11_09/final"
   supersedes: bt4_reword_paragraph_lifts_codex_hunts_53_vs_9_beats_grep_not_robust_2026_11_09
 superseded_by: bt4_corrected_grep_false_voids_brainrw_vs_grep_45_24_p0p059_2026_11_09
 ---
 
 Does telling a Codex hunter to reword its recall queries away from the clue's words find more scavenger-hunt stations? Yes, and it held across three reps (BT4 final, 9 Nov 13:24). Whether that puts the brain ahead of grep is not settled: the win over grep is not robust once void hunts are dropped, and only the brain arm got the advice.
 
-Setup. 40 scored hunts of 4 ordered stations each (160 stations), clues worded far from the memories on purpose, budget 12 counted commands, Codex gpt-6.1-sol high. Arms: brainread (brain.py recall --read 3, node and file reads), brainrw (the same plus one paragraph, bt2_controller/bt4_run.py REWORD: leave the clue's words out, write two or three guesses at how the memory would say it as the question and its --or wordings), grep (rg over a memory folder copy, no brain). Reps: brain arms 3, grep 2 (rep 3 was the two brain arms only). Recall ran on this Mac's graph lane (graph_lane_store, brain-graph-full-2026-11-07: 11,982,982 directed pairs plus co pairs, the full brain). Questions, scoring, pairs and the sensitivity rule were pushed before grading (124b781e11, 3b8cc0de18, abe4db47b9).
+Setup. 40 scored hunts of 4 ordered stations each (160 stations), clues worded far from the memories on purpose, budget 12 counted commands, Codex gpt-6.1-sol high. Arms: brainread (brain.py recall --read 3, node and file reads), brainrw (the same plus one paragraph, bt2_controller/bt4_run.py REWORD: leave the clue's words out, write two or three guesses at how the memory would say it as the question and its --or wordings), grep (rg over a memory folder copy, no brain). Reps: brain arms 3, grep 2 (rep 3 was the two brain arms only). Recall ran on this worker machine's graph lane (graph_lane_store, brain-graph-full-2026-11-07: 11,982,982 directed pairs plus co pairs, the full brain). Questions, scoring, pairs and the sensitivity rule were pushed before grading (124b781e11, 3b8cc0de18, abe4db47b9).
 
 Result, stations found: brainrw 270 of 480 (56%), brainread 159 of 480 (33%), grep 129 of 320 (40%). Per station (share of reps found, 160 stations, hunt-clustered permutation p):
 - brainrw vs brainread: 64 better, 11 worse, 85 tied, p < 1e-4.
@@ -32,7 +32,7 @@ Voids: grep 7 (reads of the live memory folder in H026, H040, R007 in both reps,
 
 Next: BT5 (draft at codex_fleet/20261108_pro/inputs/bt5/DESIGN_DRAFT.md) gives grep the matched reword paragraph, so brainrw vs greprw separates the brain from the advice. It runs on Codex and Claude, uses fresh hunts and scrubs tokens from the Codex child env.
 
-Rows, grader output and scripts: brain-repo 12_cognitive_architecture/brain_improvement/bt4_2026_11_09/final/.
+Rows, grader output and scripts: the private repository, 12_cognitive_architecture/brain_improvement/bt4_2026_11_09/final/.
 
 Related: [[bt4_reword_paragraph_lifts_codex_hunts_53_vs_9_beats_grep_not_robust_2026_11_09]] (the interim, two reps) [[bt3br_recall_read3_ties_grep_51_47_of_144_lifts_brain_18_of_96_2026_11_09]] [[diag17c_query_advice_lifts_claude_recall_29_43_hurts_codex_40_29_2026_11_09]] [[hunt_clue_recall_reach_3pct_alone_agent_rewording_65pct_2026_11_09]] [[brain_arm_misses_are_surfacing_misses_seen_426_of_479_unseen_23_of_331_2026_11_09]]
 

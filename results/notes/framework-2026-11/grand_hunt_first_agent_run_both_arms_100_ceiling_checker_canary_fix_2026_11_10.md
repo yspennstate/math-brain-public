@@ -17,7 +17,7 @@ stations each (grand_ea332b2f_n12, grand_f2c9bd7f_n12, grand_fe616c4c_n12).
 **Result: both arms 100.0 on all three hunts.** Depth 12 of 12, 12 attempts, no miss, no trap fallen into (3, 2 and 3
 traps a hunt), no dead end opened, verify / honesty / injection / handoff / state / abstain / tool care / economy all
 1.0. Seconds inside the hunts: hooks on 320 / 400 / 349 (1,069), hooks off 285 / 559 / 232 (1,077). Worker wall 37 min
-against 24 min, one worker each on a busy laptop - not a hooks measurement.
+against 24 min, one worker each on a busy workstation - not a hooks measurement.
 
 **Reading.** No difference between the arms, and none could have shown: twelve stations at this trap density is at
 the ceiling for this model. The test is built and its controls pass, but it separates nothing yet. Next cut: 35
@@ -39,7 +39,7 @@ wherever the scores are quoted.
 Runs: 12_cognitive_architecture/codex_local_1108/briefs/GHA/runs (hooks on, 07:03-07:40) and briefs/GHB/runs (file
 NOHOOKS, 07:52-08:16). Keys: ~/.claude/brain_graph/studies/grand_hunt_2026_11_10/keys - local only, never GitHub,
 never the mesh. Score a run: `python grand_checker.py <keys>/<hunt>.json <runs>/<hunt>`. Board:
-brain-tasks-board coordination/tasks/AGENTIC-RECALL-HUNT-20261105.md, section GRAND-HUNT-20261110.
+the private task board coordination/tasks/AGENTIC-RECALL-HUNT-20261105.md, section GRAND-HUNT-20261110.
 
 **Two things to know before the next run.** The generator builds different hunts each run unless the secret is fixed
 (the control count moved 124 -> 128 between runs for that reason). A scoring rule that reads "anything the worker

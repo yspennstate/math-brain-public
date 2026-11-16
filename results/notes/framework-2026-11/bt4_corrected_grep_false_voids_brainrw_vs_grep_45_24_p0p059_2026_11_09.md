@@ -15,7 +15,7 @@ Does BT4 show the brain with rewording advice beating grep on Codex scavenger hu
 
 What was wrong. All 7 grep voids in BT4 (H014, H026, H040, R007 across reps 1 and 2) were false. The grep arm's forbid list holds r"python", and it matched the file name of a memory the arm was allowed to read (one with python in its name), the word python inside rg search patterns, and answer text written with printf. No grep run executed python or read outside the memory folder; every one of the flagged commands was read by hand. Void hunts score 0, so grep lost 17 stations (129 -> 146 of 320). The earlier memory called these "reads of the live memory folder"; that was wrong.
 
-Corrected result (BT4R1-3, Codex gpt-6.1-sol high, 12-command budget, full brain brain-graph-full-2026-11-07 on this Mac's graph_lane_store):
+Corrected result (BT4R1-3, Codex gpt-6.1-sol high, 12-command budget, full brain brain-graph-full-2026-11-07 on this worker machine's graph_lane_store):
 - stations: brainrw 270/480 (56%), brainread 159/480 (33%), grep 146/320 (46%)
 - brainrw vs brainread: 64 vs 11, 85 tied, clustered p < 1e-4 (unchanged)
 - brainrw vs grep: 45 vs 24, sign p 0.015, clustered p 0.059
@@ -29,7 +29,7 @@ Fix for BT5: bt2_controller/bt5_run.py audits the grep arms with memory-folder f
 
 Reflex: a void flag is a claim about a command, not a verdict. Read every void's command before scoring 0; a forbid word that can appear in a file name or a search pattern will fire on innocent runs.
 
-Regrade script and output: bt4_regrade_falsevoids.py, bt4_regrade_fv.json, bt4_regrade_fv_sens.json, to be pushed to brain-repo 12_cognitive_architecture/brain_improvement/bt4_2026_11_09/final/regrade_false_voids/.
+Regrade script and output: bt4_regrade_falsevoids.py, bt4_regrade_fv.json, bt4_regrade_fv_sens.json, to be pushed to the private repository, 12_cognitive_architecture/brain_improvement/bt4_2026_11_09/final/regrade_false_voids/.
 
 Related: [[bt4_final_reword_lifts_codex_hunts_270_vs_159_of_480_grep_not_robust_2026_11_09]] (superseded by this) [[bt4_reword_paragraph_lifts_codex_hunts_53_vs_9_beats_grep_not_robust_2026_11_09]] [[leak_voids_4_of_11_were_name_hits_not_content_2026_11_09]]
 
