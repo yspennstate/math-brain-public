@@ -1,0 +1,47 @@
+# navigation: attempt ledger
+# command: navigation/nav_query.py "attempt ledger"
+# seconds: 2.75
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] First-attempt evaluation ledger  (id f0a2e346ce46, framework/mathbrain/docs/attempt-ledger.md, 159 lines)
+    math_brain.attempt_ledger is the dispatch boundary for a sealed evaluation. Its purpose is narrower than general event logging: once a solver slot might have run, the slot must never be run again. A convenient retry after seeing an answer would invalidate the pairing and the preregistration.
+    keywords: What is committed, State machine and write order, Crash recovery, Minimal use, Limits and trust boundary, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Read and write the request ledger without installing the package.  (id 0311f38912b0, examples/field_brain_starter/ledger.py, 123 lines)
+    Read and write the request ledger without installing the package. python ledger.py list # open requests, the ones asked most first python ledger.py list --all # every request, with its status python ledger.py ask "How long should the harbour film be?" python ledger.py link req_0060ef7a1d15 projec...
+    keywords: now, append, find, main, edges
+    -> in_dir: field_brain_starter  [5108ae12ba5d examples/field_brain_starter/]
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+[file] The delegation ledger - the memory the routing brain learns from.  (id 16d092f30a5f, framework/delegation/ledger.py, 154 lines)
+    The delegation ledger - the memory the routing brain learns from. One JSONL record per delegated task. The parent appends a row when it spawns a worker (with the verified served model from verify_model), then updates parent_verdict after it checks the worker's output. The dream reads this nightly...
+    keywords: log_delegation, set_parent_verdict, read_records, main, dreaming, agents
+    -> in_dir: delegation  [23fdabcd57c2 framework/delegation/]
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+[file] Crash-safe, first-attempt-only execution ledger.  (id 53e1caa314d7, src/math_brain/attempt_ledger.py, 1662 lines)
+    Crash-safe, first-attempt-only execution ledger. The ledger deliberately contains commitments rather than prompts, conditions, or holdout cases. Every durable state change is O_EXCL-staged, fsynced, then atomically published at an exclusive final name. A slot is irreversibly burned by a fsynced S...
+    keywords: LedgerError, LedgerFormatError, LedgerIntegrityError, LedgerStateError, SlotBurnedError, AttemptRunnerFailed, OutcomeKind, SlotState, secret_commitment, new_slot_id, SlotCommitment, DispatchMaterial
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+[file] test_three_arm_pilot_ledger_v3.py  (id a4e4b086c24b, framework/mathbrain/tests/test_three_arm_pilot_ledger_v3.py, 232 lines)
+    keywords: digest, material, slot, synthetic_ledger, test_final_manifest_binds_all_72_hist..., test_manifest_rejects_pending_or_orph..., test_manifest_rejects_unstable_histor..., test_attempt_ledger_history_projectio..., tests
+    -> in_dir: tests  [280fd8f32a7e framework/mathbrain/tests/]
+[file] Sealed challenge evaluation  (id ce5c644ad8b6, framework/mathbrain/docs/challenge-evaluation.md, 84 lines)
+    The challenge study is a ten-pair, twenty-process comparison of the frozen prompt-driven reference brain against an empty sham. Each process receives the same ordered set of twenty opaque cases for its matched pair. The only treatment difference is the precommitted per-case reference packet;...
+    keywords: Freeze and unseal order, First-attempt execution, Interpretation boundary, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Hard blind pilot v1  (id 4cf22a49f7d4, framework/mathbrain/docs/hard-blind-pilot-v1.md, 125 lines)
+    Disposition: superseded before selected collection. A solver-view-only relational decoder recovered both fault line and mechanism on all 320 public-development cases without doing the mathematics. The executable collector now fails closed, and the immutable disposition is recorded in...
+    keywords: Outcome-free commitment, One-way attempt lifecycle, Scoring rule, Frozen run values, Transport status after publication
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> links_to: hard-blind-pilot-v1-disposition.json  [0d62f42cdd08 framework/mathbrain/docs/hard-blind-pilot-v1-disposition.json]  (hard-blind-pilot-v1-disposition.json)
+    -> links_to: hard-blind-pilot-v1-preregistration.json  [77c6d5273f0f framework/mathbrain/docs/hard-blind-pilot-v1-preregistration.json]  (30%, 45%) are usable but outside target and require diagnosis. The old 95% re...)
+[file] Association layer (growth) for the math brain  (id 51c092e71cc5, framework/mathbrain/association/README.md, 28 lines)
+    This is the same association-network engine the general brain uses, dropped into the math brain as an ADDITIVE layer that grows from mathematical usage — claim accesses, retrievals, tool calls, proof attempts — the way the general brain grows from agent activity.
+    keywords: how are math cards linked to each other, agents
+    -> documents: association  [915136022063 framework/mathbrain/association/]
+    -> in_dir: association  [915136022063 framework/mathbrain/association/]
+    -> mentions: agents  [688414066e61 concept]  (agents)

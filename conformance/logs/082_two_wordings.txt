@@ -1,0 +1,75 @@
+# two wordings: self-avoiding walk connective constant | number of self-avoiding walks growth rate
+# command: math_recall.py "self-avoiding walk connective constant" --or "number of self-avoiding walks growth rate"
+# seconds: 2.10
+#
+# what to look for: Two or three wordings in one call are searched separately and fused by rank: 'found by wording 1 (rank 2), 2 (rank 1)' shows where each wording put the card. This is the recommended way to ask.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Grimmett-Li connective constant for transitive loopless multigraphs  (id: claim_e3b8aa2050ceadec5cca92036485d57e2e47f712d29fc580769a13a37039db2a; claim; score 26.03)
+    found by wording 1 (rank 1)
+    matched: connective, self-avoiding, walk, constant, "connective constant" (title)
+    Let G be an infinite connected locally finite vertex-transitive loopless multigraph of finite degree Delta. A self-avoiding walk never repeats a vertex; parallel edges specify distinct walks. If c_n(v) counts length-n self-avoiding walks starting at v, then c_n(v) is independent of v, c_{m+n}<=c_m c_n, and mu(G)=lim_{n to infinity} c_n(v)^(1/n)=inf_{n>=1} c_n(v)^(1/n) exists. In this convention 1<=mu(G)<=Delta-1. Thus the vertex-transitive connective constant remains well defined in the presence of parallel edges. Infinite connected locally finite vertex-transitive loopless multigraph Parallel-edge choices counted separately
+    -> depends_on: Self-avoiding walk (id: claim_5aafe9b0)  (The card uses the concept 'self-avoiding walk'; the target is the store's card defining it.)
+    -> depends_on: Connective constant (id: claim_d962bfc2)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+[2] Every geodesic spanning tree of a quasi-transitive graph has branching number equal to the growth rate, answering Lyons-Peres Question 3.12 (Shmalo 2026, repository yspennstate/geodesic-tree-branching)  (id: claim_fa012e594857433cebb2d4f6c0f817f41cc88c8456c24672b405ca4d5b448df8; claim; score 21.88)
+    found by wording 2 (rank 1)
+    matched: growth, rate, number, "growth rate" (title)
+    Publication record. Y. Shmalo, Every geodesic spanning tree of a Cayley graph has branching number equal to the growth rate (October 2026), proves that if T is a spanning tree of an infinite, connected, locally finite, quasi-transitive graph G, rooted at o and geodesic (every vertex is at the same distance from o in T as in G), then the branching number of T equals the growth rate of G. For Cayley graphs this answers Question 3.12 of Lyons and Peres, Probability on Trees and Networks, where it was known for lexicographically constructed trees (Lyons and Peres; Liu and Xiang, arXiv:2010.01530). As a consequence, Bernoulli percolation on any such tree has critical probability equal to one over the growth rate. Paper: https://github.com/yspennstate/geodesic-tree-branching (commit c8e96497f0ad). Not refereed.
+    <- cites: Open-problem cards in the store that papers posted 14 Oct - 2 Nov 2026 answer: crosswalk to the record cards (3 Nov 2026) (id: claim_c87375cc)  (record card of the posted answer to the problem on open-problem-p0036-percolation-threshold-on-arbitrary-geodes)
+[3] Taxi walks and their connective constant (Blanca–Chen–Galvin–Randall–Tetali)  (id: claim_29482c12ee8b148d22c080f00ac1a4bed285807894166295b0cb2c33362277ab; claim; score 25.87)
+    found by wording 1 (rank 2)
+    matched: connective, walk, constant, self-avoiding, "connective constant" (title)
+    The directed Manhattan lattice has vertex set Z^2. Its horizontal edge at height y points east when y is even and west when y is odd; its vertical edge at x points north when x is even and south when x is odd. A taxi walk is a finite directed walk with distinct vertices that never turns at two consecutive interior vertices. Let c_n count its n-edge walks from the origin. The taxi-walk connective constant is mu_taxi = lim_{n to infinity} c_n^(1/n). This limit exists: c_(n+m) <= c_n c_m by splitting a walk and using the parity-dependent orientation-preserving lattice symmetries, then applying subadditivity of log c_n. A taxi walk can be encoded by its first edge (north or east) and an (n-1)-letter word of straight/turn choices. This word contains no two consecutive turns. Nearest-neighbor directed Manhattan lattice with the stated parity orientation Taxi walks are self-avoiding and have no consecutive turns
+    <- depends_on: Hard-core phase coexistence from taxi contours (Blanca–Chen–Galvin–Randall–Tetali) (id: claim_122e26aa)  (The phase-coexistence threshold is expressed in the connective constant of the taxi walks defined by this card.)
+    -> depends_on: Connective constant (id: claim_d962bfc2)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+[4] Connection Between Initial Exponential Growth Rate and Effective Reproduction Number  (id: claim_d55ef10fdec51ea3176fc331e7dc945710de34e924c4942563fde870c44f71aa; claim; score 19.42)
+    found by wording 2 (rank 2)
+    matched: growth, rate, number, "growth rate" (title)
+    In the early phase of season k, the linearized epidemic trajectory grows exponentially as exp(rho^{(k)} * t), where rho^{(k)} is the Malthusian parameter. When the generation time distribution has moment generating function M(theta), the Lotka-Euler renewal equation establishes 1 / M(-rho^{(k)}) = R_E^{(k)}. Thus early-season monitoring of exponential growth rho^{(k)} provides an immediate empirical point estimate of R_E^{(k)}. Infection generation interval distribution has finite moment generating function Early epidemic dynamics are linearizable
+    <- proves: Lotka-Euler Equation for Early Exponential Epidemic Growth (id: claim_fb34bee6) (superseded by claim_48b820de)  (Derives the Lotka-Euler renewal equation connecting initial growth rate to the reproduction number.)
+    <- proves: Lotka-Euler Equation for Early Exponential Epidemic Growth (id: claim_48b820de)  (Derives the Lotka-Euler renewal equation connecting initial growth rate to the reproduction number.)
+    -> depends_on: Multi-Season Effective Reproduction Number (id: claim_ed92c3d0)  (Same multi-season immunity/shock model and season-indexed R_E; excludes resistance R_eff and the separately defined r=2 reproduction number.)
+    -> depends_on: Moment generating function (id: claim_058f4f96)
+    -> depends_on: Renewal process (id: claim_859b83f8)
+    -> depends_on: Moment Generating Function (id: claim_74501d60)  (The card uses the concept 'moment generating function'; the target is the store's card defining it.)
+    -> cites: arXiv:2505.17933 (id: source_922c25d) (superseded by source_a0199eb)
+    -> cites: A multi-season epidemic model with random genetic drift and transmissibility (id: source_a0199eb)
+    ... 1 more links (--id claim_d55ef10f)
+[5] Self-avoiding walk  (id: claim_3bf6d85b4babc281ef6c2cdefd0a8d52; claim; score 25.27)
+    found by wording 1 (rank 3)
+    matched: connective, walk, self-avoiding, constant, "self-avoiding walk" (title)
+    A nearest-neighbour path that visits no vertex twice; $c_n$ counts those of length $n$ from the origin, and $\mu=\lim_nc_n^{1/n}$ is the connective constant ($\sqrt{2+\sqrt2}$ on the hexagonal lattice, Duminil-Copin-Smirnov).
+    <- depends_on: Attempt on Conformal limits of the critical and dense O(n) loop model (id: claim_1e2aeb88)
+    <- depends_on: Open problem: Hexagonal self-avoiding-walk scaling limit (id: claim_1f7a2a12)
+    <- depends_on: Open problem: Divergence of the 1/d expansion of the connective constant (id: claim_462ce214)
+    <- depends_on: Open problem: Interfaces of the honeycomb O(n) loop model converge to SLE(kappa) (id: claim_4e6b1d21)
+    <- depends_on: Attempt on Divergence of the 1/d expansion of the connective constant (id: claim_732401e9)
+    <- depends_on: Technique: Lace Expansion (id: claim_9508af6f) (superseded by claim_57375976)
+    <- depends_on: Open problem: Self-avoiding-walk counting exponents (id: claim_9ea85bb7)
+    <- depends_on: Attempt on Borel summability of the 1/d expansion of the percolation threshold (id: claim_ae436209)
+    ... 21 more links (--id claim_3bf6d85b)
+[6] Open problem: Positive speed of inward-biased walks below the Cayley growth rate  (id: claim_350892c8311992975dd3dfc43d8fedd4e6bd25562902f94d80e6bcf8f2fd995d; claim; score 19.23)
+    found by wording 2 (rank 3)
+    matched: growth, rate, walks, "growth rate" (title)
+    OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For a Cayley graph of exponential growth rate b and 1<lambda<b, does the distance from the identity divided by time for RW_lambda converge almost surely to a strictly positive speed? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 3.11, printed p.91. Posed in Probability on Trees and Networks, paperback electronic version 19 August 2026 Status as recorded in the campaign ledger on 2026-09-07
+    <- depends_on: Attempt on Positive speed of inward-biased walks below the Cayley growth rate (id: claim_615217d6)  (The attempt is about this problem and inherits its hypotheses)
+    -> depends_on: Almost sure convergence (id: claim_a6cd1dc5)
+    -> cites: Probability on Trees and Networks (id: source_e89a678)  (cites book:lyons-probability-on-trees-and-networks (found in body): Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 3.1)
+[7] Connective constant  (id: claim_d962bfc29dc542358b270c0f14017f7f; claim; score 25.25)
+    found by wording 1 (rank 4)
+    matched: connective, self-avoiding, constant, "connective constant" (title)
+    In mathematics, the connective constant is a numerical quantity associated with self-avoiding walks on a lattice. It is studied in connection with the notion of universality in two-dimensional statistical physics models. While the connective constant depends on the choice of lattice so itself is not universal (similarly to other lattice-dependent quantities such as the critical probability threshold for percolation), it is nonetheless an important quantity that appears in conjectures for universal laws. Furthermore, the mathematical techniques used to understand the connective constant, for example in the recent rigorous proof by Duminil-Copin and Smirnov that the connective constant of the hexagonal lattice has the precise value ${\sqrt {2+{\sqrt {2}}}}$, may provide clues to a possible approach for attacking other important open problems in the study of self-avoiding walks, notably the conjecture that self-avoiding walks converge in the scaling limit to the Schramm–Loewner evolution.
+    <- depends_on: Taxi walks and their connective constant (Blanca–Chen–Galvin–Randall–Tetali) (id: claim_29482c12)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Theorem 3.9 (Theorem 1.3 restated) of arXiv:2604.02746: Zero-Freeness of the Hard-Core Model with Bounded Connective Constant (id: claim_6e203cd4) (superseded by claim_6f30a4fd)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Theorem 2 of arXiv:2608.03497 (id: claim_39c32591)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Grimmett-Li Fisher transformation connective constant relation (id: claim_6009e3bd)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Theorem 1.3 of arXiv:2604.02746: Zero-Freeness of the Hard-Core Model with Bounded Connective Constant (id: claim_e1b7f86c) (superseded by claim_6f30a4fd)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Hard-core phase coexistence from taxi contours (Blanca–Chen–Galvin–Randall–Tetali) (id: claim_122e26aa)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Definition 3.5 (Connective constants for infinite graphs) of arXiv:2604.02746: Zero-Freeness of the Hard-Core Model with Bounded Connective (id: claim_479db889)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    <- depends_on: Definition 3.1 (Log-depth connective constant [SSŠY17]) of arXiv:2604.02746: Zero-Freeness of the Hard-Core Model with Bounded Connective Co (id: claim_7efbe855)  (The card uses the concept 'connective constant'; the target is the store's card defining it.)
+    ... 28 more links (--id claim_d962bfc2)
+[8] Open problem (arXiv:2510.24568): What conditions on the growth rate of (a n) guarantee that the associated Rademacher  (id: claim_22b6d187bfd98a06c890a4459073cf82d8c1362df225c416757da8f85be0df6f; claim; score 18.42)
+    found by wording 2 (rank 4)
+    matched: growth, rate, walks, "growth rate" (title)
+    [OPEN PROBLEM - not a proved fact. Stated in arXiv:2510.24568, 'Recurrence, transience and anti-concentration of Rademacher random walks' (problem environment labelled prob:main).] What conditions on the growth rate of $(a_n)$ guarantee that the associated Rademacher random walk is transient? What growth conditions guarantee that the Rademacher random walk is weakly recurrent? (Verbatim from the paper's TeX; symbols are the source paper's. Stated as open/conjectural; no resolution of it was found in the paper's own text by the rules of problem_index.py - a paper may still prove special cases of a conjecture it states.)
+    -> depends_on: Random walk (id: claim_eecc07db)  (The card uses the concept 'random walk'; the target is the store's card defining it.)

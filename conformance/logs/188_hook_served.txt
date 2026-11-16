@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Lemma 6 of arXiv:2609.01789 (points elliptic curves induced Fibonacc
+# command: math_sense.py < event.json
+# seconds: 72.17
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0032-log", "prompt": "I am working on this: Lemma 6 of arXiv:2609.01789 (points elliptic curves induced Fibonacci triples' None eight). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Lemma 6 of arXiv:2609.01789 [lemma]: [Lemma 6 of arXiv:2609.01789, 'Ranks and integer points on elliptic curves induced by Fibonacci triples'] None of the eight classes \\[ Q+T,\\qquad Q+P+T,\\qquad T\\in\\{O,A,B,C\\}, \\] contains an integer point on $E_k$.\n    (claim_44364c67e6fa4d24c90ab2919138e7eb5879b0e169453f0de11d1d84e300a2c0 | lemma +proof; draft; unreviewed; unverified | matched: 01789, fibonacci, triples)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Lemma 6 of arXiv:2609.01789 [lemma]: [Lemma 6 of arXiv:2609.01789, 'Ranks and integer points on elliptic curves induced by Fibonacci triples'] None of the eight classes \[ Q+T,\qquad Q+P+T,\qquad T\in\{O,A,B,C\}, \] contains an integer point on $E_k$.
+    (claim_44364c67e6fa4d24c90ab2919138e7eb5879b0e169453f0de11d1d84e300a2c0 | lemma +proof; draft; unreviewed; unverified | matched: 01789, fibonacci, triples)

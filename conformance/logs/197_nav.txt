@@ -1,0 +1,53 @@
+# navigation: how do I import the store
+# command: navigation/nav_query.py "how do I import the store"
+# seconds: 2.09
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 12.5, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] Append-only SQLite store for mathematical claims, evidence, and graph edges.  (id 2c814dbf33a0, src/math_brain/store.py, 1379 lines)
+    Append-only SQLite store for mathematical claims, evidence, and graph edges.
+    keywords: ClaimBatchItem, ClaimBatchManifest, StoreSchemaError, UnknownEdgeKindError, UnknownEdgeKindWarning, ResearchStore, math store, edges
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+[file] Bounded-latency append-only store for the typed temporal error graph.  (id 103fa01b0297, framework/dreaming/error_graph/store.py, 1259 lines)
+    Bounded-latency append-only store for the typed temporal error graph.
+    keywords: PrivacyViolation, AggregateConflictError, PromptAggregate, GraphStore, MemoryStore, dreaming, math store
+    -> in_dir: error_graph  [8262de9e7785 framework/dreaming/error_graph/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] SQLite store for the deployment-local project memory sidecar.  (id f94af994b70e, framework/dreaming/project_memory/store.py, 627 lines)
+    SQLite store for the deployment-local project memory sidecar.
+    keywords: utc_now, state_root, config_path, database_path, prompt_ledger_path, ProjectMemoryStore, dreaming, math store
+    -> in_dir: project_memory  [b58bdfea6d89 framework/dreaming/project_memory/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] Bring a folder of existing documents into the store as provisional reference records, one record per file.  (id 2b1ede4f8489, examples/field_brain_starter/import_docs.py, 155 lines)
+    Bring a folder of existing documents into the store as provisional reference records, one record per file. python import_docs.py ../handbook --dry-run # list what would be written, write nothing python import_docs.py ../handbook # write the records and their index lines python import_docs.py --se...
+    keywords: documents, strip_frontmatter, describe, record_for, run, selftest, main, math store
+    -> in_dir: field_brain_starter  [5108ae12ba5d examples/field_brain_starter/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] Rebuild a population store from the JSONL export. Never writes the live store.  (id aee61a992fd8, tools/import_store.py, 288 lines)
+    Rebuild a population store from the JSONL export. Never writes the live store. An export you cannot restore from is not a backup, so this is the other half of export_store.py and the two are tested against each other: python tools/import_store.py --out local/population/restored.sqlite3 python too...
+    keywords: read_export, schema_ddl, build_db, digest_failures, roundtrip, main, math store, export
+    -> in_dir: tools  [60256deba816 tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: export  [c9d454400280 concept]  (export)
+[file] Agent tools  (id eaf6572f4275, agent_tools/README.md, 78 lines)
+    These are the scripts agents call while they work. Each one reads a store built from export/population/ with tools/import_store.py.
+    keywords: which commands does an agent run whil..., how do I look up a theorem or proof i..., Start here: the default recall workflow, Fast recall, How to search, What the tools write, and the encoder, Wiring the hook, recall, hooks, agents, math store, export
+    -> documents: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> links_to: Giving an agent the store  [64d6e72fa1f7 AGENTS_GUIDE.md]  (the agent guide)
+    -> links_to: Tests  [f62d7a06119a TESTS.md]  (tests)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    ... 10 more links (--id eaf6572f4275)
+[readme_section] 1. Build the store  (id 3fe3f6992aae, AGENTS_GUIDE.md#1-build-the-store)
+    The import takes about a minute on a laptop and writes a database of well over 100 MB with some 61,000 rows; it ends by reporting how many rows fail their stored digest, which should be none. If the last line prints cards with ids, the store works; the first search takes longer than later ones...
+    keywords: math store, cards
+    -> in_dir: Giving an agent the store  [64d6e72fa1f7 AGENTS_GUIDE.md]
+[file] Strict discovery-only import boundary for local ProofSwarm tickets.  (id 4172504e3e1e, src/math_brain/proofswarm.py, 356 lines)
+    Strict discovery-only import boundary for local ProofSwarm tickets.
+    keywords: ProofSwarmImportCandidate, import_proofswarm_ticket
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]

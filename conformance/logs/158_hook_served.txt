@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Lemma bound_on_tail of arXiv:2411.07878 (adapted filtration Fix set 
+# command: math_sense.py < event.json
+# seconds: 93.08
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0002-log", "prompt": "I am working on this: Lemma bound_on_tail of arXiv:2411.07878 (adapted filtration Fix set equation equation Moreover equation). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Lemma bound_on_tail of arXiv:2411.07878 [lemma]: [Lemma bound_on_tail of arXiv:2411.07878, 'Bernstein-type and Bennett-type inequalities for unbounded matrix martingales'] Let $X_1, \\dots, X_n$ be non-negative random variables adapted to a filtration $(\\mathscr{F}_i)^n_{i=1}$, $\\alpha > 0$, and $U_i \\coloneqq \\norm*{X_i \\bigm| \\mathscr{F}_{i-1}}_{\\psi_{\\alpha}} \\in [0, \\infty]$. Fix $U \\ge K > 0$ and set \\[ E_n \\coloneqq \\lrc{\\sum^n_{i=1} U^2_i \\le U^2,~\\max_{i\\in [n]} U_i \\le K }. \\] Then for any $\\tau \\ge K$ \\begin{equ...\n    (claim_275e66c2ea53144122718c5353d021c2c0e9d45a65c70cb0373f4dc473c6c526 | EXCERPT, incomplete; lemma +proof; draft; unreviewed; unverified | matched: 07878, equation, tail)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Lemma bound_on_tail of arXiv:2411.07878 [lemma]: [Lemma bound_on_tail of arXiv:2411.07878, 'Bernstein-type and Bennett-type inequalities for unbounded matrix martingales'] Let $X_1, \dots, X_n$ be non-negative random variables adapted to a filtration $(\mathscr{F}_i)^n_{i=1}$, $\alpha > 0$, and $U_i \coloneqq \norm*{X_i \bigm| \mathscr{F}_{i-1}}_{\psi_{\alpha}} \in [0, \infty]$. Fix $U \ge K > 0$ and set \[ E_n \coloneqq \lrc{\sum^n_{i=1} U^2_i \le U^2,~\max_{i\in [n]} U_i \le K }. \] Then for any $\tau \ge K$ \begin{equ...
+    (claim_275e66c2ea53144122718c5353d021c2c0e9d45a65c70cb0373f4dc473c6c526 | EXCERPT, incomplete; lemma +proof; draft; unreviewed; unverified | matched: 07878, equation, tail)

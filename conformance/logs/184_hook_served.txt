@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Theorem Thm:time_const of arXiv:2411.13030 (deterministic function d
+# command: math_sense.py < event.json
+# seconds: 77.16
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0028-log", "prompt": "I am working on this: Theorem Thm:time_const of arXiv:2411.13030 (deterministic function depending equation equation almost surely Proof). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Theorem Thm:time_const of arXiv:2411.13030 [concept]: [Theorem Thm:time_const of arXiv:2411.13030, 'Classification of the limit shape for 1+1-dimensional FPP'] Let $G$ be any probability measure on $[0, \\infty)$. Then there exists a convex, deterministic function $\\Lambda: [0,\\infty) \\to [0, \\infty)$ depending on $G$ such that \\begin{equation} \\Lambda(\\nu)=\\lim_{n\\to \\infty} \\frac 1 n T((0,0),(n,{\\lceil v n \\rceil})). \\end{equation} almost surely and in $L^1$. (Proof in the paper; no proof environment follows the statement in...\n    (claim_f4518a317e841ac409b782f07823a705ebc6b0ef1aed5d854eb665ae5f973f69 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: 13030, const, deterministic)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Theorem Thm:time_const of arXiv:2411.13030 [concept]: [Theorem Thm:time_const of arXiv:2411.13030, 'Classification of the limit shape for 1+1-dimensional FPP'] Let $G$ be any probability measure on $[0, \infty)$. Then there exists a convex, deterministic function $\Lambda: [0,\infty) \to [0, \infty)$ depending on $G$ such that \begin{equation} \Lambda(\nu)=\lim_{n\to \infty} \frac 1 n T((0,0),(n,{\lceil v n \rceil})). \end{equation} almost surely and in $L^1$. (Proof in the paper; no proof environment follows the statement in...
+    (claim_f4518a317e841ac409b782f07823a705ebc6b0ef1aed5d854eb665ae5f973f69 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: 13030, const, deterministic)

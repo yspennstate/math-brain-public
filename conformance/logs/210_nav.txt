@@ -1,0 +1,65 @@
+# navigation: cited works
+# command: navigation/nav_query.py "cited works"
+# seconds: 2.49
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] Works cited by the papers in this repository  (id 30ffb84a0177, docs/cited-works.md, 917 lines)
+    Every work cited in a bibliography (a .bib file or a thebibliography list) of a paper or manuscript in this repository, merged across papers. Each entry gives a DOI, arXiv or web link when the source gave one, and the folders whose papers cite it. Only bibliographic data is listed; the cited...
+    keywords: which papers and books do the reposit..., bibliography of the references used, edges
+    -> in_dir: docs  [11eb2a0ced03 docs/]
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    <- links_to: Documentation  [4b912d57ae4a docs/README.md]  (cited-works.md)
+    <- links_to: tools  [74bb75ce60b8 tools/README.md]  (../docs/cited-works.md)
+[file] Collect every work cited by the papers in the public math-brain repo (.bib entries and thebibliography lists),  (id 4a34860f2d54, tools/cited_works.py, 139 lines)
+    Collect every work cited by the papers in the public math-brain repo (.bib entries and thebibliography lists), merge them and write docs/cited-works.md. Bibliographic data only; the cited works themselves are not copied. usage: python cited_works.py <repo> [--write]
+    keywords: paper_of, detex, norm, add
+    -> in_dir: tools  [60256deba816 tools/]
+[file] Documentation  (id 4b912d57ae4a, docs/README.md, 78 lines)
+    The pages in this folder, grouped by what you came to do.
+    keywords: which page explains what I want to do, Build a brain for your own field, Connect agents to a brain, Notes that reach an agent while it works, What the tests measured, The math store itself, Publishing safely, agents, math store, tests
+    -> documents: docs  [11eb2a0ced03 docs/]
+    -> documents: skills  [35d1a54901d5 agent_tools/skills/]
+    -> documents: setup-questions-2026-11  [ecdadbe356d0 docs/setup-questions-2026-11/]
+    -> in_dir: docs  [11eb2a0ced03 docs/]
+    -> links_to: Block-resampling kurtosis ladder, 2026-08-29  [05f62278aa63 docs/fpp_l2prime_ladder_20260829.md]  (fpp_l2prime_ladder_20260829.md)
+    -> links_to: Mistake-first recall  [08e66dc91df8 framework/docs/mistake-first-recall.md]  (../framework/docs/mistake-first-recall.md)
+    ... 56 more links (--id 4b912d57ae4a)
+[file] Running the brain agentically  (id 89e8c3473a0d, docs/agentic/README.md, 51 lines)
+    The brain is a store of memories, cards and links that an AI agent reads before it works and writes back to when it learns something. Most of what makes it useful only happens when the agent runs for a long time on its own: it recalls, works, saves, and comes back to the same job an hour later...
+    keywords: The short version, How this relates to the rest of the r..., agents, math store, cards, edges
+    -> documents: skills  [35d1a54901d5 agent_tools/skills/]
+    -> documents: agentic  [95ddede37624 docs/agentic/]
+    -> in_dir: agentic  [95ddede37624 docs/agentic/]
+    -> links_to: GitHub as the brain's storage  [1cda5cd252f1 docs/agentic/github-as-storage.md]  (github-as-storage.md)
+    -> links_to: skills  [35d1a54901d5 agent_tools/skills/]  (../../agent_tools/skills/)
+    -> links_to: Using the brain to keep an agent moving  [3cdd6cc922a8 docs/agency.md]  (docs/agency.md)
+    ... 17 more links (--id 89e8c3473a0d)
+[file] agentA — the AI work group (defined 2026-07-06, trimmed to 5 on 2026-07-07)  (id ce965340e663, framework/fleet/agentA/README.md, 66 lines)
+    agentA is the named group of AI sessions that were running when the laptop hard-crashed twice on 2026-07-06 (17:31 and ~18:45, GPU/PCIe load-correlated). They run headless and windowless in the background, each resumed from its own transcript so context and memories carry over.
+    keywords: what was the original group of agents..., Commands, How it works, Session lifecycle files, Ground rules baked into every prompt
+    -> documents: agentA  [02b540c197c0 framework/fleet/agentA/]
+    -> in_dir: agentA  [02b540c197c0 framework/fleet/agentA/]
+    <- in_dir: How it works  [2d697f0e2f6f framework/fleet/agentA/README.md]
+    <- in_dir: Commands  [8759e7391765 framework/fleet/agentA/README.md]
+    <- in_dir: Ground rules baked into every prompt  [c585c859dfcc framework/fleet/agentA/README.md]
+    <- in_dir: Session lifecycle files  [e3e8af2e7f5b framework/fleet/agentA/README.md]
+[file] How the math brain works, and how to move through it  (id 8280f50a1aa6, agent_tools/MATH_BRAIN_HOW_IT_WORKS.md, 111 lines)
+    The public snapshot of 1 November 2026 holds 13,344 cards (theorems, conjectures, techniques, attempts, sources) and 23,287 live links between them. Seven cards in ten have one to three links, thirteen hubs have over a hundred, and 406 cards have none at all; those can only be found by their...
+    keywords: Searching, Links, Links that grow stronger with use, Spreading (--depth 2), When the words miss, Costs, cards, edges, open problems
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: open problems  [7e7dc94e3115 concept]  (open problems)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+    <- links_to: Using the brain to keep an agent moving  [3cdd6cc922a8 docs/agency.md]  (agent_tools/MATH_BRAIN_HOW_IT_WORKS.md)
+[file] lemma_fidelity_check.py - does each 10 Aug campaign lemma say what its cited source line says?  (id aa198d4de580, framework/brain_graph/bin/lemma_fidelity_check.py, 87 lines)
+    lemma_fidelity_check.py - does each 10 Aug campaign lemma say what its cited source line says? Source fidelity and mathematical truth are separate questions; this answers only the first, by machine, where it can. For every lemma of the batch, each equation or inequality in its statement (a window...
+    keywords: norm, windows, source_text, check, main
+    -> in_dir: bin  [9e34645c1394 framework/brain_graph/bin/]
+[file] Controls for the math hook's named-result sub-queries: a cited name keeps the card it names.  (id 860d57687b5f, framework/dreaming/test_named_title.py, 87 lines)
+    Controls for the math hook's named-result sub-queries: a cited name keeps the card it names. N1 _named_title_match: accents fold, inequality/estimate/bound are one kind, a one-word name is a whole word, and a different kind or a different name does not match N2 MATHBRAIN_NAMED_ACCENT_FOLD=0 leave...
+    keywords: check, Node, Hit, fresh, ids, main, dreaming, hooks, cards
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: hooks  [806d2e927001 concept]  (hooks)
+    -> mentions: cards  [966e0d787982 concept]  (cards)

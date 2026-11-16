@@ -1,0 +1,52 @@
+# search: Prop incluU arXiv
+# command: math_recall.py "Prop incluU arXiv"
+# seconds: 4.14
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Definition def:covered of arXiv:2602.21315  (id: claim_13552f7a12866be1d2bf833b2748b3934205f44644182cabb95fac998dcd532f; claim; score 5.40)
+    matched: prop, arxiv
+    [Definition def:covered of arXiv:2602.21315, 'The Instability of all Backoff Protocols\thanks{For the purpose of Open Access, the author'] Fix $\lambda \in (0,1),$ a send sequence~$\overline{p}$ with $p_0=1$, and a positive integer~$j$. We consider three properties. \begin{enumerate}[({Prop }1):] \item $C_{\mathrm{F}} W_j j^{\phi}\le \exp(c_{\mathrm{NB}}\lambda\widetilde{W}[j]\,|\Upsilon_{j,\ge\widetilde{W}[j]}|) $. \item $|\Upsilon_{j,\geq j^2}| \geq C_{\Upsilon} \mathrm{L}(j)/(2\lambda)$. \item $|\Upsilon_{j,\ge j^{\chi}}| \ge C_{\Upsilon} \mathrm{LL}(j)/\lambda$. \end{enumerate} \begin{itemize} \item We say that bin $j$ is \emph{many-covered} if (Prop~(cov-prop-1 of the paper)) holds. \item We say that bin $j$ is \emph{heavy-covered} if (Prop~(cov-prop-1 of the paper)) is false and (Prop~(cov-prop-2 of the paper)) holds. \item We say that bin $j$ is \emph{weakly exposed} if (Prop~(cov-prop-1 of the paper)) is false, (Prop~(cov-prop-2 of the paper)) is false, and (Prop~(cov-prop-3 of the paper)) holds. \item We say that bin $j$ is \emph{strongly exposed} if (Prop~(cov-prop-1 of the paper)) is false, (Prop~(cov-prop-2 of the paper)) is false, and (Prop~(cov-prop-3 of the paper)) is false. \end{itemize} We say that bin $j$ is \emph{covered} if it is many-covered or heavy-covered -- that is, if (Prop~(cov-prop-1 of the paper)) or (Prop~(cov-prop-2 of the paper)) holds. We say that bin $j$ is \emph{exposed} if it is weakly exposed or strongly exposed -- that is, if (Prop~(cov-prop-1 of the paper)) is false and (Prop~(cov-prop-2 of the paper)) is false.
+    <- depends_on: Definition def:bottleneck of arXiv:2602.21315 (id: claim_19bf7316)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Lemma lem:OnejVolumeAnalysisAdvancing of arXiv:2602.21315 (id: claim_345f62f0)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Corollary cor:infinite-KMP-bins-2 of arXiv:2602.21315 (id: claim_4d39c464)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Lemma lem:OnejVolumeAnalysis of arXiv:2602.21315 (id: claim_3a25aaac)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Corollary cor:finite-SE-bins of arXiv:2602.21315 (id: claim_420da959)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Theorem thm:goaljkillerSE of arXiv:2602.21315 (id: claim_64152090)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Lemma lem:AdvancingIncj-NoiseFail of arXiv:2602.21315 (id: claim_2ce82359)  (Uses the term 'heavy-covered', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    <- depends_on: Corollary cor:backoff-finite-SE-bins of arXiv:2602.21315 (id: claim_454feef9)  (Uses the term 'strongly exposed', which Definition def:covered of arXiv:2602.21315 introduces (same paper, arxiv:2602.21315).)
+    ... 9 more links (--id claim_13552f7a)
+[2] Prop prop_no_contact_m_le_c of arXiv:2606.23648  (id: claim_5b0b228448c3491cd06b97594b38db664594d390993b9807c2db6b2586c5cb49; claim; score 5.35)
+    matched: prop, arxiv
+    [Prop prop_no_contact_m_le_c of arXiv:2606.23648, '\textsc{Optimal Stopping for a Diffusion with Unobserved Bernoulli Drift}'] If \(k'(0+)\le c\), then we have \( a(x)>-x \) for all $x\in\mathcal I.$
+    -> cites: arXiv:2606.23648 - \textsc{Optimal Stopping for a Diffusion with Unobserved Bernoulli Drift} (id: source_84c67dc)  (Card extracted from arxiv:2606.23648 (its own source_id).)
+[3] Prop prop_no_C3ast of arXiv:2608.29914  (id: claim_d3d22d1a6a1e534cd9a09e40b2e86ad4ad5037f6a95269839845e95fe947810a; claim; score 5.34)
+    matched: prop, arxiv
+    [Prop prop_no_C3ast of arXiv:2608.29914, 'Fixed points in abstract provability structures'] There exists a meet APS that does not satisfy \textup{(C3*)}.
+    -> depends_on: Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' (id: claim_7c73d8b1)  (Uses the term 'meet aps', which Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' introduces (same paper, arxiv:2608.29914))
+    -> cites: arXiv:2608.29914 - Fixed points in abstract provability structures (id: source_9d98b8a)  (Card extracted from arxiv:2608.29914 (its own source_id).)
+[4] Prop Prop asymp 1 pt ED of arXiv:2604.15146  (id: claim_d6f050c65690526fb4e1050e1136f83f5632bb991afd98968c14d718f6732ecd; claim; score 5.33)
+    matched: prop, arxiv
+    [Prop Prop asymp 1 pt ED of arXiv:2604.15146, 'Renormalised two-point functions of CLE$_4$ gaskets'] As $r\to 0$, $$ \mathbb{P}(E_{\mathbb{D}}(r)) = \mathbf{C}_{\rm{SLE}4}^{\rm loop}~ r^{1/8}(1+o(1)), $$ where $\mathbf{C}_{\rm{SLE}4}^{\rm loop}$ is an expectation under $\mu_{\text{SLE}_4}^{\rm loop}$ of an explicit functional, determined in Proposition (Prop asymp 1 pt ED Ver 2 of the paper). (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2604.15146 - Renormalised two-point functions of CLE$_4$ gaskets (id: source_4efa0d4)  (Card extracted from arxiv:2604.15146 (its own source_id).)
+[5] Prop prop_eg2 of arXiv:2608.29914  (id: claim_51952ed9706e3db68dc0225d559586d4157e98e9b94980109403ac3e12a404e5; claim; score 5.33)
+    matched: prop, arxiv
+    [Prop prop_eg2 of arXiv:2608.29914, 'Fixed points in abstract provability structures'] There is an APS which satisfies \textup{(C5)} but does not have a G\"odelian fixed point.
+    -> depends_on: Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' (id: claim_643b4a39)  (Uses the term 'g\"odelian fixed point', which Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' introduces (same paper, arx)
+    -> depends_on: Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' (id: claim_488a63b6)  (Uses the term 'fixed point', which Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' introduces (same paper, arxiv:2608.299)
+    -> cites: arXiv:2608.29914 - Fixed points in abstract provability structures (id: source_9d98b8a)  (Card extracted from arxiv:2608.29914 (its own source_id).)
+[6] Prop prop_FP_godel of arXiv:2608.29914  (id: claim_11d7f7255dc15ab907022cdf493d149b4f274933082fa093a219e84fcedadf93; claim; score 5.32)
+    matched: prop, arxiv
+    [Prop prop_FP_godel of arXiv:2608.29914, 'Fixed points in abstract provability structures'] Let $S$ be a meet APS satisfying \textup{(FP)}. Then $\mathsf{E}_S(\boxtimes)$ holds.
+    -> depends_on: Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' (id: claim_7c73d8b1)  (Uses the term 'meet aps', which Unnumbered defn of arXiv:2608.29914, 'Fixed points in abstract provability structures' introduces (same paper, arxiv:2608.29914))
+    -> cites: arXiv:2608.29914 - Fixed points in abstract provability structures (id: source_9d98b8a)  (Card extracted from arxiv:2608.29914 (its own source_id).)
+[7] Prop prop_primary of arXiv:2609.04000  (id: claim_4b0f4b41383f6b13d934594b3b6f60039a9b10d159e28cf8f72809571e4f517e; claim; score 5.32)
+    matched: prop, arxiv
+    [Prop prop_primary of arXiv:2609.04000, 'The type and cardinality of minimal presentations of \\ numerical semigroups with embeddin'] If $\langle d_0,d_1,d_2,d_3 \rangle$ is primary, then $R \cap \{z \leq a_{33}\}$ is an $L$-shape.
+    -> cites: arXiv:2609.04000 - The type and cardinality of minimal presentations of \\ numerical semigroups with embeddin (id: source_6faaff0)  (Card extracted from arxiv:2609.04000 (its own source_id).)
+[8] Prop prop_eg3 of arXiv:2608.29914  (id: claim_4277ce936477c222912a46bb906858b8a14c0f03e7e349403f5684255f4313d7; claim; score 5.31)
+    matched: prop, arxiv
+    [Prop prop_eg3 of arXiv:2608.29914, 'Fixed points in abstract provability structures'] There is an APS satisfying \textup{(C5)} based on a Boolean algebra such that there is an element $x$ with $\boxtimes x \neq \Box \neg x$.
+    -> cites: arXiv:2608.29914 - Fixed points in abstract provability structures (id: source_9d98b8a)  (Card extracted from arxiv:2608.29914 (its own source_id).)
+WEAK MATCH (a hint): the best score is 5.40, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

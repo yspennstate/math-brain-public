@@ -1,0 +1,51 @@
+# navigation: formal verification with lean
+# command: navigation/nav_query.py "formal verification with lean"
+# seconds: 2.52
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] Fail-closed local Lean verification with an immutable execution envelope.  (id 978dcb3474ae, src/math_brain/lean.py, 2178 lines)
+    Fail-closed local Lean verification with an immutable execution envelope. Kernel acceptance and statement fidelity remain separate authorities. This module only produces a kernel-check result; it never signs or persists evidence.
+    keywords: sha256_file, LeanResult, check_lean_file, LeanEvidenceAttempt, LocalLeanEvidenceAuthority, FormalStatementBinding, claim_statement_hash, bind_formal_statement, StatementFidelityReview, FidelityEvidenceAttempt, LocalFormalizationFidelityAuthority, formal verification
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+[file] ProofSwarm  (id 92e069969004, framework/methods/proofswarm/README.md, 108 lines)
+    ProofSwarm is a local multi-agent mathematical review and discovery system. Its normal and only enabled execution path has zero marginal API cost:
+    keywords: how do several agents review a proof ..., Safety boundary, Quick start, Lean verification contract, Tests, Repository map, agents, tests, formal verification
+    -> documents: proofswarm  [3f459476dce8 framework/methods/proofswarm/]
+    -> in_dir: proofswarm  [3f459476dce8 framework/methods/proofswarm/]
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+    <- in_dir: Lean verification contract  [25fa1750fecd framework/methods/proofswarm/README.md]
+    ... 4 more links (--id 92e069969004)
+[file] Formal verification  (id 2af750813d55, docs/formal-verification.md, 123 lines)
+    The repository pins Lean in formal/lean-toolchain and keeps the trusted source surface independent of external theorem libraries. lakefile.toml is accepted only as declarative project metadata: the authority runner never launches Lake, an Elan proxy, a shell, a script, or a network-capable...
+    keywords: how are proofs checked with Lean, are the proofs machine checked in a p..., Local authority runner, Named declarations and authority, Human formalization-fidelity authority, What a kernel check proves, Reproducibility, formal verification
+    -> in_dir: docs  [11eb2a0ced03 docs/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+    <- links_to: Documentation  [4b912d57ae4a docs/README.md]  (formal-verification.md)
+[file] Scope-aware status promotion for mathematical claims.  (id 7dcfe29a1675, src/math_brain/verification.py, 544 lines)
+    Scope-aware status promotion for mathematical claims.
+    keywords: EvidenceKeyPolicy, evidence_authorization_mac, EvidenceVerifier, PromotionDecision, formal_lineage, decide_promotion, PromotionApplication, register_authenticated_evidence, recompute_current_status, derive_and_record_status
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+[file] lean-toolchain  (id de443c252eaa, formal/lean-toolchain, 1 lines)
+    keywords: formal verification
+    -> in_dir: formal  [794ce2597c6f formal/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+[file] MathBrain.lean  (id f38dc4369113, formal/MathBrain.lean, 1 lines)
+    import MathBrain.Basic
+    keywords: formal verification
+    -> in_dir: formal  [794ce2597c6f formal/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+[file] Basic.lean  (id 2a6483739dc3, formal/MathBrain/Basic.lean, 16 lines)
+    namespace MathBrain
+    keywords: formal verification
+    -> in_dir: MathBrain  [95d680583386 formal/MathBrain/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+[file] Exact-source local Lean 4 verification.  (id d4980b78aa37, framework/methods/proofswarm/proofswarm/tools/lean_verify.py, 319 lines)
+    Exact-source local Lean 4 verification. No HTTP, Cloud Run, credentials, or fallback path exists here. The exact UTF-8 source whose digest is returned is the source passed to ``lake env lean``.
+    keywords: compose_lean_source, lean_verify, hash_lean_artifact, formal verification
+    -> in_dir: tools  [da252c8b056d framework/methods/proofswarm/proofswarm/tools/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)

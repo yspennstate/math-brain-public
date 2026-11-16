@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Lemma 7 of arXiv:2609.02464 (). What is known, and what should I che
+# command: math_sense.py < event.json
+# seconds: 64.01
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0004-log", "prompt": "I am working on this: Lemma 7 of arXiv:2609.02464 (). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Lemma 7 of arXiv:2609.02464 [lemma]: [Lemma 7 of arXiv:2609.02464, 'When does propagation of chaos in the critical Curie-Weiss model stop?'] Let $k=k(N)$ satisfy $k/N^{1/2}\\to\\alpha\\in(0,\\infty)$, and suppose that \\[ W_N=N^{1/4}\\left(U_N-\\frac{1}{2}\\right)\\Rightarrow X. \\] Then \\[ \\frac{\\widetilde{\\mathcal P}_{N,k}-k/2}{\\sqrt{k}}\\Rightarrow Z+\\sqrt{\\alpha}\\,X, \\] where $Z\\sim\\mathcal N(0,1/4)$ is independent of $X$.\n    (claim_193f2576d0dca44f01e9a2eb3d2bae417420a362888ab3706b0091d8356b2c31 | lemma +proof; draft; unreviewed; unverified | matched: 02464, 2609, lemma)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Lemma 7 of arXiv:2609.02464 [lemma]: [Lemma 7 of arXiv:2609.02464, 'When does propagation of chaos in the critical Curie-Weiss model stop?'] Let $k=k(N)$ satisfy $k/N^{1/2}\to\alpha\in(0,\infty)$, and suppose that \[ W_N=N^{1/4}\left(U_N-\frac{1}{2}\right)\Rightarrow X. \] Then \[ \frac{\widetilde{\mathcal P}_{N,k}-k/2}{\sqrt{k}}\Rightarrow Z+\sqrt{\alpha}\,X, \] where $Z\sim\mathcal N(0,1/4)$ is independent of $X$.
+    (claim_193f2576d0dca44f01e9a2eb3d2bae417420a362888ab3706b0091d8356b2c31 | lemma +proof; draft; unreviewed; unverified | matched: 02464, 2609, lemma)

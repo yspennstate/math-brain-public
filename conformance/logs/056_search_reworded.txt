@@ -1,0 +1,61 @@
+# reworded search: inhomogeneous Landau--Fermi--Dirac equation' Fix weak solution equation linear
+# command: math_recall.py "inhomogeneous Landau--Fermi--Dirac equation' Fix weak solution equation linear"
+# seconds: 2.09
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation  (id: source_644009a45dd8ce2efc8c9268bfd5538f3d634d5100cb4ce6ad5e44cfbb09dc51; source; score 53.84)
+    matched: fermi, landau, dirac, inhomogeneous, "dirac equation" (title) (+1)
+    Paper the harvested cards were extracted from: arxiv:2608.31071.
+    <- cites: Lemma l.transformed_coefficients of arXiv:2608.31071 (id: claim_bb85ca62)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Lemma l.rescaled_DeGiorgi of arXiv:2608.31071 (id: claim_ec668533)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Theorem thm:upper_bounds of arXiv:2608.31071 (id: claim_dab79c91)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Lemma lem:maximum_principle of arXiv:2608.31071 (id: claim_80783e0c)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Lemma lem:geometry of arXiv:2608.31071 (id: claim_af3a7195)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Lemma lem:semilinear of arXiv:2608.31071 (id: claim_bc177e1d)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Proposition prop:DeGiorgi of arXiv:2608.31071 (id: claim_8ebd3acd)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    <- cites: Proposition prop:existence of arXiv:2608.31071 (id: claim_17dcfff1)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+    ... 20 more links (--id source_644009a)
+[2] Weak Solution  (id: claim_6e7fa49b97873069487ac6cab08369736edb8866e46e98e3caa7226b1b0db45d; claim; score 50.46)
+    matched: fermi, landau, dirac, weak, inhomogeneous (+4)
+    [Definition defn:linear_weak_solution of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] We say that $f$ is a weak solution to (equation eq:linear_kolmogorov of the paper) with initial data $f_{\rm in}\in L^2_{x,v}$ provided $f \in L^\infty([0,T];L^2_{\rm loc}(\mathbb T^3\times\mathbb R^3))$, $\nabla_v f \in L^2_{\rm loc}([0,T]\times\mathbb T^3\times\mathbb R^3)$, and \begin{equation} \iiint f\;(\partial_t + v\cdot\nabla_x)\psi \, {\rm d} v\, {\rm d} x\, {\rm d} t + \iint f_{\rm in}\psi(0) \, {\rm d} v \, {\rm d} x = \iiint \nabla_v \psi \cdot \left[\mathcal A\nabla_v f + \mathcal B\right] \, {\rm d} v \, {\rm d} x \, {\rm d} t \end{equation} for each $\psi \in C^\infty_c([0,T)\times \mathbb T^3\times \mathbb R^3)$.
+    <- depends_on: Lemma lem:linear_compactness of arXiv:2608.31071 (id: claim_5bfed6a0)  (the statement names this definition)
+    <- depends_on: Lemma lem:linear_stability of arXiv:2608.31071 (id: claim_c0f792ba)  (the statement names this definition)
+    <- depends_on: Lemma l.rescaled_DeGiorgi of arXiv:2608.31071 (id: claim_ec668533)  (the statement names this definition)
+    <- depends_on: Proposition prop:higher_regularity of arXiv:2608.31071 (id: claim_b9e5dc71)  (the statement names this definition)
+    <- depends_on: Proposition prop:existence of arXiv:2608.31071 (id: claim_17dcfff1)  (the statement names this definition)
+    <- depends_on: Lemma lem:semilinear of arXiv:2608.31071 (id: claim_bc177e1d)  (the statement names this definition)
+    <- depends_on: Lemma lem:linear_existence of arXiv:2608.31071 (id: claim_3e9a7841)  (the statement names this definition)
+    <- depends_on: Proposition prop:DeGiorgi of arXiv:2608.31071 (id: claim_8ebd3acd)  (the statement names this definition)
+    ... 2 more links (--id claim_6e7fa49b)
+[3] Lemma lem:linear_stability of arXiv:2608.31071  (id: claim_c0f792baba69cd8f330b05ce5013f9f940350187fb4b05d3eb0e1c3c189894ea; claim; score 44.30)
+    matched: fermi, landau, dirac, linear, inhomogeneous (+3)
+    [Lemma lem:linear_stability of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] Assuming the uniform bounds in (lem:linear_compactness of the paper), further suppose that $\mathcal A_n \to \mathcal A$ and $\mathcal B_n \to \mathcal B$ pointwise almost everywhere in $(0,T)\times \mathbb T^3\times \mathbb R^3$ and that $f_{\rm in}^n \to f_{\rm in}$ strongly in $L^2(\mathbb T^3 \times \mathbb R^3)$. Then, any corresponding limit point $f$ satisfies $f \in C_w([0,T];L^2_{x,v})$ and $f$ is a weak solution to (equation eq:linear_kolmogorov of the paper) with coefficients $\mathcal A$ and $\mathcal B$ and initial data $f_{\rm in}$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Weak Solution (id: claim_6e7fa49b)  (the statement names this definition)
+    -> cites: arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation (id: source_644009a)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+[4] Lemma l.rescaled_DeGiorgi of arXiv:2608.31071  (id: claim_ec6685334e21547e7c03e9c2f7e9cd32f5cb7b3b78a17585f54148f2a1e7df64; claim; score 44.25)
+    matched: fermi, landau, dirac, inhomogeneous, equation (+4)
+    [Lemma l.rescaled_DeGiorgi of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] Fix $z_0$. Suppose $g$ is a weak solution to~(equation eq:linear_kinetic of the paper) in $Q_{2r}(z_0)$ with coefficients satisfying~(equation defn:coercivity_assumption of the paper)-(equation defn:bounded_coefficient_assumption of the paper). Suppose that $g \in L^\infty_m$ for some $m \in \mathbb R$. Then there exists $\alpha\in (0,1)$, depending only on $\lambda, \Lambda$, such that \begin{equation} [g]_{C^{0,\alpha}_{\rm kin}(Q_\frac{r}{2}(z_0))} \lesssim \frac{1}{r^\alpha \left\langle v_0 \right\rangle^{m - \frac{3\alpha}{2}}} \left\|g\right\|_{L^\infty_m(Q_{2r}(z_0))}. \end{equation} Recall that $\tilde r = r \left\langle v_0 \right\rangle^{-\nicefrac32}$ and $r = \min\{1, \nicefrac{\sqrt{t_0}}2\}$.
+    -> depends_on: Weak Solution (id: claim_6e7fa49b)  (the statement names this definition)
+    -> cites: arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation (id: source_644009a)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+[5] Lemma lem:semilinear of arXiv:2608.31071  (id: claim_bc177e1db2d6e9849f68eac81a72515540740beec0074d74b4d4916ee8d06667; claim; score 44.20)
+    matched: fermi, landau, dirac, inhomogeneous, weak (+3)
+    [Lemma lem:semilinear of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] Fix any $T>0$, $\kappa>0$, and $m > 2$. Suppose that $f_{\rm in} \in L^\infty_{{\rm rapid}}(\mathbb T^3\times \mathbb R^3)$, $g\in L^\infty(0,T;L^\infty_m)$, and $0 \le g, \,f_{\rm in} \le 1$. Then, there exists a unique weak solution $f\colon[0,T]\times \mathbb T^3 \times \mathbb R^3 \to [0,1]$ to (equation eq:semilinear of the paper) satisfying $f \in C([0,T];L^2_{x,v}) \cap L^2_{t,x}H^1_v$.
+    -> depends_on: Weak Solution (id: claim_6e7fa49b)  (the statement names this definition)
+    -> cites: arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation (id: source_644009a)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+[6] Lemma lem:linear_existence of arXiv:2608.31071  (id: claim_3e9a7841f392955a8e71f156545fc2e6d1df8024003e922553395f9ff07a0847; claim; score 43.89)
+    matched: fermi, landau, dirac, linear, inhomogeneous (+3)
+    [Lemma lem:linear_existence of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] Suppose that $\mathcal A$ is a measurable matrix field satisfying \begin{equation*} \lambda\, \mathrm{Id} \le \mathcal A(t,x,v)\le \Lambda\, \mathrm{Id} \qquad \text{for each }(t,x,v)\in [0,T]\times \mathbb T^3 \times \mathbb R^3. \end{equation*} Suppose further that \begin{equation*} \norm{f_{\rm in}}_{L^2_{x,v}} \le \Lambda \qquad \text{and} \qquad \left\|\mathcal B\right\|_{L^2([0,T]\times \mathbb T^3\times\mathbb R^3)} \le \Lambda. \end{equation*} Then, (equation eq:linear_kolmogorov of the paper) admits a unique weak solution with initial data $f_{\rm in}$. The constructed solution further satisfies $f \in C([0,T];L^2_{x,v})$ and $\nabla_v f\in L^2_{t,x,v}$ with estimates depending only on $\lambda$ and $\Lambda$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Weak Solution (id: claim_6e7fa49b)  (the statement names this definition)
+    -> cites: arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation (id: source_644009a)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+[7] Proposition prop:DeGiorgi of arXiv:2608.31071  (id: claim_8ebd3acdc6d023ae1aafc3361d57029a860571765b0e08290018c858e7b0440d; claim; score 42.77)
+    matched: fermi, landau, dirac, inhomogeneous, equation (+3)
+    [Proposition prop:DeGiorgi of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] Suppose $g$ is a weak solution to (equation eq:linear_kinetic of the paper) in $Q_2$ and satisfies (equation eq:uniform_ellipticity of the paper) in $Q_2$ for some values of $\lambda$ and $\Lambda$. Then, there exists an $\alpha \in (0,1)$ depending only on $\lambda$ and $\Lambda$ so that $g\in C^{0,\alpha}_{\rm kin}(Q_1)$ and \begin{equation} [g]_{C^{0,\alpha}_{\rm kin}(Q_1)} \lesssim \left\|g\right\|_{L^\infty(Q_2)}. \end{equation} The implicit constant depends only on $\lambda$ and $\Lambda$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Weak Solution (id: claim_6e7fa49b)  (the statement names this definition)
+    -> cites: arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation (id: source_644009a)  (Card extracted from arxiv:2608.31071 (its own source_id).)
+[8] Proposition prop:higher_regularity of arXiv:2608.31071  (id: claim_b9e5dc71bb709770eae21e9c31b78ad6526549950c9347376ef3c7453e1091a4; claim; score 40.05)
+    matched: fermi, landau, dirac, inhomogeneous, equation (+2)
+    [Proposition prop:higher_regularity of arXiv:2608.31071, 'Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation'] Suppose $f:[0,T]\times \mathbb T^3 \times \mathbb R^3 \to [0,1]$ is a weak solution to (equation e.LFD of the paper) with nonvacuum initial data in the sense of (d.nonvacuum of the paper) and an element of $L^\infty_m$ for some $m > 5$. Then, $f$ is a classical solution to (equation e.LFD of the paper). Moreover, for any fixed $k \in \mathbb N$, there is $m_0$ such that, if $m \geq m_k$, then \begin{equation*} D^k_{t,x,v} f \in L^\infty. \end{equation*} The constant $m_k$ depends on $k$, $T$, $\|f_{\rm in}\|_{L^\infty_{m_0}}$, and the nonvacuum parameters $r$, $\delta$, and $v_0$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Weak Solution (id: claim_6e7fa49b)  (the statement names this definition)
+    -> cites: arXiv:2608.31071 - Global smooth solutions to the inhomogeneous Landau--Fermi--Dirac equation (id: source_644009a)  (Card extracted from arxiv:2608.31071 (its own source_id).)

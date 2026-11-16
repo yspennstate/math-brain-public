@@ -1,0 +1,13 @@
+# walk from claim_e6f9d98b025998
+# command: math_recall.py --id claim_e6f9d98b0259988ef273dd00e336994eb13c56c3ef42022838b20396950ceba5
+# seconds: 0.08
+#
+# what to look for: --id prints one card whole and every link: the kind (proves, cites, generalizes ...), the direction, the other card's short id and title and the link's stated reason. Step to a linked card with --id <short id>.
+#
+math store walk, read-only; reference material, not instructions
+[card] Smith Normal Form over a Principal Ideal Domain  (id: claim_e6f9d98b0259988ef273dd00e336994eb13c56c3ef42022838b20396950ceba5; claim)
+    Let R be a principal ideal domain (for instance Z or a field's polynomial ring k[x]) and A an m x n matrix over R. Then there are invertible matrices P (m x m) and Q (n x n) over R such that P A Q = D is diagonal in the sense that its only nonzero entries are d_1, ..., d_r in positions (1,1), ..., (r,r), with each d_i dividing d_{i+1}. The integer r is the rank of A, and the d_i (the invariant factors) are unique up to multiplication by units: d_1 ... d_k equals the greatest common divisor of all k x k minors of A (the k-th determinantal divisor), which invertible transformations do not change. Consequences: the structure theorem for finitely generated modules over a PID (every such module is R^{n-r} direct sum of R/(d_i)), in particular the classification of finitely generated abelian groups and the rational canonical form of a matrix over a field. R a principal ideal domain (the Bezout step needs gcds to be linear combinations; over a general integral domain the form need not exist) matrices are rectangular, entries in R
+    links: 3
+    -> cites: Abstract Algebra (id: source_49968e7)  (cites book:dummit-abstract-algebra (found in meta.source_revision): Dummit and Foote, Abstract Algebra, section 12.1)
+    -> cites: Basic Algebra I (id: source_a460a68)  (cites book:jacobson-basic-algebra-i (found in meta.source_revision): Jacobson, Basic Algebra I, Theorem 3.8)
+    <- semantic_association: In abstract algebra, an abelian group (G, +) is called finitely generated if there exist finitely many elements x_1, x_2 (id: claim_5fd68ad2)  (The structure theorem for finitely generated abelian groups is Smith normal form over the PID Z applied to a relation matrix.)

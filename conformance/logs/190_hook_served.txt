@@ -1,0 +1,18 @@
+# prompt hook: I am working on this: Lemma $5.13$, \cite{HeyLod25} (satisfied Moreover function enumerate
+# command: math_sense.py < event.json
+# seconds: 63.51
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0034-log", "prompt": "I am working on this: Lemma $5.13$, \\cite{HeyLod25} (satisfied Moreover function enumerate Proof paper proof environment). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Lemma $5.13$, \\cite{HeyLod25} [concept]: [Lemma 17 (Lemma $5.13$, \\cite{HeyLod25}) of arXiv:2505.06187, 'Preferential Attachment Trees with Vertex Death: Persistence of the Maximum Degree'] $\\,$ \\begin{enumerate}[label=(\\alph*)] \\item Suppose that Assumption~\\eqref{ass:A2} is satisfied and $d=o(b)$. Then, $\\rho_2=o(\\rho_1)$. \\item Suppose that Assumption~\\eqref{ass:A1} is satisfied and that $\\overline d\\coloneq \\limsup_{i\\to\\infty}d(i)<\\infty$. Then, $\\limsup_{k\\to\\infty} \\rho_1(k)/\\varphi_1(k)\\leq \\overline d$. ...\n    (claim_788c125ab4ec56baab404f28e07d7824b7669af3c20fcc7439d1817ccec3bcfc | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: heylod25, satisfied, cite)\n- lean_check.py [external_reference]: \n    (external_de05690d261e1f6859356815e10ba5721e0b78423cec9dd0bfbd462a90fe52f7 | curated; unreviewed; unverified | matched: check)\n- lean_check_outcomes.py [external_reference]: \n    (external_bb5b3516c4e11e2ae3f0e6f6faab37b4fbfbed2b67baeb6fe0a18c5f907cc3ed | curated; unreviewed; unverified | matched: check)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Lemma $5.13$, \cite{HeyLod25} [concept]: [Lemma 17 (Lemma $5.13$, \cite{HeyLod25}) of arXiv:2505.06187, 'Preferential Attachment Trees with Vertex Death: Persistence of the Maximum Degree'] $\,$ \begin{enumerate}[label=(\alph*)] \item Suppose that Assumption~\eqref{ass:A2} is satisfied and $d=o(b)$. Then, $\rho_2=o(\rho_1)$. \item Suppose that Assumption~\eqref{ass:A1} is satisfied and that $\overline d\coloneq \limsup_{i\to\infty}d(i)<\infty$. Then, $\limsup_{k\to\infty} \rho_1(k)/\varphi_1(k)\leq \overline d$. ...
+    (claim_788c125ab4ec56baab404f28e07d7824b7669af3c20fcc7439d1817ccec3bcfc | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: heylod25, satisfied, cite)
+- lean_check.py [external_reference]: 
+    (external_de05690d261e1f6859356815e10ba5721e0b78423cec9dd0bfbd462a90fe52f7 | curated; unreviewed; unverified | matched: check)
+- lean_check_outcomes.py [external_reference]: 
+    (external_bb5b3516c4e11e2ae3f0e6f6faab37b4fbfbed2b67baeb6fe0a18c5f907cc3ed | curated; unreviewed; unverified | matched: check)

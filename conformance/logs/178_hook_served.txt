@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Poisson--Dirichlet approximation of the one-step exponents (arXiv As
+# command: math_sense.py < event.json
+# seconds: 46.87
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0022-log", "prompt": "I am working on this: Poisson--Dirichlet approximation of the one-step exponents (arXiv Asymptotic height Plancherel random trees' Fix integer). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Poisson--Dirichlet approximation of the one-step exponents [lemma]: [Lemma 29 (Poisson--Dirichlet approximation of the one-step exponents) of arXiv:2604.25877, 'Asymptotic height of Plancherel random trees'] Fix $t>1$. For an integer $k\\ge2$, let $(A^{(u)}_i)_{1\\le i\\le d(u)}$ be the multiset of block sizes in the $\\mathrm{Ewens}(k-1,\\theta)$ partition at a node $u$ with $K(u)=k$. We define the one-step exponent: \\begin{equation*} \\kappa_k(t):=\\log\\, \\E\\!\\left[\\sum_{i=1}^{d(u)}\\left(\\frac{A^{(u)}_i}{k-1}\\right)^t\\ \\Big|\\ K(u)=k\\right]. \\en...\n    (claim_13d8eb88edef1c3845c29d345810189669470ef664dd21bbc0f3987a0352f75c | EXCERPT, incomplete; lemma +proof; draft; unreviewed; unverified | matched: one-step, plancherel, exponents)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Poisson--Dirichlet approximation of the one-step exponents [lemma]: [Lemma 29 (Poisson--Dirichlet approximation of the one-step exponents) of arXiv:2604.25877, 'Asymptotic height of Plancherel random trees'] Fix $t>1$. For an integer $k\ge2$, let $(A^{(u)}_i)_{1\le i\le d(u)}$ be the multiset of block sizes in the $\mathrm{Ewens}(k-1,\theta)$ partition at a node $u$ with $K(u)=k$. We define the one-step exponent: \begin{equation*} \kappa_k(t):=\log\, \E\!\left[\sum_{i=1}^{d(u)}\left(\frac{A^{(u)}_i}{k-1}\right)^t\ \Big|\ K(u)=k\right]. \en...
+    (claim_13d8eb88edef1c3845c29d345810189669470ef664dd21bbc0f3987a0352f75c | EXCERPT, incomplete; lemma +proof; draft; unreviewed; unverified | matched: one-step, plancherel, exponents)

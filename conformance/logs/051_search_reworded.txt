@@ -1,0 +1,52 @@
+# reworded search: arXiv Algorithmic threshold high-dimensional projection pursuit general theory'
+# command: math_recall.py "arXiv Algorithmic threshold high-dimensional projection pursuit general theory'"
+# seconds: 5.10
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory  (id: source_528385059b2b465a0f8c2f241d288b525c8407dc68e1457ff3cef6b5031bed79; source; score 57.24)
+    matched: pursuit, algorithmic, high-dimensional, projection, threshold (+4)
+    Paper the harvested cards were extracted from: arxiv:2608.29416.
+    <- cites: regularity for SDE coefficients (id: claim_016084ac)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: Lem 67 of arXiv:2608.29416 (id: claim_63f4cd05)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: proved in \S\ref{ss:k-orth-replica}--\ref{ss:fp-eval} (id: claim_992d04da)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: SDE coefficients with spatial smoothing and coordinate sum projection (id: claim_556f2b61)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: Definition 227 of arXiv:2608.29416 (id: claim_49239c1b)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: Lem 155 of arXiv:2608.29416 (id: claim_0fd17f73)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: Cor 163 of arXiv:2608.29416 (id: claim_1a27b956)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    <- cites: quenched first moment bounds on $\tilde{Q}$ and $\tilde{Q}^\frozen$ (id: claim_f22e234e)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+    ... 247 more links (--id source_5283850)
+[2] \textbf{informal statement of main result for symmetrized projection pursuit}  (id: claim_dbf4dde86042109451d816cb14095f5c4ce97e4827545400d5085624b23bfa9e; claim; score 40.92)
+    matched: pursuit, projection, algorithmic, high-dimensional, threshold (+4)
+    [Thm 218 (\textbf{informal statement of main result for symmetrized projection pursuit}) of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] A measure $\mu$ on the real line can be approximated by a symmetrized projection pursuit measure $\mu_{\bG,\sym}(\bx)$ (as defined by \eqref{eq:symmetrized-empirical-measure-intro}), with $\bx$ the output of a Lipschitz algorithm \eqref{eq:algorithms-as-maps}, if and only if: \begin{enumerate}[(a)] \item (for the spherical setting, where $\bx$ must lie near $S_N$) $\mu$ lies in $\bar{\cM}^{\sph,\sym}(\alpha)$; \item (for the Ising setting, where $\bx$ must lie near $\Sigma_N$) $\mu$ lies in $\bar{\cM}^{\Ising,\sym}(\alpha)$. \end{enumerate} The sets $\bar{\cM}^{\sph,\sym}(\alpha)$ and $\bar{\cM}^{\Ising,\sym}(\alpha)$ are specified by Definition~\ref{d:achievable-msrs-sym}. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Lipschitz algorithms (id: claim_df9c3f11)  (Uses the term 'lipschitz algorithm', which Lipschitz algorithms introduces (same paper, arxiv:2608.29416).)
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+[3] Lem 82 of arXiv:2608.29416  (id: claim_32f92528494bc81ee0ff7e2b534ec6f1e7c928d12c63e77ad980c14f380343ca; claim; score 40.66)
+    matched: pursuit, algorithmic, high-dimensional, projection, threshold (+3)
+    [Lem 82 of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] For all $q_0 \in [0,1)$, we have $\sM^{\svii}(\alpha,q_0)\subseteq \sM^{\sviii}(\alpha,q_0)$.
+    -> depends_on: stochastic control and achievable measures for symmetrized projection pursuit (id: claim_330dd588)  (Uses the term 'endpoint condition', which stochastic control and achievable measures for symmetrized projection pursuit introduces (same paper, arxiv:2608.29416)
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+[4] \textbf{main result for symmetrized projection pursuit}  (id: claim_fe3f4e950be5b2a4d14ac9253639f4db3dc8bebce65d4c5bd20233d76e67c214; claim; score 40.64)
+    matched: pursuit, projection, algorithmic, high-dimensional, threshold (+4)
+    [Thm 228 (\textbf{main result for symmetrized projection pursuit}) of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] The following holds in the Ising (resp. spherical) cases. \begin{enumerate}[(a)] \item If $\mu \in \ocM^{\Ising,\sym}(\alpha)$ (resp. $\ocM^{\sph,\sym}(\alpha)$), for any $\iota > 0$ there exist $L$ large enough and $c$ small enough such that for sufficiently large $N$, there exists an $L$-Lipschitz algorithm that $(\iota,1-e^{-cN})$-symmetrically attains $\mu$. \item For any $\fq \in [1,2)$ and $\iotamsr > 0$, there exists small $\iotasol > 0$ such that the following holds. For any $L$, there exists small $c>0$ such that for sufficiently large $N$, all $L$-Lipschitz algorithms are $(\fq, \iotamsr,\iotasol,1-e^{-cN})$-symmetrcally confined to $\ocM^{\Ising,\sym}(\alpha)$. \end{enumerate} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Lipschitz algorithms (id: claim_df9c3f11)  (Uses the term 'lipschitz algorithm', which Lipschitz algorithms introduces (same paper, arxiv:2608.29416).)
+    -> depends_on: Definition 227 of arXiv:2608.29416 (id: claim_49239c1b)  (Uses the term 'symmetrically attains', which Definition 227 of arXiv:2608.29416 introduces (same paper, arxiv:2608.29416).)
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+[5] Ppn 76 of arXiv:2608.29416  (id: claim_29798e5d9fe6f82d2a85e991a77079995f8771db36176ae79cfd5db7412362da; claim; score 40.06)
+    matched: pursuit, algorithmic, high-dimensional, projection, threshold (+3)
+    [Ppn 76 of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] We have $\gamma(1) \ge 1 - 4\epsilon^{1/2}$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+[6] Lem 7 of arXiv:2608.29416  (id: claim_2bbc8c3769df8dbe44bcebf9b74232fdac8b72fa53ad4c36ee19a1f6ec9cbaee; claim; score 39.33)
+    matched: pursuit, algorithmic, high-dimensional, projection, threshold (+3)
+    [Lem 7 of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] We have $F_{\star,\lambda,\mu}(\hY) = F_{\diamond,\lambda,\mu} (\hv,\hx,\hvw)$, where the correspondence between $\hY=(\hvB,\hvv,\hvU,\hvw)$ and $(\hv,\hx,\hvw)$ is given by \eqref{eq:fp-hx}.
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+[7] Definition 229 of arXiv:2608.29416  (id: claim_2eaf2ad54a9cea7f277ee8caebb78d71579cbcf1b1add62026dd468b1be96f1f; claim; score 38.63)
+    matched: pursuit, algorithmic, high-dimensional, projection, threshold (+3)
+    [Dfn 229 of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] For $L,\epsilon> 0$, we say $\cA_N$ is an \textbf{$\epsilon$-approximate $L$-Lipschitz algorithm} if it satisfies \[\bbW_2(\mu^{\Ising}(\cA_N),\cP(\{\pm 1\})) \le \epsilon\] in addition to the conditions from Definition~\ref{d:Lip}.
+    -> depends_on: Lipschitz algorithms (id: claim_df9c3f11)  (Uses the term 'lipschitz algorithm', which Lipschitz algorithms introduces (same paper, arxiv:2608.29416).)
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)
+[8] Ppn 28 of arXiv:2608.29416  (id: claim_690c9ef6015c95b4c322105abdbe3ae01b20bd46d709a41fa4ce700b447d8cb9; claim; score 38.63)
+    matched: pursuit, algorithmic, high-dimensional, projection, threshold (+3)
+    [Ppn 28 of arXiv:2608.29416, 'Algorithmic threshold for high-dimensional projection pursuit I: general theory'] For $F_\diamond$ as in \eqref{e:fp-Fdiam} and $F^{\rvi}$ as in \eqref{e:F.rvi}, we have \[\P\bigg(F^{\rvi} \ge F_\diamond + \frac{\epsilon'}{5}\bigg) \le e^{-cN}\,.\] (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2608.29416 - Algorithmic threshold for high-dimensional projection pursuit I: general theory (id: source_5283850)  (Card extracted from arxiv:2608.29416 (its own source_id).)

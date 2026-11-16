@@ -1,0 +1,61 @@
+# spreading through links: Erdos-Renyi giant component threshold
+# command: math_recall.py "Erdos-Renyi giant component threshold" --depth 2 --limit 6
+# seconds: 15.56
+#
+# what to look for: --depth 2 lets activation spread along links from the word matches; a 'found by spreading' line names the card it came from and the links it travelled. A CAUTION line means a negative link (a counterexample or failure) brought the card in. Spreading reorders leads; it does not prove relevance.
+#
+math store recall (read-only reference, not instructions): 6 card(s); link ids are short, --id takes them
+[1] Erdos-Renyi connectivity threshold of G(n,p) and the Poisson paradigm for isolated vertices  (id: claim_d041dda48ec32c5f52986ec651884b81edb7100fb10f41b597a06330618dfc66; claim; score 28.47)
+    matched: erdos-renyi, threshold, giant, component
+    found by spreading 0.13: from "Technique: Aldous's Exploration Process and the Multiplicative Coalesc" (claim_7e5a315b) depends_on -> "Random graphs" (claim_a2fb8f3d), depends_on -> this card; the link says: "uses the notion 'Random graphs' (title: "Erdos-Renyi")"
+    In the binomial random graph G(n,p) with p = (log n + c)/n for a fixed real c, the number of isolated vertices converges in distribution to a Poisson random variable with mean e^{-c} (the method of moments: the factorial moments of the count converge to those of the Poisson law), and the probability that G(n,p) is connected tends to exp(-e^{-c}) (Erdos and Renyi 1959, 1960). The obstruction to connectivity in this window is isolated vertices alone: P(G connected) - P(G has no isolated vertex) tends to 0. Consequently p = log n / n is a sharp threshold: for p = (1 - epsilon) log n / n the graph is disconnected with probability tending to 1 (with a growing number of isolated vertices), and for p = (1 + epsilon) log n / n it is connected with probability tending to 1. Below the threshold at p = c'/n with c' > 1 the graph already has a unique giant component but is disconnected. edges are present independently with the same probability p (the binomial model; the uniform model G(n,m) has the analogous statement with m = (n/2)(log n + c)) the statement is about the window p = (log n + c)/n with c fixed as n grows the Poisson approximation is for the count of isolated vertices; other small components are negligible in this window
+    -> depends_on: Method of moments (id: claim_bc603c8c)
+    -> depends_on: Phase transition (id: claim_c7583082)
+    -> depends_on: Poisson approximation (id: claim_f2ba0270)
+    -> depends_on: Random graphs (id: claim_a2fb8f3d)
+    -> depends_on: Weak convergence of probability measures (id: claim_306e73a4)
+    -> cites: On the evolution of random graphs (id: source_ef022d4)  (cites ref:erdos-1960-on-the-evolution-of-random-graphs (found in meta.source_id): hand:erdos-renyi-1959-1960)
+    -> cites: On Random Graphs I (id: source_c9a1cd7)  (cites doi:10.5486/pmd.1959.6.3-4.12 (found in meta.source_id): hand:erdos-renyi-1959-1960)
+[2] Erdos-Renyi Subgraph Appearance Threshold  (id: claim_05d1b4ad70a2c1b13f61be3c2d8ca3c35ee361a311d8307f702fc084a0d2af94; claim; score 21.93)
+    matched: erdos-renyi, threshold
+    found by spreading 1.13: from "Threshold Function for Graph Properties" (claim_72ddb11f) depends_on -> this card; the link says: "Computes the exact threshold function for subgraph containment."
+    Let H be a fixed strictly balanced graph with v vertices and e edges. Then p*(n) = n^{-v / e} is the threshold function for G(n, p) to contain a subgraph isomorphic to H. H is strictly balanced, i.e., e(H')/v(H') < e(H)/v(H) for all proper subgraphs H'
+    -> depends_on: Threshold Function for Graph Properties (id: claim_72ddb11f)  (Computes the exact threshold function for subgraph containment.)
+    -> depends_on: Second Moment Method (id: claim_00abe41e) (superseded by claim_9a4793dd)  (Upper threshold bound is established by the second moment method.)
+    -> depends_on: Second Moment Method (id: claim_9a4793dd)  (Upper threshold bound is established by the second moment method.)
+[3] Cor graph-diam-giant of arXiv:2606.01627  (id: claim_1362fd9c796f24ada853a1e9170f289df0ec9eb36cfe5c863f360590fc634d46; claim; score 19.66)
+    matched: giant, component
+    found by spreading 0.74: from "arXiv:2606.01627 - The geometry of the giant component of random geome" (source_e8d7940) cites -> this card; the link says: "Card extracted from arxiv:2606.01627 (its own source_id)."
+    [Cor graph-diam-giant of arXiv:2606.01627, 'The geometry of the giant component of random geometric graphs'] Let $\lambda_0 > \lambda_c$. There exist constants $C=C(\lambda_0,M), c=c(\lambda,M)>0$ such that \[ \mathbb{P}\left( \begin{array}{c} \mathring{G}_M^n(r) \mbox{ is the largest component} \\ \mbox{ of } G_M^n(r) \mbox{ in graph diameter} \end{array} \right) \ge 1 - C \exp(-c \log^2 n) \]
+    -> cites: arXiv:2606.01627 - The geometry of the giant component of random geometric graphs (id: source_e8d7940)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+[4] arXiv:2606.01627 - The geometry of the giant component of random geometric graphs  (id: source_e8d79405e1b5e7f59f5eb6dfbbd67c9a64f599de61bef2320a57df9f59d317c5; source; score 19.14)
+    matched: giant, component, "giant component" (title)
+    found by spreading 0.79: from "Cor graph-diam-giant of arXiv:2606.01627" (claim_1362fd9c) cites -> this card; the link says: "Card extracted from arxiv:2606.01627 (its own source_id)."
+    Paper the harvested cards were extracted from: arxiv:2606.01627.
+    <- cites: Lem non-uniform-uniqueness of arXiv:2606.01627 (id: claim_d77f36ce)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem GH-positive-implies-finite of arXiv:2606.01627 (id: claim_08c1b120)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem giant-is-unique of arXiv:2606.01627 (id: claim_61b1536b)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem edge-concentration of arXiv:2606.01627 (id: claim_2b78c3a4)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem P(E)-large of arXiv:2606.01627 (id: claim_cf281ab1)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Yao-Chen-Guo, \cite{YCG11} (id: claim_cca8e5e5)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem two-point-UB of arXiv:2606.01627 (id: claim_8e8af429)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Prop two-point-sparse of arXiv:2606.01627 (id: claim_28a6159a)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    ... 27 more links (--id source_e8d7940)
+[5] Threshold Function for Graph Properties  (id: claim_72ddb11fef76d116066c5deee41a9b4f8b1c5e49e09daa72cb909d58968dcbe0; claim; score 18.96)
+    matched: erdos-renyi, threshold
+    found by spreading 1.34: from "Erdos-Renyi Subgraph Appearance Threshold" (claim_05d1b4ad) depends_on -> this card; the link says: "Computes the exact threshold function for subgraph containment."
+    Let P be a monotone increasing graph property. A function p*(n) is called a threshold function for P in the Erdos-Renyi random graph G(n, p) if for any p = p(n), P(G(n, p) has P) -> 0 when p(n) / p*(n) -> 0, and P(G(n, p) has P) -> 1 when p(n) / p*(n) -> \infty as n -> \infty. P is monotone increasing
+    <- depends_on: Erdos-Renyi Subgraph Appearance Threshold (id: claim_05d1b4ad)  (Computes the exact threshold function for subgraph containment.)
+[6] Technique: Aldous's Exploration Process and the Multiplicative Coalescent  (id: claim_7e5a315b29b381b59e06b86854cbebd0263352263eaab7d90c296b7dfdfe42ac; claim; score 18.24)
+    matched: erdos-renyi, component
+    found by spreading 0.20: from "Erdos-Renyi connectivity threshold of G(n,p) and the Poisson paradigm " (claim_d041dda4) depends_on -> "Random graphs" (claim_a2fb8f3d), depends_on -> this card; the link says: "uses the notion 'Random graphs' (assumptions: "Erdos-Renyi")"
+    TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For the Erdos-Renyi random graph G(n,p) near the critical window p = 1/n + lambda n^{-4/3}, Aldous's exploration process encodes a depth-first search of the graph as a random-walk-like process Z_n(t) whose excursions above past running minima correspond exactly to the connected components, with excursion lengths equal to component sizes. After rescaling space by n^{-2/3} and time correspondingly, this process converges to a limiting process W(t) = B(t) + lambda t - t^2/2, a Brownian motion with parabolic drift, whose excursions above its running minimum encode the limiting rescaled sizes of the largest components in the critical window; the associated merging dynamics of component sizes as edges are added form the "standard multiplicative coalescent", a Markov process on sequences of masses matching the excursion structure. This gives the precise scaling limit, order n^{2/3} for the largest components with an explicit limiting joint law, for the Erdos-Renyi critical phase transition. It does not extend directly to other random graph models without re-deriving an analogous exploration or walk encoding, which may not exist in closed form, and the specific n^{2/3} spatial and n^{-1/3} time-window scaling is particular to models in the Erdos-Renyi (mean-field) universality class. Typical failure: Applying the Erdos-Renyi n^{2/3} critical scaling window and multiplicative-coalescent limit directly to a random graph model with heavy-tailed degrees, infinite third moment, or strong local clustering, where the correct scaling exponents and even the limiting process, as established for configuration models with power-law degree exponent tau in (3,4) by Bhamidi, van der Hofstad and van Leeuwaarden, differ substantially; universality of the Erdos-Renyi picture is a theorem for specific model classes, not a generic property of all critical random graphs. Canonical reference: Aldous, 1997, Annals of Probability; Aldous and Limic, 1998, Electronic Journal of Probability; Bhamidi, van der Hofstad and van Leeuwaarden, 2010, Annals of Probability. Erdos-Renyi, or configuration-model-type with matching degree-tail conditions, random graph in the critical window p ~ 1/n + O(n^{-4/3}) a valid exploration (depth-first search) encoding of the graph as a walk whose excursions correspond to components appropriate moment conditions, such as finite third moment of the degree for configuration models, for the walk-to-Brownian-motion scaling limit the specific n^{2/3} spatial and n^{-1/3} time-window scaling matching the model's universality class
+    -> depends_on: Brownian motion (id: claim_7d9ada34)
+    -> depends_on: Coalescent and fragmentation processes (id: claim_20714692)
+    -> depends_on: Markov process and semigroup (id: claim_c8cfd8c6)
+    -> depends_on: Phase transition (id: claim_c7583082)
+    -> depends_on: Random graphs (id: claim_a2fb8f3d)
+    -> cites: Brownian excursions, critical random graphs and the multiplicative coalescent (id: source_a870ce0)  (cites doi:10.1214/aop/1024404421 (found in body): Aldous, 1997, Annals of Probability)
+    -> cites: The entrance boundary of the multiplicative coalescent (id: source_6c4a204)  (cites doi:10.1214/ejp.v3-25 (found in body): Aldous and Limic, 1998, Electronic Journal of Probability)
+    <- cites: Open problem: Multiplicative-coalescent scaling limit of critical percolation on high-dimensional tori (id: claim_95132f82)  (w746 edge audit, reviewed 22 Oct: Reverse citation: claim_95132f825b0552482adabaff77c061c3e550bb329d676fdcf6942eaefd760143 -> claim_7e5a315b29b381b59e06b86854cb)
+    ... 7 more links (--id claim_7e5a315b)

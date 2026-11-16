@@ -1,0 +1,47 @@
+# navigation: weak match
+# command: navigation/nav_query.py "weak match"
+# seconds: 1.90
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 11.3, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] study_expansion_filter.py - does dropping weak generated questions help the word index?  (id 71a3784796da, framework/brain_graph/bin/study_expansion_filter.py, 174 lines)
+    study_expansion_filter.py - does dropping weak generated questions help the word index? A scheduled audit judged 207 stored questions: 94.7 percent answerable from their memory, 17.9 percent so generic they would match hundreds of memories ("anything new?"), 5.3 percent claiming more than the mem...
+    keywords: half, rank_of, sign_p, main
+    -> in_dir: bin  [9e34645c1394 framework/brain_graph/bin/]
+[file] Leiden CPM communities and the ID-only background activation built on them.  (id 90140a547494, framework/mathbrain/tests/test_background_hubs.py, 84 lines)
+    Leiden CPM communities and the ID-only background activation built on them.
+    keywords: test_two_triangles_joined_by_a_weak_b..., test_bad_parameters_and_weights_are_r..., test_projection_drops_warnings_and_no..., test_activation_names_community_peers..., test_a_changed_graph_gets_no_backgrou..., test_prepared_index_matches_the_slow_..., tests
+    -> in_dir: tests  [280fd8f32a7e framework/mathbrain/tests/]
+[file] Controls for the coherence cut: a weak lead in a scattered block is withheld, a named lead card is spared.  (id 6efd4e14a0ad, framework/dreaming/test_coherence_cut.py, 121 lines)
+    Controls for the coherence cut: a weak lead in a scattered block is withheld, a named lead card is spared. C1 _incoherent_weak_block: a scattered block with a far lead is cut; a coherent block is kept without embedding the prompt; a near lead is kept; fewer than two cards with vectors is never cu...
+    keywords: check, unit, Encoder, install_stub, fresh, main, dreaming, math store, cards, retrieval
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+[file] reflex_audit.py - which gut reflexes are DEAD (never match) or OVER-BROAD (match everything)?  (id e344629b1aa1, framework/dreaming/reflex_audit.py, 273 lines)
+    reflex_audit.py - which gut reflexes are DEAD (never match) or OVER-BROAD (match everything)? The instinct layer has 38 reflexes, each a regex trigger that fires a felt reflex on a matching prompt or tool call. Nothing measured whether a trigger actually matches the kind of thing the user says: a...
+    keywords: load_owner_prompts, load_tool_commands, main, dreaming
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+[file] retrieve()'s support floor gives the same verdict at every limit.  (id 08957139bdf4, tests/test_retrieval_support_pool.py, 77 lines)
+    retrieve()'s support floor gives the same verdict at every limit. 29 Sep 2026: the pool is ordered by total score, which adds warning mass to support, and the support floor judged only the first ``limit`` hits. A caution card reached through a negative edge could fill a one-hit output and abstain...
+    keywords: test_the_fixture_is_what_it_says, test_the_support_verdict_is_the_same_..., test_a_weak_whole_pool_abstains_at_ev..., test_a_demoted_stub_cannot_carry_the_..., test_search_and_retrieve_agree_at_the..., math store, cards, edges, tests
+    -> in_dir: tests  [50505e3ed972 tests/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[file] test_triggers.py  (id 792cfbcfe5cf, tests/test_triggers.py, 16 lines)
+    keywords: test_trigger_match_is_case_insensitive, test_repository_trigger_file_loads, tests
+    -> in_dir: tests  [50505e3ed972 tests/]
+[file] The ambiguity verdict does not depend on how many hits were asked for.  (id 790579c47c99, tests/test_retrieval_margin_pool.py, 138 lines)
+    The ambiguity verdict does not depend on how many hits were asked for. Interactive audit IA-20260929-MB-01 (29 Sep 2026): retrieve() cut the ranked list to ``limit`` and then compared the two best-supported hits of what was left, so a request for one hit had no runner-up to compare against and tw...
+    keywords: test_a_tie_abstains_at_every_limit, test_a_clear_winner_is_served_at_limi..., test_one_candidate_is_not_ambiguous, test_weak_support_still_abstains_belo..., test_a_linked_pair_is_served_at_limit..., test_the_default_margin_never_abstain..., test_a_stub_does_not_hide_a_tie_betwe..., test_a_linked_stub_does_not_hide_the_..., test_a_stub_close_to_the_answer_does_..., test_a_stub_does_not_carry_weak_state..., test_stubs_alone_are_still_compared, tests
+    -> in_dir: tests  [50505e3ed972 tests/]
+[file] The recall command can show retrieve()'s decision, and it never creates a store.  (id 01fa0b4bbbeb, tests/test_cli_recall_decision.py, 90 lines)
+    The recall command can show retrieve()'s decision, and it never creates a store. 29 Sep 2026: `math-brain recall` called search(), which forces the support threshold to 0 and returns hits only, so no abstention, reason, exclusion or trace ever reached its output; and it opened the store writable,...
+    keywords: test_decision_shows_an_ambiguous_top, test_decision_shows_weak_support, test_plain_recall_output_is_unchanged, test_recall_output_with_background, test_recall_on_a_missing_path_creates..., recall, math store, tests
+    -> in_dir: tests  [50505e3ed972 tests/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)

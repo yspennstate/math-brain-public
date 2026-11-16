@@ -1,0 +1,49 @@
+# navigation: spreading activation
+# command: navigation/nav_query.py "spreading activation"
+# seconds: 2.51
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] network/  (id f4d781bd72f2, framework/network/README.md, 63 lines)
+    The big association network: every tool, keyword, prompt, file, and memory as a node; firing by spreading activation and episodic pattern completion. Method and discipline in DESIGN.md.
+    keywords: how does activation spread through th...
+    -> documents: network  [3214a5a83065 framework/network/]
+    -> in_dir: network  [3214a5a83065 framework/network/]
+[file] Runtime firing engine: leaky activation buffer + one-hop spreading activation +  (id 80dfd6ab9773, framework/network/fire.py, 220 lines)
+    Runtime firing engine: leaky activation buffer + one-hop spreading activation + k-of-n IDF-gated pattern completion over stored episodes. Neuroscience shape: leaky integrate(-and-decay) activation, k-winners-take-all propagation (bounded cascade), CA3/Hopfield-style completion by weighted overlap...
+    keywords: FireEngine
+    -> in_dir: network  [3214a5a83065 framework/network/]
+[file] Runtime firing engine: leaky activation buffer + one-hop spreading activation +  (id e76ca6855b42, framework/mathbrain/association/fire.py, 122 lines)
+    Runtime firing engine: leaky activation buffer + one-hop spreading activation + k-of-n IDF-gated pattern completion over stored episodes. Neuroscience shape: leaky integrate(-and-decay) activation, k-winners-take-all propagation (bounded cascade), CA3/Hopfield-style completion by weighted overlap...
+    keywords: FireEngine
+    -> in_dir: association  [915136022063 framework/mathbrain/association/]
+[file] The big network: every tool, keyword, and prompt as a node  (id ae7bfa0609cd, framework/network/DESIGN.md, 163 lines)
+    The user's ask (2026-07-15): grow the association network two orders of magnitude — every tool, every keyword, every prompt becomes a node — and make it fire the way real associative memory fires: when a handful of nodes light up in a pattern that historically preceded the user writing a...
+    keywords: What already exists, and what this adds, Node universe (the 100x), Edges, Firing: spreading activation with pat..., Learning rules, Evaluation (a pass that can fail), Scaling to the full node universe, Growth is the standing task, not a on..., Returning the information, not just t..., Privacy, edges, privacy
+    -> in_dir: network  [3214a5a83065 framework/network/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] build_spread_edges.py - compile the association graph the spreading-activation recall walks.  (id 4d06bd646239, framework/dreaming/build_spread_edges.py, 260 lines)
+    build_spread_edges.py - compile the association graph the spreading-activation recall walks. Recall today is lexical: fok_probe/instinct_prime match the prompt's words against filenames and index lines. That structurally can't find the memory that matters but shares no vocabulary - the distant, "...
+    keywords: norm, main, fresh, dreaming, recall
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[file] spread.py - recall by spreading activation (Collins & Loftus 1975), not keyword search.  (id 78ca0e08e29b, framework/dreaming/spread.py, 149 lines)
+    spread.py - recall by spreading activation (Collins & Loftus 1975), not keyword search. Keyword/grep recall misses the memory two links away that shares no surface terms. This seeds activation on the memories that match a cue, then propagates it along the brain's association graph - the hand-writ...
+    keywords: build_graph, spread, main, dreaming, recall, edges
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[file] spread_recall.py - spreading-activation recall: the unprompted "this reminds me...".  (id 880e82f7a344, framework/dreaming/spread_recall.py, 1884 lines)
+    spread_recall.py - spreading-activation recall: the unprompted "this reminds me...". The lexical hooks (fok_probe, instinct_prime) answer "do you hold a memory whose WORDS match this?" A person's recall does more: a task lights up a memory, and that memory lights up a third one that shares no voc...
+    keywords: main, dreaming, recall, hooks
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: hooks  [806d2e927001 concept]  (hooks)
+[file] suggest_orphan_links.py - connect the memories that spreading activation CANNOT reach.  (id e625901d7dff, framework/dreaming/suggest_orphan_links.py, 187 lines)
+    suggest_orphan_links.py - connect the memories that spreading activation CANNOT reach. Census 2026-07-10: 336 of 1456 non-substrate memories (23%) have graph degree 0 - zero wiki-links and zero co-read edges - so the association walk (spread_recall) can NEVER surface them, however relevant. 97 mo...
+    keywords: norm, stem, main, dreaming, edges
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: edges  [51fe7266d58b concept]  (edges)

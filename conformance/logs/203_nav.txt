@@ -1,0 +1,57 @@
+# navigation: fast recall prebuild
+# command: navigation/nav_query.py "fast recall prebuild"
+# seconds: 1.38
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 18.6, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] Agent tools  (id eaf6572f4275, agent_tools/README.md, 78 lines)
+    These are the scripts agents call while they work. Each one reads a store built from export/population/ with tools/import_store.py.
+    keywords: which commands does an agent run whil..., how do I look up a theorem or proof i..., Start here: the default recall workflow, Fast recall, How to search, What the tools write, and the encoder, Wiring the hook, recall, hooks, agents, math store, export
+    -> documents: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> links_to: Giving an agent the store  [64d6e72fa1f7 AGENTS_GUIDE.md]  (the agent guide)
+    -> links_to: Tests  [f62d7a06119a TESTS.md]  (tests)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    ... 10 more links (--id eaf6572f4275)
+[file] math_recall_prebuild.py - keep math_recall.py's prepared search ready for the math store as it is now.  (id ff25b795c560, agent_tools/math_recall_prebuild.py, 216 lines)
+    math_recall_prebuild.py - keep math_recall.py's prepared search ready for the math store as it is now. The first math_recall.py call after the math store changes builds the prepared state (fastrecall.py) itself: 10 s on the 13 Oct machine and 14 s under the A/B load, longer than a Codex tool call...
+    keywords: below_normal, load_tool, stamp, read_state, write_state, log, hold_run_lock, main, math store
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] math_recall_prebuild.py - keep math_recall.py's prepared search ready for the math store as it is now.  (id 1285fe61aeaa, framework/dreaming/math_recall_prebuild.py, 305 lines)
+    math_recall_prebuild.py - keep math_recall.py's prepared search ready for the math store as it is now. The first math_recall.py call after the math store changes builds the prepared state (fastrecall.py) itself: 10 s on the 13 Oct machine and 14 s under the A/B load, longer than a Codex tool call...
+    keywords: below_normal, load_tool, stamp, read_state, write_state, log, hold_run_lock, trim_sidecar_wal, name_now, write_back, main, dreaming
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] Every fast recall copy in this repository pins the files that ship beside it.  (id 8e5273cd6f21, framework/dreaming/test_fastrecall_pins.py, 62 lines)
+    Every fast recall copy in this repository pins the files that ship beside it. R PIN_RETRIEVAL in each fastrecall.py is the sha256 of framework/mathbrain/src/math_brain/retrieval.py Q PIN_QUERY_EMBED in each fastrecall.py is the sha256 of the query_embed.py the copy loads (the one beside it) The f...
+    keywords: sha, pin, ok, dreaming, recall, retrieval
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+[file] Search a small brain: one markdown record per file, with the frontmatter of framework/docs/MEMORY_CONVENTIONS.md.  (id 2839d0005f28, examples/field_brain_starter/recall.py, 215 lines)
+    Search a small brain: one markdown record per file, with the frontmatter of framework/docs/MEMORY_CONVENTIONS.md. python recall.py "wording one" --or "wording two" --or "wording three" python recall.py --id some_record_slug Prints whole records with their slugs, best first. Each wording is scored...
+    keywords: fold, words, load, bm25, load_requests, asked_before, show_request, show, main, recall
+    -> in_dir: field_brain_starter  [5108ae12ba5d examples/field_brain_starter/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[readme_section] Fast recall  (id 6bafdcd6f8aa, agent_tools/README.md#fast-recall)
+    fastrecall.py is on by default; nothing has to be installed or run to use it. The first search against a store builds a prepared state (the parsed cards, the term tables and the link maps, about 70 MB for this store) in the recall cache, and every later search loads it instead of reading the...
+    keywords: recall, math store, cards, edges
+    -> in_dir: Agent tools  [eaf6572f4275 agent_tools/README.md]
+[file] fok_probe.py - Feeling-of-Knowing (Koriat 1993): a fast pre-retrieval accessibility signal.  (id db24f164b7af, framework/dreaming/fok_probe.py, 458 lines)
+    fok_probe.py - Feeling-of-Knowing (Koriat 1993): a fast pre-retrieval accessibility signal. On each user prompt, BEFORE any deliberate recall, this probes whether the brain HAS relevant knowledge - by counting how many memory pointers light up (index lines + filenames matching the prompt's conten...
+    keywords: main, dreaming, recall, tests, retrieval
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+[file] Cards added to the math store since a prepared recall state was built, indexed into that state in memory.  (id 62c29714ad20, agent_tools/fastrecall_delta.py, 398 lines)
+    Cards added to the math store since a prepared recall state was built, indexed into that state in memory. RECALL-10X lead 2 (29 Oct 2026). fastrecall.open_prepared serves a state up to STALE_S seconds behind the store, so a card ingested a minute ago is not findable until the next prebuild (hours...
+    keywords: read_delta, extend, recall, math store, cards
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: cards  [966e0d787982 concept]  (cards)

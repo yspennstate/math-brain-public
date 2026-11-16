@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Lemma 44 of arXiv:2510.20492 (Gaussian free fields' exist sufficient
+# command: math_sense.py < event.json
+# seconds: 54.36
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0014-log", "prompt": "I am working on this: Lemma 44 of arXiv:2510.20492 (Gaussian free fields' exist sufficiently large equation v-v'). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Lemma 44 of arXiv:2510.20492 [concept]: [Lemma 44 of arXiv:2510.20492, 'Heterochromatic two-arm probabilities for metric graph Gaussian free fields'] For any $d\\ge 3$ and $d\\neq 6$, there exist $\\Cl,\\Cl, \\Cl,\\cl>0$ such that for any $v\\neq v'\\in \\widetilde{B}(\\Cref{const_additional_lemma_four_point1})$, any sufficiently large $N\\ge 1$, and $w,w'\\in \\widetilde{B}(10N)\\setminus \\widetilde{B}(N)$ with $|w-w'|\\ge N$, \\begin{equation} \\mathbb{P}\\big( \\widehat{\\mathsf{H}}_{v',w'}^{v,w} \\big)\\gtrsim |v-v'|^{\\frac{3}{2}...\n    (claim_00f99323eb5255f3fd6c791b4f4ebac7efe36bfdfb8420b8aeb26c78b602cb78 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: 20492, v-v, 2510)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Lemma 44 of arXiv:2510.20492 [concept]: [Lemma 44 of arXiv:2510.20492, 'Heterochromatic two-arm probabilities for metric graph Gaussian free fields'] For any $d\ge 3$ and $d\neq 6$, there exist $\Cl,\Cl, \Cl,\cl>0$ such that for any $v\neq v'\in \widetilde{B}(\Cref{const_additional_lemma_four_point1})$, any sufficiently large $N\ge 1$, and $w,w'\in \widetilde{B}(10N)\setminus \widetilde{B}(N)$ with $|w-w'|\ge N$, \begin{equation} \mathbb{P}\big( \widehat{\mathsf{H}}_{v',w'}^{v,w} \big)\gtrsim |v-v'|^{\frac{3}{2}...
+    (claim_00f99323eb5255f3fd6c791b4f4ebac7efe36bfdfb8420b8aeb26c78b602cb78 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: 20492, v-v, 2510)

@@ -1,0 +1,49 @@
+# reworded search: graph parts sizes does contain complete bipartite subgraph
+# command: math_recall.py "graph parts sizes does contain complete bipartite subgraph"
+# seconds: 0.63
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Zarankiewicz Problem  (id: claim_15cf787195dfadbcfc403750f0a12882f4c848794a0201b14f7977f17c35e205; claim; score 47.19)
+    matched: bipartite, sizes, contain, subgraph, parts (+2)
+    The Zarankiewicz problem asks for the maximum number of edges z(m, n; s, t) in a bipartite graph with parts of sizes m and n that does not contain a complete bipartite subgraph K_{s, t} with s vertices in the first part and t vertices in the second part. m, n, s, t are positive integers with s <= m and t <= n
+    <- depends_on: Kovari-Sos-Turan Theorem (id: claim_79f1a904)  (Provides the foundational upper bound solving the Zarankiewicz problem for K_{s,t}.)
+[2] In graph theory, Kuratowski's theorem is a mathematical forbidden graph characterization of planar graphs, named after K  (id: claim_65b496bf42ad42a07e41f69150a47163e172be6b1cbada07c64d967cad61f776; claim; score 38.39)
+    matched: graph, contain, subgraph, complete, parts (+1)
+    In graph theory, Kuratowski's theorem is a mathematical forbidden graph characterization of planar graphs, named after Kazimierz Kuratowski. It states that a finite graph is planar if and only if it does not contain a subgraph that is a subdivision of K_5 (the complete graph on five vertices) nor of K_{3,3} (the complete bipartite graph on six vertices with parts of size three, the utility graph).
+    -> cites: Kuratowski's theorem (id: claim_d1724127)  (The card names kuratowski theorem; the target is the store's card stating it.)
+[3] Kuratowski's theorem  (id: claim_d17241276003eb8f92ee771b0fb2f0238c93ed92a55a96ed1540485c1147382e; claim; score 35.75)
+    matched: subgraph, parts, bipartite, complete, graph
+    Kuratowski's theorem: A finite graph G is planar if and only if G contains no subgraph that is a subdivision of K_5 (the complete graph on 5 vertices) and no subgraph that is a subdivision of K_{3,3} (the complete bipartite graph with parts of size 3 and 3). Here a subdivision of a graph H is any graph obtained from H by replacing its edges with internally disjoint paths.
+    <- cites: In graph theory, Kuratowski's theorem is a mathematical forbidden graph characterization of planar graphs, named after K (id: claim_65b496bf)  (The card names kuratowski theorem; the target is the store's card stating it.)
+    -> semantic_association: Euler's Formula for Planar Graphs (id: claim_fd29a8ca)  (Euler's formula gives the easy direction: a simple planar graph has E <= 3V-6, and E <= 2V-4 when it has no triangle, so K5 (10 > 9) and K3,3 (9 > 8) are not pl)
+    -> semantic_association: Robertson–Seymour theorem (id: claim_4bfd4310)  (Planarity is the model case of the graph minors theorem: in Wagner's minor form of Kuratowski's theorem the planar graphs are the minor-closed family with the t)
+[4] Kovari-Sos-Turan Theorem  (id: claim_79f1a9047502df0c73ace3dc7fa9fa54853fe42190910a48a89a80417f84c263; claim; score 34.81)
+    matched: bipartite, sizes, subgraph, parts, graph
+    For integers 2 <= s <= t, every simple bipartite graph G with part sizes m and n containing no subgraph isomorphic to K_{s, t} (with s vertices in the part of size m) has at most z(m, n; s, t) <= (s - 1)^{1/t} (m - s + 1) n^{1 - 1/t} + (t - 1) m edges. In particular, for m = n, ex(n, K_{s,t}) = O(n^{2 - 1/s}). G is bipartite with parts m, n G contains no K_{s,t}
+    <- analogous_to: Bondy-Simonovits Theorem on Even Cycles (id: claim_8ccaa9b2) (superseded by claim_39be4b03)  (Establishes subquadratic extremal bounds O(n^{1+1/k}) for degenerate even cycles.)
+    <- analogous_to: Bondy-Simonovits Theorem on Even Cycles (id: claim_39be4b03)  (Establishes subquadratic extremal bounds O(n^{1+1/k}) for degenerate even cycles.)
+    -> depends_on: Double Counting (id: claim_ff10bea4)  (Double counts K_{1,s} stars between bipartite parts.)
+    -> depends_on: Zarankiewicz Problem (id: claim_15cf7871)  (Provides the foundational upper bound solving the Zarankiewicz problem for K_{s,t}.)
+[5] Bipartite configuration space  (id: claim_c7f64885d5da7854e8e91d978986848bcd4577d5bd8b0cde4742da1c608bf967; claim; score 28.01)
+    matched: bipartite, parts, graph, complete
+    [Definition 20 (Bipartite configuration space) of arXiv:2608.07239, 'Unified framework for asymptotically uniform iterative construction of generalised random '] The \emph{bipartite configuration space} for $\d$ and $\d'$ is the graph $G_{\d,\d'}:=(V_{\d,\d'},E_{\d,\d'})$, where $V_{\d,\d'}$ consists of all pairs of half-edges, one from $W$ and one from $W'$, and where two vertices in $V_{\d,\d'}$ are adjacent if their corresponding pairs of half-edges overlap. Note that $G_{\d,\d'}$ is the line graph of the complete bipartite graph with parts $W$ and $W'$.
+    <- depends_on: Theorem 33 of arXiv:2608.07239 (id: claim_062ed400)  (the statement names this definition)
+    -> depends_on: Configuration space (id: claim_ace2fe59)  (Uses the term 'configuration space', which Configuration space introduces (same paper, arxiv:2608.07239).)
+    -> depends_on: Bipartite Graph (id: claim_dfd2f208)  (The card uses the concept 'bipartite graph'; the target is the store's card defining it.)
+    -> cites: arXiv:2608.07239 - Unified framework for asymptotically uniform iterative construction of generalised random (id: source_e199e58)  (Card extracted from arxiv:2608.07239 (its own source_id).)
+[6] Matching  (id: claim_ec01295e8f92a3d7a9f2fac35057813456f55fb9a2ca4514451ba3e0dcb19899; claim; score 26.83)
+    matched: bipartite, complete, parts, graph
+    [Definition 17 (Matching) of arXiv:2608.07239, 'Unified framework for asymptotically uniform iterative construction of generalised random '] A \emph{matching} in a graph is a set of pairwise disjoint edges. The matching is \emph{perfect} if the union of its edges contains all vertices. A \emph{(perfect) matching on a set $X$} is a (perfect) matching in the complete graph with vertex set $X$. For disjoint sets $X$ and $Y$, a \emph{(perfect) bipartite matching between $X$ and $Y$} is a (perfect) matching in the complete bipartite graph with parts $X$ and $Y$.
+    <- depends_on: Theorem 13 of arXiv:2608.07239 (id: claim_7ef5c5ef)  (the statement names this definition)
+    -> depends_on: Bipartite Graph (id: claim_dfd2f208)  (The card uses the concept 'bipartite graph'; the target is the store's card defining it.)
+    -> cites: arXiv:2608.07239 - Unified framework for asymptotically uniform iterative construction of generalised random (id: source_e199e58)  (Card extracted from arxiv:2608.07239 (its own source_id).)
+[7] Komlos-Sarkozy-Szemeredi Blow-Up Lemma  (id: claim_a95ea521f535de3cec1bb7ba9fc0edf6b11b622de8d20c6ec1a32a488581ed9b; claim; score 25.89)
+    matched: sizes, subgraph, parts, graph
+    Let G be a graph and let (V_1, ..., V_r) be an epsilon-regular partition of G with min-density d > 0. For any Delta, there exists epsilon_0 > 0 such that if epsilon <= epsilon_0, then any r-partite graph H with maximum degree Delta and parts fitting into the sizes |V_i| can be embedded as a subgraph of G. epsilon <= epsilon_0(d, Delta, r) max degree of H is <= Delta
+    -> depends_on: Epsilon-Regular Pair (id: claim_3ee60faa)  (Embeds bounded degree spanning subgraphs into regular partitions.)
+[8] Thm 3 of arXiv:2506.09264  (id: claim_e6ef608a369c20b171469a3299e0801bb0bc699c99bcc363694e5925411a83e5; claim; score 25.72)
+    matched: complete, subgraph, bipartite, graph
+    [Thm 3 of arXiv:2506.09264, 'The bunkbed conjecture still holds for cactus graphs\\ and for graphs with certain biconne'] If \(G\) is a graph such that every block \(H\in\mathbb{B}(G)\) is either a cycle, complete, complete bipartite, symmetric complete \(k\)-partite or an edge difference of a complete graph and a complete subgraph, then \(G\) satisfies the weak bunkbed conjecture.\vspace{6pt} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2506.09264 - The bunkbed conjecture still holds for cactus graphs\\ and for graphs with certain biconne (id: source_f6b9519)  (Card extracted from arxiv:2506.09264 (its own source_id).)

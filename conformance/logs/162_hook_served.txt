@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Definition def:fun_convergence of arXiv:2605.26048 (po' denote topol
+# command: math_sense.py < event.json
+# seconds: 87.98
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0006-log", "prompt": "I am working on this: Definition def:fun_convergence of arXiv:2605.26048 (po' denote topology space following conditions enumerate exists). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Definition def:fun_convergence of arXiv:2605.26048 [definition]: [Definition def:fun_convergence of arXiv:2605.26048, 'Classification of the eternal solutions and multiple coalescing shocks in the KPZ fixed po'] Let $\\mathcal T_\\Phi$ denote the topology on the space $\\Phi$ such that $\\varphi_n \\to \\varphi$ if the following two conditions hold: \\begin{enumerate} \\item For every $R\\in\\mathbb{R}$ there exists $I(R,\\varphi)\\subseteq\\mathfrak{X}$ compact and $N_0(R,\\varphi)>0$ such that\\ \\begin{equation} \\frac{\\varphi_n(\\xi)}{\\mathcal P(\\xi)...\n    (claim_891a07840c23b70d97d28d4f1406d95f5f449f4883f109129cc1b1a311a89fc1 | EXCERPT, incomplete; definition lead; draft; unreviewed; unverified | matched: 26048, fun, topology)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Definition def:fun_convergence of arXiv:2605.26048 [definition]: [Definition def:fun_convergence of arXiv:2605.26048, 'Classification of the eternal solutions and multiple coalescing shocks in the KPZ fixed po'] Let $\mathcal T_\Phi$ denote the topology on the space $\Phi$ such that $\varphi_n \to \varphi$ if the following two conditions hold: \begin{enumerate} \item For every $R\in\mathbb{R}$ there exists $I(R,\varphi)\subseteq\mathfrak{X}$ compact and $N_0(R,\varphi)>0$ such that\ \begin{equation} \frac{\varphi_n(\xi)}{\mathcal P(\xi)...
+    (claim_891a07840c23b70d97d28d4f1406d95f5f449f4883f109129cc1b1a311a89fc1 | EXCERPT, incomplete; definition lead; draft; unreviewed; unverified | matched: 26048, fun, topology)

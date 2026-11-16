@@ -1,0 +1,51 @@
+# reworded search: likelihood-ratio criterion arXiv Linear Spectral Statistics Entrywise-Transformed Spiked
+# command: math_recall.py "likelihood-ratio criterion arXiv Linear Spectral Statistics Entrywise-Transformed Spiked"
+# seconds: 4.82
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Weighted likelihood-ratio criterion  (id: claim_9a9de4c21312620dae5d34de4b11860bcfbdf2feb596b8f3ba98dd89d319f236; claim; score 49.48)
+    matched: likelihood-ratio, criterion, entrywise-transformed, spiked, statistics (+4)
+    [Proposition 44 (Weighted likelihood-ratio criterion) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] Assume \(f\in L^4(\nu)\), \(\E_\nu f=0\), and \(\E_\nu f^2=1\). Suppose that there are measurable functions \(\ell_1,\ell_2\) such that, as \(s\to0\), \[ \E_\nu |f(\zeta)|\,|L_s(\zeta)-1-s\ell_1(\zeta)|=o(|s|), \] \[ \E_\nu |f(\zeta)|^2\left|L_s(\zeta)-1-s\ell_1(\zeta)-\frac{s^2}{2}\ell_2(\zeta)\right|=o(s^2), \] and \[ \sup_{|s|\le s_0}\E_\nu |f(\zeta)|^4L_s(\zeta)<\infty \] with uniform integrability of \(\{|f(\zeta)|^4L_s(\zeta): |s|\le s_0\}\). Then Condition~\ref{cond:profile-admissibility} holds with \[ a_1=\E_\nu[f(\zeta)\ell_1(\zeta)],\qquad b_1=\E_\nu[f(\zeta)^2\ell_1(\zeta)], \] \[ b_2=\frac12\E_\nu[f(\zeta)^2\ell_2(\zeta)],\qquad \beta_2^{f,\nu}=b_2-a_1^2. \]
+    -> depends_on: Uniform integrability (id: claim_f1f55b12)  (The card uses the concept 'uniform integrability'; the target is the store's card defining it.)
+    -> depends_on: Classical toolkit of Weighted likelihood-ratio criterion (id: claim_659a7f05)  (The toolkit card 'Classical toolkit of Weighted likelihood-ratio criterion' lists the classical results that this result's statement or proof names; its title i)
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+[2] arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted  (id: source_123086890e17f77846f541748785cc95555d7c48486a3dd8906fcb1317762751; source; score 44.12)
+    matched: entrywise-transformed, spiked, statistics, spectral, linear (+2)
+    Paper the harvested cards were extracted from: arxiv:2608.07820.
+    <- cites: Completion of the rough bulk LSS theorem (id: claim_430b22ff)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Uniform edge derivatives (id: claim_62584cff)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Four-moment replacement path (id: claim_9e1d01bd)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Exact four-moment replacement for smooth LSS (id: claim_0538d565)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Bounded fixed-contour local law (id: claim_e3f9741e)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Small deterministic insertions (id: claim_819838bf)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Score-density sufficient condition (id: claim_230eff8b)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    <- cites: Bounded atomic-array LSS CLT (id: claim_364c5440)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+    ... 46 more links (--id source_1230868)
+[3] Score-density sufficient condition  (id: claim_230eff8ba284c50dcafac7e510824c32db54b7b52e54a2fdbda070e188964ce4; claim; score 40.76)
+    matched: likelihood-ratio, entrywise-transformed, spiked, criterion, statistics (+3)
+    [Corollary 46 (Score-density sufficient condition) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] Assume \(f\in L^4(\nu)\), \(\E_\nu f=0\), \(\E_\nu f^2=1\), and that \(p\) is twice weakly differentiable. In the weighted norms \[ \|u\|_{f,1}:=\E_\nu |f(\zeta)|\,|u(\zeta)|, \qquad \|u\|_{f^2,1}:=\E_\nu |f(\zeta)|^2|u(\zeta)|, \] one has \[ \left\|\frac{p(\cdot-s)}{p(\cdot)}-1+s\frac{p'}{p}\right\|_{f,1}=o(|s|) \] and \[ \left\|\frac{p(\cdot-s)}{p(\cdot)}-1+s\frac{p'}{p}-\frac{s^2}{2}\frac{p''}{p}\right\|_{f^2,1}=o(s^2). \] Assume also \(\sup_{|s|\le s_0}\int |f(y)|^4p(y-s)\,dy<\infty\), with uniform integrability as \(s\to0\). Then the weighted likelihood-ratio criterion applies with \[ \ell_1=-\frac{p'}{p},\qquad \ell_2=\frac{p''}{p}. \] For the Gaussian density, \(\ell_1(y)=y\) and \(\ell_2(y)=y^2-1\).
+    -> depends_on: Classical toolkit of Score-density sufficient condition (id: claim_911c1740)  (The toolkit card 'Classical toolkit of Score-density sufficient condition' lists the classical results that this result's statement or proof names; its title is)
+    -> depends_on: Uniform integrability (id: claim_f1f55b12)  (The card uses the concept 'uniform integrability'; the target is the store's card defining it.)
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+[4] Bounded rough transform criterion  (id: claim_1f1272c07eda82ac5942156f6657c7f023004c1964420dcc1e5ecde608b31fc8; claim; score 37.90)
+    matched: criterion, entrywise-transformed, spiked, statistics, spectral (+2)
+    [Proposition 48 (Bounded rough transform criterion) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] Assume \(f\in L^\infty\), \(\E_\nu f=0\), \(\E_\nu f^2=1\), and assume the density \(p\) satisfies the translation expansions \[ \|p(\cdot-s)-p+s p'\|_{L^1}=o(|s|), \] \[ \left\|p(\cdot-s)-p+s p'-\frac{s^2}{2}p''\right\|_{L^1}=o(s^2). \] Then Condition~\ref{cond:profile-admissibility} holds with \[ a_1=-\int f(y)p'(y)\,dy, \qquad b_1=-\int f(y)^2p'(y)\,dy, \] \[ b_2=\frac12\int f(y)^2p''(y)\,dy. \]
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+[5] Smooth-transform criterion  (id: claim_3a072626011c356f48003fecca1438af23b5b2be850a74999dd0f88eaa74e4c6; claim; score 36.99)
+    matched: criterion, entrywise-transformed, spiked, statistics, spectral (+2)
+    [Proposition 47 (Smooth-transform criterion) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] Assume \(f\in C^2(\mathbb R)\), \(\E_\nu f=0\), \(\E_\nu f^2=1\), \[ \E\sup_{|u|\le\delta_0}|f(\zeta+u)|^4<\infty, \] and that the Taylor remainders of \(f\) and \(f^2\) satisfy \[ \E\sup_{|u|\le\delta_0}|f''(\zeta+u)|<\infty, \qquad \E\sup_{|u|\le\delta_0}\bigl(|f'(\zeta+u)|^2+|f(\zeta+u)f''(\zeta+u)|\bigr)<\infty. \] Then Condition~\ref{cond:profile-admissibility} holds with \[ a_1=\E f'(\zeta), \qquad b_1=2\E[f(\zeta)f'(\zeta)], \] \[ b_2=\E\bigl[f'(\zeta)^2+f(\zeta)f''(\zeta)\bigr]. \]
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+[6] Uniform shifted fourth-moment criterion  (id: claim_cd9d096099dcf03bf1c028a20de963385d206341d69a5615c60c4d1a01df4ad2; claim; score 36.66)
+    matched: criterion, entrywise-transformed, spiked, statistics, spectral (+2)
+    [Proposition 43 (Uniform shifted fourth-moment criterion) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] Suppose that the shifted-profile expansions for \(m_f\) and \(q_f\) hold and that \[ \lim_{R\to\infty}\limsup_{\delta\downarrow0} \sup_{|s|\le\delta} \E\bigl[|f(\zeta+s)|^4{\bf 1}_{\{|f(\zeta+s)|>R\}}\bigr]=0. \] Assume also that \[ \E |f(\zeta+s)|^4\longrightarrow \E |f(\zeta)|^4 \qquad(s\to0). \] Then the shifted fourth-cumulant stability and shifted fourth-moment Lindeberg parts of Condition~\ref{cond:profile-admissibility} hold.
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+[7] Centered spectral confinement  (id: claim_85dd6db3a94a39ecf51a7c78fe2bdc2e5278957163701c8d4b7b956a24829a1a; claim; score 32.62)
+    matched: entrywise-transformed, spiked, spectral, statistics, linear (+1)
+    [Proposition 31 (Centered spectral confinement) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] For both centered arrays, \begin{equation} \norm{H_N^{(4)}}_{\op}\longrightarrow2, \qquad \norm{H_N^f}_{\op}\longrightarrow2 \quad\text{in probability}. \end{equation} Here \(H_N^f(i,j)=N^{-1/2}Y_{s_{ij}}\) and \(H_N^f(i,i)=0\).
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)
+[8] Bounded transformed-spike bulk CLT  (id: claim_7a9394b41c4372fde8dd294e2d4d18e3c1254bea94002729dc1a5d2cd54b1857; claim; score 30.54)
+    matched: entrywise-transformed, spiked, statistics, spectral, linear (+1)
+    [Corollary 28 (Bounded transformed-spike bulk CLT) of arXiv:2608.07820, 'Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted '] The conclusion of Theorem~\ref{thm:bulk-main-package} holds with \(M_N^f\) replaced by \(M_N^{(4)}=A_N+H_N^{(4)}\).
+    -> cites: arXiv:2608.07820 - Linear Spectral Statistics for Entrywise-Transformed Spiked Wigner Matrices under Shifted (id: source_1230868)  (Card extracted from arxiv:2608.07820 (its own source_id).)

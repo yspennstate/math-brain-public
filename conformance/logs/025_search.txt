@@ -1,0 +1,66 @@
+# search: Group Action
+# command: math_recall.py "Group Action"
+# seconds: 0.28
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Group action  (id: claim_6a20110e33f54d3ca4ebe6787865b7cd; claim; score 18.27)
+    matched: action, group, "group action" (title)
+    In mathematics, an action of a group $G$ on a set $S$ is, loosely speaking, an operation that takes an element of $G$ and an element of $S$ and produces another element of $S.$ More formally, it is a group homomorphism from $G$ to the automorphism group of $S$ (the set of all bijections on $S$ along with group operation being function composition). One says that $G$ acts on $S.$
+    -> semantic_association: Wikipedia 'Group action' revision None, lead section, read 2026-09-23 through the MediaWiki parse API; every formula restored from its fallback image's TeX alt  (id: evidence_efd8a)  (Evidence record evidence_efd8a1089db2417daf75e64011d1cb27)
+    -> semantic_association: Wikipedia 'Group action' revision 1375417358, lead section: read through the MediaWiki parse API at 2026-09-23T11:41:45+03:00, and the formula repair re-derived (id: evidence_a4804)  (Evidence record evidence_a480457911a24597b7dd7cce52b083b1)
+[2] Group action  (id: claim_9b860f6fff8742ddb68852c3c7bd8ac6; claim; score 18.27)
+    matched: action, group, "group action" (title)
+    In mathematics, an action of a group $G$ on a set $S$ is, loosely speaking, an operation that takes an element of $G$ and an element of $S$ and produces another element of $S.$ More formally, it is a group homomorphism from $G$ to the automorphism group of $S$ (the set of all bijections on $S$ along with group operation being function composition). One says that $G$ acts on $S.$
+    -> semantic_association: Wikipedia 'Group action' revision None, lead section, read 2026-09-23 through the MediaWiki parse API; every formula restored from its fallback image's TeX alt  (id: evidence_5fe88)  (Evidence record evidence_5fe88a7e29824114934313301206affa)
+    -> semantic_association: Wikipedia 'Group action' revision 1375417358, lead section: read through the MediaWiki parse API at 2026-09-23T11:41:45+03:00, and the formula repair re-derived (id: evidence_289f1)  (Evidence record evidence_289f192518f94268a4fbf932766760ef)
+    <- semantic_association: arXiv:2609.01996 - Baumslag--Solitar Subgroups Obstruct Model Companions for Fields with Group Actions (id: source_8f00e15)  (The paper's title names the concept 'group action' (as 'group actions'); the target is the store's card defining it.)
+    <- semantic_association: arXiv:2609.01462 - Parametrized LS category and group actions (id: source_9f0114f)  (The paper's title names the concept 'group action' (as 'group actions'); the target is the store's card defining it.)
+[3] Group Action  (id: claim_35ce84893e4757ec29e56cc684c8c46a16f9b6ade86c74cfa000b71db34e6bd1; claim; score 17.26)
+    matched: action, group, "group action" (title)
+    A (left) action of a group G on a set X is a map G x X -> X, (g, x) -> g.x, with e.x = x and g.(h.x) = (gh).x; equivalently a homomorphism G -> Sym(X). The orbit of x is G.x = {g.x : g in G}; orbits partition X. The stabilizer G_x = {g : g.x = x} is a subgroup, and the orbit-stabilizer theorem gives |G.x| = [G : G_x]. Actions are the bridge from abstract groups to concrete symmetry (Cayley, Sylow, Burnside all run through them).
+    -> depends_on: Orbit-Stabilizer Theorem (id: claim_509d6b6a)  (orbit-stabilizer is a statement about a group action)
+    <- depends_on: Sylow Theorems (id: claim_e8c18c77)  (the standard Sylow proof counts via conjugation group actions)
+    <- depends_on: Classical toolkit of Lemma 20 of arXiv:2604.22567 (id: claim_6bf02283)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    <- depends_on: Classical toolkit of Bi-unitary invariance supplies \cref{ass:haar-noise} (id: claim_318c1a48)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    <- depends_on: Unnumbered defin of arXiv:2411.03065, 'Growing conditioned BGW trees with\\ log-concave offspring d' (id: claim_32428c36)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    <- depends_on: Classical toolkit of Invariant random-subspace bound (id: claim_a34bc1be)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    <- depends_on: \textsc{Transitive group action of ${\rm Isom}_{1}$} (id: claim_67642015)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    <- depends_on: Classical toolkit of Definition 1 of arXiv:2608.25221 (id: claim_89d57021)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    ... 24 more links (--id claim_35ce8489)
+[4] \textsc{Transitive group action of ${\rm Isom}_{1}$}  (id: claim_6764201551f84f28e8206227e1525b932d2b1a82d77f5fdbdffe22681f134e76; claim; score 16.22)
+    matched: action, group, "group action" (title)
+    [Cor prop.tga of arXiv:2412.00822, '\textsc{Ideal Poisson--Voronoi tessellations \\ beyond hyperbolic spaces}'] For any isometry $g=(g_{1},g_{2})\in {\rm Isom}_{1}$, the action on a corona point $(\theta,\phi,r)\in \widetilde{\partial \mathcal{M}}$ defined in the product of disks model $$ g(\theta,\phi,r) \coloneqq \left(g_{1}(\theta), g_{2}(\phi),\frac{r}{K(g_{1}^{-1}\left(\mathbf{o}),\theta\right) \cdot K(g_{2}^{-1}\left(\mathbf{o}),\phi\right)}\right) $$ is a transitive group action that leaves the corona measure $\mu$ in (equation eq.cormes of the paper) invariant. Consequently, the law of ${\rm IPVT}(\mathcal{M})$ is invariant under ${\rm Isom}_{1}$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Group Action (id: claim_35ce8489)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    -> cites: arXiv:2412.00822 - \textsc{Ideal Poisson--Voronoi tessellations \\ beyond hyperbolic spaces} (id: source_3f651f9)  (Card extracted from arxiv:2412.00822 (its own source_id).)
+[5] arXiv:2609.02974 - Quilt decompositions of surfaces and Torelli group action on the extended Hatcher complex  (id: source_acd120fdf1d12ca957b8511e273a7683e6542d9db6db17256b9d17a76602d385; source; score 15.05)
+    matched: action, group, "group action" (title)
+    Paper the harvested cards were extracted from: arxiv:2609.02974.
+    <- cites: Definition 4 of arXiv:2609.02974 (id: claim_94ac0118)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Definition 9 of arXiv:2609.02974 (id: claim_1753db85)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Thm 10 of arXiv:2609.02974 (id: claim_25ad0e11)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Thm 2 of arXiv:2609.02974 (id: claim_1fdfa61b)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Prop 11 of arXiv:2609.02974 (id: claim_6fc645a1)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Definition 8 of arXiv:2609.02974 (id: claim_b3b562fc)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Crl 13 of arXiv:2609.02974 (id: claim_757b0ce3)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    <- cites: Lemma 6 of arXiv:2609.02974 (id: claim_4484132c)  (Card extracted from arxiv:2609.02974 (its own source_id).)
+    ... 4 more links (--id source_acd120f)
+[6] Unnumbered Proposition of arXiv:2608.30346, '\textbf{Classification complexity of homeomorphism group act'  (id: claim_423e55fe9908925eabd77df2726c5c3976db1329e822b8d405f9bc0f2bd6311c; claim; score 14.98)
+    matched: action, group
+    [Proposition of arXiv:2608.30346, '\textbf{Classification complexity of homeomorphism group actions}'] Both the hyperspace action and the conjugation action of \(\AC([0,1])\) have a comeager orbit.
+    -> cites: arXiv:2608.30346 - \textbf{Classification complexity of homeomorphism group actions} (id: source_0e4c54e)  (Card extracted from arxiv:2608.30346 (its own source_id).)
+[7] {\cite[Section 8.4, Section 10.6  (id: claim_9e9207ee400da021a6790f858e9fc9b87b3c73dd3f27d3763e1df42c03d44eb8; claim; score 14.82)
+    matched: action, group
+    [Theorem ell infty is not group action of arXiv:2608.30346, '\textbf{Classification complexity of homeomorphism group actions}'] {Gao}}] We have \[\ell_\infty \not \leq_B E_{G_\infty}.\] In other words, whenever a Polish group \(G\) acts by a Borel action on a Polish space \(X\) then \[\ell_\infty \not\leq_B E_{G}^{X}.\] (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2608.30346 - \textbf{Classification complexity of homeomorphism group actions} (id: source_0e4c54e)  (Card extracted from arxiv:2608.30346 (its own source_id).)
+    -> semantic_association: Group Action (id: claim_35ce8489)  (The card's paper is titled with the concept 'group action'; the target is the store's card defining it.)
+[8] Classical toolkit of Definition 1 of arXiv:2608.25221  (id: claim_89d5702103ce1d087d8cd72e3801ac0be2822c053f0acc1fef68b611defdfd8d; claim; score 14.33)
+    matched: group, action
+    Classical toolkit of Definition 1 of arXiv:2608.25221. The verbatim TeX of this result (arXiv:2608.25221) names the following classical results in its statement or proof: Group Action (math:algebra.groups:group-action-definition); Symmetric Group (math:algebra.groups:symmetric-group-definition). Representative locus, from the statement text: "... \times \{1, \ldots, N\}$, define $\sigma((a,b))= (\sigma(a), \sigma(b))$. This defines a group action of the symmetric group $\Sigma_N$ on the set of all atom patterns of degree $k$ by defini...". This node records where a modern result touches the classical layer; it asserts the mention and its context, not that the paper's result is a corollary of the named tool.
+    <- depends_on: Definition 1 of arXiv:2608.25221 (id: claim_586873d5)  (The toolkit card 'Classical toolkit of Definition 1 of arXiv:2608.25221' lists the classical results that this result's statement or proof names; its title is e)
+    -> depends_on: Group Action (id: claim_35ce8489)  (The card uses the concept 'group action'; the target is the store's card defining it.)
+    -> depends_on: Symmetric Group (id: claim_e810c33c)  (The card uses the concept 'symmetric group'; the target is the store's card defining it.)
+    -> cites: Group Action (id: claim_35ce8489)  (exact phrase 'group action' occurs in the statement text of Definition 1 of arXiv:2608.25221)
+    -> cites: Symmetric Group (id: claim_e810c33c)  (exact phrase 'symmetric group' occurs in the statement text of Definition 1 of arXiv:2608.25221)
+WEAK MATCH (a hint): the best score is 18.27, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

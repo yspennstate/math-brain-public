@@ -1,0 +1,60 @@
+# navigation: navigation cards
+# command: navigation/nav_query.py "navigation cards"
+# seconds: 1.70
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] navigation/  (id 2adc22ee4e47, navigation/README.md, 91 lines)
+    A small brain of this repository's own contents. The math store under export/population/ holds the mathematics; this folder holds a map of the repository itself: one card per file of the working core, one per directory, one per README section, and a few concept cards (dreaming, recall, hooks,...
+    keywords: how do I find a file in this reposito..., what are the cards and links of the r..., What is here, Start here, Checking it, Rebuilding it, Where to go next, dreaming, recall, hooks, math store, cards
+    -> documents: navigation  [7ef808ceb4dc navigation/]
+    -> in_dir: navigation  [7ef808ceb4dc navigation/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: hooks  [806d2e927001 concept]  (hooks)
+    ... 7 more links (--id 2adc22ee4e47)
+[file] Search and walk the repository's navigation network (navigation/cards.jsonl and edges.jsonl).  (id 3690b70456d3, navigation/nav_query.py, 514 lines)
+    Search and walk the repository's navigation network (navigation/cards.jsonl and edges.jsonl). Standard library only. Works offline. The data files are read as data: nothing in a card is executed, fetched or followed outside the repository, and a path that leaves the repository is refused. python ...
+    keywords: stem, query_tokens, sha256_of, read_jsonl, safe_path, clean, Nav, main, selftest, dreaming, cards, edges
+    -> in_dir: navigation  [7ef808ceb4dc navigation/]
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[file] Build the navigation brain (cards.jsonl, edges.jsonl, MANIFEST.json) for the public math brain repo.  (id c6da2166fd88, navigation/build_nav.py, 371 lines)
+    Build the navigation brain (cards.jsonl, edges.jsonl, MANIFEST.json) for the public math brain repo. Schema: SCHEMA.md beside this file (draft 1). Standard library only; files are read as bytes and parsed (ast for Python docstrings and names), never executed. usage: build_nav.py <file list> <chec...
+    keywords: cid, ext_of, slug, count_lines, clip, strip_md, md_parse, md_sections, py_parse, concepts_in, main, cards
+    -> in_dir: navigation  [7ef808ceb4dc navigation/]
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[readme_section] Checking it  (id 8cdb6b2f193d, navigation/README.md#checking-it)
+    On load the tool compares the sha256 of cards.jsonl and edges.jsonl with MANIFEST.json and refuses files that do not match (--no-verify skips this, for a map you built yourself). It skips malformed lines, unknown kinds and relations, links to missing cards, and any path that is absolute or...
+    keywords: cards, edges
+    -> in_dir: navigation/  [2adc22ee4e47 navigation/README.md]
+[readme_section] What is here  (id eac7298be47d, navigation/README.md#what-is-here)
+    cards.jsonl one card per line: id, kind (file | dir | readme_section | concept), path, anchor, title, summary (taken from the file, at most 300 chars), ext, lines, keywords, entry edges.jsonl one link per line: src, dst, rel (in_dir | links_to | mentions | documents), note MANIFEST.json the...
+    keywords: cards, edges
+    -> in_dir: navigation/  [2adc22ee4e47 navigation/README.md]
+[dir] navigation  (id 7ef808ceb4dc, navigation/)
+    <- documents: navigation/  [2adc22ee4e47 navigation/README.md]
+    <- documents: Math research brain  [aa4aca445b3f README.md]
+    <- in_dir: navigation/  [2adc22ee4e47 navigation/README.md]
+    <- in_dir: Search and walk the repository's navigation network (navigation/cards.jsonl a...  [3690b70456d3 navigation/nav_query.py]
+    <- in_dir: questions.tsv  [94c90b0cd5a7 navigation/questions.tsv]
+    <- in_dir: Build the navigation brain (cards.jsonl, edges.jsonl, MANIFEST.json) for the ...  [c6da2166fd88 navigation/build_nav.py]
+    ... 1 more links (--id 7ef808ceb4dc)
+[readme_section] Where to go next  (id 490b81cb4769, navigation/README.md#where-to-go-next)
+    The four steps after the first one are in the root README: hook the store into your agent (AGENTS_GUIDE section 2), write results back (section 6 and docs/adding-cards.md), run the nightly dream (framework/dreaming/README.md), and start a brain for another field (examples/field_brain_starter,...
+    keywords: dreaming, hooks, agents, math store, cards
+    -> in_dir: navigation/  [2adc22ee4e47 navigation/README.md]
+[file] tools  (id 74bb75ce60b8, tools/README.md, 48 lines)
+    Scripts that build, check, export and restore the math store. Each one's docstring has the full detail and its options; this page says what each is for and where it sits in the work.
+    keywords: how do I rebuild or restore the math ..., which script exports the store or che..., Getting cards in, Checking what is in, Export and restore, For the public repository, A research measurement, math store, cards, export
+    -> documents: tools  [60256deba816 tools/]
+    -> in_dir: tools  [60256deba816 tools/]
+    -> links_to: Adding cards to the store: the draft bundle  [092d6e87e44b docs/adding-cards.md]  (../docs/adding-cards.md)
+    -> links_to: Works cited by the papers in this repository  [30ffb84a0177 docs/cited-works.md]  (../docs/cited-works.md)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+    ... 6 more links (--id 74bb75ce60b8)

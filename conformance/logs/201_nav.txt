@@ -1,0 +1,57 @@
+# navigation: MCP server
+# command: navigation/nav_query.py "MCP server"
+# seconds: 2.13
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 17.0, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] Local, read-only web server for the live brain network.  (id e616d58c9544, framework/viewer/server.py, 1613 lines)
+    Local, read-only web server for the live brain network. The viewer deliberately reads the deployed brain in place. It does not copy the network, mutate memory, or install a background service. The only listening socket is 127.0.0.1.
+    keywords: utc_now_iso, iso_from_epoch, age_seconds, decay, pretty_label, read_tail_lines, normalize_observed_path, extract_file_paths, sqlite_readonly, BrainPaths, GraphBuilder, LiveBrain
+    -> in_dir: viewer  [f4115ad95a87 framework/viewer/]
+[file] A stdio MCP server with one tool, math_recall, that serves math_recall.py to an agent.  (id ccd46cc7cb0f, agent_tools/mcp_math_recall.py, 108 lines)
+    A stdio MCP server with one tool, math_recall, that serves math_recall.py to an agent. An agent that has this tool needs no shell to use the store: the tool runs math_recall.py (the copy beside this file) exactly as an agent would from a shell and returns its text. Set MATHBRAIN_STORE and MATHBRA...
+    keywords: run_recall, reply, main, agents, math store
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+[file] FastAPI shim that wraps the Lean 4 toolchain for the ProofSwarm verifier.  (id fdcf12f4b6bd, framework/methods/proofswarm/lean_worker/server.py, 186 lines)
+    FastAPI shim that wraps the Lean 4 toolchain for the ProofSwarm verifier. POST /verify with {statement, proof, imports, timeout_seconds} → returns LeanVerifyResult. Strategy: write the exact submitted Lean source to a unique temporary file, run `lake env lean` on it, and parse the kernel output. ...
+    keywords: LeanVerifyRequest, LeanVerifyResult, health, verify, formal verification
+    -> in_dir: lean_worker  [7d50ee691e0a framework/methods/proofswarm/lean_worker/]
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+[file] Giving an agent the store  (id 64d6e72fa1f7, AGENTS_GUIDE.md, 148 lines)
+    This note says how to connect a coding agent (Claude Code, Codex, or any client that speaks MCP) to the store in this repository, what to tell it, and how it should search. The default workflow below is the operating procedure for agents using this store; its evidence and limits are stated...
+    keywords: Start here: the default recall workflow, 1. Build the store, 2. Connect the agent, 3. What to tell the agent, 4. Where search falls short, 5. What it costs, 6. Writing back, 7. One session, start to finish, 8. A store for another field, recall, agents, math store
+    -> links_to: A starter brain for a field that is not mathematics  [16206d206442 examples/field_brain_starter/README.md]  (examples/field_brain_starter)
+    -> links_to: Using the brain to keep an agent moving  [3cdd6cc922a8 docs/agency.md]  (docs/agency.md)
+    -> links_to: What the brain costs  [dc38fe4d65cc docs/cost.md]  (docs/cost.md)
+    -> links_to: Agent tools  [eaf6572f4275 agent_tools/README.md]  (the tool guide)
+    -> links_to: Tests  [f62d7a06119a TESTS.md]  (TESTS.md)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    ... 18 more links (--id 64d6e72fa1f7)
+[file] test_recall_server_lock_posix.py - the resident recall server's single-instance lock and posix_proc, on Linux/macOS.  (id 6d39e4def7e5, framework/dreaming/test_recall_server_lock_posix.py, 67 lines)
+    test_recall_server_lock_posix.py - the resident recall server's single-instance lock and posix_proc, on Linux/macOS. python test_recall_server_lock_posix.py Copies brain_recall_server.py and posix_proc.py into a temporary folder (so no real server starts), then checks: posix_proc reads the proces...
+    keywords: ok, dreaming, recall
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[file] Temporary localhost resident recall server. No store writes and no query logging.  (id cf89acdb4d0d, agent_tools/recall_server.py, 285 lines)
+    Temporary localhost resident recall server. No store writes and no query logging.
+    keywords: mutex, Server, main, release, recall, math store
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[file] test_math_recall_server_posix.py - the resident math recall server end to end, on Linux/macOS.  (id 2d579bd8a2fd, agent_tools/test_math_recall_server_posix.py, 114 lines)
+    test_math_recall_server_posix.py - the resident math recall server end to end, on Linux/macOS. python agent_tools/test_math_recall_server_posix.py Builds a five-claim store with math_brain.cli in a temporary folder, copies this folder's .py files beside it (so endpoint.json and SERVER_STOP never ...
+    keywords: ok, run, recall, math store
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[file] test_math_recall_server_posix.py - the resident math recall server end to end, on Linux/macOS.  (id 0b7ac713edaf, framework/dreaming/test_math_recall_server_posix.py, 108 lines)
+    test_math_recall_server_posix.py - the resident math recall server end to end, on Linux/macOS. python framework/dreaming/test_math_recall_server_posix.py Builds a five-claim store with math_brain.cli in a temporary folder, copies this folder's .py files beside it (so endpoint.json and SERVER_STOP...
+    keywords: ok, run, dreaming, recall, math store
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)

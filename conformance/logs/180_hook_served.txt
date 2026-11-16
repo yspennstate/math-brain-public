@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Theorem 9 of arXiv:2605.17155 (separable Banach space valued adic ss
+# command: math_sense.py < event.json
+# seconds: 45.38
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0024-log", "prompt": "I am working on this: Theorem 9 of arXiv:2605.17155 (separable Banach space valued adic sssi process asymptotically). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Theorem 9 of arXiv:2605.17155 [theorem]: [Theorem 9 of arXiv:2605.17155, '2605.17155'] Let \\(B\\) be a separable Banach space and let \\((X_n)_{n\\geq0}\\) be a \\(B\\)-valued \\(p\\)-adic \\(H\\)-sssi process. Then \\[ \\Pp(\\{X\\hbox{ is asymptotically almost periodic}\\}\\Delta\\{X\\hbox{ is }p\\hbox{-adically continuous}\\}) =0. \\]\n    (claim_38936fe043da014b7d871f2d46098081dcc8c38d22df399e35f1905314f4a6f7 | theorem +proof; draft; unreviewed; unverified | matched: 17155, sssi, adic)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Theorem 9 of arXiv:2605.17155 [theorem]: [Theorem 9 of arXiv:2605.17155, '2605.17155'] Let \(B\) be a separable Banach space and let \((X_n)_{n\geq0}\) be a \(B\)-valued \(p\)-adic \(H\)-sssi process. Then \[ \Pp(\{X\hbox{ is asymptotically almost periodic}\}\Delta\{X\hbox{ is }p\hbox{-adically continuous}\}) =0. \]
+    (claim_38936fe043da014b7d871f2d46098081dcc8c38d22df399e35f1905314f4a6f7 | theorem +proof; draft; unreviewed; unverified | matched: 17155, sssi, adic)

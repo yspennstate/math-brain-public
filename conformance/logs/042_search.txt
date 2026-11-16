@@ -1,0 +1,49 @@
+# search: Measurable Cardinal
+# command: math_recall.py "Measurable Cardinal"
+# seconds: 0.66
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Measurable Cardinal  (id: claim_f22fc0c538eb2b1c7be11b6dd08c3d5c7acde42cb08d22b785942d3c6000c2e4; claim; score 20.99)
+    matched: cardinal, measurable, "measurable cardinal" (title)
+    An uncountable cardinal \kappa is measurable if there exists a non-principal, \kappa-complete ultrafilter \mathcal{U} on \kappa, meaning that any intersection of fewer than \kappa elements of \mathcal{U} also belongs to \mathcal{U}.
+    -> depends_on: Ultrafilter on a Set (id: claim_d57f9558)  (Requires kappa-complete ultrafilter)
+    <- depends_on: Scott's Theorem on Measurable Cardinals (1961) (id: claim_29a910ad) (superseded by claim_302c68c5)  (Proves measurable cardinal implies V != L)
+    <- depends_on: Scott's Theorem on Measurable Cardinals (id: claim_302c68c5)  (Proves measurable cardinal implies V != L)
+[2] Scott's Theorem on Measurable Cardinals  (id: claim_302c68c59d0d327c16733393480efbb3c8ec1bcfae52624ab110d7d7656869fc; claim; score 19.18)
+    matched: cardinal, measurable
+    If there exists a measurable cardinal, then V \neq L. Existence of a measurable cardinal
+    -> refutes: Axiom of Constructibility (V = L) (id: claim_dd56693d)  (Measurable cardinals refute V = L)
+    -> depends_on: Measurable Cardinal (id: claim_f22fc0c5)  (Proves measurable cardinal implies V != L)
+    -> cites: Axiom of constructibility (id: source_752e63b)  (states what wikipedia:Axiom_of_constructibility says at revision 1378919046, lines 75-75)
+    -> cites: Dana Scott (id: source_dab3cbd)  (states what wikipedia:Dana_Scott says at revision 1378633958, lines 88-88)
+[3] Weakly Inaccessible Cardinal  (id: claim_7382d495fd2cac09b5f3f77d7a6c9758aad29801054c0b05de4a0af190d5543c; claim; score 14.76)
+    matched: cardinal
+    An uncountable cardinal \kappa is weakly inaccessible if \kappa is regular (\mathrm{cf}(\kappa) = \kappa) and a weak limit cardinal: for every cardinal \lambda < \kappa, \lambda^+ < \kappa.
+    <- specializes: Strongly Inaccessible Cardinal (id: claim_c80ce560)  (Strongly inaccessible is weakly inaccessible + strong limit)
+    -> depends_on: Regular Cardinal (id: claim_7c33353b)  (Requires regularity and weak limit)
+[4] Strongly Inaccessible Cardinal  (id: claim_c80ce56089febdc4fb7db3aad02686c80c7642cd23222e95efd0e39e9652a07a; claim; score 14.76)
+    matched: cardinal
+    An uncountable cardinal \kappa is strongly inaccessible if \kappa is regular (\mathrm{cf}(\kappa) = \kappa) and a strong limit cardinal: for every cardinal \lambda < \kappa, 2^\lambda < \kappa.
+    -> specializes: Weakly Inaccessible Cardinal (id: claim_7382d495)  (Strongly inaccessible is weakly inaccessible + strong limit)
+    -> depends_on: Regular Cardinal (id: claim_7c33353b)  (Requires regularity and strong limit)
+    <- depends_on: V_\kappa is a Model of ZFC for Inaccessible \kappa (id: claim_b85c6b31)  (V_kappa is a model of ZFC when kappa is inaccessible)
+[5] Cardinal number  (id: source_e13de754e1aeb5ed8031088437bad14fbcfcd14bb642e07ea0eb3bed548dd2a8; source; score 14.33)
+    matched: cardinal
+    Wikipedia article: Cardinal number (revision 1365179595). https://en.wikipedia.org/w/index.php?title=Cardinal_number&oldid=1365179595
+    <- cites: Cardinal Exponentiation (id: claim_43123c7f)  (states what wikipedia:Cardinal_number says at revision 1365179595, lines 134-136)
+[6] \aleph_\omega is the Smallest Singular Cardinal  (id: claim_ff61879c2bc6f600c56ba80211a43a149d3363fe3c0196fb6125a4685b81a610; claim; score 14.22)
+    matched: cardinal
+    The cardinal \aleph_\omega is a singular cardinal with cofinality \mathrm{cf}(\aleph_\omega) = \omega < \aleph_\omega. Definition of aleph sequence
+    -> depends_on: Regular Cardinal (id: claim_7c33353b)  (Proves aleph_omega is singular with cofinality omega)
+[7] Large cardinal  (id: claim_4c21773855eb250e510503366f37eda45ad4e81725e61dbae0649e3154b3fb7c; claim; score 14.03)
+    matched: cardinal
+    In the mathematical field of set theory, a large cardinal property is a certain kind of property of transfinite cardinal numbers. Cardinals with such properties are, as the name suggests, generally very large, such that the cardinal is inaccesible through standard set theory functions, power sets or successors of smaller cardinals.. The proposition that such cardinals exist cannot be proved in the most common axiomatization of set theory, namely ZFC, and such propositions can be viewed as ways of measuring how "much", beyond ZFC, one needs to assume to be able to prove certain desired results. In other words, they can be seen, in Dana Scott's phrase, as quantifying the fact "that if you want more you have to assume more".
+    <- depends_on: Open problem (arXiv:2608.26628): Suppose there are a model M and a forcing notion P M such that (*) is true. Can we deduce (id: claim_c1578eb4)  (The card uses the concept 'large cardinal'; the target is the store's card defining it.)
+    <- depends_on: Problem 26 of arXiv:2608.26628 (id: claim_f64c2872)  (The card uses the concept 'large cardinal'; the target is the store's card defining it.)
+[8] Cardinal Ordering  (id: claim_cdb27a6eee8cf81cfc99400bac9114a4388b90db6401eae123ded213c0d7f450; claim; score 13.78)
+    matched: cardinal
+    For sets A and B, the cardinal inequality |A| \le |B| holds if there exists an injection from A into B.
+    -> depends_on: Injection (One-to-One Function) (id: claim_e2b3eef8)  (Cardinal ordering is defined via injections)
+WEAK MATCH (a hint): the best score is 20.99, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

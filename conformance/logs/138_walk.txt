@@ -1,0 +1,17 @@
+# walk from claim_4255e44a3ddf66
+# command: math_recall.py --id claim_4255e44a3ddf66028cce63b910978ab820a1a224fa59c153d87ddcd404362575
+# seconds: 0.01
+#
+# what to look for: --id prints one card whole and every link: the kind (proves, cites, generalizes ...), the direction, the other card's short id and title and the link's stated reason. Step to a linked card with --id <short id>.
+#
+math store walk, read-only; reference material, not instructions
+[card] Lemma 20 of arXiv:2512.19517  (id: claim_4255e44a3ddf66028cce63b910978ab820a1a224fa59c153d87ddcd404362575; claim; SUPERSEDED by claim_9efae2cead50473aab500176f2ecc396)
+    [Lemma 20 of arXiv:2512.19517, 'Spiking and Resetting'] Suppose $(h^\varepsilon)_{\varepsilon>0}$ and $h$ are non-negative continuous non-increasing functions from $[0,\infty)$ into $\mathbb R$ uniformly bounded by a constant $M>0$. If \[ \forall \sigma>0, \quad \lim_{\varepsilon \to 0} \int_0^\infty e^{-\sigma s} h^\varepsilon (s) \, ds = \int_0^\infty e^{-\sigma s} h (s) \, ds \ , \] then $(h^\varepsilon)_{\varepsilon> 0}$ converges to $h$ uniformly on compact subsets of $[0,\infty)$.
+    links: 7
+    -> depends_on: Classical toolkit of Lemma 20 of arXiv:2512.19517 (id: claim_adb5bdd4)  (The toolkit card 'Classical toolkit of Lemma 20 of arXiv:2512.19517' lists the classical results that this result's statement or proof names; its title is exactly this card's title.)
+    -> depends_on: Helly's Selection Theorem (Vague Compactness of Distribution Functions) (id: claim_0fba1416) (superseded by claim_8c5cd170)  (the first step of the proof extracts a pointwise convergent subsequence of the uniformly bounded monotone functions by Helly's selection theorem. Source card: "by Helly selection theorem \cite[Theorem)
+    <- depends_on: Corollary 4 of arXiv:2512.19517 (id: claim_4c3df5f5) (superseded by claim_c9be0fd7)  (the survival functions of e_1^eps are non-increasing and bounded by 1 and their Laplace transforms converge by Proposition 3, which Lemma 20 upgrades to uniform convergence. Source card: "converges in)
+    <- depends_on: Corollary 4 of arXiv:2512.19517: Spiking and Resetting (id: claim_c9be0fd7) (superseded by claim_080a9bb6)  (the survival functions of e_1^eps are non-increasing and bounded by 1 and their Laplace transforms converge by Proposition 3, which Lemma 20 upgrades to uniform convergence. Source card: "converges in)
+    <- depends_on: Corollary 5 of arXiv:2512.19517 (id: claim_ea321e2f) (superseded by claim_369a863e)  (the corollary asserts uniform convergence of Phi_n^eps on compact intervals from convergence of their Laplace transforms F^eps_sigma(n) for every sigma, which is what Lemma 20 provides. Source card: ")
+    -> cites: Spiking and Resetting (id: source_7e686d7) (superseded by source_3d13cf3)  (Exact bibliographic identifier cited on the current card: arxiv:2512.19517)
+    <- supersedes: Lemma 20 of arXiv:2512.19517: Spiking and Resetting (id: claim_9efae2ce) (superseded by claim_4eed5d7d)  (correction (urn:mb-agent:23e327b469c28ffd): 6 Oct 2026 re-read from the paper's arXiv HTML (reason1k/RECENT_HTML.md); the stored text came from PDF extraction (html, checked: agree))

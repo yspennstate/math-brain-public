@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Cor slice-adjoint-equiv of arXiv:2608.28504 (arXiv Global categories
+# command: math_sense.py < event.json
+# seconds: 69.98
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0011-log", "prompt": "I am working on this: Cor slice-adjoint-equiv of arXiv:2608.28504 (arXiv Global categories global Thom spectra' homomorphism compact). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Cor slice-adjoint-equiv of arXiv:2608.28504 [concept]: [Cor slice-adjoint-equiv of arXiv:2608.28504, 'Global $\\bm\\infty$-categories and global Thom spectra'] Let $\\alpha\\colon G\\to G'$ be any homomorphism of compact Lie groups and let $B\\in{{\\mathfrak S\\kern-.4pt}}_\\textup{$G$-gl}$ arbitrary. Then $\\textbf{\\textup{L}}\\alpha_!\\colon{{\\mathfrak S\\kern-.4pt}}_\\textup{$G$-gl}\\to{{\\mathfrak S\\kern-.4pt}}_\\textup{$G'$-gl}$ induces an equivalence $({{\\mathfrak S\\kern-.4pt}}_\\textup{$G$-gl})_{/B}\\xrightarrow{\\;\\smash{\\raisebox{-0.25ex...\n    (claim_b0b315c1b7d4f04733e6cf9c7b7a7b846fb89c70669b19029b2eb8aa0b083669 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: slice-adjoint, global, 28504)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Cor slice-adjoint-equiv of arXiv:2608.28504 [concept]: [Cor slice-adjoint-equiv of arXiv:2608.28504, 'Global $\bm\infty$-categories and global Thom spectra'] Let $\alpha\colon G\to G'$ be any homomorphism of compact Lie groups and let $B\in{{\mathfrak S\kern-.4pt}}_\textup{$G$-gl}$ arbitrary. Then $\textbf{\textup{L}}\alpha_!\colon{{\mathfrak S\kern-.4pt}}_\textup{$G$-gl}\to{{\mathfrak S\kern-.4pt}}_\textup{$G'$-gl}$ induces an equivalence $({{\mathfrak S\kern-.4pt}}_\textup{$G$-gl})_{/B}\xrightarrow{\;\smash{\raisebox{-0.25ex...
+    (claim_b0b315c1b7d4f04733e6cf9c7b7a7b846fb89c70669b19029b2eb8aa0b083669 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: slice-adjoint, global, 28504)

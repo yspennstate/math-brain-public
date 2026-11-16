@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Lemma 18 of arXiv:2607.19176 (Convergence Sinkhorn Algorithm Schr di
+# command: math_sense.py < event.json
+# seconds: 54.50
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0030-log", "prompt": "I am working on this: Lemma 18 of arXiv:2607.19176 (Convergence Sinkhorn Algorithm Schr dinger Bridge Regime Consider). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Lemma 18 of arXiv:2607.19176 [lemma]: [Lemma 18 of arXiv:2607.19176, 'Exponential Convergence of the Sinkhorn Algorithm for the Schr\u00f6dinger Bridge with Regime S'] Consider the process defined by the SDE \\eqref{eq:smoothed-sde} with $ \\mu_0 \\in \\mathcal{P}(\\mathbb{R}^d) $. Set \\[ \\underline a:=\\min_{i\\in\\mathcal I}\\sigma_i^2>0. \\] Then, for every $t>0$ and every $i\\in\\mathcal I$, the measure $\\mu_t^i$ is absolutely continuous with respect to the Lebesgue measure. If $p_t^i$ denotes its density, then \\[ 0\\le p_t...\n    (claim_f048762b31c61e26f28cbc2e73dfea55ea6b9761ad0bbbfd036f0df9480dc4bb | EXCERPT, incomplete; lemma +proof; draft; unreviewed; unverified | matched: 19176, sinkhorn, algorithm)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Lemma 18 of arXiv:2607.19176 [lemma]: [Lemma 18 of arXiv:2607.19176, 'Exponential Convergence of the Sinkhorn Algorithm for the Schrödinger Bridge with Regime S'] Consider the process defined by the SDE \eqref{eq:smoothed-sde} with $ \mu_0 \in \mathcal{P}(\mathbb{R}^d) $. Set \[ \underline a:=\min_{i\in\mathcal I}\sigma_i^2>0. \] Then, for every $t>0$ and every $i\in\mathcal I$, the measure $\mu_t^i$ is absolutely continuous with respect to the Lebesgue measure. If $p_t^i$ denotes its density, then \[ 0\le p_t...
+    (claim_f048762b31c61e26f28cbc2e73dfea55ea6b9761ad0bbbfd036f0df9480dc4bb | EXCERPT, incomplete; lemma +proof; draft; unreviewed; unverified | matched: 19176, sinkhorn, algorithm)

@@ -1,0 +1,51 @@
+# search: Definition arXiv
+# command: math_recall.py "Definition arXiv"
+# seconds: 4.30
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Definition Definition of ergodicity of arXiv:2411.03512  (id: claim_42a218cf825a914b133ca380285bc592d80cab0425043e41a5b952d6e335dcd6; claim; score 4.62)
+    matched: definition, arxiv
+    [Definition Definition of ergodicity of arXiv:2411.03512, 'Ergodicity and Mixing of Sublinear Expectation System and Applications'] We say the quadruple $(\Omega, \mathcal{H}, (U_t)_{t\in \mathbb T}, \hat{\mathbb{E}})$ is ergodic if for all $X\in \mathcal{I}$, $X$ is constant, $\hat{\mathbb E}$-q.s.
+    -> cites: arXiv:2411.03512 - Ergodicity and Mixing of Sublinear Expectation System and Applications (id: source_ea87872)  (Card extracted from arxiv:2411.03512 (its own source_id).)
+[2] {\cite[Definition 3.4 and Definition 3.5  (id: claim_5e39b488374e324ba442ba2295e2e1f7ae15eb83925a74be91d8442b6fba0614; claim; score 4.60)
+    matched: definition, arxiv
+    [Definition {\cite[Definition 3.4 and Definition 3.5 of arXiv:2411.06131, 'Non-Markovian dynamics: the memory-dependent probability density evolution equations'] {ducan2000stochastic}}] Let $\mathscr{L}^2_{\phi}(0, T)$ be be the space of measurable, scalar-valued stochastic processes $(F_t,t\in[0,T])$, such that $$ \mathbb{E}\bigg[\int_0^T\int_0^T F_s F_t \phi(s,t)\mathrm{d}s\mathrm{d}t\bigg]<\infty, $$ where $\phi(t,s)=H(2H-1)|t-s|^{2H-2}$.
+    -> depends_on: Fractional Brownian motion (id: claim_124ab27e)  (The source's kernel phi(s,t) = H(2H-1)|t-s|^{2H-2} is the mixed second derivative of the target's fBm covariance R(s,t) = (t^{2H} + s^{2H} - |t-s|^{2H})/2, so f)
+    -> cites: arXiv:2411.06131 - Non-Markovian dynamics: the memory-dependent probability density evolution equations (id: source_35356a5)  (Card extracted from arxiv:2411.06131 (its own source_id).)
+[3] Definition Definition of the solution of arXiv:2607.18531  (id: claim_4d8143d1112b457d507567bf4d08dadea57fb6a0ea065bb9e935ce57b4a6310e; claim; score 4.55)
+    matched: definition, arxiv
+    [Definition Definition of the solution of arXiv:2607.18531, 'Doubly reflected BSDEs driven by Inhomogeneous simple Lévy processes: Applications to gene'] Let $\beta > 0$. A solution to the DRBSDE (equation basic equation of the paper) with jumps, associated with the data $(\xi, f, L, U)$, is a quintuple of processes $(Y, Z,,V, K^{+}, K^{-})$ that satisfies ((basic equation of the paper)) and belongs to the space $\mathfrak{D}_{\beta}^2$.
+    -> cites: arXiv:2607.18531 - Doubly reflected BSDEs driven by Inhomogeneous simple Lévy processes: Applications to gene (id: source_d09f6ba)  (Card extracted from arxiv:2607.18531 (its own source_id).)
+[4] Definition excursion_metric_definition of arXiv:2604.16206  (id: claim_5ff30ebb0843a25f63f71c51b131bfd80787ba1ef9b9775a52fa0398bc311c18; claim; score 4.55)
+    matched: definition, arxiv
+    [Definition excursion_metric_definition of arXiv:2604.16206, 'Extrapolation of max--stable random fields with Fr\'echet marginals'] Let $\mu$ be a probability measure on $\mathbb{R}$ and $Y_1, Y_2$ be two real-valued random variables. The excursion (pseudo-) metric $\mathcal{E}_\mu$ is then defined by $$ \mathcal{E}_\mu (Y_1, Y_2) := \int_\mathbb{R} \left(\mathbb{P}(Y_1 \vee Y_2 > u) - \mathbb{P}(Y_1 \wedge Y_2 > u)\right)\mu(du).$$
+    -> cites: arXiv:2604.16206 (id: source_180a932)  (Card extracted from arxiv:2604.16206 (its own source_id).)
+[5] Definition IM definition of arXiv:2605.16963  (id: claim_8a1a0080debb2a4ec48a777b17906c14969828c1744624baa93daaac409a5824; claim; score 4.55)
+    matched: definition, arxiv
+    [Definition IM definition of arXiv:2605.16963, 'Stochastic Euler Equations with Pseudo-differential Noise: Continuous and Discontinuous Pe'] A Markov semigroup $\{\mathscr{P}_{t}\}_{t\ge0}$ is called \textbf{Feller} on $E$ if $\mathscr{P}_{t} (C_B(E)) \subset C_B(E)$ for all $t\ge0$. A probability measure $\mu\in\mathbf{P}(E)$ is called an \textbf{invariant probability measure} for $\{\mathscr{P}_{t}\}_{t\ge0}$ if \begin{equation} \mathscr{P}^*_{t}\mu=\mu, \quad \text{for all } t > 0. \end{equation}
+    <- depends_on: \textbf{Existence Criterion} (id: claim_a4a24e4e)  (Uses the term 'invariant probability measure', which Definition IM definition of arXiv:2605.16963 introduces (same paper, arxiv:2605.16963).)
+    <- depends_on: Problem Problem-AS of arXiv:2605.16963 (id: claim_f5a0de83)  (Uses the term 'invariant probability measure', which Definition IM definition of arXiv:2605.16963 introduces (same paper, arxiv:2605.16963).)
+    <- depends_on: \textbf{Long-time dynamics of \eqref{Target problem (u P) damp}} (id: claim_4d5d1485)  (Uses the term 'invariant probability measure', which Definition IM definition of arXiv:2605.16963 introduces (same paper, arxiv:2605.16963).)
+    <- depends_on: \textbf{Invariant Probability Measures for Abstract Singular Systems} (id: claim_b2c0f59a)  (Uses the term 'invariant probability measure', which Definition IM definition of arXiv:2605.16963 introduces (same paper, arxiv:2605.16963).)
+    <- depends_on: \textbf{Long-time dynamics of \eqref{SPDE-general}} (id: claim_f0db4cff)  (Uses the term 'invariant probability measure', which Definition IM definition of arXiv:2605.16963 introduces (same paper, arxiv:2605.16963).)
+    -> cites: arXiv:2605.16963 - Stochastic Euler Equations with Pseudo-differential Noise: Continuous and Discontinuous Pe (id: source_3113e3b)  (Card extracted from arxiv:2605.16963 (its own source_id).)
+    -> semantic_association: Invariant probability measure (id: claim_1b0fd537)  (Same named concept 'invariant probability measure': introduced by this Definition and named by the hub card's title.)
+[6] Definition def:decompose-Ball of arXiv:2606.13147  (id: claim_917c00ec6351f33b88e736d67569b5da476a2101918e7e79b1c317fa04343aa2; claim; score 4.52)
+    matched: definition, arxiv
+    [Definition def:decompose-Ball of arXiv:2606.13147, 'Scaling limits of the single-curve interface and outermost loops in the planar random fiel'] Fix $I=\{x_1,x_2,\cdots,x_k\}\subset \Lambda_M$ and recall the definition of $d_x$ and $\mathrm{Ball}(I)$ from Definition~(def: distance and ball of the paper). For $0\leq p\leq k,$ let $$\mathrm{Ball}(I,0)=\emptyset,\quad\mathrm{Ball}(I,p)=\bigcup_{j=1}^p\Lambda_{d_{x_j}/10}(x_j).$$ Then define $\eta_I^p$ to be the configuration that $\eta_I$ restricts on ${\eta_I}|_{_{\mathrm{Ball}(I,p)}}$. Here, for clarity, we point out that by definition $$\mathrm{Ball}(I,k)=\mathrm{Ball}(I)\mbox{ but }\mathrm{Ball}(I,p)\neq \mathrm{Ball}(\{x_1,x_2,\cdots,x_p\})$$ for general $p$ since the definition of $d_{x_j}$ could also depend on $\{x_{p+1},\cdots,x_k\}$.
+    -> cites: arXiv:2606.13147 - Scaling limits of the single-curve interface and outermost loops in the planar random fiel (id: source_88b72a1)  (Card extracted from arxiv:2606.13147 (its own source_id).)
+[7] Definition Definition of mixing of arXiv:2411.03512  (id: claim_cd6108ae005cf29d7cfd9b28620a606670f142b90e911e02a048369569f8c082; claim; score 4.51)
+    matched: definition, arxiv
+    [Definition Definition of mixing of arXiv:2411.03512, 'Ergodicity and Mixing of Sublinear Expectation System and Applications'] A sublinear expectation system $(\Omega, \mathcal{H}, (U_t)_{t\in \mathbb T}, \hat{\mathbb{E}})$ ($\mathbb T=\mathbb N, \mathbb Z, \mathbb R_+, \mathbb R$) is called mixing if for any $X\in \mathcal{H}^{d_1},Y \in \mathcal{H}^{d_2}$ and $\phi \in C_{lip}(\mathbb{R}^{d_1+d_2})$, we have \begin{equation} \lim_{t\rightarrow \infty}\hat{\mathbb{E}}[\phi(X,U_tY)]=\hat{\mathbb{E}}[\hat{\mathbb{E}}[\phi(x,Y)]|_{x=X}]. \end{equation}
+    -> cites: arXiv:2411.03512 - Ergodicity and Mixing of Sublinear Expectation System and Applications (id: source_ea87872)  (Card extracted from arxiv:2411.03512 (its own source_id).)
+[8] Definition Definition_Bessel_function of arXiv:2411.10829  (id: claim_7530babf394737b5a7699e67dc9b6ff097b231e1e19a509cde4852e64d5e9ab2; claim; score 4.50)
+    matched: definition, arxiv
+    [Definition Definition_Bessel_function of arXiv:2411.10829, 'Airy$_\beta$ line ensemble and its Laplace transform'] For any reals $\lambda_1\ge \lambda_2\ge \dots \ge \lambda_N$, the \emph{multivariate Bessel function} $\mathcal B_{(\lambda_1, \ldots, \lambda_N)}(x_1, \ldots, x_N; \beta)$ is a function of $N$ complex variables $x_1,\dots,x_N$ defined as \begin{equation} \mathcal B_{(\lambda_1,\dots,\lambda_N)}(x_1,\dots,x_N;\,\beta)= \mathbb E_{\{y^k_i\}}\!\left[\exp\left(\sum_{k=1}^{N} x_k \cdot \left(\sum_{i=1}^{k} y_i^k-\sum_{j=1}^{k-1} y_j^{k-1}\right) \right) \right], \end{equation} where the expectation is with respect to $\beta$-corners process with top row $(\lambda_1,\dots,\lambda_N)$ from Definition (def_betacorner of the paper).
+    -> depends_on: Definition def_betacorner of arXiv:2411.10829 (id: claim_0f778a4c)  (Uses the term 'corners process with top row', which Definition def_betacorner of arXiv:2411.10829 introduces (same paper, arxiv:2411.10829).)
+    -> depends_on: Bessel function (id: claim_cbe39330)  (The card uses the concept 'bessel function'; the target is the store's card defining it.)
+    -> cites: arXiv:2411.10829 - Airy$_\beta$ line ensemble and its Laplace transform (id: source_f85615d)  (Card extracted from arxiv:2411.10829 (its own source_id).)
+    -> cites: Laplace transform (id: claim_c6d6525a)  (The card names laplace transform; the target is the store's card stating it.)
+    -> semantic_association: Laplace transform (id: claim_c6d6525a)  (The card's paper is titled with the concept 'laplace transform'; the target is the store's card defining it.)
+WEAK MATCH (a hint): the best score is 4.62, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

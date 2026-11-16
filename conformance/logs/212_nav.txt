@@ -1,0 +1,56 @@
+# navigation: benchmark
+# command: navigation/nav_query.py "benchmark"
+# seconds: 1.83
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] Deterministic error-detection benchmark  (id 8ccc12a401b4, framework/mathbrain/docs/benchmark.md, 157 lines)
+    The benchmark is a fixed-capacity bank of 10,000 synthetic mathematics problems. It reads no corpus and no other local project. A seed and integer coordinate replay an evaluator record, while the solver receives only the problem and numbered derivation.
+    keywords: Mathematical coverage, Separate verification, Fault placement, Solver-valid scope, Solver boundary, Replay, manifests, and budgets, Version and provenance, tests
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+[file] Deterministic, public-safe benchmark generation for mathematical error detection.  (id 0a0032d66bb2, src/math_brain/benchmark.py, 3255 lines)
+    Deterministic, public-safe benchmark generation for mathematical error detection. The trusted benchmark core deliberately uses only the Python standard library. Items are synthetic, self-contained MathIR records: each has a correct numbered derivation, a copy with one semantically false line, two...
+    keywords: CounterRNG, ExprOp, Expr, evaluate_expression, render_expression, Relation, evaluate_relation, render_relation, SolutionStep, Solution, Difficulty, Problem
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+[file] Retained 10,000-item benchmark evidence  (id ac4d30eafb9d, docs/benchmark-v4-10000-evidence.md, 26 lines)
+    The v4 bank was materialized from commit bc8d54f with seed public-10000-regression and coordinate window [0, 10000). The raw canonical records remain in ignored private storage at local/benchmark/v4-10000/items.jsonl; they are not a public export.
+    keywords: where is the record of the ten thousa..., tests, export, privacy
+    -> in_dir: docs  [11eb2a0ced03 docs/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    -> mentions: export  [c9d454400280 concept]  (export)
+    <- links_to: Documentation  [4b912d57ae4a docs/README.md]  (benchmark-v4-10000-evidence.md)
+[file] Repository rules for every agent  (id 31909053edc8, framework/mathbrain/AGENTS.md, 48 lines)
+    This repository is exclusively for pure and applied mathematics research that is safe to isolate from the rest of the machine.
+    keywords: Scope boundary, Mathematical claims, Benchmark integrity, Engineering, agents, tests
+    -> in_dir: mathbrain  [910e4b7f936e framework/mathbrain/]
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+[file] Construction and audit log  (id 6128e507751c, framework/mathbrain/docs/campaign-log.md, 347 lines)
+    This is a public-safe evidence ledger for the initial hardening campaign. It records reproducible outcomes, not local file paths, source excerpts, machine names, credentials, or private mathematical content. Machine-local manifests and detailed findings remain under the gitignored local/ tree.
+    keywords: Campaign contract, Evidence ledger, Privacy-isolated core, Privacy and publication hardening, Guarded retrieval and mathematical co..., Paired evaluation protocol, Lean verification gate, Exact-arithmetic benchmark baseline, Benchmark trust-boundary hardening, Local mathematical audit, Proof-level audit results, Hard-v2 red team and halted blind pilot
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Poincaré–Birkhoff Theorem (twist map theorem)  (id 0a42d98a37e4, framework/methods/proofswarm/problems/poincare_birkhoff.md, 82 lines)
+    --- problem_id: poincare_birkhoff short_name: Poincaré–Birkhoff theorem (Poincaré's last geometric theorem) status: classical (proved 1913, mathlib4 formalization is open) posed_by: Henri Poincaré (conjectured 1912) proved_by: George D. Birkhoff (1913, completed proof; partial proof by Poincaré...
+    keywords: Informal statement (classical Birkhof..., Why this is the right benchmark for P..., Sub-ticket decomposition, Concrete twist map family for L4 nume..., References (Lemma Miner seed corpus), Evaluation criteria (POC scope), tests, evaluation
+    -> in_dir: problems  [a6f0cd0e3e51 framework/methods/proofswarm/problems/]
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Atomic, verifiable materialization for the deterministic synthetic benchmark bank.  (id 466e20cd170a, src/math_brain/benchmark_artifacts.py, 281 lines)
+    Atomic, verifiable materialization for the deterministic synthetic benchmark bank. Two guarantees are kept apart. Exception atomicity: a failed certificate or write leaves no destination. Crash durability: the files are fsynced before the rename, and after it the parent directory is fsynced where...
+    keywords: BenchmarkDurabilityError, MaterializedBenchmark, materialize_benchmark, verify_materialized_benchmark, tests
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+[file] Materialize a certified synthetic benchmark bank into ignored local storage.  (id 5c3895891a19, examples/materialize_benchmark.py, 39 lines)
+    Materialize a certified synthetic benchmark bank into ignored local storage.
+    keywords: main, tests
+    -> in_dir: examples  [0c9eb7854818 examples/]
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)

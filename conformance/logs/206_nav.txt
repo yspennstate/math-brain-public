@@ -1,0 +1,43 @@
+# navigation: challenge bank
+# command: navigation/nav_query.py "challenge bank"
+# seconds: 2.19
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] Sealed challenge bank  (id 30c30b52fc9b, framework/mathbrain/docs/challenge-bank.md, 126 lines)
+    The v1 challenge bank is a model-free evaluation fixture for mathematical error detection. It contains twenty development cases and a commitment to twenty evaluator-only holdout cases. The splits use the same ordered family contract, with ten medium and ten hard cases each. Every case has one...
+    keywords: Role boundary, Solver and evaluator interfaces, Pure replay, Generic references and retrieval, Challenge-evaluation score policy, Manifests and sealing, retrieval, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Hard-v2 calibration preregistration bridge  (id cd2124241bd8, framework/mathbrain/docs/hard-calibration-v3.md, 48 lines)
+    hard_calibration_v3 binds the fixed 320-case relational challenge bank to the generic outcome-blind v3 protocol. It is the path used before any real brain-off response is read.
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+[file] challenge_bank.json  (id 0a08c1e55505, config/challenge_bank.json, 288 lines)
+    -> in_dir: config  [7c1bb141682a config/]
+[file] Public difficulty and shortcut calibration v2  (id a48a9a37bba3, framework/mathbrain/docs/public-calibration-v2.md, 95 lines)
+    Calibration v2 is a public-data gate for candidate hard-case generators. It does not call a model, read the private challenge bank, or emit prompts, traces, answers, case identifiers, fault lines, or oracle receipts. Its digest-bound output is aggregate evidence only. The current...
+    keywords: privacy
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> links_to: Calibration preregistration v3  [5ce09ffa11ab framework/mathbrain/docs/calibration-preregistration-v3.md]  (calibration preregistration v3)
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    <- links_to: Calibration preregistration v3  [5ce09ffa11ab framework/mathbrain/docs/calibration-preregistration-v3.md]  (public calibration v2)
+[file] Public hard challenges, version 2  (id 29b13fa80c16, framework/mathbrain/docs/hard-challenge-v2.md, 467 lines)
+    Hard challenge v2 is public development material. It does not read, replace, compare against, or expose the historical sealed challenge bank. The module has no holdout reader, retrieval path, unsealing path, or model runner. Its cases are generated from public seeds and certified with exact...
+    keywords: Six independent design coordinates, Fixed 320-case calibration schedule, Live calibration adapter and rendered..., Two shared fault mechanisms, Semantic program before prose, One solver-output contract, Exact mathematical checks, Verifier and serialization boundaries, Audit canaries and limits, Exploratory surface-leakage audit, Relational shortcut falsification, Public schedule inversion and answer ...
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+[file] Pre-axis recurrence binding-bank manifests for hard-challenge v3.  (id 65f80da66800, framework/mathbrain/src/math_brain/recurrence_manifest_v3.py, 448 lines)
+    Pre-axis recurrence binding-bank manifests for hard-challenge v3. This layer freezes full typed recurrence bindings before any schedule seed, fault, answer, template, or solver-view axis exists. Its digest proves exact content identity, not publication time; chronology still requires an external ...
+    keywords: RecurrenceBindingBankEntryV3, RecurrenceBindingBankManifestV3, build_recurrence_binding_bank_manifes..., build_preregistered_recurrence_source..., verify_preregistered_recurrence_sourc...
+    -> in_dir: math_brain  [d41e0584c494 framework/mathbrain/src/math_brain/]
+[file] Sealed challenge evaluation  (id ce5c644ad8b6, framework/mathbrain/docs/challenge-evaluation.md, 84 lines)
+    The challenge study is a ten-pair, twenty-process comparison of the frozen prompt-driven reference brain against an empty sham. Each process receives the same ordered set of twenty opaque cases for its matched pair. The only treatment difference is the precommitted per-case reference packet;...
+    keywords: Freeze and unseal order, First-attempt execution, Interpretation boundary, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Outcome-blind v3 preregistration for the public hard-challenge-v2 bank.  (id f90bf50a00f2, framework/mathbrain/src/math_brain/hard_calibration_v3.py, 517 lines)
+    Outcome-blind v3 preregistration for the public hard-challenge-v2 bank. This is the integration layer between the mathematical generator and the generic calibration protocol. It fixes the complete 320-case rendering, uses opaque stable solver identifiers, commits one plan-wide verifier identity m...
+    keywords: HardCalibrationPreregistrationV3, build_hard_calibration_preregistratio..., bind_hard_calibration_outcomes_v3
+    -> in_dir: math_brain  [d41e0584c494 framework/mathbrain/src/math_brain/]

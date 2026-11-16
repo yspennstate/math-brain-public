@@ -1,0 +1,51 @@
+# navigation: evaluation protocol
+# command: navigation/nav_query.py "evaluation protocol"
+# seconds: 1.77
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] The agent mesh protocol  (id 202f5a9f0f70, framework/mesh/PROTOCOL.md, 262 lines)
+    This is the working social contract for every Claude, Codex, subagent, reviewer, and headless runner that shares the user's machine. The durable brain tells us what we know. The mesh tells us who is here now, what each of us is touching, and how to avoid doing the same work on top of one another.
+    keywords: The six rules, Dividing work, Crash and recovery semantics, What this system cannot promise, File-only siblings (added 2026-07-10;..., Push cadence (owner rule, 2026-07-10), agents
+    -> in_dir: mesh  [981afdbaca24 framework/mesh/]
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    <- links_to: Agent mesh  [29ca81e1442d framework/mesh/README.md]  (PROTOCOL.md)
+    <- links_to: Multi-agent operations: several agents sharing one brain  [f616627578ac framework/docs/MULTI_AGENT_OPERATIONS.md]  (mesh/PROTOCOL.md)
+[file] evaluation.toml  (id db7bc8ad3f43, config/evaluation.toml, 53 lines)
+    schema_version = 2
+    keywords: evaluation
+    -> in_dir: config  [7c1bb141682a config/]
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Paired evaluation protocol  (id 3932260eacb5, framework/mathbrain/docs/evaluation-protocol.md, 217 lines)
+    This protocol asks one causal question: does access to a frozen mathematical research brain improve an otherwise matched solver's ability to distinguish valid derivations from deliberately faulty ones? The implementation is fail-closed. It cannot convert a convenient collection of responses into...
+    keywords: Executable pre-registration, Practical dispatch API, Strict response boundary, Independent mathematical receipts, Runtime identity is evidence, not a r..., Honest isolation and retrieval accoun..., Scoring and fixed-case inference, retrieval, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Evaluation v2: sealed repeated-measures protocol  (id b394a0b6b3b9, framework/mathbrain/docs/evaluation-v2.md, 151 lines)
+    Evaluation v2 is a harder, binary endpoint for measuring whether the brain helps on subtle mathematical-error cases. A case succeeds only when the complete decision is correct. Faulty traces additionally require the exact root and error family plus accepted repair-replay and independent-witness...
+    keywords: Sealed design, Independent unit and benefit gates, Difficulty and subgroup validity, Canonical and resource bounds, Remaining statistical limits, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Sealed, paired brain-on/brain-off evaluation primitives.  (id 381c83331608, src/math_brain/evaluation.py, 4452 lines)
+    Sealed, paired brain-on/brain-off evaluation primitives. This module deliberately treats solver output, runtime metadata, and verifier reports as untrusted records. A benefit decision can be made only from a complete pre-registered design; timeouts, malformed responses, and missing responses rema...
+    keywords: Condition, Variant, Verdict, AttemptStatus, IdentityStatus, IsolationClassification, RetrievalDisposition, VerifierKind, ScoreWeights, BenefitGateConfig, InferenceConfig, ResponseLimits
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Construction and audit log  (id 6128e507751c, framework/mathbrain/docs/campaign-log.md, 347 lines)
+    This is a public-safe evidence ledger for the initial hardening campaign. It records reproducible outcomes, not local file paths, source excerpts, machine names, credentials, or private mathematical content. Machine-local manifests and detailed findings remain under the gitignored local/ tree.
+    keywords: Campaign contract, Evidence ledger, Privacy-isolated core, Privacy and publication hardening, Guarded retrieval and mathematical co..., Paired evaluation protocol, Lean verification gate, Exact-arithmetic benchmark baseline, Benchmark trust-boundary hardening, Local mathematical audit, Proof-level audit results, Hard-v2 red team and halted blind pilot
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    -> mentions: formal verification  [968916dddf9e concept]  (formal verification)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Local mathematical audit protocol  (id 07fd490dbdbb, framework/mathbrain/docs/local-audit-protocol.md, 26 lines)
+    Local audit is intentionally separate from public corpus construction.
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+[readme_section] Repository map  (id 69ec14df6632, framework/mathbrain/README.md#repository-map)
+    - src/math_brain/ — privacy gate, schemas, graph memory, retrieval, triggers, verification, consolidation, benchmark generation, and evaluation. - config/ — public-safe policy and trigger definitions. - docs/ — architecture, threat model, audit protocol, and corrected design brief. - tests/ —...
+    keywords: tests, retrieval, privacy, evaluation
+    -> in_dir: Mathematical Research Brain  [a1276d52d038 framework/mathbrain/README.md]

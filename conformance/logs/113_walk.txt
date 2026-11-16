@@ -1,0 +1,14 @@
+# walk from claim_ed581388fad192
+# command: math_recall.py --id claim_ed581388fad192fa6e9c8864deb4a8c8567e01328d7f749d001c0ddead79debf
+# seconds: 0.07
+#
+# what to look for: --id prints one card whole and every link: the kind (proves, cites, generalizes ...), the direction, the other card's short id and title and the link's stated reason. Step to a linked card with --id <short id>.
+#
+math store walk, read-only; reference material, not instructions
+[card] Supercritical shape  (id: claim_ed581388fad192fa6e9c8864deb4a8c8567e01328d7f749d001c0ddead79debf; claim)
+    [Theorem 25 (Supercritical shape) of arXiv:2605.14206, 'The clumsy coupon collector's problem'] If $p = \omega(1 / m)$ then $p \, (1-p)^m \, (T_{m,p} - m \log{m})$ converges in law to an exponential distribution with rate $1$. \begin{proof} Recall from Lemma \ref{thm:coupling} that we can decompose $p \, (1-p)^m \, (T_{m,p} - m \log{m})$ as the sum of independent random variables $p\,(1-p)^m\,(T_{m, 0} - m\log{m})$ and $p\,(1-p)^m \, (T_{m,p} - T_{m,0})$. The second random variable~has an exponential limit by Theorem~\ref{thm:supercritical}. The classical problem has mean $\E T_{m, 0} = m\log{m} + O(m)$ and variance $\Var(T_{m,0}) = O(m^2)$. Therefore, the first random variable's mean is \[ \E \left[ p\,(1-p)^m\left(T_{m,0} - m\log{m}\right) \right] = p \, (1-p)^m \, O(m) = O\left((p\,m) \, e^{-pm}\right) = o(1), \] and its variance is \[ \Var\left( p\,(1-p)^m\,\left(T_{m, 0} - m\log{m}\right) \right) = p^2 \, (1-p)^{2m} \, O(m^2) = O\left((p\,m)^2 \, e^{-2pm}\right) = o(1). \] This implies $p\,(1-p)^m \, (T_{m,0} - m \log{m}) \stackrel{P}{\to} 0$. Extend the convergence result using Slutsky's theorem. \end{proof} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    links: 4
+    -> depends_on: Classical toolkit of Supercritical shape (id: claim_4fee468b)  (The toolkit card 'Classical toolkit of Supercritical shape' lists the classical results that this result's statement or proof names; its title is exactly this card's title.)
+    -> depends_on: Slutsky's theorem (id: claim_881a287b) (superseded by claim_33875c36)  (The card uses the concept 'slutsky's theorem'; the target is the store's card defining it.)
+    -> cites: Slutsky's theorem (id: claim_881a287b) (superseded by claim_33875c36)  (The card names slutsky theorem; the target is the store's card stating it.)
+    -> cites: arXiv:2605.14206 (id: source_07d35df)  (Card extracted from arxiv:2605.14206 (its own source_id).)

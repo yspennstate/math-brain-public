@@ -1,0 +1,9 @@
+# prompt hook: please rename the variable in the login form
+# command: math_sense.py < event.json
+# seconds: 0.00
+#
+# what to look for: The hook printed nothing, which is correct for prompts that are not mathematics or that the store cannot answer. The reason it gave itself is in the 'silence reason' line (from its harness log).
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-n00-log", "prompt": "please rename the variable in the login form"}
+# silence reason: math_gate_rejected
+#
+(no output)

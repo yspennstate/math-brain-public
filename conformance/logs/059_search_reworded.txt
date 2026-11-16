@@ -1,0 +1,61 @@
+# reworded search: arXiv Exact Fourier dimensions dyadic Mandelbrot cascades minimal
+# command: math_recall.py "arXiv Exact Fourier dimensions dyadic Mandelbrot cascades minimal"
+# seconds: 5.03
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability  (id: source_4e3310a0c0cef3fce2c2fe2791f3a3c133095cf2854738199b229a9592686f2f; source; score 62.05)
+    matched: mandelbrot, cascades, dyadic, fourier, minimal (+4)
+    Paper the harvested cards were extracted from: arxiv:2606.08683.
+    <- cites: Corollary cor:dense-grid-decay-centered-profiles-paper of arXiv:2606.08683 (id: claim_7e58c184)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: No plateau above the energy threshold (id: claim_b08dc0b4)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: Theorem thm:support-mass-witness of arXiv:2606.08683 (id: claim_f225714e)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: Lemma lem:circle-uniform-cylinder-upper-bound-paper of arXiv:2606.08683 (id: claim_2c7a4b2f)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: Definition def:local-mass-good-events-paper of arXiv:2606.08683 (id: claim_2e0bc356)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: Endpoint local exponent (id: claim_7e4cf880)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: Lemma lem:prefix-postbin-coefficient-estimates-paper of arXiv:2606.08683 (id: claim_b5cf831a)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- cites: Lemma lem:alive-offspring-supercritical-paper of arXiv:2606.08683 (id: claim_f4c4c80c)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    ... 120 more links (--id source_4e3310a)
+[2] Endpoint Fourier dimension formula on the circle  (id: claim_16a1c6f75c0821a19b398b3e6b6b00ba198ae16c4abe06bae336d7566db68f09; claim; score 45.08)
+    matched: fourier, minimal, mandelbrot, cascades, dyadic (+3)
+    [Theorem thm:endpoint-circle-equality of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] Assume the minimal Kahane--Peyri\`ere regime. Then, almost surely on \(\mathcal S_\circ\), \begin{equation} \dim_{\mathrm F}(\mu_\circ)=A_{\mathrm{loc}}(W). \end{equation}
+    -> cites: arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability (id: source_4e3310a)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- semantic_association: Endpoint formula on the circle (id: claim_3964adab)  (Both identify the Fourier dimension of the Mandelbrot cascade on the circle with the endpoint exponent of the weight W, almost surely on non-extinction.)
+[3] Positive Fourier dimension criterion  (id: claim_c8f97a27eb3df36ab56a2d9a62f47535ce25a45d7e72e2a77f20dd90d4087911; claim; score 44.85)
+    matched: dyadic, fourier, mandelbrot, cascades, minimal (+3)
+    [Corollary cor:interval-positive-dimensional-branch-paper of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] Assume that the dyadic vector-weight law is energy-admissible. Then \(D_{\mathrm E}(X)>0\) if and only if \[ \rho(q)<1 \qquad\text{for some }q\in(1,2). \] Equivalently, \(D_{\mathrm E}(X)>0\) if and only if \[ \rho(q)<\infty \qquad\text{for some }q>1. \] When these equivalent conditions hold, \[ \dim_{\mathrm F}(\mu)>0 \] almost surely on \(\{M>0\}\).
+    -> depends_on: Definition def:energy-admissible-vector-law of arXiv:2606.08683 (id: claim_1997a005)  (Uses the term 'energy-admissible', which Definition def:energy-admissible-vector-law of arXiv:2606.08683 introduces (same paper, arxiv:2606.08683).)
+    -> cites: arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability (id: source_4e3310a)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+    <- semantic_association: Exact interval formula (id: claim_485ceb94)  (Both treat the Fourier dimension of the dyadic vector cascade on [0,1]; this card gives the exact formula, that one the criterion for it to be positive.)
+[4] Vector Fourier lower bound  (id: claim_91042bc1fc73b479ebd0a59e470d5dbba1df5786125abd22d73d1e5b3d587790; claim; score 43.82)
+    matched: dyadic, fourier, mandelbrot, cascades, minimal (+3)
+    [Theorem thm:vector-fourier-lower-bound of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] Assume that the dyadic vector-weight law is energy-admissible. Then \[ \dim_{\mathrm F}(\mu)\ge D_{\mathrm E}(X) \] almost surely on \(\{M>0\}\). Equivalently, on the same event, for every \(0<\sigma<D_{\mathrm E}(X)\), there exists a finite random constant \(C_\sigma(\omega)<\infty\) such that \begin{equation} |\widehat{\mu}(\xi)| \le C_\sigma(\omega)|\xi|^{-\sigma/2} \end{equation} for all sufficiently large \(|\xi|\).
+    -> depends_on: Definition def:energy-admissible-vector-law of arXiv:2606.08683 (id: claim_1997a005)  (Uses the term 'energy-admissible', which Definition def:energy-admissible-vector-law of arXiv:2606.08683 introduces (same paper, arxiv:2606.08683).)
+    -> cites: arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability (id: source_4e3310a)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+[5] Vector energy theorem  (id: claim_e93b08831037b8eda1dd6b591f6398c6bc0a1a9961fed1f99926b43cd3f1ee8a; claim; score 43.71)
+    matched: dyadic, mandelbrot, cascades, fourier, minimal (+3)
+    [Theorem thm:vector-energy-theorem-paper of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] Assume that the dyadic vector-weight law is energy-admissible. Then, almost surely on \(\{M>0\}\), \begin{equation} \dim_{\mathrm E}(\mu)=\dim_2(\mu)=D_{\mathrm E}(X). \end{equation}
+    -> depends_on: Definition def:energy-admissible-vector-law of arXiv:2606.08683 (id: claim_1997a005)  (Uses the term 'energy-admissible', which Definition def:energy-admissible-vector-law of arXiv:2606.08683 introduces (same paper, arxiv:2606.08683).)
+    -> cites: arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability (id: source_4e3310a)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+[6] Minimal Kahane--Peyri\`ere regime  (id: claim_1e9821730322e76638ad0abe3531ca0f93cb288bfa14698421a103e18ac71d4d; claim; score 43.62)
+    matched: minimal, mandelbrot, cascades, dyadic, fourier (+3)
+    [Definition def:minimal-KP-circle of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] We say that \(W\) is in the minimal Kahane--Peyri\`ere regime if \begin{equation} W\ge0, \qquad \mathbb{E} W=1, \qquad \mathbb{E}[W\log_2^+ W]<\infty, \qquad \mathbb{E}[W\log_2 W]<1. \end{equation}
+    <- depends_on: Theorem thm:exact-dimension-support-mass-witnesses of arXiv:2606.08683 (id: claim_cd109099)  (the statement names this definition)
+    <- depends_on: Lemma lem:biggins-chernoff-block-count-exponent of arXiv:2606.08683 (id: claim_416646b9)  (the statement names this definition)
+    <- depends_on: Theorem thm:main-circle-endpoint-formula of arXiv:2606.08683 (id: claim_1f063858)  (the statement names this definition)
+    <- depends_on: Theorem thm:support-mass-witness of arXiv:2606.08683 (id: claim_f225714e)  (the statement names this definition)
+    <- depends_on: Lemma lem:circle-uniform-cylinder-upper-bound-paper of arXiv:2606.08683 (id: claim_2c7a4b2f)  (the statement names this definition)
+    <- depends_on: Lemma lem:alive-tree-supercritical-support-witness of arXiv:2606.08683 (id: claim_f03315fa)  (the statement names this definition)
+    <- depends_on: Corollary cor:endpoint-upper-bound-paper of arXiv:2606.08683 (id: claim_30f789ee)  (the statement names this definition)
+    <- depends_on: Theorem thm:minimum-local-dimension of arXiv:2606.08683 (id: claim_d78749ce)  (the statement names this definition)
+    ... 1 more links (--id claim_1e982173)
+[7] Exact interval formula  (id: claim_d6092c2987d4bd91bec2dc677b0fe3bf4f31a377f78ebeff8fe90006510d116b; claim; score 43.31)
+    matched: dyadic, mandelbrot, dimensions, cascades, exact (+3)
+    [Theorem thm:exact-interval-formula-paper of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] Assume that the dyadic vector-weight law is energy-admissible. Let \(\mu\) be the limiting dyadic vector cascade measure on \([0,1]\), and set \(M=\mu([0,1])\). Then, almost surely on \(\{M>0\}\), \begin{equation} \dim_{\mathrm F}(\mu) = \dim_{\mathrm E}(\mu) = \dim_2(\mu) = D_{\mathrm E}(X). \end{equation} In particular, on the same event, if \(D_{\mathrm E}(X)>0\), then for every \(0<\sigma<D_{\mathrm E}(X)\) there is a finite random constant \(C_\sigma(\omega)<\infty\) such that \begin{equation} |\widehat{\mu}(\xi)| \le C_\sigma(\omega)|\xi|^{-\sigma/2} \end{equation} for all sufficiently large \(|\xi|\). If \(D_{\mathrm E}(X)=0\), the decay assertion is vacuous, and all three dimensions in (equation eq:exact-interval-vector-theorem-paper of the paper) are equal to \(0\).
+    -> depends_on: Definition def:energy-admissible-vector-law of arXiv:2606.08683 (id: claim_1997a005)  (Uses the term 'energy-admissible', which Definition def:energy-admissible-vector-law of arXiv:2606.08683 introduces (same paper, arxiv:2606.08683).)
+    -> cites: arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability (id: source_4e3310a)  (Card extracted from arxiv:2606.08683 (its own source_id).)
+[8] No plateau above the energy threshold  (id: claim_b08dc0b41a2407070f219ab89121335c793f3a7442060244cd8096cd03f31623; claim; score 43.29)
+    matched: mandelbrot, cascades, dyadic, fourier, minimal (+3)
+    [Lemma lem:no-plateau-above-energy-threshold-paper of arXiv:2606.08683, 'Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability'] If \( D_E(X)<s<1 \), then \[ \inf_{0<q<2}m_s(q)>1. \]
+    -> cites: arXiv:2606.08683 - Exact Fourier dimensions of dyadic Mandelbrot cascades under minimal integrability (id: source_4e3310a)  (Card extracted from arxiv:2606.08683 (its own source_id).)

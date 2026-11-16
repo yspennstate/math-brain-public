@@ -1,0 +1,68 @@
+# reworded search: Criteria' random variable stopping time respect following property
+# command: math_recall.py "Criteria' random variable stopping time respect following property"
+# seconds: 1.53
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Stopping Time Criterion  (id: claim_78b84487e4947654ca849e5896600f6890d559253475513de4451cc9f0d61a87; claim; score 41.22)
+    matched: stopping, criteria, time, property, variable (+4)
+    [Prop 5 (Stopping Time Criterion) of arXiv:2606.04245, 'Properties of a Special Type of Filtration and its Martingale Criteria'] A random variable $T$ is a stopping time with respect to $\FF=(\cF_t)_{t\in\RR_+}$ if and only if the following property holds: if the set $\{T<\gamma\}$ is non-empty, then there exists an $\cH$-measurable stopping time $S$ such that \begin{equation} \{T<\gamma\}=\{T=S<\gamma\}=\{S<\gamma\}. \end{equation}
+    -> depends_on: Stopping time (id: claim_95a5f4be)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    -> cites: arXiv:2606.04245 - Properties of a Special Type of Filtration and its Martingale Criteria (id: source_90eadd6)  (Card extracted from arxiv:2606.04245 (its own source_id).)
+[2] Stopping Time Criterion  (id: claim_73788535eabb5c4af02397561970996d0e393ec0f35d3ad36beb0562b73d8ab0; claim; score 27.04)
+    matched: stopping, criteria, respect, time, "stopping time" (title)
+    [Lem 6 (Stopping Time Criterion) of arXiv:2606.04245, 'Properties of a Special Type of Filtration and its Martingale Criteria'] Let $(T_n)_{n\geq1}$ be an increasing sequence of stopping times with respect to $\FF$ such that $T_n\to\infty$ almost surely as $n\to\infty$. Assume that $P(\gamma<\infty)=1$ (i.e., $t_G<\infty)$ and $P(T_n<\gamma)>0$ for all $n\geq1$. Then there exists an increasing sequence of stopping times $(R_n)_{n\geq1}$ with respect to $\FF$ such that: \begin{itemize} \item $R_n\leq t_G$ almost surely for all $n\geq1$; \item $R_n\to t_G$ almost surely as $n\to\infty$; \item For each $n$, the identity holds on the set before the jump: \begin{equation} \{T_n<\gamma\}=\{T_n=R_n<\gamma\}=\{R_n<\gamma\}. \end{equation} \end{itemize}
+    -> depends_on: Stopping time (id: claim_95a5f4be)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    -> cites: arXiv:2606.04245 - Properties of a Special Type of Filtration and its Martingale Criteria (id: source_90eadd6)  (Card extracted from arxiv:2606.04245 (its own source_id).)
+[3] Measurability criterion with respect to $\cF_t$  (id: claim_fa69e6842519f797bbd2cfdc9ea863d0e81734d9f25ed7f9e75d9fd7879f1076; claim; score 23.30)
+    matched: criteria, respect, variable, random
+    [Prop 1 (Measurability criterion with respect to $\cF_t$) of arXiv:2606.04245, 'Properties of a Special Type of Filtration and its Martingale Criteria'] A random variable $\xi$ is $\cF_t$-measurable if and only if there exists an $\cH$-measurable random variable $\eta$ such that $$ \xi(\omega)=\eta(\omega)\quad \text{for all}\;\omega\in\{t<\gamma\}. $$
+    -> cites: arXiv:2606.04245 - Properties of a Special Type of Filtration and its Martingale Criteria (id: source_90eadd6)  (Card extracted from arxiv:2606.04245 (its own source_id).)
+[4] Measurability criterion with respect to $\cF_\infty$  (id: claim_5b71e1184adff88c09dd4ed448fb5ac9330eba54bd729b893b2c165bd0ae932a; claim; score 22.99)
+    matched: criteria, respect, variable, random
+    [Lem 3 (Measurability criterion with respect to $\cF_\infty$) of arXiv:2606.04245, 'Properties of a Special Type of Filtration and its Martingale Criteria'] A random variable $\xi$ is $\cF_\infty$-measurable if and only if there exists an $\cH$-measurable random variable $\eta$ such that $$ \xi(\omega)=\eta(\omega)\quad \text{for all}\;\omega\in\{\gamma=\infty\}. $$
+    -> cites: arXiv:2606.04245 - Properties of a Special Type of Filtration and its Martingale Criteria (id: source_90eadd6)  (Card extracted from arxiv:2606.04245 (its own source_id).)
+[5] Stopping time  (id: claim_95a5f4be6ae3daa8c98a715f3a1a362ee803647680540d4a65467464532e22c6; claim; score 22.82)
+    matched: stopping, time, variable, random, "stopping time" (title)
+    In probability theory, in particular in the study of stochastic processes, a stopping time is a specific type of "random time": a random variable whose value is interpreted as the time at which a given stochastic process exhibits a certain behavior of interest. A stopping time is often defined by a stopping rule, a mechanism for deciding whether to continue or stop a process on the basis of the present position and past events, and which will almost always lead to a decision to stop at some finite time.
+    <- depends_on: Lemma 14 of arXiv:2512.19517 (id: claim_f020dc60) (superseded by claim_b6759fd9)  (the lemma states that the residual lifetime is a stopping time with respect to the filtration of the process, the notion described in this card. Source card: "$)
+    <- depends_on: Lemma 14 of arXiv:2512.19517: Spiking and Resetting (id: claim_b6759fd9) (superseded by claim_127ff493)  (the lemma states that the residual lifetime is a stopping time with respect to the filtration of the process, the notion described in this card. Source card: "$)
+    <- depends_on: Lemma A.1 of arXiv:2512.19517: Spiking and Resetting (id: claim_127ff493) (superseded by claim_75c011a1)  (the lemma states that the residual lifetime is a stopping time with respect to the filtration of the process, the notion described in this card. Source card: "$)
+    <- depends_on: Lemma A.1 of arXiv:2512.19517: Spiking and Resetting (id: claim_75c011a1)  (the lemma states that the residual lifetime is a stopping time with respect to the filtration of the process, the notion described in this card. Source card: "$)
+    <- depends_on: Theorem 8 of arXiv:2506.15044 (id: claim_3ae083d4)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    <- depends_on: Lemma 49 of arXiv:2606.15425 (id: claim_77522169)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    <- depends_on: Unnumbered lemma of arXiv:2606.10973, 'Quasisymmetric rigidity of the Brownian sphere' (id: claim_ad5c0eaf)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    <- depends_on: Proposition 20 of arXiv:2608.12291 (id: claim_c81176b7)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    ... 335 more links (--id claim_95a5f4be)
+[6] Decision tree, stopping time {\cite[Definition~2.4  (id: claim_741b9ae6256982c17bf32d243cb6ae572b2b08d8632c274535ec52362249bfd2; claim; score 20.39)
+    matched: stopping, time, variable, random, "stopping time" (title)
+    [Definition 30 (Decision tree, stopping time {\cite[Definition~2.4) of arXiv:2605.30030, 'Critical exponents for planar random-cluster model with cluster-weight~$q=4$'] {duminil2022planar}}] A \emph{decision tree} is a pair~$\mathbf{T} = (e_1, (\psi_t)_{2\leq t\leq n})$ where~$e_1\in E$ and for each~$2\leq t\leq n$, the input of~$\psi_t$ is~$(e_{[t-1]},U_{[t-1]})$ and it returns~$e_t\in E\setminus\{e_1,\dots,e_{t-1}\}$. A \emph{stopping time} for~$\mathbf{T}$ is a random variable~$\tau$ taking values in~$\{1,\dots,n,\infty\}$, for which each~$\{\tau\leq t\}$ is measurable in terms of~$(e_{[t]}, U_{[t]})$.
+    -> depends_on: Stopping time (id: claim_95a5f4be)  (The card uses the concept 'stopping time'; the target is the store's card defining it.)
+    <- depends_on: Lemma 33 of arXiv:2605.30030 (id: claim_b8a934b9)  (Uses the term 'stopping time', which Decision tree, stopping time {\cite[Definition~2.4 introduces (same paper, arxiv:2605.30030).)
+    <- depends_on: Lemma 32 of arXiv:2605.30030 (id: claim_082f8737)  (Uses the term 'stopping time', which Decision tree, stopping time {\cite[Definition~2.4 introduces (same paper, arxiv:2605.30030).)
+    <- depends_on: Proposition 31 of arXiv:2605.30030 (id: claim_785c32e6)  (Uses the term 'decision tree', which Decision tree, stopping time {\cite[Definition~2.4 introduces (same paper, arxiv:2605.30030).)
+    -> cites: arXiv:2605.30030 - Critical exponents for planar random-cluster model with cluster-weight~$q=4$ (id: source_441ed97)  (Card extracted from arxiv:2605.30030 (its own source_id).)
+    <- semantic_association: Definition 24 of arXiv:2605.31344 (id: claim_814d2ebf)  (Same named concept 'decision tree': introduced by this Definition and named by another paper's Definition.)
+    -> semantic_association: Stopping time (id: claim_95a5f4be)  (Same named concept 'stopping time': introduced by this Definition and named by the hub card's title.)
+[7] Skorokhod's Embedding Theorem  (id: claim_8a517251e4006bee683d4051a603e94151dbf4bab8d72bde30027d4aad47558f; claim; score 19.77)
+    matched: stopping, variable, respect, time, random
+    Let X be a real random variable with \mathbb{E}[X] = 0 and \mathbb{E}[X^2] < \infty. Let (B_t)_{t \ge 0} be a standard Brownian motion on \mathbb{R}. Then there exists a stopping time \tau with respect to the filtration of B such that B_\tau has the same distribution as X, and \mathbb{E}[\tau] = \mathbb{E}[X^2]. \mathbb{E}[X] = 0 \mathbb{E}[X^2] < \infty B is standard Brownian motion
+    -> proves: Central Limit Theorem (Lindeberg-Levy) (id: claim_763aa8ee)  (Skorokhod embedding provides a direct embedding proof of the Central Limit Theorem)
+    -> analogous_to: Skorokhod embedding and strong approximation (id: claim_3a6112fd)  (Source: "B_\tau has the same distribution as X"; target: "as the law of $B_\tau$ for a stopping time $\tau$ of Brownian motion". Both describe embedding a cente)
+    <- analogous_to: Komlós-Major-Tusnády (KMT) Strong Approximation Theorem (id: claim_ce3b7692)  (KMT provides an optimal O(log n) strong coupling between random walk and Brownian motion)
+    -> depends_on: Filtration (id: claim_c30a494e)
+    -> depends_on: Brownian motion (id: claim_7d9ada34)
+    <- depends_on: Strassen's Functional Law of the Iterated Logarithm (id: claim_24702d3b)  (Strassen's functional LIL proof embeds the random walk into Brownian motion)
+    -> depends_on: Stopping time (id: claim_3f1b653f)
+    -> cites: Skorokhod's embedding theorem (id: source_ce89ce0)  (states what wikipedia:Skorokhod's_embedding_theorem says at revision 1354302619, lines 3-7)
+    ... 1 more links (--id claim_8a517251)
+[8] Wald's First Identity for Stopping Times  (id: claim_b6ddb4e46eb75acabd4bff8e88fd94f38c511e448bb23fdfc35154dd06e6d58b; claim; score 19.71)
+    matched: stopping, time, respect, random
+    Let (X_n)_{n=1}^\infty be i.i.d. random variables with \mathbb{E}[|X_1|] < \infty and mean \mu = \mathbb{E}[X_1]. Let N be a stopping time with respect to the filtration generated by (X_n) such that \mathbb{E}[N] < \infty. Then \mathbb{E}[\sum_{k=1}^N X_k] = \mu \mathbb{E}[N]. (X_n) i.i.d. \mathbb{E}[|X_1|] < \infty N is a stopping time \mathbb{E}[N] < \infty
+    <- analogous_to: Wald's Second Identity (id: claim_934ca7eb)  (Wald's second identity extends the first moment stopping identity to stopped variances)
+    <- depends_on: Elementary Renewal Theorem (id: claim_30e38936)  (Elementary renewal theorem uses Wald's first identity on the renewal stopping time N(t)+1)
+    -> depends_on: Filtration (id: claim_c30a494e)
+    -> depends_on: Independence (id: claim_aceeceb5)
+    -> depends_on: Stopping time (id: claim_3f1b653f)
+    -> semantic_association: Expectation (Expected Value) (id: claim_3b5ed35d)

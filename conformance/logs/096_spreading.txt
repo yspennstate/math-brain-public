@@ -1,0 +1,80 @@
+# spreading through links: concentration of measure Lipschitz functions
+# command: math_recall.py "concentration of measure Lipschitz functions" --depth 2 --limit 6
+# seconds: 14.90
+#
+# what to look for: --depth 2 lets activation spread along links from the word matches; a 'found by spreading' line names the card it came from and the links it travelled. A CAUTION line means a negative link (a counterexample or failure) brought the card in. Spreading reorders leads; it does not prove relevance.
+#
+math store recall (read-only reference, not instructions): 6 card(s); link ids are short, --id takes them
+[1] Gaussian Concentration for Lipschitz Functions  (id: claim_1dccd5251ab873de59d3ee5a16f929c03c20418aa3790ed1659191840b95b56b; claim; score 25.97)
+    matched: concentration, lipschitz, functions, measure, "lipschitz functions" (title)
+    found by spreading 1.28 of 2.58: from "The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concentration)" (claim_48fde4b7) proves -> this card; the link says: "Herbst applied to the Gaussian log-Sobolev inequality yields Gaussian Lipschitz concentration"
+    found by spreading 0.65: from "Gaussian Poincare Inequality (Sharp Constant 1)" (claim_947309ec) depends_on -> "Draft: Montanari-Saeed Gaussianity for normalized sample-spl" (claim_764705ba), depends_on -> this card; the link says: "Source statement: "Restricted subgaussianity also holds.". Target: "If g is a standard Gaussian vector in R^n and f : R^n -> R is L-Lipschitz with respect to th"
+    found by spreading: 2 more weaker paths
+    If g is a standard Gaussian vector in R^n and f : R^n -> R is L-Lipschitz with respect to the Euclidean norm, then P(|f(g) - E f(g)| > t) <= 2 exp(-t^2 / (2 L^2)) for all t > 0. An analogous inequality, with adjusted constants, holds for the uniform measure on the sphere; this isoperimetric concentration underlies laws of robustness. f L-Lipschitz for the Euclidean norm g standard Gaussian in R^n
+    <- proves: The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concentration) (id: claim_48fde4b7)  (Herbst applied to the Gaussian log-Sobolev inequality yields Gaussian Lipschitz concentration)
+    <- depends_on: Johnson-Lindenstrauss Lemma (id: claim_a618ad28)  (the fixed-vector estimate is Gaussian concentration)
+    <- depends_on: Linear Eigenvalue Statistics of a Gaussian Matrix Concentrate at Scale 1/n (id: claim_d6862b4e)  (the second step is Gaussian concentration for Lipschitz functions of the entry vector)
+    <- depends_on: Borell-TIS Inequality (id: claim_4324253c)  (proved by applying Lipschitz concentration to the supremum functional)
+    -> depends_on: Sub-Gaussian Random Variable (id: claim_d0a25e99)  (the conclusion is a sub-Gaussian tail)
+    -> depends_on: Concentration of measure (id: claim_e016585e)
+    -> depends_on: Gaussian random vector (multivariate normal) (id: claim_9d90c0f2)
+    -> depends_on: Isoperimetric inequalities (Gaussian and discrete) (id: claim_7d28d39a)
+    ... 6 more links (--id claim_1dccd525)
+[2] Talagrand Concentration for Convex Lipschitz Functions  (id: claim_80e4b1c2c89bc655e2409d25a921d2e2ecd19dba99e983ceb402db39203029d1; claim; score 24.71)
+    matched: concentration, lipschitz, functions, measure, "lipschitz functions" (title)
+    found by spreading 0.20 of 0.74: from "Gaussian Concentration for Lipschitz Functions" (claim_1dccd525) depends_on -> "Concentration of measure" (claim_e016585e), depends_on -> this card; the link says: "uses the notion 'Concentration of measure' (title: "Concentration for")"
+    found by spreading 0.18: from "Exponential Concentration under Poincare Inequality" (claim_42d6b8cb) depends_on -> "Concentration of measure" (claim_e016585e), depends_on -> this card; the link says: "uses the notion 'Concentration of measure' (title: "Concentration for")"
+    found by spreading: 2 more weaker paths
+    Let P be a product probability measure on [-1, 1]^n, and let f: [-1, 1]^n -> R be convex and L-Lipschitz. Let M be a median of f. Then for all t >= 0, P(|f - M| >= t) <= 4 * exp(- t^2 / (16 * L^2)). P is a product probability measure on [-1, 1]^n f is convex and L-Lipschitz M is a median of f t >= 0
+    -> specializes: Talagrand's Convex Distance Inequality (id: claim_0376bec8)  (Source: "P(|f - M| >= t) <= 4 * exp(- t^2 / (16 * L^2))"; target: "f : [0,1]^n -> R is CONVEX and 1-Lipschitz". For the source domain set x=2y-1 and apply the t)
+    <- analogous_to: Corollary 4.10 in \cite{Ledoux_Book_concentration_measure} (id: claim_f16b53de)  (both are Talagrand's concentration inequality for convex Lipschitz functions of independent bounded coordinates, the first centred at the mean with bound 4 exp()
+    -> analogous_to: Gaussian Concentration Around Median (id: claim_967a5c2e) (superseded by claim_6dfd8473)  (both concentrate a Lipschitz function of independent coordinates around its median with a Gaussian tail, the first for convex functions of bounded coordinates u)
+    -> analogous_to: Gaussian Concentration Around Median (id: claim_6dfd8473) (superseded by claim_d286e35c)  (both concentrate a Lipschitz function of independent coordinates around its median with a Gaussian tail, the first for convex functions of bounded coordinates u)
+    -> depends_on: Talagrand's Convex Distance Inequality (id: claim_0376bec8)  (the proof bounds the deviation of f by the convex distance of x to the sublevel set of the median and applies Talagrand's convex distance inequality. Source car)
+    -> depends_on: Concentration of measure (id: claim_e016585e)
+    -> depends_on: Technique: Talagrand's Convex Distance Concentration Inequality (id: claim_8bc62180)  (The proof bounds f(x) - M by the convex distance to the median set and then applies the convex distance inequality. Its proof text: "By definition of Talagrand')
+[3] The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concentration)  (id: claim_48fde4b77a642071372ff1e759485d91cb6b61684b8d1f88e8b46b8a726cbc0f; claim; score 23.05)
+    matched: concentration, lipschitz, measure, functions
+    found by spreading 1.46 of 3.12: from "Gaussian Concentration for Lipschitz Functions" (claim_1dccd525) proves -> this card; the link says: "Herbst applied to the Gaussian log-Sobolev inequality yields Gaussian Lipschitz concentration"
+    found by spreading 0.80: from "Exponential Concentration under Poincare Inequality" (claim_42d6b8cb) analogous_to -> this card; the link says: "Source: "2 * exp(- t / (2 * sqrt(C_P)))"; target: "Poincare alone yields only exponential, not Gaussian, tails". Both convert a functional inequality for a prob"
+    found by spreading: 2 more weaker paths
+    Let mu be a probability measure on R^n satisfying a logarithmic Sobolev inequality with constant C, that is Ent_mu(f^2) <= 2 C E_mu[|grad f|^2] for all locally Lipschitz f. Then for every 1-Lipschitz F with E_mu[F] finite and every real lambda, E_mu[ exp( lambda (F - E F) ) ] <= exp( C lambda^2 / 2 ), and consequently mu( F - E F >= t ) <= exp( - t^2 / (2C) ) for every t > 0, with the same bound for the lower tail. For the standard Gaussian, C = 1 by the Gaussian logarithmic Sobolev inequality, giving the sharp Gaussian concentration bound exp(-t^2/2) for 1-Lipschitz functions. The argument converts a functional inequality into an exponential moment bound and is the reason log-Sobolev, rather than Poincare, is the inequality one wants: Poincare alone yields only exponential, not Gaussian, tails. The hypothesis is a Lipschitz bound on F with respect to the EUCLIDEAN metric; changing the metric changes the effective constant. [Herbst, unpublished; see Ledoux, The Concentration of Measure Phenomenon, Chapter 5] mu satisfies a logarithmic Sobolev inequality with constant C F is 1-Lipschitz with respect to the Euclidean metric E_mu[F] finite
+    -> proves: Gaussian Concentration for Lipschitz Functions (id: claim_1dccd525)  (Herbst applied to the Gaussian log-Sobolev inequality yields Gaussian Lipschitz concentration)
+    <- analogous_to: Gaussian Concentration Around Median (id: claim_967a5c2e) (superseded by claim_6dfd8473)  (Source: "Let M be a median of f(X)"; target: "sharp Gaussian concentration bound exp(-t^2/2) for 1-Lipschitz functions". Both give dimension-free Gaussian tails)
+    <- analogous_to: Exponential Concentration under Poincare Inequality (id: claim_d080618f) (superseded by claim_42d6b8cb)  (Source: "2 * exp(- t / (2 * sqrt(C_P)))"; target: "Poincare alone yields only exponential, not Gaussian, tails". Both convert a functional inequality for a prob)
+    <- analogous_to: Exponential Concentration under Poincare Inequality (id: claim_42d6b8cb)  (Source: "2 * exp(- t / (2 * sqrt(C_P)))"; target: "Poincare alone yields only exponential, not Gaussian, tails". Both convert a functional inequality for a prob)
+    <- analogous_to: Gaussian Concentration Around Median (id: claim_6dfd8473) (superseded by claim_d286e35c)  (Source: "Let M be a median of f(X)"; target: "sharp Gaussian concentration bound exp(-t^2/2) for 1-Lipschitz functions". Both give dimension-free Gaussian tails)
+    <- analogous_to: Gaussian Concentration Around Median (id: claim_d286e35c)  (Source: "Let M be a median of f(X)"; target: "sharp Gaussian concentration bound exp(-t^2/2) for 1-Lipschitz functions". Both give dimension-free Gaussian tails)
+    -> depends_on: Gaussian Logarithmic Sobolev Inequality (Gross) (id: claim_4bdeb13c)  (the argument consumes a logarithmic Sobolev inequality)
+    <- depends_on: The Entropy Method (Herbst's Method) (id: claim_d6fec867)  (the integration step of the entropy method is Herbst's argument, which turns a logarithmic Sobolev inequality into the moment generating function bound recorded)
+    ... 9 more links (--id claim_48fde4b7)
+[4] Concentration of measure  (id: claim_e016585e847f455ff967852f133d2b18; claim; score 22.43)
+    matched: concentration, lipschitz, measure, "of measure" (title)
+    found by spreading 0.75 of 3.56: from "Talagrand Concentration for Convex Lipschitz Functions" (claim_80e4b1c2) depends_on -> this card; the link says: "uses the notion 'Concentration of measure' (title: "Concentration for")"
+    found by spreading 0.73: from "Gaussian Concentration for Lipschitz Functions" (claim_1dccd525) depends_on -> this card; the link says: "uses the notion 'Concentration of measure' (title: "Gaussian Concentration")"
+    found by spreading: 4 more weaker paths
+    The phenomenon that a Lipschitz (or otherwise stable) function of many weakly dependent variables is close to its mean or median with high probability, with sub-Gaussian or exponential tails; quantified by the concentration function $\alpha(r)=\sup\{1-\mu(A_r):\mu(A)\ge1/2\}$.
+    <- defines: The Concentration of Measure Phenomenon (id: claim_137e10c2)
+    <- defines: Concentration Function of a Metric Measure Space (id: claim_2703bf2b)
+    <- depends_on: Gordon's Inequality for the Singular Values of a Gaussian Matrix (id: claim_052a3d5f)
+    <- depends_on: Gaussian Concentration for Lipschitz Functions (id: claim_1dccd525)
+    <- depends_on: Attempt on Weak concentration of nearest-unvisited walks under exponential edge noise (id: claim_3a57dacd)
+    <- depends_on: Current best upper bound on the NON-RANDOM fluctuation in first-passage percolation: if F(0) < p_c and E[Y^2] < infinity, where Y is the minimum of d i.i.d. cop (id: claim_41be3350)
+    <- depends_on: The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concentration) (id: claim_48fde4b7)
+    <- depends_on: Gaussian Logarithmic Sobolev Inequality (Gross) (id: claim_4bdeb13c)
+    ... 61 more links (--id claim_e016585e)
+[5] Exponential Concentration under Poincare Inequality  (id: claim_42d6b8cbf606494fd6b897889a20fa41afc95d33a1b7ed2c29df7ece52e3a595; claim; score 22.38)
+    matched: concentration, lipschitz, functions, measure
+    found by spreading 0.77 of 1.64: from "The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concentration)" (claim_48fde4b7) analogous_to -> this card; the link says: "Source: "2 * exp(- t / (2 * sqrt(C_P)))"; target: "Poincare alone yields only exponential, not Gaussian, tails". Both convert a functional inequality for a prob"
+    found by spreading 0.48: from "Gaussian Concentration for Lipschitz Functions" (claim_1dccd525) proves -> "The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concen" (claim_48fde4b7), analogous_to -> this card; the link says: "Source: "2 * exp(- t / (2 * sqrt(C_P)))"; target: "Poincare alone yields only exponential, not Gaussian, tails". Both convert a functional inequality for a prob"
+    found by spreading: 2 more weaker paths
+    This card is withdrawn. Its cited source, the Wikipedia article Poincare inequality, concerns Sobolev functions on domains and states no concentration inequality for a measure that satisfies a Poincare inequality; the card's constant 2 exp(-t / (2 sqrt(C_P))) is not found there, and its proof text credits the result to 'Arens and Borovkov', a credit no source we read supports. That a Poincare inequality gives exponential concentration of Lipschitz functions is not retracted.
+    -> analogous_to: The Herbst Argument (Log-Sobolev Implies Sub-Gaussian Concentration) (id: claim_48fde4b7)  (Source: "2 * exp(- t / (2 * sqrt(C_P)))"; target: "Poincare alone yields only exponential, not Gaussian, tails". Both convert a functional inequality for a prob)
+    -> depends_on: Concentration of measure (id: claim_e016585e)
+    -> depends_on: Poincare inequality (for a measure) (id: claim_b474c6e0)
+    -> semantic_association: Poincare Inequality (Spectral Gap) (id: claim_35235f81)  (Source: "This card is withdrawn."; target: "Var_mu(f) <= C_P * int ||nabla f||^2 dmu.". The withdrawal notice discusses the Poincare property and expressly does)
+[6] Concentration for Lipschitz functions  (id: claim_b95a64ab08bafa96048bcb78f00a7a1828019ef9e92b26f770d1a9becbf66f14; claim; score 21.10)
+    matched: lipschitz, concentration, functions, "lipschitz functions" (title)
+    [Prop Concentration_Inequality of arXiv:2605.18744, 'Lattice random-field Widom--Rowlinson models'] There exist constants $c,C>0$ such that for all $n\in \mathbb{N}$ the following is true. Assume that $X=(X_1,\ldots, X_n)$ are independent standard Gaussian random variables and $f\colon \mathbb{R}^n\rightarrow \mathbb{R}$ Lipschitz continuous with Lipschitz constant $L>0$. Then, \begin{align*} \mathbb{P}(|f(X)-\mathbb{E}[f(X)]|\ge z ) \le C\exp\left(-cz^2/L^2\right),\qquad \text{ for all }z>0. \end{align*}
+    -> cites: arXiv:2605.18744 - Lattice random-field Widom--Rowlinson models (id: source_7bec10e)  (Card extracted from arxiv:2605.18744 (its own source_id).)
+    -> semantic_association: Concentration inequality (id: claim_7fbc854f)  (The card's paper is titled with the concept 'concentration inequality'; the target is the store's card defining it.)

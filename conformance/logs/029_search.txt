@@ -1,0 +1,41 @@
+# search: Lemma Aldous arXiv
+# command: math_recall.py "Lemma Aldous arXiv"
+# seconds: 4.49
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Lemma Aldous.tightness of arXiv:2605.17725  (id: claim_b0e402dce9a1a0b860d8720a82da4b389be98fc52bb2fa20d9e8c7e78d050779; claim; score 14.93)
+    matched: aldous, lemma, "lemma aldous" (title), arxiv
+    [Lemma Aldous.tightness of arXiv:2605.17725, 'Limit theorems for random walks with spatio-temporal drift'] Let $t_n:=\sum_{k=1}^n \frac1k$ and $m(n,T):=\max\{k\ge n:\ t_k-t_n\le T\}$. Fix $T>0$ and let $$\bar G^{(n)}(t):=G_{m(n,t)},\quad 0\le t\le T.$$ Then the family $(\bar G^{(n)}(\cdot))_{n\ge1}$ is tight in $D([0,T],\mathbb{R}^d)$.
+    -> cites: arXiv:2605.17725 - Limit theorems for random walks with spatio-temporal drift (id: source_547391f)  (Card extracted from arxiv:2605.17725 (its own source_id).)
+[2] Lemma lem:exists_aldous of arXiv:2412.01995  (id: claim_020293fb8f8cd0e1cb78d6a4951cbf3d79b514d14aa8830e573e920ce2e22676; claim; score 14.39)
+    matched: aldous, lemma, arxiv
+    [Lemma lem:exists_aldous of arXiv:2412.01995, 'Exciting games and Monge-Amp\`{e}re equations'] There exists a unique strong solution to (equation eq:Ald_final of the paper) over $[0, 1\wedge \tau)$.
+    -> cites: arXiv:2412.01995 - Exciting games and Monge-Amp\`{e}re equations (id: source_11b6445)  (Card extracted from arxiv:2412.01995 (its own source_id).)
+[3] Lemma L:Aldous of arXiv:2606.03079  (id: claim_e742b5aac8c0805f6ab768113a527752b449e2f011c71c57bb19fde894dd1e86; claim; score 13.82)
+    matched: aldous, lemma, arxiv
+    [Lemma L:Aldous of arXiv:2606.03079, 'Mean Field Limits for Stochastic, Underdamped Reactive Langevin Dynamics Models'] For any $T>0, \varepsilon_{1}>0, \varepsilon_{2}>0, j=1,2, \cdots, J$, there exists $\delta>0$ and $n_{0} \in \mathbb{N}$ such that for any sequence $(\sigma_{n}, \tau_{n})_{n \in \mathbb{N}}$ of pairs of stopping times with $\sigma_{n} \leq \tau_{n} \leq T$, $$ \sup _{n \geq n_{0}} \mathbb{P}\{|\langle f, \mu_{\sigma_{n}}^{n, j}\rangle-\langle f, \mu_{\tau_{n}}^{n, j}\rangle| \geq \varepsilon_{2}, \tau_{n} \leq \sigma_{n}+\delta\} \leq \varepsilon_{1}. $$
+    -> cites: arXiv:2606.03079 - Mean Field Limits for Stochastic, Underdamped Reactive Langevin Dynamics Models (id: source_0e4df2b)  (Card extracted from arxiv:2606.03079 (its own source_id).)
+[4] Aldous meeting-time comparison  (id: claim_7d06f2588198b7a283af6e35cebd7d4f7b5b0ae96f3fb80a6f6cf11478014dd9; claim; score 12.08)
+    matched: aldous, lemma, arxiv
+    [Lemma 6 (Aldous meeting-time comparison) of arXiv:2607.13183, '2607.13183'] Let $(X_t)_{t\ge0}$ be a finite irreducible reversible continuous-time chain with stationary law $\pi$, and write $P^t$ for its transition semigroup. Let $\tau_{\rm meet}$ be the first time two independent copies of the chain occupy the same state. Put \begin{equation} t^*_{\rm mix}:=\inf\left\{t\ge0: \max_x\|P^t(x,\cdot)-\pi\|_{\TV}\le \frac1{2e}\right\}, \end{equation} and let \[ T_M:=\max_{x,y}\E_{x,y}\tau_{\rm meet} . \] If $H_i$ denotes the hitting time of state $i$ by one copy of the chain, then there is a universal constant $K_A<\infty$ such that \begin{equation} T_M \le K_A\left(\sum_i \frac{\pi_i}{t^*_{\rm mix}\vee \E_\pi H_i}\right)^{-1} . \end{equation} It follows that, for continuous-time simple random walk with jump rate $1$ on a finite connected multigraph $G$, \begin{equation} t_{\rm meet}(G) \le K'_A\bigl(\tmix(G)+\Kemeny(G)\bigr) \end{equation} for another universal constant $K'_A$.
+    -> depends_on: Random walk (id: claim_eecc07db)  (The card uses the concept 'random walk'; the target is the store's card defining it.)
+    -> cites: arXiv:2607.13183 - 2607.13183 (id: source_17c35d9)  (Card extracted from arxiv:2607.13183 (its own source_id).)
+[5] Classical identification with the Aldous process  (id: claim_2337d7639628ea001ec1acf5cf6ebb52bb6fee954bb95bc3261f177d5a84504f; claim; score 11.73)
+    matched: aldous, arxiv
+    [Corollary 3 (Classical identification with the Aldous process) of arXiv:2608.04799, '2608.04799'] The process constructed in Theorem~\ref{thm:main} satisfies \[ \Xi_\lambda^{\mathrm{enum}} \stackrel{d}{=}\Xi_\lambda^{\mathrm A}. \] Consequently, \begin{equation} \Xi_n\Rightarrow\Xi_\lambda^{\mathrm A} \qquad\text{in }M_{\mathrm p}(E). \end{equation} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2608.04799 - 2608.04799 (id: source_0df187c)  (Card extracted from arxiv:2608.04799 (its own source_id).)
+[6] Aldous' criterion  (id: claim_60e6f05be2fa3b88ea1f3aecb83255cbd9d367d4be15eebff6a41e22efaf7bf6; claim; score 11.66)
+    matched: aldous, arxiv
+    [Lem 5 (Aldous' criterion) of arXiv:2608.22514, 'Diffusion limits of cyclic finite-velocity random motions\\ along vector fields'] For any $\eta\in(0,1]$, any $T\in[0,\infty)$ \ba \lim_{h\downarrow 0}\limsup_{\e,\delta\downarrow 0} \sup_{\sigma,\tau\in\mathbb F^{\e,\delta}, \sigma\leq\tau\leq(\sigma+h)\wedge T} \P_{x,\iota}\Big(|Z^{\e,\delta}_\tau-Z^{\e,\delta}_\sigma|\geq\eta\Big)=0. \ea The convergence is uniform over $(x,\iota)\in\mathbb R^d\times\{1,\dots,p\}$.
+    -> cites: arXiv:2608.22514 - Diffusion limits of cyclic finite-velocity random motions\\ along vector fields (id: source_817ddc7)  (Card extracted from arxiv:2608.22514 (its own source_id).)
+[7] Aldous--Pitman representation  (id: claim_ea8c57cac7f724e655779dca7753d1c90b96b8ac559823a97c2f8d54bc805ed5; claim; score 11.54)
+    matched: aldous, arxiv
+    [Proposition 6 (Aldous--Pitman representation) of arXiv:2607.16833, 'Dynamical Equations for Poisson Galton--Watson Trees and Component Densities of Sparse Inh'] Let $U$ be uniform on $(0,1)$ and independent of $(\widehat G_s^*,0\leq s\leq1)$. Then \begin{equation} (\widehat G_\lambda,0\leq\lambda<A) \stackrel d= \left(\widehat G_{\lambda U}^{*}, 0\leq\lambda<\frac{-\log U}{1-U}\right). \end{equation} Consequently, for every fixed $0<u\leq1$, \begin{equation} \widehat G_u\stackrel d=\widehat G_{uU}^{*}. \end{equation}
+    -> cites: arXiv:2607.16833 - Dynamical Equations for Poisson Galton--Watson Trees and Component Densities of Sparse Inh (id: source_a356048)  (Card extracted from arxiv:2607.16833 (its own source_id).)
+[8] Pull-back of the Aldous--Pitman identity  (id: claim_5b5fc6c4c8d95246f4146313cb6e62107f50b2c587fd9ab7a2ae9eb510162f8b; claim; score 11.27)
+    matched: aldous, arxiv
+    [Proposition 7 (Pull-back of the Aldous--Pitman identity) of arXiv:2607.16833, 'Dynamical Equations for Poisson Galton--Watson Trees and Component Densities of Sparse Inh'] Under Assumption~\ref{ass:eigenfunction}, for $0<u\leq1/\rho$ the finite-tree laws satisfy \begin{equation} \bP_{x,u}^{\mathrm{fin}}(\dd t) =\frac1u\int_0^u T(t)(1-\rho s) \exp\{(s-u)(A(t)-\rho T(t))\} \bP_{x,s}^{\mathrm{fin}}(\dd t)\dd s. \end{equation} Consequently, for every root law $\alpha$, the finite total-progeny laws obey \begin{equation} P_{\alpha,u}^{\Lambda}(\dd\mu) =\frac1u\int_0^u T(\mu)(1-\rho s) \exp\{(s-u)(A(\mu)-\rho T(\mu))\} P_{\alpha,s}^{\Lambda}(\dd\mu)\dd s, \end{equation} where $T(\mu)=\mu(S)$ and $A(\mu)=\ip{\mu}{M\one}$.
+    -> cites: arXiv:2607.16833 - Dynamical Equations for Poisson Galton--Watson Trees and Component Densities of Sparse Inh (id: source_a356048)  (Card extracted from arxiv:2607.16833 (its own source_id).)
+WEAK MATCH (a hint): the best score is 14.93, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

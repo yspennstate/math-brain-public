@@ -1,0 +1,68 @@
+# navigation: packet importer for new cards
+# command: navigation/nav_query.py "packet importer for new cards"
+# seconds: 1.73
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 14.5, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] Adding cards to the store: the draft bundle  (id 092d6e87e44b, docs/adding-cards.md, 141 lines)
+    New definitions, lemmas, theorems and concepts enter the store as draft bundles. A contributor, human or agent, writes plain JSON; tools/integrate_drafts.py checks it, computes the digests and source manifests, seals the entries and ingests them. A contributor never computes a digest and never...
+    keywords: how do I add a new theorem or definit..., what format does a contributed result..., how do I contribute my own lemma to t..., Where a bundle goes, The shape, The rules the integrator enforces, Correctness first, Running the integrator, When to write a new card instead of a..., agents, math store, cards
+    -> in_dir: docs  [11eb2a0ced03 docs/]
+    -> links_to: Linking the store: from one card in five to nine in ten  [8042e8ad1be2 docs/linking-the-store.md]  (linking-the-store.md)
+    -> links_to: Retrieval and consolidation safety contract  [95c75108e2cd docs/retrieval-and-consolidation.md]  (retrieval-and-consolidation.md)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    ... 5 more links (--id 092d6e87e44b)
+[readme_section] The math brain  (id 11f730530972, framework/README.md#the-math-brain)
+    The mathematical store that runs on this framework is published separately at math-brain-public: about thirteen thousand cards (definitions, theorems, proof techniques and the agents' own results) joined by typed links, with the importer, the recall tools, the prompt hook, a starter kit for a...
+    keywords: recall, hooks, agents, math store, cards, edges
+    -> in_dir: Brain framework  [f89c77c26690 framework/README.md]
+[file] Video brain: craft cards and a delivery checker for film work  (id 6d400ee7ec38, framework/filmbrain/video_brain/README.md, 83 lines)
+    This folder is a small extension of filmbrain. It holds the preferences one person gave for how their films should be made, written as craft cards, plus a checker that refuses a delivery manifest whose evidence is missing or stale. It does not render anything and does not touch the filmbrain...
+    keywords: how do I check a finished video again..., Running it, What is here, What is not here, Making one for your own work, cards
+    -> documents: video_brain  [d9efb06caba9 framework/filmbrain/video_brain/]
+    -> in_dir: video_brain  [d9efb06caba9 framework/filmbrain/video_brain/]
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+    <- in_dir: Making one for your own work  [88df6dbf405b framework/filmbrain/video_brain/README.md]
+    <- in_dir: What is not here  [ab80295a7996 framework/filmbrain/video_brain/README.md]
+    <- in_dir: What is here  [ddff5cc3c423 framework/filmbrain/video_brain/README.md]
+    ... 1 more links (--id 6d400ee7ec38)
+[file] tools  (id 74bb75ce60b8, tools/README.md, 48 lines)
+    Scripts that build, check, export and restore the math store. Each one's docstring has the full detail and its options; this page says what each is for and where it sits in the work.
+    keywords: how do I rebuild or restore the math ..., which script exports the store or che..., Getting cards in, Checking what is in, Export and restore, For the public repository, A research measurement, math store, cards, export
+    -> documents: tools  [60256deba816 tools/]
+    -> in_dir: tools  [60256deba816 tools/]
+    -> links_to: Adding cards to the store: the draft bundle  [092d6e87e44b docs/adding-cards.md]  (../docs/adding-cards.md)
+    -> links_to: Works cited by the papers in this repository  [30ffb84a0177 docs/cited-works.md]  (../docs/cited-works.md)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+    ... 6 more links (--id 74bb75ce60b8)
+[file] README.md  (id 987a822a4401, framework/filmbrain/video_brain/templates/README.md, 22 lines)
+    These are incomplete starting forms. All measured fields, hashes, source evidence and review observations must come from the actual production. Both forms should return BLOCKED until populated. Never copy synthetic unit-test receipts into a project manifest.
+    keywords: which blank forms do I fill in for a ..., tests
+    -> documents: templates  [1e7155ec26c7 framework/filmbrain/video_brain/templates/]
+    -> in_dir: templates  [1e7155ec26c7 framework/filmbrain/video_brain/templates/]
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+[readme_section] What is not here  (id ab80295a7996, framework/filmbrain/video_brain/README.md#what-is-not-here)
+    The tests, the scripts that regenerate the handbook and templates, the importer that adds these cards to a live filmbrain store, the deploy script and the prompt-review ledger stayed in the private source tree, and so did the two pipeline scripts the cards mention by name, background_video.py...
+    keywords: math store, cards, tests, privacy
+    -> in_dir: Video brain: craft cards and a delivery checker for film work  [6d400ee7ec38 framework/filmbrain/video_brain/README.md]
+[file] Association layer (growth) for the math brain  (id 51c092e71cc5, framework/mathbrain/association/README.md, 28 lines)
+    This is the same association-network engine the general brain uses, dropped into the math brain as an ADDITIVE layer that grows from mathematical usage — claim accesses, retrievals, tool calls, proof attempts — the way the general brain grows from agent activity.
+    keywords: how are math cards linked to each other, agents
+    -> documents: association  [915136022063 framework/mathbrain/association/]
+    -> in_dir: association  [915136022063 framework/mathbrain/association/]
+    -> mentions: agents  [688414066e61 concept]  (agents)
+[file] Running the brain agentically  (id 89e8c3473a0d, docs/agentic/README.md, 51 lines)
+    The brain is a store of memories, cards and links that an AI agent reads before it works and writes back to when it learns something. Most of what makes it useful only happens when the agent runs for a long time on its own: it recalls, works, saves, and comes back to the same job an hour later...
+    keywords: The short version, How this relates to the rest of the r..., agents, math store, cards, edges
+    -> documents: skills  [35d1a54901d5 agent_tools/skills/]
+    -> documents: agentic  [95ddede37624 docs/agentic/]
+    -> in_dir: agentic  [95ddede37624 docs/agentic/]
+    -> links_to: GitHub as the brain's storage  [1cda5cd252f1 docs/agentic/github-as-storage.md]  (github-as-storage.md)
+    -> links_to: skills  [35d1a54901d5 agent_tools/skills/]  (../../agent_tools/skills/)
+    -> links_to: Using the brain to keep an agent moving  [3cdd6cc922a8 docs/agency.md]  (docs/agency.md)
+    ... 17 more links (--id 89e8c3473a0d)

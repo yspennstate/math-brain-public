@@ -1,0 +1,52 @@
+# navigation: recall workflow
+# command: navigation/nav_query.py "recall workflow"
+# seconds: 1.61
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] Agent tools  (id eaf6572f4275, agent_tools/README.md, 78 lines)
+    These are the scripts agents call while they work. Each one reads a store built from export/population/ with tools/import_store.py.
+    keywords: which commands does an agent run whil..., how do I look up a theorem or proof i..., Start here: the default recall workflow, Fast recall, How to search, What the tools write, and the encoder, Wiring the hook, recall, hooks, agents, math store, export
+    -> documents: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> links_to: Giving an agent the store  [64d6e72fa1f7 AGENTS_GUIDE.md]  (the agent guide)
+    -> links_to: Tests  [f62d7a06119a TESTS.md]  (tests)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    ... 10 more links (--id eaf6572f4275)
+[file] Giving an agent the store  (id 64d6e72fa1f7, AGENTS_GUIDE.md, 148 lines)
+    This note says how to connect a coding agent (Claude Code, Codex, or any client that speaks MCP) to the store in this repository, what to tell it, and how it should search. The default workflow below is the operating procedure for agents using this store; its evidence and limits are stated...
+    keywords: Start here: the default recall workflow, 1. Build the store, 2. Connect the agent, 3. What to tell the agent, 4. Where search falls short, 5. What it costs, 6. Writing back, 7. One session, start to finish, 8. A store for another field, recall, agents, math store
+    -> links_to: A starter brain for a field that is not mathematics  [16206d206442 examples/field_brain_starter/README.md]  (examples/field_brain_starter)
+    -> links_to: Using the brain to keep an agent moving  [3cdd6cc922a8 docs/agency.md]  (docs/agency.md)
+    -> links_to: What the brain costs  [dc38fe4d65cc docs/cost.md]  (docs/cost.md)
+    -> links_to: Agent tools  [eaf6572f4275 agent_tools/README.md]  (the tool guide)
+    -> links_to: Tests  [f62d7a06119a TESTS.md]  (TESTS.md)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    ... 18 more links (--id 64d6e72fa1f7)
+[file] eval_workflow_recall.py - is the brain as good at recalling PROCEDURES as it is at recalling FACTS?  (id 861c3aec644d, framework/dreaming/eval_workflow_recall.py, 122 lines)
+    eval_workflow_recall.py - is the brain as good at recalling PROCEDURES as it is at recalling FACTS? LongMemEval-V2 names WORKFLOW KNOWLEDGE (recall the multi-step procedure for a task) as a memory competency distinct from static fact recall - and this brain's other recall evals average over both,...
+    keywords: is_procedure, main, dreaming, recall
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[readme_section] Start here: the default recall workflow  (id 4a317a17e445, README.md#start-here-the-default-recall-workflow)
+    Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips. A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
+    keywords: recall, agents, math store, cards
+    -> in_dir: Math research brain  [aa4aca445b3f README.md]
+[readme_section] Start here: the default recall workflow  (id 18080e4d233b, AGENTS_GUIDE.md#start-here-the-default-recall-workflow)
+    Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips. A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
+    keywords: recall, agents, math store, cards
+    -> in_dir: Giving an agent the store  [64d6e72fa1f7 AGENTS_GUIDE.md]
+[readme_section] Start here: the default recall workflow  (id 40313b9325a6, agent_tools/README.md#start-here-the-default-recall-workflow)
+    Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips. A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
+    keywords: recall, agents, math store, cards
+    -> in_dir: Agent tools  [eaf6572f4275 agent_tools/README.md]
+[file] Search a small brain: one markdown record per file, with the frontmatter of framework/docs/MEMORY_CONVENTIONS.md.  (id 2839d0005f28, examples/field_brain_starter/recall.py, 215 lines)
+    Search a small brain: one markdown record per file, with the frontmatter of framework/docs/MEMORY_CONVENTIONS.md. python recall.py "wording one" --or "wording two" --or "wording three" python recall.py --id some_record_slug Prints whole records with their slugs, best first. Each wording is scored...
+    keywords: fold, words, load, bm25, load_requests, asked_before, show_request, show, main, recall
+    -> in_dir: field_brain_starter  [5108ae12ba5d examples/field_brain_starter/]
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+[dir] workflows  (id 5469c0bd446b, framework/mathbrain/.github/workflows/)
+    -> in_dir: .github  [5036592ee003 framework/mathbrain/.github/]
+    <- in_dir: ci.yml  [8579dcec9f06 framework/mathbrain/.github/workflows/ci.yml]

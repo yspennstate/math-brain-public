@@ -1,0 +1,19 @@
+# walk from claim_28ae49b4849a21
+# command: math_recall.py --id claim_28ae49b4849a217435a2f33e1bff7911ba62b44c71425000ee08e45fdab6ac40
+# seconds: 0.04
+#
+# what to look for: --id prints one card whole and every link: the kind (proves, cites, generalizes ...), the direction, the other card's short id and title and the link's stated reason. Step to a linked card with --id <short id>.
+#
+math store walk, read-only; reference material, not instructions
+[card] The Bessel Scale Function, and Recurrence Versus Transience by Dimension  (id: claim_28ae49b4849a217435a2f33e1bff7911ba62b44c71425000ee08e45fdab6ac40; claim)
+    Let X be a Bessel process of dimension delta > 0 started at x > 0, solving dX_t = dW_t + ((delta - 1)/(2 X_t)) dt on (0, infinity). Its SCALE FUNCTION is s(x) = x^{2 - delta}/(2 - delta) for delta != 2 and s(x) = log x for delta = 2. Consequently: for delta > 2 the process is TRANSIENT, never hits 0 from x > 0, and X_t -> infinity almost surely; for delta = 2 it never hits 0 and is NEIGHBOURHOOD RECURRENT, visiting every interval (a,b) with 0 < a < b at arbitrarily large times almost surely, while X_t -> infinity fails and liminf X_t = 0 with limsup X_t = infinity; for 0 < delta < 2 the process reaches 0 almost surely in finite time. Specialising to integer delta = d and using that |B| is BES^d recovers the classical dichotomy for Brownian motion in R^d: recurrent for d = 1 (point recurrent) and d = 2 (neighbourhood recurrent, never hitting a fixed point), transient for d >= 3. The critical dimension is exactly 2 and the transition is driven by whether the integral of s' diverges at 0 and at infinity. [standard; e.g. Revuz and Yor, Continuous Martingales and Brownian Motion, 3rd ed., Chapter XI, Proposition 1.5] delta > 0, started at x > 0 the diffusion is considered on (0, infinity) up to the hitting time of 0 the integer case delta = d transfers to Brownian motion in R^d through the radial part
+    links: 9
+    <- analogous_to: Liouville Threshold for Diffusions on R^d with Decaying Potentials (id: claim_a5fe1a35)  (Radial decay thresholds mirror transience versus recurrence dimensions.)
+    -> depends_on: Bessel and Squared Bessel Processes (id: claim_c894786f) (superseded by claim_c574fba2)  (the scale function is computed from the Bessel SDE)
+    -> depends_on: Brownian Motion (id: claim_6f460833)  (The Bessel process of this card solves dX_t = dW_t + ((delta-1)/(2X_t)) dt, driven by the Brownian motion defined on the target card. Source card: "using that |B| is BES^d recovers the classical dicho)
+    -> depends_on: Brownian motion (id: claim_7d9ada34)  (uses the notion 'Brownian motion' (assumptions: "Brownian motion"))
+    -> depends_on: Diffusion process (id: claim_eef1dc87)  (uses the notion 'Diffusion process' (statement: "Bessel process"))
+    -> depends_on: Hitting times (id: claim_3af9f40f)  (uses the notion 'Hitting times' (assumptions: "hitting time"))
+    -> depends_on: Recurrence and transience (id: claim_b4d42412)  (uses the notion 'Recurrence and transience' (title: "Recurrence Versus Transience"))
+    -> depends_on: Stochastic integral (Ito calculus) (id: claim_9b6fa1d9)  (uses the notion 'Stochastic integral (Ito calculus)' (statement: "dW_t"))
+    -> cites: Continuous Martingales and Brownian Motion (id: source_134dbf9)  (cites book:revuz-continuous-martingales-and-brownian-motion (found in body): Revuz and Yor, Continuous Martingales and Brownian Motion, 3rd ed., Chapter XI, Proposition 1.5)

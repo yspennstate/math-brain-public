@@ -1,0 +1,47 @@
+# search: DPP pathwise stochastic control
+# command: math_recall.py "DPP pathwise stochastic control"
+# seconds: 0.41
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] DPP for the pathwise stochastic control  (id: claim_a814ab0e17283b52680c700b69ce1faed22d904b810f6468fe27fecd31b5d734; claim; score 36.88)
+    matched: dpp, pathwise, control, stochastic, "pathwise stochastic" (title)
+    [Theorem DPP-path-stoch of arXiv:2412.05698, 'Controlled rough SDEs, pathwise stochastic control and dynamic programming principles'] Suppose that (assum-path-stoch of the paper) holds. Then, for any $y \in \mathbb{R}^{d_Y}$, $s\in[0,T]$, $h\in[0,T-s]$ and $i=1,2$, \begin{equation} \bar{\mathcal{V}}(s,y;\omega)= {\ensuremath{\operatorname{essinf}}_{\eta \in \mathcal{A}^i}}\ \mathbb{E}[ \bar{\mathcal{V}}(s+h, \bar{Y}^{s,y,\bar{\eta}}_{s+h}; \cdot) \mid {\mathfrak F}^{\mathbf{W}}_T] (\omega) \quad\text{a.e. } \omega, \end{equation} where the left-hand side is continuous on $[0,T]\times \mathbb{R}^{d_Y}$ a.s. as in Theorem (rep-value-fct of the paper).
+    -> cites: arXiv:2412.05698 - Controlled rough SDEs, pathwise stochastic control and dynamic programming principles (id: source_1ad4f01)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+[2] Thm thm-RBP of arXiv:2412.05698  (id: claim_9754891c1235d80466028072168ee8c19069745eb8fc198fd6a8da22216b9de6; claim; score 23.38)
+    matched: dpp, pathwise, control, stochastic
+    [Thm thm-RBP of arXiv:2412.05698, 'Controlled rough SDEs, pathwise stochastic control and dynamic programming principles'] (Rough DPP) Let $\mathbf{X} \in {\mathscr{C}}^{\alpha}_T$ and let Assumption (assum-dpp of the paper) be in force. Then, for $0 \le s \le s+h \le T$, \begin{equation} \mathcal V (s,y; \mathbf{X}) = \inf_{\eta \in \mathcal{A}} \mathbb{E} \left( \mathcal V(s+h,Y^{(s,y,\eta, \mathbf{X})}_{s+h}; \mathbf{X}) + \int_s^{s+h} \ell (t, Y_t^{(s,y,\eta, \mathbf{X})}, \eta_t) d t \right). \end{equation}
+    -> cites: arXiv:2412.05698 - Controlled rough SDEs, pathwise stochastic control and dynamic programming principles (id: source_1ad4f01)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+[3] arXiv:2412.05698 - Controlled rough SDEs, pathwise stochastic control and dynamic programming principles  (id: source_1ad4f01d1f42d5ce44516eeb0246bfc7abcd70552e4e450e6f3eba112acbad28; source; score 22.97)
+    matched: pathwise, control, stochastic, "pathwise stochastic" (title)
+    Paper the harvested cards were extracted from: arxiv:2412.05698.
+    <- cites: Prop BB-rde of arXiv:2412.05698 (id: claim_d0121a23)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: {\cite{CFO11}} (id: claim_a84f5918)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: Controlled vector fields (id: claim_656fcc27)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: Measurable selection (id: claim_9035d542)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: see {\cite[Theorem 4.6 and Proposition 4.5 (id: claim_6ea9f92e)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: Prop rou-inte-agr-ito of arXiv:2412.05698 (id: claim_7d9c704b)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: {\cite[Definition 4.2 (id: claim_2ca5e716)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    <- cites: Lem optional-limit of arXiv:2412.05698 (id: claim_c9fc3770)  (Card extracted from arxiv:2412.05698 (its own source_id).)
+    ... 23 more links (--id source_1ad4f01)
+[4] Pathwise Bound  (id: claim_c71e45475e84a9352534dfa8efaa310686b7c0020f8c292fb763fc0b5e39ba36; claim; score 17.69)
+    matched: pathwise, control
+    [Lemma 25 (Pathwise Bound) of arXiv:2607.03318, 'Continuous Differentiability of the Value Function for Infinite-Dimensional Finite-Horizon'] Let Assumption \ref{ass:problem_data} hold. Define the cumulative control process $A_s := \int_t^s \gamma_r \, \mathrm{d}r$. For any progressively measurable control $\gamma \in \mathcal{V}_\varepsilon$ (Definition \ref{def:randomized_control}), the following pathwise integral bound holds $\mathbb{P}$-a.s.: \begin{equation*} \int_t^T e^{-A_s} \|f\|_{\mathcal{B}_{m, T}} \, \mathrm{d}s + \int_t^T \gamma_s e^{-A_s} \|\Phi\|_{\mathcal{B}_{m, T}} \, \mathrm{d}s + e^{-A_T} \|\Psi\|_{\mathcal{B}_m} \le (T-t)\|f\|_{\mathcal{B}_{m, T}} + \max\left(\|\Phi\|_{\mathcal{B}_{m, T}}, \|\Psi\|_{\mathcal{B}_m}\right). \end{equation*}
+    -> cites: arXiv:2607.03318 - Continuous Differentiability of the Value Function for Infinite-Dimensional Finite-Horizon (id: source_a4e0536)  (Card extracted from arxiv:2607.03318 (its own source_id).)
+[5] Lemma lem.vinf.dpp of arXiv:2605.14149  (id: claim_ecaf6d41e9ae38d137257238eeafb6bf72c4195aeda0b6479b9fa02f1f871e14; claim; score 17.52)
+    matched: dpp, stochastic
+    [Lemma lem.vinf.dpp of arXiv:2605.14149, 'The mean-field limit of online stochastic vector balancing'] For each $t_0 \in [0,1)$, $h \in (0,1 - t_0]$, we have \begin{align*} \mathcal{V}^{\infty}(t_0,m_0) = \inf_{(m,\alpha) \in \mathcal{A}(t_0, m_0)} \mathcal{V}^{\infty}(t_0+h,m_{t_0+h}). \end{align*} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2605.14149 - The mean-field limit of online stochastic vector balancing (id: source_88f21d2)  (Card extracted from arxiv:2605.14149 (its own source_id).)
+[6] Proposition dpp_proof of arXiv:2608.13716  (id: claim_2487381960600c246cc86a5ce27a0678c212824153b75c872496affbe1f4c920; claim; score 16.05)
+    matched: dpp
+    [Proposition dpp_proof of arXiv:2608.13716, 'Graph Causal Optimal Transport \\ and Wasserstein Distances'] If $G$ is a sorted perfect DAG, $\mu \in \Gprobabilities{\mathcal{X}}$, $\nu \in \Gprobabilities{\mathcal{Y}}$, $c : \mathcal{X} \times \mathcal{Y} \to [0, \infty]$ is $G$-separable, and $c_k$ is lower semi-analytic for all $1 \leq k \leq n$, then $\mathrm{DPP}^{G,c}(\mu, \nu)$ is well-defined and $$V^{G,c}(\mu, \nu) = \mathrm{DPP}^{G,c}(\mu, \nu).$$ (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2608.13716 - Graph Causal Optimal Transport \\ and Wasserstein Distances (id: source_6bd68e1)  (Card extracted from arxiv:2608.13716 (its own source_id).)
+[7] Lemma lem.dpp of arXiv:2605.14149  (id: claim_fbe6cf415044bd267bd07b721389a136bbbea6628b4eec374b19c8e0f21ab9bd; claim; score 15.63)
+    matched: dpp, stochastic
+    [Lemma lem.dpp of arXiv:2605.14149, 'The mean-field limit of online stochastic vector balancing'] Fix integers $0\leq k_0 < k_1 \leq n$ and $\bm{x} \in {\mathbb R}^n$. Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space, and $\mathbb{G} = (\mathcal{G}(k))_{k = k_0,\dots,k_1}$ be a filtration of $\mathcal{F}$. Furthermore, let $(\bm{Z}(k))_{k = k_0+1,\dots,k_1}$ be a sequence of $\mathbb{G}$-adapted, ${\mathbb R}^n$-valued random vectors such that $\bm{Z}(k) \sim \nu_{1/n}^{\otimes n}$ is independent of $\mathcal{G}(k-1)$ for all $k = k_0+1,\dots,k_1$. Then, we have \begin{align*} \mathcal{V}^n(k_0,\bm{x}) = \inf_{\varepsilon(k_0+1),\dots,\varepsilon(k_1)} {\mathbb E}\bigg[ \mathcal{V}^n\Big(k_1, \bm{x} + \sum_{k = k_0+1}^{k_1} \varepsilon(k) \bm{Z}(k)\Big) \bigg], \end{align*} where the infimum is taken over all $\mathbb{G}$-adapted $\{\pm 1\}$-valued processes $(\varepsilon(k))_{k = k_0+1,\dots,k_1}$. In particular, if $k_1 = n$, we have \begin{align*} \mathcal{V}^n(k_0,\bm{x}) = \inf_{\varepsilon(k_0+1),\dots,\varepsilon(n)} {\mathbb E}\,\Big| \bm{x} + \sum_{k = k_0+1}^n \varepsilon(k) \bm{Z}(k) \Big|_{\infty}, \end{align*} and thus, $V^n = \mathcal{V}^n(0,\bm{0})$, where $V^n$ was defined in (equation def.vn.intro of the paper).
+    -> cites: arXiv:2605.14149 - The mean-field limit of online stochastic vector balancing (id: source_88f21d2)  (Card extracted from arxiv:2605.14149 (its own source_id).)
+[8] DPP in the case of infinite horizon  (id: claim_f1727c1439e1f2df36cca3202cb14bae97ace542927bc88c74865c75f145e4f3; claim; score 15.05)
+    matched: dpp
+    [Theorem Theorem_DPP_infinite_horizon of arXiv:2608.08299, 'Non-linear optimal stopping with Bermudan strategies: the infinite horizon case'] Under the assumptions of knowledge preservation (iii), monotonicity (iv), consistency (v), "generalized" zero-one law (vi), and monotone Fatou property with respect to the terminal condition (vii), on the non-linear operators, the value family $V$ satisfies the DPP in the case of infinite horizon: \[ V(\theta_k)= \xi(\theta_k) \vee \rho_{\theta_k,\theta_{k+1}}[V(\theta_{k+1})], \quad \text{for each} \quad k \in \mathbb{N}. \] (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2608.08299 - Non-linear optimal stopping with Bermudan strategies: the infinite horizon case (id: source_10a681d)  (Card extracted from arxiv:2608.08299 (its own source_id).)

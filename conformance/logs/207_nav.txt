@@ -1,0 +1,63 @@
+# navigation: privacy settings
+# command: navigation/nav_query.py "privacy settings"
+# seconds: 2.25
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] privacy.toml  (id abb17f81a951, config/privacy.toml, 78 lines)
+    schema_version = 1
+    keywords: privacy
+    -> in_dir: config  [7c1bb141682a config/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+[file] mistake_render_settings_reset_after_update_2026_03_18.md  (id e350a5cdcef1, examples/field_brain_starter/memory/mistake_render_settings_reset_after_update_2026_03_18.md, 13 lines)
+    --- name: mistake_render_settings_reset_after_update_2026_03_18 description: [VERIFIED] An editor update reset the export preset to 8-bit; three masters went out with banding in the sky shots metadata: type: feedback status: verified ---
+    keywords: export
+    -> in_dir: memory  [5bfc189d9ca3 examples/field_brain_starter/memory/]
+    -> mentions: export  [c9d454400280 concept]  (export)
+    <- links_to: Memory Index  [687bfa028c15 examples/field_brain_starter/memory/MEMORY.md]  (mistake_render_settings_reset_after_update_2026_03_18)
+[file] Mathematical Research Brain  (id a1276d52d038, framework/mathbrain/README.md, 99 lines)
+    This folder holds the code of a privacy-isolated memory, verification, and evaluation system for mathematical research. It is intentionally math only. It must not ingest market material, financial or options theory, company information, credentials, personal archives, client work, or unrelated...
+    keywords: how is the math memory kept private a..., how are results verified and evaluated, What it is for, Non-negotiable privacy boundary, Verification philosophy, Repository map, Quick start, Release status, privacy, evaluation
+    -> documents: mathbrain  [910e4b7f936e framework/mathbrain/]
+    -> in_dir: mathbrain  [910e4b7f936e framework/mathbrain/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+    <- in_dir: Quick start  [3491adc06688 framework/mathbrain/README.md]
+    <- in_dir: Repository map  [69ec14df6632 framework/mathbrain/README.md]
+    ... 4 more links (--id a1276d52d038)
+[file] Wiring the workspace stream into session wake  (id d6b0e5f54752, framework/workspace/global_workspace/WIRING.md, 50 lines)
+    Status: NOT wired. Gated on INTEGRATION_READY (created only by the final reviewer PASS - see mesh topic workspace-final-gate, handoff msg-a560075345). Whoever wires it (codex-root under its settings.json lease, or me after a release) - this is the exact edit, mirroring the existing mesh_hook...
+    keywords: ~/.claude/settings.json, ~/.codex/AGENTS.md (pull side), After wiring - the acceptance check, agents
+    -> in_dir: global_workspace  [075101ff1461 framework/workspace/global_workspace/]
+    -> mentions: agents  [688414066e61 concept]  (agents)
+[file] Architecture  (id 7c90b77dd441, framework/mathbrain/docs/architecture.md, 114 lines)
+    The system is organized as a sequence of independently auditable layers.
+    keywords: 1. Privacy and provenance gate, 2. Structured records, 3. Typed graph, 4. Verification router, 5. Mistake memory and triggers, 6. Mathematical consolidation, 7. Evaluation, privacy, evaluation
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: evaluation  [ca1f2924f5f6 concept]  (evaluation)
+[file] Cross-computer coordination kit  (id b4aa2df7a9ab, framework/coordination/README.md, 257 lines)
+    A small, reusable Python 3.10+ reference implementation for agents that need a shared task board, leased claims, messages, explicit handoffs, and schedule requests across computers. Standard library only; SSH is an existing system prerequisite. No GitHub Actions, LFS, paid API, cloud...
+    keywords: how do agents on different computers ..., how do I stop two agents from editing..., Architecture and trust boundary, Run the synthetic tests, Deployment contract (manual, separate..., Protocol and state machines, Offline recovery, privacy and operations, Optional email boundary, Priority owner questions and verified..., agents, tests, privacy
+    -> documents: coordination  [f9d2ca53f95f framework/coordination/]
+    -> in_dir: coordination  [f9d2ca53f95f framework/coordination/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    -> mentions: tests  [8b7bdbb95a33 concept]  (tests)
+    <- in_dir: Offline recovery, privacy and operations  [01b1a7a1c8b2 framework/coordination/README.md]
+    ... 6 more links (--id b4aa2df7a9ab)
+[file] Privacy and publication boundary  (id 4f0fc441c862, framework/mathbrain/docs/privacy-boundary.md, 130 lines)
+    The source gate and the publication gate are separate. Passing the source gate means a file may be read for one local audit. It does not mean its content, metadata, summary, embedding, or any other derivation may be committed.
+    keywords: Run-local source manifest, Link and race defense, Local derivations, Public export sidecar, Context-aware scanning, edges, export, retrieval, privacy
+    -> in_dir: docs  [f4e54964197f framework/mathbrain/docs/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+    -> mentions: export  [c9d454400280 concept]  (export)
+[file] Standing up a fresh brain  (id dbc0ea759cf4, framework/bootstrap/README.md, 63 lines)
+    1. Clone this repository somewhere permanent and run the commands below from its framework/ folder. The installer copies the governor, mesh, workspace and tools into %USERPROFILE%\brain-framework, and the launchers point at that installed copy, so the clone can live anywhere. Keep it, though:...
+    keywords: how do I set up a new brain from scratch, what does the installer change on my ...
+    -> documents: bootstrap  [62608141e42c framework/bootstrap/]
+    -> in_dir: bootstrap  [62608141e42c framework/bootstrap/]
+    <- links_to: Running the brain agentically  [89e8c3473a0d docs/agentic/README.md]  (framework/bootstrap)

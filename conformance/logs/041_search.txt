@@ -1,0 +1,48 @@
+# search: Chernoff bound
+# command: math_recall.py "Chernoff bound"
+# seconds: 0.34
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Matrix Chernoff bound  (id: source_fee1afa75483d24c9c9be32bf892c24550c9f0bed770fb803b30a4a3907f8b6b; source; score 21.69)
+    matched: chernoff, bound, "chernoff bound" (title)
+    Wikipedia article: Matrix Chernoff bound (revision 1311348074). https://en.wikipedia.org/w/index.php?title=Matrix_Chernoff_bound&oldid=1311348074
+    <- cites: Matrix Azuma Inequality (id: claim_bf7b2b9f)  (states what wikipedia:Matrix_Chernoff_bound says at revision 1311348074, lines 170-190)
+[2] Chernoff bound  (id: claim_d51983c4f63a77f17372197f2523848359aad2a1cf50390086c1259face99d30; claim; score 20.18)
+    matched: chernoff, bound, "chernoff bound" (title)
+    [Lemme 76 (Chernoff bound) of arXiv:2604.00635, 'Large deviations of the periodic Toda chain'] Let $\{X_i\}_{i=1}^{n-1}$ be a collection of $n-1$ random uniformly distributed iid variables on $\intff{0}{1}$. Then, for any $\xi \geq 1$, it holds $$\mathbb{P}\bigg[ \sum_{j=1}^{n-1} \big|\ln X_i \big| \geq (n-1)\xi \bigg] \, \leq \, \big( \xi \mathrm{e}^{1- \xi} \big)^{n-1}\, .$$
+    -> depends_on: Chernoff bound (id: claim_017acb48) (superseded by claim_068e40c4)  (The card uses the concept 'chernoff bound'; the target is the store's card defining it.)
+    -> cites: arXiv:2604.00635 - Large deviations of the periodic Toda chain (id: source_2d52525)  (Card extracted from arxiv:2604.00635 (its own source_id).)
+    -> semantic_association: Chernoff bound (id: claim_068e40c4)  (Both cards state chernoff bound.)
+[3] Matrix Chernoff bound  (id: claim_892f8986ca524aa8b2d6ff252fc71429; claim; score 20.07)
+    matched: chernoff, bound, "chernoff bound" (title)
+    For certain applications in linear algebra, it is useful to know properties of the probability distribution of the largest eigenvalue of a finite sum of random matrices. Suppose $\{\mathbf {X} _{k}\}$ is a finite sequence of random matrices. Analogous to the well-known Chernoff bound for sums of scalars, a bound on the following is sought for a given parameter t: $$\Pr \left\{\lambda _{\max }\left(\sum _{k}\mathbf {X} _{k}\right)\geq t\right\}$$
+    -> cites: Chernoff bound (id: claim_068e40c4)  (The card names chernoff bound; the target is the store's card stating it.)
+    -> semantic_association: Wikipedia 'Matrix Chernoff bound' revision None, lead section, read 2026-09-23 through the MediaWiki parse API; every formula restored from its fallback image's (id: evidence_3a01b)  (Evidence record evidence_3a01b1d7835e4f5a9974a30d648673de)
+    -> semantic_association: Wikipedia 'Matrix Chernoff bound' revision 1311348074, lead section: read through the MediaWiki parse API at 2026-09-23T11:41:45+03:00, and the formula repair r (id: evidence_0a3a0)  (Evidence record evidence_0a3a0cdfc8f84b71b95361b222f44b96)
+[4] Theorem 1.3 (T-product Tensor Chernoff Bound I) of arXiv:2107.06224: T product Tensors Part II: Tail Bounds for Sums of Random T product Ten  (id: claim_fe7ac4622eec16690d9de8141bcb279d2fd4e37c3a3e4aa1df4647696ae98975; claim; score 18.84)
+    matched: chernoff, bound, "chernoff bound" (title)
+    [Theorem 1.3 (T-product Tensor Chernoff Bound I) of arXiv:2107.06224, 'T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors'] Consider a sequence {Xi ∈Cm×m×p} of independent, random, Hermitian T-product tensors that satisfy Xi ⪰O and λmax(Xi) ≤1 almost surely. (1.9) Define following two quantaties: µmax def= λmax.
+    -> depends_on: Chernoff bound (id: claim_017acb48) (superseded by claim_068e40c4)  (The card uses the concept 'chernoff bound'; the target is the store's card defining it.)
+    -> cites: T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors (id: source_33c624e)  (cites arxiv:2107.06224 (found in title, body, meta.domain, meta.source_id): Theorem 1.3 (T-product Tensor Chernoff Bound I) of arXiv:2107.06224: T product Tenso)
+[5] Theorem 1.5 (T-product Tensor Chernoff Bound I for Eigentuple) of arXiv:2107.06224: T product Tensors Part II: Tail Bounds for Sums of Rando  (id: claim_adcba13024e9795deba2ff37c6362ba66cf6a402cc8f766aa579a918d0b5d204; claim; score 18.81)
+    matched: chernoff, bound, "chernoff bound" (title)
+    [Theorem 1.5 (T-product Tensor Chernoff Bound I for Eigentuple) of arXiv:2107.06224, 'T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors'] Consider a sequence {Xi ∈Cm×m×p} of independent, random, Hermitian T-product tensors that satisfy Xi ⪰O and λmax(Xi) ≤1 almost surely. (1.17) Define following two quantaties: µmax def= λmax.
+    -> depends_on: Chernoff bound (id: claim_017acb48) (superseded by claim_068e40c4)  (The card uses the concept 'chernoff bound'; the target is the store's card defining it.)
+    -> cites: T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors (id: source_33c624e)  (cites arxiv:2107.06224 (found in title, body, meta.domain, meta.source_id): Theorem 1.5 (T-product Tensor Chernoff Bound I for Eigentuple) of arXiv:2107.06224: )
+[6] Theorem 1.4 (T-product Tensor Chernoff Bound II) of arXiv:2107.06224: T product Tensors Part II: Tail Bounds for Sums of Random T product Te  (id: claim_7bbce7bd66a7759e3fe9feaa3137f235fc345e6b109b6c7681c7998b0c576128; claim; score 18.65)
+    matched: chernoff, bound, "chernoff bound" (title)
+    [Theorem 1.4 (T-product Tensor Chernoff Bound II) of arXiv:2107.06224, 'T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors'] Consider a sequence {Xi ∈Cm×m×p} of independent, random, Hermitian tensors that satisfy Xi ⪰O and λmax(Xi) ≤T almost surely. (1.13) Define following two quantaties: µmax def= λmax n X i=1 EXi ! and µmin def= λmin n X i=1 EXi ! , (1.14) then, we have following two inequalities: Pr.
+    -> depends_on: Chernoff bound (id: claim_017acb48) (superseded by claim_068e40c4)  (The card uses the concept 'chernoff bound'; the target is the store's card defining it.)
+    -> cites: T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors (id: source_33c624e)  (cites arxiv:2107.06224 (found in title, body, meta.domain, meta.source_id): Theorem 1.4 (T-product Tensor Chernoff Bound II) of arXiv:2107.06224: T product Tens)
+[7] Theorem 1.6 (T-product Tensor Chernoff Bound II for Eigentuple) of arXiv:2107.06224: T product Tensors Part II: Tail Bounds for Sums of Rand  (id: claim_03ec80a9ffc73867e0793dabf17d4df2017d74b0a8b516b8e33e2fa47071a153; claim; score 18.53)
+    matched: chernoff, bound, "chernoff bound" (title)
+    [Theorem 1.6 (T-product Tensor Chernoff Bound II for Eigentuple) of arXiv:2107.06224, 'T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors'] Consider a sequence {Xi ∈Cm×m×p} of independent, random, Hermitian T-product tensors that satisfy Xi ⪰O and λmax(Xi) ≤T almost surely. (1.21) Define following two quantaties: µmax def= λmax n X i=1 EXi ! and µmin def= λmin n X i=1 EXi ! . (1.22) If nP i=1 tXi satisfies Eq. (1.1), we have following two inequalities: Pr.
+    -> depends_on: Chernoff bound (id: claim_017acb48) (superseded by claim_068e40c4)  (The card uses the concept 'chernoff bound'; the target is the store's card defining it.)
+    -> cites: T product Tensors Part II: Tail Bounds for Sums of Random T product Tensors (id: source_33c624e)  (cites arxiv:2107.06224 (found in title, body, meta.domain, meta.source_id): Theorem 1.6 (T-product Tensor Chernoff Bound II for Eigentuple) of arXiv:2107.06224:)
+[8] Lemma lem:chernoff of arXiv:2609.02234  (id: claim_c5fa96f1778ad9b3889e0763d008e95ae6dd0a316d4c182848db93397028a78b; claim; score 17.63)
+    matched: chernoff, bound
+    [Lemma lem:chernoff of arXiv:2609.02234, 'An $n(\log n)^{o(1)}$ bound for nested cycles without geometric crossings'] Let $X$ be a binomially distributed random variable with mean $\mu$. Then $\Pr(X\le\mu/2)\le\mathrm e^{-\mu/8}$.
+    -> cites: arXiv:2609.02234 - An $n(\log n)^{o(1)}$ bound for nested cycles without geometric crossings (id: source_d742d41)  (Card extracted from arxiv:2609.02234 (its own source_id).)
+WEAK MATCH (a hint): the best score is 21.69, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

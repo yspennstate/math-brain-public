@@ -1,0 +1,74 @@
+# navigation: dreaming
+# command: navigation/nav_query.py "dreaming"
+# seconds: 1.73
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 3.4, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] Dreaming  (id 836b32ed1544, framework/dreaming/README.md, 112 lines)
+    The dream is the brain's offline pass. While no one is working, it reads what the day added, files it into the store's existing structure, links what should be linked, turns repeated mistakes into reflexes, and grades how well yesterday's reflexes fired. Agents working in the day write records...
+    keywords: what happens to the brain while nobod..., how are new notes filed and linked ea..., The two halves, Three kinds of dream, Rules the dream keeps, Guards on the way out, Schedule it, Make it fit your field, dreaming, agents, math store, edges
+    -> documents: dreaming  [2e94c862d10c framework/dreaming/]
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> links_to: Dreaming in the starter brain  [bd63a426338f examples/field_brain_starter/dream/README.md]  (examples/field_brain_starter/dream/)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    ... 10 more links (--id 836b32ed1544)
+[file] network/  (id eb4d806109d0, framework/dreaming/network/README.md, 63 lines)
+    The big association network: every tool, keyword, prompt, file, and memory as a node; firing by spreading activation and episodic pattern completion. Method and discipline in DESIGN.md.
+    keywords: how does one note bring related notes..., dreaming
+    -> documents: network  [3fce5e5b082b framework/dreaming/network/]
+    -> in_dir: network  [3fce5e5b082b framework/dreaming/network/]
+[file] Project-memory authority and reclassification  (id 1bcd374a86ec, framework/dreaming/project_memory/README.md, 65 lines)
+    Project memory treats a prompt as owner-authoritative only when all of these are true:
+    keywords: when is a prompt treated as an instru..., dreaming
+    -> documents: project_memory  [b58bdfea6d89 framework/dreaming/project_memory/]
+    -> in_dir: project_memory  [b58bdfea6d89 framework/dreaming/project_memory/]
+[file] Dreaming in the starter brain  (id bd63a426338f, examples/field_brain_starter/dream/README.md, 225 lines)
+    A brain that only collects records gets worse with time: old plans sit next to the decisions that replaced them, mistakes are written down and made again, and new records never get linked to the old ones they touch. The dream is the pass that keeps the store usable. It runs when nobody is...
+    keywords: how does a small brain clean up old n..., Run it, A night of dreams, Filing and connecting, Run it every night, What the agenda found in the example ..., Hand the agenda to an agent, One dream on the example store, Make it fit your field, dreaming, agents, math store
+    -> documents: dream  [610dac51b9bb examples/field_brain_starter/dream/]
+    -> in_dir: dream  [610dac51b9bb examples/field_brain_starter/dream/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    <- in_dir: Run it every night  [1b074de8883d examples/field_brain_starter/dream/README.md]
+    ... 8 more links (--id bd63a426338f)
+[file] navigation/  (id 2adc22ee4e47, navigation/README.md, 91 lines)
+    A small brain of this repository's own contents. The math store under export/population/ holds the mathematics; this folder holds a map of the repository itself: one card per file of the working core, one per directory, one per README section, and a few concept cards (dreaming, recall, hooks,...
+    keywords: how do I find a file in this reposito..., what are the cards and links of the r..., What is here, Start here, Checking it, Rebuilding it, Where to go next, dreaming, recall, hooks, math store, cards
+    -> documents: navigation  [7ef808ceb4dc navigation/]
+    -> in_dir: navigation  [7ef808ceb4dc navigation/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: hooks  [806d2e927001 concept]  (hooks)
+    ... 7 more links (--id 2adc22ee4e47)
+[file] Brain resilience backup  (id 3c10375bbf2d, framework/resilience/README.md, 126 lines)
+    This is an independent disaster-recovery path for the shared brain. It does not replace the canonical private repository or the nightly dream push.
+    keywords: how is the brain backed up and restor..., What is backed up, One-time setup, Back up and verify, Exact encrypted restore, dreaming, privacy
+    -> documents: resilience  [0a642c4eab61 framework/resilience/]
+    -> in_dir: resilience  [0a642c4eab61 framework/resilience/]
+    -> mentions: privacy  [139a2c922277 concept]  (privacy)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    <- in_dir: Exact encrypted restore  [72d91d10ea59 framework/resilience/README.md]
+    <- in_dir: One-time setup  [8b56aa9e4cf4 framework/resilience/README.md]
+    ... 2 more links (--id 3c10375bbf2d)
+[file] Sidecar refresh - prepared, NOT armed (owner's yes/no)  (id 7f6dd0553d24, framework/dreaming/sidecar_refresh/README.md, 43 lines)
+    The semantic embedding sidecar has NO scheduled refresh (root-caused 2026-07-24: the dream's E2 pass never fires in practice; the only refreshes are manual). It went stale 07-23 - 07-25 - 07-29, costing four measured rediscoveries on 07-28 and three manual box round-trips on 07-29/30.
+    keywords: how are the semantic search vectors k..., To arm it (one command, owner's call), Field evidence (2026-07-30 05:04 loca..., Alternatives on record (same memory), Not included, separate owner call, dreaming, retrieval
+    -> documents: sidecar_refresh  [ca2ccb4591fe framework/dreaming/sidecar_refresh/]
+    -> in_dir: sidecar_refresh  [ca2ccb4591fe framework/dreaming/sidecar_refresh/]
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: retrieval  [af37fe6c8dc4 concept]  (retrieval)
+    <- in_dir: Alternatives on record (same memory)  [1a530b6cb441 framework/dreaming/sidecar_refresh/README.md]
+    <- in_dir: Field evidence (2026-07-30 05:04 local, same night this was written)  [7ee1aad4e2a6 framework/dreaming/sidecar_refresh/README.md]
+    ... 2 more links (--id 7f6dd0553d24)
+[file] Bounded, verified source handoffs  (id fef48b9ad56a, framework/docs/PORTABLE-ENGINEERING-ARTIFACTS.md, 42 lines)
+    dreaming/portable_artifact.py moves explicitly allowlisted technical source and clean fixtures between agents that have repository access and a native executor but no shared filesystem. It supplies no network access or credentials and does not execute the transferred files.
+    keywords: how do agents without a shared filesy..., dreaming, agents
+    -> in_dir: docs  [83133f3d245e framework/docs/]
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: agents  [688414066e61 concept]  (agents)

@@ -1,0 +1,83 @@
+# two wordings: spectral gap relaxation time mixing time | absolute spectral gap reversible Markov chain
+# command: math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain"
+# seconds: 1.12
+#
+# what to look for: Two or three wordings in one call are searched separately and fused by rank: 'found by wording 1 (rank 2), 2 (rank 1)' shows where each wording put the card. This is the recommended way to ask.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Spectral gap, relaxation time and mixing time: the two-sided bound  (id: claim_2114caacee9ef704ca7243abee0f8be7a280413638cb34b387097351ec0f2be3; claim; score 49.07)
+    found by wording 1 (rank 1), 2 (rank 1)
+    matched: time, relaxation, gap, "gap relaxation" (title), mixing (+1)
+    Let P be the transition matrix of an irreducible, reversible Markov chain on a finite state space with stationary distribution pi, and let gamma* = 1 - max{|lambda| : lambda an eigenvalue of P other than 1} be the absolute spectral gap, with relaxation time t_rel = 1/gamma*. Then for every epsilon in (0, 1/2) the total-variation mixing time satisfies (t_rel - 1) log(1/(2 epsilon)) <= t_mix(epsilon) <= t_rel log(1/(epsilon pi_min)), where pi_min is the smallest stationary probability (Levin, Peres, Wilmer, Theorems 12.4 and 12.5). Mixing time is therefore the relaxation time up to a factor between log(1/(2 epsilon)) and log(1/(epsilon pi_min)); on a state space of size N the gap between the two sides can be as large as log N, and neither side can be dropped in general. For a lazy chain (holding probability at least 1/2) all eigenvalues are nonnegative, so the absolute gap equals the ordinary gap 1 - lambda_2; a periodic chain (a simple random walk on a bipartite graph) has an eigenvalue -1, gamma* = 0, and never mixes. the chain is reversible with respect to pi (real eigenvalues); the bounds are stated for the absolute spectral gap aperiodicity (e.g. laziness) so that gamma* > 0 the upper bound carries the factor log(1/pi_min); the lower bound holds for epsilon < 1/2
+    <- depends_on: Metropolis relaxation monotonicity (our id P0205): PARTIAL COUNTEREXAMPLE, AUTHOR-CHECKED LIMITED ARGUMENT - the relaxation time INCREASES on the two-element gr (id: claim_8494f2b7)  (relaxation time is 1/(1 - lambda_2); the whole counterexample turns on that convention)
+    -> depends_on: Irreducibility and aperiodicity (id: claim_eeb4adce)
+    -> depends_on: Markov chain (id: claim_f3ec82a7) (superseded by claim_9a9e5903)
+    -> depends_on: Mixing time (id: claim_e1029276)
+    -> depends_on: Reversibility (detailed balance) (id: claim_064848e2)
+    -> depends_on: Spectral gap and relaxation time (id: claim_5144be3d)
+    -> depends_on: Stationary distribution (invariant measure) (id: claim_0824a967)
+    -> depends_on: Total variation distance (id: claim_58fd4191)
+    ... 2 more links (--id claim_2114caac)
+[2] Spectral gap and relaxation time  (id: claim_5144be3db9c2bd722a2097f1ed50b2d0; claim; score 37.86)
+    found by wording 1 (rank 2), 2 (rank 2)
+    matched: time, relaxation, gap, spectral, "relaxation time" (title)
+    For a reversible chain with eigenvalues $1=\lambda_1>\lambda_2\ge\dots\ge\lambda_n$, the spectral gap is $\gamma=1-\lambda_2$ and the absolute gap $\gamma_*=1-\max(|\lambda_2|,|\lambda_n|)$; $\mathrm{Var}_\pi(P^tf)\le(1-\gamma_*)^{2t}\mathrm{Var}_\pi(f)$ and the relaxation time is $t_{rel}=1/\gamma_*$.
+    <- analogous_to: The Ornstein-Uhlenbeck Semigroup and Mehler's Formula (id: claim_3a7f53cc)  (w746 edge audit, reviewed 22 Oct: Source uses continuous-time OU generator gap 1 on infinite-dimensional L2; target only states finite discrete-time chain eigen)
+    <- depends_on: Resolved: Diameter-squared optimized relaxation on Cayley graphs (id: claim_115e7472)
+    <- depends_on: Aldous-Fill spectral gap conjecture, finite end: cubic graphs overtake the cycle at n=8, and the extremal cubic graph needs a bridge only from n=10 (id: claim_13c3a894)
+    <- depends_on: Open problem: Metropolis relaxation for geometric-time Cayley targets (id: claim_1640fabf)
+    <- depends_on: Attempt on Metropolis relaxation for geometric-time Cayley targets (id: claim_1a68d83c)
+    <- depends_on: Spectral gap, relaxation time and mixing time: the two-sided bound (id: claim_2114caac)
+    <- depends_on: Attempt on Fixed-degree random Cayley graphs with optimal spectral gap (id: claim_25e9cf74)
+    <- depends_on: Attempt on Critical-density total-variation cutoff for wired ARW in higher dimensions (id: claim_2bce4e92)
+    ... 25 more links (--id claim_5144be3d)
+[3] Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:2201.03463: Universality of cutoff for exclusion with reservoirs  (id: claim_4516ab2bc7bd6f6d8c617874f741dca9fe589d793fea9b9cd679d626cf90f84e; claim; score 32.41)
+    found by wording 1 (rank 3)
+    matched: time, gap, mixing, spectral, "mixing time" (title)
+    [Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:2201.03463, 'Universality of cutoff for exclusion with reservoirs'] For the exclusion process with reservoir density ρ ∈(0, 1) on a box of dimension n1 × · · · × nd with open boundaries, we have λ = 2 d X k=1  1 −cos  π nk + 1  , ψ(i1, . . . , id) = d Y k=1 r 2 nk + 1 sin  πik nk + 1  , 8.
+    -> depends_on: Mixing time (id: claim_e1029276)  (The card uses the concept 'mixing time'; the target is the store's card defining it.)
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> cites: Universality of cutoff for exclusion with reservoirs (id: source_fc60678)  (cites arxiv:2201.03463 (found in title, body, meta.domain, meta.source_id): Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:2201.03463: Unive)
+[4] Spectral gap  (id: claim_9abfa5bc2db71899263496e59b2fb39b6c13598f29732a32f62af6313c4d7a5d; claim; score 26.67)
+    found by wording 2 (rank 3)
+    matched: gap, spectral, reversible, markov, "spectral gap" (title)
+    [Definition 1 (Spectral gap) of arXiv:2604.04823, '2604.04823'] Let~$P$ be a Markov kernel on a Polish space~$\mathcal X$, reversible with respect to a probability measure~$\pi$. The spectral gap of~$P$ is \begin{equation} \gap(P) = \inf_{f\in L^2(\pi)\setminus\set{0}} \frac{\mathcal E(f)}{\var_\pi(f)}\,, \end{equation} where \begin{equation} \mathcal E(f) = \ip*{f , (I-P)f}_{L^2(\pi)} = \frac{1}{2}\int_{\mathcal X}\int_{\mathcal X} \abs*{f(y)-f(x)}^2 P(x,dy)\pi(dx)\,. \end{equation}
+    <- depends_on: Spectral gap of restricted chain for small~$\epsilon$ (id: claim_94b9c85e)  (the statement names this definition)
+    <- depends_on: Spectral gap of restricted chain for large~$\epsilon$ (id: claim_e820ed49)  (the statement names this definition)
+    <- depends_on: Lyapunov condition for the spectral gap of a Metropolis chain (id: claim_70d326ec)  (the statement names this definition)
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> cites: arXiv:2604.04823 - 2604.04823 (id: source_726ef77)  (Card extracted from arxiv:2604.04823 (its own source_id).)
+    -> semantic_association: Spectral gap (id: claim_4ee7c6d7)  (Same named concept 'spectral gap': this card's title is the term.)
+[5] Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on quadrangulations  (id: claim_a201b413feb2efb30dc5f444b67fdee6caac963b9a1e6fd1dd51f00ae35a35c9; claim; score 31.29)
+    found by wording 1 (rank 4)
+    matched: time, gap, mixing, spectral, "mixing time" (title)
+    [Lemma 2.3 of arXiv:1809.05092, 'Polynomial mixing time of edge flips on quadrangulations'] For the spectral gap ν• n of F •,n and the spectral gap νn of Fn, we have ν• n ≤νn.
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> cites: Polynomial mixing time of edge flips on quadrangulations (id: source_1e14e5a)  (cites arxiv:1809.05092 (found in title, body, meta.domain, meta.source_id): Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on quadrangulati)
+    -> semantic_association: Mixing time (id: claim_e1029276)  (The card's paper is titled with the concept 'mixing time'; the target is the store's card defining it.)
+[6] Reversible Markov Chain (Detailed-Balance Condition)  (id: claim_056258f35bb34104a34b67ec9dca8f81; claim; score 26.26)
+    found by wording 2 (rank 4)
+    matched: reversible, chain, markov, "markov chain" (title)
+    A Markov chain on a countable state space S with transition matrix P is reversible with respect to a probability distribution pi on S if the detailed-balance equations hold: pi(x) P(x,y) = pi(y) P(y,x) for every pair of states x, y in S. Detailed balance is sufficient but not necessary for pi to be a stationary distribution of P: summing the detailed-balance equation over x gives sum_x pi(x) P(x,y) = pi(y) sum_x P(y,x) = pi(y). [standard, e.g. Levin and Peres, Markov Chains and Mixing Times]
+    -> defines: Reversibility (detailed balance) (id: claim_064848e2)
+    -> depends_on: Convergence Theorem for Finite Markov Chains (id: claim_c5969adb)  (detailed balance gives a reversible stationary chain)
+    -> depends_on: Markov chain (id: claim_f3ec82a7) (superseded by claim_9a9e5903)
+    -> depends_on: Stationary distribution (invariant measure) (id: claim_0824a967)
+    <- depends_on: Exact spectral entropy balance (id: claim_b0d03304)  (The card uses the concept 'reversible markov chain'; the target is the store's card defining it.)
+    <- depends_on: Lemma claim-1 of arXiv:2504.02207 (id: claim_856e6acd)  (The card uses the concept 'reversible markov chain'; the target is the store's card defining it.)
+    <- depends_on: Theorem 3 of arXiv:2607.25949 (id: claim_b2342735)  (The card uses the concept 'reversible markov chain'; the target is the store's card defining it.)
+    <- depends_on: Corollary 3.1 and Remark 3.2 in \cite{BHP}, and Proposition 1.9 in \cite{Her2} (id: claim_15a18e98)  (The card uses the concept 'reversible markov chain'; the target is the store's card defining it.)
+    ... 11 more links (--id claim_056258f3)
+[7] Aldous's coagulation-fragmentation mixing question answered: sharp relaxation and cutoff for the linear-polymer chain, spectral gap within 5/n of sqrt(beta^2 + 4 beta) (Shmalo 2026, repository yspennstate/linear-polymer-relaxation)  (id: claim_3c788d1fb381d746df40f6c06e5e9b799f9cb6550da1f26a5876eeb3f5f21296; claim; score 31.03)
+    found by wording 1 (rank 5)
+    matched: relaxation, gap, mixing, spectral, "spectral gap" (title)
+    Publication record. For the finite coagulation-fragmentation chain in which each unordered pair of polymer instances merges at rate 2/n and each internal link breaks at rate beta, Y. Shmalo, Sharp relaxation, cutoff, and graph diffusion for a linear-polymer chain (October 2026) proves that the full polymer spectral gap equals the cluster-count gap (an equality announced by Granovsky and Erlihson), that sqrt(beta^2 + 4 beta) - 5/n <= gamma_M(n, beta) <= sqrt(beta^2 + 4 beta) + 4/n, and that for beta = b/n the count chain and the polymer chain from either extreme configuration have total-variation cutoff at t_n = sqrt(n) log n / (8 sqrt(b)). It is recorded as an answer to the coagulation-fragmentation mixing item of D. Aldous's open-problems list. Paper: https://github.com/yspennstate/linear-polymer-relaxation (commit 76e26016adc0). Not refereed.
+    <- cites: Open problems answered by Yitzchak Shmalo's 2026 research program: index of posted papers, repositories and preprints (14 Oct 2026) (id: claim_0ddbab6c)  (the index lists this result)
+    <- cites: Open-problem cards in the store that posted papers answer: crosswalk to the record cards (14 Oct 2026) (id: claim_7d6c28e7)  (record card of the posted answer to P0211)
+[8] The chain is a self-adjoint contraction in $L^{2}(1/\nu)$, and $\chi^{2}$ is a squared distance  (id: claim_772e53ad38bae8e1bdf990f235e6436cec1fbb252ff7ad807a7b40f37305aa93; claim; score 25.38)
+    found by wording 2 (rank 5)
+    matched: chain, reversible, gap, spectral, markov
+    [Proposition prop:chi2 of arXiv:2608.01253, 'The pseudo-quantum representation of \\finite reversible Markov chains'] Under the pseudo-wave map the semigroup acts by $\psi_{\pi_t}=D^{-1}T_tD\,\psi_{\pi_0}=e^{\Lambda t(A-\mathrm{I})}\psi_{\pi_0}$ with $A=A^{T}$, so $T_t$ is self-adjoint in $L^{2}(1/\nu)$. The stationary law maps to the unit vector $\psi_\nu=\sqrt\nu$, and the $\chi^{2}$ divergence is the corresponding squared distance to it, \begin{equation} \chi^{2}(p\,\|\,\nu)=\sum_i\frac{(p_i-\nu_i)^{2}}{\nu_i}=\|\psi_p-\psi_\nu\|^{2}. \end{equation} Consequently, with $\gamma$ the spectral gap of the chain, $\chi^{2}(\pi_t\,\|\,\nu)\le e^{-2\gamma t}\,\chi^{2}(\pi_0\,\|\,\nu)$.
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> depends_on: Pseudo-wave and pseudo-density (id: claim_d26e5e89)  (Uses the term 'pseudo-wave', which Pseudo-wave and pseudo-density introduces (same paper, arxiv:2608.01253).)
+    -> cites: arXiv:2608.01253 - The pseudo-quantum representation of \\finite reversible Markov chains (id: source_4ae5a8b)  (Card extracted from arxiv:2608.01253 (its own source_id).)

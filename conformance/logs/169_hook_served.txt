@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Unique geodesics in $Z_z$ and $Z_\infty$ (Liouville quantum gravity'
+# command: math_sense.py < event.json
+# seconds: 75.14
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0013-log", "prompt": "I am working on this: Unique geodesics in $Z_z$ and $Z_\\infty$ (Liouville quantum gravity' Almost surely unique geodesic Furthermore). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Unique geodesics in $Z_z$ and $Z_\\infty$ [lemma]: [Lemma lem-tree-geo-unique of arXiv:2604.17170, 'CaTherine wheels from trees and Liouville quantum gravity'] Let $z\\in\\mathbb C$. Almost surely, for each $p \\in Z_z$, there is a unique $D$-geodesic from $z$ to $p$. Furthermore, for each $p\\in Z_\\infty$, there is a unique $D$-geodesic from $p$ to $\\infty$.\n    (claim_e17073aa6a1480f8f6251a51aea52949484ee2f0a08baec760bbe3699c1e3d1e | lemma +proof; draft; unreviewed; unverified | matched: unique, geodesic, gravity)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Unique geodesics in $Z_z$ and $Z_\infty$ [lemma]: [Lemma lem-tree-geo-unique of arXiv:2604.17170, 'CaTherine wheels from trees and Liouville quantum gravity'] Let $z\in\mathbb C$. Almost surely, for each $p \in Z_z$, there is a unique $D$-geodesic from $z$ to $p$. Furthermore, for each $p\in Z_\infty$, there is a unique $D$-geodesic from $p$ to $\infty$.
+    (claim_e17073aa6a1480f8f6251a51aea52949484ee2f0a08baec760bbe3699c1e3d1e | lemma +proof; draft; unreviewed; unverified | matched: unique, geodesic, gravity)

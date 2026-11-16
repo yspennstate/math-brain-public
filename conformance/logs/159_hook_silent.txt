@@ -1,0 +1,9 @@
+# prompt hook: I am working on this: Prop 5 of arXiv:2607.28728 (). What is known, and what should I chec
+# command: math_sense.py < event.json
+# seconds: 0.00
+#
+# what to look for: The hook printed nothing, which is correct for prompts that are not mathematics or that the store cannot answer. The reason it gave itself is in the 'silence reason' line (from its harness log).
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0003-log", "prompt": "I am working on this: Prop 5 of arXiv:2607.28728 (). What is known, and what should I check first?"}
+# silence reason: math_gate_rejected
+#
+(no output)

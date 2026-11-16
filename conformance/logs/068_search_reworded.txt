@@ -1,0 +1,50 @@
+# reworded search: spectral distribution adjacency matrix Watts--Strogatz random grap' weakly
+# command: math_recall.py "spectral distribution adjacency matrix Watts--Strogatz random grap' weakly"
+# seconds: 2.67
+#
+# what to look for: Each hit names its id, kind and score; 'matched' lists the query words found, (title) marks a title phrase. The last line of a hit says how many links it has and the --id call that reads it whole.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap  (id: source_971d4432dfe7e92e99a96c83698784d33a3882dee1d5cea65909fa764365b09e; source; score 72.08)
+    matched: strogatz, watts, grap, adjacency, "adjacency matrix" (title) (+4)
+    Paper the harvested cards were extracted from: arxiv:2607.28817.
+    <- cites: Lemma lm:GBlimit of arXiv:2607.28817 (id: claim_6a46739b)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: Conj C of arXiv:2607.28817 (id: claim_0198fbc5)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: {\cite[Theorem 3.1 (id: claim_647545cb)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: Watts--Strogatz random graph model (id: claim_ffde71ac)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: Lemma lm:gaussianZ of arXiv:2607.28817 (id: claim_1e49dc08)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: Lemma lm:didistribution of arXiv:2607.28817 (id: claim_d1af6165)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: Lemma lm:replaceU of arXiv:2607.28817 (id: claim_1d394db3)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    <- cites: $K$-fuzz structure (id: claim_a8244f27)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+    ... 21 more links (--id source_971d443)
+[2] Unnumbered conj of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of t'  (id: claim_df22103ee583c3d823b4f6c5fe31fa26eee5f46f03288dc8e1faf16db3f8dd8f; claim; score 62.70)
+    matched: adjacency, strogatz, watts, grap, spectral (+5)
+    [Conj of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] $ \mu_{K,p}\;\xrightarrow[Kp\to\infty]{}\;\mu_{\mathrm{SC}}, $ weakly in probability. (Stated as a conjecture by the paper; open unless the paper says otherwise.)
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+[3] A variant of the Watts--Strogatz random graph  (id: claim_9bed7da66fc496f1b6513bf03910fb0e2ac49d3649f5905de34224c246aea7cd; claim; score 58.15)
+    matched: strogatz, watts, grap, adjacency, spectral (+4)
+    [Defi A variant of the Watts--Strogatz random graph of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] Let $n\ge1$ be an integer, $K$ a positive even integer with $K<n$, and $p \in [0,1]$. The Watts--Strogatz random graph of size $n$ with parameters $(K,p)$, denoted $\widetilde{WS}_n(K,p)$, is constructed as follows: \begin{enumerate} \item \textbf{Initial lattice.} Let $V_n = \{1,2,\dots,n\}$ denote the set of vertices of $WS_n(K,p)$. Arrange the vertices on a clockwise cycle. Each vertex $i \in V_n$ is connected to its $K/2$ nearest neighbors on each side, forming a regular ring lattice of degree $K$. \item \textbf{Rewiring step.} For $i = 1,2,\dots,n$ in increasing order, and for each edge $\{i,j\}$ such that $j$ is one of the $K/2$ rightmost neighbors of $i$ (taken in increasing order), independently with probability $p$, rewire the edge $\{i,j\}$ as follows: remove the edge $\{i,j\}$ and add the edge $\{i,k\}$, where $k$ is chosen uniformly at random from $V_n$. \end{enumerate}
+    -> depends_on: Random graph (id: claim_23c90900)  (The card uses the concept 'random graph'; the target is the store's card defining it.)
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+[4] Watts--Strogatz random graph model  (id: claim_ffde71ac72b1feaea6e0dddaf0ba0ffb2b61745a6c127bbc24a677f32fe9c018; claim; score 57.09)
+    matched: strogatz, watts, grap, adjacency, spectral (+4)
+    [Defi def:wattsstrogatz of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] Let $n > 1$ be an integer, $K$ a positive even integer with $K<n$, and $p \in [0,1]$. The Watts--Strogatz random graph of size $n$ with parameters $(K,p)$, denoted $WS_n(K,p)$, is constructed as follows: \begin{enumerate} \item \textbf{Initial lattice.} Let $V_n = \{1,2,\dots,n\}$ denote the set of vertices of $WS_n(K,p)$. Arrange the vertices on a clockwise cycle. Each vertex $i \in V_n$ is connected to its $K/2$ nearest neighbors on each side, forming a regular ring lattice of degree $K$. \item \textbf{Rewiring step.} For $i = 1,2,\dots,n$ in increasing order, and for each edge $\{i,j\}$ such that $j$ is one of the $K/2$ rightmost neighbors of $i$ (taken in increasing order), independently with probability $p$, rewire the edge $\{i,j\}$ as follows: remove the edge $\{i,j\}$ and add the edge $\{i,k\}$, where $k$ is chosen uniformly at random from the set of vertices in $V_n \setminus \{i,j\}$ that are not adjacent to $i$. \end{enumerate}
+    -> depends_on: Random graph (id: claim_23c90900)  (The card uses the concept 'random graph'; the target is the store's card defining it.)
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+[5] Unnumbered conj of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of t'  (id: claim_919f0bd542efb70d8a87ba658dd8eea0ed10acf2c785352f6a82bc88e93fc5ba; claim; score 56.99)
+    matched: adjacency, strogatz, watts, grap, spectral (+4)
+    [Conj of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] Let $K\ge1$ be an even integer and $p \in [0,1]$. Let also $A_n$ denote the adjacency matrix of $WS_n(K,p)$, for $n\in\mathbb{N}$. Then, for all $k\ge1$, \[ \frac1n\tr(A_n^k)\;\xrightarrow[n\to\infty]{}\;\mathbb{E}\left[c_k(F(K,p))\right]\qquad\mbox{ in probability}. \] (Stated as a conjecture by the paper; open unless the paper says otherwise.)
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+[6] Thm mainresult of arXiv:2607.28817  (id: claim_06f61d46579dfe07209593857ada21853a3700079b34aa9e9e123cdbed39ec19; claim; score 55.14)
+    matched: adjacency, strogatz, watts, grap, matrix (+4)
+    [Thm mainresult of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] Let $(K_n)_{n\ge1}$ be a sequence of even integers satisfying $0< K_n < n$ for all sufficiently large values of $n$, and let $(p_n)_{n\ge1}$ be a sequence in $(0,1]$. Let $A_n$ denote the adjacency matrix of $WS_n(K_n, p_n)$. If \begin{equation} p_nK_n\;\xrightarrow[n\to\infty]{}\;\infty \end{equation} and \begin{equation} \frac{K_n}{n}\;\xrightarrow[n\to\infty]{}\;0 \end{equation} then the empirical spectral distribution $\mu_{\frac{A_n}{\sqrt{K_n p_n(2- p_n)}}}$ of the normalized adjacency matrix $\frac{A_n}{\sqrt{K_n p_n(2- p_n)}}$ converges weakly in probability to the semicircle law $\mu_{\mathrm{SC}}$ as $n \to \infty$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Empirical spectral distribution (id: claim_71bfde43)  (The card uses the concept 'empirical spectral distribution'; the target is the store's card defining it.)
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+[7] Lemma lm:centerUZ of arXiv:2607.28817  (id: claim_5e595ca7f1a9ab4fe54508e66e8af47db0ff6df543ad39bc20715225a9f6bf6b; claim; score 53.77)
+    matched: strogatz, watts, grap, adjacency, weakly (+4)
+    [Lemma lm:centerUZ of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] We have \[ \mu_{\frac{{Z}_n+{U}_n}{\sqrt{p_nK_n}}}-\mu_{\frac{{Z}_n^\circ+{U}_n^\circ}{\sqrt{p_nK_n}}}\;\xrightarrow[n\to\infty]{}\;0\qquad\mbox{ weakly in probability.} \]
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)
+[8] Conj C of arXiv:2607.28817  (id: claim_0198fbc5ea42a97dfaac2533abc811d7455c34ef504538858d3e22ba43dd8839; claim; score 53.69)
+    matched: adjacency, strogatz, watts, grap, matrix (+4)
+    [Conj C of arXiv:2607.28817, 'Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap'] In the regime where $K_n\;\xrightarrow[n\to\infty]{}\;\infty$ with $K_n/n\;\xrightarrow[n\to\infty]{}\;0$ while $K_np_n\;\xrightarrow[n\to\infty]{}\; C$ for a constant $C\in(0,\infty)$, we conjecture that there exists a measure $\mu_C$ that depends only on $C$ such that \[ \mu_{\frac{A_n}{\sqrt{K_np_n(2-p_n)}}}\;\xrightarrow[n\to\infty]{}\;\mu_C\qquad\mbox{ weakly in probability}, \]where $A_n$ denotes the adjacency matrix of $WS_n(K_n,p_n)$. (Stated as a conjecture by the paper; open unless the paper says otherwise.)
+    -> cites: arXiv:2607.28817 - Limiting spectral distribution for the adjacency matrix of the Watts--Strogatz random grap (id: source_971d443)  (Card extracted from arxiv:2607.28817 (its own source_id).)

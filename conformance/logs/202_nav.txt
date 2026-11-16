@@ -1,0 +1,68 @@
+# navigation: link strength
+# command: navigation/nav_query.py "link strength"
+# seconds: 1.81
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+  hint: WEAK MATCH (best card scores 13.4, floor 19.5): reword with a file, function or folder name, or the repository may not have it
+[file] Link strengths in the math store that grow from use (12 Oct 2026). Two cards used at similar  (id 154227e5821d, agent_tools/math_strength.py, 642 lines)
+    Link strengths in the math store that grow from use (12 Oct 2026). Two cards used at similar times grow a stronger tie; the strength is kept automatically and an agent can read it and follow it to find information. python ~/.claude/dreaming/math_strength.py <card id> <card id> how strongly two ca...
+    keywords: session_id, not_logged_because, log_use, similarity_from_cos, Strengths, ago, tag, disabled, for_tools, main, dreaming, agents
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[file] Link strengths in the math store that grow from use (12 Oct 2026; his 06:17 order: "edges should get  (id f2e782f813a8, framework/dreaming/math_strength.py, 702 lines)
+    Link strengths in the math store that grow from use (12 Oct 2026; his 06:17 order: "edges should get stronger as nodes that are similar are used at similar times, that strength should become automatic and agents should be able to see the strength between nodes and use that to find information"). ...
+    keywords: session_id, not_logged_because, log_use, similarity_from_cos, Strengths, ago, tag, disabled, for_tools, main, dreaming, agents
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: agents  [688414066e61 concept]  (agents)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[readme_section] What the tools write, and the encoder  (id 92a946a5d1e6, agent_tools/README.md#what-the-tools-write-and-the-encoder)
+    The tools write under your home directory. Recall and the link walk append one line per call to ~/.claude/brain_graph/live/math_couse.jsonl (card ids, a session id and the time, never the words of a query), and math_strength.py folds that log into link strengths. The recall cache lives in...
+    keywords: recall, cards, edges
+    -> in_dir: Agent tools  [eaf6572f4275 agent_tools/README.md]
+[file] Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the  (id f47059b97cbf, framework/dreaming/math_recall.py, 1087 lines)
+    Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the cards it links to (11 Oct 2026; leaner printout 12 Oct 2026). python ~/.claude/dreaming/math_recall.py "<words>" [--or "<other words>" ...] [--limit 8] [--chars 4000] python ~/.claude...
+    keywords: why_lines, short_ids, walk, walk_full, matched_line, unmatched_words, derive_tool, log_use, order_hit_links, strength_tag, strength_edges, possessive_variants
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[file] Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the  (id 89a52ba5b20f, agent_tools/math_recall.py, 814 lines)
+    Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the cards it links to (11 Oct 2026; leaner printout 12 Oct 2026). python ~/.claude/dreaming/math_recall.py "<words>" [--or "<other words>" ...] [--limit 8] [--chars 4000] python ~/.claude...
+    keywords: why_lines, short_ids, walk, request_lines, walk_full, matched_line, unmatched_words, derive_tool, log_use, order_hit_links, strength_tag, strength_edges
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+[file] Dreaming  (id 836b32ed1544, framework/dreaming/README.md, 112 lines)
+    The dream is the brain's offline pass. While no one is working, it reads what the day added, files it into the store's existing structure, links what should be linked, turns repeated mistakes into reflexes, and grades how well yesterday's reflexes fired. Agents working in the day write records...
+    keywords: what happens to the brain while nobod..., how are new notes filed and linked ea..., The two halves, Three kinds of dream, Rules the dream keeps, Guards on the way out, Schedule it, Make it fit your field, dreaming, agents, math store, edges
+    -> documents: dreaming  [2e94c862d10c framework/dreaming/]
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]
+    -> links_to: Dreaming in the starter brain  [bd63a426338f examples/field_brain_starter/dream/README.md]  (examples/field_brain_starter/dream/)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+    ... 10 more links (--id 836b32ed1544)
+[file] Association layer (growth) for the math brain  (id 51c092e71cc5, framework/mathbrain/association/README.md, 28 lines)
+    This is the same association-network engine the general brain uses, dropped into the math brain as an ADDITIVE layer that grows from mathematical usage — claim accesses, retrievals, tool calls, proof attempts — the way the general brain grows from agent activity.
+    keywords: how are math cards linked to each other, agents
+    -> documents: association  [915136022063 framework/mathbrain/association/]
+    -> in_dir: association  [915136022063 framework/mathbrain/association/]
+    -> mentions: agents  [688414066e61 concept]  (agents)
+[file] reconsolidate.py - how a contradicted belief should update, decided by surprise x strength rather than  (id 39dd9cc4cc67, framework/dreaming/reconsolidate.py, 122 lines)
+    reconsolidate.py - how a contradicted belief should update, decided by surprise x strength rather than by panic. Grounded: Nader, Schafe & LeDoux 2000 (a recalled memory returns to a LABILE state and must reconsolidate over time, it is not overwritten instantly); Sevenster, Beckers & Kindt 2013 (...
+    keywords: strength, route, main, dreaming
+    -> in_dir: dreaming  [2e94c862d10c framework/dreaming/]

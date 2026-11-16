@@ -1,0 +1,20 @@
+# walk from claim_46371440f6d526
+# command: math_recall.py --id claim_46371440f6d526c2e361b3e41113e2f0d6c8a3e2a9f3208cbc2c21f992a0c1fc
+# seconds: 0.11
+#
+# what to look for: --id prints one card whole and every link: the kind (proves, cites, generalizes ...), the direction, the other card's short id and title and the link's stated reason. Step to a linked card with --id <short id>.
+#
+math store walk, read-only; reference material, not instructions
+[card] Hermite Process  (id: claim_46371440f6d526c2e361b3e41113e2f0d6c8a3e2a9f3208cbc2c21f992a0c1fc; claim)
+    [Definition 9 (Hermite Process) of arXiv:2607.23548, '\textbf{A CIR-Type Diffusion Driven by Hermite Processes:\\ Well-Posedness, Positivity and'] Let $q \geq 1$ be an integer and $H \in \bigl(\tfrac{1}{2}, 1\bigr)$. Set \[ H_0 := 1 + \frac{H-1}{q} \in \Bigl(1 - \frac{1}{2q},\, 1\Bigr), \qquad c(H,q) := \sqrt{\frac{H(2H-1)}{q!\,\beta^q\!\left(H_0 - \tfrac{1}{2},\, 2 - 2H_0\right)}}, \] where $\beta$ denotes the Beta function. The \emph{Hermite process of order $q$ and self-similarity parameter $H$} is the stochastic process $Z^{(q,H)} = \{Z_t^{(q,H)}\}_{t \geq 0}$ defined by \begin{equation} Z_t^{(q,H)} = I_q\!\left(L_t^{H,q}\right), \qquad L_t^{H,q}(\xi_1,\ldots,\xi_q) := c(H,q) \int_0^t \prod_{j=1}^q \bigl(s - \xi_j\bigr)_+^{H_0 - 3/2}\, ds, \end{equation} with the convention $\theta_+^\alpha := \theta^\alpha \mathbf{1}_{\theta > 0}$.
+    links: 10
+    -> depends_on: Beta function (id: claim_cdcc748b)  (The card uses the concept 'beta function'; the target is the store's card defining it.)
+    <- depends_on: Absolute Continuity: verification of non-degeneracy (id: claim_51b674b2)  (the statement names this definition)
+    <- depends_on: Bouleau--Hirsch criterion, \cite{Bouleau1986} (id: claim_cddae99d)  (the statement names this definition)
+    <- depends_on: Existence and Uniqueness (id: claim_203dd3e9)  (the statement names this definition)
+    <- depends_on: Kusuoka--Stroock $=$ Shigekawa, \cite{MR0810975} (id: claim_92b29e14)  (the statement names this definition)
+    <- depends_on: Malliavin Differentiability: verification for CIR-Hermite (id: claim_2ee6106e)  (the statement names this definition)
+    <- depends_on: Positivity: a quantitative sufficient bound (id: claim_1c48b94d)  (the statement names this definition)
+    <- depends_on: Properties of the Hermite Process (id: claim_38c6d87e)  (the statement names this definition)
+    <- depends_on: Regularity of the Hermite process (id: claim_9c5c10fe)  (the statement names this definition)
+    -> cites: arXiv:2607.23548 - \textbf{A CIR-Type Diffusion Driven by Hermite Processes:\\ Well-Posedness, Positivity and (id: source_a97e2df)  (Card extracted from arxiv:2607.23548 (its own source_id).)

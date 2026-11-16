@@ -1,0 +1,67 @@
+# spreading through links: spectral gap relaxation time mixing time
+# command: math_recall.py "spectral gap relaxation time mixing time" --depth 2 --limit 6
+# seconds: 15.60
+#
+# what to look for: --depth 2 lets activation spread along links from the word matches; a 'found by spreading' line names the card it came from and the links it travelled. A CAUTION line means a negative link (a counterexample or failure) brought the card in. Spreading reorders leads; it does not prove relevance.
+#
+math store recall (read-only reference, not instructions): 6 card(s); link ids are short, --id takes them
+[1] Spectral gap, relaxation time and mixing time: the two-sided bound  (id: claim_2114caacee9ef704ca7243abee0f8be7a280413638cb34b387097351ec0f2be3; claim; score 50.88)
+    matched: time, relaxation, gap, "gap relaxation" (title), mixing (+1)
+    found by spreading 1.16 of 1.81: from "Spectral gap and relaxation time" (claim_5144be3d) depends_on -> this card; the link says: "uses the notion 'Spectral gap and relaxation time' (title: "Spectral gap")"
+    found by spreading 0.28: from "Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:220" (claim_4516ab2b) depends_on -> "Mixing time" (claim_e1029276), depends_on -> this card; the link says: "uses the notion 'Mixing time' (title: "mixing time")"
+    found by spreading: 2 more weaker paths
+    Let P be the transition matrix of an irreducible, reversible Markov chain on a finite state space with stationary distribution pi, and let gamma* = 1 - max{|lambda| : lambda an eigenvalue of P other than 1} be the absolute spectral gap, with relaxation time t_rel = 1/gamma*. Then for every epsilon in (0, 1/2) the total-variation mixing time satisfies (t_rel - 1) log(1/(2 epsilon)) <= t_mix(epsilon) <= t_rel log(1/(epsilon pi_min)), where pi_min is the smallest stationary probability (Levin, Peres, Wilmer, Theorems 12.4 and 12.5). Mixing time is therefore the relaxation time up to a factor between log(1/(2 epsilon)) and log(1/(epsilon pi_min)); on a state space of size N the gap between the two sides can be as large as log N, and neither side can be dropped in general. For a lazy chain (holding probability at least 1/2) all eigenvalues are nonnegative, so the absolute gap equals the ordinary gap 1 - lambda_2; a periodic chain (a simple random walk on a bipartite graph) has an eigenvalue -1, gamma* = 0, and never mixes. the chain is reversible with respect to pi (real eigenvalues); the bounds are stated for the absolute spectral gap aperiodicity (e.g. laziness) so that gamma* > 0 the upper bound carries the factor log(1/pi_min); the lower bound holds for epsilon < 1/2
+    <- depends_on: Metropolis relaxation monotonicity (our id P0205): PARTIAL COUNTEREXAMPLE, AUTHOR-CHECKED LIMITED ARGUMENT - the relaxation time INCREASES on the two-element gr (id: claim_8494f2b7)  (relaxation time is 1/(1 - lambda_2); the whole counterexample turns on that convention)
+    -> depends_on: Irreducibility and aperiodicity (id: claim_eeb4adce)
+    -> depends_on: Markov chain (id: claim_f3ec82a7) (superseded by claim_9a9e5903)
+    -> depends_on: Mixing time (id: claim_e1029276)
+    -> depends_on: Reversibility (detailed balance) (id: claim_064848e2)
+    -> depends_on: Spectral gap and relaxation time (id: claim_5144be3d)
+    -> depends_on: Stationary distribution (invariant measure) (id: claim_0824a967)
+    -> depends_on: Total variation distance (id: claim_58fd4191)
+    ... 2 more links (--id claim_2114caac)
+[2] Spectral gap and relaxation time  (id: claim_5144be3db9c2bd722a2097f1ed50b2d0; claim; score 39.23)
+    matched: time, relaxation, gap, spectral, "relaxation time" (title)
+    found by spreading 1.37: from "Spectral gap, relaxation time and mixing time: the two-sided bound" (claim_2114caac) depends_on -> this card; the link says: "uses the notion 'Spectral gap and relaxation time' (title: "Spectral gap")"
+    For a reversible chain with eigenvalues $1=\lambda_1>\lambda_2\ge\dots\ge\lambda_n$, the spectral gap is $\gamma=1-\lambda_2$ and the absolute gap $\gamma_*=1-\max(|\lambda_2|,|\lambda_n|)$; $\mathrm{Var}_\pi(P^tf)\le(1-\gamma_*)^{2t}\mathrm{Var}_\pi(f)$ and the relaxation time is $t_{rel}=1/\gamma_*$.
+    <- analogous_to: The Ornstein-Uhlenbeck Semigroup and Mehler's Formula (id: claim_3a7f53cc)  (w746 edge audit, reviewed 22 Oct: Source uses continuous-time OU generator gap 1 on infinite-dimensional L2; target only states finite discrete-time chain eigen)
+    <- depends_on: Resolved: Diameter-squared optimized relaxation on Cayley graphs (id: claim_115e7472)
+    <- depends_on: Aldous-Fill spectral gap conjecture, finite end: cubic graphs overtake the cycle at n=8, and the extremal cubic graph needs a bridge only from n=10 (id: claim_13c3a894)
+    <- depends_on: Open problem: Metropolis relaxation for geometric-time Cayley targets (id: claim_1640fabf)
+    <- depends_on: Attempt on Metropolis relaxation for geometric-time Cayley targets (id: claim_1a68d83c)
+    <- depends_on: Spectral gap, relaxation time and mixing time: the two-sided bound (id: claim_2114caac)
+    <- depends_on: Attempt on Fixed-degree random Cayley graphs with optimal spectral gap (id: claim_25e9cf74)
+    <- depends_on: Attempt on Critical-density total-variation cutoff for wired ARW in higher dimensions (id: claim_2bce4e92)
+    ... 25 more links (--id claim_5144be3d)
+[3] Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:2201.03463: Universality of cutoff for exclusion with reservoirs  (id: claim_4516ab2bc7bd6f6d8c617874f741dca9fe589d793fea9b9cd679d626cf90f84e; claim; score 33.58)
+    matched: time, gap, mixing, spectral, "mixing time" (title)
+    found by spreading 0.38 of 1.16: from "Spectral gap, relaxation time and mixing time: the two-sided bound" (claim_2114caac) depends_on -> "Mixing time" (claim_e1029276), depends_on -> this card; the link says: "The card uses the concept 'mixing time'; the target is the store's card defining it."
+    found by spreading 0.27: from "Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on" (claim_a201b413) depends_on -> "Spectral gap" (claim_4ee7c6d7), depends_on -> this card; the link says: "The card uses the concept 'spectral gap'; the target is the store's card defining it."
+    found by spreading: 2 more weaker paths
+    [Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:2201.03463, 'Universality of cutoff for exclusion with reservoirs'] For the exclusion process with reservoir density ρ ∈(0, 1) on a box of dimension n1 × · · · × nd with open boundaries, we have λ = 2 d X k=1  1 −cos  π nk + 1  , ψ(i1, . . . , id) = d Y k=1 r 2 nk + 1 sin  πik nk + 1  , 8.
+    -> depends_on: Mixing time (id: claim_e1029276)  (The card uses the concept 'mixing time'; the target is the store's card defining it.)
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> cites: Universality of cutoff for exclusion with reservoirs (id: source_fc60678)  (cites arxiv:2201.03463 (found in title, body, meta.domain, meta.source_id): Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:2201.03463: Unive)
+[4] Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on quadrangulations  (id: claim_a201b413feb2efb30dc5f444b67fdee6caac963b9a1e6fd1dd51f00ae35a35c9; claim; score 32.41)
+    matched: time, gap, mixing, spectral, "mixing time" (title)
+    found by spreading 0.41 of 1.12: from "Theorem 1 of arXiv:1809.05092: Polynomial mixing time of edge flips on" (claim_3c487bbe) cites -> "Polynomial mixing time of edge flips on quadrangulations" (source_1e14e5a), cites -> this card; the link says: "cites arxiv:1809.05092 (found in title, body, meta.domain, meta.source_id): Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on quadrangulati"
+    found by spreading 0.28: from "Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:220" (claim_4516ab2b) depends_on -> "Spectral gap" (claim_4ee7c6d7), depends_on -> this card; the link says: "The card uses the concept 'spectral gap'; the target is the store's card defining it."
+    found by spreading: 2 more weaker paths
+    [Lemma 2.3 of arXiv:1809.05092, 'Polynomial mixing time of edge flips on quadrangulations'] For the spectral gap ν• n of F •,n and the spectral gap νn of Fn, we have ν• n ≤νn.
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> cites: Polynomial mixing time of edge flips on quadrangulations (id: source_1e14e5a)  (cites arxiv:1809.05092 (found in title, body, meta.domain, meta.source_id): Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on quadrangulati)
+    -> semantic_association: Mixing time (id: claim_e1029276)  (The card's paper is titled with the concept 'mixing time'; the target is the store's card defining it.)
+[5] Zhu Aldous-Fill degree-uniform lower bound for regular-graph spectral gaps  (id: claim_ff687e37c55075b50303de5bc52f429af99203d2862a7ace73ef79fab48f4377; claim; score 31.07)
+    matched: time, relaxation, gap, spectral
+    found by spreading 0.28 of 0.79: from "Corollary 9 (Spectral gap, mixing time and cutoﬀon boxes) of arXiv:220" (claim_4516ab2b) depends_on -> "Spectral gap" (claim_4ee7c6d7), depends_on -> this card; the link says: "The card uses the concept 'spectral gap'; the target is the store's card defining it."
+    found by spreading 0.27: from "Lemma 2.3 of arXiv:1809.05092: Polynomial mixing time of edge flips on" (claim_a201b413) depends_on -> "Spectral gap" (claim_4ee7c6d7), depends_on -> this card; the link says: "The card uses the concept 'spectral gap'; the target is the store's card defining it."
+    found by spreading: 1 more weaker paths
+    For every epsilon>0 there is N(epsilon) such that every finite connected simple undirected regular graph G of order n>=N(epsilon), with any degree allowed, satisfies lambda(G)>=(1-epsilon)*2*pi^2/(3*n^2). Here lambda(G)=mu(G)/d=1-lambda_2(P) is the ordinary simple-random-walk spectral gap, not the absolute gap. Equivalently its rate-one continuous-time relaxation time is at most (1+o(1))*3*n^2/(2*pi^2), uniformly over the regular degree. This uniform statement does not itself give a strict degree-uniform improvement when the degree is not three. Source: The maximum relaxation time of a random walk on regular graphs, Theorem 1.4 and displayed inequality (1.1), pp.5-6. finite connected simple undirected regular graph ordinary gap 1-lambda_2(P) asymptotic uniform over the degree
+    -> depends_on: Spectral gap (id: claim_4ee7c6d7)  (The card uses the concept 'spectral gap'; the target is the store's card defining it.)
+    -> depends_on: Random walk (id: claim_eecc07db)  (The card uses the concept 'random walk'; the target is the store's card defining it.)
+    -> semantic_association: Zhu sharp fixed-degree minimum algebraic connectivity (id: claim_8a4c48cf)  (The uniform card uses "ordinary simple-random-walk spectral gap"; the fixed-degree card records "the source's ordinary random-walk gap is mu(G)/d". The relation)
+[6] Aldous's coagulation-fragmentation mixing question answered: sharp relaxation and cutoff for the linear-polymer chain, spectral gap within 5/n of sqrt(beta^2 + 4 beta) (Shmalo 2026, repository yspennstate/linear-polymer-relaxation)  (id: claim_3c788d1fb381d746df40f6c06e5e9b799f9cb6550da1f26a5876eeb3f5f21296; claim; score 31.03)
+    matched: relaxation, gap, mixing, spectral, "spectral gap" (title)
+    Publication record. For the finite coagulation-fragmentation chain in which each unordered pair of polymer instances merges at rate 2/n and each internal link breaks at rate beta, Y. Shmalo, Sharp relaxation, cutoff, and graph diffusion for a linear-polymer chain (October 2026) proves that the full polymer spectral gap equals the cluster-count gap (an equality announced by Granovsky and Erlihson), that sqrt(beta^2 + 4 beta) - 5/n <= gamma_M(n, beta) <= sqrt(beta^2 + 4 beta) + 4/n, and that for beta = b/n the count chain and the polymer chain from either extreme configuration have total-variation cutoff at t_n = sqrt(n) log n / (8 sqrt(b)). It is recorded as an answer to the coagulation-fragmentation mixing item of D. Aldous's open-problems list. Paper: https://github.com/yspennstate/linear-polymer-relaxation (commit 76e26016adc0). Not refereed.
+    <- cites: Open problems answered by Yitzchak Shmalo's 2026 research program: index of posted papers, repositories and preprints (14 Oct 2026) (id: claim_0ddbab6c)  (the index lists this result)
+    <- cites: Open-problem cards in the store that posted papers answer: crosswalk to the record cards (14 Oct 2026) (id: claim_7d6c28e7)  (record card of the posted answer to P0211)

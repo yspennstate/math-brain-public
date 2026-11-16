@@ -1,0 +1,73 @@
+# two wordings: Erdos-Renyi giant component threshold | random graph G(n,p) emergence of the giant
+# command: math_recall.py "Erdos-Renyi giant component threshold" --or "random graph G(n,p) emergence of the giant"
+# seconds: 1.25
+#
+# what to look for: Two or three wordings in one call are searched separately and fused by rank: 'found by wording 1 (rank 2), 2 (rank 1)' shows where each wording put the card. This is the recommended way to ask.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Cor graph-diam-giant of arXiv:2606.01627  (id: claim_1362fd9c796f24ada853a1e9170f289df0ec9eb36cfe5c863f360590fc634d46; claim; score 18.91)
+    found by wording 1 (rank 3), 2 (rank 1)
+    matched: giant, component
+    [Cor graph-diam-giant of arXiv:2606.01627, 'The geometry of the giant component of random geometric graphs'] Let $\lambda_0 > \lambda_c$. There exist constants $C=C(\lambda_0,M), c=c(\lambda,M)>0$ such that \[ \mathbb{P}\left( \begin{array}{c} \mathring{G}_M^n(r) \mbox{ is the largest component} \\ \mbox{ of } G_M^n(r) \mbox{ in graph diameter} \end{array} \right) \ge 1 - C \exp(-c \log^2 n) \]
+    -> cites: arXiv:2606.01627 - The geometry of the giant component of random geometric graphs (id: source_e8d7940)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+[2] Erdos-Renyi connectivity threshold of G(n,p) and the Poisson paradigm for isolated vertices  (id: claim_d041dda48ec32c5f52986ec651884b81edb7100fb10f41b597a06330618dfc66; claim; score 28.34)
+    found by wording 1 (rank 1), 2 (rank 7)
+    matched: erdos-renyi, threshold, giant, component
+    In the binomial random graph G(n,p) with p = (log n + c)/n for a fixed real c, the number of isolated vertices converges in distribution to a Poisson random variable with mean e^{-c} (the method of moments: the factorial moments of the count converge to those of the Poisson law), and the probability that G(n,p) is connected tends to exp(-e^{-c}) (Erdos and Renyi 1959, 1960). The obstruction to connectivity in this window is isolated vertices alone: P(G connected) - P(G has no isolated vertex) tends to 0. Consequently p = log n / n is a sharp threshold: for p = (1 - epsilon) log n / n the graph is disconnected with probability tending to 1 (with a growing number of isolated vertices), and for p = (1 + epsilon) log n / n it is connected with probability tending to 1. Below the threshold at p = c'/n with c' > 1 the graph already has a unique giant component but is disconnected. edges are present independently with the same probability p (the binomial model; the uniform model G(n,m) has the analogous statement with m = (n/2)(log n + c)) the statement is about the window p = (log n + c)/n with c fixed as n grows the Poisson approximation is for the count of isolated vertices; other small components are negligible in this window
+    -> depends_on: Method of moments (id: claim_bc603c8c)
+    -> depends_on: Phase transition (id: claim_c7583082)
+    -> depends_on: Poisson approximation (id: claim_f2ba0270)
+    -> depends_on: Random graphs (id: claim_a2fb8f3d)
+    -> depends_on: Weak convergence of probability measures (id: claim_306e73a4)
+    -> cites: On the evolution of random graphs (id: source_ef022d4)  (cites ref:erdos-1960-on-the-evolution-of-random-graphs (found in meta.source_id): hand:erdos-renyi-1959-1960)
+    -> cites: On Random Graphs I (id: source_c9a1cd7)  (cites doi:10.5486/pmd.1959.6.3-4.12 (found in meta.source_id): hand:erdos-renyi-1959-1960)
+[3] Erdos-Renyi Subgraph Appearance Threshold  (id: claim_05d1b4ad70a2c1b13f61be3c2d8ca3c35ee361a311d8307f702fc084a0d2af94; claim; score 20.80)
+    found by wording 1 (rank 2)
+    matched: erdos-renyi, threshold
+    Let H be a fixed strictly balanced graph with v vertices and e edges. Then p*(n) = n^{-v / e} is the threshold function for G(n, p) to contain a subgraph isomorphic to H. H is strictly balanced, i.e., e(H')/v(H') < e(H)/v(H) for all proper subgraphs H'
+    -> depends_on: Threshold Function for Graph Properties (id: claim_72ddb11f)  (Computes the exact threshold function for subgraph containment.)
+    -> depends_on: Second Moment Method (id: claim_00abe41e) (superseded by claim_9a4793dd)  (Upper threshold bound is established by the second moment method.)
+    -> depends_on: Second Moment Method (id: claim_9a4793dd)  (Upper threshold bound is established by the second moment method.)
+[4] Existence of the giant  (id: claim_bba707ed885293e43f0ac9c821237a79bcbd607a7de796e6b4d2047ff15013b6; claim; score 16.82)
+    found by wording 2 (rank 2)
+    matched: giant, graph, "of the" (title)
+    [Theorem eq:linear_giant_11 of arXiv:2607.18011, 'From local giants to locality in long-range percolation'] \thlabel{prop:biskup} Let $G$ be a transitive graph of polynomial growth with $d \geq 1$, and suppose that $J : V \times V \to \mathbf{R}_+$ is a transitive kernel satisfying $J(x,y) = \Omega(d_G(x,y)^{-d \alpha})$ with $\alpha \in (0,2)$. Let $\beta > \beta_c$. Then there exist $\nu = \nu(G, J) > 0$ and $A = A(G,J) > 0$ such that for all $r \in \mathbf{N}$ \begin{equation} \mathbf{P}_{\beta} \left( \# K_{r}^{\scriptscriptstyle (1)} \leq \nu \# B(r) \right) \leq \exp( - \beta (\# B(r))^{\min(2 - \alpha,1)} / A ). \end{equation} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> cites: arXiv:2607.18011 - From local giants to locality in long-range percolation (id: source_e52a456)  (Card extracted from arxiv:2607.18011 (its own source_id).)
+[5] Thm main of arXiv:2606.01627  (id: claim_2ccc48414a50b47a8eadb1b86389cdc2d5387e7b50080752ad1b715ee4042e6a; claim; score 15.98)
+    found by wording 2 (rank 3)
+    matched: giant, graph, random
+    [Thm main of arXiv:2606.01627, 'The geometry of the giant component of random geometric graphs'] Let $M$ be a connected compact $d$-dimensional Riemannian manifold with $d \geq 2$ and let $\Delta_c = \Delta_c(d)$ be the critical average degree for having a giant component. For each fixed $\Delta_0 > \Delta_c$, $\beta \in (0,1)$, $\varepsilon > 0$, there is a $c = c(M,\Delta_0,\beta,\varepsilon) > 0$ and $n_0 = n_0(M,\Delta_0,\beta,\varepsilon)$ so that the following holds. Let $G = G_M^n(r)$ be the Poisson random geometric graph on $M$ with expected average degree $\Delta \in [\Delta_0,n^{1-\beta}].$ Let $\mathring{G}_M^n(r)$ be the component of $G$ with largest diameter and $d_G$ the graph metric on $G$. Then for all $n \geq n_0$ we have $$\mathbb{P}\left(d_{{\mathrm{GH}}}\left(\left(\mathring{G}_M^n(r), \frac{r}{\overline{\mu}(\Delta)} d_G\right),(M, d_M) \right) > \varepsilon\right) \leq \exp(-c \log^2 n)\,.$$ (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Riemannian manifold (id: claim_ebccff73)  (The card uses the concept 'riemannian manifold'; the target is the store's card defining it.)
+    -> cites: arXiv:2606.01627 - The geometry of the giant component of random geometric graphs (id: source_e8d7940)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+[6] arXiv:2606.01627 - The geometry of the giant component of random geometric graphs  (id: source_e8d79405e1b5e7f59f5eb6dfbbd67c9a64f599de61bef2320a57df9f59d317c5; source; score 18.35)
+    found by wording 1 (rank 4)
+    matched: giant, component, "giant component" (title)
+    Paper the harvested cards were extracted from: arxiv:2606.01627.
+    <- cites: Lem non-uniform-uniqueness of arXiv:2606.01627 (id: claim_d77f36ce)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem GH-positive-implies-finite of arXiv:2606.01627 (id: claim_08c1b120)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem giant-is-unique of arXiv:2606.01627 (id: claim_61b1536b)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem edge-concentration of arXiv:2606.01627 (id: claim_2b78c3a4)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem P(E)-large of arXiv:2606.01627 (id: claim_cf281ab1)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Yao-Chen-Guo, \cite{YCG11} (id: claim_cca8e5e5)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Lem two-point-UB of arXiv:2606.01627 (id: claim_8e8af429)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    <- cites: Prop two-point-sparse of arXiv:2606.01627 (id: claim_28a6159a)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+    ... 27 more links (--id source_e8d7940)
+[7] Thm degree of arXiv:2606.01627  (id: claim_b80dd383bd344731ad1f27cc32783f66ed87475ca7ce0ca91fa97b1f2c6b397e; claim; score 15.95)
+    found by wording 2 (rank 4)
+    matched: giant, graph, random
+    [Thm degree of arXiv:2606.01627, 'The geometry of the giant component of random geometric graphs'] Let $M$ be a connected compact $d$-dimensional Riemannian manifold with $d \geq 2$ and let $\Delta_c = \Delta_c(d)$ be the critical average degree for having a giant component. For each fixed $\Delta_0 > \Delta_c$ and $\varepsilon > 0$, there exists $\alpha = \alpha(M,\Delta_0,\varepsilon) > 0$, $c = c(M,\Delta_0,\varepsilon) > 0$ and $n_0 = n_0(M,\Delta_0,\varepsilon)$ so that the following holds. Let $G = G_M(n;r)$ be the random geometric graph on $M$ with expected average degree $\Delta \in [\Delta_0,\alpha n].$ Let $\mathring{G}_M(n;r)$ be the component of $G$ with largest diameter and $d_G$ be the graph metric on $G$. Then $$\mathbb{P}\left(d_{{\mathrm{GH}}}\left(\left(\mathring{G}_M(n;r), \frac{r}{\overline{\mu}(\Delta)} d_G\right),(M, d_M) \right) > \varepsilon\right) \leq \exp(- c \log^2 n)$$ for all $n \geq n_0$. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Riemannian manifold (id: claim_ebccff73)  (The card uses the concept 'riemannian manifold'; the target is the store's card defining it.)
+    -> cites: arXiv:2606.01627 - The geometry of the giant component of random geometric graphs (id: source_e8d7940)  (Card extracted from arxiv:2606.01627 (its own source_id).)
+[8] Technique: Aldous's Exploration Process and the Multiplicative Coalescent  (id: claim_7e5a315b29b381b59e06b86854cbebd0263352263eaab7d90c296b7dfdfe42ac; claim; score 18.04)
+    found by wording 1 (rank 5)
+    matched: erdos-renyi, component
+    TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For the Erdos-Renyi random graph G(n,p) near the critical window p = 1/n + lambda n^{-4/3}, Aldous's exploration process encodes a depth-first search of the graph as a random-walk-like process Z_n(t) whose excursions above past running minima correspond exactly to the connected components, with excursion lengths equal to component sizes. After rescaling space by n^{-2/3} and time correspondingly, this process converges to a limiting process W(t) = B(t) + lambda t - t^2/2, a Brownian motion with parabolic drift, whose excursions above its running minimum encode the limiting rescaled sizes of the largest components in the critical window; the associated merging dynamics of component sizes as edges are added form the "standard multiplicative coalescent", a Markov process on sequences of masses matching the excursion structure. This gives the precise scaling limit, order n^{2/3} for the largest components with an explicit limiting joint law, for the Erdos-Renyi critical phase transition. It does not extend directly to other random graph models without re-deriving an analogous exploration or walk encoding, which may not exist in closed form, and the specific n^{2/3} spatial and n^{-1/3} time-window scaling is particular to models in the Erdos-Renyi (mean-field) universality class. Typical failure: Applying the Erdos-Renyi n^{2/3} critical scaling window and multiplicative-coalescent limit directly to a random graph model with heavy-tailed degrees, infinite third moment, or strong local clustering, where the correct scaling exponents and even the limiting process, as established for configuration models with power-law degree exponent tau in (3,4) by Bhamidi, van der Hofstad and van Leeuwaarden, differ substantially; universality of the Erdos-Renyi picture is a theorem for specific model classes, not a generic property of all critical random graphs. Canonical reference: Aldous, 1997, Annals of Probability; Aldous and Limic, 1998, Electronic Journal of Probability; Bhamidi, van der Hofstad and van Leeuwaarden, 2010, Annals of Probability. Erdos-Renyi, or configuration-model-type with matching degree-tail conditions, random graph in the critical window p ~ 1/n + O(n^{-4/3}) a valid exploration (depth-first search) encoding of the graph as a walk whose excursions correspond to components appropriate moment conditions, such as finite third moment of the degree for configuration models, for the walk-to-Brownian-motion scaling limit the specific n^{2/3} spatial and n^{-1/3} time-window scaling matching the model's universality class
+    -> depends_on: Brownian motion (id: claim_7d9ada34)
+    -> depends_on: Coalescent and fragmentation processes (id: claim_20714692)
+    -> depends_on: Markov process and semigroup (id: claim_c8cfd8c6)
+    -> depends_on: Phase transition (id: claim_c7583082)
+    -> depends_on: Random graphs (id: claim_a2fb8f3d)
+    -> cites: Brownian excursions, critical random graphs and the multiplicative coalescent (id: source_a870ce0)  (cites doi:10.1214/aop/1024404421 (found in body): Aldous, 1997, Annals of Probability)
+    -> cites: The entrance boundary of the multiplicative coalescent (id: source_6c4a204)  (cites doi:10.1214/ejp.v3-25 (found in body): Aldous and Limic, 1998, Electronic Journal of Probability)
+    <- cites: Open problem: Multiplicative-coalescent scaling limit of critical percolation on high-dimensional tori (id: claim_95132f82)  (w746 edge audit, reviewed 22 Oct: Reverse citation: claim_95132f825b0552482adabaff77c061c3e550bb329d676fdcf6942eaefd760143 -> claim_7e5a315b29b381b59e06b86854cb)
+    ... 7 more links (--id claim_7e5a315b)

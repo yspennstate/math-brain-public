@@ -1,0 +1,60 @@
+# two wordings: coupling from the past | perfect simulation Propp Wilson
+# command: math_recall.py "coupling from the past" --or "perfect simulation Propp Wilson"
+# seconds: 0.20
+#
+# what to look for: Two or three wordings in one call are searched separately and fused by rank: 'found by wording 1 (rank 2), 2 (rank 1)' shows where each wording put the card. This is the recommended way to ask.
+#
+math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Coupling from the past  (id: claim_813d39f42b591356a9396089eae5c6a489be970dc480036f6fdc29b8a9ba1949; claim; score 20.67)
+    found by wording 1 (rank 1)
+    matched: past, coupling, "from the" (title)
+    [Theorem 28 (Coupling from the past) of arXiv:2603.28734, 'Free energy analyticity of the disordered XY model and Debye screening in the 2D Coulomb g'] Consider a Glauber dynamic $R$ for a measure $\mu$ on $S^V$. Suppose that $S$ is partially ordered and that $R$ is monotone. Suppose moreover $S$ has a largest element $\alpha^+$ and a smallest element $\alpha^-$. We also write $\alpha^\pm$ for the corresponding elements in $S^V$. Then for any fixed $\Pi\in\Omega$: \begin{itemize} \item For any bounded $B\subset V\times\R_{\leq 0}$, the map $R_{\Pi(B)}:S^V\to S^V$ is monotone, \item The element $R_{\Pi(\Lambda\times[-t,0])}(\alpha^+)$ is decreasing in $\Lambda$ and $t$, \item The element $R_{\Pi(\Lambda\times[-t,0])}(\alpha^-)$ is increasing in $\Lambda$ and $t$. \end{itemize} In particular, if \[R_{\Pi(\Lambda\times[-t,0])}(\alpha^+)_u=R_{\Pi(\Lambda\times[-t,0])}(\alpha^-)_u\] then this value will not change if we replace $\alpha^+$ by any other $\alpha\in S^V$, $\Lambda$ by any larger set, and $t$ by any larger time. (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Glauber dynamic (id: claim_84e3e05f)  (the statement names this definition)
+    -> depends_on: XY model (id: claim_bb24e81e)  (the statement names this definition)
+    -> depends_on: Glauber dynamic (id: claim_595e5bd5)  (the statement names this definition)
+    -> cites: arXiv:2603.28734 - Free energy analyticity of the disordered XY model and Debye screening in the 2D Coulomb g (id: source_2a25d49)  (Card extracted from arxiv:2603.28734 (its own source_id).)
+[2] Perfect simulation  (id: claim_7fee7a243748d653baafaced83f1d0dce7a7d9e402f3c265876420d052d6cc6c; claim; score 23.97)
+    found by wording 2 (rank 1)
+    matched: simulation, perfect, "perfect simulation" (title)
+    [Theo perfect of arXiv:2605.13519, 'Perfect simulation for interacting Hawkes processes with reset-induced variable length mem'] Under Assumption (ass:basic of the paper) and (equation eq:subcrit of the paper), Algorithms (alg:backward_v2 of the paper) and (alg:forward_v2 of the paper) terminate almost surely and return an exact sample from the stationary distribution of $X_0^0$.
+    -> depends_on: Stationary distribution (invariant measure) (id: claim_0824a967)  (The card uses the concept 'stationary distribution'; the target is the store's card defining it.)
+    -> cites: arXiv:2605.13519 - Perfect simulation for interacting Hawkes processes with reset-induced variable length mem (id: source_9f0b1c3)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+[3] Critical tanh centered angular error energy with dependent exponential variance weight (proof unaudited)  (id: claim_7fc148182ddacdd5092a3faf9eb38843c10e4d3b62ae197361d867b4c528f94b; claim; score 14.70)
+    found by wording 1 (rank 2)
+    matched: past, coupling
+    PROOF (UNAUDITED); novelty unverified. Exact critical tanh two-input Gram chain: given current Gram [[q,c sqrt(qr)],[c sqrt(qr),r]], draw n iid centered Gaussian pairs (Ai,Bi) with that Gram and set Qnew=mean tanh(Ai)^2, Rnew=mean tanh(Bi)^2, Cnew=mean tanh(Ai)tanh(Bi). Write D=1-C/sqrt(QR), S=Q+R, V=Q^2+R^2, F(q)=E tanh(sqrt(q)Z)^2, and delta=1-E[tanh(Ai)tanh(Bi)]/sqrt(F(q)F(r)). Probability norms and expectations are over the exact chain. At any admissible current state q,r in (0,1], c in [-1,1], let eta=Dnew-E[Dnew|past], with E[eta^2|past]<=K delta^2/n and E[eta^4|past]<=16Lambda^4 delta^4/n^2. Set a=192. For integer n>=48 a^2(1+K), any finite past-measurable real x and alpha with |alpha|<=1+8V satisfy E[exp(a Snew)(alpha x+eta)^2|past] <=exp(aS)[x^2+(1+4Lambda^2)delta^2/n]. K,Lambda are finite nonnegative uniform constants supplied by C010/C015. The innovation and weight use the same fresh rows; no independence or stopping is assumed. This is a one-step estimate; multilayer forcing and readout coupling remain open. Current q,r in (0,1], valid Gaussian Gram; fresh iid Gaussian rows and tanh; n integer >=1769472(1+K), finite K,Lambda>=0. Uses C017 joint-norm mgf, C002 scalar drift, C010 conditional variance and C015 centered fourth moment (the latter components unaudited). Only C002 v2 and C004 v1 among these inputs have reviewer PASS; new dependencies remain unaudited.
+[4] arXiv:2605.13519 - Perfect simulation for interacting Hawkes processes with reset-induced variable length mem  (id: source_9f0b1c33d1dba3662ad62cd5f37d0de623a9593f44649df5a72d4087867e5cf8; source; score 20.74)
+    found by wording 2 (rank 2)
+    matched: simulation, perfect, "perfect simulation" (title)
+    Paper the harvested cards were extracted from: arxiv:2605.13519.
+    <- cites: Perfect simulation (id: claim_7fee7a24)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Backward exploration (id: claim_0791c09f)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Lem well_defined_step of arXiv:2605.13519 (id: claim_c7561458)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Discrete offspring domination (id: claim_9fb0badd)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Lem mark_distribution of arXiv:2605.13519 (id: claim_572a67f5)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Ancestral closure (id: claim_a17a579f)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Lem no_explosion_site of arXiv:2605.13519 (id: claim_7be6236f)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    <- cites: Existence of a stationary solution (id: claim_e95c4d9c)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+    ... 7 more links (--id source_9f0b1c3)
+[5] Critical tanh paired-norm contrast: conditional fourth-moment recursion (proof unaudited)  (id: claim_bb7285cbdd41d826134c0d6a3e88613a1851867c7efe76eaacc1bc093822e9fa; claim; score 13.22)
+    found by wording 1 (rank 3)
+    matched: past
+    PROOF (UNAUDITED); novelty unverified. Conditional on a completed network past, fix q,r in [0,1], c in [-1,1], and an integer n>=1. Let (X_i,Y_i) be independent paired standard Gaussians of correlation c, fresh conditional on that past. Set Qnew=n^-1 sum_i tanh(sqrt(q)X_i)^2 and Rnew=n^-1 sum_i tanh(sqrt(r)Y_i)^2. Put e=q-r, T=qr(1-c), B=e^2+8T, and a=1-(q+r)/12. Then E[(Qnew-Rnew)^4|past] <= a^4 e^4 + 18 e^2 B/n + 1079 B^2/n^2. In particular when q=r this is at most 69056 q^4(1-c)^2/n^2. This is a one-step positive-moment component, not a closed depth-uniform rate. No Lean certificate is claimed. q,r,c measurable with respect to completed past; q,r in [0,1], c in [-1,1] n independent fresh paired standard Gaussian rows conditional on past; n>=1 integer
+[6] Holroyd-Levine-Meszaros-Peres-Propp-Wilson Question 6.2 answered negatively for H >= -1: limiting shapes of sandpile aggregates S_{n,H} are not regular (4H+12)-gons (Shmalo 2026, repository yspennstate/sandpile-holes-corner-angles)  (id: claim_d99402a8310a3952ff5b9bb4516927f94924b16f071e7cfa0fc9cf087089af97; claim; score 17.75)
+    found by wording 2 (rank 3)
+    matched: propp, wilson
+    Publication record. A. E. Holroyd, L. Levine, K. Mészáros, Y. Peres, J. Propp and D. B. Wilson (Chip-firing and rotor-routing on directed graphs, 2008, Question 6.2) asked whether the limiting shape of the sandpile aggregate S_{n,H} on a background of height H is a regular (4H+12)-gon. Y. Shmalo, Corner angles of sandpile aggregates on a background of holes (October 2026) shows that for H >= -1 no limit of the rescaled S_{n,H} is a regular (4H+12)-gon: a corner of opening alpha has alpha > pi/2 and sin(alpha) <= 1/(H+3), and a convex polygonal limit has m >= 2 pi / arcsin(1/(H+3)) vertices with 4 | m (Theorem 1.1, Corollary 1.2). Existence and polygonality of the limit are not shown. Paper: https://github.com/yspennstate/sandpile-holes-corner-angles (commit db3b70c1c0ca). Not refereed; an outside audit is owed.
+    <- cites: Open problems answered by Yitzchak Shmalo's 2026 research program: index of posted papers, repositories and preprints (14 Oct 2026) (id: claim_0ddbab6c)  (the index lists this result)
+    <- semantic_association: Sandpile on holes, HLMPPW Q6.2 (4H+12)-gon? Posted 13 Oct (id: claim_5a905929)  (The same result: Holroyd-Levine-Meszaros-Peres-Propp-Wilson Question 6.2 answered negatively for H >= -1 (no limiting shape of S_{n,H} is a regular (4H+12)-gon))
+[7] Lemma past of arXiv:2607.02742  (id: claim_4bf1702b2fc9f8605e9f64b4f92bf25c952e070c2c82885e723acb20e0f2231a; claim; score 13.04)
+    found by wording 1 (rank 4)
+    matched: past
+    [Lemma past of arXiv:2607.02742, 'Gaussian fluctuations for the parabolic Anderson model with L\'evy white noise'] \textup{(Past convolution bound.)} For every $1\leq \alpha<2$, $\beta\geq 1$, $0\leq r<t\leq T$ and $y\in\mathbb R$, we have \begin{equation} \int_0^r\int_{\mathbb R} [K^{(p)}_{r-s}(y-y')]^\alpha [\Phi^{(p)}_{t-s,R}(y')]^\beta dy'ds \lesssim \varphi_{p(t+r),R}(y). \end{equation}
+    -> cites: arXiv:2607.02742 (id: source_20f9e8e)  (Card extracted from arxiv:2607.02742 (its own source_id).)
+    -> semantic_association: Anderson model (random Schrodinger operators) (id: claim_1c3a983f)  (The card's paper is titled with the concept 'anderson model'; the target is the store's card defining it.)
+[8] Atom at zero  (id: claim_5bc6056c05dc0c3e39d6d413e277514c77a30ac863785abb82163ebb74031752; claim; score 15.79)
+    found by wording 2 (rank 4)
+    matched: simulation, perfect
+    [Prop atom_zero_v2 of arXiv:2605.13519, 'Perfect simulation for interacting Hawkes processes with reset-induced variable length mem'] Under the stationary law, \[ \mathbb{P}(X_0^0=0)>0. \]
+    -> cites: arXiv:2605.13519 - Perfect simulation for interacting Hawkes processes with reset-induced variable length mem (id: source_9f0b1c3)  (Card extracted from arxiv:2605.13519 (its own source_id).)
+WEAK MATCH (a hint): the best score is 23.97, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

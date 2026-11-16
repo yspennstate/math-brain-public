@@ -1,0 +1,14 @@
+# prompt hook: I am working on this: Theorem WP_H^2 of arXiv:2606.00325 (sense def-sol-H paper process be
+# command: math_sense.py < event.json
+# seconds: 94.74
+#
+# what to look for: The prompt hook read a UserPromptSubmit event on stdin and printed one JSON object whose hookSpecificOutput.additionalContext is the block the agent sees before it answers. Claude Code and Codex both accept this shape.
+# stdin event: {"hook_event_name": "UserPromptSubmit", "session_id": "conformance-0012-log", "prompt": "I am working on this: Theorem WP_H^2 of arXiv:2606.00325 (sense def-sol-H paper process belongs almost surely verifies). What is known, and what should I check first?"}
+# silence reason: (none)
+#
+--- raw stdout (one JSON object) ---
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID\n- Theorem WP_H^2 of arXiv:2606.00325 [concept]: [Theorem WP_H^2 of arXiv:2606.00325, 'Ergodicity for a class of stochastic Hasegawa-Mima equations with dissipation'] Assume that $A$ satisfies (ass2 of the paper), $v\\in C^\\infty_c(\\mathcal{D})$ and the noise coefficients $(f_k)_{k=1}^M \\subset L^2(\\mathcal{D})$. Then for every $\\phi_0 \\in H^2 \\cap V$ let $\\phi_t$ be the unique solution of (eq:main of the paper) in the sense of (def-sol-H1 of the paper). Then the process $\\xi = \\phi -\\Delta \\phi - v$ belongs to $C(0, T; L...\n    (claim_e6cacd5b53b2f418c651617470422421f3f42aaa056bb0341f37cf796972eab9 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: 00325, def-sol, verifies)"}}
+--- additionalContext as the agent reads it ---
+[math-brain] leads, not verdicts - a match can expose a step as easily as support it, and none of this is independently verified: check each result's hypotheses against the step that uses it. Card + links: python ~/.claude/dreaming/math_recall.py --id ID
+- Theorem WP_H^2 of arXiv:2606.00325 [concept]: [Theorem WP_H^2 of arXiv:2606.00325, 'Ergodicity for a class of stochastic Hasegawa-Mima equations with dissipation'] Assume that $A$ satisfies (ass2 of the paper), $v\in C^\infty_c(\mathcal{D})$ and the noise coefficients $(f_k)_{k=1}^M \subset L^2(\mathcal{D})$. Then for every $\phi_0 \in H^2 \cap V$ let $\phi_t$ be the unique solution of (eq:main of the paper) in the sense of (def-sol-H1 of the paper). Then the process $\xi = \phi -\Delta \phi - v$ belongs to $C(0, T; L...
+    (claim_e6cacd5b53b2f418c651617470422421f3f42aaa056bb0341f37cf796972eab9 | EXCERPT, incomplete; concept lead; draft; unreviewed; unverified | matched: 00325, def-sol, verifies)

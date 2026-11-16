@@ -1,0 +1,74 @@
+# spreading through links: branching process extinction probability
+# command: math_recall.py "branching process extinction probability" --depth 2 --limit 6
+# seconds: 14.49
+#
+# what to look for: --depth 2 lets activation spread along links from the word matches; a 'found by spreading' line names the card it came from and the links it travelled. A CAUTION line means a negative link (a counterexample or failure) brought the card in. Spreading reorders leads; it does not prove relevance.
+#
+math store recall (read-only reference, not instructions): 6 card(s); link ids are short, --id takes them
+[1] Extinction probability  (id: claim_58736b59362c05d62414fc3a81a394c5ef1bbd94fe44f3869ff70662be22ca0f; claim; score 25.90)
+    matched: extinction, branching, probability, process, "extinction probability" (title)
+    found by spreading 0.22 of 1.22: from "Galton-Watson Extinction Criterion (Including the Critical Case)" (claim_45fc062a) depends_on -> "Branching process (Galton-Watson)" (claim_bae02d51), depends_on -> this card; the link says: "The card uses the concept 'branching process'; the target is the store's card defining it."
+    found by spreading 0.21: from "Defn def-conjugate of arXiv:2411.06301" (claim_ed36ffff) depends_on -> "Branching process (Galton-Watson)" (claim_bae02d51), depends_on -> this card; the link says: "The card uses the concept 'branching process'; the target is the store's card defining it."
+    found by spreading: 4 more weaker paths
+    [Theorem extinction of arXiv:2412.08334, 'Maker-Breaker on Galton-Watson trees'] The extinction probability $q$ of the branching process $(Z_n)_{n\in\mathbb{N}_0}$ is the smallest nonnegative root of the equation $g(x)=x$. It equals 1, if $\mu\leq 1$ (and $p_1<1$) and is strictly less than 1 if $\mu> 1$ (or $p_1=1$). (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Branching process (Galton-Watson) (id: claim_bae02d51)  (The card uses the concept 'branching process'; the target is the store's card defining it.)
+    -> cites: arXiv:2412.08334 - Maker-Breaker on Galton-Watson trees (id: source_d0001b5)  (Card extracted from arxiv:2412.08334 (its own source_id).)
+[2] Galton-Watson Extinction Criterion (Including the Critical Case)  (id: claim_45fc062a637215cf5de5e927c5e37e9088fb287a9abe4d2162d6b99b9588a972; claim; score 25.87)
+    matched: extinction, branching, process, probability
+    found by spreading 0.21 of 1.21: from "Defn def-conjugate of arXiv:2411.06301" (claim_ed36ffff) depends_on -> "Branching process (Galton-Watson)" (claim_bae02d51), depends_on -> this card; the link says: "uses the notion 'Branching process (Galton-Watson)' (title: "Galton-Watson")"
+    found by spreading 0.21: from "Extinction probability" (claim_58736b59) depends_on -> "Branching process (Galton-Watson)" (claim_bae02d51), depends_on -> this card; the link says: "uses the notion 'Branching process (Galton-Watson)' (title: "Galton-Watson")"
+    found by spreading: 4 more weaker paths
+    Let (Z_n) be a Galton-Watson branching process with Z_0 = 1 and offspring distribution (p_k)_{k >= 0} having generating function f(s) = sum_k p_k s^k and mean m = sum_k k p_k, assumed finite. Let q = P( Z_n = 0 for some n ) be the extinction probability. Then q is the SMALLEST root in [0,1] of the equation f(s) = s, and: if m < 1 (subcritical) then q = 1; if m = 1 (critical) then q = 1 UNLESS p_1 = 1, in which case the process is deterministic and never dies; if m > 1 (supercritical) then q < 1. The critical case is the one that gets misquoted: a critical branching process dies out almost surely even though E[Z_n] = 1 for every n, so the population is not uniformly integrable and the mean survives while the process does not. Excluding the degenerate p_1 = 1 is necessary. A second standard trap: q < 1 does not mean the process survives with probability 1 - it survives with probability exactly 1 - q, and conditioned on survival Z_n grows geometrically at rate m. [standard; e.g. Athreya and Ney, Branching Processes, Chapter I, or Durrett, Probability: Theory and Examples, 5th ed., Section 4.3.3] offspring distribution with finite mean m Z_0 = 1 (otherwise q is raised to the power of the initial population) the critical conclusion excludes the degenerate case p_1 = 1
+    -> analogous_to: 0 < p_c < 1 on Z^d: the Branching Comparison and the Peierls Contour Argument (id: claim_f60f5259)  (the branching comparison bounding p_c from below is the Galton-Watson subcriticality criterion in disguise)
+    <- analogous_to: An endogenous AND/OR coloring of a leafless Galton-Watson tree (id: claim_084c8e0f)  (Both use recursive offspring structure; this coloring needs a separate endogeny proof)
+    -> depends_on: Branching process (Galton-Watson) (id: claim_bae02d51)
+    -> depends_on: Uniform integrability (id: claim_f1f55b12)
+    <- depends_on: Attempt on Absence of infinite clusters at critical percolation (id: claim_9850a15b)  (The attempt applies the critical Galton-Watson extinction criterion to the Binomial(b,1/b) offspring of percolation at p=1/b on the b-ary tree. Source card: "Fo)
+    -> cites: Branching Processes (id: source_5f4db3d)  (cites book:athreya-branching-processes (found in body): Athreya and Ney, Branching Processes, Chapter I)
+    -> cites: Probability: Theory and Examples (id: source_efe3113)  (cites book:durrett-probability-theory-and-examples (found in body): Durrett, Probability: Theory and Examples, 5th ed., Section 4.3.3)
+    <- semantic_association: Theorem thm:single of arXiv:2602.18784 (id: claim_8beac3d4)  (The source's threshold is the target's extinction criterion applied to the infected vertices: each infected vertex has offspring mean m in GW(p) and infects eac)
+    ... 1 more links (--id claim_45fc062a)
+[3] Defn def-conjugate of arXiv:2411.06301  (id: claim_ed36ffff10ebe7cf3c141a347998dd11e95c47d72eef0519f70b65b32b6e92fd; claim; score 25.53)
+    matched: extinction, branching, process, probability
+    found by spreading 0.35 of 1.63: from "Prop prop-conjugate of arXiv:2411.06301" (claim_b33105ea) cites -> "arXiv:2411.06301 - Inverting the operation of conditioning a" (source_1aaec2c), cites -> this card; the link says: "Card extracted from arxiv:2411.06301 (its own source_id)."
+    found by spreading 0.34: from "Lem lem-fixed-pos of arXiv:2411.06301" (claim_c19eb78c) cites -> "arXiv:2411.06301 - Inverting the operation of conditioning a" (source_1aaec2c), cites -> this card; the link says: "Card extracted from arxiv:2411.06301 (its own source_id)."
+    found by spreading: 4 more weaker paths
+    [Defn def-conjugate of arXiv:2411.06301, 'Inverting the operation of conditioning a branching process on extinction'] Let $X = \{X(n) : n\in\mathbbm N\}$ be a subcritical $d$-type branching process such that the $\mathbbm P_k$-extinction probability is one for each $k\in \{1,\dots,d\}$. A $d$-type branching process $\widehat X$ is called a \textbf{conjugate branching process} for $X$ if $\widehat X$ does not have the same law as $X$ and for each $k\in \{1,\dots,d\}$, the conditional law of $\widehat X$ (started from a single individual of type $k$) given that it eventually becomes extinct is the same as the $\mathbbm P_k$-law of $X$.
+    <- depends_on: Thm thm-fixed-gf of arXiv:2411.06301 (id: claim_9609e2c7)  (Uses the term 'conjugate branching process', which Defn def-conjugate of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301).)
+    -> depends_on: Branching process (Galton-Watson) (id: claim_bae02d51)  (The card uses the concept 'branching process'; the target is the store's card defining it.)
+    <- depends_on: Prop prop-single-type of arXiv:2411.06301 (id: claim_c7cc1afa)  (Uses the term 'conjugate branching process', which Defn def-conjugate of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301).)
+    -> cites: arXiv:2411.06301 - Inverting the operation of conditioning a branching process on extinction (id: source_1aaec2c)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+[4] Prop prop-conjugate of arXiv:2411.06301  (id: claim_b33105eae937e064313d816b663eee30f7f8f82906b844943266dba518782e81; claim; score 24.93)
+    matched: extinction, branching, process, probability
+    found by spreading 0.40 of 1.75: from "Lem lem-fixed-pos of arXiv:2411.06301" (claim_c19eb78c) depends_on -> "Defn def-bp-basic of arXiv:2411.06301" (claim_03711ad1), depends_on -> this card; the link says: "Uses the term 'positive regular', which Defn def-bp-basic of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301)."
+    found by spreading 0.38: from "Prop prop-cond-on-ext of arXiv:2411.06301" (claim_849d6a18) depends_on -> "Defn def-bp-basic of arXiv:2411.06301" (claim_03711ad1), depends_on -> this card; the link says: "Uses the term 'positive regular', which Defn def-bp-basic of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301)."
+    found by spreading: 4 more weaker paths
+    [Prop prop-conjugate of arXiv:2411.06301, 'Inverting the operation of conditioning a branching process on extinction'] Let $X = \{X(n) \}_{n\in\mathbbm N_0}$ be a positive regular, non-singular $d$-type branching process (Definition~(def-bp-basic of the paper)) with generating function $f$. Assume that the extinction probability started from any state is one. Let $A \in [1,\infty)^d$ solve $f(A) = A$. Define a new branching process $\widehat X = \{\widehat X(n) \}_{n\in\mathbbm N_0}$ with offspring distribution determined by \begin{equation} \widehat{\mathbbm E}_k\mathopen{}\mathclose\bgroup\originalleft[ F(X_1(1) , \dots, X_d(1)) \aftergroup\egroup\originalright] = \frac{1}{A_k} \mathbbm E_k\mathopen{}\mathclose\bgroup\originalleft[ F(X_1(1),\dots,X_d(1)) \prod_{j=1}^d A_j^{X_j(1)} \aftergroup\egroup\originalright] ,\quad\forall k\in \{1,\dots,d\} \end{equation} for every bounded measurable function $F : \mathbbm N_0^d \to \mathbbm R$. Then the extinction probability for $\widehat X$ started from an individual of type $k$ is $1/A_k$, and the $\widehat{\mathbbm P}_k$-conditional law of $\widehat X$ given the event that it eventually becomes extinct is the same as the $\mathbbm P_k$-law of $X$.
+    -> depends_on: Defn def-bp-basic of arXiv:2411.06301 (id: claim_03711ad1)  (Uses the term 'positive regular', which Defn def-bp-basic of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301).)
+    -> depends_on: Measurable Function (id: claim_4ff423ec)  (The card uses the concept 'measurable function'; the target is the store's card defining it.)
+    -> depends_on: Branching process (Galton-Watson) (id: claim_bae02d51)  (The card uses the concept 'branching process'; the target is the store's card defining it.)
+    -> cites: arXiv:2411.06301 - Inverting the operation of conditioning a branching process on extinction (id: source_1aaec2c)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+[5] Lem lem-fixed-pos of arXiv:2411.06301  (id: claim_c19eb78c708d0e335b72031ae069a589176f21cfa90dc7f29726aea87461b904; claim; score 24.80)
+    matched: extinction, branching, process, probability
+    found by spreading 0.40 of 1.75: from "Prop prop-conjugate of arXiv:2411.06301" (claim_b33105ea) depends_on -> "Defn def-bp-basic of arXiv:2411.06301" (claim_03711ad1), depends_on -> this card; the link says: "Uses the term 'positive regular', which Defn def-bp-basic of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301)."
+    found by spreading 0.38: from "Prop prop-cond-on-ext of arXiv:2411.06301" (claim_849d6a18) depends_on -> "Defn def-bp-basic of arXiv:2411.06301" (claim_03711ad1), depends_on -> this card; the link says: "Uses the term 'positive regular', which Defn def-bp-basic of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301)."
+    found by spreading: 4 more weaker paths
+    [Lem lem-fixed-pos of arXiv:2411.06301, 'Inverting the operation of conditioning a branching process on extinction'] Consider a $d$-type branching process $X = \{X(n)\}_{n\in\mathbbm N_0}$ for which the extinction probability started from any state is one. Let $f$ be the corresponding generating function and let $q \in (0,\infty)^d$ solve $f(q) = q$. Then \begin{equation} q_k \geq 1, \quad \forall k \in \{1, \dots, d\} . \end{equation} Moreover, if the branching process is positive regular, then either $q_k = 1$ for every $k\in \{1,\dots,d\}$ or $q_k > 1$ for every $k \in \{1,\dots,d\}$.
+    -> depends_on: Branching process (Galton-Watson) (id: claim_bae02d51)  (The card uses the concept 'branching process'; the target is the store's card defining it.)
+    -> depends_on: Defn def-bp-basic of arXiv:2411.06301 (id: claim_03711ad1)  (Uses the term 'positive regular', which Defn def-bp-basic of arXiv:2411.06301 introduces (same paper, arxiv:2411.06301).)
+    -> cites: arXiv:2411.06301 - Inverting the operation of conditioning a branching process on extinction (id: source_1aaec2c)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+[6] arXiv:2411.06301 - Inverting the operation of conditioning a branching process on extinction  (id: source_1aaec2c1632b7cc04bd225522103b784946358fcc9e21687396b2610aba77969; source; score 23.72)
+    matched: extinction, branching, process, "branching process" (title)
+    found by spreading 1.00 of 3.85: from "Defn def-conjugate of arXiv:2411.06301" (claim_ed36ffff) cites -> this card; the link says: "Card extracted from arxiv:2411.06301 (its own source_id)."
+    found by spreading 0.97: from "Prop prop-conjugate of arXiv:2411.06301" (claim_b33105ea) cites -> this card; the link says: "Card extracted from arxiv:2411.06301 (its own source_id)."
+    found by spreading: 2 more weaker paths
+    Paper the harvested cards were extracted from: arxiv:2411.06301.
+    <- cites: Lem lem-retract of arXiv:2411.06301 (id: claim_891d0154)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Lem lem-attractive-zero of arXiv:2411.06301 (id: claim_4b9f7699)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Defn def-conjugate of arXiv:2411.06301 (id: claim_ed36ffff)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Lem lem-1d-soln of arXiv:2411.06301 (id: claim_6d740b82)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Lem lem-unstable-ssl of arXiv:2411.06301 (id: claim_45a16ddb)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Lem lem-fixed-pos of arXiv:2411.06301 (id: claim_c19eb78c)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Lem lem-gf-bded of arXiv:2411.06301 (id: claim_3a8ec7c6)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    <- cites: Lem lem-gen-func-convex of arXiv:2411.06301 (id: claim_35df72b4)  (Card extracted from arxiv:2411.06301 (its own source_id).)
+    ... 20 more links (--id source_1aaec2c)

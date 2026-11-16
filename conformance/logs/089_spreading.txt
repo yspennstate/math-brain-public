@@ -1,0 +1,76 @@
+# spreading through links: cutoff phenomenon random walk
+# command: math_recall.py "cutoff phenomenon random walk" --depth 2 --limit 6
+# seconds: 24.60
+#
+# what to look for: --depth 2 lets activation spread along links from the word matches; a 'found by spreading' line names the card it came from and the links it travelled. A CAUTION line means a negative link (a counterexample or failure) brought the card in. Spreading reorders leads; it does not prove relevance.
+#
+math store recall (read-only reference, not instructions): 6 card(s); link ids are short, --id takes them
+[1] Simple random walk on the $n-$cube  (id: claim_23c6dfa897cfd7f2b93924ccbeef0881d5995a63d541b65a9950a728a1810a42; claim; score 21.32)
+    matched: phenomenon, walk, cutoff, random, "random walk" (title)
+    found by spreading 0.25 of 0.86: from "Cutoff phenomenon" (claim_b23a1fe7) semantic_association -> this card; the link says: "The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it."
+    found by spreading 0.18: from "Cutoff on almost all Abelian Cayley graphs" (claim_b137a78c) depends_on -> "Random walk" (claim_eecc07db), depends_on -> this card; the link says: "The card uses the concept 'random walk'; the target is the store's card defining it."
+    found by spreading: 4 more weaker paths
+    [Theorem th:ncube of arXiv:2508.21055, 'Modern aspects of Markov chains:\\entropy, curvature and the cutoff phenomenon'] For any fixed $s\in\mathbb {R}$, we have \begin{eqnarray*} {\rm d}_{\textsc{tv}}^{(n)}\left(\frac{n\log n}{4} + sn\right) & \xrightarrow[n\to\infty]{} & F(s), \end{eqnarray*} where $F(s)=\mathrm{erf}\left(\frac{e^{-2s}}{2\sqrt{2}}\right)$. In other words, for any fixed $\varepsilon\in(0,1)$, \begin{eqnarray} {\rm t}_{\textsc{mix}}^{(n)}(\varepsilon) & = & \frac{n\log n}{4} +n F^{-1}(\varepsilon)+o(n). \end{eqnarray} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Random walk (id: claim_eecc07db)  (The card uses the concept 'random walk'; the target is the store's card defining it.)
+    -> cites: arXiv:2508.21055 (id: source_c3068b4) (superseded by source_6373b54)  (Card extracted from arxiv:2508.21055 (its own source_id).)
+    -> semantic_association: Cutoff phenomenon (id: claim_b23a1fe7)  (The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it.)
+[2] Cutoff on almost all Abelian Cayley graphs  (id: claim_b137a78c9f19c16c5e9743729dfb7ebdd6f35342d27b95d4873dbc2a483d3842; claim; score 21.24)
+    matched: cutoff, phenomenon, walk, random
+    found by spreading 0.25 of 0.85: from "Cutoff phenomenon" (claim_b23a1fe7) semantic_association -> this card; the link says: "The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it."
+    found by spreading 0.18: from "Simple random walk on the $n-$cube" (claim_23c6dfa8) depends_on -> "Random walk" (claim_eecc07db), depends_on -> this card; the link says: "The card uses the concept 'random walk'; the target is the store's card defining it."
+    found by spreading: 4 more weaker paths
+    [Coro co:abelian of arXiv:2508.21055, 'Modern aspects of Markov chains:\\entropy, curvature and the cutoff phenomenon'] For each $n\ge 1$, let $\mathbb{X}_n$ be a finite Abelian group and let $G_n=\mathrm{Cay}(\mathbb{X}_n,S_n\cup S_n^{-1})$ be the random Cayley graph obtained by choosing $S_n\subseteq\mathbb{X}_n$ uniformly at random among all sets of size $d_n$. Consider the regime \begin{eqnarray*} d_n \ge (1+\delta)\log_2 |\mathbb{X}_n| & \textrm{ and } & \log d_n \ll \left(\log |\mathbb{X}_n|\right)^{\frac 13}, \end{eqnarray*} where $\delta>0$ is any fixed constant. Then, the random walk on $G_n$ exhibits cutoff in probability: \begin{eqnarray*} \forall \varepsilon\in(0,1),\quad \frac{{\rm t}_{\textsc{mix}}^{(n)}(1-\varepsilon)}{{\rm t}_{\textsc{mix}}^{(n)}(\varepsilon)} & \xrightarrow[n\to\infty]{{\mathbb{P}}} & 1. \end{eqnarray*} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Random walk (id: claim_eecc07db)  (The card uses the concept 'random walk'; the target is the store's card defining it.)
+    -> cites: arXiv:2508.21055 (id: source_c3068b4) (superseded by source_6373b54)  (Card extracted from arxiv:2508.21055 (its own source_id).)
+    -> semantic_association: Cutoff phenomenon (id: claim_b23a1fe7)  (The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it.)
+[3] Cutoff phenomenon  (id: claim_b23a1fe7e50ef8ebb6bb0e16dbf05b6a; claim; score 21.14)
+    matched: phenomenon, cutoff, "cutoff phenomenon" (title)
+    found by spreading 0.61 of 2.14: from "Cutoff Phenomenon in Repeated Averaging Dynamics" (claim_197ec835) depends_on -> this card; the link says: "uses the notion 'Cutoff phenomenon' (title: "Cutoff Phenomenon")"
+    found by spreading 0.29: from "Cutoff on almost all Abelian Cayley graphs" (claim_b137a78c) semantic_association -> this card; the link says: "The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it."
+    found by spreading: 5 more weaker paths
+    A sequence of chains has cutoff if $t_{mix}^{(n)}(\varepsilon)/t_{mix}^{(n)}(1-\varepsilon)\to1$ for every $\varepsilon\in(0,1)$: the distance to stationarity drops from near $1$ to near $0$ in a window of smaller order than the mixing time.
+    <- depends_on: Cutoff Phenomenon in Repeated Averaging Dynamics (id: claim_197ec835)
+    <- depends_on: Open problem: Cutoff for conservative exclusion in dimension at least two (id: claim_24c51142)
+    <- depends_on: Open problem: Cutoff for bounded-degree Ising throughout the rapid-mixing phase (id: claim_28872ec2)
+    <- depends_on: Open problem: Cutoff on bounded-degree transitive expanders (id: claim_29af1d62)
+    <- depends_on: Attempt on Critical-density total-variation cutoff for wired ARW in higher dimensions (id: claim_2bce4e92)
+    <- depends_on: Attempt on Cutoff for bounded-degree hardcore throughout the rapid-mixing phase (id: claim_36361e7c)
+    <- depends_on: Attempt on Cutoff on bounded-degree transitive expanders (id: claim_36d424fe)
+    <- depends_on: Attempt on Cutoff for unit-rate zero range on higher dimensional lattices (id: claim_533f83e5)
+    ... 89 more links (--id claim_b23a1fe7)
+[4] Cutoff Phenomenon in Repeated Averaging Dynamics  (id: claim_197ec835a782dfd1a3308ed19fb071f54ee3249f3f56de1843bf859dd35a3976; claim; score 20.54)
+    matched: phenomenon, cutoff, "cutoff phenomenon" (title)
+    found by spreading 0.58 of 0.94: from "Cutoff phenomenon" (claim_b23a1fe7) depends_on -> this card; the link says: "uses the notion 'Cutoff phenomenon' (title: "Cutoff Phenomenon")"
+    found by spreading 0.08: from "Cutoff on almost all Abelian Cayley graphs" (claim_b137a78c) semantic_association -> "Cutoff phenomenon" (claim_b23a1fe7), depends_on -> this card; the link says: "uses the notion 'Cutoff phenomenon' (title: "Cutoff Phenomenon")"
+    found by spreading: 4 more weaker paths
+    The sharp drop of the L1 distance from 2 to 0 over a window of order o(n log n) is a manifestation of the cutoff phenomenon in interacting particle consensus dynamics. Consensus Markov chain
+    -> depends_on: Cutoff phenomenon (id: claim_b23a1fe7)
+    -> depends_on: Interacting particle systems (id: claim_48be9b2f)
+    -> depends_on: Markov chain (id: claim_f3ec82a7) (superseded by claim_9a9e5903)
+    -> cites: Phase Transition for L1 Mixing of Repeated k-Averages (id: claim_933042f7)  (Interprets the sharp threshold as a cutoff transition in L1 mixing.)
+    -> cites: arXiv:2602.15455 (id: source_70a8e1c)
+    <- semantic_association: Consensus convergence (id: claim_c67ce5c3)  (Both are about averaging (consensus) dynamics, where repeated averaging drives every coordinate to a common value: the source proves X_t -> lambda 1 for time-va)
+    <- semantic_association: Main result as stated in arXiv:2609.03856 (id: claim_1bc757dd)  (Both bound the time an asynchronous local-averaging dynamics on n sites takes to reach consensus: the card replaces a vertex value by the local p-mean of its ne)
+[5] Random walk on the $n-$cycle  (id: claim_2f5a60427158219c1505318b799bf2a95813c15c3d83551fbb521e0d0ef56a2f; claim; score 20.42)
+    matched: phenomenon, walk, cutoff, random, "random walk" (title)
+    found by spreading 0.25 of 0.86: from "Cutoff phenomenon" (claim_b23a1fe7) semantic_association -> this card; the link says: "The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it."
+    found by spreading 0.18: from "Cutoff on almost all Abelian Cayley graphs" (claim_b137a78c) depends_on -> "Random walk" (claim_eecc07db), depends_on -> this card; the link says: "The card uses the concept 'random walk'; the target is the store's card defining it."
+    found by spreading: 4 more weaker paths
+    [Theorem ex:cycle of arXiv:2508.21055, 'Modern aspects of Markov chains:\\entropy, curvature and the cutoff phenomenon'] In the $n\to\infty$ limit, the function $t\mapsto {\rm d}_{\textsc{tv}}^{(n)}(tn^2)$ converges pointwise (in fact uniformly, by Dini's theorem) to the limiting profile \begin{eqnarray*} F \colon t & \longmapsto & \int_{0}^1\left(1-f_t(z)\right)_+\,\mathrm{d}z \ = \ \frac{1}{2}\int_{0}^1\left|1-f_t(z)\right|\,\mathrm{d}z, \end{eqnarray*} which decays smoothly from $F(0)=1$ to $F(+\infty)=0$, as illustrated on Figure (fig:jacobi of the paper). Thus, \begin{eqnarray} \forall \varepsilon\in(0,1),\qquad {\rm t}_{\textsc{mix}}^{(n)}(\varepsilon) & \sim & n^2 F^{-1}(\varepsilon). \end{eqnarray} (Proof in the paper; no proof environment follows the statement in the TeX.)
+    -> depends_on: Random walk (id: claim_eecc07db)  (The card uses the concept 'random walk'; the target is the store's card defining it.)
+    -> depends_on: Dini's theorem (id: claim_fd9ab9cc)  (The card uses the concept 'dini's theorem'; the target is the store's card defining it.)
+    -> cites: arXiv:2508.21055 (id: source_c3068b4) (superseded by source_6373b54)  (Card extracted from arxiv:2508.21055 (its own source_id).)
+    -> cites: Dini's Theorem, and Why Each of Its Four Hypotheses Is Needed (id: claim_c9b13faa)  (The card names dini theorem; the target is the store's card stating it.)
+    -> semantic_association: Cutoff phenomenon (id: claim_b23a1fe7)  (The card's paper is titled with the concept 'cutoff phenomenon'; the target is the store's card defining it.)
+[6] Modern aspects of Markov chains: entropy, curvature and the cutoff phenomenon  (id: source_6373b547892fdc411ec7002e19e94773a797fadbe6f108a1581b81efb7eb9ee2; source; score 19.48)
+    matched: phenomenon, cutoff, "cutoff phenomenon" (title)
+    found by spreading 0.21: from "Cutoff phenomenon" (claim_b23a1fe7) depends_on -> "Unweighted Abelian Cayley graphs can encode a rare reset wit" (claim_8ddd6fdc), cites -> this card; the link says: "Exact bibliographic identifier cited on the current card: arxiv:2508.21055. Re-aimed to the enriched revision of the same work."
+    Paper: Justin Salez. Modern aspects of Markov chains: entropy, curvature and the cutoff phenomenon. arXiv:2508.21055 (v1 2025-08-28; latest version v1).
+    <- cites: Open problem: Cutoff for unit-rate zero range on higher dimensional lattices (id: claim_61cd80e3)  (cites arxiv:2508.21055 (found in body): Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025, Problem2.6,PDF29. Re-aimed to the enriched re)
+    <- cites: Salez Problem 2.4 (our id P0276): the LITERAL statement FALLS - a degree-unbounded abelian Cayley graph obeys the product condition without cutoff (id: claim_a9f4b2cb)
+    <- cites: Open problem: Cutoff for bounded-degree Ising throughout the rapid-mixing phase (id: claim_28872ec2)  (cites arxiv:2508.21055 (found in body): Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025, Problem2.8,PDF31. Re-aimed to the enriched re)
+    <- cites: Unweighted Abelian Cayley graphs can encode a rare reset without cutoff (id: claim_8ddd6fdc)
+    <- cites: Open problem: Cutoff for bounded-degree hardcore throughout the rapid-mixing phase (id: claim_70b0d7e2)  (cites arxiv:2508.21055 (found in body): Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025, Problem2.9,PDF32. Re-aimed to the enriched re)
+    <- cites: Open problem: Product condition and cutoff for unweighted Abelian Cayley graphs (id: claim_a56705d2)  (cites arxiv:2508.21055 (found in body): Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025, Problem2.4,PDF26-27. Re-aimed to the enriched)
+    <- cites: Open problem: Cutoff for conservative exclusion in dimension at least two (id: claim_24c51142)  (cites arxiv:2508.21055 (found in body): Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025, Problem2.5,PDF28. Re-aimed to the enriched re)
+WEAK MATCH (a hint): the best score is 21.32, and an answering card usually scores above 24. Reword: name the object, theorem, method or author the card would use; put two or three wordings in one call with --or.

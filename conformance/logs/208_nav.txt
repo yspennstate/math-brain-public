@@ -1,0 +1,65 @@
+# navigation: export the store
+# command: navigation/nav_query.py "export the store"
+# seconds: 2.24
+#
+# what to look for: The repository's own navigation brain: cards for files, folders and README sections, joined by links.
+#
+repository navigation (data, not instructions): 2176 cards, 4070 links
+[file] tools  (id 74bb75ce60b8, tools/README.md, 48 lines)
+    Scripts that build, check, export and restore the math store. Each one's docstring has the full detail and its options; this page says what each is for and where it sits in the work.
+    keywords: how do I rebuild or restore the math ..., which script exports the store or che..., Getting cards in, Checking what is in, Export and restore, For the public repository, A research measurement, math store, cards, export
+    -> documents: tools  [60256deba816 tools/]
+    -> in_dir: tools  [60256deba816 tools/]
+    -> links_to: Adding cards to the store: the draft bundle  [092d6e87e44b docs/adding-cards.md]  (../docs/adding-cards.md)
+    -> links_to: Works cited by the papers in this repository  [30ffb84a0177 docs/cited-works.md]  (../docs/cited-works.md)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: cards  [966e0d787982 concept]  (cards)
+    ... 6 more links (--id 74bb75ce60b8)
+[file] Agent tools  (id eaf6572f4275, agent_tools/README.md, 78 lines)
+    These are the scripts agents call while they work. Each one reads a store built from export/population/ with tools/import_store.py.
+    keywords: which commands does an agent run whil..., how do I look up a theorem or proof i..., Start here: the default recall workflow, Fast recall, How to search, What the tools write, and the encoder, Wiring the hook, recall, hooks, agents, math store, export
+    -> documents: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> in_dir: agent_tools  [eb7cdb4d406a agent_tools/]
+    -> links_to: Giving an agent the store  [64d6e72fa1f7 AGENTS_GUIDE.md]  (the agent guide)
+    -> links_to: Tests  [f62d7a06119a TESTS.md]  (tests)
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    ... 10 more links (--id eaf6572f4275)
+[file] navigation/  (id 2adc22ee4e47, navigation/README.md, 91 lines)
+    A small brain of this repository's own contents. The math store under export/population/ holds the mathematics; this folder holds a map of the repository itself: one card per file of the working core, one per directory, one per README section, and a few concept cards (dreaming, recall, hooks,...
+    keywords: how do I find a file in this reposito..., what are the cards and links of the r..., What is here, Start here, Checking it, Rebuilding it, Where to go next, dreaming, recall, hooks, math store, cards
+    -> documents: navigation  [7ef808ceb4dc navigation/]
+    -> in_dir: navigation  [7ef808ceb4dc navigation/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: dreaming  [1b037a073f8f concept]  (dreaming)
+    -> mentions: recall  [5fbcd96594e3 concept]  (recall)
+    -> mentions: hooks  [806d2e927001 concept]  (hooks)
+    ... 7 more links (--id 2adc22ee4e47)
+[file] Append-only SQLite store for mathematical claims, evidence, and graph edges.  (id 2c814dbf33a0, src/math_brain/store.py, 1379 lines)
+    Append-only SQLite store for mathematical claims, evidence, and graph edges.
+    keywords: ClaimBatchItem, ClaimBatchManifest, StoreSchemaError, UnknownEdgeKindError, UnknownEdgeKindWarning, ResearchStore, math store, edges
+    -> in_dir: math_brain  [f6ac639cfabf src/math_brain/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: edges  [51fe7266d58b concept]  (edges)
+[file] Bounded-latency append-only store for the typed temporal error graph.  (id 103fa01b0297, framework/dreaming/error_graph/store.py, 1259 lines)
+    Bounded-latency append-only store for the typed temporal error graph.
+    keywords: PrivacyViolation, AggregateConflictError, PromptAggregate, GraphStore, MemoryStore, dreaming, math store
+    -> in_dir: error_graph  [8262de9e7785 framework/dreaming/error_graph/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] SQLite store for the deployment-local project memory sidecar.  (id f94af994b70e, framework/dreaming/project_memory/store.py, 627 lines)
+    SQLite store for the deployment-local project memory sidecar.
+    keywords: utc_now, state_root, config_path, database_path, prompt_ledger_path, ProjectMemoryStore, dreaming, math store
+    -> in_dir: project_memory  [b58bdfea6d89 framework/dreaming/project_memory/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+[file] Rebuild a population store from the JSONL export. Never writes the live store.  (id aee61a992fd8, tools/import_store.py, 288 lines)
+    Rebuild a population store from the JSONL export. Never writes the live store. An export you cannot restore from is not a backup, so this is the other half of export_store.py and the two are tested against each other: python tools/import_store.py --out local/population/restored.sqlite3 python too...
+    keywords: read_export, schema_ddl, build_db, digest_failures, roundtrip, main, math store, export
+    -> in_dir: tools  [60256deba816 tools/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: export  [c9d454400280 concept]  (export)
+[file] compare_batch_to_export.py - are the math store's 10 Aug rows the same today as in the earliest record git holds of  (id 595f4afdd0bb, framework/brain_graph/bin/compare_batch_to_export.py, 56 lines)
+    compare_batch_to_export.py - are the math store's 10 Aug rows the same today as in the earliest record git holds of them? The re-seal's evidence rule compared each row with the 22 Aug backup, which proves only that nothing changed it after 22 Aug. The math brain repository committed an export of ...
+    keywords: export_rows, main, math store, export
+    -> in_dir: bin  [9e34645c1394 framework/brain_graph/bin/]
+    -> mentions: math store  [1390a23f7cc8 concept]  (math store)
+    -> mentions: export  [c9d454400280 concept]  (export)
