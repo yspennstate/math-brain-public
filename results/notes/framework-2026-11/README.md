@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 440 notes.
+out, and requests are paraphrased. 444 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -675,3 +675,14 @@ Two recall and index changes, a loop-clock fault, five blind tests of word-walk 
 | [word_walk_links_senses_not_words_drift_fixed_2026_11_14](word_walk_links_senses_not_words_drift_fixed_2026_11_14.md) | verified | Word walk drifting into another meaning (soot -> c -> cocaine)? Fixed 14 Nov: lexicon.json has per-sense links 'e' and walk moves on (word, sense) states |
 | [word_walk_shows_walked_sense_and_matching_master_line_2026_11_14](word_walk_shows_walked_sense_and_matching_master_line_2026_11_14.md) | provisional | Word walk palette gloss and master line disagree (bunk = cattle trough beside a bed line)? Fixed 14 Nov: sense from the word stepped from, line judged on 6 words each side, wrong-sense words dropped; ... |
 | [work_session_clock_restarts_on_every_cron_loop_refire_2026_11_16](work_session_clock_restarts_on_every_cron_loop_refire_2026_11_16.md) | provisional | The work-session hook restarts its 10h clock each time a /loop cron re-fires the original prompt, so it keeps demanding work hours past the author's real end time (16 Nov: ask 03:41+10h=13:41, hook ... |
+
+## Added on 16 November: checklist duplicates, the compact index test, tar paths and prior-work searches (4)
+
+A duplicate review for the task checklist, a paired test of the compact memory index, a tar path pitfall on Windows, and why an open-problem check must search the web and not only arXiv titles.
+
+| note | status | what it says |
+|---|---|---|
+| [checklist_duplicates_review_landed_s38m03_2026_11_16](checklist_duplicates_review_landed_s38m03_2026_11_16.md) | verified | task_checklist_hook.py duplicates --state <state.json> (landed 16 Nov from Codex S38M03, audit all-hold): read-only list of open checklist entries that are the same ask registered by several ... |
+| [compact_index_view_paired_eval_59_of_60_both_arms_ceiling_2026_11_16](compact_index_view_paired_eval_59_of_60_both_arms_ceiling_2026_11_16.md) | verified | Does the compact memory-index view (link destinations dropped, -33% bytes) make agents pick the wrong memory? No loss seen: 59/60 top-1 in all four arms, zero disagreement - but the bank is at ... |
+| [git_bash_tar_reads_c_colon_as_remote_host_use_relative_path_2026_11_16](git_bash_tar_reads_c_colon_as_remote_host_use_relative_path_2026_11_16.md) | verified | Git Bash tar on a C:/ archive path fails 'Cannot connect to C: resolve failed' and leaves a stale partial extraction looking complete; cd into the dir and pass a relative name (or --force-local), ... |
+| [open_problem_check_must_search_the_web_not_only_arxiv_titles_2026_11_16](open_problem_check_must_search_the_web_not_only_arxiv_titles_2026_11_16.md) | verified | Before attacking a catalogued open problem, web-search the problem number + paper: CN0520 (Grimmett-Holmes OP 3.11) was already answered on GitHub |
