@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 365 notes.
+out, and requests are paraphrased. 375 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -473,3 +473,21 @@ Four notes on checks that pass without reading what they check, and one Mac buil
 | [push_paths_api_fallback_skipped_public_privacy_scan_2026_11_15](push_paths_api_fallback_skipped_public_privacy_scan_2026_11_15.md) | verified | The push helper's GitHub API fallback skipped the pre-push privacy hook, so a refused batch landed anyway. Every lane that writes to a remote runs the same checks as the main lane. |
 | [pw1k_lint_hides_weights_gate_zenodo_posts_2026_11_15](pw1k_lint_hides_weights_gate_zenodo_posts_2026_11_15.md) | verified | The paper linter's printout hides rule weights, so two papers were posted with unread weight-7 findings. A gate script now prints every heavy finding and refuses the post unless each is fixed or waived. |
 | [swiftc_bridging_modulemap_redefinition_vfs_overlay_mac1_2026_11_15](swiftc_bridging_modulemap_redefinition_vfs_overlay_mac1_2026_11_15.md) | verified | swiftc fails with "redefinition of module SwiftBridging" under the Command Line Tools; a VFS overlay that maps one of the two modulemaps to an empty file fixes it without touching the system. |
+
+## Added on 16 November (4)
+
+Eight notes from the writing-brain tests of 15-16 November (each rule registered before the run, scored against
+blind readers or blind judges), one on a word-puzzle generator that let slurs through, and one Windows ssh fix.
+
+| note | status | what it says |
+|---|---|---|
+| [r9_narrator_verdict_regex_not_shown_2026_11_16](r9_narrator_verdict_regex_not_shown_2026_11_16.md) | provisional | Regular expressions for a narrator passing a verdict on his own scene do not find what blind readers fault on unseen texts; the fault lies between a sentence and the paragraph before it. |
+| [r10_verdict_reader_question_shown_2026_11_16](r10_verdict_reader_question_shown_2026_11_16.md) | provisional | One reader question that sees the preceding paragraph lists sentences that blind readers fault at 4.6 and 7.1 times the base rate (tool verdict_read.py); a list of candidates, not of cuts. |
+| [summing_up_flag_is_not_a_length_proxy_2026_11_16](summing_up_flag_is_not_a_length_proxy_2026_11_16.md) | provisional | The summing-up flag survives stratifying by sentence length (Mantel-Haenszel OR 2.42 in sample, 1.65 held out, not settled). |
+| [stock_word_pairings_are_not_where_readers_find_weak_lines_2026_11_16](stock_word_pairings_are_not_where_readers_find_weak_lines_2026_11_16.md) | provisional | Sentences built on shelf-common word pairs are less often weak, not more (OR 0.46); a cliche check by pair frequency points the wrong way. |
+| [wants1_ask_order_refuse_turns_do_not_separate_2026_11_16](wants1_ask_order_refuse_turns_do_not_separate_2026_11_16.md) | provisional | Counting dialogue turns that ask, order or refuse does not separate a draft from fourteen published openings; that check is made by reading. |
+| [wbab6_plan_wins_by_rule_second_reader_sees_no_gap_2026_11_16](wbab6_plan_wins_by_rule_second_reader_sees_no_gap_2026_11_16.md) | provisional | A five-line plan before a scene wins by the registered rule with length held equal (35 of 36 writer pairs), but one independent blind ranking saw no gap and the judges are one model. |
+| [writing_brain_procedure_did_not_fool_blind_judge_sciw01_2026_11_16](writing_brain_procedure_did_not_fool_blind_judge_sciw01_2026_11_16.md) | provisional | The writing-brain procedure did not move Codex prose toward human in a blind judge's eyes (P(machine) 96.3 against 97.2). |
+| [scij03_writer_arms_vs_matched_humans_topic_confound_2026_11_16](scij03_writer_arms_vs_matched_humans_topic_confound_2026_11_16.md) | provisional | Against matched human texts no writer arm comes close (AUC 1.0); the design repeated topics within a batch, which the judge used. |
+| [generated_word_puzzles_need_an_offensive_word_filter_2026_11_16](generated_word_puzzles_need_an_offensive_word_filter_2026_11_16.md) | verified | A WordNet-like lexicon keeps slurs as ordinary entries and a frequency floor does not remove them; filter on the glosses and gate the build on a block list. |
+| [windows_openssh_refuses_key_with_inherited_acl_git_bash_ssh_does_not_2026_11_16](windows_openssh_refuses_key_with_inherited_acl_git_bash_ssh_does_not_2026_11_16.md) | verified | Windows OpenSSH ignores a private key with inherited ACL entries while Git Bash's ssh does not, so a scheduled task fails where an interactive test passes. |
