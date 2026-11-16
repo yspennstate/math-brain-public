@@ -23,3 +23,6 @@ How to apply: before any further writer arm, map the codes to natural names dete
 map to the briefs, the data and the grading facts alike; until then this test measures the material, not the writer.
 A blind judge's stated reason is a lead to check, and when removing it only brings the next one, look at what every
 machine piece shares that no human piece could.
+
+Superseded in part by [[scij07_names_fixed_detector_still_97_completeness_is_the_tell_2026_11_16]]: with the codes
+renamed, detection did not change, so the codes were not the cause.

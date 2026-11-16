@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 386 notes.
+out, and requests are paraphrased. 390 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -535,12 +535,16 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 |---|---|---|
 | [regression_gate_separates_hook_load_silence_from_content_2026_11_16](regression_gate_separates_hook_load_silence_from_content_2026_11_16.md) | verified | Nightly math-brain regression gate read red on three nights while the same checks by hand passed. The recall hook had gone quiet by its own time budget under load, and the gate counted the quiet as a ... |
 
-## Added on 16 November: blind writing tests (3)
+## Added on 16 November: blind writing tests (7)
 
-A five-line plan before a scene, a random draw of scene shape on top of it, and a science-writing test whose blind detector keys on the task material.
+A five-line plan before a scene, a random draw of scene shape, a paragraph outline, judges picking a published author's next page, which sentence checks find what blind readers fault, and a science-writing test whose blind detector keys on completeness.
 
 | note | status | what it says |
 |---|---|---|
 | [scij06_word_budget_detector_names_coded_labels_2026_11_16](scij06_word_budget_detector_names_coded_labels_2026_11_16.md) | provisional | Science-writing test, third round: a 40-70 word budget per kept fact cut machine pieces by 34-53 percent, yet a blind detector still called about 96 percent of them machine-written (human pieces ... |
 | [wbab4_plan_ranks_far_better_not_a_win_by_rule_2026_11_15](wbab4_plan_ranks_far_better_not_a_win_by_rule_2026_11_15.md) | provisional | Five-line plan before a scene (turn.py plan): pages ranked 4.78 against 8.22 for no plan by four blind judges (p 0.0004), 4.06 against 8.94 by a reader of another model family; not a win by the ... |
 | [wbab5_random_draw_on_plan_gave_nothing_2026_11_15](wbab5_random_draw_on_plan_gave_nothing_2026_11_15.md) | provisional | A random draw of a scene's shape added to the five-line plan (turn.py draw): 6.32 against 6.68 blind, p 0.36, and 8 misfit flags against none. The third random mechanism tested blind that did not ... |
+| [reader_checks_vs_blind_readers_only_maxim_finds_2026_11_15](reader_checks_vs_blind_readers_only_maxim_finds_2026_11_15.md) | provisional | Do the writing-brain sentence checks find what blind readers fault? Only the narrator's-maxim check does (5 of its 9 flags faulted, lift about 12). About 60 percent of reader faults are about ... |
+| [scij07_names_fixed_detector_still_97_completeness_is_the_tell_2026_11_16](scij07_names_fixed_detector_still_97_completeness_is_the_tell_2026_11_16.md) | provisional | Science-writing test, fourth round: the task's coded labels were replaced by natural names everywhere, codes vanished from the blind detector's reasons (43 of 72 to 0), and detection stayed at about ... |
+| [wbh1_author_found_32_of_32_plan_pages_last_2026_11_15](wbh1_author_found_32_of_32_plan_pages_last_2026_11_15.md) | provisional | Can blind judges pick a published author's next page among machine continuations? Yes, 32 of 32. Pages written with the five-line plan ranked furthest from the author (5.78 against 3.22 for plain ... |
+| [wbh2_paragraph_list_ranked_further_from_author_2026_11_15](wbh2_paragraph_list_ranked_further_from_author_2026_11_15.md) | provisional | Does handing a writer a paragraph outline drawn from published novels make the page read more like the author's? No: blind judges ranked those pages further from the author (5.20 against 3.80). Asked ... |
