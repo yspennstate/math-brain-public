@@ -27,7 +27,6 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Negative edge correlation for weighted spanning forests of complete graphs | [kn-forest-negative-correlation](https://github.com/yspennstate/kn-forest-negative-correlation) |
 | Non-endogenous fixed points of the discounted tree sum equation: the regular case | [discounted-tree-sums-endogeny](https://github.com/yspennstate/discounted-tree-sums-endogeny) |
 | A prophet secretary instance with ratio below 0.7230 | [prophet-secretary-hardness](https://github.com/yspennstate/prophet-secretary-hardness) |
-| Randomized smoothing at high confidence: the Gaussian is optimal for every noise law | [smoothing-high-confidence](https://github.com/yspennstate/smoothing-high-confidence) |
 | Read-once formulas and a question of Han on the Fourier entropy-influence conjecture | [han-question-read-once-formulas](https://github.com/yspennstate/han-question-read-once-formulas) |
 | A tree automaton with infinitely many rogue fixed points under every supercritical offspring law | [automaton-fixed-simplex](https://github.com/yspennstate/automaton-fixed-simplex) |
 | Arc-transitive graphs that mimic the cycle | [arc-transitive-graphs-that-mimic-the-cycle](https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle) |
@@ -129,7 +128,6 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Zero speed for excited random walks on the event of non-transience | [excited-walk-zero-speed-non-transience](https://github.com/yspennstate/excited-walk-zero-speed-non-transience) |
 | Two instability intervals for a switched planar system with one non-Hurwitz matrix | [planar-switching-two-instability-intervals](https://github.com/yspennstate/planar-switching-two-instability-intervals) |
 | Law-determined norm inequalities do not imply complete mixability | [complete-mixability-norm-converse](https://github.com/yspennstate/complete-mixability-norm-converse) |
-| Three problems in kernel methods: proofs and finite-size measurements | [three-problems-kernel-methods](https://github.com/yspennstate/three-problems-kernel-methods) |
 | The stationary cover time of reversible chains on three and four states | [stationary-cover-time-four-states](https://github.com/yspennstate/stationary-cover-time-four-states) |
 | Which chord of an even cycle preserves its spectral gap | [one-chord-even-cycle-spectral-gap](https://github.com/yspennstate/one-chord-even-cycle-spectral-gap) |
 | The Kesten–Stigum bound is tight for the four-state Potts model on the binary tree | [potts-four-state-binary-tree](https://github.com/yspennstate/potts-four-state-binary-tree) |
@@ -143,3 +141,53 @@ Six more are kept here with their working files:
 - `public/ising-perceptron-capacity-work/`: working notes and the reverification for the Ising perceptron capacity paper.
 - `public/ising-perceptron-margin-work/`: working files for the Ising perceptron at general margin.
 - `public/three-problems-in-kernel-methods/`: *Three problems in kernel methods*, proofs and finite-size measurements.
+
+## Papers kept in their own repositories
+
+These papers came out of the same work and are kept only in their own public repositories, with the paper, code and data there.
+
+| Paper | Repository |
+|---|---|
+| A counterexample to a conjecture of Cerf on second-order pivots | [second-order-pivots-cerf-conjecture](https://github.com/yspennstate/second-order-pivots-cerf-conjecture) |
+| A flux plateau for site-disordered finite-capacity exclusion | [flux-plateau-disordered-k-exclusion](https://github.com/yspennstate/flux-plateau-disordered-k-exclusion) |
+| A sharper explicit bound for the Brownian intersection exponent in three dimensions | [brownian-intersection-exponent-bound](https://github.com/yspennstate/brownian-intersection-exponent-bound) |
+| Absolutely continuous laws on a bounded interval are completely mixable for all large n | [complete-mixability-large-n](https://github.com/yspennstate/complete-mixability-large-n) |
+| Adding one permutation to a transposition and a long cycle | [one-generator-shuffle](https://github.com/yspennstate/one-generator-shuffle) |
+| Avoiding degenerate saddles of the homogeneous cost of deep linear networks | [deep-linear-homogeneous-cost-saddles](https://github.com/yspennstate/deep-linear-homogeneous-cost-saddles) |
+| Concavity of the entropy of determinantal measures on two points | [lyons-determinantal-entropy-two-points](https://github.com/yspennstate/lyons-determinantal-entropy-two-points) |
+| Critical Derrida–Retaux recursions with nonuniversal survival probabilities | [derrida-retaux-survival-constant](https://github.com/yspennstate/derrida-retaux-survival-constant) |
+| Filled-in peeling explorations exhaust every critical Boltzmann planar map | [critical-peeling-exhaustion](https://github.com/yspennstate/critical-peeling-exhaustion) |
+| Global solutions of stochastic reaction-diffusion systems with triangular structure and species-dependent transport noise | [stochastic-reaction-diffusion-triangular-transport](https://github.com/yspennstate/stochastic-reaction-diffusion-triangular-transport) |
+| Gradient flow for deep factored scalar linear attention learns multi-step gradient descent | [factored-scalar-attention-gradient-flow](https://github.com/yspennstate/factored-scalar-attention-gradient-flow) |
+| Heavy-ball momentum and batch size in streaming least squares | [heavy-ball-batch-speedup](https://github.com/yspennstate/heavy-ball-batch-speedup) |
+| Infinitely many collisions on random comb graphs at the critical exponent | [comb-collisions-critical-exponent](https://github.com/yspennstate/comb-collisions-critical-exponent) |
+| Initial laws with all moments that stay multimodal under stable evolution | [stable-evolution-not-unimodal](https://github.com/yspennstate/stable-evolution-not-unimodal) |
+| Layered permutation copulas and the Wasserstein distance to the uniform law | [wasserstein-layered-permutation-copulas](https://github.com/yspennstate/wasserstein-layered-permutation-copulas) |
+| Log-concavity of the step TASEP distribution at rounded midpoints | [tasep-midpoint-log-concavity](https://github.com/yspennstate/tasep-midpoint-log-concavity) |
+| Mixing of the Aldous-Fill crossover chain via random switching networks | [crossover-chain-mixing](https://github.com/yspennstate/crossover-chain-mixing) |
+| Nested beta-Laguerre ensembles | [nested-beta-laguerre](https://github.com/yspennstate/nested-beta-laguerre) |
+| Occupation sums of the harmonic descent chain and slowly decaying weights | [harmonic-descent-occupation-sums](https://github.com/yspennstate/harmonic-descent-occupation-sums) |
+| Only point masses are freely strongly unimodal | [free-strong-unimodality-point-masses](https://github.com/yspennstate/free-strong-unimodality-point-masses) |
+| Positive drift for a bi-invariant metric on a free group | [bi-invariant-drift-free-group](https://github.com/yspennstate/bi-invariant-drift-free-group) |
+| Randomized smoothing at high confidence: the Gaussian is optimal for every noise law | [smoothing-high-confidence](https://github.com/yspennstate/smoothing-high-confidence) |
+| Recurrence and transience of the Manhattan walk for deterministic orientation fields | [manhattan-orientation-fields-recurrence](https://github.com/yspennstate/manhattan-orientation-fields-recurrence) |
+| Support of the limiting boundary measure of branching random walk | [brw-boundary-measure-support](https://github.com/yspennstate/brw-boundary-measure-support) |
+| Survival and moments in critical Derrida-Retaux recursions | [derrida-retaux-moment-conjecture](https://github.com/yspennstate/derrida-retaux-moment-conjecture) |
+| The complete graph maximizes the variance of the antivoter model | [antivoter-variance-complete-graph](https://github.com/yspennstate/antivoter-variance-complete-graph) |
+| The d-bar distance between invariant determinantal measures is bounded by the trace norm | [dbar-determinantal-trace-norm](https://github.com/yspennstate/dbar-determinantal-trace-norm) |
+| The divisible sandpile odometer at the critical lower tail | [divisible-sandpile-critical-tail](https://github.com/yspennstate/divisible-sandpile-critical-tail) |
+| The fat-shattering dimension of norm-bounded two-layer ReLU networks in fixed dimension | [relu-fat-shattering-fixed-dimension](https://github.com/yspennstate/relu-fat-shattering-fixed-dimension) |
+| The Fourier entropy–influence inequality for symmetric Boolean functions | [fourier-entropy-influence-symmetric](https://github.com/yspennstate/fourier-entropy-influence-symmetric) |
+| The Fourier entropy–influence inequality for symmetric Boolean functions | [symmetric-fei-constant](https://github.com/yspennstate/symmetric-fei-constant) |
+| The heavy-traffic diffusion limit of symmetric queues | [symmetric-queue-heavy-traffic](https://github.com/yspennstate/symmetric-queue-heavy-traffic) |
+| The largest Kemeny constant and the largest relaxation time of a graph | [largest-kemeny-constant](https://github.com/yspennstate/largest-kemeny-constant) |
+| The Lyapunov exponent of a randomly switched pair of stable planar systems is unimodal in the switching rate | [malrieu-switched-lyapunov-unimodal](https://github.com/yspennstate/malrieu-switched-lyapunov-unimodal) |
+| The relaxation time is not the value of a flow program | [relaxation-time-flow-programs](https://github.com/yspennstate/relaxation-time-flow-programs) |
+| The risk tail of minimum-norm ReLU interpolation on the sphere | [relu-min-norm-interpolation-risk-tail](https://github.com/yspennstate/relu-min-norm-interpolation-risk-tail) |
+| The survival probability of a heavy-tailed critical Derrida-Retaux system | [derrida-retaux-critical-survival](https://github.com/yspennstate/derrida-retaux-critical-survival) |
+| The waiting time for a bridge pattern in simple random walk | [bridge-pattern-waiting-time](https://github.com/yspennstate/bridge-pattern-waiting-time) |
+| The waiting time for a first-passage pattern in simple random walk | [first-passage-pattern-waiting-time](https://github.com/yspennstate/first-passage-pattern-waiting-time) |
+| Time regularization at p = 2 for critical stochastic evolution equations in Hilbert spaces | [critical-hilbert-time-regularization](https://github.com/yspennstate/critical-hilbert-time-regularization) |
+| Tracy–Widom fluctuations for the row-centered conjugate kernel of a random network with polynomial activation | [row-centered-conjugate-kernel-tracy-widom](https://github.com/yspennstate/row-centered-conjugate-kernel-tracy-widom) |
+| Uniqueness of stable allocations in dimensions one and two | [stable-allocation-uniqueness](https://github.com/yspennstate/stable-allocation-uniqueness) |
+| Variances and limit laws for the balance indices of the critical beta-splitting tree | [beta-splitting-balance-indices](https://github.com/yspennstate/beta-splitting-balance-indices) |
