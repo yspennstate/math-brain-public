@@ -270,3 +270,13 @@ keeping the computation next to the claim it supports.
 scale-invariant random spatial network) for the Poisson-line network: one attempt with its audit log and three
 referee reports by separate sessions, ending in an audited candidate for every gamma > 2. Its README credits
 Aldous, Kendall and Kahn, says which of Kahn's results the argument uses, and lists what the referees changed.
+
+`2026-11-16/P0251_crossover_chain/` is a referee report on the crossover-chain paper (Aldous and Fill, Open Problem
+12.5), with the three scripts it ran. Besides checking the paper it adds a lower bound of order log K: the original
+chain mixes one column in a single step, while the labeled variant, and the original chain with two or more words,
+need at least (1/2) log_2 K - 5 steps. Its README credits Aldous and Fill, Czumaj, Diaconis and Shahshahani, and
+Wilson's second-moment method.
+
+`2026-11-16/G0002_cerf_second_order_pivots/` is a referee report on the counterexample to Cerf's conjecture on
+second-order pivots: nine steps re-derived, the paper's checks reproduced, verdict accept with minor changes. Its
+README credits Cerf, Talagrand and Russo.
