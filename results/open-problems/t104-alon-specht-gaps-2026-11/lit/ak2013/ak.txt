@@ -1,0 +1,902 @@
+arXiv:1003.1710v2 [math.PR] 21 Jul 2011   ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE
+                                                                                                 PROCESS
+
+                                                                                                GIL ALON AND GADY KOZMA
+
+                                                     Abstract. Inspired by Aldous’ conjecture for the spectral gap of the interchange process and its
+                                                     recent resolution by Caputo, Liggett and Richthammer [3], we deﬁne an associated order ≺ on the
+                                                     irreducible representations of Sn. Aldous’ conjecture is equivalent to certain representations being
+                                                     comparable in this order, and hence determining the “Aldous order” completely is a generalized
+                                                     question. We show a few additional entries for this order.
+
+                                                                                            1. Aldous’ order
+
+                                              Let G be a ﬁnite graph with vertex set {1, . . . , n}, and equip each edge {i, j} with an alarm
+                                         clock that rings with exponential rate ai,j. Put a marble in every vertex of G, all diﬀerent, and
+                                         whenever the clock of {i, j} rings, exchange the two marbles. Each marble therefore does a standard
+                                         continuous-time random walk on the graph but the diﬀerent walks are dependent. This process
+                                         is called the interchange process and is one of the standard examples of an interacting particle
+                                         system, related to exclusion processes (where the marbles have only a few possible colors) but
+                                         typically more complicated. Further, when one considers the evolution of the permutation taking
+                                         the initial positions of the marbles to their positions at time t, one gets a continuous-time random
+                                         walk on a (weighted) Cayley graph of the group of permutations Sn.
+
+                                              The ﬁrst landmark in the understanding of this process was the work of Diaconis & Shahshahani
+                                         [6]. For the case of G being the complete graph they diagonalized the relevant n! × n! matrix
+                                         completely using representation theory and achieved very ﬁne results on the mixing properties.
+
+                                              If one cannot get the whole spectrum, the second eigenvalue (so-called the spectral gap) allows
+                                         to get signiﬁcant partial information on the process. In 1992 Aldous made the bold conjecture
+                                         that the spectral gap of the interchange process is in fact equal to the spectral gap of the simple
+                                         random walk on G, for every G. This was the focus of much research [2, 9, 12, 15, 4, 5] and was
+                                         ﬁnally resolved by Caputo, Liggett and Richthammer [3]. Our focus in this paper is however the
+                                         spectrum as a whole, and for this we need to discuss the problem from a representation theoretical
+                                         point of view. More details on representation theory will be given below in §2, for now we continue
+                                         assuming the reader has basic familiarity with the subject.
+
+                                             2000 Mathematics Subject Classiﬁcation. 82C22 (60B15, 43A65, 20B30, 60J27, 60K35).
+                                             Key words and phrases. Aldous’ conjecture, interchange process, symmetric group, representations.
+
+                                                                                                                                 1
+2                                GIL ALON AND GADY KOZMA
+
+     Let n ∈ N and let A = {ai,j}1≤i<j≤n with all ai,j non-negative. Examine the following formal
+sum of permutations with real coeﬃcients1
+
+                                 ∆A = ai,j(id −(ij))
+
+                                             i<j
+
+where id stands for the identity permutation. Let ρ be any representation of Sn. Then
+
+                                 ρ(∆A) = ai,j ρ(id) − ρ((ij))                                                (1)
+
+                                 i<j
+
+is some dim ρ × dim ρ matrix. It is well known that ρ(∆A) is a positive-semideﬁnite matrix, indeed
+
+(ij) is an involution so all the eigenvalues of ρ((ij)) are ±1 and the eigenvalues of ρ(id −(ij)) are
+
+in {0, 2}, so each term in (1) is positive and hence so is their sum. We shall denote the eigenvalues
+
+of ρ(∆A) by
+
+                                 λ1(A; ρ) ≤ · · · ≤ λdim(ρ)(A; ρ)
+
+We will occasionally drop the A from the notation.
+
+   Now, the irreducible representations of Sn are indexed by partitions of n. Namely, for each
+                                                       k
+integer sequence r1 ≥ r2 ≥ · · · ≥ rk > 0 with         i=1  ri  =  n  there  exists  a  unique  irreducible  repre-
+
+sentation, which we shall denote by [r1, . . . , rk]. Such a partition has a nice graphical representation
+
+given by the associated Young diagram obtained by drawing each ri as a line of boxes from top to
+
+bottom,
+
+             [5, 1] =            [3, 2, 1] =                          [2, 13] =
+
+and we will occasionally use it. We may now state Aldous’ conjecture
+
+Theorem (Caputo, Liggett & Richthammer [3]). For any A and any irreducible ρ diﬀerent from
+
+the trivial representation [n],
+
+                                 λ1(A; [n − 1, 1]) ≤ λ1(A; ρ).                                               (2)
+
+The formulation of the result in [3] does not use representation theory. As discussed on page 1,
+they showed that the interchange process has the same spectral gap as the simple random walk.
+See [4] for how to get from one formulation to the other.
+
+     Faced with (2) one is tempted to generalize the question. Deﬁne the Aldous order on irre-
+ducible representations by
+
+                                         ρ σ ⇐⇒ ∀A λ1(A; ρ) ≥ λ1(A; σ)
+
+where again by ∀A we mean for all n × n matrices with non-negative coeﬃcients. It is rather
+unfortunate that the largest representation in the ≺ order has the smallest λ1, but we wish to
+make ≺ consistent with the domination order, for which there is already an established direction.
+We say that ρ ≺ σ if ρ σ and they are diﬀerent, and remark that ρ σ and ρ σ imply that
+ρ = σ, see page 9, remark 1.
+
+     As can be seen in ﬁgure 1, ≺ is an interesting object, and it seems to be correlated with the
+domination order ⊳. We say that σ ⊳ ρ if σ can be obtained from ρ by a sequence of steps, such
+that in each step one box is dropped to the row below it, in a way that leaves a Young diagram.
+
+   1Or element of the group ring R[Sn], if you prefer
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS  3
+
+         Figure 1. The Aldous order for n = 4, 5, 6 Arrows are drawn from the larger
+         representations to the smaller ones. For n = 4 everything is proved, but the others
+         are results of computer simulations. What can be trusted in the diagrams are the
+         non-arrows — if the arrows do not imply a relationship between two diagrams that
+         means a computer search found two examples proving no relationship may exist.
+
+Cesi [4] remarked that it would be nice if Aldous’ order were identical to the domination order, but
+
+also noted a counterexample in n = 4: one has ⊲ but ⊁ . See [4, Counterexample
+
+8.2]. Such a counterexample exists for every n ≥ 4: we will see below in corollary 1, page 8, that
+[2, 2, 1n−4] ⊁ [2, 1n−2], although clearly [2, 2, 1n−4] ⊲ [2, 1n−2]. The graph demonstrating this is a
+star. Shannon Starr discovered numerically another asymptotic family of counterexamples for even
+sizes, [n + 1, n − 1] ⊁ [n, n] (private communication, checked numerically up to size 14, n = 7). In
+this case the graph demonstrating it is the cycle. We remark also that the results of Diaconis &
+Shahshahani [6] imply that if σ ⊳ τ then σ ⊁ τ . We do not know if it is generally true that if two
+representations are ⊳-incomparable then they are also ≺-incomparable, so we cannot quite state
+that ≺ is a sub-order of ⊳, though it is a very natural conjecture.
+4  GIL ALON AND GADY KOZMA
+
+     Despite the similarity with the completely explicit ⊳, it is not easy to prove any entry in the
+Aldous order. In fact, the only entries in the Aldous order known previous to this paper are
+[n] ρ [1, . . . , 1] for all ρ (this is easy once one identiﬁes these representations, see corollary 2,
+page 10), a result of Bacher [2] that the hook-shaped diagrams are ordered among themselves
+
+                               [n] ≻ [n − 1, 1] ≻ [n − 2, 12] ≻ · · · ≻ [2, 1n−1] ≻ [1n],
+
+(we ﬁll some details about this in the appendix, page 14) and of course the Caputo et al. result,
+[n − 1, 1] ≻ ρ for all ρ = [n], [n − 1, 1].
+
+     We may now state our result.
+
+Theorem. Let n ≥ 4k2 + 4k. Let τ be an irreducible representation whose Young diagram has
+≥ n − k boxes in the ﬁrst row; and let σ be an irreducible representation whose Young diagram has
+≥ n − k boxes at the the leftmost column. Then τ ≻ σ.
+
+Again we see the relationship with ⊲. What we show is that if “τ ⊲> σ” i.e. if τ is much larger in
+the domination order than σ, then τ ≻ σ.
+
+    Let us end this introduction returning to the work of Diaconis & Shahshahani and to the mixing
+time of Markov chains. Better understanding of Aldous’ order will allow to extend their results
+to other graphs. Of particular interest are the hook-shaped representations because for them all
+eigenvalues are explicitly known [2]. Determining which representations are ≺ than a given hook-
+shaped representation will allow to quickly estimate their contribution to the mixing of the process.
+Let us formulate some modest questions
+
+Question. Describe the representations σ ≺ [n − 2, 12]. The natural generalization of Aldous
+conjecture is that σ ⊳ [n − 2, 12] implies σ ≺ [n − 2, 12]. Is this true? If not, maybe there exists
+some absolute constant K such that any σ ⊳ [n − K, K − 1, 1] satisﬁes σ ≺ [n − 2, 12]?
+
+     There are of course many other natural questions about this order. How many entries does
+it have? What is the longest chain? Is it really a subset of the domination order? What is the
+longest chain in the domination order which is completely uncomparable in Aldous order? etc. The
+simulation results seem to indicate that σ ≻ ρ ⊲ τ implies σ ≻ τ . We see no particular reason
+for this to be true, but if it is it would be interesting. We chose to highlight the question above
+because we believe it has relevance to questions which do not need representation theory to state,
+e.g. mixing time and the quantum Heisenberg ferromagnet (see [1] for the latter).
+
+                                        2. Some representation theory
+
+     This section will contain only the minimal set of facts needed for the paper. For a thorough
+introduction to the topic see one of the books [7, 8, 10, 14] and the inﬂuential paper [13]. A
+representation of Sn is a group homomorphism ρ : Sn → GL(V ) where V is some linear space over
+C and GL(V ) is the space of all linear transformations of V . We will assume throughout that V is
+ﬁnite dimensional. It can be assumed [14, Theorem 1.5.3] that ρ(g) is a unitary matrix, and so we
+will assume this a-priori for all our representations. We denote dim ρ = dim V .
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS                     5
+
+     Given two representations ρi : Sn → GL(Vi), i = 1, 2 one may construct their direct sum
+ρ1 ⊕ ρ2 : Sn → GL(V1 ⊕ V2) by
+
+(ρ1 ⊕ ρ2)(g) =  ρ1(g) 0    .
+                  0 ρ2(g)
+
+On the other hand, if there is a decomposition V = V1 ⊕ V2 such that for any g ∈ Sn, ρ(Vi) ⊂ Vi for
+i = 1, 2 then one may construct ρi(g) = ρ(g)|Vi and get ρ ∼= ρ1 ⊕ ρ2. If no such decomposition exists
+we say that ρ is irreducible. Every representation can be written as a direct sum of irreducible
+representations, and the isomorphism classes of the factors are unique up to order [14, Proposition
+1.7.10]. Recall also Schur’s lemma which states that a linear map from an irreducible V to V which
+commutes with the action of every g ∈ Sn is a constant multiple of the identity [14, Corollary 1.6.8].
+
+2.1. Young diagrams. We will use one speciﬁc method that constructs all the irreducible repre-
+sentations as explicit subspaces of the group ring R. The construction is somewhat abstract, but
+we will only need a few properties which will be easy to deduce, and we will do so in lemma 1 and
+(4) below and forget about the actual deﬁnition of the representations.
+
+     Recall that the group ring R[Sn] is simply the collection of all formal sums g∈Sn agg with
+coeﬃcients ag ∈ R. We will denote R = R[Sn]. Sn acts on R by
+
+     h  agg = aghg
+
+which makes R into a (left) representation known as the regular representation. It is true generally
+for any ﬁnite group that any irreducible representation can be embedded into the regular represen-
+tation [14, Proposition 1.10.1]. For a general ﬁnite group this requires to work over C, but as we
+will see shortly, the speciﬁc structure of the representation of Sn allows to work over R, which is
+more natural in our setting.
+
+     Let now τ1 ≥ τ2 ≥ · · · ≥ τm with τi = n. We deﬁne H to be the group of permutations h
+that preserve the rows of the diagram [τ1 . . . , τm] in the sense that
+
+i ∈ [1, τ1] ⇒ h(i) ∈ [1, τ1]; i ∈ [τ1 + 1, τ1 + τ2] ⇒ h(i) ∈ [τ1 + 1, τ1 + τ2] etc.  (3)
+
+Let V be the group of permutations that preserve the columns of the diagram [τ1, . . . , τm] e.g. any
+v ∈ V must preserve the set {1, τ1 + 1, τ1 + τ2 + 1, . . . , n − τm + 1}. We deﬁne the following elements
+of the group ring R,
+
+aτ = h bτ = sign(v)v cτ = aτ bτ .
+
+h∈H     v∈V
+
+Then the representation [τ1, . . . , τm] is deﬁned to be Rcτ = {rcτ : r ∈ R}, with the group acting
+by multiplication from the left. This is a subspace of R which is easily seen to be closed under
+
+the action of Sn. By [7, Theorem 4.3] these representations are irreducible and exhaust all the
+irreducible representations of Sn.
+
+    To shed a little light on the deﬁnition let us take two examples. The ﬁrst is [n]. In this
+
+case H = Sn and V = {id}. Hence cτ = g∈Sn g so hcτ = cτ for any h ∈ Sn. This means
+that [n] is one-dimensional with a trivial action of Sn. This representation is also known as the
+trivial representation. A second example is [1n]. In this case H = {id} and V = Sn so this time
+
+cτ = g∈Sn sign(g)g. We get that hcτ = sign(h)cτ so this representation is also one-dimensional,
+6  GIL ALON AND GADY KOZMA
+
+but this time the action of Sn is by multiplication with the sign of the permutation, the so-called
+sign representation, which we will denote by sgn. In general, if τ is any Young diagram and if τ ′
+
+is the diagram one gets by reﬂecting τ along the main diagonal (so that the lengths of the rows of
+τ become the lengths of the columns of τ ′) then
+
+   [τ ′] = [τ ] ⊗ sgn .     (4)
+
+See [10, 2.1.8].
+     Now, Raτ is also a representation. Generally it is reducible, but it is much more convenient
+
+to work with. Indeed, gaτ is simply h∈gH h so Raτ is isomorphic to the natural action of Sn on
+the set of cosets {gH : g ∈ Sn/H}. Further, each coset can be thought of as a coloring of n by m
+colors with exactly τ1 numbers colored in the ﬁrst color, exactly τ2 numbers colored in the second
+color, etc. Formally we deﬁne
+
+                          Q = Q(τ ) = {q : {1, . . . , n} → {1, . . . , m} : #q−1(i) = τi} .
+
+and let L2(Q) be a representation of Sn with the natural action (gq)(i) = q(g−1i). We will mainly
+work with these representations, and we relate them to the irreducible ones by
+
+Lemma 1. Let σ1 ≥ . . . ≥ σm with σi = n. Then
+    (1) [σ1, . . . , σm] can be embedded in L2(Q(σ)).
+    (2) For any q ∈ Q there is a non-zero element of this embedding which is invariant under any
+
+          permutation φ that preserves the coloring q i.e. to any φ for which q(φ(i)) = q(i) for all i.
+
+     For example, for [n − 1, 1] we have that m = 2 and an element q ∈ Q is uniquely identiﬁed by
+q−1(2) which is an element of {1, . . . , n}. Hence |Q| = n and L2(Q) can be though of as Rn with
+
+Sn acting by permutation matrices (this representation is known as the standard representation
+of Sn). Clearly the constant vectors form a one-dimensional invariant subspace, and so is their
+orthogonal complement, the vectors whose entries sum to 0. It is not diﬃcult to see (directly from
+
+the deﬁnition) that both are irreducible representations. The ﬁrst is the trivial, hence the second
+is [n − 1, 1].
+
+     Now, the second clause of the lemma in this example is as follows. Take some q ∈ Q i.e. q(i) = 1
+for all i ∈ {1, . . . , n} except one k for which q(k) = 2. A permutation φ preserves q if and only if
+φ(k) = k. An element of L2(Q) invariant to any such φ must be constant on {1, . . . , n} \ {k}, and
+the only such element (up to multiplication by constants) in the subspace isomorphic to [n − 1, 1]
+is (1, . . . , 1, 1 − n, 1 . . . , 1) where the position of the negative entry is k (we are not interested in the
+
+uniqueness, only in the existence).
+
+     We will prove lemma 1 immediately after this simple claim
+
+Lemma 2. Let ρ : Sn → GL(V ) be a representation and let V1, . . . , Vm be subspaces of V invariant
+under the action of Sn. Let W be an irreducible component of Vi. Then W is isomorphic to a
+component of one of the Vi.
+
+Proof. Clearly it is enough to prove this for just two subspaces V1 and V2. Denote U = V1 ∩ V2.
+Then U is invariant under the action of Sn. Since every invariant subspace is complemented [14,
+Proposition 1.5.2] we can write Vi = U ⊕ Ui and V1 + V2 = U ⊕ U1 ⊕ U2. The lemma now follows
+by the uniqueness of decomposition into irreducible representations.
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS  7
+
+Proof of lemma 1. Examine
+
+                                                   RaσR = Raσg .
+
+                                                                                       g∈Sn
+
+It is easy to check that each Raσg is a representation which is isomorphic to Raσ (g is an invertible
+element of the group ring R). Since [σ] ∼= Rcσ ⊂ RaσR we get by lemma 2 that [σ] can be embedded
+into Raσ. By the discussion before the statement of the lemma, Raσ =∼ L2(Q) so the ﬁrst claim of
+lemma 1 is proved.
+
+     For the second claim, note that the permutations φ as above form a group, which we will denote
+by Hq. Now, it is not important which q one takes, since if v is invariant to the action of Hq then
+gv is invariant to the action of gHqg−1; and gHqg−1 = Hgq which can give any q′ ∈ Q. So we will
+verify the claim for the H deﬁned in (3). But in this case it is clear that cσ itself is invariant to the
+action of H. Since the property of existence of a vector invariant to H is an abstract property of
+a representation, then it is not important that the vector cσ is not necessarily in Raσ but just in
+some isomorphic copy. The lemma is thus proved.
+
+     It is interesting to note that the irreducible components of L2(Q) are known and are all [τ ] with
+τ σ [10, Lemma 2.1.10]. But we will not use it.
+
+                             3. Star graphs and the Gelfand-Tsetlin basis
+
+     For n ≥ k ≥ 1, let Kn,k be the graph with vertices {1, . . . , n} where all the vertices {1, . . . , k}
+are connected with each other, and the remaining n − k vertices are isolated. By abuse of notation,
+we will also denote by Kn,k the adjacency matrix of this graph. For any matrix A we denote by
+Wt(A) = i<j ai,j. We put Starn,k = Kn,k − Kn,k−1, a star graph having the vertex k connected
+with each of 1, . . . , k − 1. We remark that as elements of the group ring, Starn,k are known as the
+Jucys-Murphy elements.
+
+    In this section, we shall ﬁnd all the eigenvalues of σ(∆Starn,k ) = σ(id) − σ((ij)) for any
+irreducible representation σ of Sn. These will serve as useful examples, but more importantly will
+be used in the proof of the main theorem in section 4. We will use the Gelfand-Tsetlin basis, an
+idea also used in [5].
+
+     Now, the theory of Gelfand-Tsetlin pairs and bases is very deep with many analogs in diﬀerent
+categories (see e.g. [11] for a survey) but we will not need any of it here. For our purposes it is
+enough to deﬁne the basis inductively as follows: If n = 1 then the representation must be one
+dimensional and we take a nonzero vector as the basis vector. For n > 1, we consider the natural
+embedding Sn−1 ֒→ Sn whose image is {π ∈ Sn : π(n) = n}. We decompose the restriction σ|Sn−1
+into irreducible representations of Sn−1 as i Vi, take the Gelfand-Tsetlin basis of each Vi and
+deﬁne our basis as the union of the resulting bases.
+
+     If σ = [α], where α is a Young diagram of size n, then σ|Sn−1 = β[β], where β goes over all
+the Young diagrams of size n − 1, obtained by removing, in all possible ways, one box from α. See
+[14, §2.8]. Hence, the elements of the Gelfand-Tsetlin basis of [α] are in one to one correspondence
+with the sequences α = αn, αn−1, . . . , α1 = of young diagrams, in which each αi for i < n is
+obtained from αi+1 by removing one box.
+
+Lemma 3. Let G = Starn,k for some 2 ≤ k ≤ n, and let σ be an irreducible representation of Sn.
+8                                    GIL ALON AND GADY KOZMA
+
+   (1) The Gelfand-Tsetlin basis of σ is a basis of eigenvectors for eG acting on σ.
+   (2) Let α = αn, αn−1, . . . , α1 = be a sequence of Young diagrams, where αi−1 is obtained from
+
+        αi by removing the xith box at the yith row, and σ = [αn]. Let v be the Gelfand-Tsetlin
+        basis element corresponding to the above sequence. Then, the eigenvalue of ∆G with respect
+        to v is (k − 1) + yk − xk.
+
+Proof. (1) Let us ﬁrst prove that each vector in the Gelfand-Tsetlin basis of σ is an eigenvector
+
+for each of Kn,1, Kn,2, . . . , Kn,n. We will do it by induction on n. For n = 1 the claim is vacuous.
+For n > 1, we decompose σ|Sn−1 into irreducible representations and using the induction hypoth-
+esis, conclude that the Gelfand-Tsetlin basis vectors are eigenvectors of Kn,1, . . . , Kn,n−1. As for
+Kn,n, the element ∆Kn,n lies in the center of R[Sn] (being a linear combination of the sum of all
+transpositions and the identity). Hence, by Schur’s lemma it acts as a scalar on each irreducible
+
+representation of Sn. This ﬁnishes the inductive step. Hence, each vector of the Gelfand-Tsetlin
+basis is an eigenvector of G = Kn,k − Kn,k−1.
+
+     (2) Let us now ﬁnd the scalar by which Kn,i acts on the irreducible Si-representation [αi],
+assuming that αi has row lengths l1, . . . , lm. For that matter, we invoke the trace formula from [6,
+lemma 7], by which, the trace of a transposition acting on [αi] is
+
+                                 dim[αi] m                   lj − j + 1  −   j
+                                                                  2          2
+                                       i
+                                      2 j=1
+
+where we deﬁne  x  =  1  x(x  −  1)  also  for  x<           2.  Hence,  ∆Kn,i  =     1≤j<k≤i(id −(jk)) acts on [αi]
+                2     2
+via the scalar
+                                                          m
+                                                                 lj − j + 1  −     j  .
+                         ci := Wt(Kn,i) −                             2            2
+
+                                                j=1
+
+Let us ﬁnd the eigenvalue of ∆G = ∆Kn,k − ∆Kn,k−1 with respect to our basis vector v. This
+eigenvalue is equal to ck − ck−1, and we will now simplify it. Recall that passing from αk to αk−1
+is done by removing the rightmost box from the ykth row. We distinguish two cases
+
+    Case 1: αk and αk−1 have the same number of rows. In that case, all the summands except
+the ykth one cancel out, and we are left with
+
+   Wt(Starn,k) −              lyk − yk + 1 − lyk − yk                    = Wt(Starn,k) − (lyk − yk)
+                                     2                           2
+
+                                                                         = k − 1 − (xk − yk).
+
+    Case 2: αk is obtained from αk−1 by removing the unique box in the ykth row. In that case, we
+have lyk = 1, and the scalar is
+
+   Wt(Starn,k) −         lyk − yk + 1      −    yk               = Wt(Starn,k) −      2 − yk  −  yk  =
+                               2                2                                        2       2
+
+                   = Wt(Starn,k) − (1 − yk) = k − 1 − (xk − yk).
+
+Hence, ∆Starn,k v = (k − 1 − (xk − yk))v, and the result follows.
+
+Corollary 1. For any n, [2, 2, 1n−4] ⊁ [2, 1n−2].
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS                        9
+
+2          4
+
+                                      a2
+
+                                      a3
+
+1  3                                  a4
+
+   Figure 2. A quasi-complete graph.
+
+Proof. Examine the star graph G = Starn,n. We get that λ1(G; ρ) = min{(n − 1) + y − x} where
+the minimum is taken over all boxes (x, y) which can be removed to get a legal Young diagram.
+For [2, 2, 1n−4] these boxes are (2, 2) and (if n > 4) (1, n − 2). The minimum is achieved at
+(2, 2) so λ1(G; [2, 2, 1n−4]) = n − 1. For [2, 1n−2] the minimum is achieved at (2, 1) giving that
+λ1(G; [2, 1n−2]) = n − 2.
+
+     Since [2, 2, 1n−4] ⊲ [2, 1n−2] this shows that ≻ and ⊲ diﬀer for every n. Similarly one can show
+that [2i, 1n−2i] ⊁ [2j , 1n−2j] for any j < i ≤ n/2 giving a chain of length ⌊n/2⌋ in the domination
+order, no two elements of which are comparable in the Aldous order.
+
+3.1. Quasi-complete graphs. Let a2, a3, . . . , an be non-negative numbers and examine
+
+    n
+
+       ak Starn,k
+
+   k=2
+
+This is not just any combination of stars, but stars formed in a special order, each added vertex
+connected to all existing ones. We call such graphs quasi-complete graphs. See ﬁgure 2. Since the
+Gelfand-Tsetlin basis of [α] is a basis for of eigenvalues for Starn,k for all k it is also a basis of
+eigenvalues for their linear combination. Further, the basis element corresponding to a sequence
+αn, . . . , α1 as in lemma 3 gives the eigenvalue
+
+      n
+
+   Wt(G) − ak(xk − yk).                                                                 (5)
+
+      k=2
+
+Let us make three remarks about quasi-complete graphs:
+    1. Taking ak to be very fast decreasing (taking ak = n−2k is good enough) it is easy to see
+
+that the minimal eigenvalue is achieved when the boxes are removed as follows: ﬁrst remove the
+lowest row completely, then the second lowest row completely, etc. This shows that if α < β in the
+lexicographical order then α ⊁ β. As a corollary we get that α β and β α imply α = β.
+
+     2. This family of graphs is not rich enough to determine the Aldous order. For example, take
+the fact that [n + 1, n − 1] ⊁ [n, n] which can be veriﬁed for small n ≥ 3 by direct calculation for
+the circle graph (we have no proof that it holds for all n but this is not relevant at this point).
+Quasi-complete graphs cannot demonstrate this fact, because any sequence of Young diagrams as
+in lemma 3 for [n, n] must start by removing the box at (n, 2), while a sequence for [n + 1, n − 1]
+may start by removing the box at (n + 1, 1), and continue by mimicking the ﬁrst sequence, since
+10   GIL ALON AND GADY KOZMA
+
+in both cases α2n−1 = [n, n − 1]. So we see that
+
+                                         λ1(G; [n + 1, n − 1]) ≤ λ1(G; [n, n])
+
+for any quasi-complete graph G.
+     3. As an approximation to the Aldous order, one may ask whether two young diagrams σ, τ of
+
+size n satisfy λ1(G; σ) ≤ λ1(G; τ ) for all quasi-complete graphs G. Using formula (5), the answer
+can be put in terms of the following combinatorial game: Let players A and B get the young
+diagrams σ and τ , respectively. Both players ﬁll out their diagrams as follows: On each square at
+position (i, j) whey write the number j − i. The game has n steps. At each step of the game, player
+B breaks oﬀ a square from his diagram, in a way that leaves a legal young diagram, and announces
+the number on that square. Then, player A does the same. We say that player A wins the game if
+at each step, her number is no less than player B’s number. It is not hard to see that player A has
+a winning strategy if, and only if, λ1(G; σ) ≤ λ1(G; τ ) for all quasi-complete graphs G.
+
+     4. Proof of the main theorem
+
+    The proof requires that we examine closely the maximal eigenvalue of σ(∆A) (which is of course
+also its norm as an l2 operator, as this is a positive matrix). We denote it by
+
+                                                         λmax(A; σ).
+
+We keep from the previous section the notation Wt(A) = i<j ai,j. For k < n, we denote by Sk
+the set of representations corresponding to Young diagrams of size n such that the ﬁrst row has
+≥ n − k boxes (so all the other rows have, combined, ≤ k boxes). Denote
+
+                                            Sk ⊗ sgn = {σ ⊗ sgn : σ ∈ Sk}
+
+which by (4) is also the set of representations corresponding to Young diagrams of size n such that
+the leftmost column has ≥ n − k boxes.
+
+     As in the previous section, we will use “matrix” and “weighted graph” interchangeably, under-
+standing that all our matrices have non-negative entries, and that the corresponding graph has an
+edge at any (i, j) for which ai,j = 0. In particular when we subtract graphs and weighted graphs,
+we are in fact subtracting the corresponding matrices. Let us start with two standard facts which
+we prove for the convenience of the reader.
+
+Lemma 4. For any A with entries aij and any representation σ
+
+     λmax(A; σ) = 2 Wt(A) − λ1(A; σ ⊗ sgn).                                                (6)
+
+and
+
+     λmax(A; σ) ≤ 2 Wt(A)                                                                  (7)
+
+Proof. The action of ∆A = i<j aij(id −(ij)) on σ is linearly isomorphic to the action of
+
+                                               aij(id +(ij)) = 2 Wt(A) − ∆A
+
+                                                           i<j
+
+on σ ⊗ sgn. This gives (6). The second part follows immediately since λ1(A; σ ⊗ sgn) ≥ 0.
+Corollary 2. For any σ, [n] σ [1n].
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS                  11
+
+Proof. Recall that [n] is the trivial representation, so λ1(A; [n]) = 0 which shows [n] σ. In the
+other direction, [1n] = sgn so λ1(A; [1n]) = λmax(A; [1n]) = 2 Wt(A) ≥ λmax(A; σ) ≥ λ1(A; σ).
+
+Lemma 5. Assume n ≥ 4k and let σ ∈ Sk. Let G be a graph with 2k disjoint edges (i.e. 4k vertices
+have degree 1, and the remaining n − 4k vertices are isolated). Then
+
+λmax(G; σ) ≤ 2k.
+
+Proof. Recall the representation L2(Q) of lemma 1, namely if σ1 ≥ . . . ≥ σm > 0 are the lengths of
+the rows of (the Young diagram corresponding to) σ then
+
+                          Q = Q(σ) = {q : {1, . . . , n} → {1, . . . , m} : #q−1(i) = σi}.
+
+By lemma 1 we know that the representation σ can be embedded in L2(Q). Hence it is enough to
+show that
+
+                                                  λmax(G; L2(Q)) ≤ 2k.
+Let f ∈ L2(Q) be an eigenvector for λmax, and let q ∈ Q be the point where the maximum of |f |
+is attained. Fix one edge (i, j) ∈ G and examine
+
+((id −(ij))f )(q) = f (q) − f ((ij)q).                                            (8)
+
+If q(i) = q(j) = 1 (recall that the elements q of Q are themselves functions) then (ij)q = q and (8)
+is zero. However, by deﬁnition of Q the number of i such that q(i) = 1 is ≤ k. Because the degree
+of G is ≤ 1 we get that for any i there can be at most one j such that (i, j) ∈ G hence there are a
+totality of no more than k edges (i, j) ∈ G for which (8) is non-zero. Hence we get
+
+                                                  ((id −(ij))f )(q) ≤ 2k|f (q)|.
+
+                                                           (i,j)∈G
+
+Since f is an eigenfunction of λmax, we also have
+
+                                                  ((id −(ij))f )(q) = λmaxf (q)
+
+                                                          (i,j)∈G
+
+and the lemma is proved.
+
+Lemma 6. Let σ ∈ Sk and let G = Starn,l+1 i.e. a star graph with l edges and the rest of the
+vertices isolated. Then
+
+                                                    λmax(G; σ) ≤ l + k
+
+Proof. This is a corollary of lemma 3. The eigenvector for the maximal eigenvalue corresponds to
+an element of the Gelfand-Tsetlin basis, which corresponds to a sequence of boxes (xi, yi) of σ as
+in lemma 3. Since σ has no more than k + 1 rows, we have yi ≤ k + 1 for all i, and we always have
+xi ≥ 1. According to lemma 3,
+
+                     λmax(G; σ) = ((l + 1) − 1) + (yl+1 − xl+1) ≤ l + k + 1 − 1 = l + k.
+
+Lemma 7. Let A be a weighted star, i.e. assume there are some a2 ≥ · · · ≥ an ≥ 0 such that (1, i)
+has weight ai but (i, j) has weight 0 when both i > 1 and j > 1. Let σ ∈ Sk. Then
+
+                                λmax(A; σ) ≤ 2a2 + · · · + 2ak+1 + ak+2 + · · · + an.
+12                                   GIL ALON AND GADY KOZMA
+
+Proof. Write A = A2 + · · · + An where Ai is a weighted star with weights
+
+                      i−1 times      n−i times
+
+                ai − ai+1, . . . , ai − ai+1,0, . . . , 0                i = 2, . . . , n − 1
+
+                n−1 times
+
+                an, . . . , an                                           i = n.
+
+Since λmax is a norm (recall that σ(∆A) is a positive matrix so λmax is its norm as an l2 operator),
+we have that
+
+                                                                                         n
+
+                                             λmax(A; σ) ≤ λmax(Ai; σ).
+
+                                                                                       i=2
+
+Each summand may be estimated by lemma 6, and we get
+
+                          λmax(Ai; σ) ≤ (i − 1 + k)(ai − ai+1). (deﬁne an+1 := 0)
+However, for i ≤ k we actually get a better estimate from the trivial bound (7),
+
+                                     λmax(Ai; σ) ≤ 2(i − 1)(ai − ai+1).
+
+Summing we get
+
+                                k                          n
+
+      λmax(A; σ) ≤ 2(i − 1)(ai − ai+1) +                      (i − 1 + k)(ai − ai+1) =
+
+                                i=2                        i=k+1
+
+                                k+1  n
+
+                      = 2ai +               ai
+
+                                i=2  i=k+2
+
+as was to be proved.
+
+Lemma 8. Let A, H be two weighted graphs with n vertices, and let σ, τ be two irreducible repre-
+
+sentations of Sn. If
+
+                                     λ1(H; τ ) ≥ λmax(H; σ)                                    (9)
+
+and
+
+                                     λ1(A; τ ) ≥ λ1(A; σ)
+
+then
+
+                                     λ1(A + H; τ ) ≥ λ1(A + H; σ).
+
+Proof. Recall the variational characterization of λ1 which states that for any positive matrix M ,
+its lowest eigenvalue is the minimum over all vectors v of M v, v . Hence we may upper bound
+λ1(A + H; σ) with any v, and we choose v to be a unit eigenvector corresponding to λ1(A; σ). Then
+
+                      λ1(A + H; σ) ≤ (∆A + ∆H )v, v =
+
+                                         = λ1(A; σ) + ∆H v, v ≤ λ1(A; σ) + λmax(H; σ) ≤
+
+                                         ≤ λ1(A; τ ) + λ1(H; τ ) ≤ λ1(A + H; τ ).
+
+    We remark that even though lemma 8 works for any matrix H, we will apply it only to matrices
+whose entries take two values (one of which is 0) i.e. to graphs whose weights are all the same.
+         ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS                13
+
+Deﬁnition 3. Let G, H be two weighted graphs, and σ, τ representations of Sn.
+
+    (1) We call H a reducing graph for σ, τ if H satisﬁes (9).
+    (2) We say that G is H-irreducible if there does not exist a graph H′ isomorphic to H and a
+
+          number ǫ > 0 such that ǫH′ ≤ G.
+
+The identities (4) and (6) show that equation (9) is equivalent to
+
+         λmax(H; σ) + λmax(H; τ ⊗ sgn) ≤ 2 Wt(H).
+
+We will use this reformulation to show that a given graph H is reducing.
+
+Lemma 8 is the basis to our strategy of reduction: In proving that σ ≻ τ , if H is a reducing
+
+graph,   it is enough to prove that  λ1(A; σ)  ≤  ′λ=∼1(AH;  τ ) only for H-irreducible  matrices A. Indeed,
+if A is  not H-irreducible, then we  can ﬁnd   H             and ǫ > 0 such that A −     ǫH′ has nonnegative
+
+weights on the edges, and fewer nonzero weights than A. According to lemma 8, it is enough to
+
+prove the inequality for A − ǫH′. Repeating this procedure, we reduce the problem to H-irreducible
+
+graphs.
+
+Proof of the theorem. Let n ≥ 4k2 + 4k and let σ ∈ Sk and τ ∈ Sk ⊗ sgn. The claim of the theorem
+is that under these conditions σ ≻ τ . Let H be the graph with 2k disjoint edges i.e. as a matrix its
+
+coeﬃcients hij are given by
+
+         hij =                       1  i = 2k and j = 2k + 1 for some k
+                                     0  otherwise.
+
+By lemma 5,
+                                λmax(H; τ ⊗ sgn) + λmax(H; σ) ≤ 4k = 2 Wt(H).
+
+Hence, H is a reducing graph for σ and τ . It is hence enough to prove that λ1(A, σ) ≤ λ1(A, τ ) for
+any H-irreducible matrix A.
+
+     It is well known that an H-irreducible graph can be written as a union of 4k − 2 weighted stars.
+Indeed, choose an edge e of A arbitrarily and remove from A the two stars centered at the two
+vertices of e. If the resulting graph is non-empty, choose again some edge arbitrarily and remove
+two stars. This process must stop after 2k − 1 steps, since otherwise we would have found 2k
+disjoint edges in A. Hence we wrote A as a union of 4k − 2 stars. Denote
+
+                                                                                      4k−2
+
+                                                         A = Si.
+
+                                                                                       i=1
+
+We now use lemma 7 for each of the Si and sum over i. Recall that the k edges with the largest
+weights of a weighted star play a special role in lemma 7 — their weights were multiplied by 2
+rather than by 1. Collecting these special edges for the 4k − 2 stars gives a total of k(4k − 2) special
+edges. Denote them by ei. Thus the conclusion of lemma 7 is
+
+                                                             k(4k−2)
+
+         λmax(A, τ ⊗ sgn) ≤ aij +                                     aei
+
+                                                  i<j        i=1
+
+(where if e = (i, j) then we denote ae = aij). The edges ei combined have no more than (k + 1) ·
+(4k − 2) = 4k2 + 2k − 2 vertices.
+14       GIL ALON AND GADY KOZMA
+
+     Let us now move to the estimate of λ1(A; σ). For that matter, pick 2k vertices which do not
+belong to any of the ei’s (here we use the condition n ≥ 4k2 + 4k). Denote these vertices by
+v1, . . . , v2k. For every i, let W (i) be the weight of vi i.e.
+
+                                                                                           n
+
+                                                      W (i) = avij.
+
+                                                                                         j=1
+
+Assume w.l.o.g. that the vi are arranged so that W (i) are increasing. Examine again the repre-
+sentation L2(Q) from lemma 1. By clause (2) of that lemma, since σ ∈ Sk, for any set of n − k
+vertices there exists a nonzero element f ∈ V ⊂ L2(Q), where V is an invariant subspace of L2(Q)
+isomorphic to σ, such that f is invariant to permutations of elements from this set. Normalize f
+to have ||f || = 1. We choose the set to be all vertices except v1, . . . , vk. Examine now
+
+                                                          aij(id −(ij))f.
+
+                                                                         i<j
+
+If both i and j are diﬀerent from v1, . . . , vk then (ij)f = f and the contribution to the sum is 0.
+Otherwise we simply estimate
+
+                                                 ||aij(id −(ij))f || ≤ 2aij
+(here || · || is the norm in L2(Q)) and we get
+
+             k                             2k
+
+         aij(id −(ij))f ≤ 2 W (i) ≤ W (i)
+
+    i<j  i=1                               i=1
+
+where the second inequality comes from the fact that we chose the W (i) increasing. This bounds
+λ1(A; σ) and we get
+
+         2k                                      k(4k−2)
+
+    λ1(A; σ) + λmax(A; τ ⊗ sgn) ≤ W (i) + aij +                             aei
+
+         i=1    i<j                              i=1
+
+Since the vertices v1, . . . , v2k are diﬀerent from the vertices on the edges ei, the above sum contains
+each edge no more than twice. Hence,
+
+    λ1(A; σ) ≤ 2 Wt(A) − λmax(A; τ ⊗ sgn) = λ1(A; τ ).
+
+    Appendix A. The hook-shaped diagrams
+
+    In this appendix we prove the claim appearing in the introduction that
+
+         [n] ≻ [n − 1, 1] ≻ · · · ≻ [1n].                                        (10)
+
+This is basically a result of Bacher [2], who showed that the eigenvalues λi(A; [n − k, 1k]) are
+simply all the sums of all k-tuples of the eigenvalues λi(A; [n − 1, 1]). This immediately implies
+(10) (recall that the eigenvalues are all non-negative). However, he used a diﬀerent description of
+these representations, as wedge products of [n − 1, 1]. We will now prove that the two descriptions
+coincide. This was known before (for example, it is mentioned without proof in [3] in the penultimate
+paragraph of the introduction) but we found no proof in the literature.
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS                 15
+
+Lemma 9. ∧k[n − 1, 1] ∼= [n − k, 1k]
+
+     The proof will use the Murnaghan-Nakayama formula for the characters of the irreducible
+representations of Sn. See e.g. [14, Theorem 4.10.2]. We will not give a full description of this
+formula here.
+
+Proof. Recall that for a representation ρ the character is a function χ : G → C deﬁned by χ(g) =
+
+tr ρ(g) and that two representations are isomorphic if and only if their characters coincide [14,
+
+Corollary 1.9.4(5)]. Thus it is enough to prove that the two representations have the same character.
+
+Let us denote the character of the representation on the left hand side by χ∧k and the right hand
+side by χΓk (the letter Γ reminds us of a hook). We will prove that χk∧ + χ∧k−1 = χΓk + χkΓ−1. Since
+the lemma is true for k = 1, that will be enough.
+
+    Let V be the n-dimensional Euclidean space,    with  the standard basis      e1, .., en, viewed as the
+standard representation of Sn (see page 6). Since  V ∼=  [n − 1, 1] ⊕ [n], and   [n] is one dimensional,
+
+it can be easily seen that
+
+                            ∧kV ∼= ∧k−1[n − 1, 1] ⊕ ∧k[n − 1, 1].
+
+Therefore χ∧kV = χ∧k + χ∧k−1. Recall now the standard basis for ∧kV : for any subset K = {i1 <
+i2 < · · · < ik} of {1, 2, . . . , n} let eK = ei1 ∧ · · · ∧ eik . We will calculate the trace of a permutation
+g (acting on ∧kV ) using this basis. Let g ∈ Sn have cycles of lengths c1 ≥ c2 ≥ · · · ≥ cr. We have
+geK = ±eg(K). The only contribution to the trace comes from eK’s for which g(K) = K, and in
+this case the ± above is simply sgn(g|K ). Hence we get
+
+                            χ∧kV (g) =                           (−1) ǫi(ci−1).
+
+                                        ǫ1,...,ǫr∈{0,1}: ǫici=k
+
+Let us now calculate χΓk + χkΓ−1. We use the Murnaghan-Nakayama rule, which takes a nice form
+for hook-shaped diagrams: For a hook-shaped diagram γ, let S(γ) be the set of all sequences of
+Young diagrams γ = γ1, . . . , γr+1 = ∅ such that for 1 ≤ i ≤ r, γi+1 is obtained from γi by removing
+ci consecutive boxes. Note that except for the last stage, all the removed parts do not contain the
+corner (1, 1) and hence are either horizontal or vertical bars. We will call the removed parts of the
+r − 1 ﬁrst stages the bars of the sequence. For any set of consecutive boxes we deﬁne its height to
+
+be the number of rows it occupies. And for an element (γ1, . . . , γr+1) of S(γ), we deﬁne its height
+to be ri=1(1 + height(γi \ γi+1)). Then, according to the Murnaghan-Nakayama rule,
+
+                            χΓk (g) =              (−1)height(s).
+
+                                        s∈S([n−k,1k])
+
+Let f be the bijective function from the Young diagram [n − k, 1k] to the Young diagram [n − k +
+1, 1k−1] taking the box at position (1, i) to the box (1, i− 1) for all i > 1, and taking the box at (i, 1)
+to (i + 1, 1) for all i. See ﬁgure 3. Let A be the subset of S([n − k, 1k]) of all sequences for which
+no bar has (1, 2) as an endpoint, and let B be the subset of S([n − k + 1, 1k−1]) of all sequences for
+
+which no bar has (2, 1) as an endpoint. Let F : A → B be the function deﬁned by applying f to
+
+each stage of the sequence. Then F is well deﬁned because the condition that (1, 2) is not an end
+
+point ensures that the image is indeed a set of legal Young diagrams; and F is a bijection, since
+16                         GIL ALON AND GADY KOZMA
+
+                   (1, 1)  (2, 1)    (3, 1)  (4, 1)
+                   (1, 2)
+                   (1, 3)
+
+    Figure 3. The mapping f : [n − k, 1k] → [n − k + 1, 1k−1].
+
+an inverse function can be deﬁned using f −1. Moreover, the corresponding terms for s and F (s)
+cancel out in the sum for χΓk + χΓk−1. Hence,
+
+    χkΓ + χΓk−1 =          (−1)height(s) +                       (−1)height(s).
+
+                   s∈S([n−k,1k ])\A         s∈S([n−k+1,1k−1])\B
+
+But this is equal to χV (g): A sequence ǫ1, .., ǫr ∈ {0, 1} such that ǫici = k determines a unique
+term in one of the above two summands in the following way: at each stage, we remove a vertical
+
+bar of size ci if ǫi = 1 and a horizontal one if ǫi = 0. We get a sequence of Young diagrams in
+the ﬁrst summand when ǫr = 0, and in the second summand when ǫr = 1. Further, it is easy to
+check that all terms in both summands are obtained in this way, and that the corresponding term
+is (−1) ǫi(ci−1).
+
+                                                        References
+
+ [1] Gil Alon and Gady Kozma, The probability of long cycles in the interchange process. Preprint (2010). 1009.3723
+ [2] Roland Bacher, Valeur propre minimale du laplacien de Coxeter pour le groupe sym´etrique. [French, Minimal
+
+      eigenvalue of the Coxeter Laplacian for the symmetric group] J. Algebra 167:2 (1994), 460–472.
+ [3] Pietro Caputo, Thomas M. Liggett and Thomas Richthammer, Proof of Aldous’ spectral gap conjecture. J. Amer.
+
+      Math. Soc. 23:3 (2010), 831–851.
+ [4] Filippo Cesi, On the eigenvalues of Cayley graphs on the symmetric group generated by a complete multipartite
+
+      set of transpositions. J. Algeb. Combin. 32:2 (2010), 155–185.
+ [5] A. B. Dieker, Interlacings for random walks on weighted graphs and the interchange process. SIAM J. Discrete
+
+      Math. 24:1 (2010), 191–206.
+ [6] Persi Diaconis and Mehrdad Shahshahani, Generating a random permutation with random transpositions. Z.
+
+      Wahrsch. Verw. Gebiete 57:2 (1981), 159–179.
+ [7] William Fulton and Joe Harris, Representation theory. A ﬁrst course. Graduate Texts in Mathematics, 129.
+
+      Readings in Mathematics. Springer-Verlag, New York, 1991.
+ [8] David M. Goldschmidt, Group characters, symmetric functions, and the Hecke algebra. University Lecture Series,
+
+      4. American Mathematical Society, Providence, RI, 1993.
+ [9] Shirin Handjani and Douglas Jungreis, Rate of convergence for shuﬄing cards by transpositions. J. Theoret.
+
+      Probab. 9:4 (1996), 983–993.
+[10] Gordon James and Adalbert Kerber, The representation theory of the symmetric group. With a foreword by P.
+
+      M. Cohn. With an introduction by Gilbert de B. Robinson. Encyclopedia of Mathematics and its Applications,
+      16. Addison-Wesley Publishing Co., Reading, Mass., 1981.
+[11] Alexander I. Molev, Gelfand-Tsetlin bases for classical Lie algebras. Handbook of algebra. Vol. 4, 109–170,
+      Handb. Algebr., 4, Elsevier/North-Holland, Amsterdam, 2006.
+ORDERING THE REPRESENTATIONS OF Sn USING THE INTERCHANGE PROCESS  17
+
+[12] Ben Morris, Spectral gap for the interchange process in a box. Electron. Commun. Probab. 13 (2008), 311–318.
+[13] Andrei Okounkov and Anatoly Vershik, A new approach to representation theory of symmetric groups. Selecta
+
+      Math. (N.S.) 2:4 (1996), 581–605.
+[14] Bruce E. Sagan, The symmetric group. Representations, combinatorial algorithms, and symmetric functions.
+
+      Second edition. Graduate Texts in Mathematics, 203. Springer-Verlag, New York, 2001.
+[15] Shannon Starr and Matt Conomos, Asymptotics of the Spectral Gap for the Interchange Process on Large Hy-
+
+      percubes. Preprint (2008),
+
+      Gady Kozma, Department of Mathematics,, Weizmann Institute of Science,, Rehovot 76100, Israel
+      E-mail address: gadyk@weizmann.ac.il
+
+      Gil Alon, Division of Mathematics,, The Open University of Israel,, 1 University Road, Raanana
+43107, Israel
+
+      E-mail address: gilal@openu.ac.il
+

@@ -1,0 +1,13 @@
+PROVED: split and Phi substitution identities.
+PROVED: H = T^4 Phi under normalization.
+PROVED: Psi=0 and M=m at star for symbolic n.
+PROVED: Psi=0 and M=m at edge for symbolic n.
+Correction to supplied subsidiary equality claim:
+At x=(3,3,-2,-2,-2)/sqrt(30), all pairs excluding coordinates S have product 2/15, but M=2/15 < m=3/10.
+The exact condition is: every positive-weight pair has product m.
+PROVED: exact zero-padding coefficient comparisons: 2*h**3 + h**2*rho + 15*h**2 + 3*h*rho + 31*h - 10*rho + 12
+PROVED: fixed-S Hessian determinant: 16*n**3*(n - 1)*(S**2*n**3 - 5*S**2*n**2 + 4*S**2*n - n + 3)
+PROVED: constrained curvature and nonzero third-moment derivative identities for the two-interior-value reduction.
+## Exact algebra audit (audit_algebra.py)
+
+PROVED by symbolic identities: split, substitution of M, degree-eight homogenization, and both equality vectors for symbolic n. The supplied equality criterion for m>=M needs correction: equal positive-weight products need not equal the global maximum. Explicit example (3,3,-2,-2,-2)/sqrt(30) has M=2/15 and m=3/10. Correct criterion: all positive-weight products equal m. This is not a counterexample to Psi>=0.

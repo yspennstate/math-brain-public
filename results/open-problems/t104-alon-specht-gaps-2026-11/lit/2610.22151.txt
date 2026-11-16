@@ -1,0 +1,1796 @@
+                                          Spectral comparison on Specht modules
+                                           and mixing of the interchange process
+
+                                                                       Gil Alon
+                                                                 October 16, 2026
+
+arXiv:2610.22151v1 [math.PR] 15 Oct 2026                                                   Abstract
+
+                                              We characterize the cases in which the minimal eigenvalues of interchange-process
+                                          Laplacians on two Specht modules can be compared up to a positive multiplicative
+                                          constant, independent of the edge rates. In the comparable cases, we establish an
+                                          inverse-polynomial lower bound for this constant. We conjecture that the constant can
+                                          always be taken to be 2/3.
+
+                                              We apply these ideas to the mixing times of the interchange and exclusion processes.
+                                          Using the comparison method of Hermon, Kozma and Salez, we prove that our
+                                          conjecture implies a conjecture of Oliveira on the mixing time of the interchange
+                                          process. We also obtain unconditional mixing-time bounds for both processes.
+
+                                          1 Introduction
+
+                                          1.1 Spectral comparison for weighted graphs
+
+                                          Let G = ([n], wij) be a weighted graph with nonnegative weights. The Aldous conjecture,
+                                          proved by Caputo, Liggett and Richthammer [2], states the following, for any nontrivial
+                                          partition   n:
+
+                                          min(G,  )  min(G, [n - 1, 1])                                                             (1)
+
+                                          Here min(G,  ) means the minimum eigenvalue of the Laplacian matrix
+
+                                          L(G,  ) =  ( wij(id - (ij)))
+
+                                                                   i<j
+
+                                              where  : Sn  GLd (R) is the irreducible representation, or the Specht module,
+                                          corresponding to  .
+
+                                              In this setting we can see equation (1) as establishing a relation of spectral dominance
+                                          between two partitions, or their corresponding irreps. It is only natural to ask whether
+                                          similar relations hold between other pairs of partitions as well. This question was considered
+                                          in the paper [1] where this spectral dominance order was called the Aldous order. Indeed,
+                                          it was shown in that paper that such relations hold for additional families of pairs of
+                                          partitions , . However, even the larger of these families was restricted in the sense that
+                                          one of the partitions had to have a very large first row (larger than n - O( n)) and the
+                                          other had to have a similarly large first column.
+
+                                              In this paper we ask the question: What if we relax the spectral dominance condition
+                                          by a multiplicative constant? More concretely, we ask:
+
+                                          Question 1.1. For which pairs of partitions , , does there exist a constant C > 0 such
+                                          that the inequality min(G,  )  Cmin(G, ) holds for any weighted graph G?
+
+                                          1
+Question 1.2. If such a constant C exists for , , what is the optimal, i.e., largest, such
+constant?
+
+The following theorem provides an answer to the first question:
+
+Theorem 1.3. Let ,  be partitions of n. The following are equivalent:
+
+1. There exists C > 0 such that min(G,  )  Cmin(G, ) for any weighted graph G.
+
+2.    , where  is the standard dominance relation among partitions, i.e.  ir i 
+       ir i for all r.
+
+ Let us define for any nontrivial partitions ,   n,
+
+                   C(, ) =  inf             min(G,  )
+
+                            G:min(G,)>0 min(G, )
+
+    By Theorem 1.3, we have C(, ) > 0 when [n] =    . Question 1.2 is thus equivalent
+to finding the numbers C(, ).
+
+    We shall prove the following inverse-polynomial bound for these numbers:
+
+Theorem 1.4. Let ,  be nontrivial partitions of n such that    . Then
+
+                                                                1
+                                                  C(, )  n3 .
+    Simulations and partial results suggest that the numbers C(, ) are uniformly bounded
+below, independently of n:
+
+Conjecture 1.5. For all [n] =    , we have
+
+                                         2
+                            C(, )  .
+
+                                         3
+
+This conjecture means that an inequality similar to (1) holds for any    and any
+
+weighted graph G:
+
+                            2
+                   min(G,  )  3 min(G, ).                                 (2)
+
+Apart from being a natural extension of the Aldous conjecture, this conjecture would have
+
+implications for the mixing time of the interchange process, as detailed below. The bound
+
+2/3, if proved, will be tight: We can construct examples, for unbounded values of n, where
+
+min(G,  )/min(G, ) = 2/3 (see Theorem 4.5 below).
+    We will show that (2) holds in the following cases:
+
+1. G is a complete graph (i.e. wij = c for all i, j).
+
+2. More generally, G is a quasi-complete graph (i.e. wij only depends on max{i, j}; this
+   notion was introduced in [1]).
+
+3. Clearly, (2) holds for any graph G when the Aldous order  Aldous  holds. This
+   adds the cases proved in [1] and of course the case  = [n - 1, 1] covered by the
+   Caputo­Liggett­Richthammer theorem.
+
+Our simulations did not find a counterexample to this conjecture. They included all
+unweighted graphs for n  7, and many weighted graphs chosen at random.
+
+                            2
+1.2 Mixing of the interchange and exclusion processes
+
+Let G be a connected weighted graph on [n], with n  2. In the continuous-time interchange
+process, each vertex carries a distinct label, and the labels at i and j are exchanged at
+rate wij. Its state space is the symmetric group Sn. Write tmix(G) for the worst-case
+total-variation mixing time at distance 1/4, and put
+
+        = min(G, [n - 1, 1]).
+
+By the Caputo­Liggett­Richthammer theorem [2], this is also the spectral gap of the
+
+interchange process. The general spectral gap bound (see, e.g., [8, Theorem 20.6]) therefore
+
+gives
+
+       tmix(G) = O     log(n!)       n log n     .
+                                =O
+                                            
+
+Oliveira conjectured that the factor n can be removed (see [7, Conjecture 1] and [9, Section
+10]):
+
+Conjecture 1.6 (Oliveira). There is a universal constant A such that every connected
+weighted graph G on n  2 vertices satisfies
+
+                       log n
+       tmix(G)  A  .
+
+    Our approach to the mixing time is based on the full spectrum of the Laplacian on
+the regular representation of Sn. We seek lower bounds on the minimal eigenvalue of the
+Laplacian on each irrep, with an emphasis on better bounds for higher dimensional irreps.
+Our main estimate in this direction is the following.
+
+Theorem 1.7. There is a universal constant c > 0 such that the following holds. Let G be
+a weighted graph on [n] and put  = min(G, [n - 1, 1]). If   n has first row 1 = n - k,
+where 1  k  n/2, then
+
+                                               min(G,  )  ck.
+
+    The proof of Theorem 1.7 is based on the dynamical comparison principle of Hermon­
+Kozma­Salez [5, Proposition 3]. Following their proof strategy, we compare G with its
+heat-kernel graph Gt (defined in subsection 5.5), which is sufficiently close to the normalized
+complete graph at a constant multiple of the relaxation time 1/.
+
+    The restriction k  n/2 in Theorem 1.7 can be removed if the 2/3 conjecture is
+assumed. Indeed, let c be the constant in Theorem 1.7 and put m = n/2. If k > n/2,
+the balanced two-row partition  = [n - m, m] dominates  . Hence
+
+       min(G,  )    2            2c           c
+                    3 min(G, )     m           k.
+                                 3            3
+
+We thus get a linear lower bound for every nontrivial partition. The resulting spectral
+estimate yields the following mixing bound.
+
+Theorem 1.8. Assume Conjecture 1.5. There is a universal constant C > 0 such that
+every connected weighted graph G on n  2 vertices, with ordinary spectral gap , satisfies
+
+                                                               log n
+                                               tmix(G)  C  .
+
+In other words, Conjecture 1.5 implies Oliveira's conjecture (Conjecture 1.6).
+
+                         3
+    We also note the following unconditional bound, which is a direct consequence of the
+Hermon­Kozma­Salez comparison method:
+
+Theorem 1.9. There is a universal constant C > 0 such that every connected weighted
+graph G on n  2 vertices, with ordinary spectral gap , satisfies
+
+                              (log n)2
+              tmix(G)  C  .
+
+    Consider now the r-particle exclusion process determined by the weighted graph G: r
+
+indistinguishable particles occupy distinct vertices of G. A particle at i moves to an empty
+vertex j at rate wij. Write tEmXix(r)(G) for the worst-case total-variation mixing time of this
+process at distance 1/4. It can be determined from the spectrum of the Laplacian on the
+
+Specht modules for partitions with two rows. These are covered by Theorem 1.7, and we
+
+get the following unconditional bound:
+
+Theorem 1.10. There is a universal constant C > 0 such that every connected weighted
+graph G on n  2 vertices, with ordinary spectral gap , satisfies
+
+tEmXix(r)(G)    C  log n     (1  r  n - 1).
+                   
+
+    This bound improves upon the general bound O((log n)2/) following from Oliveira's
+estimate in [9] and the bound O(log n log log n/) proved by Hermon and Pymar [6] for
+regular graphs.
+
+1.3 The proof ideas
+
+Theorem 1.3 has two directions. The first implication follows from the following lemma,
+which may be of independent interest:
+
+Lemma 1.11. Let G = ([n], w) be a weighted graph, whose connected components have
+sizes 1  2  · · ·  r > 0. Let   n. Then min(G, ) = 0 if and only if    .
+
+    For  = [n - 1, 1], Lemma 1.11 is equivalent to the fact that G is connected if and only
+if min(G, ) = 0. For a general nontrivial , it describes the condition that min(G, ) = 0
+in terms of weaker connectivity notions.
+
+    Lemma 1.11 is the main resource in proving the direction (1)  (2) in Theorem 1.3. It
+implies, in particular, that if    , then for a graph G whose connected component sizes
+are given by  , we have min(G,  ) = 0 while min(G, ) = 0.
+
+    The second implication in Theorem 1.3 follows from the 1/n3 bound in Theorem 1.4.
+The proof of this bound uses the concept of a reducing graph introduced in [1]. A reducing
+graph H for the partitions ,  had the property that given a weighted graph G, if H  G
+and min(G - H, )  min(G - H,  ), then min(G, )  min(G,  ). Therefore, in proving
+that  spectrally dominates  , we could assume that G does not contain copies of H.
+
+    We develop a parallel concept for inequalities of the form min(G, )  Cmin(G,  )
+and use it to prove Theorem 1.4.
+
+    For quasi-complete graphs, we use the fact that the Laplacian is diagonal in the Gelfand­
+Tsetlin basis and there are well known formulas for the corresponding eigenvalues. Given
+these explicit eigenvalues, we prove the 2/3 bound by a combinatorial argument.
+
+    For the minimal eigenvalue estimate in Theorem 1.7, we start by proving
+
+                                          min(G,  )  k - ck(G),
+
+                          4
+where k = n - 1 and the error term is given by
+
+                 ck(G) = max                    wij .
+                 B[n]
+                              i,jB
+                 |B|=k         i=j
+
+This inequality is proved directly by a Rayleigh quotient comparison. We then apply
+the argument of Hermon­Kozma­Salez: replace G by its heat-kernel graph Gt at time
+t = (log 9)/. For this graph, the error term becomes small enough, while the loss in the
+minimal eigenvalue is controlled by the dynamical comparison principle.
+
+    The remaining mixing time results follow from the eigenvalue bounds, using standard
+bounds on the total variation distance.
+
+Acknowledgements. The author is grateful to Gady Kozma, Subhajit Ghosh and Doron
+Puder for helpful discussions. The proofs in this paper were partially assisted by ChatGPT
+Pro and Astra models, and so were the simulations behind Conjecture 1.5. The author is
+responsible for the mathematical arguments and their verification.
+
+2 Preliminaries
+
+We denote by Sn the symmetric group on n elements. The irreducible representations
+(or irreps) of this group are parametrized by partitions of n, which also correspond to
+
+Young diagrams of size n. For a partition   n, we let V be the corresponding Specht
+module, an R[Sn] module which realizes the corresponding irrep. It is equipped with an
+invariant inner product, and we denote by  the resulting orthogonal representation. For
+any orthogonal representation  of Sn, set
+
+                 L(G, ) = wij I - ((ij))                 (3)
+
+                 i<j
+
+and
+                                           EG,(f ) = f, L(G, )f .
+
+    L(G, ) is the Laplacian operator attached to G at , and EG,(f ) is the Dirichlet energy
+of f at G, . For f = 0, the corresponding Rayleigh quotient is
+
+                 RG,(f )  =  EG,(f              )  .
+                              f 2
+
+The minimum eigenvalue is the minimum of this quotient:
+
+                 min(G, ) = min RG,(f ).
+
+                                         f = 0
+
+We also write L(G,  ) and min(G,  ), where the partition   n stands for the corresponding
+irreducible representation  . We use a representation space in place of  when its action is
+understood. The analogous notation max denotes the largest eigenvalue. Each I - ((ij))
+is positive semidefinite, so all these Laplacians are positive semidefinite.
+
+    Write st for the standard representation of Sn on Rn, in which the symmetric group
+acts by permuting the coordinates. It decomposes as the orthogonal sum of the trivial
+representation triv = R1 and V[n-1,1] = 1. The operator L(G, st) is the ordinary graph
+Laplacian. For every g  Rn,
+
+                                      EG,st(g) = wij g(i) - g(j) 2.
+
+                                                                       i<j
+
+                          5
+We write (G) = min(G, [n - 1, 1]). It is thus the spectral gap of the ordinary graph
+Laplacian.
+
+    All inner products on finite function spaces are the standard inner products unless
+stated otherwise. All logarithms are natural.
+
+    For self-adjoint operators on the same space, A  B means that f, Af   f, Bf  for
+every f . In particular, increasing edge weights increases each representation Laplacian in
+this order.
+
+3 General results for weighted graphs
+
+We start by proving the characterization of weighted graphs G and partitions  for which
+min(G, ) = 0.
+
+Lemma 1.11. Let G = ([n], w) be a weighted graph, whose connected components have
+sizes 1  2  · · ·  r > 0. Let   n. Then min(G, ) = 0 if and only if    .
+
+Proof. Since each operator I - ((ij)) is positive semidefinite, by (3)
+
+ker L(G, ) =          ker I - ((ij)) .
+
+              wij >0
+
+Let B1, . . . , Br be the vertex sets of the connected components of the positive-weight
+support of G, including isolated vertices. The transpositions along the edges of a connected
+graph generate the full symmetric group on its vertices. Therefore the subgroup generated
+by the positive-weight edges is
+
+                                            H = SB1 × · · · × SBr ,
+
+and ker L(G, ) = VH .
+    An H-equivariant map from the trivial representation 1 to V is determined by the
+
+image of 1, which can be any H-fixed vector. Thus
+
+                                         VH = HomH (1, ResHSn V).
+
+By Frobenius reciprocity, this space is isomorphic to
+
+                                HomSn IndSHn 1, V = HomSn (M  , V),
+
+where M  = IndHSn 1 = R[Sn/H] is the Young permutation module. By complete re-
+ducibility and Schur's lemma, the dimension of this space is the multiplicity of V in
+M.
+
+    Young's rule identifies this multiplicity with the Kostka number K, , which is positive
+if and only if    ; see [10, Section 2.11]. Since L(G, ) is positive semidefinite, its
+smallest eigenvalue is zero exactly when its kernel is nonzero. This proves the lemma.
+
+    Our next lemma provides the first direction in Theorem 1.3.
+
+Lemma 3.1. Let ,   n. If there exists C > 0 such that
+
+                                          min(G,  )  Cmin(G, )
+for every weighted graph G on [n], then    .
+
+              6
+Proof. Suppose that    . Let G be a disjoint union of complete graphs whose sizes are
+the parts of  . By Lemma 1.11,
+
+      min(G,  ) = 0 and min(G, ) > 0.
+
+This contradicts the assumed inequality.
+
+    For the second direction in Theorem 1.3, we will use an analog of the notion of a
+reducing graph in [1].
+
+Definition 3.2. Let ,   n and  > 0. A weighted graph H on [n] is called an -reducing
+graph for (, ) if
+
+                                         min(H,  )  max(H, ),
+
+where max(H, ) denotes the largest eigenvalue of L(H, ).
+
+Lemma 3.3. Let  > 0 and ,   n. Let H be an -reducing graph for (, ) and let G
+be a weighted graph with H  G edgewise. If
+
+      min(G - H,  )  min(G - H, ),
+
+then
+
+      min(G,  )  min(G, ).
+
+Consequently, if H has a positive-weight edge, it suffices to prove this comparison for graphs
+whose positive-weight support contains no copy of the positive-weight support of H.
+
+Proof. Let v be a unit eigenvector of L(G - H, ) with eigenvalue min(G - H, ). Since
+L(G, ) = L(G - H, ) + L(H, ), the Rayleigh quotient gives
+
+      min(G, )  v, L(G, )v
+                    = v, L(G - H, )v + v, L(H, )v
+                     min(G - H, ) + max(H, ).
+
+On the other hand, the smallest eigenvalue of a sum of Hermitian matrices is at least the
+sum of their smallest eigenvalues. Thus
+
+      min(G,  )  min(G - H,  ) + min(H,  )
+                     min(G - H, ) + max(H, )
+                    =  min(G - H, ) + max(H, )
+                     min(G, ).
+
+Lemma 3.4. Let G be a connected unweighted graph on m  2 vertices. Then
+
+                                   2
+      min(G, [m - 1, 1])  m2 .
+
+Proof. Let v = (x1, . . . , xm) satisfy i xi = 0 and i xi2 = 1, and put
+
+      E(v) =                                 (xu - xw)2.
+
+              {u,w}E(G)
+
+                                          7
+This is the Rayleigh quotient of the ordinary graph Laplacian at v. Its minimum over such
+vectors is min(G, [m - 1, 1]).
+
+    For every pair i < j, choose a simple path i = v0, v1, . . . , v = j of length   m - 1.
+By the Cauchy­Schwarz inequality,
+
+                                                             2
+
+     (xi - xj)2 =                 (xvh-1 - xvh )
+
+                          h=1
+
+                             
+
+                      (xvh-1 - xvh )2
+
+                          h=1
+
+                     (m - 1)E(v).
+
+The last inequality holds because the path uses distinct edges of G. Also,
+
+     (xi  -  xj )2  =  1       (xi - xj)2
+                       2
+i<j                       i,j
+
+                                                          2
+
+                    = m x2i -              xi = m.
+
+                          i        i
+
+Summing the path estimate over all pairs therefore gives
+
+                                                    m
+                                           m  (m - 1)E(v).
+
+                                                     2
+Hence E(v)  2/(m - 1)2  2/m2. Taking the minimum over v proves the assertion.
+
+Lemma 3.5. Let G be an unweighted graph on [n]. If min(G,  ) > 0, then
+
+                                                                  2
+                                                min(G,  )  n2 .
+Proof. Let B1, . . . , Br be the connected components of G, including isolated vertices, and
+write Gi for the graph induced on Bi. Restrict V to
+
+                                            H = SB1 × · · · × SBr .
+
+This restriction decomposes orthogonally into irreducible tensor products W1  · · ·  Wr,
+where Wi is an irreducible representation of SBi. On one such tensor product W =
+W1  · · ·  Wr, let Li denote the Laplacian of Gi in the representation Wi. Every edge of
+G lies in a single component, so
+
+                                                    r
+
+                   L(G,  )|W = IW1  · · ·  IWi-1  Li  IWi+1  · · ·  IWr .
+
+                                                  i=1
+
+In particular, if Livi = ivi for each i, then
+
+L(G,  )(v1  · · ·  vr) = (1 + · · · + r)(v1  · · ·  vr).
+
+Taking an eigenbasis in each factor yields an eigenbasis of W consisting of these tensor
+products. Thus the smallest eigenvalue on W is the sum of the smallest eigenvalues of the
+Li.
+
+                               8
+    Since min(G,  ) > 0, there is no H-fixed vector. Thus, on each tensor summand, at
+least one factor Wi is nontrivial. Its component has size mi = |Bi|  2. By the Caputo­
+Liggett­Richthammer theorem [2] and Lemma 3.4, the smallest eigenvalue contributed by
+this factor is at least 2/m2i  2/n2. All the other factors contribute nonnegative eigenvalues.
+Since W was arbitrary, the same lower bound holds on every irreducible H-summand of
+
+V , and hence for min(G,  ).
+
+Lemma 3.6. Let F be an unweighted forest on [n] such that min(F,  ) > 0. Then F is
+an n-3-reducing graph for (, ) for every partition   n.
+
+Proof. Each I - ((ij)) has operator norm at most 2, and a forest has at most n - 1 edges.
+Hence
+
+                                            max(F, )  2(n - 1).
+
+By Lemma 3.5,
+
+                                             21
+                           min(F,  )  n2  n3 max(F, ).
+
+We now recall and prove:
+
+Theorem 1.4. Let ,  be nontrivial partitions of n such that    . Then
+
+                                         1
+                           C(, )  n3 .
+
+Proof. We will prove that
+
+                                             1
+                           min(G,  )  n3 min(G, )
+
+for every weighted graph G, by induction on the number of positive-weight edges. When
+
+there are no such edges, both sides are zero.
+
+    If min(G,  ) = 0, let  be the partition of connected component sizes of G. By Lemma
+1.11,   . Since    , we also have   , so min(G, ) = 0 (again by Lemma 1.11),
+and the desired inequality holds.
+
+Otherwise, take a spanning tree in each non-singleton connected component of the
+
+positive-weight support of G, and leave isolated vertices isolated. These trees form an
+
+unweighted forest F on [n] with the same connected components as G. By Lemma 1.11,
+
+min(F,  ) > 0. Set
+
+                            = min wij > 0.
+
+                                  {i,j}E(F )
+
+Then G = G - F has nonnegative weights and strictly fewer positive-weight edges than
+G. By Lemma 3.6, F , and hence F , is n-3-reducing for (, ). Hence, by Lemma 3.3, it is
+enough to prove the desired comparison for G. This holds by the induction hypothesis.
+
+We conclude:
+
+Theorem 1.3. Let ,  be partitions of n. The following are equivalent:
+
+1. There exists C > 0 such that min(G,  )  Cmin(G, ) for any weighted graph G.
+
+   2.    , where  is the standard dominance relation among partitions, i.e. ir i 
+          ir i for all r.
+
+Proof. The implication (1)  (2) is Lemma 3.1. Conversely, suppose that    . If  = [n],
+then min(G, ) = 0 for every G, so the required comparison is immediate. Otherwise both
+partitions are nontrivial, and Theorem 1.4 gives the comparison with C = n-3.
+
+                           9
+4 The 2/3 conjecture
+
+By Theorem 1.4 we have C(, )  1/n3 for all [n] =    . A natural question is, how
+much can this bound be improved?
+
+    By our simulations, and some particular cases detailed below, it seems that there is a
+universal bound, independent of n.
+
+Conjecture 1.5. For all [n] =    , we have
+
+                                                                2
+                                                  C(, )  .
+
+                                                                3
+
+    We will show that Conjecture 1.5 holds for quasi-complete graphs. Let us recall their
+definition from [1]:
+
+Definition 4.1. A weighted graph G on [n] is quasi-complete if there are nonnegative
+numbers a2, . . . , an such that
+
+              wij = aj for all 1  i < j  n.
+
+    Note that in particular, the complete graph (which is also called the mean-field case) is
+quasi-complete.
+
+Lemma 4.2. Let G be quasi-complete, with weights a2, . . . , an, and let   n. For a
+standard Young tableau T of shape , write cT (k) for the content of the box containing k,
+where the content of a box in row i and column j is j - i. Then
+
+                                                                              n
+
+                                 min(G, ) = min ak k - 1 - cT (k) ,
+
+                                                                       T
+                                                                            k=2
+
+where the minimum is over all standard Young tableaux of shape .
+
+Proof. For 2  k  n, let Sk be the unweighted star on [n] with edges {i, k} for i < k,
+                                               n
+leaving the other vertices isolated. Then G =  k=2  ak Sk ,  and
+
+                                   n
+
+              L(G, ) = akL(Sk, ).
+
+                                 k=2
+
+By [1, Lemma 3], the Gelfand­Tsetlin basis of V is a common eigenbasis for all the
+star Laplacians L(Sk, ). Its vectors are indexed by chains of Young diagrams obtained
+by successively removing one corner. Equivalently, they are indexed by standard Young
+tableaux: the box removed when the current diagram has k boxes is labelled k.
+
+    If vT is the basis vector indexed by T , the same lemma gives
+
+              L(Sk, )vT = k - 1 - cT (k) vT .
+
+Consequently
+
+                          n
+
+              L(G, )vT =       ak k - 1 - cT (k) vT .
+
+                          k=2
+
+As T ranges over all standard tableaux of shape , these are all the eigenvalues. Taking
+the minimum proves the assertion.
+
+                               10
+Lemma 4.3. Let ,   k, where k  2, and suppose that   . For every removable box
+b of , there is a removable box a of  such that
+
+     \a\b
+
+and
+                                                          3
+
+                                  k - 1 - cont(a)  k - 1 - cont(b) .
+                                                          2
+
+Proof. For a box x = (i, j) in a diagram of size k, write
+
+d(x) = k - 1 - cont(x) = k - j + i - 1.
+
+Let b = (s, t), so t = s. We will choose a removable corner a = (r, u) of  with u  t, while
+preserving dominance after removal. Moving to the right decreases d; only a downward
+displacement can increase it.
+
+    First consider the dominance condition. Removing a box from row r decreases every
+row-prefix sum starting at r by one. If r  s, removing a and b therefore preserves
+dominance automatically. If r < s, we need a surplus of at least one in the prefix sums
+of  at every index from r through s - 1. Thus any equality of prefix sums above row s
+forces us to choose a below that equality.
+
+    Let q < s be the largest index for which
+
+     q                                            q
+
+           i = i,
+
+   i=1                                            i=1
+
+allowing q = 0 with both sums empty. Dominance at the next index gives
+
+   u := q+1  q+1  s = t.
+
+Starting at row q + 1, follow the consecutive rows of  of length u down to their last row,
+say row r, and choose a = (r, u). This is a removable corner and r > q. If r < s, every
+prefix inequality from r through s - 1 is strict, by the choice of q. Its difference is an
+integer, hence at least one, as required. If r  s, removal is already safe. This proves
+
+      \ a   \ b.
+
+The choice of corner is illustrated in Figure 1.
+
+                                                           
+
+                                                     q
+
+                                                     s  b
+
+r       a
+
+Figure 1: The dashed lines mark the last equality of prefix sums above b and the rows
+containing the chosen corners a and b. The chosen corners are shaded.
+
+    It remains to compare the costs. Since u  t,
+                                 d(a) - d(b) = (r - s) - (u - t)  r - s.
+
+                                                         11
+If r  s, this gives d(a)  d(b). Suppose that r > s. Then t  2: otherwise b would be the
+last box in the last row of , so  would have exactly s rows. Dominance would force  to
+have at most s rows as well, contradicting r > s.
+
+    Since a = (r, u) and u  t, the diagram of  contains an r × t rectangle. Thus k  rt,
+and
+
+           d(b) = k - t + s - 1  rt - t + s - 1
+                 = rt - st + st - t + s - 1 = t(r - s) + (t + 1)(s - 1)
+                  t(r - s).
+
+The downward displacement therefore increases the cost by at most d(b)/t. Since t  2,
+
+                                                    1                  3
+           d(a)  d(b) + (r - s)  1 + d(b)  d(b).
+                                                    t                  2
+
+Theorem 4.4. Let G be a quasi-complete weighted graph on [n], and let ,   n with
+
+   . Then                        2
+                min(G,  )  3 min(G, ).
+
+Proof. Choose a standard tableau T of shape  attaining the minimum in Lemma 4.2.
+Remove its boxes in the order n, n - 1, . . . , 2. Starting from    , apply Lemma 4.3 at
+each step to remove a corresponding box from the current diagram on the  side, preserving
+dominance.
+
+    Label each removed box on the  side by the same number as the corresponding box of
+T , and label the last remaining box by 1. The resulting filling U is a standard tableau of
+shape . At every step,
+
+                                      3
+                k - 1 - cU (k)  2 k - 1 - cT (k) .
+
+Since all ak are nonnegative, Lemma 4.2 gives
+
+           n                       3n                                     3
+
+min(G, )        ak k - 1 - cU (k)                   ak k - 1 - cT (k) = 2 min(G,  ).
+                                      2
+           k=2                                 k=2
+
+    Let us see that there could not be a better uniform bound than 2/3.
+Theorem 4.5. For every m  2, put 1
+
+                                         = [2, 12m-2],  = [2m],
+
+and let G be the unweighted star on 2m vertices. Then    and
+
+                min(G,  )                      =    2
+                                                     .
+                min(G, ) 3
+
+1Note that within the partition notation ab means b occurrences of a.
+
+                                   12
+Proof. The dominance relation is immediate. Label the center of the star by n = 2m. This
+is a quasi-complete graph with a2 = · · · = an-1 = 0 and an = 1. In a standard tableau, the
+box containing n is removable, and every removable box can contain n in some standard
+tableau. Lemma 4.2 therefore gives
+
+                 min(G, ) = n - 1 - max{cont(x) : x is a removable box of }.
+
+For  = [2, 12m-2], the largest removable-box content is 1, attained at (1, 2). For  = [2m],
+the only removable box is (m, 2), of content 2 - m. Hence
+
+                           min(G,  ) = 2m - 2, min(G, ) = 3m - 3,
+
+and their ratio is 2/3.
+
+5 Linear lower bounds on minimal eigenvalues
+
+We now switch gears and turn to bounds on the minimal eigenvalue min(G,  ) in terms of
+ := (G) = min(G, [n - 1, 1]). In other words, we seek lower bounds on the constants
+C(, [n - 1, 1]) for arbitrary nontrivial partitions  . For this purpose, we realize the relevant
+Specht modules on ordered tuples and compare their energies with vertex energies. We
+then use heat-kernel weights to control the error in that comparison.
+
+5.1 Ordered tuples and coordinate sums
+
+Let 0  k  n - 1. Define
+
+                        k = {(x1, . . . , xk)  [n]k : xa = xb whenever a = b}.
+The set 0 consists of the empty tuple. Put Mk = Rk . The action of Sn on k permutes
+all vertex labels; the corresponding orthogonal representation on Mk is
+
+                             (k()f )(x1, . . . , xk) = f (-1x1, . . . , -1xk).
+
+For 1  k  n - 1 and 1  r  k, define Dr : Mk  Mk-1 by
+
+(Drf )(b1, . . . , bk-1) =                   f (b1, . . . , br-1, i, br, . . . , bk-1).  (4)
+
+                            i/{b1,...,bk-1}
+
+Let
+
+                                                                              k
+
+                                                Vk = ker Dr.
+
+                                                                            r=1
+
+Changing the summation variable in (4) from i to -1i gives the intertwining relation
+
+Drk() = k-1()Dr.
+
+Thus each ker Dr is invariant under k, and so is Vk. We regard Vk as a representation of
+Sn with this restricted action.
+
+Lemma 5.1. Let 1  k  n - 1. If   n has 1 = n - k, then Vk contains a copy of V .
+
+                            13
+Proof. The action of Sn on k is transitive. The stabilizer Jk of (1, . . . , k) fixes these
+vertices pointwise and is isomorphic to Sn-k. The map
+
+                                        Jk - ((1), . . . , (k))
+
+is an Sn-equivariant bijection. Hence Mk = IndJSkn triv. By Frobenius reciprocity, the
+multiplicity of V in Mk equals the multiplicity of the trivial representation in ResJSkn V.
+By repeated branching, this multiplicity counts the sequences of k corner-box removals
+
+from  that result in the one-row diagram [n - k]. Such a sequence exists if and only if
+
+1  n - k. Thus
+
+                     V occurs in Mk  1  n - k.                                             (5)
+
+In particular, V occurs in Mk and not in Mk-1.
+    Choose a copy U = V in Mk. The intertwining relation shows that a nonzero restriction
+
+Dr|U would be injective by irreducibility, with image isomorphic to V in Mk-1, which is
+impossible. Therefore Dr|U = 0 for every r, so U  Vk.
+
+5.2 An exact energy identity
+
+For this section, let f  Mk be arbitrary. Fix all coordinates of the variable x  k except
+coordinate r to the corresponding entries of b  k-1 (this is equivalent to requiring that
+deleting the r-th coordinate of x yields b). This gives a function of one vertex, which we
+extend by zero where it would repeat a fixed vertex. Explicitly, define gr,b  Rn by
+
+        gr,b(i) =    f (b1, . . . , br-1, i, br, . . . , bk-1),   i / {b1, . . . , bk-1},
+                     0,                                           i  {b1, . . . , bk-1}.
+
+Set                                         k
+where, for g  Rn,
+                                  SG(f ) =              EG,st(gr,b),
+
+                                            r=1 bk-1
+
+                                  EG,st(g) = wij g(i) - g(j) 2.
+
+                                                     i<j
+
+When f  Vk, the condition Drf = 0 makes every gr,b a zero-sum vector. Therefore,
+
+SG(f ) is a sum of energies for L(G, [n - 1, 1]). Our aim is to bound this sum from above
+
+in terms of EG,k (f ). A Rayleigh quotient argument will then compare min(G, Vk) with
+
+min(G, [n - 1, 1]).
+
+Define
+
+                                                        k
+
+                                  CG(f ) =      f (x)2            wxrxs .
+
+                                            xk          r=1 s= r
+
+Also define the contribution from transpositions of two vertices present in the tuple by
+
+                     EGswaps(f )  =  1          wxrxs f (x) - f ((xr xs) · x) 2.           (6)
+                                     2
+                                        xk r<s
+
+The inner sum in (6) is over pairs of coordinates of x, rather than all pairs of vertices in
+[n].
+
+Lemma 5.2. For every weighted graph G and every f  Mk,
+                                 EG,k (f ) = SG(f ) - CG(f ) + EGswaps(f ).
+
+                                                14
+Proof. We expand the left-hand side and transform its terms in three steps.
+Step 1: Expand the transposition sum. By definition, we have
+
+            EG,k (f ) =                wijf (x) f (x) - f ((ij) · x)
+
+                            xk i<j
+
+                            1             wij f (x) - f ((ij) · x) 2.
+                         =
+                               xk i<j
+                            2
+
+For a fixed x, transpositions whose endpoints both lie outside its entries fix x. If exactly
+one endpoint is present, it has the form (xr j) with j / {x1, . . . , xk}. The remaining trans-
+positions have both endpoints present and contribute (6). Replacing the r-th coordinate
+by j, we obtain
+
+                1        k
+
+   EG,k (f ) = 2                            wxrj f (x) - f (x1, . . . , j, . . . , xk) 2  (7)
+
+                      xk r=1 j/{x1,...,xk}
+
+                + EGswaps(f ).
+
+Step 2: Fix all coordinates except one. Interchange the sums over x and r in (7). For a fixed
+
+r, group the tuples x by their r-complement b  k-1, obtained by deleting coordinate r,
+and put i = xr. We can then write the inner sum symmetrically over i, j / {b1, . . . , bk-1}.
+The added terms j = i are zero. Hence
+
+                  1k                                  wij gr,b(i) - gr,b(j) 2             (8)
+   EG,k (f ) = 2
+                      r=1 bk-1 i,j/{b1,...,bk-1}
+
+                      + EGswaps(f ).
+
+Step 3: Complete each inner sum to all vertices. For fixed r, b, the vector gr,b vanishes
+on the entries of b. The terms with both indices among those entries are therefore zero.
+The two orderings of each pair with exactly one index among those entries have equal
+contributions, since wij = wji. Thus
+
+1                     wij gr,b(i) - gr,b(j) 2
+2
+   i,j/{b1,...,bk-1}
+
+      1  n
+   =
+                wij gr,b(i) - gr,b(j) 2 -                                   wij gr,b(i)2  (9)
+      2
+         i,j=1                              i/{b1,...,bk-1} j{b1,...,bk-1}
+
+   = EG,st(gr,b) -                                    wij gr,b(i)2.
+
+                      i/{b1,...,bk-1} j{b1,...,bk-1}
+
+Summing the subtracted terms over all r and b, and rearranging by the participating
+k-tuples x, we get
+
+                k
+
+                                                           wij gr,b(i)2
+
+                r=1 bk-1 i/{b1,...,bk-1} j{b1,...,bk-1}
+
+                                       k
+
+                      =        f (x)2           wxrxs = CG(f ).                           (10)
+
+                         xk            r=1 s=r
+
+                                          15
+Substituting (9) and (10) into (8) yields
+
+                         k
+
+EG,k (f ) =                                 EG,st(gr,b) - CG(f ) + EGswaps(f )
+
+                         r=1 bk-1
+
+                      = SG(f ) - CG(f ) + EGswaps(f ).
+
+5.3 A spectral lower bound by averaging
+
+For a k-element subset B  [n], put
+
+                             vG(B) =                      wij .
+
+                                               i,jB
+                                                i=j
+
+Let ck(G) = max|B|=k vG(B).
+Lemma 5.3. For every weighted graph G and every 1  k  n - 1,
+
+                         min(G, Vk)  k(G) - ck(G).                                             (11)
+
+Proof. Fix 0 = f  Vk. For each fixed r, inserting i in position r is a bijection from the
+pairs (b, i) with i / {b1, . . . , bk-1} to k. Hence
+
+      gr,b2 =                                      f (b1, . . . , br-1, i, br, . . . , bk-1)2
+
+bk-1                     bk-1 i/{b1,...,bk-1}
+
+                      =      f (x)2 = f 2.
+
+                         xk
+
+Summing over r gives
+
+                          k                                                                    (12)
+
+                                     gr,b2 = kf 2.
+
+                         r=1 bk-1
+
+For the pairs (r, b) with gr,b = 0, define
+
+                             r,b            =  gr,b2      .
+                                               kf 2
+
+These weights are positive and sum to 1 by (12). Averaging the Rayleigh quotients with
+these weights gives
+
+                                               1k
+                      r,bRG,st(gr,b) = kf 2                      EG,st(gr,b)
+
+      r,b:                                             r=1 bk-1
+
+      gr,b= 0
+
+                                            =  SG(f )  .                                       (13)
+                                               kf 2
+
+Rearranging the identity of Lemma 5.2 and dropping the nonnegative swap energy, we
+obtain
+
+                      SG(f ) = EG,k (f ) + CG(f ) - EGswaps(f )
+                               EG,k (f ) + CG(f ).
+
+                                               16
+The correction satisfies
+
+                                 CG(f )  ck(G)f 2.                                 (14)
+
+Indeed, for each x  k, its set of entries Bx = {x1, . . . , xk} has size k, so
+
+                               k
+
+                                       wxrxs = vG(Bx)  ck(G).
+
+                              r=1 s= r
+
+Multiplying each such inequality by f (x)2 and summing gives
+
+             CG(f ) =         f (x)2vG(Bx)  ck(G)              f (x)2 = ck(G)f 2.
+
+                          xk                            xk
+
+Substituting (14) and collecting terms, we obtain
+
+                                    SG(f )  EG,k (f ) + ck(G)f 2
+                                             = RG,k (f ) + ck(G) f 2.
+
+Consequently, the weighted average in (13) is at most (RG,k (f ) + ck(G))/k. One of the
+Rayleigh quotients is no larger than that average, so there exist r, b with gr,b = 0 and
+
+                              RG,st(gr,b)    RG,k (f )  +   ck(G) .
+                                                 k            k
+
+The condition Drf = 0 gives
+
+                                n
+
+                                   gr,b(i) = (Drf )(b) = 0.
+
+                               i=1
+
+Thus the selected vector is nonzero and perpendicular to the constants. Its Rayleigh
+quotient therefore comes from the representation [n - 1, 1], and
+
+                          (G)    RG,st(gr,b)        RG,k (f )  +  ck(G) .
+                                                        k           k
+
+Rearranging gives RG,k (f )  k(G) - ck(G). Taking the minimum over 0 = f  Vk proves
+(11).
+
+5.4 Bounding the error term
+
+Our next step is to bound the error term ck(G) in terms of the spectral gap (G). This
+will eventually allow us to control it relative to the main term k(G) in Lemma 5.3.
+
+    Write dG(i) = j=i wij for the weighted degree of i, and let (G) = maxi dG(i).
+
+Lemma 5.4. For every weighted graph G and every 1  k  n - 1,
+
+                                                                  k
+                          ck(G)  k(G) - k(G)                1-       .             (15)
+                                                                 n
+
+Proof. Fix B  [n] with |B| = k, and decompose its indicator into its trivial and [n - 1, 1]
+
+components:
+
+                                 1B             k
+                                             =    1  +  h.
+                                                n
+
+                                                17
+Here h  1 and, by the Pythagorean theorem,
+
+                                                 h2 = k - k2 .
+                                                                 n
+
+The trivial component has zero energy. Since h belongs to [n - 1, 1], we have
+
+                    EG,st(1B) = EG,[n-1,1](h)  (G)      k2       .
+                                                        k-
+                                                              n
+
+On the other hand, by definition of the energy,
+
+                    EG,st(1B) =          wij = dG(i) - vG(B).
+
+                                 iB j/B             iB
+
+Rearranging and using the bound on each weighted degree yields
+
+                    vG(B) = dG(i) - EG,st(1B)
+
+                                    iB
+
+                                                             k
+                              k(G) - k(G) 1 - .
+
+                                                             n
+
+Taking the maximum over B proves (15).
+
+Combining Lemmas 5.3 and 5.4, we obtain
+
+               min(G, Vk)  k     (G)             k  + (G) - (G)     .
+                                         1-
+                                              n
+
+For the complete graph G = Kn with unit edge weights, we have (Kn) = n and (Kn) =
+n - 1, so in this case (G) - (G) is negligible relative to (G) (and, in fact, positive).
+Hence, for k  n/2, we get the desired bound
+
+                                                                k
+                                          min(Kn, Vk)  2 (Kn).
+
+    For a general weighted graph G, following Hermon­Kozma­Salez [5], our strategy is
+to find an auxiliary graph G sufficiently close to a multiple of Kn for these estimates to
+be effective, while its Laplacian spectrum on the regular representation is controlled by
+that of G through their dynamical comparison principle. This will allow us to transfer the
+lower bound back to G and obtain the estimate in Theorem 1.7.
+
+5.5 The Hermon­Kozma­Salez comparison
+
+For t  0, let
+
+                                 Ht = e-tL(G,st)
+
+be the heat kernel of G at time t. Let Gt, the associated heat-kernel graph, be the weighted
+graph with edge weights Ht(i, j) for i = j.
+
+Lemma 5.5. Assume  = (G) > 0. For every t  0, the matrix Ht is symmetric and
+stochastic. Its largest eigenvalue on 1 is e-t, and
+
+                                 (Gt) = 1 - e-t.                               (16)
+
+Moreover, (Gt)  1.
+
+                                         18
+Proof. Choose an orthonormal eigenbasis u0, . . . , un-1 of L(G, st), with u0 = n-1/21. Write
+L(G, st)uj = juj. Then 0 = 0 and minj1 j = . Moreover,
+
+                                                Htuj = e-tj uj .
+
+This identifies the eigenvalues and gives Ht1 = 1. Symmetry follows from symmetry of
+L(G, st).
+
+    Choose a > (G). The entries of aI - L(G, st) are nonnegative, and
+
+                                        tm
+                                        m!
+                        Ht = e-at           aI - L(G, st) m.
+
+                                   m=0
+
+Thus Ht has nonnegative entries, and by applying it to 1 we see that it is stochastic. The
+weighted degree of vertex i in Gt is
+
+                                 dGt(i) = Ht(i, j) = 1 - Ht(i, i)  1.
+
+                                                              j= i
+
+The off-diagonal entries and diagonal entries of the ordinary Laplacian therefore give
+
+                                              L(Gt, st) = I - Ht.
+The eigenvalues already computed now yield (16).
+
+Lemma 5.6 (Hermon­Kozma­Salez comparison). For every orthogonal representation 
+
+of Sn, and every t  0,
+
+                        L(Gt, )  t L(G, ).                                              (17)
+
+Proof. Hermon­Kozma­Salez [5, Section 2.3, Proposition 3] prove a comparison of
+
+interchange-process Dirichlet forms for symmetric stochastic matrices. We adapt it here to
+
+arbitrary edge rates.
+
+    For a symmetric stochastic matrix Q, write GQ for the graph with edge weights Qij for
+i = j. Let P be an irreducible symmetric stochastic matrix, and put Ps = e-s(I-P ). Their
+comparison, for every real-valued function F on Sn, is
+
+                                      EGPs ,R[Sn](F )  s EGP ,R[Sn](F ).
+
+By continuity, this also holds when P is not irreducible.
+    The above inequality can be written as an operator inequality
+
+                        L(GPs, R[Sn])  s L(GP , R[Sn]).                                 (18)
+
+Given our weighted graph G, choose a > (G) and put
+
+                                                          1
+                                              P = I - L(G, st).
+
+                                                          a
+
+Its off-diagonal entries are wij/a and its diagonal entries are 1 - dG(i)/a. Thus P is
+symmetric and stochastic. At time s = at,
+
+                        Pat = e-at(I-P ) = e-tL(G,st) = Ht.
+
+The weights of GP are those of G divided by a, so (18) gives
+
+L(Gt, R[Sn])  at L(GP , R[Sn]) = t L(G, R[Sn]).
+
+Every irreducible representation of Sn occurs in R[Sn]. Restricting this inequality to an
+irreducible summand proves (17) there; taking orthogonal direct sums proves it for every
+.
+
+                                        19
+5.6 Proof of the first-row bound
+
+We now recall and prove:
+
+Theorem 1.7. There is a universal constant c > 0 such that the following holds. Let G be
+a weighted graph on [n] and put  = min(G, [n - 1, 1]). If   n has first row 1 = n - k,
+where 1  k  n/2, then
+
+                                               min(G,  )  ck.
+
+Proof. We may take c = 1/(6 log 3). If  = 0, the claim follows from the nonnegativity of
+L(G, V ). Assume  > 0.
+
+    By Lemma 5.1, we may choose an invariant copy U = V inside Vk. Let f  U be a
+unit eigenvector of L(G, k)|U for its least eigenvalue  = min(G,  ). Set t = (log 9)/, so
+that e-t = 1/9. By Lemma 5.5, we have (Gt) = 1 - e-t = 8/9 and (Gt)  1. Since
+k  n/2, Lemma 5.4 now gives
+
+ck (Gt )    (Gt)                 -  (Gt)       k            81 5
+   k                                      1-        1- · = .
+
+                                               n            92 9
+
+Applying Lemma 5.3 to Gt yields
+
+min(Gt, Vk)  k(Gt) - ck(Gt)                           8k 5k k
+                                                           -        =.
+                                                        9     9        3
+
+Since f  Vk, HKS comparison gives
+
+                                 1
+min(G,  ) = RG,k (f )  t RGt,k (f )
+
+                                   1                  k k
+                                   t min(Gt, Vk)         =          .
+                                                    3t      6 log 3
+
+Combining Theorem 1.7 and Conjecture 1.5, we get a general lower bound:
+
+Proposition 5.7. Assume Conjecture 1.5. There is a universal constant c > 0 such that,
+for every weighted graph G and every nontrivial partition   n,
+
+            min(G,  )  c(n - 1).
+
+Proof. We may take c = 1/(18 log 3). Put k = n - 1. If 1  k  n/2, the proof of
+Theorem 1.7 gives the stronger constant 1/(6 log 3). Suppose now that k > n/2, and put
+
+            m = n/2,  = [n - m, m].
+
+This partition dominates  : its first row is at least 1, and the sum of its first two rows is
+already n. The conjecture and the explicit bound proved in Theorem 1.7, applied to , give
+
+                                      2               2 m
+          min(G,  )                   3 min(G, )                 .
+                                                      3  6 log 3
+
+Since k  n - 1  2m, this is at least k/(18 log 3).
+
+                                         20
+5.7 An unconditional bound for every first-row length
+
+We now develop a weaker version of the inequality in Proposition 5.7 which does not
+assume Conjecture 1.5. The price to pay is a loss of a log n factor in the bound. This lower
+bound is a direct consequence of the Hermon­Kozma­Salez approach. It will enable us to
+prove an unconditional bound for the mixing time.
+
+    Let Kn denote the unweighted complete graph. Its representation Laplacians are scalar,
+and their eigenvalues admit a useful elementary lower bound.
+
+Lemma 5.8. If   n and k = n - 1, then L(Kn,  ) =  I, where   nk/2.
+
+Proof. The sum of all transpositions is central, so L(Kn,  ) =  I. By the Frobenius
+character-ratio formula [4, Lemma 7],
+
+                       1  n2 -        i2 +           (i - 1)i
+                 = 2
+                                   i              i
+
+                   1      n2 - n1          nk
+                                        =.
+
+                   2                        2
+
+Here we used    i i2  1 i i = n1 and i(i - 1)i  0.
+
+Proposition 5.9. There is a universal constant c > 0 such that, for every connected
+weighted graph G on n  2 vertices and every partition   n,
+
+                min(G,             )    c  (n - 1)        .                    (19)
+                                              log n
+
+Proof. We may take c = 1/8. More precisely, we prove
+
+                min(G,  )                 (n - 1) .                            (20)
+                                          4 log(2n)
+
+This implies (19), since log(2n)  2 log n for n  2. Use the single-particle heat kernel Hs
+and its associated graph Gs from Lemma 5.5, at time
+
+                          s=          log(2n)  .
+
+                                        
+
+Let J be the matrix all of whose entries are 1. Since J/n is the orthogonal projection onto
+
+the constants, Hs - J/n vanishes on the constants and has eigenvalues e-s on 1, where
+   ranges over the nonzero eigenvalues of L(G, st). Thus, for every v  Rn,
+
+                       J        v         e-s v      =       v
+                Hs - n                                           .
+                                                             2n
+
+Applying this to the coordinate vector ej and taking its ith coordinate gives
+
+                                          11
+                          Hs(i, j) - n     ,
+                                              2n
+
+so Hs(i, j)  1/(2n) for every i, j. The HKS comparison in Lemma 5.6 and edgewise
+monotonicity therefore imply, on each Specht module,
+
+                                               1
+                sL(G,  )  L(Gs,  )  2n L(Kn,  ).
+
+Writing k = n - 1 and using Lemma 5.8, we get
+
+                          smin(G,  )                 k
+                                           2n          ,
+
+                                                     4
+
+which is (20).
+
+                                      21
+6 Mixing of the interchange and exclusion processes
+
+We now apply the spectral bounds in the previous section to the analysis of mixing times.
+
+6.1 A spectral bound for transitive group actions
+
+We start by stating a general lemma on the connection between the mixing properties of a
+group action and eigenvalue bounds on the relevant part of the Laplacian spectrum. It
+can be found in a slightly different form in a book by Diaconis [3, Chapter 3F, Lemmas 4
+and 5], but for completeness we give a self-contained proof based on the argument of [5,
+Corollary 5].
+
+Lemma 6.1. Let a finite group  act transitively on a finite set X, and let u be the
+uniform probability measure on X. For rates c(g) = c(g-1)  0, consider the continuous-
+
+time Markov chain with generator
+
+                   (Lf )(x) = c(g) f (g-1x) - f (x) ,
+
+                                      g
+
+and transition probability matrix for time intervals of length t, Pt = etL. Write the
+permutation representation as
+
+                          CX = C1  Vm ,
+
+                                                =1
+
+where  runs over the nontrivial irreducible unitary representations that occur, and m is
+
+their multiplicity. Define L = g c(g)(I - (g)) and  = min(L). Then, for every
+x  X and t  0,
+
+                   4Pt(x, ·) - uT2 V  mde-2t                          (21)
+
+                                               =1
+
+where d = dimC V.
+
+Proof. Equip CX with the inner product of L2(X, u):
+
+                          f, h =       1         f (x)h(x).
+
+                                       |X |  xX
+
+The permutation action is unitary, and the symmetry c(g) = c(g-1) makes L = -L
+
+self-adjoint. Moreover, L1 = 0, so Pt = e-tL fixes the constants.
+
+For each , let W be the sum of its m copies, of dimension D = md. Since the
+
+permutation representation is unitary, its isotypic components W are mutually orthogonal.
+
+Choose an orthonormal eigenbasis ,1, . . . , ,D of W, with eigenvalues ,  . Tran-
+
+sitivity implies that the only invariant functions are the constants, so these eigenvectors,
+
+together with 1, form an orthonormal basis of L2(X, u).
+
+Since Pt = e-tL, we have
+
+                          Pt, = e-t, ,.
+
+Expanding an arbitrary function f in the above basis therefore gives
+
+                   (Ptf )(x) = f, 1 +        D
+
+                                                 e-t, f, ,,(x).
+
+                                       = 1 =1
+
+                                          22
+By the definition of the inner product,
+
+                                      f, , = u(y)f (y),(y).
+
+                                                                        yX
+
+Similarly,
+                                            f, 1 = u(y)f (y).
+
+                                                                            yX
+
+Substituting and comparing coefficients of f (y) with
+
+                           (Ptf )(x) = Pt(x, y)f (y),
+
+                                               yX
+
+we obtain                                                                       
+               Pt(x, y) = u(y) 1 +
+                                             D
+
+                                                     e-t, ,(x),(y) .
+
+                                             = 1 =1
+
+Therefore,
+
+                   Pt(x, y) - 1 =            D
+                     u(y)
+                                                 e-t, ,(x),(y).
+
+                                             =1 =1
+
+For a fixed x we get, using the orthonormality:
+
+                       |Pt(x, y) - u(y)|2 =          u(y) Pt(x, y) - 1 2
+                           u(y)                            u(y)
+                   yX                           yX
+
+                                                     D
+
+                                             =            e-2t, |,(x)|2
+
+                                                =1 =1
+
+                                                                    D
+
+                                              e-2t |,(x)|2.
+
+                                                =1         =1
+
+    For a fixed , the sum
+
+                                                                              D
+
+                                            S(x) := |,(x)|2
+
+                                                                             =1
+
+is independent of the choice of orthonormal basis of W. The action of any g   takes
+such a basis to another orthonormal basis of W, so S(g-1x) = S(x). By transitivity, S
+is constant on X. Averaging over X identifies its value:
+
+S(x) =                                    D                                D
+
+                   u(y)S(y) =                u(y)|,(y)|2 = ,2 = D = md.
+
+               yX            =1 yX                         =1
+
+Consequently,
+
+                           |Pt(x, y) - u(y)|2             mde-2t .
+                                   u(y)
+                       yX                            = 1
+
+Finally, by the Cauchy­Schwarz inequality,
+
+                                                        2
+
+4Pt(x, ·) - uT2 V =  |Pt(x, y) - u(y)|
+
+                                        yX
+
+                        |X| |Pt(x, y) - u(y)|2 =                                |Pt(x, y) - u(y)|2 .
+                                                                                        u(y)
+                             yX                            yX
+
+Combining the last two estimates proves the lemma.
+
+                                             23
+6.2 Mixing of the interchange process
+
+Let (Xt)t0 be the interchange process on a connected weighted graph G. The state space
+of this process is Sn, and its generator is
+
+      (LGf )() = wij f ((ij)) - f () .
+
+                            i<j
+
+Thus LG = -L(G, reg), where reg denotes the left regular representation. Let Pt = etLG
+be the transition probability matrix for a time interval of length t, and let u() = 1/n! be
+the uniform probability measure. Define
+
+      dG(t)  =  max                1       |Pt(,    )  -  u()|           (22)
+
+                Sn                 2  Sn
+
+    and
+                                   tmix(G) = inf{t  0 : dG(t)  1/4}.
+
+Right translations commute with the generator, so the maximum in (22) can be replaced
+by taking the value at any .
+
+    The regular representation decomposes as
+
+                R[Sn] = Vd .
+
+                                 n
+
+Apply Lemma 6.1 to the left action of Sn on itself, using the complexification of this repre-
+sentation, with rate wij for the transposition (ij) and zero rates for all other permutations.
+Since m = d , we obtain, for every t  0,
+
+      4dG(t)2                              d2 e-2tmin(G, ).              (23)
+
+                                     n
+                                    = [n]
+
+Lemma 6.2. For every 1  k  n - 1,
+
+                                                         d2  n2k.
+
+                                                                      n
+                                                                  1=n-k
+
+Proof. The ordered-tuple module Mk = Rk has dimension
+                                       n(n - 1) · · · (n - k + 1)  nk.
+
+By (5), it contains at least one copy of every V with 1 = n - k. Hence
+
+                                                   d  dim Mk  nk.
+
+                                                         1=n-k
+
+The sum of the squares of these nonnegative dimensions is no greater than the square of
+their sum.
+
+Proposition 6.3. There is a universal constant C such that if a > 0 and
+
+      min(G,  )  a(n - 1) for every  = [n]                               (24)
+
+then                                       C log n
+
+                tmix(G)                          .                       (25)
+                                           a
+
+                                      24
+Proof. We may take C = 3. In fact, we prove the sharper estimate
+
+                                               1              1
+                                  tmix(G)  a           log n + log 5  .             (26)
+                                                                 2
+
+Grouping the right-hand side of (23) by k = n - 1 and using Lemma 6.2, we obtain
+
+                                  4dG(t)2      n-1               =  q - qn
+                                                                    1-q
+                                                   n2k e-2ak t
+
+                                               k=1
+
+where q = n2e-2at. For the value of t on the right-hand side of (26), we have q =
+
+n2e-(2 log n+log 5)  =  1  ,  so
+                        5
+                                                          q      1
+                                  4dG(t)2              1  -q  =  4
+
+Thus dG(t)  1/4, proving (26). Since n  2,
+
+                                            1
+                                  log n + log 5  3 log n.
+
+                                            2
+
+Hence (25) holds with C = 3.
+
+    Using Proposition 6.3 and our spectral bounds, we can now prove the conditional and
+unconditional mixing time bounds.
+
+Theorem 1.8. Assume Conjecture 1.5. There is a universal constant C > 0 such that
+every connected weighted graph G on n  2 vertices, with ordinary spectral gap , satisfies
+
+                                                               log n
+                                               tmix(G)  C  .
+
+In other words, Conjecture 1.5 implies Oliveira's conjecture (Conjecture 1.6).
+
+Proof. We may take C = 54 log 3. More precisely, we prove
+
+                                             18 log 3            1
+                                  tmix(G)                 log n + log 5 .
+                                                                    2
+
+The proof of Proposition 5.7 gives (24) with a = 1/(18 log 3). Apply (26) from the proof of
+Proposition 6.3. Since log n + (1/2) log 5  3 log n for n  2, the stated bound follows with
+C = 54 log 3.
+
+Theorem 1.9. There is a universal constant C > 0 such that every connected weighted
+graph G on n  2 vertices, with ordinary spectral gap , satisfies
+
+                                                  (log n)2
+                                  tmix(G)  C  .
+
+Proof. Let c > 0 be the universal constant in Proposition 5.9, and put a = c/ log n. Here a
+
+depends on n, but not on the partition  . For every nontrivial partition   n, Proposition
+
+5.9 gives
+
+                                  min(G,  )    c(n - 1)       =  a(n - 1).
+                                                  log n
+
+Thus the hypothesis of Proposition 6.3 holds with this choice of a. Applying that proposition,
+
+we obtain                                                        (log n)2
+                                                                           ,
+                                  tmix(G)      C0 log  n  =  C0
+                                                  a           c      
+
+where C0 is universal. The theorem follows with C = C0/c, which is also universal.
+
+                                                    25
+6.3 An unconditional logarithmic bound for the exclusion process
+
+Let Xr = {A  [n] : |A| = r}, Wr = RXr , and let rEX be the natural permutation action of
+Sn on Wr. The generator of the r-particle exclusion process is
+
+(LGEX(r)f )(A) =          wij f ((A \ {i})  {j}) - f (A) = -L(G, Er X)f (A).
+
+                  iA j/A
+
+The uniform measure ur on Xr is stationary. The map A  Ac intertwines the processes
+with r and n - r particles, so their mixing times are equal. It therefore suffices to consider
+1  r  n/2.
+
+Lemma 6.4. For 0  r  n/2, the orthogonal decomposition of Wr into Specht modules
+
+is
+
+                                                                              r
+
+                                   Wr =                                          V[n-j,j],                     (27)
+
+                                          j=0
+
+where the summand for j = 0 is the trivial representation V[n].
+
+Proof. See [3, Chapter 7B, pp. 138­139].
+
+We now recall and prove:
+
+Theorem 1.10. There is a universal constant C > 0 such that every connected weighted
+graph G on n  2 vertices, with ordinary spectral gap , satisfies
+
+                  tmEXix(r)(G)     C  log n                                            (1  r  n - 1).
+                                      
+
+Proof. Put a = 1/(6 log 3). We may take C = 12 log 3; more precisely, we prove that
+
+                  tEmXix(r)(G)        3   log                                    3  (log  n  +  log  5) .      (28)
+                                           
+
+By particle-hole symmetry, assume r  n/2. Apply Lemma 6.1 to the action of Sn on Xr,
+using the complexification of Wr, with rate wij for the transposition (ij) and zero rates for
+all other permutations. This gives exactly the exclusion generator displayed above. By
+
+Lemma 6.4, the nontrivial summands are V[n-j,j], 1  j  r, each with multiplicity one
+and dimension dj = dim V[n-j,j]. Consequently, if Kt is the transition probability matrix
+of the exclusion process, then for every initial set A  Xr,
+
+                                                                                 r
+
+4Kt(A, ·) - ur2TV                                                                      dj e-2tmin(G,[n-j,j]).  (29)
+
+                                                                                 j=1
+
+Taking dimensions in (27) with r = j gives
+
+                                      n                                             j
+
+                                          =                                            di.
+                                      j
+                                                                                 i=0
+
+Subtracting the corresponding identity for j - 1, we obtain, for j  1,
+
+                  dj =          n  -        n                                                n   nj.           (30)
+                                j         j-1                                                j
+
+                                          26
+For 1  j  r, the explicit estimate proved in Theorem 1.7 gives
+
+                               min(G, [n - j, j])  aj.
+
+Using (30) in (29), we obtain
+
+                                                r                  q  - qr+1
+                                                                               ,
+                           4Kt(A, ·) - urT2 V        nj e-2ajt  =     1-q
+
+                                                j=1
+
+where q = ne-2at. For the value of t on the right-hand side of (28), we have q =
+
+ne-(log n+log 5)  =  1  ,  so
+                     5
+                                                         q         1
+                               4Kt(A, ·) -  urT2 V     1-q      =   .
+
+                                                                   4
+
+Thus the total-variation distance is at most 1/4 for every initial set A, proving (28). Since
+n  2,
+
+                                            log n + log 5  4 log n.
+
+Hence the claimed mixing-time bound holds with C = 12 log 3.
+
+References
+
+ [1] G. Alon and G. Kozma, Ordering the representations of Sn using the interchange
+      process, Canad. Math. Bull. 56 (2013), no. 1, 13­30.
+
+ [2] P. Caputo, T. M. Liggett and T. Richthammer, Proof of Aldous' spectral gap conjecture,
+      J. Amer. Math. Soc. 23 (2010), no. 3, 831­851.
+
+ [3] P. Diaconis, Group Representations in Probability and Statistics, Institute of Mathe-
+      matical Statistics Lecture Notes ­ Monograph Series 11, Institute of Mathematical
+      Statistics, Hayward, CA, 1988.
+
+ [4] P. Diaconis and M. Shahshahani, Generating a random permutation with random
+     transpositions, Z. Wahrsch. Verw. Gebiete 57 (1981), no. 2, 159­179.
+
+ [5] J. Hermon, G. Kozma and J. Salez, Universality of cutoff for the Exclusion Process,
+      preprint (2026). arXiv:2609.31187v2.
+
+ [6] J. Hermon and R. Pymar, The exclusion process mixes (almost) faster than independent
+      particles, Ann. Probab. 48 (2020), no. 6, 3077­3123.
+
+ [7] J. Hermon and J. Salez, The interchange process on high-dimensional products, Ann.
+      Appl. Probab. 31 (2021), no. 1, 84­98.
+
+ [8] D. A. Levin and Y. Peres, Markov Chains and Mixing Times, 2nd ed., with contribu-
+      tions by E. L. Wilmer, American Mathematical Society, Providence, RI, 2017.
+
+ [9] R. I. Oliveira, Mixing of the symmetric exclusion processes in terms of the corresponding
+      single-particle random walk, Ann. Probab. 41 (2013), no. 2, 871­913.
+
+[10] B. E. Sagan, The Symmetric Group: Representations, Combinatorial Algorithms, and
+      Symmetric Functions, 2nd ed., Graduate Texts in Mathematics 203, Springer, New
+      York, 2001.
+
+                                                27
+
