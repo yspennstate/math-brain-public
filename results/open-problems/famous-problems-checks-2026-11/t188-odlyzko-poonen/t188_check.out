@@ -1,0 +1,48 @@
+Part 1. P in P_n with a twin Q (Q not P, P*) having Q Q* = P P* mod 4, and with an exact twin
+  n =  2:       0 of       2 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 8.0000
+  n =  3:       0 of       4 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 8.0000
+  n =  4:       0 of       8 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 8.0000
+  n =  5:       0 of      16 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 6.0000
+  n =  6:       0 of      32 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 6.0000
+  n =  7:       0 of      64 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 6.0000
+  n =  8:       0 of     128 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 6.0000
+  n =  9:       0 of     256 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 4.5000
+  n = 10:       0 of     512 mod 4 (fraction 0.00000),      0 exact (fraction 0.00000); bound 4.5000
+  n = 11:       8 of    1024 mod 4 (fraction 0.00781),      8 exact (fraction 0.00781); bound 4.5000
+  n = 12:      24 of    2048 mod 4 (fraction 0.01172),     24 exact (fraction 0.01172); bound 4.5000
+  n = 13:      48 of    4096 mod 4 (fraction 0.01172),     48 exact (fraction 0.01172); bound 3.3750
+  n = 14:      64 of    8192 mod 4 (fraction 0.00781),     64 exact (fraction 0.00781); bound 3.3750
+  n = 15:     148 of   16384 mod 4 (fraction 0.00903),    148 exact (fraction 0.00903); bound 3.3750
+  n = 16:     220 of   32768 mod 4 (fraction 0.00671),    220 exact (fraction 0.00671); bound 3.3750
+  n = 17:     424 of   65536 mod 4 (fraction 0.00647),    424 exact (fraction 0.00647); bound 2.5312
+  n = 18:     640 of  131072 mod 4 (fraction 0.00488),    640 exact (fraction 0.00488); bound 2.5312
+  n = 19:    1152 of  262144 mod 4 (fraction 0.00439),   1152 exact (fraction 0.00439); bound 2.5312
+  n = 20:    1700 of  524288 mod 4 (fraction 0.00324),   1696 exact (fraction 0.00323); bound 2.5312
+Part 2. Proposition 2.1 for 1 <= d <= e <= 10
+  e =  1 done (d = 1..1)
+  e =  2 done (d = 1..2)
+  e =  3 done (d = 1..3)
+  e =  4 done (d = 1..4)
+  e =  5 done (d = 1..5)
+  e =  6 done (d = 1..6)
+  e =  7 done (d = 1..7)
+  e =  8 done (d = 1..8)
+  e =  9 done (d = 1..9)
+  e = 10 done (d = 1..10)
+  698027 pairs (a, b): coefficients of P P* - Q Q* always even; step (c) and Proposition 2.1 hold for every (d, e); largest probability / bound = 0.1875; flip rule checked 127476 times
+Part 3. Reducible P in P_n; twins A B* of every factorisation; fraction against sqrt(2/(pi n))
+  n =  2: reducible      0 of      2 = 0.0000; P(-1) = 0 for 0.0000; sqrt(2/(pi n)) = 0.5642; n * (reducible - sqrt) = -1.128; 0 twins A B*, all in P_n
+  n =  3: reducible      2 of      4 = 0.5000; P(-1) = 0 for 0.5000; sqrt(2/(pi n)) = 0.4607; n * (reducible - sqrt) = +0.118; 4 twins A B*, all in P_n
+  n =  4: reducible      2 of      8 = 0.2500; P(-1) = 0 for 0.1250; sqrt(2/(pi n)) = 0.3989; n * (reducible - sqrt) = -0.596; 6 twins A B*, all in P_n
+  n =  5: reducible      8 of     16 = 0.5000; P(-1) = 0 for 0.3750; sqrt(2/(pi n)) = 0.3568; n * (reducible - sqrt) = +0.716; 24 twins A B*, all in P_n
+  n =  6: reducible     11 of     32 = 0.3438; P(-1) = 0 for 0.1562; sqrt(2/(pi n)) = 0.3257; n * (reducible - sqrt) = +0.108; 32 twins A B*, all in P_n
+  n =  7: reducible     30 of     64 = 0.4688; P(-1) = 0 for 0.3125; sqrt(2/(pi n)) = 0.3016; n * (reducible - sqrt) = +1.170; 104 twins A B*, all in P_n
+  n =  8: reducible     44 of    128 = 0.3438; P(-1) = 0 for 0.1641; sqrt(2/(pi n)) = 0.2821; n * (reducible - sqrt) = +0.493; 156 twins A B*, all in P_n
+  n =  9: reducible    106 of    256 = 0.4141; P(-1) = 0 for 0.2734; sqrt(2/(pi n)) = 0.2660; n * (reducible - sqrt) = +1.333; 404 twins A B*, all in P_n
+  n = 10: reducible    181 of    512 = 0.3535; P(-1) = 0 for 0.1641; sqrt(2/(pi n)) = 0.2523; n * (reducible - sqrt) = +1.012; 774 twins A B*, all in P_n
+  n = 11: reducible    410 of   1024 = 0.4004; P(-1) = 0 for 0.2461; sqrt(2/(pi n)) = 0.2406; n * (reducible - sqrt) = +1.758; 1768 twins A B*, all in P_n
+  n = 12: reducible    631 of   2048 = 0.3081; P(-1) = 0 for 0.1611; sqrt(2/(pi n)) = 0.2303; n * (reducible - sqrt) = +0.933
+  n = 13: reducible   1458 of   4096 = 0.3560; P(-1) = 0 for 0.2256; sqrt(2/(pi n)) = 0.2213; n * (reducible - sqrt) = +1.751
+  n = 14: reducible   2684 of   8192 = 0.3276; P(-1) = 0 for 0.1571; sqrt(2/(pi n)) = 0.2132; n * (reducible - sqrt) = +1.602
+  n = 15: reducible   5510 of  16384 = 0.3363; P(-1) = 0 for 0.2095; sqrt(2/(pi n)) = 0.2060; n * (reducible - sqrt) = +1.954
+all assertions passed

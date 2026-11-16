@@ -1,0 +1,32 @@
+t_f + R^2 (t_p - t_f/R^2) (= R^2 t_p), A = 400                                           got 1  stated 1  PASS
+d < t_p/2, s_* > 3/A, t_* < R^2, A <= t_f, R >= A^2, t_f + 1 <= R^2/(2A) at A = 400      PASS
+int_0^inf B_T^2 r dr at T = 2.3 (= 2 T^-3)                                               got 0.164379058108  stated 0.164379058108  PASS
+int_0^inf (1 - z)^2 e^{-2z} dz (= 1/4)                                                   got 0.25  stated 0.25  PASS
+max(2 Omega_T, |B_T|) <= 2 T^-2 for all r                                                PASS
+r B_T = d_r (r^2 Omega_T) at r = 1.7                                                     got 0.321987982183  stated 0.321987982188  PASS
+(1/r) (int_0^r u du)^(1/2) (= 1/sqrt 2)                                                  got 0.707106781187  stated 0.707106781187  PASS
+R u(R y, t_f + R^2 s) for an old column (= A rho^2 (tau + s)^-2 e^{..} y)                got 0.000972676430694  stated 0.000972676430694  PASS
+A int_0^{1/A} s^(-1/4) ds at A = 400 (= (4/3) A^(1/4))                                   got 5.96284794  stated 5.96284794  PASS
+rho^2 tau^(-1/2) (= l^2/(R sqrt(t_f + l^2)))                                             got 0.00115063257233  stated 0.00115063257233  PASS
+|| r e^{-r^2/(cT)} ||_{L^2(R^2)} at c = 3, T = 2.3 (= sqrt(pi) c T/2)                    got 6.11496578562  stated 6.11496578562  PASS
+int_0^inf s (d + s)^-3 ds at d = 0.01 (= 1/(2d))                                         got 50  stated 50  PASS
+int_0^inf s (d + s)^(-7/2) ds at d = 0.01 (= (4/15) d^(-3/2))                            got 266.666666667  stated 266.666666667  PASS
+interpolation between H^4 and H^5: t_f exponent (1-de)(-1) + de(-3/2) = -1 - de/2, R exponent de PASS
+A^((j+3)/2) (1/A)^((j-1)/2) = A^2 for j = 1, 2, 3, 4                                     PASS
+ratio of int |z| (1 + r^2 + z^2)^(-9/4) dz at r = 2 and r = 0 (= 5^(-5/4))               got 0.133748060995  stated 0.133748060995  PASS
+(7.17), p0 = 1.25: ||W_T|| T^(1+p0/2) in [0.637, 1.009], ||r^3 ..|| T^(p0/2) in [2.028, 2.325] PASS
+(7.17), p0 = 1.75: ||W_T|| T^(1+p0/2) in [0.493, 1.298], ||r^3 ..|| T^(p0/2) in [1.303, 1.641] PASS
+second line of (7.18) at u = 0, r = 1.3 (= r^3 T^-2 e^{-r^2/(4T)})                       got 0.828915222274  stated 0.828915222274  PASS
+third line of (7.18) at u = 0, r = 1.3 (= r^2 T^-2 e^{-r^2/(4T)})                        got 0.637627094057  stated 0.637627094057  PASS
+second line of (7.18) solves d_u f = (d_r^2 + d_r/r - 1/r^2) f (largest residual 1.92e-06) PASS
+third line of (7.18) solves d_u f = (d_r^2 + d_r/r - 0/r^2) f (largest residual 8.75e-07) PASS
+4 T^2 d_T W_T + 8 T W_T at r = 1.9, T = 2.2 (= r^2 W_T)                                  got 0.940277405355  stated 0.940277405578  PASS
+4 T d_T P_T + 4 P_T (= r^2 T^-2 e^{-r^2/(4T)})                                           got 0.494882845005  stated 0.494882845041  PASS
+int_0^inf W_{L+2u}(r) du at L = 3, r = 1.9 (= (2/r)(1 - e^{-r^2/(4L)}))                  got 0.273472495444  stated 0.273472495451  PASS
+8 pi sqrt(2 pi)/2 (= 4 pi sqrt(2 pi), the constant of (7.10))                            got 31.4992198914  stated 31.4992198914  PASS
+2 (7/8) = 7/4 and 2 - 2 (1/8) = 7/4; 1 + 7/8 = 15/8 is the norm exponent of W_T at p0 = 7/4 PASS
+int_H^inf (L + 2u)^(-15/8) du = (4/7)(L + 2H)^(-7/8); over [0, H]: 8 2^(-15/8) H^(1/8) bounds the first, the second is 4((L+2H)^(1/8) - L^(1/8)) PASS
+L^(1/4) int (1 - e^{-r^2/(4L)})^2 (1 + r^2)^(-1/4) dr/r for L = 1, 10, 100, 1e4 in [1.382, 1.405] PASS
+2 A rho^2/tau (= 2 A l^2/(t_f + l^2))                                                    got 0.00496483243691  stated 0.00496483243691  PASS
+R^4 R^(-3/2) = R^(5/2); R^4 R^-1 = R^3 for the fibers (7.8)                              PASS
+ALL PASS

@@ -1,0 +1,23 @@
+# Referee progress log
+
+- 2026-11-13 20:20 +04 — Task started: referee Sections 3 and 4 of paper_c.txt; no web, no subagents, standard-library computations only. Mesh/checklist writes unavailable in sandbox.
+- 2026-11-13 — Lemma 3.1 complete: HOLDS; restored formula (3.2), recomputed valuations and discriminant.
+- 2026-11-13 — Lemma 3.2 complete: HOLDS; checked finite multiplier construction, weak approximation, and both directions of local square conditions.
+- 2026-11-13 — Lemma 3.3 complete: HOLDS; rederived local Kummer images, 2-adic congruence, reciprocity identities, and dimension-three Selmer calculation.
+- 2026-11-13 — Lemma 3.4 complete: HOLDS conditional on quoted [48]; full Selmer corank checked before finiteness, then Cassels–Tate parity and rational realization checked. Companion theorem not independently verified.
+- 2026-11-13 — Lemma 3.6 complete: HOLDS; checked both-support matrix construction, nonsingularity, Boolean determinant argument, and CRT/Dirichlet realization.
+- 2026-11-13 — Proposition 2.8 completion checked: HOLDS conditional on [48]; same fixed lists give integer completeness and pole restriction.
+- 2026-11-13 — Section 4.1 geometric proposition complete: HOLDS; genus 5 and five rational branch values rederived, with embedding residues and discriminants recomputed.
+- 2026-11-13 — Section 4.2 family proposition complete: HOLDS; symplectic representation, fine level, B-action, common-base isogenies, and nonconstant moduli checked.
+- 2026-11-13 — Lemma 4.1 complete: HOLDS; degree factorial bound, local t=z² equation, even-contact unramifiedness, and good reduction checked. Lost radical restored.
+- 2026-11-13 — Lemma 4.2 complete: HOLDS; theta-coordinate normalization, Fourier changes, nonconstancy, ample-height comparison, and Faltings normalization checked. Precise Pazuki corollary quotation only checked from memory; compact-image alternative also checked.
+- 2026-11-13 — Lemma 4.4 complete: HOLDS; Hom lattice rank ≤16[K0:Q]², finite Galois action, normality, and unramifiedness checked.
+- 2026-11-13 — Section 4.6 descent proposition complete: HOLDS; endomorphism dichotomy, bounded-degree CM case, source-height use of isogeny theorem, and sign normalization checked.
+- 2026-11-13 — Lemma 4.5 complete: HOLDS; local square-root obstructions, Brauer reciprocity, character order ≤CM, conjugacy invariance, and quadratic inertia correction rederived.
+- 2026-11-13 — Section 4.7 modularity proposition complete: HOLDS conditional on quoted [49]; representation law, two-copy decomposition, absolute irreducibility, de Rham descent, oddness, and weight-two normalization checked.
+- 2026-11-13 — Lemma 4.6 complete: HOLDS given the modular realization; rederived the single algebraic Frobenius trace and identified the same Hecke conjugate at 2 and 3.
+- 2026-11-13 — Lemma 4.7 complete: HOLDS given the modular realization; large-prime tame bound, fixed-prime character/Tate ramification cuts, and dyadic conductor comparison checked. Obtained N≤CM².
+- 2026-11-13 — Lemma 4.8 complete: HOLDS given the modular realization; descended Hom from Qbar2 to Q2, applied Faltings, and checked the L'-isogeny factor.
+- 2026-11-13 — Final height proposition complete: HOLDS conditional on [49]; recomputed N^12, the isogeny logarithm, Zarhin dimensions, and Bost normalization. Exponent c=24 is admissible.
+- 2026-11-13 20:37 +04 — Exact checker passed on final rerun: 640 abstract constructions, two concrete prime examples, local residue checks, genus/discriminant/height arithmetic; peak RSS 17,907,712 bytes. paper_c.txt SHA-256 unchanged.
+- 2026-11-13 — Report completed with every numbered display inventoried. Verdict: no internal gap found; Proposition 2.8 conditional on quoted [48], Theorem 2.4 conditional on quoted [49]. Classical source checks from memory and unavailable exact-source checks identified explicitly.

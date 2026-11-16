@@ -1,0 +1,31 @@
+A. The fixed data
+  ok   norm of d is 7: norm 7
+  ok   d is positive at both real embeddings: 0.046681, 149.9533
+  ok   w = -5 + 4 sqrt2 equals d (1 + sqrt2)^3
+  ok   w^3 - w = -8 d
+  ok   Q = (-d w, 2 sqrt2 d^2) lies on y^2 = x^3 - d^2 x
+  ok   x(Q) has opposite signs at the two embeddings: -0.03066, 1598.03
+  ok   x(Q) = -(1 + sqrt2) times a square (class outside 1, -1, d, -d)
+  ok   -4 is not a square modulo 7: squares mod 7: [0, 1, 2, 4]
+  ok   1 + sqrt2 has norm -1 (a totally positive unit is an even power, hence a square)
+
+B. Torsion of E(F): point counts at split primes (torsion injects into the reduction at a good prime)
+  (p, sqrt2 mod p, #E): (17,6,20) (17,11,16) (23,5,24) (23,18,24) (31,8,32) (31,23,32) (41,17,52) (41,24,32) (47,7,48) (47,40,48) (71,12,72) (71,59,72) ...
+  ok   gcd of the point counts is 4, so the torsion of E(F) is the 2-torsion: gcd 4 over 24 reductions
+  ok   y(Q) is not 0, so Q is not 2-torsion and has infinite order
+
+C. Doubling Q (independent of the paper): 2Q on the curve, and its x a square in F
+  ok   2Q lies on the curve
+  ok   x(2Q) = ((x^2 + d^2) / 2y)^2: x(2Q) = (1641/8) + (-145) sqrt2
+
+D. Inequality (5.2): t - 1 - v_p(t) >= K for every t > K when p > K + 1
+  ok   (5.2) for K <= 40, p < 400, t < 6000: 16813028 cases, 0 failures
+
+E. Index formula (5.1): with im alpha of order 8 and im alpha' trivial, 8 * 1 = 4 * 2^rank gives rank 1
+
+F. Section 4.1: the Shimura curve of discriminant 210 = 2*3*5*7 at maximal level
+  ok   no elliptic points of order 2 or 3 (the uniformizing group acts freely): e2 0, e3 0
+  ok   genus 5: 1 + 48/12 = 5
+  ok   a genus-0 quotient by the 16 Atkin-Lehner involutions has exactly five branch points of index two: b = 5
+
+SUMMARY: all checks pass True

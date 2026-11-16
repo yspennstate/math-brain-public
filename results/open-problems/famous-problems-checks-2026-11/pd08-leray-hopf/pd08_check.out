@@ -1,0 +1,51 @@
+A. Section 4.5, printed constants
+  ok   M1 (U and v): recomputed 0.930049, printed <= 0.9301
+  ok   M2U: recomputed 0.006089, printed <= 0.0061
+  ok   M3U: recomputed 0.213291, printed <= 0.22
+  ok   M4U: recomputed 0.00201544, printed >= 0.002
+  FAIL x0U (with M2U <= 0.0061): recomputed 1.45055e-05, printed <= 1.44e-05
+       the printed line uses 0.005 in place of 0.0061: that gives 1.43296e-05
+  ok   x1U (from the printed x0U): recomputed 6.15005e-06, printed <= 6.2e-06
+  ok   y0U as printed (first power of the Gram norm): recomputed 1.296e-07, printed <= 1.3e-07
+  ok   y1U as printed (first power of the Gram norm): recomputed 4.788e-07, printed <= 4.8e-07
+  ok   lambda_con: recomputed 1.6104e-05, printed <= 1.62e-05
+  ok   eps5: recomputed 6.5506e-05, printed <= 6.6e-05
+  ok   M5 before M2v: recomputed 0.163982, printed >= 0.1639
+  ok   M2v: recomputed 0.008889, printed <= 0.0089
+  ok   M0: recomputed 6.38007, printed <= 6.4
+  ok   M3v: recomputed 8.81645, printed <= 8.82
+  ok   M4v: recomputed 0.0210262, printed >= 0.021
+  ok   x0v: recomputed 0.00056683, printed <= 0.000567
+  ok   x1v: recomputed 0.000422167, printed <= 0.00043
+  ok   lambda_lin: recomputed 0.00425912, printed <= 0.0044
+  ok   lambda_lin + lambda_con: recomputed 0.0044162, printed <= 0.0045
+  printed steps that did not reproduce: 1
+
+A2. The same chain with the conservative reading of every doubtful step
+    (x0U from M2U <= 0.0061; U2 bounds with the square root of the Gram norm, as in M3U and M3v,
+     since sum_j <U1, w_j>^2 <= lambda_max(G) |U1|^2 for the Gram matrix G of the w_j)
+  x0U 1.448e-05  x1U 6.181e-06  y0U 8.241e-07  y1U 3.045e-06  lambda_con 1.862e-05  eps5 7.065e-05
+  M4U 0.0020155 > 0 ; 1 - M1 0.06995 > 0 ; M5 0.15509 ; M3v 8.789 ; M4v 0.020901 > 0
+  |lambda shift| <= 0.004499  against |lambda_bar| = 0.113 : eigenvalue stays negative: True
+  conservative chain closes: True
+
+B. Eigenvalues below 10 on the ball of radius 32 (alpha < 32 sqrt(10)), from (6.3) and (6.4)
+  grid step 0.004, largest l with a root: 97
+  roots: Y even l 647, Y odd l 659, Z even l 627, Z odd l 644; l=1: Y 31, Z 32
+  class of U (even l for Y, odd l for Z): 1291   paper N = 1257
+  class of v (odd l for Y, even l for Z): 1286, with the zero mode 1287   paper N = 1260
+  counts agree with the paper's N (allowing the zero mode in one class): False
+  total roots at step 0.004: 2577; at step 0.002: 2577; equal: True
+
+B2. The roots themselves: the (N+1)-th scaled eigenvalue for the paper's N, and K5 = 4.5 / (eta2 + lambda_{N+1})
+  roots located: class U 1291, class v 1287 (with the zero mode); smallest positive: U 0.004231, v 0.010908
+  class U, N = 1257: lambda_N 9.7630, lambda_(N+1) 9.7686, K5 0.4604; K5 <= 0.47: True; lambda_(N+1) > 10: False
+  class U, N = 1257 (index shifted by -1): lambda_N 9.7600, lambda_(N+1) 9.7630, K5 0.4607; K5 <= 0.47: True; lambda_(N+1) > 10: False
+  class U, N = 1257 (index shifted by 1): lambda_N 9.7686, lambda_(N+1) 9.7701, K5 0.4604; K5 <= 0.47: True; lambda_(N+1) > 10: False
+  class v, N = 1260: lambda_N 9.7624, lambda_(N+1) 9.7775, K5 0.4600; K5 <= 0.47: True; lambda_(N+1) > 10: False
+  class v, N = 1260 (index shifted by -1): lambda_N 9.7459, lambda_(N+1) 9.7624, K5 0.4607; K5 <= 0.47: True; lambda_(N+1) > 10: False
+  class v, N = 1260 (index shifted by 1): lambda_N 9.7775, lambda_(N+1) 9.7926, K5 0.4593; K5 <= 0.47: True; lambda_(N+1) > 10: False
+  class U: eigenvalues below 10: 1291; below 4.5/0.47 - eta2 = 9.5695: 1233
+  class v: eigenvalues below 10: 1287; below 4.5/0.47 - eta2 = 9.5695: 1240
+
+SUMMARY: printed steps not reproduced 1; conservative chain closes True; counts below 10 equal the paper's N False; K5 <= 0.47 at the paper's N True; root count stable True

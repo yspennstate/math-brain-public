@@ -1,0 +1,25 @@
+2 c_* in units of rho (= 16), so x <= 13 rho + rho/32 < 2 c_*                                        got 16  stated 16  PASS
+rho - 2x + 2 c_* at x = 12 rho, in units of rho (= -7)                                               got -7  stated -7  PASS
+(8.17) rates and their bounds on 12 rho <= x <= 13 rho + rho/32; Lemma 7.8 hypotheses; (8.26) margins PASS
+x + (5/2) rho - 2G at x = 13 rho + rho/32, in units of rho (= -15/32 + 2 omega/rho)                  got -0.44875  stated -0.44875  PASS
+-x + 3 c_* + (5/2) rho - 2G at x = 12 rho (= -3/2 + 2 omega/rho)                                     got -1.48  stated -1.48  PASS
+-2x + 4 c_* + (7/2) rho - 2G at x = 12 rho (= -9/2 + 2 omega/rho)                                    got -4.48  stated -4.48  PASS
+xi_lin + gamma at x = 13 rho + rho/32 (= -19/32 + 2 omega/rho)                                       got -0.57375  stated -0.57375  PASS
+2 rho - 24 rho + 16 rho in units of rho (= -6)                                                       got -6  stated -6  PASS
+delta_A B_mom exponent: -rho_c + gamma in units of rho (= -1/8)                                      got -0.125  stated -0.125  PASS
+powers of R: -1/2 + 3 = 5/2; 1 - 1/2 + 3 = 7/2; 3 - s_* - 1/2 = 5/2 - s_* = 1/8; 1 - s - 3/2 = -s - 1/2 PASS
+A = -<h_out, g> (= A_lead - <r_out, g>)                                                              got 0.983924919034  stated 0.983924919034  PASS
+F - g = (<r_out, g> g - r_out)/A and <F, g> = 1                                                      PASS
+int_{t_f}^{t_*} A R^2/(R^2 + t)^2 dt (= A R^2 (1/(R^2 + t_f) - 1/(R^2 + t_*)), at most A t_p)        got 7.8349128433  stated 7.8349128433  PASS
+that integral <= A t_p = 2 + Theta log A; int_{t_f}^inf A/t^2 = A/t_f <= 1/(16 A)                    PASS
+exponent of |eps| eta^(-13/4) at |eps| = a_+, in units of rho (= -35/4)                              got -8.75  stated -8.75  PASS
+exponent of |eps| eta^(-13/2) at |eps| = a_+, in units of rho (= -11/2)                              got -5.5  stated -5.5  PASS
+eta^-2 J_1(x/sqrt eta): j-th derivative in L^2 scales as eta^(-2 - j/2 + 3/4) = eta^(-5/4 - j/2); j = 4: 13/4; j = 5: 15/4 <= 4 PASS
+s_* + chi_seed = 39/16 < 5/2; chi beta > 6 rho gives 4 rho - chi beta < -2 rho; chi = 1/16 < 1/2     PASS
+int_0^inf s^(-1/2) e^{-lam s} ds at lam = 37 (= sqrt(pi/lam))                                        got 0.291389618134  stated 0.291389618134  PASS
+int_1^inf r^(2 mu - 6) dr at mu = 2.4 (= 1/(5 - 2 mu))                                               got 5  stated 5  PASS
+the same integral diverges at mu = 5/2 (integrand 1/r)                                               PASS
+e^{K (A+1) t_p} at K = 3, A = 400, Theta = 1 (= (e^2 A)^(K (1 + 1/A)))                               got 27414272953.6  stated 27414272953.6  PASS
+B_J(lam) = -<u - ubar, g> (= lam (1 + <d, g>))                                                       got 0.312  stated 0.312  PASS
+F_J - g = (d - <d, g> g)/(1 + <d, g>)                                                                PASS
+ALL PASS

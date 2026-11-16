@@ -1,0 +1,17 @@
+A: sympy 1.14.0; non-constant coefficients of det JF: 10; q1 making all of them vanish: [{q1: -2/3}]
+A: with q1 = -2/3 the determinant is -1/9
+A: total degrees of F1, F2, F3: [7, 6, 4]
+A: F3 factors as x*(x**2*z + x*y + 1)
+B: q1 = -2/3; det JF computed with own arithmetic has 1 term(s): {(0, 0, 0): Fraction(-1, 9)}
+B: degrees [7, 6, 4]; number of terms [7, 6, 3]
+B control: q1 = -1/2 gives a determinant with 11 terms
+B control: q1 = 0 gives a determinant with 11 terms
+B control: q1 = -7/9 gives a determinant with 10 terms
+B: F('1', '0', '-1') = ('-1', '-1', '0')
+B: F('0', '-9', '71') = ('-1', '-1', '0')
+B: two different points, same image: True
+B: collision ('-1', '-2', '-1') and ('-1', '-1/2', '1/2') -> ('1/27', '-1/9', '-2')
+B: collision ('-2', '-3/2', '-1') and ('0', '-3/2', '2') -> ('0', '-1/6', '0')
+B: collision ('-1', '-2', '-3') and ('0', '1', '1') -> ('1/9', '1/9', '0')
+B: grid of 3375 points, 16 collisions
+B: determinant of the evaluated Jacobian at 200 random rational points takes the values ['-1/9']
