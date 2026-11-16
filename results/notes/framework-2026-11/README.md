@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 430 notes.
+out, and requests are paraphrased. 440 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -658,3 +658,20 @@ How to tell a running job from a dead one, how to find what stalls a job, and tw
 | [method_max_term_inequality_find_where_it_is_small_then_perturb_2026_11_11](method_max_term_inequality_find_where_it_is_small_then_perturb_2026_11_11.md) | provisional | Inequality with a max term to prove for every n (T104 Psi >= 0)? Do not build one bound: find where the max term is small, show x is there a perturbation of the extremal vector, compare orders in n; ... |
 | [method_pair_copies_to_get_a_uniform_piece_2026_10_29](method_pair_copies_to_get_a_uniform_piece_2026_10_29.md) | provisional | Method: pair copies so F*F has a uniform piece (g*g continuous), solve there, lift back by conditional law; plus linear tilts that average to uniform |
 | [method_stalled_job_time_the_step_on_its_largest_single_unit_2026_11_16](method_stalled_job_time_the_step_on_its_largest_single_unit_2026_11_16.md) | provisional | Unattended job crawling with a core pinned and its pid alive? Look for a loop whose cost grows with the LARGEST SINGLE UNIT of input (longest token, longest stretch since a marker, one growing ... |
+
+## Added on 16 November: recall ranking, compact index view, word-walk tests and a merge pitfall (10)
+
+Two recall and index changes, a loop-clock fault, five blind tests of word-walk tools for writers, and how to avoid double-counting rows when pooling data.
+
+| note | status | what it says |
+|---|---|---|
+| [row_file_already_merged_dedupe_by_samples_before_adding_2026_11_16](row_file_already_merged_dedupe_by_samples_before_adding_2026_11_16.md) | verified | About to add a worker's row file to an aggregate (skewness table, pooled stats)? Dedupe by the sample values first: P0108's a second machine n=2048 file (162 rows) was already merged verbatim into ... |
+| [s38m01_recall_ranking_chain_landed_2026_11_16](s38m01_recall_ranking_chain_landed_2026_11_16.md) | verified | Recall ranking: five segments now chained, not concatenated (S38M01, landed bed48fd1dc72); outputs identical, ranking peak 891KB->2KB |
+| [s38m06_compact_index_view_landed_dormant_2026_11_16](s38m06_compact_index_view_landed_dormant_2026_11_16.md) | verified | index_text.py prompt/restore: opt-in compact MEMORY index view, -33% bytes on the live index, exact restore (S38M06, caa41a47c6a0); not wired into any hook until a paired agent test passes |
+| [word_page_check_blind_test_no_effect_12_13_2026_11_15](word_page_check_blind_test_no_effect_12_13_2026_11_15.md) | provisional | Word-walk page check handed to a reviser: does it help? No: blind 40 pairs R 13, P 12, ties 15, sense +0.03; it moved ~8 words in 40 pages. Use as an editor's flag, never show its offers as ... |
+| [word_palette_blind_test_plain_beats_palette_16_10_2026_11_15](word_palette_blind_test_plain_beats_palette_16_10_2026_11_15.md) | provisional | Rare-word palette for writers: does it help? Blind A/B 15 Nov: no palette 16, palette 10, ties 14; rare-swap sham lost 10/10; keep it off narration |
+| [word_slot_three_offers_writer_judges_70_of_80_vs_keep_41_2026_11_15](word_slot_three_offers_writer_judges_70_of_80_vs_keep_41_2026_11_15.md) | provisional | word_slot offers: does a writer pick well among the three? Blind Codex judge 70/80 right vs 41 always-keep (p<0.001), swaps 32/35 right; keep printing the list |
+| [word_walk_context_dial_inert_and_planner_temper_undone_2026_11_14](word_walk_context_dial_inert_and_planner_temper_undone_2026_11_14.md) | verified | Writing brain math: word walk's context term (kappa) nearly inert - MH min(1,.) clipping in 1-5 steps lets ~0.17 of it reach the offers; bridge_plan per-row temper does nothing on even rows; fixes in ... |
+| [word_walk_links_senses_not_words_drift_fixed_2026_11_14](word_walk_links_senses_not_words_drift_fixed_2026_11_14.md) | verified | Word walk drifting into another meaning (soot -> c -> cocaine)? Fixed 14 Nov: lexicon.json has per-sense links 'e' and walk moves on (word, sense) states |
+| [word_walk_shows_walked_sense_and_matching_master_line_2026_11_14](word_walk_shows_walked_sense_and_matching_master_line_2026_11_14.md) | provisional | Word walk palette gloss and master line disagree (bunk = cattle trough beside a bed line)? Fixed 14 Nov: sense from the word stepped from, line judged on 6 words each side, wrong-sense words dropped; ... |
+| [work_session_clock_restarts_on_every_cron_loop_refire_2026_11_16](work_session_clock_restarts_on_every_cron_loop_refire_2026_11_16.md) | provisional | The work-session hook restarts its 10h clock each time a /loop cron re-fires the original prompt, so it keeps demanding work hours past the author's real end time (16 Nov: ask 03:41+10h=13:41, hook ... |
