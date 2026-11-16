@@ -1,8 +1,8 @@
 # Open problems in probability, networks and computation
 
-1128 problems, each with the page it is stated on, a short quote from that page and a dated search for a later solution. 1117 are checked open: the quote was found on the fetched page and the search found no accepted solution. 6 need a second look, usually because the quote sits in a PDF the check could not read. 3 turned out to be solved already (the row cites the paper), and 2 are under study. Ids are stable. The full records, with statements, quotes and the search notes, are in `catalogue.jsonl`.
+1118 problems (1128 rows; 10 rows restate another row's problem and point to it with `duplicate_of`), each with the page it is stated on, a short quote from that page and a dated search for a later solution. 1108 are checked open: the quote was found on the fetched page and the search found no accepted solution. 5 need a second look, usually because the quote sits in a PDF the check could not read. 3 turned out to be solved already (the row cites the paper), and 2 are under study. Ids are stable. The full records, with statements, quotes and the search notes, are in `catalogue.jsonl`.
 
-Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section or page in the source), `url`, `quote`, `fetched_at`, `open_check` (the dated search), `why_it_matters`, `computational` (whether a computation can settle or test it), `difficulty`, `status`, and `status_note` where there is one.
+Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section or page in the source), `url`, `quote`, `fetched_at`, `open_check` (the dated search), `why_it_matters`, `computational` (whether a computation can settle or test it), `difficulty`, `status`, and `status_note` and `duplicate_of` where there is one.
 
 ## erdos (137)
 
@@ -460,14 +460,14 @@ Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section o
 - CN1098 [Logarithmic localization of off-critical FK-Ising clouds](https://www.ihes.fr/~duminil/publi/these.pdf)
 - CN1099 [Nontrivial clouds in the infinite-volume FK-Ising coupling](https://www.ihes.fr/~duminil/publi/these.pdf)
 - CN1100 [Percolation preserves transience on Cayley graphs](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
-- CN1101 [Percolation preserves positive random-walk speed](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
-- CN1102 [Bootstrap-percolation characterization of amenable groups](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
+- CN1101 [Percolation preserves positive random-walk speed](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf) (duplicate of CN0552)
+- CN1102 [Bootstrap-percolation characterization of amenable groups](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf) (duplicate of CN0564)
 - CN1103 [Infinite ends of free minimal forests without unimodularity](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 - CN1104 [Free minimal-forest connectivity at the uniqueness threshold](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 - CN1105 [A one-or-infinity law for minimal spanning forest components](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 - CN1106 [Indistinguishability of minimal spanning forest trees](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 - CN1107 [A stationary bush limit along minimal-forest rays](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
-- CN1108 [The critical dimension for connectivity of lattice minimal spanning forests](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
+- CN1108 [The critical dimension for connectivity of lattice minimal spanning forests](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf) (duplicate of CN0555)
 - CN1109 [The order-parameter exponent for the 1-dimensional contact process](https://arxiv.org/pdf/1703.10007)
 - CN1110 [The three-dimensional Ising spontaneous-magnetization exponent](https://arxiv.org/pdf/1703.10007)
 - CN1111 [Voter-like clustering of the one-dimensional Neuhauser–Pacala model](https://arxiv.org/pdf/1703.10007)
@@ -592,7 +592,7 @@ Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section o
 
 ## probability (96)
 
-- CN0449 [Sublinear WARM convergence on arbitrary infinite bounded-degree networks](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf) (needs check)
+- CN0449 [Sublinear WARM convergence on arbitrary infinite bounded-degree networks](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf) (duplicate of CN0528)
 - CN0450 [Finite surviving components for every superlinear WARM with uniform rate bounds](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
 - CN0453 [WARM percolation on a lattice with firing rates tending to zero](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
 - CN0472 [Finite-crossing Jordan arcs through planar Brownian trace](https://sites.math.washington.edu/~burdzy/open_mathjax.php)
@@ -626,7 +626,7 @@ Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section o
 - CN0500 [Monotonicity of biased-walk speed on leafless Galton–Watson trees](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 - CN0501 [Ergodicity of flow-rule chains under an equivalent Galton–Watson stationary law](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 - CN0502 [Dimension drop for every nonuniform Galton–Watson flow rule](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
-- CN0503 [Maximum-degree growth in the infinite-path fitness regime](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
+- CN0503 [Maximum-degree growth in the infinite-path fitness regime](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf) (duplicate of CN0404)
 - CN0504 [Fluctuation limits for size-biased reinforced sampling](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
 - CN0505 [Condensate profile near maximal fitness in reinforced sampling](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
 - CN0506 [Superlinear growth rate of unbounded reinforced fitness sums](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
@@ -652,8 +652,8 @@ Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section o
 - CN0526 [Strong asymptotic freeness of high-spin random SU2 representations](https://arxiv.org/pdf/2507.00346)
 - CN0527 [Ramanujan inequalities for a growing degree of noncommutative polynomials](https://arxiv.org/pdf/2507.00346)
 - CN0528 [Unique attracting equilibrium for weak reinforcement on infinite networks](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
-- CN0529 [Sharp reinforcement threshold for acyclic WARM limit support](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
-- CN0530 [Infinite surviving WARM component on a lattice with vanishing rates](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
+- CN0529 [Sharp reinforcement threshold for acyclic WARM limit support](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf) (duplicate of CN0451)
+- CN0530 [Infinite surviving WARM component on a lattice with vanishing rates](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf) (duplicate of CN0453)
 - CN0531 [Fate of the weaker type under small positive BRW conversion](https://arxiv.org/pdf/2203.14166)
 - CN0532 [Shape-speed advantage versus microscopic advantage in converting BRWs](https://arxiv.org/pdf/2203.14166)
 - CN0533 [Transition from certain to merely possible expansion in converting BRWs](https://arxiv.org/pdf/2203.14166)
@@ -686,7 +686,7 @@ Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section o
 - CN0560 [Limit constant for the nearest-unvisited-neighbor tour](https://www.stat.berkeley.edu/~aldous/Research/OP/greedy_tour.html)
 - CN0561 [Optimal heavy-traffic waiting-time order for the greedy spatial server](https://www.stat.berkeley.edu/~aldous/Research/OP/greedy_tour.html)
 - CN0562 [Balanced-regime exponent for the number of spatially reinforced cities](https://arxiv.org/pdf/1209.5120)
-- CN0563 [Fragmentation for every superlinear WARM with uniformly positive rates](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf)
+- CN0563 [Fragmentation for every superlinear WARM with uniformly positive rates](https://www.matrix-inst.org.au/wp_Matrix2016/wp-content/uploads/2023/Aletti.pdf) (duplicate of CN0450)
 - CN0564 [Amenability characterized by trivial bootstrap-percolation thresholds](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf)
 
 ## quantum-crypto-coding (95)
@@ -1072,8 +1072,8 @@ Fields: `id`, `title`, `statement`, `area`, `source_title`, `locator` (section o
 - CN0953 [Degree-times-diameter-squared bound for transitive random-walk mixing](https://liutianren.com/discrete/ref/Markov%20Chain/Markov%20Chains%20and%20Mixing%20Times,%20second%20edition.pdf)
 - CN0954 [Mixing-time comparison of bounded-block and single-site Potts dynamics](https://liutianren.com/discrete/ref/Markov%20Chain/Markov%20Chains%20and%20Mixing%20Times,%20second%20edition.pdf)
 - CN0955 [Possible coalescence numbers of a finite Markov chain](https://link.springer.com/article/10.1007/s10959-026-01500-w)
-- CN0956 [Almost-sure coalescence for every coupling of a random stochastic matrix](https://link.springer.com/article/10.1007/s10959-026-01500-w)
-- CN0957 [Volume of stochastic matrices representable by a prescribed set of maps](https://link.springer.com/article/10.1007/s10959-026-01500-w)
+- CN0956 [Almost-sure coalescence for every coupling of a random stochastic matrix](https://link.springer.com/article/10.1007/s10959-026-01500-w) (duplicate of CN0519)
+- CN0957 [Volume of stochastic matrices representable by a prescribed set of maps](https://link.springer.com/article/10.1007/s10959-026-01500-w) (duplicate of CN0521)
 - CN0958 [Aldous–Caputo spectral-gap conjecture for hypergraph block shuffles](https://arxiv.org/pdf/2109.06009)
 - CN0959 [Oliveira’s comparison of exclusion mixing with independent particles](https://arxiv.org/pdf/1808.10846)
 - CN0960 [Weak monotonicity of exclusion mixing in the particle number](https://arxiv.org/pdf/1808.10846)
