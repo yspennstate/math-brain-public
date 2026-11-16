@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 671 notes.
+out, and requests are paraphrased. 679 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -976,3 +976,18 @@ Reflex firing and its judging, brain-versus-no-brain recall tests, GitHub push a
 | [waste_sense_throttle_state_empty_never_healed_2026_11_11](waste_sense_throttle_state_empty_never_healed_2026_11_11.md) | verified | waste-sense block on every prompt for 11 h? Its shared throttle file was 0 bytes and the parse error skipped the write that heals it; fixed 11 Nov, plus exact-clause advisory now once per context |
 | [windows_tool_reflexes_off_mac_3_dropped_1_gated_2026_11_08](windows_tool_reflexes_off_mac_3_dropped_1_gated_2026_11_08.md) | verified | 8 Nov: grep_for_a_cr_byte, ps_w_hides, ssh_backslash now dropped at load off Windows (24 Mac fires, 0 on-domain); windowless_parent ship-gated (18, gate keeps 0); process_presence left for Mac ... |
 | [zsh_unquoted_leading_equals_word_aborts_rest_of_line_2026_11_08](zsh_unquoted_leading_equals_word_aborts_rest_of_line_2026_11_08.md) | verified | Scar (8 Nov): why did a command stop with '=== not found'? zsh equals expansion: an unquoted word starting with = (echo ====) is a fatal error that drops the rest of the line, ; commands too; quote ... |
+
+## Added on 17 November (second batch): rule adherence tests and daemon single-instance fixes (8)
+
+How far standing instruction files move agent behaviour against a request-time push, and two daemon faults found by self-tests.
+
+| note | status | what it says |
+|---|---|---|
+| [core_steer_daemon_started_twice_every_boot_single_instance_mutex_2026_11_11](core_steer_daemon_started_twice_every_boot_single_instance_mutex_2026_11_11.md) | verified | core_steer.py running twice (dead parents, double sweeps)? It started twice at each of three boots (two logon launchers); since 11 Nov 01:15 a named mutex makes the second copy exit at once (10/10 ... |
+| [core_steer_selftest_runs_in_hook_liveness_and_the_second_start_2026_11_11](core_steer_selftest_runs_in_hook_liveness_and_the_second_start_2026_11_11.md) | verified | core_steer_selftest.py run by anything? Yes since 11 Nov: hook_liveness SELFTESTS runs it with and without -s and a failure reaches the wake. The second start at boot is the same launcher run twice ... |
+| [d6_97_agent_mood_adds_0p4pt_to_next_error_last_error_8x_no_mood_block_2026_11_08](d6_97_agent_mood_adds_0p4pt_to_next_error_last_error_8x_no_mood_block_2026_11_08.md) | verified | No: the agent's text mood (salience FEAR/JOY) predicts its next tool error only 1.2x (2.5% vs 2.1%, within-session +0.33pt); the last call failing is 8.7x and already wired; D6 mood block not built |
+| [house_rule_a_write_to_a_file_others_write_takes_a_mesh_claim_2026_11_09](house_rule_a_write_to_a_file_others_write_takes_a_mesh_claim_2026_11_09.md) | provisional | Writing or appending to a file other agents or jobs also write (shared STATUS.md, queue, registry JSON, board, shared log, MEMORY.md)? agent_mesh.py claim --resource file:<path> --mode write first, ... |
+| [live10_claude_static_rule_lines_30_push_29_claude_md_alone_10_of_30_2026_11_09](live10_claude_static_rule_lines_30_push_29_claude_md_alone_10_of_30_2026_11_09.md) | provisional | Yes (LIVE10): three always-on rule lines take Claude to 30/30 traps, push 29, CLAUDE.md alone 10; equal when the trigger is in the request |
+| [live11_codex_static_lines_24_push_30_agents_md_6_of_30_2026_11_09](live11_codex_static_lines_24_push_30_agents_md_6_of_30_2026_11_09.md) | provisional | Partly (LIVE11): Codex three standing rule lines 24/30, push 30, AGENTS.md alone 6; push beats standing text for Codex |
+| [live8_claude_md_alone_5_vs_3_of_15_self_claims_6_of_10_scripts_0_2026_11_09](live8_claude_md_alone_5_vs_3_of_15_self_claims_6_of_10_scripts_0_2026_11_09.md) | verified | No (LIVE8): global CLAUDE.md alone moved Claude's house-rule traps 5 vs 3 of 15 (p 0.5); it made Claude claim for its own writes 6 of 10 but no script carried a claim |
+| [live9_codex_agents_md_fixes_typos_6_of_10_never_claims_mesh_0_of_10_2026_11_09](live9_codex_agents_md_fixes_typos_6_of_10_never_claims_mesh_0_of_10_2026_11_09.md) | provisional | No on its rule (LIVE9): Codex AGENTS.md vs bare G 2 A 0 of 15; it fixes the user's typos 6/10 (bare 0/10) but never claims on the mesh 0/10 |
