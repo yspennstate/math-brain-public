@@ -1,6 +1,6 @@
 # Writing-brain reader tools (16 November 2026)
 
-Seven standard-library Python tools from the writing brain's tests of 15 and 16 November 2026. Each was kept because a
+Ten standard-library Python tools from the writing brain's tests of 15 and 16 November 2026. Each was kept because a
 rule fixed before the run held against blind readers or blind judges, or is kept as a sheet with its limits stated.
 The notes that record the tests are in `results/notes/framework-2026-11/` (named below).
 
@@ -13,6 +13,9 @@ The notes that record the tests are in `results/notes/framework-2026-11/` (named
 | `turn/wants_sheet.py` | Counts spoken turns that ask, order or refuse, and their length. A description of a page's dialogue, not a quality check. | `wants1_ask_order_refuse_turns_do_not_separate_2026_11_16` (does not separate drafts from published openings) |
 | `creative/abstract_close.py` | Flags narrated sentences with an abstract noun and no concrete one (a summing-up), and marks those in a chapter's last two paragraphs. Read a flag as "look again", never "cut". | `summing_up_flag_is_not_a_length_proxy_2026_11_16`, `draft_chapter_endings_sum_up_half_as_often_as_published_2026_11_15` |
 | `creative/process_lint.py` | Flags sentences in a LaTeX paper that are about the paper or its making rather than the mathematics ("not proved here", "we took six draws", AI named in the body, "an earlier version"), outside the AI declaration and acknowledgments; also lemmas cited as theorems. `process_lint.py main.tex`, `--selftest`. | `process_lint_catches_paper_self_narration_paper_lint_misses_2026_11_16` (5 of 5 must-fix sentences from eleven audits, no flags on 8 clean papers) |
+| `turn/numbers_sheet.py` | Lists every number in a chapter by the thing it counts, the clock times, and each number that counts four or more different things, so counts that cannot both be true sit side by side. `numbers_sheet.py chapter.md [--all]`. | `draft_numbers_repeats_openers_against_published_fiction_2026_11_16` (published openings median 1.8 counted numbers per thousand words, drafts about 9.5) |
+| `creative/sentence_repeat_rate.py` | The paper repeat rule moved to prose: a long sentence sharing most of its word pairs with an earlier one in the same chapter, counted beside published novels cut to the same length. Needs the corpus catalogue (`WRITING_BRAIN_DIR`). | same note (no repeats in 2,801 draft sentences; 5 in 33,708 published; not printed on a page) |
+| `creative/paragraph_openers.py` | Runs of three or more prose paragraphs opening on the same word, beside published novels. Needs the corpus catalogue. | same note (drafts 4.7 per 100 paragraphs, novels median 3.3; inside the published range) |
 
 `papers/` holds the paper shelf tools (harvest refereed, openly licensed arXiv papers; cut them into the moves a paper
 makes; compare a paragraph with published ones making the same move). See `papers/README.md`.
