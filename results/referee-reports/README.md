@@ -285,3 +285,5 @@ README credits Cerf, Talagrand and Russo.
 gradient field pinned at the origin and kept positive), together with a referee note on an earlier attempt. The
 lower bound of order log|i| is reduced to Deuschel and Giacomin's entropic repulsion estimate. The upper bound
 stays open, and the attempt explains where the Gaussian proof breaks for general convex potentials.
+
+CN1019 (`2026-11-16/CN1019_meeting_before_trapped/`): a working record on Conjecture 1.5 of Addario-Berry, Oliveira, Peres and Sousi (meeting before hitting a frozen walker, bound 1/3, with Holroyd's sharpness example). Multi-scale chains tend to 1/3 + (2/3) sum pi^3; a refined bound is proved for three states and unbroken numerically to ten. Still open.
