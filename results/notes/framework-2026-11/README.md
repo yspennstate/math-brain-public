@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 410 notes.
+out, and requests are paraphrased. 413 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -410,7 +410,7 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 
 ## Added later on 15 November (21)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -438,7 +438,7 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 
 ## Added later on 15 November (3)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -494,7 +494,7 @@ blind readers or blind judges), one on a word-puzzle generator that let slurs th
 
 ## Added later on 15 November (1)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -502,7 +502,7 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 
 ## Added later on 15 November (3)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -512,7 +512,7 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 
 ## Added later on 15 November (1)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -520,7 +520,7 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 
 ## Added later on 15 November (2)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -529,7 +529,7 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 
 ## Added later on 15 November (1)
 
-GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+Further framework notes from the same day.
 
 | note | status | what it says |
 |---|---|---|
@@ -610,3 +610,13 @@ Why a near-neutral dial is not a no-op control, why equal seeds do not mean equa
 | [near_neutral_dial_is_not_a_noop_control_2026_11_16](near_neutral_dial_is_not_a_noop_control_2026_11_16.md) | provisional | An acceptance test of the form 'set the new dial a hair off neutral and the result must not move' is not a valid control when the dial triggers an event, such as rebalancing a position to a target: ... |
 | [same_seed_different_chunk_size_different_paths_2026_11_13](same_seed_different_chunk_size_different_paths_2026_11_13.md) | verified | Two bootstrap runs with the same seed but different chunk sizes do not share paths: each chunk of B paths draws rng.random((B, m)) then rng.integers((B, m)), so the stream is consumed in a ... |
 | [sixteen_referee_reads_before_a_paper_release_2026_11_13](sixteen_referee_reads_before_a_paper_release_2026_11_13.md) | verified | A posted paper (the Ising perceptron at nonzero margin, certified bounds along the replica-symmetric curve) went through sixteen independent first-reader referee reads before its v2.1 release. Every ... |
+
+## Added on 16 November: summaries that drop inputs, faster recall and an audited conjecture (3)
+
+A failure mechanism for summaries built from many inputs, two audited recall speedups, and a successor conjecture on Stein variational gradient descent that an adversarial audit refuted.
+
+| note | status | what it says |
+|---|---|---|
+| [recall_ranking_chained_and_compact_index_view_2026_11_16](recall_ranking_chained_and_compact_index_view_2026_11_16.md) | verified | Two audited recall speedups landed on 16 November. (1) The recall command now consumes its five ranking segments through itertools.chain instead of building one list: 256 of 256 frozen recalls ... |
+| [summary_card_that_drops_input_must_name_it_2026_11_14](summary_card_that_drops_input_must_name_it_2026_11_14.md) | verified | A failure mechanism for any card, status line or report built from many inputs: one path (an early return, a skip, a carried value, a dedupe, a length cut in the sender) drops part of the inputs ... |
+| [svgd_last_iterate_successor_conjecture_false_audit_2026_11_16](svgd_last_iterate_successor_conjecture_false_audit_2026_11_16.md) | provisional | Open-problem row on finite-particle rates for Stein variational gradient descent: the original kernelized-Stein-discrepancy question is answered in the literature (Balasubramanian, Banerjee and ... |
