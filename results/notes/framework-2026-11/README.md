@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 426 notes.
+out, and requests are paraphrased. 430 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -647,3 +647,14 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 | [scij09_answer_withheld_accuracy_off_ceiling_brain_no_help_2026_11_16](scij09_answer_withheld_accuracy_off_ceiling_brain_no_help_2026_11_16.md) | verified | Science-writing test with the station's answer withheld (writer must compute it): does accuracy leave the ceiling, does the writing brain help? Yes it drops 5.00 -> 3.83 in both arms; brain no help ... |
 | [scij10_checks_md_lifts_writer_accuracy_to_5_except_method_choice_2026_11_16](scij10_checks_md_lifts_writer_accuracy_to_5_except_method_choice_2026_11_16.md) | verified | Writers made to reproduce every stated number with a command (CHECKS.md): accuracy 3.83 -> 4.6/4.67, 48/48 non-news pieces at 5; news adjusted-OR stays 3.2 (method choice, not arithmetic) |
 | [writer_packets_lacked_data_readme_news_misses_were_withdrawn_rows_2026_11_16](writer_packets_lacked_data_readme_news_misses_were_withdrawn_rows_2026_11_16.md) | verified | Why did SCIJ09/SCIJ10 news pieces miss the adjusted odds ratio? The writer packet never carried data/README.md (withdrawn trial rows excluded); 12 of 12 misses reproduce exactly; packet fixed, SCIW10 ... |
+
+## Added on 16 November: liveness, stalled jobs and two proof methods (4)
+
+How to tell a running job from a dead one, how to find what stalls a job, and two proof methods: perturbing from where the maximum term is small, and pairing copies to obtain a uniform piece.
+
+| note | status | what it says |
+|---|---|---|
+| [method_liveness_needs_identity_and_rate_2026_11_11](method_liveness_needs_identity_and_rate_2026_11_11.md) | provisional | Is it running? A name answers the ghost direction badly and the starved direction not at all: take identity (PID/resolved path/lock owner) against a ghost, a rate over a named window against reading ... |
+| [method_max_term_inequality_find_where_it_is_small_then_perturb_2026_11_11](method_max_term_inequality_find_where_it_is_small_then_perturb_2026_11_11.md) | provisional | Inequality with a max term to prove for every n (T104 Psi >= 0)? Do not build one bound: find where the max term is small, show x is there a perturbation of the extremal vector, compare orders in n; ... |
+| [method_pair_copies_to_get_a_uniform_piece_2026_10_29](method_pair_copies_to_get_a_uniform_piece_2026_10_29.md) | provisional | Method: pair copies so F*F has a uniform piece (g*g continuous), solve there, lift back by conditional law; plus linear tilts that average to uniform |
+| [method_stalled_job_time_the_step_on_its_largest_single_unit_2026_11_16](method_stalled_job_time_the_step_on_its_largest_single_unit_2026_11_16.md) | provisional | Unattended job crawling with a core pinned and its pid alive? Look for a loop whose cost grows with the LARGEST SINGLE UNIT of input (longest token, longest stretch since a marker, one growing ... |
