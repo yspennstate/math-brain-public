@@ -1,0 +1,64 @@
+OPEN: address-space cap unavailable current limit exceeds maximum limit
+NUMERICAL dimensions (18288, 16188) nonzeros 48210
+-------------------------------------------------------------
+           Clarabel.rs v0.11.1  -  Clever Acronym                
+
+                   (c) Paul Goulart                          
+                University of Oxford, 2022                   
+-------------------------------------------------------------
+
+problem:
+  variables     = 16188
+  constraints   = 18288
+  nnz(P)        = 0
+  nnz(A)        = 48210
+  cones (total) = 23
+    :        Zero = 1,  numel = 2100
+    : PSDTriangle = 22,  numel = (1378,1378,1378,1378,...,406)
+
+settings:
+  linear algebra: direct / faer, precision: 64 bit (1 thread)
+  max iter = 80, time limit = 880.0,  max step = 0.990
+  tol_feas = 1.0e-12, tol_gap_abs = 1.0e-10, tol_gap_rel = 1.0e-10,
+  static reg : on, ϵ1 = 1.0e-8, ϵ2 = 4.9e-32
+  dynamic reg: on, ϵ = 1.0e-13, δ = 2.0e-7
+  iter refine: on, reltol = 1.0e-13, abstol = 1.0e-12,
+               max iter = 10, stop ratio = 5.0
+  equilibrate: on, min_scale = 1.0e-4, max_scale = 1.0e4
+               max iter = 10
+
+iter    pcost        dcost       gap       pres      dres      k/t        μ       step      
+---------------------------------------------------------------------------------------------
+  0  +8.1761e+02  +8.1951e+02  2.32e-03  6.44e-01  2.52e-01  1.00e+00  9.41e+01   ------   
+  1  +1.4587e+03  +1.4675e+03  6.02e-03  2.02e-01  4.99e-02  8.63e+00  3.35e+01  8.21e-01  
+NUMERICAL resource peak bytes 1581662208 seconds 20.084207499981858
+  2  +1.5880e+03  +1.5922e+03  2.65e-03  7.65e-02  1.79e-02  4.15e+00  1.39e+01  7.29e-01  
+  3  +1.6410e+03  +1.6423e+03  8.10e-04  2.36e-02  5.41e-03  1.31e+00  4.54e+00  6.99e-01  
+NUMERICAL resource peak bytes 1625833472 seconds 40.0559697499848
+  4  +1.6785e+03  +1.6789e+03  2.79e-04  8.34e-03  1.88e-03  4.62e-01  1.59e+00  7.13e-01  
+  5  +1.6926e+03  +1.6928e+03  1.29e-04  4.06e-03  8.96e-04  2.16e-01  7.46e-01  6.36e-01  
+  6  +1.7033e+03  +1.7033e+03  3.69e-05  1.13e-03  2.42e-04  6.19e-02  1.97e-01  7.88e-01  
+NUMERICAL resource peak bytes 1626324992 seconds 60.01056929200422
+  7  +1.7050e+03  +1.7051e+03  1.90e-05  6.88e-04  1.44e-04  3.19e-02  1.16e-01  7.05e-01  
+  8  +1.7074e+03  +1.7074e+03  3.05e-06  1.11e-04  2.28e-05  5.12e-03  1.81e-02  8.84e-01  
+NUMERICAL resource peak bytes 1626324992 seconds 80.02008304200717
+  9  +1.7077e+03  +1.7077e+03  6.15e-07  2.41e-05  4.93e-06  1.03e-03  3.91e-03  9.04e-01  
+ 10  +1.7078e+03  +1.7078e+03  8.73e-08  3.42e-06  6.99e-07  1.46e-04  5.55e-04  8.63e-01  
+NUMERICAL resource peak bytes 1626324992 seconds 100.034060667007
+ 11  +1.7078e+03  +1.7078e+03  1.57e-08  6.32e-07  1.29e-07  2.63e-05  1.03e-04  9.21e-01  
+ 12  +1.7078e+03  +1.7078e+03  2.59e-09  1.05e-07  2.14e-08  4.34e-06  1.70e-05  8.48e-01  
+NUMERICAL resource peak bytes 1626324992 seconds 120.04262654201011
+ 13  +1.7078e+03  +1.7078e+03  4.21e-10  1.72e-08  3.52e-09  7.06e-07  2.80e-06  9.38e-01  
+ 14  +1.7078e+03  +1.7078e+03  6.53e-11  2.67e-09  5.46e-10  1.09e-07  4.34e-07  8.53e-01  
+ 15  +1.7078e+03  +1.7078e+03  8.22e-12  3.38e-10  6.92e-11  1.38e-08  5.50e-08  9.61e-01  
+ 16  +1.7078e+03  +1.7078e+03  1.03e-12  4.22e-11  8.63e-12  1.72e-09  6.86e-09  8.80e-01  
+ 17  +1.7078e+03  +1.7078e+03  8.88e-14  3.96e-12  7.65e-13  1.52e-10  6.08e-10  9.80e-01  
+NUMERICAL resource peak bytes 1626324992 seconds 160.06922329199733
+ 18  +1.7078e+03  +1.7078e+03  4.93e-15  2.04e-12  6.86e-14  1.34e-11  5.36e-11  9.13e-01  
+ 19  +1.7078e+03  +1.7078e+03  3.33e-15  8.84e-12  3.52e-15  6.91e-13  2.76e-12  9.90e-01  
+NUMERICAL resource peak bytes 1626324992 seconds 180.01367362498422
+ 20  +1.7078e+03  +1.7078e+03  3.33e-15  8.84e-12  3.52e-15  6.91e-13  2.76e-12  0.00e+00  
+---------------------------------------------------------------------------------------------
+Terminated with status = AlmostSolved
+solve time = 180.47880504s
+NUMERICAL status AlmostSolved seconds 180.5523798330105
