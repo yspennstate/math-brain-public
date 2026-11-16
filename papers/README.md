@@ -129,6 +129,11 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Zero speed for excited random walks on the event of non-transience | [excited-walk-zero-speed-non-transience](https://github.com/yspennstate/excited-walk-zero-speed-non-transience) |
 | Two instability intervals for a switched planar system with one non-Hurwitz matrix | [planar-switching-two-instability-intervals](https://github.com/yspennstate/planar-switching-two-instability-intervals) |
 | Law-determined norm inequalities do not imply complete mixability | [complete-mixability-norm-converse](https://github.com/yspennstate/complete-mixability-norm-converse) |
+| Three problems in kernel methods: proofs and finite-size measurements | [three-problems-kernel-methods](https://github.com/yspennstate/three-problems-kernel-methods) |
+| The stationary cover time of reversible chains on three and four states | [stationary-cover-time-four-states](https://github.com/yspennstate/stationary-cover-time-four-states) |
+| Which chord of an even cycle preserves its spectral gap | [one-chord-even-cycle-spectral-gap](https://github.com/yspennstate/one-chord-even-cycle-spectral-gap) |
+| The Kesten–Stigum bound is tight for the four-state Potts model on the binary tree | [potts-four-state-binary-tree](https://github.com/yspennstate/potts-four-state-binary-tree) |
+| The topology of the recurrent and transient sets of homogeneous random walks | [recurrent-set-topology](https://github.com/yspennstate/recurrent-set-topology) |
 
 Six more are kept here with their working files:
 

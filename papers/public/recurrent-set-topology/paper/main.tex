@@ -1,0 +1,389 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\relint}{\operatorname{relint}}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+
+\title[Topology of the recurrent and transient sets]{The topology of the recurrent and transient sets of homogeneous
+random walks}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\subjclass[2020]{60G50, 60J10, 52B11, 55U10}
+\keywords{random walk, recurrence, transience, abelian group, path-connected, simply connected, convexity,
+nerve theorem}
+
+\begin{abstract}
+Each point $a$ of a simplex $A$ defines the random walk on a finitely generated abelian group that takes the $i$-th
+step of a fixed finite set $S$ with probability $a_i$. Li, Mossel and Weiss asked when the set $R$ of recurrent walks
+is path-connected or simply connected, and when the set $R^c$ of transient walks is path-connected, simply connected or
+convex. We answer these questions in terms of the projections $v_i$ of the steps to the free part $\Z^n$ of the group.
+Apart from two simple cases, in which $R$ is contractible or convex, $R$ is homotopy equivalent to a bipartite graph
+whose vertices are the lines and planes through the origin on which the steps balance. The set $R^c$ is empty when
+every $v_i$ is zero, and otherwise contractible unless $0$ lies in the relative interior of the convex hull of the $v_i$ and these vectors span a line or a plane; then
+it has two components or is homotopy equivalent to a circle. It is convex exactly when every recurrent walk is
+positive recurrent.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $G$ be a finitely generated abelian group and let $S=\{s_1,\dots,s_m\}\subseteq G$ be a non-empty finite set.
+Every point $a$ of the simplex
+\[
+A=\Bigl\{x\in\R^m:\ x_i\ge0,\ \textstyle\sum_i x_i=1\Bigr\}
+\]
+defines a homogeneous random walk on $G$, which moves from $g$ to $g+s_i$ with probability $a_i$. Li, Mossel and
+Weiss~\cite[Section~6]{LMW} study the set $R\subseteq A$ of those $a$ for which this walk is recurrent, and its
+complement $R^c=A\setminus R$ of transient walks. Identify $G$ with $\Z^n\times H$ for a finite abelian group $H$, let
+$\pi:\Z^n\times H\to\Z^n\subseteq\R^n$ be the projection and put $v_i=\pi(s_i)$. Their Proposition~6.1 describes $R$:
+\begin{equation}\label{eq:prop61}
+a\in R\iff \dim\spn\{v_i:a_i>0\}\le2\quad\text{and}\quad \sum_{i=1}^m a_iv_i=0 .
+\end{equation}
+From this they prove that $R$ is closed~\cite[Theorem~6.2]{LMW}, that $R$ is path-connected when $S$ is
+symmetric~\cite[Theorem~6.3]{LMW}, and that $R$ is convex if and only if all the spaces $\spn\{v_i:a_i>0\}$, $a\in R$,
+lie in one subspace of dimension at most two~\cite[Theorem~6.5]{LMW}. Their Example~6.4 shows that $R$ can be
+disconnected, and their Theorem~6.9 gives a sufficient condition for $R^c$ to be path-connected, which applies to every
+symmetric $S$ whose image spans a space of dimension at least three~\cite[Corollary~6.10]{LMW}. They show that $R^c$
+is not convex for symmetric $S$ unless every $v_i$ is zero~\cite[Proposition~6.12]{LMW}. They leave open the
+classification of path-connectedness of $R$ for general $S$, and ask:
+\begin{itemize}
+\item[] Question~6.7. When is $R$ simply connected?
+\item[] Question~6.8. When is $R^c$ path-connected?
+\item[] Question~6.11. When is $R^c$ simply connected?
+\item[] Question~6.13. When is $R^c$ convex?
+\end{itemize}
+They expected $R^c$ to be path-connected apart from one-dimensional examples such as $S=\{1,-1\}\subseteq\Z$, and the
+answer to Question~6.11 to differ substantially from that of Question~6.8, on the strength of the example
+$S=\{\pm e_1,\pm e_2\}\subseteq\Z^2$, where $R^c$ is path-connected but not simply connected.
+
+The answers below depend only on the vectors $v_1,\dots,v_m$, which may repeat. We call a line $L$ through the origin
+\emph{balanced} if it contains steps on both sides of $0$, that is, $v_i,v_j\in L$ with $v_j=-cv_i\ne0$ for some $c>0$.
+We call a plane $V$ through the origin \emph{balanced} if it is spanned by the steps it contains and $0$ lies in the
+convex hull of those steps. The \emph{balance graph} $B$ is the bipartite graph whose vertices are the balanced lines
+and the balanced planes, a line being joined to each balanced plane that contains it. Let $I_0=\{i:v_i=0\}$ and
+$r=\dim\spn\{v_1,\dots,v_m\}$. As in~\cite{LMW}, the empty set counts as path-connected and convex.
+
+\begin{theorem}\label{thm:R}
+\begin{enumerate}
+\item If $I_0\ne\emptyset$, then $R$ is star-shaped, hence contractible.
+\item If $r\le2$, then $R$ is convex.
+\item If $I_0=\emptyset$ and $r\ge3$, then $R$ is homotopy equivalent to $B$.
+\end{enumerate}
+\end{theorem}
+
+\begin{corollary}\label{cor:R}
+$R$ is path-connected if and only if $I_0\ne\emptyset$, or $r\le2$, or $B$ is connected or empty. A non-empty $R$ is
+simply connected if and only if $I_0\ne\emptyset$, or $r\le 2$, or $B$ is a tree. In case~(3) the components of $R$
+correspond to the components of $B$, and the fundamental group of each component is free of rank equal to the number
+of independent cycles of the corresponding component of $B$.
+\end{corollary}
+
+For symmetric $S$ with $r\ge3$ and $I_0=\emptyset$ the graph $B$ is connected, in line with~\cite[Theorem~6.3]{LMW},
+but it always contains a cycle (Example~\ref{ex:sym}). So among symmetric $S$ the set $R$ is convex when $r\le2$ and not
+convex when $r\ge3$~\cite[Corollary~6.6]{LMW}; when $r\ge3$ it is contractible if some $s_i$ projects to $0$, and path-connected but not simply connected
+otherwise.
+
+\begin{theorem}\label{thm:Rc}
+Let $K=\conv\{v_1,\dots,v_m\}$.
+\begin{enumerate}
+\item If $r\ge3$, or $0\notin\relint K$, then $R^c$ is non-empty and star-shaped.
+\item If $0\in\relint K$ and $r=1$, then $R^c$ has exactly two components, each of them star-shaped.
+\item If $0\in\relint K$ and $r=2$, then $R^c$ is homotopy equivalent to a circle.
+\end{enumerate}
+The remaining case is $r=0$, in which every $v_i$ is zero, $R=A$ and $R^c$ is empty.
+In particular $R^c$ is path-connected unless the $v_i$ span a line and lie on both sides of $0$, and a non-empty
+$R^c$ is simply connected unless $0\in\relint K$ and $r\in\{1,2\}$.
+\end{theorem}
+
+Here $\relint K$ is the interior of $K$ relative to its affine hull; when $r\ge 1$ and $0\in \relint K$ the affine hull
+of $K$ is $\spn\{v_i\}$. This confirms the expectation of~\cite{LMW} about Question~6.8 and makes precise the
+difference from Question~6.11: the only extra obstruction to simple connectivity is the planar case, of which
+$\{\pm e_1,\pm e_2\}$ is an instance. Part~(1) for $r\ge3$ contains~\cite[Theorem~6.9 and Corollary~6.10]{LMW}.
+
+\begin{theorem}\label{thm:convex}
+The following are equivalent.
+\begin{enumerate}
+\item $R^c$ is convex.
+\item Every recurrent law is supported on $I_0$, that is, $R=\{a\in A: a_i=0\text{ for }i\notin I_0\}$.
+\item No subspace of dimension one or two contains nonzero steps $v_i$ whose convex hull contains $0$.
+\end{enumerate}
+\end{theorem}
+
+For symmetric $S$ condition~(3) fails as soon as some $v_i\ne0$, which recovers~\cite[Proposition~6.12]{LMW}. The set
+in~(2) is the set $P$ of positive recurrent walks of~\cite[Remark~6.14]{LMW}, so~(2) says that $R^c$ is convex exactly
+when every recurrent walk is positive recurrent.
+
+The proofs are short once~\eqref{eq:prop61} is available. For Theorem~\ref{thm:R}(3) we cover $R$ by the polytopes on
+which the walk lives in a fixed plane and apply the nerve theorem; the intersection pattern of these polytopes is
+governed by the balanced lines, and the nerve is homotopy equivalent to $B$. For Theorem~\ref{thm:Rc} the case $r\ge3$ is a
+star-shaped argument about an interior point of $A$, and the case $r\le2$ reduces, through a section of the drift map,
+to the topology of $K\setminus\{0\}$.
+
+\section{Notation}\label{sec:notation}
+
+Throughout, $f:\R^m\to\R^n$ is the linear map $f(a)=\sum_ia_iv_i$, so $f(A)=K$. For a subspace $V\subseteq\R^n$ put
+\[
+C_V=\{a\in A:\ f(a)=0,\ a_i=0\text{ whenever }v_i\notin V\}.
+\]
+Each $C_V$ is a polytope (possibly empty), $C_V\subseteq C_W$ when $V\subseteq W$, and $C_V\cap C_W=C_{V\cap W}$
+directly from the definition. By~\eqref{eq:prop61}, $a\in R$ if and only if $a\in C_V$ for some subspace $V$ of
+dimension at most two; one may take $V=\spn\{v_i:a_i>0\}$. Only the set $\{i: v_i\in V\}$ matters, so finitely many
+polytopes occur and $R$ is a finite union of polytopes. We write $F=\{a\in A: a_i=0\text{ for }i\notin I_0\}$ for the
+face of $A$ spanned by the steps that project to $0$; then $C_{\{0\}}=F$.
+
+\begin{lemma}\label{lem:nonempty}
+Suppose $I_0=\emptyset$. A line $L$ has $C_L\ne\emptyset$ if and only if it is balanced. If $V$ is a plane spanned by
+the steps it contains, then $C_V\ne\emptyset$ if and only if $V$ is balanced.
+\end{lemma}
+
+\begin{proof}
+$C_V$ is non-empty exactly when $0$ is a convex combination of the steps lying in $V$. On a line with no zero steps
+this means steps on both sides of $0$.
+\end{proof}
+
+\section{The recurrent set}\label{sec:R}
+
+\begin{proof}[Proof of Theorem~\ref{thm:R}(1) and (2)]
+(1) Let $z\in F$, which is non-empty, and $a\in R$. For $0<t<1$ the point $(1-t)a+tz$ has support
+$\supp a\cup\supp z$, the steps added project to $0$, so $\spn\{v_i: ((1-t)a+tz)_i>0\}=\spn\{v_i:a_i>0\}$, and the
+drift is $(1-t)f(a)+tf(z)=0$. By~\eqref{eq:prop61} the segment from $a$ to $z$ lies in $R$, so $R$ is star-shaped
+about $z$.
+
+(2) If $r\le2$, the dimension condition in~\eqref{eq:prop61} always holds, so $R=A\cap f^{-1}(0)$, an intersection of
+convex sets.
+\end{proof}
+
+Part~(2) is the special case $V=\spn\{v_i\}$ of~\cite[Theorem~6.5]{LMW}, stated there as~\cite[Corollary~6.6]{LMW}.
+
+For part~(3) assume from now on that $I_0=\emptyset$ and $r\ge3$. Let $\mathcal P$ be the set of balanced planes and
+$\mathcal L$ the set of balanced lines.
+
+\begin{lemma}\label{lem:cover}
+$R=\bigcup_{V\in\mathcal P}C_V$. Every balanced line lies in at least one balanced plane.
+\end{lemma}
+
+\begin{proof}
+Let $a\in R$ and $W=\spn\{v_i:a_i>0\}$, so $a\in C_W$ and $\dim W\le2$. Since $f(a)=0$ and no step is zero, $W\ne\{0\}$.
+If $\dim W=1$, pick a step $v_j\notin W$, which exists because $r\ge3$, and enlarge $W$ to $W+\R v_j$. In either case
+$a\in C_V$ for a plane $V$ spanned by steps, and $C_V\ne\emptyset$, so $V$ is balanced by Lemma~\ref{lem:nonempty}. The
+same enlargement applied to a balanced line $L$ gives a plane spanned by steps that contains the steps of $L$, hence
+$0$ in the convex hull of its steps.
+\end{proof}
+
+\begin{lemma}\label{lem:nerve}
+Let $\mathcal Q\subseteq\mathcal P$ have at least two elements. Then $\bigcap_{V\in\mathcal Q}C_V\ne\emptyset$ if and
+only if all planes of $\mathcal Q$ contain one common balanced line.
+\end{lemma}
+
+\begin{proof}
+$\bigcap_{V\in\mathcal Q}C_V=C_U$ with $U=\bigcap_{V\in\mathcal Q}V$. Distinct planes meet in a line or in $\{0\}$,
+so $U$ is a line or $\{0\}$. $C_{\{0\}}=F=\emptyset$ because $I_0=\emptyset$, and for a line $C_U\ne\emptyset$ exactly
+when $U$ is balanced (Lemma~\ref{lem:nonempty}).
+\end{proof}
+
+Let $N$ be the nerve of the cover $\{C_V\}_{V\in\mathcal P}$: its vertices are the balanced planes, and a set of
+planes spans a simplex when the corresponding polytopes have a common point. For $L\in\mathcal L$ let
+$\mathcal P_L=\{V\in\mathcal P: L\subseteq V\}$, which is non-empty by Lemma~\ref{lem:cover}, and let $D_L$ be the full
+simplex on $\mathcal P_L$. By Lemma~\ref{lem:nerve},
+\begin{equation}\label{eq:N}
+N=\bigcup_{L\in\mathcal L}D_L\ \cup\ \{\text{balanced planes containing no balanced line}\},
+\end{equation}
+and two distinct lines $L,L'$ lie together in at most one plane, so $D_L\cap D_{L'}$ is empty or a single vertex.
+
+\begin{lemma}\label{lem:RN}
+$R$ is homotopy equivalent to $N$.
+\end{lemma}
+
+\begin{proof}
+Let $M=A\cap f^{-1}(0)$, a polytope. Each non-empty $C_V$ is obtained from $M$ by setting some coordinates to zero,
+so it is a face of $M$, and so is every intersection of the $C_V$. Hence $R$ is a union of faces of $M$, and the
+barycentric subdivision of the face complex of $M$ restricts to a triangulation of $R$ in which every $C_V$ is a
+subcomplex. Every non-empty intersection of the $C_V$ is convex,
+hence contractible, so by the nerve theorem for a CW complex covered by subcomplexes~\cite[Corollary~4G.3 and
+Exercise~4 of Section~4.G]{Hat02}, $R\simeq N$.
+\end{proof}
+
+\begin{lemma}\label{lem:NB}
+$N$ is homotopy equivalent to $B$.
+\end{lemma}
+
+\begin{proof}
+For each balanced line $L$ add a new vertex $c_L$ and the cone $c_L*D_L$, the join of the point $c_L$ with $D_L$,
+which is the full simplex on $\{c_L\}\cup\mathcal P_L$. Let $N''=N\cup\bigcup_L c_L*D_L$. The cones meet $N$ in the $D_L$, and two cones meet only
+inside $N$.
+
+Since $c_L*D_L$ and $D_L$ are both contractible, the inclusion $D_L\hookrightarrow c_L*D_L$ is a homotopy equivalence,
+and a CW pair has the homotopy extension property~\cite[Proposition~0.16]{Hat02}, so $D_L$ is a deformation retract
+of $c_L*D_L$~\cite[Corollary~0.20]{Hat02}. These retractions fix $N$, so together they deformation retract $N''$ onto
+$N$.
+
+Inside $c_L*D_L$ lies the star $T_L=c_L*\mathcal P_L$, the union of the edges from $c_L$ to the vertices of
+$\mathcal P_L$. It is contractible, so by the same two results $c_L*D_L$ deformation retracts onto $T_L$, fixing
+$T_L$ and in particular every vertex of $\mathcal P_L$. Two cones $c_L*D_L$ and $c_{L'}*D_{L'}$ meet in at most one
+vertex of $\mathcal P$, which both retractions fix, so the retractions fit together and deformation retract $N''$
+onto $\bigcup_L T_L$ together with the isolated vertices in~\eqref{eq:N}. That complex is $B$, with $c_L$ in the
+role of the line $L$. Hence $N\simeq N''\simeq B$.
+\end{proof}
+
+Lemmas~\ref{lem:RN} and~\ref{lem:NB} prove Theorem~\ref{thm:R}(3). Corollary~\ref{cor:R} follows: a non-empty star-shaped
+or convex set is contractible (the empty set is path-connected and convex by convention), a graph is path-connected exactly when it is connected, and a non-empty graph is simply
+connected exactly when it is a tree; the fundamental group of a connected graph is free on its independent cycles.
+
+\begin{example}[Li, Mossel and Weiss]\label{ex:64}
+In $\Z^3$ take $S=\{e_3,\ e_1,\ -e_1+e_2,\ -e_1-e_2,\ -e_3\}$~\cite[Example~6.4]{LMW}. The only balanced line is
+$\R e_3$; the balanced planes are the three planes spanned by $e_3$ and one of the other steps, and the plane
+$x_3=0$, which contains no balanced line. So $B$ is a star with three edges together with an isolated vertex, and $R$
+has two components, each contractible.
+\end{example}
+
+\begin{example}\label{ex:sym}
+Let $S$ be symmetric with $I_0=\emptyset$ and $r\ge3$, and choose linearly independent steps $u_1,u_2,u_3$. The lines
+$\R u_j$ are balanced, the planes $\R u_j+\R u_k$ are balanced and distinct, and
+$\R u_1,\ \R u_1+\R u_2,\ \R u_2,\ \R u_2+\R u_3,\ \R u_3,\ \R u_3+\R u_1$ is a cycle in $B$. So $R$ is not simply
+connected. For $S=\{\pm e_1,\dots,\pm e_n\}\subseteq\Z^n$, $n\ge3$, the graph $B$ is the complete graph on $n$ vertices
+with every edge subdivided, so $R$ is homotopy equivalent to a wedge of $(n-1)(n-2)/2$ circles. For $n=3$ this is seen
+directly: drift zero forces $a_{e_j}=a_{-e_j}$, and the dimension condition forces one of the three pairs to vanish,
+so $R$ is the boundary of a triangle.
+\end{example}
+
+\section{The transient set}\label{sec:Rc}
+
+\begin{proof}[Proof of Theorem~\ref{thm:Rc}]
+\emph{The case $r\ge3$.} Here and below $\supp a=\{i:a_i>0\}$. Let $c$ be a point of the relative interior of $A$. For $x\in R^c$ and $0<t\le1$ the point
+$(1-t)x+tc$ has every coordinate positive, so its steps span a space of dimension $r\ge3$, and it is transient
+by~\eqref{eq:prop61}. Hence $R^c$ is star-shaped about $c$.
+
+\emph{The case $r\le2$.} Now $R=A\cap f^{-1}(0)$, as in the proof of Theorem~\ref{thm:R}(2). Triangulate $K$ using
+only points of $\{v_1,\dots,v_m\}$ as vertices, which is possible for the convex hull of any finite point set, and
+for each vertex $w$ of the triangulation fix one index $i(w)$ with $v_{i(w)}=w$. On a
+simplex with vertices $w_0,\dots,w_k$ write $x=\sum_j\lambda_jw_j$ in barycentric coordinates and set
+$s(x)=\sum_j\lambda_je_{i(w_j)}$, where $e_i$ are the vertices of $A$. Since $i(w)$ depends only on the vertex $w$,
+these definitions agree on common faces, so
+$s:K\to A$ is continuous, and $f\circ s$ is the identity. The homotopy
+\[
+H(a,t)=(1-t)a+t\,s(f(a)),\qquad a\in A,\ 0\le t\le1,
+\]
+satisfies $f(H(a,t))=f(a)$, so it maps $R^c\times[0,1]$ into $R^c$, starts at the identity and ends in
+$s(K\setminus\{0\})$, and it fixes $s(K\setminus\{0\})$ pointwise. Thus $R^c$ deformation retracts onto
+$s(K\setminus\{0\})$, which is homeomorphic to $K\setminus\{0\}$ because $f\circ s$ is the identity.
+
+If $0\notin K$, then $R=\emptyset$ and $R^c=A$ is convex. If $0\in K\setminus\relint K$, choose $p\in\relint K$ and
+$c\in A$ with $f(c)=p$. For $a\in R^c$ and $0<t\le1$ the drift of $(1-t)a+tc$ is $(1-t)f(a)+tp$, which lies in
+$\relint K$ and is therefore not $0$, so $(1-t)a+tc$ is transient. Hence $R^c$ is star-shaped about $c$.
+If $0\in\relint K$ and $r\ge1$, then $K$ is a convex body of dimension $r$ in $\spn\{v_i\}$ with $0$ in its interior,
+and radial projection from $0$ deformation retracts $K\setminus\{0\}$ onto the boundary of $K$, a sphere of dimension
+$r-1$. For $r=1$ this is two points, so $R^c$ has two contractible components; for $r=2$ it is a circle. Finally, if
+$r=0$ then $R=A$ and $R^c$ is empty.
+
+In case~(2) each component is in fact star-shaped. If $v_i$ spans the line and $\sigma(i)\in\{+,-,0\}$ is the side of
+$0$ on which $v_i$ lies, the two components are $\{a\in A: f(a)\text{ lies on the }+\text{ side}\}$ and the same with
+$-$, and each is star-shaped about the barycentre of the face spanned by its own steps $\{i:\sigma(i)=\pm\}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:convex}]
+(2)$\Rightarrow$(1). The set $F$ is a face of $A$. If $x,y\in A\setminus F$, some coordinate $x_i$ with $i\notin I_0$
+is positive, so $((1-t)x+ty)_i>0$ for $0\le t<1$, and $y\notin F$; hence $A\setminus F$ is convex. Since $F\subseteq R$
+always holds by~\eqref{eq:prop61}, condition~(2) says $R=F$.
+
+(1)$\Rightarrow$(2). Suppose $x\in R$ has $x_i>0$ for some $i$ with $v_i\ne0$. Let $\Phi$ be the face of $A$ spanned by
+$\supp x$, so $x$ lies in its relative interior. The linear map $f$ is not constant on $\Phi$, because the vertex $e_i$
+of $\Phi$ has $f(e_i)=v_i\ne0=f(x)$. Choose a vector $d$ parallel to $\Phi$ with $f(d)\ne0$. For small $\varepsilon>0$
+the points $x\pm\varepsilon d$ lie in $\Phi$ and have drift $\pm\varepsilon f(d)\ne0$, so both are transient, while
+their midpoint $x$ is recurrent. Hence $R^c$ is not convex.
+
+(2)$\Leftrightarrow$(3). If $x\in R$ charges a step $v_i\ne0$, let $J=\{j\in\supp x: v_j\ne0\}$. Since steps with
+$v_j=0$ do not contribute to the drift, the normalized restriction of $x$ to $J$ is a convex combination of the nonzero
+steps $v_j$, $j\in J$, equal to $0$, and these steps span a space $V$ of dimension one or two by~\eqref{eq:prop61}. So
+(3) fails. Conversely, a convex combination of nonzero steps in such a $V$ that equals $0$ is a recurrent law
+by~\eqref{eq:prop61} that charges a nonzero step, so (2) fails.
+\end{proof}
+
+\section{A computer check}\label{sec:checks}
+
+Two programs in the repository~\cite{Repo} test the statements on random examples.
+
+The first, \texttt{check\_nerve.py}, draws step sets with no zero step and $r\ge3$ and builds the cover $\{C_V\}$. It
+decides every intersection of the polytopes by linear programming on their defining constraints (the HiGHS solver
+in SciPy), not through
+Lemma~\ref{lem:nerve}. It then computes the rational Betti numbers of the nerve from floating-point ranks of its boundary matrices,
+whose entries are $0$ and $\pm1$, and compares them with the
+number of components and of independent cycles of $B$. On 300 step sets in $\Z^3$ and $\Z^4$ it found no
+disagreement; on Example~\ref{ex:64} and on $\{\pm e_j\}$ in $\Z^3$ and $\Z^4$ it gives the Betti numbers of two
+points, a circle and a wedge of three circles. Random step sets rarely give a cycle in $B$, so
+\texttt{check\_more.py} repeats the test on 200 step sets in $\Z^3$, $\Z^4$ and $\Z^5$ built from a few vectors
+together with their negatives or doubled negatives. Of these, 138 have a cycle in $B$ and 181 have a balanced line in
+three or more balanced planes, and again there was no disagreement.
+
+The same program tests Theorem~\ref{thm:Rc} on 150 step sets in $\Z$, $\Z^2$ and $\Z^3$, with zero steps allowed and
+every rank from zero to three. It lists the transient points of $A$ whose coordinates lie in $\frac1N\Z$, with $N=6$
+or $8$. Two of them are joined when the open segment between them avoids $R$; on that segment the support is the union
+of the two supports and the drift moves linearly, so the test reduces to whether $0$ lies on the open segment between
+the two drifts, which is checked in exact rational arithmetic, and to the rank of the union of the supports, which is
+computed in floating point. The number of components of the
+resulting graph agreed with Theorem~\ref{thm:Rc} in all 150 cases. The runs above are
+\texttt{python check\_nerve.py 300 1} and \texttt{python check\_more.py 200 150 7} (Python~3 with NumPy~2.0.2 and SciPy~1.13.1).
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to
+Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared,
+persistent memory in which the agents record claims,
+proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each
+other's work. For more on the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain
+repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Data availability}
+The programs described in Section~\ref{sec:checks} are in the repository~\cite{Repo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper is part of a broader research project on AI proving problems. Claude agents (Anthropic) proved
+Theorems~\ref{thm:R}, \ref{thm:Rc} and~\ref{thm:convex}, wrote the programs of Section~\ref{sec:checks} and prepared
+the manuscript; Codex agents (OpenAI) refereed the proofs. The setting, the characterization~\eqref{eq:prop61},
+Example~\ref{ex:64} and the questions answered here are due to Li, Mossel and Weiss~\cite{LMW}. The new results are
+the description of $R$ by the balance graph, the homotopy types of $R^c$ and the convexity criterion. The author
+directed the work and is responsible for the paper.
+
+\begin{thebibliography}{99}
+\bibitem{Hat02} A.~Hatcher, \emph{Algebraic Topology}, Cambridge University Press, Cambridge, 2002.
+\bibitem{LMW} R.~Li, E.~Mossel and B.~Weiss, \emph{Monotonicity, topology, and convexity of recurrence in random
+walks}, Ann. Appl. Probab. \textbf{36} (2026), no.~5, 4291--4310, \doi{10.1214/26-AAP2329}. Numbered
+statements are cited from \arxiv{2403.04108} (version 4, 2025).
+\bibitem{Repo} Y.~Shmalo, \emph{The topology of the recurrent and transient sets: paper and check programs}, 2026,
+\url{https://github.com/yspennstate/recurrent-set-topology}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+2026, \doi{10.5281/zenodo.24150837},
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}
