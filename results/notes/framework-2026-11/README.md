@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 416 notes.
+out, and requests are paraphrased. 426 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -630,3 +630,20 @@ File moves past the Windows path limit, a session clock reset by loop re-fires, 
 | [agent_written_turns_stored_as_user_requests_2026_11_14](agent_written_turns_stored_as_user_requests_2026_11_14.md) | verified | A failure mechanism for any system that mines a person's requests into rules: text an agent wrote (a worker's brief, a forked session's first turn, a loop re-fire, a relayed message) enters the ... |
 | [loop_refire_resets_a_session_work_clock_2026_11_16](loop_refire_resets_a_session_work_clock_2026_11_16.md) | provisional | A work-session hook that holds an agent to a stated duration restarted its clock every time a scheduled loop re-sent the original request, so a ten-hour task asked for at 03:41 was still being held ... |
 | [windows_long_paths_break_file_moves_in_mirrored_trees_2026_11_13](windows_long_paths_break_file_moves_in_mirrored_trees_2026_11_13.md) | verified | An offload tool that moves files into a tree mirroring their absolute path (hold, quarantine, archive) failed on Windows as soon as a mirrored path passed 260 characters: rename raised WinError 3 ... |
+
+## Added on 16 November: writing tests, word draws and two tooling pitfalls (10)
+
+GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+
+| note | status | what it says |
+|---|---|---|
+| [dictionary_walk_offers_taken_0_of_40_thesaurus_drift_2026_11_16](dictionary_walk_offers_taken_0_of_40_thesaurus_drift_2026_11_16.md) | provisional | Do word_walk page offers help a careful editor? No: blind_len W arm (Codex high, 40 finished drafts, 106 offers, may swap two words) took 0 of 40; offers are Latinate synonyms (anyhow, compensated, ... |
+| [forced_word_draw_loses_to_plain_draft_both_judges_2026_11_16](forced_word_draw_loses_to_plain_draft_both_judges_2026_11_16.md) | verified | Does replacing a writer's default words with a draw among slot-fitting words (weighted toward the shelf, away from agent habit) make a page better? No: blind_draw, 40 stories x 6 slots, plain draft ... |
+| [harvr25_33_swarm_cards_726_ingested_math_store_2026_11_16](harvr25_33_swarm_cards_726_ingested_math_store_2026_11_16.md) | verified | Swarm harvest HARVR25-33 (814 cards) in the math store? 726 landed 16 Nov 16:3x as an agent bundle_001-009, 0 rejected; skipped 36 unaudited/audit-wrong and 52 BRT/BTC/BTV (engineering, private ... |
+| [push_paths_needs_repo_relative_paths_absolute_ones_are_skipped_2026_11_16](push_paths_needs_repo_relative_paths_absolute_ones_are_skipped_2026_11_16.md) | verified | push_paths.sh given absolute C:/ paths prints 'Ignoring path' for each and 'nothing to push' - it pushed nothing; pass paths relative to the repo |
+| [python_isolated_flag_hides_user_site_packages_2026_11_16](python_isolated_flag_hides_user_site_packages_2026_11_16.md) | verified | python -I (advised for scripts reading downloads) also drops the user site-packages: pypdf etc. fail with ModuleNotFoundError; python -P keeps the script dir off sys.path and keeps user packages |
+| [scij05_fact_cap_no_effect_packet_bug_2026_11_16](scij05_fact_cap_no_effect_packet_bug_2026_11_16.md) | provisional | SCIJ05 (16 Nov): capping writers at three facts did not fool a blind Codex detector (96.7 plain, 96.6 brain vs humans 5.6-17.8); the judge switched to padding/over-explanation per fact; brain arm ... |
+| [scij08_one_finding_brief_detection_95_brain_lower_2026_11_16](scij08_one_finding_brief_detection_95_brain_lower_2026_11_16.md) | provisional | Telling AI writers to report one finding per piece: does the blind detector stop catching them? Barely: 97.4->95.8 plain, 97.3->94.6 brain (p 3/924); separation from humans total (machines >=87, ... |
+| [scij09_answer_withheld_accuracy_off_ceiling_brain_no_help_2026_11_16](scij09_answer_withheld_accuracy_off_ceiling_brain_no_help_2026_11_16.md) | verified | Science-writing test with the station's answer withheld (writer must compute it): does accuracy leave the ceiling, does the writing brain help? Yes it drops 5.00 -> 3.83 in both arms; brain no help ... |
+| [scij10_checks_md_lifts_writer_accuracy_to_5_except_method_choice_2026_11_16](scij10_checks_md_lifts_writer_accuracy_to_5_except_method_choice_2026_11_16.md) | verified | Writers made to reproduce every stated number with a command (CHECKS.md): accuracy 3.83 -> 4.6/4.67, 48/48 non-news pieces at 5; news adjusted-OR stays 3.2 (method choice, not arithmetic) |
+| [writer_packets_lacked_data_readme_news_misses_were_withdrawn_rows_2026_11_16](writer_packets_lacked_data_readme_news_misses_were_withdrawn_rows_2026_11_16.md) | verified | Why did SCIJ09/SCIJ10 news pieces miss the adjusted odds ratio? The writer packet never carried data/README.md (withdrawn trial rows excluded); 12 of 12 misses reproduce exactly; packet fixed, SCIW10 ... |
