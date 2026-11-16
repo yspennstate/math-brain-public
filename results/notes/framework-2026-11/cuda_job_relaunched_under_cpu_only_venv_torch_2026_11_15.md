@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-15T15:57:35+02:00
   status: verified
   evidence: "P0108 c12 run, 15 Nov 2026 15:09-16:05; pid 41060 (venv, CPU torch), pid 38000 (Python314 -s, ModuleNotFoundError), pid 55812 (Python314, no -s, cuda True)"
-  originSessionId: agent-4b92-4833-bcc3-a3ab8aa26344
   modified: 2026-11-15T14:31:08.495Z
 ---
 

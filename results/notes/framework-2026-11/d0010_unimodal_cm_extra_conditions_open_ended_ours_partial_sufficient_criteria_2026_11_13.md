@@ -5,7 +5,6 @@ metadata:
   node_type: memory
   status: provisional
   type: project
-  originSessionId: agent-66b6-4575-b3c4-a8807fd17369
   modified: 2026-11-13T17:58:54.690Z
 ---
 

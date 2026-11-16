@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T02:50:00+09:00
   status: provisional
   priors: "a listing is a cached view; the entry's own stat is the record"
-  originSessionId: agent-2c25-4a49-9a43-6448840c2424
   modified: 2026-11-12T00:47:47.988Z
 ---
 

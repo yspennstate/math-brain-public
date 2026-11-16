@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T02:05:01+02:00
   status: provisional
   evidence: "agent_run/mesh_lock/test_desk.txt (13 of 13, control old against old fails), holders_first_live_20261112.txt; ledger row of 12 Nov (j)"
-  originSessionId: agent-4b92-4833-bcc3-a3ab8aa26344
   modified: 2026-11-12T01:04:51.006Z
 ---
 

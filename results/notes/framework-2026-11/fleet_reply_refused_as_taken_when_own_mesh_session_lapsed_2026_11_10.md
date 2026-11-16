@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-10T04:04:38+04:00
   status: provisional
   evidence: "a fleet message POSTED after hello; scratchpad fb_test.py 3/3 new, old fails lapsed case"
-  originSessionId: c410f4d2-88bf-445a-b9bf-b7031a39fbf5
 ---
 
 No: a `fleet_board.py broadcast --reply-to` that prints "another agent on this computer is answering" did not always mean someone else held the reply. On 10 Nov 03:3x it meant my own mesh session had lapsed: the reply claim goes through agent_mesh.py, which refuses any claim from an agent that is not live with exit 3, and claim_reply printed every exit 3 as a holder. Nobody held a fleet message; after `agent_mesh.py hello` the same reply posted (a fleet message, board ok, mirror ok).

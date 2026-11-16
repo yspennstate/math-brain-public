@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T02:48:00+09:00
   status: verified
   priors: "hook latency is usually one cold-start or one repeated lookup, not spread evenly; the fix is a skip or a cache, never a rewrite"
-  originSessionId: agent-2c25-4a49-9a43-6448840c2424
   modified: 2026-11-12T00:46:49.753Z
 ---
 

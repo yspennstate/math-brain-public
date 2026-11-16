@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T01:18:18+02:00
   status: verified
   evidence: agent_run/project_context/test_combined_result.txt; ledger row of 12 Nov (f); the one line for 8 projects arrived in session agent at 02:00 and 02:09 on 12 Nov (PreToolUse context in its transcript)
-  originSessionId: agent-4b92-4833-bcc3-a3ab8aa26344
   modified: 2026-11-12T00:10:50.799Z
 ---
 

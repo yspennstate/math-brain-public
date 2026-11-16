@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-10T02:34:36+04:00
   status: provisional
   evidence: "codex_fleet/20261108_pro/workers/MULTI5E-RECALLDIAG/REPORT.md"
-  originSessionId: 472b1d4f-77c3-4c94-8b40-709cb36c538f
 ---
 
 

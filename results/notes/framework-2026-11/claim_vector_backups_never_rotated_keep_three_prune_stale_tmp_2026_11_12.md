@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T23:02:01+02:00
   status: verified
   evidence: "test_claim_vectors_backup_rotation.py 11 of 11; brain commit b6ff15201d00; seen on the live folder 13 Nov 00:05: the three 3 Nov tmp files gone, three dated copies kept"
-  originSessionId: agent-1cb4-4f2b-ad55-8141bfd8fb70
   modified: 2026-11-12T22:15:39.696Z
 ---
 

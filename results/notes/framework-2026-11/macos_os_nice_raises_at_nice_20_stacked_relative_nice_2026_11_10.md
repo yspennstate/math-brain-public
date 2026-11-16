@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-10T00:57:59+04:00
   status: verified
   evidence: "reproduced 10 Nov 00:50-00:56 by the shell: nested nice one-liners; 6/6 launch tests fail at nice 10 for 2 relative-nice launchers, 6/6 pass for an absolute setpriority launcher"
-  originSessionId: e0cb16b5-5cfd-44a6-80d7-9dc7c80f5862
 ---
 
 Does a Python child that calls `os.nice(0)` survive being started at nice 20 on the Mac? No. On macOS (Darwin 24.5,

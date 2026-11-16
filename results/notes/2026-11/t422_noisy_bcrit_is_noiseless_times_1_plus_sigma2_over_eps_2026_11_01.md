@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T16:57:14+04:00
   status: provisional
   evidence: "frontier/rows/T422 moves m422a-d, unified.txt"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T422 (critical batch size, online SGD on Gaussian linear regression with power-law spectrum l_j = j^-alpha and target l_j m_j(0) = j^-beta).

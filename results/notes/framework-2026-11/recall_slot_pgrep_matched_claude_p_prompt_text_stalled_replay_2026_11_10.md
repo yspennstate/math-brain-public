@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-10T04:30:38+04:00
   status: provisional
   evidence: "scratchpad heldout_slot.py; MULTI5E arm/harness/brain_env.py:41"
-  originSessionId: 472b1d4f-77c3-4c94-8b40-709cb36c538f
 ---
 
 On 10 Nov 04:0x to 04:28 the MULTI5E held-out replay sat idle for about 25 minutes. Its H3 recall-slot check, pgrep -f '(^|/)(brain[.]py|brain_cli[.]py) recall( |$)', matched pid 23480. That process was a claude -p engineering session whose prompt text contained '.../brain.py recall ...', and no recall was running. The check would have kept the replay waiting for as long as that session lived.

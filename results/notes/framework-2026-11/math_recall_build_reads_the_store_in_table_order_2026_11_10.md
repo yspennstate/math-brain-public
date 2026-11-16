@@ -7,7 +7,6 @@ metadata:
   created: 2026-11-10
   status: verified
   evidence: "scratchpad build_equal.py: live 613.7 s, table order 150.7 s, state sha 7339f7cf.. and heavy sha c70c5452.. equal; profile_build.py with the signals sidecar: 509 s wall, 96 s CPU, read_store 327 s wall / 15 s CPU"
-  originSessionId: agent-97a2-43df-9434-ab94e00262fe
   modified: 2026-11-10T20:56:27.898Z
 ---
 

@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T22:06:45+02:00
   status: provisional
   evidence: "commit 3b927f70f7e present after exit 128; df 43G free; path-limited status clean; cause inferred from a concurrent git pid, not caught in the act"
-  originSessionId: agent-d9f2-4b02-99ff-7be7bed922bf
   modified: 2026-11-12T20:07:26.508Z
 ---
 

@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-15T11:38:00+02:00
   status: provisional
   evidence: "the source memories' own numbers (read 15 Nov nap, not re-measured): a_scan_whose_tool_is_missing_reports_zero_hits_2026_11_15 (rc 127, windows.bin 0 bytes, 12.46 GB unread); codex_pool_usage_limit_grep_matched_quoted_brain_text_2026_11_15 (12 of 67 briefs unstarted, about 70 min idle); MISTAKES.md rows of 2026-09-02 (ps field) and 2026-09-13 (pgrep | head -1)"
-  originSessionId: 8a4e6c91-ba50-4ffa-9bbc-07238aac5bd2
   modified: 2026-11-15T09:38:18.715Z
 ---
 

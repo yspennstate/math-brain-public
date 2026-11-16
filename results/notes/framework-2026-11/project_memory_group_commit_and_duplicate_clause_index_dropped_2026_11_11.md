@@ -9,7 +9,6 @@ metadata:
   updated_at: 2026-11-11T16:20:00+02:00
   status: verified
   evidence: py-spy of the 09:00 (per-row) and 11:00 (grouped) hourly passes; hourly_bounded.log.child timing lines
-  originSessionId: agent-97a2-43df-9434-ab94e00262fe
   modified: 2026-11-11T14:15:48.608Z
 ---
 

@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T00:47:09+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Written 2026-11-01 00:47 +0400; T420 move 07962ff0, files b33d39b5 (rbm_*.py/txt). Proof of no finite exact fit: with s1 = +1 the s0s2 Walsh coefficient of log cosh(a s0 + d s2 + beta) vanishes iff ad = 0, and then the target's s2 (or s0) dependence forces K = 0. Infimum: a = d = K, c = 0, b -> infinity; measured KL 1e-4, 1.7e-6, 3.2e-8 at b 2, 3, 4 (ratios ~e^4). Hidden <h h'> = odd <s1 s3> = ring formula to 6 digits at N 8. So ML 'recovers decimation' only as a non-attained limit, and the stacked map is tanh K -> tanh^2 K. Open: dense M = N/2 RBM minimising sequences. Lesson for RBM-RG claims: the ML optimum here sits at infinity (hard copying), so finite-training claims need a weight-norm cutoff. Related: [[t420_gff_generative_network_is_inverse_decimation_rg_fixed_point_half_2026_10_31]] - target 1 of the same row (GFF inverse decimation).

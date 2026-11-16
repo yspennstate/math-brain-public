@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-14T00:42:27+02:00
   status: provisional
   evidence: ""
-  originSessionId: agent-0845-467d-a0c5-fb82bb41ff33
   modified: 2026-11-13T23:18:31.750Z
 ---
 

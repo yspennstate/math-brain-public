@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-10T00:57:58+04:00
   status: provisional
   evidence: "codex_fleet/20261108_pro/workers/MULTI5D-SCALE/REPORT.md, evidence/decoy_classifier.json, evidence/scale_measurement.json"
-  originSessionId: 472b1d4f-77c3-4c94-8b40-709cb36c538f
 ---
 
 No (MULTI5D-SCALE, 10 Nov 00:5x): the 4,000 MULTI5 decoy diagnoses do not hide among the real ones. Their task ids all start with "d" and their findings describe "provisional rehearsals", so an agent reading the NOTES file can drop them with one grep. A logistic-regression classifier on length, punctuation and word TF-IDF told scripted decoys from model-written notes at held-out balanced accuracy 1.0 (6 model notes plus 2,400 decoys for training, 4 plus 1,600 held out; the positive sample is small). The d-prefix and the rehearsal wording come from the inherited bank, so the model-written decoys of MULTI5/5B/5C carry the same tell.

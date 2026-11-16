@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T23:58:06+02:00
   status: verified
   evidence: "test_math_transport_lock_priority.py 11/11 patched, 9/11 original; brain commit c43b9f5d23524f25c52a9f28e97b6c00b2a16ebb"
-  originSessionId: agent-1cb4-4f2b-ad55-8141bfd8fb70
   modified: 2026-11-13T00:07:19.317Z
 ---
 

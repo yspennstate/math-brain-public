@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T18:49:29+04:00
   status: provisional
   evidence: "frontier T419 moves fab6b3de, files 906cb4db (lora_rrr.py, run_sv321.txt, run_sv32p3.txt)"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T419 Target 2 (LoRA vs reduced-rank regression at finite n), 1 Nov 2026, an agent, move m419b.

@@ -7,7 +7,6 @@ metadata:
   status: verified
   created: 2026-11-15
   evidence: "B16/17 push 15 Nov 16:56-17:03: chunks 00-03 landed (origin bd6a4f8ed), chunk 04 and three retry passes rc 2, 551 of 1351 pending; culprit fei-solve-2026-11/codex/workers/FEIB21/inputs/pm_record_spectrum.npy (2,091,605 NUL bytes)"
-  originSessionId: agent-4b92-4833-bcc3-a3ab8aa26344
   modified: 2026-11-15T17:00:30.836Z
 ---
 

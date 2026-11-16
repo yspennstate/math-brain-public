@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-11T18:06:44+02:00
   status: verified
   evidence: "scen_test.py old vs new: entry, ledger rows, printed lines identical; in-process on a 15 MB copy reopen median 3158 -> 91 ms; selftest pass; live md5 89cfb91c; brain main de354977"
-  originSessionId: agent-032e-48c5-91af-317f5592b31c
   modified: 2026-11-11T16:22:33.765Z
 ---
 

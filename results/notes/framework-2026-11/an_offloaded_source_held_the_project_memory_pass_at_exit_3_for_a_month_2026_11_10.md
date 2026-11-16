@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-10T20:41:05+02:00
   status: verified
   evidence: "21:00 pass of 10 Nov (hourly_bounded.log.child): 'dropped 6 row(s) of 1 source(s)'; schema_meta held_rows 0, reclassification_dropped_gone names the 7 Sep rollout with 6; summary line held=0 held_sources=0 carried=0"
-  originSessionId: agent-97a2-43df-9434-ab94e00262fe
   modified: 2026-11-10T20:21:08.865Z
 ---
 

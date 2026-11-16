@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-10T00:04:59+04:00
   status: provisional
   evidence: "brain-repo 12_cognitive_architecture/brain_improvement/long1_2026_11_09/amendment11 (commit 2087b59e09)"
-  originSessionId: e0cb16b5-5cfd-44a6-80d7-9dc7c80f5862
 ---
 
 Is one pytest pass of a test's hidden suite a grade? No. On 9 Nov 23:53 one pass over a Codex arm's repo failed 7

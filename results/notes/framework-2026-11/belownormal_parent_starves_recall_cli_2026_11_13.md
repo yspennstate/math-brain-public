@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-13T02:42:45+02:00
   status: verified
   evidence: brain_recall_server/calls.jsonl + client.jsonl 13 Nov 01:44-02:45; prf_cli.log; repro46.py
-  originSessionId: agent-4b92-4833-bcc3-a3ab8aa26344
   modified: 2026-11-13T00:43:50.394Z
 ---
 

@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-10T02:04:40+02:00
   status: provisional
   evidence: 06_math_research/fei_solve_2026_11_09/code/check_erasure.py and check_erasure_*.txt; FLOW.md section 7
-  originSessionId: agent-66b6-4575-b3c4-a8807fd17369
   modified: 2026-11-10T15:31:30.663Z
 ---
 

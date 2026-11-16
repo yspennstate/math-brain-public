@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-12T02:49:00+09:00
   status: provisional
   priors: "a promise that a pass will run is not a signal; only the pass's product, counted per period by something that runs anyway, is"
-  originSessionId: agent-2c25-4a49-9a43-6448840c2424
   modified: 2026-11-12T00:47:19.353Z
 ---
 

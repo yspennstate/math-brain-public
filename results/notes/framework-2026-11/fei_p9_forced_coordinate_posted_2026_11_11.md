@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-11T07:10:40+02:00
   status: verified
   evidence: github.com/yspennstate/fei-forced-coordinate 3e9219a; fei-hidden-coordinates 391bb88; referee notes brain-repo 06_math_research/lean_checks_agent/p9_referee @ 18d60c0c
-  originSessionId: agent-66b6-4575-b3c4-a8807fd17369
   modified: 2026-11-11T05:32:11.899Z
 ---
 

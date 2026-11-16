@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-13T22:55:58+02:00
   status: verified
   evidence: "commits 3ce4bf53 (md5 fbd0ca5e) and 57bdc6c1 (md5 d1c7a26c), origin md5 checked; corpus diffs scratchpad combo_diff.py, amb_diff.py"
-  originSessionId: agent-4b92-4833-bcc3-a3ab8aa26344
   modified: 2026-11-13T21:24:20.508Z
 ---
 

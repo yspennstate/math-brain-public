@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T17:41:00+04:00
   status: provisional
   evidence: "frontier/rows/T421 m421a moves 262c66bf, adam_run1/2.txt"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T421 (Adam at the edge of stability, preconditioned sharpness vs the 38/eta threshold for beta1 = 0.9). Move m421a, moves 262c66bf, 1 Nov.

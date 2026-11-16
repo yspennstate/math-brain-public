@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-10T18:55:00+02:00
   status: provisional
   evidence: "Downloads/career/drafts_2026-11-10/rs_implement/learned_edge_datesplit.py, datesplit_result_v2.json, datesplit_run_v2.log (an agent, T-20261110-103)"
-  originSessionId: agent-d1fd-4752-a7d8-fb81173f3d46
   modified: 2026-11-10T17:11:12.153Z
 ---
 

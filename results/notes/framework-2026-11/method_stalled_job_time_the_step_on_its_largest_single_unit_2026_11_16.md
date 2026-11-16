@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-16T10:58:00+02:00
   status: provisional
   evidence: "two cases, each measured by its author and read from their memories; neither re-run in the nap that wrote this"
-  originSessionId: a86ecdb0-3f0f-4125-8c7a-4576662688f2
   modified: 2026-11-16T08:56:17.209Z
 ---
 
