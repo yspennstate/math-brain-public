@@ -64,8 +64,77 @@ def measures(t):
             "share opening on the object": round(opens / max(1, len(sents)), 2)}
 
 
+# House rule for our papers: say what existed before, what is new, and how the new relates to the old, crediting the
+# mathematicians by name. A credit sentence ties a paper's own work to a cited earlier one.
+REL = {
+    "extends / generalizes / improves": r"extend(s|ed|ing)?|generali[sz](e|es|ed|ing)|improv(e|es|ed|ing) (on|upon)|refine[sd]?|strengthen(s|ed)?|sharpen(s|ed)?",
+    "follows / builds on / adapts": r"build(s|ing)? on|built on|follow(s|ing)? (the|closely|an?)|based on (the|an?) (idea|method|approach|argument|technique)s?|inspired by|adapt(s|ed|ing)? (the|an?)|borrow(s|ed)?",
+    "differs from": r"in contrast (to|with)|unlike|differs? from|instead of",
+    "answers / recovers": r"answer(s|ing)? (a |the )?question|conjectured|settl(e|es|ed)|recover(s|ing)?|confirm(s|ed)?",
+    "names the origin": r"((was|were) )?(first )?(introduced|proved|shown|obtained|established|studied|initiated) by|(was|were) (first )?(introduced|proved|shown|obtained|established|studied) in|due to",
+}
+REL_ANY = re.compile(r"\b(" + "|".join(REL.values()) + r")\b", re.I)
+OWN = re.compile(r"\b(we|our|this paper|the present paper|this note|this work|this article)\b", re.I)
+NAMED = re.compile(r"[A-Z][a-z]+(?:[- ](?:and|&|--|-)?\s?[A-Z][a-z]+)*(?: et al\.)?,? \[cite\]|[A-Z][a-z]+'s? (?:theorem|method|argument|approach|result|conjecture|inequality|bound)")
+
+
+def credit_sentences(rows):
+    out = []
+    for r in rows:
+        if r["role"] not in ("prior_work", "intro_opening", "contribution", "abstract"):
+            continue
+        for s in re.split(r"(?<=[.!?])\s+(?=[A-Z])", r["text"]):
+            if "[cite]" in s and REL_ANY.search(s) and 8 <= len(s.split()) <= 70:
+                kind = next(k for k, p in REL.items() if re.search(r"\b(" + p + r")\b", s, re.I))
+                # a sentence that only names where a tool came from ("due to Nelson [cite]") credits without "we";
+                # the other kinds must be about this paper's own work
+                if kind != "names the origin" and not OWN.search(s):
+                    continue
+                out.append({"text": s, "kind": kind, "named": bool(NAMED.search(s)), "row": r})
+    return out
+
+
+def credit(a):
+    rows = load()
+    cs = credit_sentences(rows)
+    if a[1] == "show":
+        q, k = a[2], int(a[a.index("--k") + 1]) if "--k" in a else 6
+        named = sum(c["named"] for c in cs)
+        print(f"credit: sentences where a refereed paper ties its own work to a cited earlier one ({len(cs)} on the "
+              f"shelf; {named} name the author as well as citing)\n")
+        pseudo = [dict(c["row"], text=c["text"], _c=c) for c in cs]
+        seen = set()
+        for s, r in bm25(pseudo, q):
+            if r["work"] in seen:
+                continue
+            seen.add(r["work"])
+            print(f"- [{r['_c']['kind']}] {r['text']}\n  ({r['author']}, \"{r['title']}\", {r['journal_ref']}; arXiv {r['arxiv']})\n")
+            if len(seen) >= k:
+                break
+    elif a[1] == "check":
+        text = open(a[2], encoding="utf-8").read()
+        if re.search(r"\\(cite|\[|begin\{|ref\{|emph)", text):
+            sys.path.insert(0, HERE)
+            from cut_papers import clean
+            text = clean(text)
+        mine = credit_sentences([{"role": "intro_opening", "text": text, "work": "yours"}])
+        per = Counter(c["row"]["work"] for c in cs)
+        works = len({r["work"] for r in rows if r["role"] in ("prior_work", "contribution")})
+        print(f"credit check: {len(mine)} sentence(s) in your text tie your work to a cited earlier one; "
+              f"{sum(c['named'] for c in mine)} name the author.")
+        print(f"  shelf: {len(per)} of {works} papers with a contribution or prior-work passage have at least one such "
+              f"sentence there; {sum(c['named'] for c in cs)} of {len(cs)} name the author.")
+        for c in mine:
+            print(f"  [{c['kind']}{', named' if c['named'] else ', cite only'}] {c['text'][:220]}")
+        if not mine:
+            print("  none found: say once, in a sentence with a citation, whose result or method yours extends, follows "
+                  "or departs from, and name them. See: paper_moves.py credit show \"<your subject>\"")
+
+
 def main():
     a = sys.argv[1:]
+    if a and a[0] == "credit" and len(a) >= 3:
+        credit(a); return
     if not a or a[0] == "moves":
         c = Counter(r["role"] for r in load())
         papers = len({r["work"] for r in load()})

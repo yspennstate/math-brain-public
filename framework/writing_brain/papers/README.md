@@ -41,6 +41,23 @@ slowly; ours held 8,429 papers cut into 50,668 passages on 16 November 2026.
 
 Three papers is a small sample; the opening-paragraph length fell outside the shelf's middle half on all three.
 
+## Credit: what existed before and what is new (16 November 2026)
+
+A paper should say what existed before, what is new and how the two are related, and should name the mathematicians
+whose work mattered most. `paper_moves.py credit` pulls, from the abstract, introduction, contribution and prior-work
+passages, the sentences where a refereed paper ties a result or method to a cited earlier one: extends, generalizes or
+improves; follows, builds on or adapts; differs from; answers or recovers; or names the origin ("proved by Chernoff
+[cite] in dimension one ... due to Nelson [cite]").
+
+    python -I -X utf8 paper_moves.py credit show "hypercontractivity, Gaussian Poincare inequality"
+    python -I -X utf8 paper_moves.py credit check intro.tex
+
+The shelf holds 2,005 such sentences from 1,306 papers; 424 of them (21 per cent) name the author as well as citing.
+A sentence that cites only by number tells a reader that something came before, not whose it was. `check` lists the
+credit sentences of an introduction and says when there are none. On the introduction of one of our posted papers
+(1,117 words, 22 citations) it found one, the sentence crediting Chernoff and Nelson. `check` finds only a credit
+sentence with a citation and one of those verbs; credit given in other words has to be read by a person.
+
 ## Acknowledgements
 
 The shelf exists because arXiv (Cornell University) offers its metadata through an open harvesting interface, and
