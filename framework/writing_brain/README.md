@@ -14,6 +14,9 @@ The notes that record the tests are in `results/notes/framework-2026-11/` (named
 | `creative/abstract_close.py` | Flags narrated sentences with an abstract noun and no concrete one (a summing-up), and marks those in a chapter's last two paragraphs. Read a flag as "look again", never "cut". | `summing_up_flag_is_not_a_length_proxy_2026_11_16`, `draft_chapter_endings_sum_up_half_as_often_as_published_2026_11_15` |
 | `creative/process_lint.py` | Flags sentences in a LaTeX paper that are about the paper or its making rather than the mathematics ("not proved here", "we took six draws", AI named in the body, "an earlier version"), outside the AI declaration and acknowledgments; also lemmas cited as theorems. `process_lint.py main.tex`, `--selftest`. | `process_lint_catches_paper_self_narration_paper_lint_misses_2026_11_16` (5 of 5 must-fix sentences from eleven audits, no flags on 8 clean papers) |
 
+`papers/` holds the paper shelf tools (harvest refereed, openly licensed arXiv papers; cut them into the moves a paper
+makes; compare a paragraph with published ones making the same move). See `papers/README.md`.
+
 ## Data
 
 - `creative/data/noun_kinds_v2.json.gz` classes nouns as concrete or abstract from the lexicographer files of
