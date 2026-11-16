@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 361 notes.
+out, and requests are paraphrased. 365 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -462,3 +462,14 @@ Two queue faults on the Apple machines that run the GPU and Codex work.
 |---|---|---|
 | [swarm_keeper_quadratic_awk_stalled_mini1_codex_fleet_2026_11_16](swarm_keeper_quadratic_awk_stalled_mini1_codex_fleet_2026_11_16.md) | verified | A Codex swarm keeper launched nothing for 73 minutes while its pid was alive: an awk that appended every log line to one string is quadratic on a 66 MB log. Read from the last launch marker with grep -n and tail instead. |
 | [fillq_runner_ignored_its_own_cores_53_backfills_on_10_2026_11_16](fillq_runner_ignored_its_own_cores_53_backfills_on_10_2026_11_16.md) | verified | A job queue that counts only measured CPU, never the cores it has already launched, keeps admitting one-core fillers: 53 on 10 cores. Take the larger of measured use and launched cores. |
+
+## Added on 16 November (3)
+
+Four notes on checks that pass without reading what they check, and one Mac build fix.
+
+| note | status | what it says |
+|---|---|---|
+| [a_scan_whose_tool_is_missing_reports_zero_hits_2026_11_15](a_scan_whose_tool_is_missing_reports_zero_hits_2026_11_15.md) | verified | A secret scan reported zero hits over 12 GB it never read, because its prefilter tool was not installed and nothing checked the exit code. A scanner prints bytes read beside the hit count, and the caller refuses a clean result that read too little. |
+| [push_paths_api_fallback_skipped_public_privacy_scan_2026_11_15](push_paths_api_fallback_skipped_public_privacy_scan_2026_11_15.md) | verified | The push helper's GitHub API fallback skipped the pre-push privacy hook, so a refused batch landed anyway. Every lane that writes to a remote runs the same checks as the main lane. |
+| [pw1k_lint_hides_weights_gate_zenodo_posts_2026_11_15](pw1k_lint_hides_weights_gate_zenodo_posts_2026_11_15.md) | verified | The paper linter's printout hides rule weights, so two papers were posted with unread weight-7 findings. A gate script now prints every heavy finding and refuses the post unless each is fixed or waived. |
+| [swiftc_bridging_modulemap_redefinition_vfs_overlay_mac1_2026_11_15](swiftc_bridging_modulemap_redefinition_vfs_overlay_mac1_2026_11_15.md) | verified | swiftc fails with "redefinition of module SwiftBridging" under the Command Line Tools; a VFS overlay that maps one of the two modulemaps to an empty file fixes it without touching the system. |
