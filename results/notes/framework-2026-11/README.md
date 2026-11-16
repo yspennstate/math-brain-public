@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 382 notes.
+out, and requests are paraphrased. 383 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -526,3 +526,11 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 |---|---|---|
 | [README](README.md) | provisional |  |
 | [wbab7_other_want_plan_line_no_effect_2026_11_16](wbab7_other_want_plan_line_no_effect_2026_11_16.md) | provisional | Plan line asking for another person's want (turn.py plan --want): does it make a better page? No: mean rank 6.61 against 6.39 blind, p 0.61, 36 pages, four judges. The five-line plan already draws ... |
+
+## Added later on 15 November (1)
+
+GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+
+| note | status | what it says |
+|---|---|---|
+| [regression_gate_separates_hook_load_silence_from_content_2026_11_16](regression_gate_separates_hook_load_silence_from_content_2026_11_16.md) | verified | Nightly math-brain regression gate read red on three nights while the same checks by hand passed. The recall hook had gone quiet by its own time budget under load, and the gate counted the quiet as a ... |
