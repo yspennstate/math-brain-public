@@ -1,0 +1,23 @@
+---
+name: mac_reflex_guts_named_windows_paths_mac_line_past_clip_fixed_2_2026_11_08
+description: "Why did the second machine's compute_distress and bulk_io_runs_polite reflexes point at C:/ paths? Their guts named only the Windows place, and bulk_io's Mac sentence sat past the hook's clip, so it never showed (197 fires 1-7 Nov). Fixed 8 Nov: Mac path first, both kept; live hook prints it. 170 more fires are Windows-only advice (process_presence_is_not_life 131); needs a platform field."
+metadata:
+  type: project
+  created: 2026-11-08
+  created_at: 2026-11-08T00:24:34+04:00
+  status: verified
+  evidence: "windows_gut_census.py; mac_path_guts_20261108.py"
+---
+
+Why did two of the second machine's loudest reflexes send readers to Windows paths? Their gut text named only the Windows place, and where a Mac sentence existed it sat past the clip. instinct_prime._clip cuts every gut at a sentence end near its limit, so a reader on the second machine saw "read ~\.claude\compute\compute_state.json" (compute_distress, 93 fires on the a second machine-7 Nov) and "python polite.py <command>" (bulk_io_runs_polite, 104 fires). bulk_io's gut already ended with a Mac sentence (nice -n 10, taskpolicy -b), added 31 Oct, and it never once reached a reader.
+
+Fixed 8 Nov 00:23 (an agent): both guts in instincts_learned.json now give the second machine path first and the Windows one beside it, inside the clipped part. The old text is kept in gut_before_20261108_mac with an editor_note_20261108_mac. Recompiled with instincts.py (rc 0, 380 reflexes, 0 malformed); the compiled instincts.tsv changed in exactly those two rows (4 diff lines), so no hand edit was lost. Checked on the live hook, not a staged one: a command naming compute_distress and an empty `tar -cf /dev/null` each fired their reflex, and both printed the second machine instruction. Patch script mac_path_guts_20261108.py, backup instincts_learned.json.before_20261108_mac.
+
+Census behind it (windows_gut_census.py, 7,406 Mac fires since 1 Nov): 29 of 380 reflexes mention Windows in their gut text and take 946 fires (12.8%). Read by hand they split three ways. Most only mention Windows in passing: the lesson holds here (hasty_pattern_match, denied_claim_gates_the_next_command, check_shares_its_subject, corruption_verdict_needs_second_reader, crlf_cross_os_parse). Two pointed at a Windows path, about 197 fires, fixed above. About 170 fires are advice that is only true on Windows: process_presence_is_not_life (131, Get-Process and handle-pinned dead processes), windowless_parent_pops_its_children, grep_for_a_cr_byte_is_not_a_line_ending_test, ssh_backslash_escape_eater, ps_w_hides_the_command_line, bare_open_reads_cp1252, python_rewrite_of_a_text_file_without_newline. Those still fire here. The fix for them is a platform field the hook checks, not more wording; not built.
+
+How to apply: when a gut names a place or a tool, the second machine's version goes in its first two sentences, never at the end, because the end is what the clip removes. Follows [[line_start_union_fix_adds_50_fires_3_useful_on_mac_windows_guts_2026_11_08]], which first noticed bulk_io quoting the Windows polite.py on this machine; the bulk-io lesson itself is [[slow_is_the_disk_not_the_cpu_2026_09_16]].
+
+
+A third, 8 Nov 02:42 (an agent): hand_rolled_temp_index_push_use_push_paths (17 Mac fires) named only push_paths.sh. The worker machine's live folder lacks it, and it couldn't run here anyway (/bin/bash is 3.2 with no mapfile, and there is no `python`). Its gut now puts push_paths_api.py first, which landed research-repo 9d3357ace2 the same hour. Check at the real RENDER_MAX_GUT 600: the clipped gut names the second machine tool. A gut can name a tool that exists only on the other machine, not just a path, so grep the named file on the second machine before trusting the census.
+
+Correction, 8 Nov 00:3x (same session): a platform switch already exists. instinct_prime.WINDOWS_ONLY drops a reflex at load off Windows (heavy_compute_remote, since 30 Oct, off-domain 14 of 14), and _SHIP_GATED hides bare_open_reads_cp1252 and python_rewrite_of_a_text_file_without_newline unless the call writes code that ships to Windows. So those two are handled, and their 4 Mac fires since 1 Nov are gated passes. What stays unguarded is about 165 fires: process_presence_is_not_life 131, windowless_parent_pops_its_children 13, grep_for_a_cr_byte_is_not_a_line_ending_test 10, ssh_backslash_escape_eater 7, ps_w_hides_the_command_line 5. Before any joins WINDOWS_ONLY it needs Mac judgments like heavy_compute_remote had. process_presence in particular carries a lesson that may hold here (a listed process is not proof of a live one), so it is not a clean Windows-only case.
