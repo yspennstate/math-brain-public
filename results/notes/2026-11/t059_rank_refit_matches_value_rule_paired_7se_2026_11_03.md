@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T04:34:57+04:00
   status: provisional
   evidence: "06_math_research/frontier/rows/T059/reviews_agent/REVIEW_T059_ADDENDUM.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 T059 (Robbins' problem, n = 5), checked 3 Nov 04:34 by an agent.

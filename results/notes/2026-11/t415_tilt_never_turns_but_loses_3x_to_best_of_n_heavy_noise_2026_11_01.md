@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T01:00:52+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Written 2026-11-01 01:00 +0400; T415 move 7b870a69, files d28aec78 (tilt.py/.txt). The tilt factorises, so G ~ N(lambda, 1) under pi_lambda. KL = lambda^2/2 + KL of the tilted noise mixture. eps 0.01 tau 5: tilt 0.588 vs best-of-n 1.770 at d 1.81, with the heavy weight under the tilt at 0.42. The curves cross during best-of-n's dip (d about 2.4) and the tilt stays ahead to n 1e7. The qualitative light-tail result is Kwa et al. 2407.14503; the gap at practical KL is ours. Related: [[t413_gaussian_ct_fixed_point_is_product_of_cosines_sqrt_d_over_eps_2026_11_01]] - same session's exactly solvable population calculations.

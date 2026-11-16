@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T03:35:34+04:00
   status: provisional
   evidence: "rows/T377/moves.jsonl 1657ad86"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T377 (weak-to-strong generalization), Target 1, read 2 Nov 2026 from the main texts of 2503.02877 and 2610.09044v1 (appendix proofs not checked). Move m377a, rows/T377/moves.jsonl 1657ad86, file t377_target1_reading.md.

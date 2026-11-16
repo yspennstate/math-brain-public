@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T18:34:44+04:00
   status: provisional
   evidence: "OPEN-T234l CUTOFF_CERTIFICATE.json, FINAL_AUDIT.json; t234l_check.py; push 9cce5e30c2"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does gradient descent on the T234 instance (d=40, n=60, seed-234 G, step 1/20) have a cutoff below which every small initial scale alpha is captured by the outgoing family? Yes, conditionally (OPEN-T234l, 8 Nov): every 0 < alpha <= 10^-15566.

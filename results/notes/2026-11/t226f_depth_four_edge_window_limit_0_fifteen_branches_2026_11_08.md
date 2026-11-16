@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T12:15:44+04:00
   status: verified
   evidence: "frontier T226 e3166b7c5d; claim_d2775bb8; t226f_check.py"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does the depth-three edge-of-stability result (T226e) hold at depth four? Yes, as a limit (8 Nov, OPEN-T226f, worker-proved, reviewed by an agent, not refereed). For GD on (u1 u2 u3 u4 - 1)^2/2 with Gaussian init of sd eta^(-1/6), P(converge with |lambda - 2/eta| <= C) -> 0 for every fixed C.

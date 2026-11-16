@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T15:49:08+04:00
   status: verified
   evidence: "t363/fate_run1.txt, fate_run2.txt; moves m363a 2f878814"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Row T363 is the two-point example of Vardi-Shamir-Srebro 2110.02732, x1 = (1, 1/4), x2 = (-1, 1/4). It asks how often small-init

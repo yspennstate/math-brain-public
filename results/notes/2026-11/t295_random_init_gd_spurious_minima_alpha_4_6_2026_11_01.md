@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T00:03:17+04:00
   status: provisional
   evidence: "rows/T295 moves 71c835a3"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T295 (random-init GD for real phase retrieval, quartic loss, m = alpha d), 1-2 Nov, step eta = 0.5/log d, cap 20000 iterations.

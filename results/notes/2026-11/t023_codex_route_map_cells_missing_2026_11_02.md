@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T23:27:35+04:00
   status: provisional
   evidence: "brain-repo main 06_math_research/frontier/rows/T023/moves.jsonl c754236f"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T023 (Tutte / circle-packing embedding of uniform planar maps converges to sqrt(8/3)-LQG), first move m023a, moves.jsonl c754236f on brain-repo main, 2 Nov 2026. Done by a Codex worker (fleet brief m5f-T023 in ~/codex_fleet/20261102, acc1, about 8 minutes of work) and reviewed by an agent.

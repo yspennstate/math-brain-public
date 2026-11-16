@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T07:32:19+04:00
   status: verified
   evidence: "rows/T007/moves.jsonl c8b9c471"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T007 (Polyakov: 2D O(N), N >= 3, has a finite correlation length at every beta), correction move m007b, 2 Nov 2026, an agent. rows/T007/moves.jsonl c8b9c471. It supersedes the numbers in [[t007_o3_xi_slope_levels_near_2pi_beta_1p5_1p7_2026_11_02]].

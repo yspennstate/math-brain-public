@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T12:48:16+04:00
   status: verified
   evidence: "06_math_research/frontier/rows/T340 m340a, bn_linear_exact_n32.txt"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
   modified: 2026-11-01T08:57:02.474Z
 ---
 

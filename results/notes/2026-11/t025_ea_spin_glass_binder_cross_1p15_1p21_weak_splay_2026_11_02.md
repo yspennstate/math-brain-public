@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T08:15:59+04:00
   status: provisional
   evidence: "rows/T025/moves.jsonl acf0a2da"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T025 (positive-temperature nonzero overlap, 3D short-range spin glass), first frontier move, 2 Nov 2026, an agent. m025a is in rows/T025/moves.jsonl (acf0a2da); the code is t025_sg.c in 06_math_research/frontier/rows/T025.

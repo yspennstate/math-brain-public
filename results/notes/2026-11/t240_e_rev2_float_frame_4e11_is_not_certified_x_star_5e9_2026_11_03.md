@@ -8,7 +8,6 @@ metadata:
   status: superseded
   superseded_by: t240_e_rev2_review_t_eta_certified_2p1e9_rate_integral_fix_2026_11_03
   evidence: "brain-repo 06_math_research/frontier/rows/T240/reviews_agent/REVIEW_E_rev2_L3_add2.md (commit dd5e2af252f3), check_rev2.py output"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 Superseded 3 Nov 03:0x by [[t240_e_rev2_review_t_eta_certified_2p1e9_rate_integral_fix_2026_11_03]]: the certified run over X* gives |T_eta - I| <= 2.1e-9, not the 1.6e-7 estimated below.

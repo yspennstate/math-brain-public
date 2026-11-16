@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T06:35:30+04:00
   status: provisional
   evidence: "rows/T005/moves.jsonl 40d64e31"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T005 (KPZ universality for last-passage percolation with general weights), first frontier move, 2 Nov 2026, an agent. Move m005a, rows/T005/moves.jsonl 40d64e31; t005_lpp.c, t005_extrap.py and runs in 06_math_research/frontier/rows/T005.

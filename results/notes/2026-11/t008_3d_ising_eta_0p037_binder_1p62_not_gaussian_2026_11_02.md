@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T07:42:56+04:00
   status: provisional
   evidence: "rows/T008/moves.jsonl 0f565f3f"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T008 (3D Ising at criticality: eta > 0 and a non-Gaussian scaling limit), first frontier move, 2 Nov 2026, an agent. Move m008a, rows/T008/moves.jsonl 0f565f3f; t008_ising3d.c and t008_fit.py are in 06_math_research/frontier/rows/T008.

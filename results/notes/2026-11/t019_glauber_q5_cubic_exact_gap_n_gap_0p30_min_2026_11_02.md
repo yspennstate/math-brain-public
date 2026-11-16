@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T08:37:22+04:00
   status: provisional
   evidence: "rows/T019/moves.jsonl d024053d"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T019 (Glauber colourings mix in O(n log n) at q >= Delta + 2), first frontier move, 2 Nov 2026, an agent. m019a is in rows/T019/moves.jsonl (d024053d); the code is t019_gap.py in 06_math_research/frontier/rows/T019.

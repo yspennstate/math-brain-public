@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T19:03:04+04:00
   status: provisional
   evidence: "frontier T249 moves 281a8bd4, files ec0ea6f1 (kappa.py, kappa_s12.txt, kappa_s15.txt)"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T249 (trainability depth at the edge of chaos), 1 Nov 2026, an agent, move m249b.

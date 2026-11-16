@@ -9,7 +9,6 @@ metadata:
   status: superseded
   superseded_by: p0434_gross_loss_lemma_is_false_mac_mini_law_1_95_2026_11_08
   evidence: research-repo b3284d09 own_p0434/lplus_hunt2.out lplus_mix.out
-  originSessionId: 18a8f632-b336-4ece-9e3a-6682ec02c3a1
   modified: 2026-11-08T23:16:01.400Z
 ---
 

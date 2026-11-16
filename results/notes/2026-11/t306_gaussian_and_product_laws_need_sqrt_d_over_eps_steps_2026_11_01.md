@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T17:11:54+04:00
   status: provisional
   evidence: "frontier/rows/T306 moves m306a a1533060, m306b bf77ee45"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T306 (optimal step count of diffusion samplers on well-conditioned laws; known bounds Omega~(sqrt d) queries (2604.10857) against O~(d) steps (2308.03686)).

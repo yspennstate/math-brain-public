@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-09T01:59:09+04:00
   status: provisional
   evidence: "fei_sym_agent_2026_11_08/MACMINI_NOTES.md c798bbfb39"
-  originSessionId: 472b1d4f-77c3-4c94-8b40-709cb36c538f
 ---
 
 ---

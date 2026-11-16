@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T05:34:55+04:00
   status: provisional
   evidence: "rows/T119/moves.jsonl 03036cfd"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T119 (independence ratio alpha_3 of random cubic graphs), first frontier move, 2 Nov 2026, an agent. Move m119a, rows/T119/moves.jsonl 03036cfd; files t119_sa_mis.c, t119_run1.sh and the run outputs (research folder 06_math_research/frontier/rows/T119).

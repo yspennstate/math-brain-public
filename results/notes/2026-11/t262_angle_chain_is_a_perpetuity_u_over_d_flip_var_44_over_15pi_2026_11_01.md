@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T15:00:24+04:00
   status: provisional
   evidence: "one_layer_xi_run1.txt; moves m262a 89acdbda"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Deep He-ReLU, two inputs, width n, depth L = t n (row T262). With u = 1/(n theta), one layer is exactly

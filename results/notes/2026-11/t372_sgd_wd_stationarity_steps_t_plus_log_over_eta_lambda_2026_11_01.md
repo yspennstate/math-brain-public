@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T22:33:20+04:00
   status: provisional
   evidence: "rows/T372 moves 7589e16f"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T372 move m372b (an agent, 1 Nov, row DOSSIER 0484cd92, moves 7589e16f): Target 1 answered from the abstract of Li, Wang, Yu

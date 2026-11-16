@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T01:10:45+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Written 2026-11-01 01:10 +0400; T396 move e0c70609, files 9203ee21 (sbm_*.py/txt). k* about 27-47 (a 8 b 2) and 22-48 (a 5 b 3, below KS) over N 1e3-1e6; the label component decays at 0.84 in both models. Median P^k_ii is 5e-4 at k 20 while accuracy is 0.858, and low-degree nodes are less accurate, so the signal is not own-feature memory. Lesson: under random-walk normalisation at bounded degree, depth-to-chance does not measure detectability, and the equitable-partition eigenvalue is not the decay rate. Next: sym-normalised operator and degree ~ log N. Related: [[t420_ising_rbm_ml_has_no_minimiser_hidden_copies_odd_spin_2026_11_01]] - same session's frontier rounds.

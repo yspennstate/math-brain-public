@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T19:52:54+04:00
   status: provisional
   evidence: "T402 m402b, moves b259f84a, PREREG37 PASS"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T402 (KSD vs W1). On P = N(0,1) with q = phi(1 + delta sin(omega x)), KSD ~ delta omega (k^(omega)/(4 sqrt pi))^(1/2): the kernel's spectral

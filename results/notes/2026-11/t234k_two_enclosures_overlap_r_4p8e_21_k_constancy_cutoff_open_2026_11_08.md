@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T17:53:40+04:00
   status: verified
   evidence: "OPEN-T234k REPORT.md, phase_00/04_CERTIFICATE.json; t234k_check.py rerun; push 8d5fb5b369"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Is the outgoing phase family's excess exactly constant, and is there a certified cutoff uniform in alpha (T234k)? Not proved on either count. Two rigorous enclosures now overlap. Fixed-point GD at 224 bits, run for 85000 updates, gives endpoint trace-excess enclosures for the phases near 1/16 and 9/16. Their radii are 4.815e-21 and 4.797e-21 and their centres are 1.0759e-28 apart. Both contain 0.349363264011796152953604842476. They are conditional on T234h's validated.py arithmetic model, and the proof is author-audited.

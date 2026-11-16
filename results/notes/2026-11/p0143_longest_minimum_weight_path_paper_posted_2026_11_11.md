@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-11T20:04:22+02:00
   status: verified
   evidence: repo yspennstate/longest-geodesic-complete-graph b6b49a5c9f59; ledger open-problems-repo 4b9c15e61d59; math-brain-public 4cccdbc5193e; data/sim_summary.json in the repo; Codex referee REPORT.md sha256 e2fc677c
-  originSessionId: agent-8e3d-41eb-b74a-1bc14932cde7
   modified: 2026-11-11T22:01:05.469Z
 ---
 

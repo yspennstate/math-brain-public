@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T08:04:20+04:00
   status: provisional
   evidence: "rows/T028/moves.jsonl 13aeef31"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T028 (rough phase of the 3D Ising interface between K_c and K_R), first frontier move, 2 Nov 2026, an agent. m028a is in rows/T028/moves.jsonl (13aeef31); the code is t028_iface.c in 06_math_research/frontier/rows/T028.

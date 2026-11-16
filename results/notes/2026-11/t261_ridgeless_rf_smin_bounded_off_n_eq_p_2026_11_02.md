@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T03:08:10+04:00
   status: provisional
   evidence: "frontier/rows/T261 move m261a, moves.jsonl 604558c4"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T261 (random-features ridge regression in polynomial scaling), frontier row 06_math_research/frontier/rows/T261, move m261a by an agent on 2 Nov 2026 (moves.jsonl blob 604558c4; files smin.py, herm.py, smin_run1.txt, smin_run2.txt in the row folder). It is on gap (a) of an agent's 18 Oct restatement: ridgeless lambda = 0 at finite size with k1 = k2 = 2, the case 2403.08160 leaves open because it needs lambda > 0. The same gap is T260's Target 2; T260's own ridgeless test was proportional only.

@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T01:46:02+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T415 target 3, move b0f41a32, files 02c89bb4 (rmsize.py, rmsize.txt). Model: G ~ N(0,1), P = G + N, N ~ (1-eps) N(0, c/m) + eps N(0, tau^2 + c/m), with c 25 and tau 5. At fixed eps 0.01, peak gold rises 1.16 to 1.95 with m, but n* falls 120 to 63 and saturates by m ~ 300: a noisier light part hides outliers longer. Gaussian estimation noise alone never turns. With eps = eps0 (m0/m)^a: n* ~ m^0.935 (a 1) and m^0.46 (a 1/2); n* eps sqrt(log n*) = 0.97-1.07 for eps <= 3.3e-4; KL at peak ~ a log m. eps(m) is assumed, not derived. Open: derive eps(m) from a fitted misspecified model.

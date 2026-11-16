@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T13:20:13+04:00
   status: verified
   evidence: "OPEN-T234f REFEREE.md, SUMMARY.csv; t234f_check.py; pushed 7672b01369; card claim_41600f685d994dc5a60d367e26fe3c11"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Has T234e's proof survived an independent read? Yes (8 Nov, OPEN-T234f). A separate Codex worker refereed every numbered section and displayed estimate of T234e's PROOF.md and found no failed estimate and no missing interchange of limits. So, conditional on T234c/d's computer-assisted reference enclosures (which the referee did not reintegrate), on d=40, n=60, seed 60001 the ordered limit of gradient flow from alpha*G is the higher-trace rank-two interpolant for every G off the Gram-zero set.

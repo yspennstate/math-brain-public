@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T20:44:33+04:00
   status: provisional
   evidence: "rows/T234 moves d172c944, ms_r1_run.txt"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T234 Target 1 measured at r = 1 (moves d172c944, files f710d0eb, row file ms_r1_run.txt). Gradient descent from small init (alpha 1e-6,

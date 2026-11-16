@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T18:11:11+04:00
   status: provisional
   evidence: "rows/T414 moves 791370a2; kopt_run1/2, kopt_c0.9/2.5"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T414 (IWAE optimal K), encoder half, 1 Nov (an agent, moves 791370a2). Status: provisional (closed forms derived after the first

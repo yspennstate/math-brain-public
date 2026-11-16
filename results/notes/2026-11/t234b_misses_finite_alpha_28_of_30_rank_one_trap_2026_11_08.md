@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T10:52:35+04:00
   status: verified
   evidence: "~/brain/online/frontier_rows/T234/open_t234b_agent_11_08/REPORT.md"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Is T234's "neither minimum rank nor minimum trace" verdict, or its threshold near 1.4d, a real small-initialization limit? No, both are finite-alpha readings (8 Nov, Codex OPEN-T234b). It replayed every reported alpha = 1e-12 miss: 65 baselines reproduce the historical counts. Of the 30 misses with n > d, 28 fall below 0.01 error at some smaller tested alpha. One of them, d40 n50 trial 1, is still at 0.703 at alpha 1e-96 and drops to 4.1e-7 only at 1e-288. All d160 "genuine" misses recover.

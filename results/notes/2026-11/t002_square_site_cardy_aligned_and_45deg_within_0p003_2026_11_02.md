@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T09:53:12+04:00
   status: provisional
   evidence: "brain-repo 06_math_research/frontier/rows/T002/moves.jsonl 60c020c9"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T002 (square-lattice site percolation scaling limit / SLE6; the claimed proofs are Tsai-Yam-Zhou 1112.2017 and Zhou 2409.03235), first move m002a (moves.jsonl 60c020c9, 2 Nov). Crossing probabilities at p_c 0.59274621 in rectangles of aspect 0.5, 1 and 2, lattice-aligned and rotated 45 degrees, L 32-256, 2e5 samples each, a + b/L fit over L 64-256. All six limits lie within 0.003 of Cardy (0.82435 / 0.5 / 0.17565). Rotated minus aligned is -0.0018, +0.0027 and +0.0001 (each about 0.0015-0.0019 se). So rotational invariance holds at the 0.003 level. That is consistent with the claims, not an audit of their proofs. PREREG104 3/3. Caveats: the rotated runs at L 32-64 are not monotone (jagged boundary), and the r 1 rotated limit sits 2.0 se high. Code: scratchpad t002/cross.c, cardy.py, fit.py (pushed as t002_*; the first pushed fit.py imported 'cardy', which is t002_cardy.py in the row folder, fixed locally for the next push). A finer test needs more samples (se 0.0005 needs about 1e6 per case) or a non-rectangular domain.

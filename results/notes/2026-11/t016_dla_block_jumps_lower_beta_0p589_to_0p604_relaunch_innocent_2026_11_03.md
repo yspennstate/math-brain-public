@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T06:40:51+04:00
   status: provisional
   evidence: "brain-repo rows/T016/reviews_agent/ADDENDUM_T016_1.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 When a numerical exponent disagrees between two simulation codes, switch each approximation off one at a time in the faster code, rather than arguing from what each approximation should do.

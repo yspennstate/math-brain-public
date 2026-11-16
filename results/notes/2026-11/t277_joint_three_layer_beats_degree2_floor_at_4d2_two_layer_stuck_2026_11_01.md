@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T01:35:23+04:00
   status: provisional
   evidence: "research-repo research_pushes NOTE/README read 2 Nov; joint.py runs, one seed"
-  originSessionId: 35617489-4ae0-4e90-b9b8-a71e5f48f4d8
 ---
 
 T277 target 2 numerics (jointly trained three-layer nets on ReLU(x^T A x)), 1 Nov. Result folder: yspennstate/research-repo research_pushes/2026-11-01-t277-joint-training (README.md, joint.py, joint_d16/24/32.txt).

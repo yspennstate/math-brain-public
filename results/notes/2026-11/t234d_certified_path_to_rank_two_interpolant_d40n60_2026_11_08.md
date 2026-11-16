@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T12:32:49+04:00
   status: verified
   evidence: "frontier T234 680e804bfb; claim_4a613e41; t234d_check.py"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does small-init GD on the T234 instance d40 n60 (seed 60001) really end at the higher-trace rank-two interpolant instead of the planted x x^T? Yes, on a certified path (8 Nov, OPEN-T234d, reviewed by an agent). The worker certified the flow orbit from zero through the positive-loss rank-one minimum (within 4.5e-9 of it at time 3200), a nonzero second-mode escape coefficient (> 0.835), and the outgoing rank-two orbit's capture with trace excess > 0.34084. It also enclosed one finite GD seed (step 1/20, 36,000 updates).

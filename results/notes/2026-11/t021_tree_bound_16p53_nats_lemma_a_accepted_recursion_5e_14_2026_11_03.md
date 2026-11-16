@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T07:09:44+04:00
   status: provisional
   evidence: "06_math_research/frontier/rows/T021/reviews_agent/ADDENDUM_T021_1.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 T021 (FEI row), q31 work committed 3 Nov 06:50 with no author move: sup D_k/I_k <= 16.53159 nats over alternating read-once trees with uniform fan-in per level (s_l >= 2), down from 32.31 by an analytic Lemma A (t(4 ln 2 + ln 1/t) <= Phi(1,t) <= t(3 + ln 1/t), both ends sharp). Reviewed by an agent 3 Nov 07:07 and 07:09 (moves 25-26 on T021): proof checked line by line; own code checks Lemma A to t 1e-20, the gain bracket (max 0.968 of the bound on 20,000 random inputs), B3 by summation and closed form; the block recursion matches brute-force truth tables on 19 trees to n 20 (worst 5.3e-14). Room: the largest D/I on random trees is 4.53, so the bound is loose by about 3.7x. Full FEI stays open.

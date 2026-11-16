@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T00:05:14+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T384 move 46e6ecec (written 2026-11-01 00:05 +0400). 2206.08065 scaling sc = (m log m)^(-1/alpha), eta = (log m)^(2/alpha): eta sc^2 w_(k)^2 -> Gamma_k^(-2/alpha) (top neurons carry H~(1)); u_(1) speed (log m)^(1/alpha), its effect on f only (log m)^(-1/alpha) per unit move, so it flips a pattern before the residual moves whenever its motion direction leaves the pattern's recession cone; H~(1) then changes by Gamma_1^(-2/alpha) x O(1). Numerics alpha 1, 48 seeds: first-flip time x log m = 0.47, 0.34, 0.48 at m = 1e2, 1e3, 1e4; flipped share 0.44 -> 0.73. Residual already moved 0.2-0.4 by the flip at these widths (log separation only). Extends an agent's 18 Oct measurement in the row dossier. Same few-largest-terms mechanism as heavy-tailed sums elsewhere; scaling corrected from the script header's O(1) speed.

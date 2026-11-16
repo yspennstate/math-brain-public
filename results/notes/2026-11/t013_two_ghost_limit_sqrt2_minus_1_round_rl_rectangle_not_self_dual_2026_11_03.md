@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T02:45:41+04:00
   status: verified
   evidence: "codex_fleet/20261102/workers/m5f-T013b/REPORT.md; rows/T013 moves.jsonl 66b7ff00"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T013 (FK crossing, rectangle vs disk), Codex worker m5f-T013b, harvested by an agent as move m013f on

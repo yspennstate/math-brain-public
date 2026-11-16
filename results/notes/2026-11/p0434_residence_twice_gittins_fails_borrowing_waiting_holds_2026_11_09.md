@@ -9,7 +9,6 @@ metadata:
   status: verified
   superseded_by: p0434_residence_lemma_p_false_zp_1_51_three_paths_2026_11_09
   evidence: ~/codex_fleet/runs/own_p0434/resid_vs_gittins.out; resid_vs_gittins_twins_deep.out; zp_hunt.out
-  originSessionId: 18a8f632-b336-4ece-9e3a-6682ec02c3a1
   modified: 2026-11-09T11:39:43.002Z
 ---
 

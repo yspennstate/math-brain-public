@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T02:35:56+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Move 349a585b (files 69b6a40e) on rows/T360. Plain GD on the robust logistic loss from a small start tracks the mean estimator early (robust test minima 0.1268/0.1609/0.2000 at eps 0.2/0.35/0.5, predicted 0.1268/0.1606/0.1999), then converges in direction to the hard-margin SVM, since (y w.x - eps|w|)/|w| = y w^.x - eps. Gordon/Gardner limit: 1 - rho^2 >= delta E[(kappa - rho|mu| - G)_+^2], max kappa; at |mu| 1.5 the limit rise is 0.065/0.085/0.096 at delta 0.5/1/2 and collapses once the SVM margin drops below eps (between delta 2 and 3), where GD stops at a finite-norm minimiser (rise 0.014 at delta 8). d 200 finite runs agree (cos 0.671 vs 0.699 predicted, seed spread 0.635-0.745). My 31 Oct note that the isotropic model shows no rise held only for d >> n. Not proved; a rigorous CGMT for this objective is the proof route. Related: [[t327_induction_plateaus_log_init_because_content_head_moves_first_2026_10_31]] - same loop, another top-400 row.

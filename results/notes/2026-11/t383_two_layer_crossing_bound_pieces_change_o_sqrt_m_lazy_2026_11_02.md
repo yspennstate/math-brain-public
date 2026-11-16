@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T02:15:48+04:00
   status: provisional
   evidence: "research_pushes/2026-11-02-loop-T383-two-layer-crossing (research-repo 2c91222); frontier move 24e1ec6"
-  originSessionId: b9a49845-179c-4e8f-8401-adcc0c5c2952
 ---
 
 T383 target 1, two-layer case, proved on 2 Nov. It is at research-repo research_pushes/2026-11-02-loop-T383-two-layer-crossing (2c91222: TWO_LAYER.md, two_layer_bound.py, run2.txt), with the frontier move on T383 at brain-repo 24e1ec6.

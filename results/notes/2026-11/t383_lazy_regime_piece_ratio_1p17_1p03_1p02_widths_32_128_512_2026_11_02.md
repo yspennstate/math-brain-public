@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T02:05:08+04:00
   status: provisional
   evidence: "research_pushes/2026-11-02-loop-T383-lazy-regions (research-repo 82a79eb); frontier move ffda510"
-  originSessionId: b9a49845-179c-4e8f-8401-adcc0c5c2952
 ---
 
 T383 target 1 (does the linear-region count stay within a constant factor of its initial value in the lazy/NTK regime?): numerics on 2 Nov, at research-repo research_pushes/2026-11-02-loop-T383-lazy-regions (82a79eb; README.md, lazy_regions.py, check_count.py, run1.txt). Frontier move on T383 at brain-repo ffda510.

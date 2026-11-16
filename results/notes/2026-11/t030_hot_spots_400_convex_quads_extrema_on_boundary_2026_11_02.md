@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T08:22:07+04:00
   status: provisional
   evidence: "rows/T030/moves.jsonl 4dea9c1a"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T030 (hot spots, convex planar domains), first frontier move, 2 Nov 2026, an agent. m030a is in rows/T030/moves.jsonl (4dea9c1a); the code is t030_hs.py and t030_refine.py in 06_math_research/frontier/rows/T030.

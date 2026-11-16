@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T16:33:00+04:00
   status: provisional
   evidence: "t320/w1check_run1.txt, stripes1d_run1.txt; moves m320a a10900df"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Row T320 asks for the depth of L-Lipschitz flow layers that push N(0, I) within eps of the two-Gaussian mixture at separation R.

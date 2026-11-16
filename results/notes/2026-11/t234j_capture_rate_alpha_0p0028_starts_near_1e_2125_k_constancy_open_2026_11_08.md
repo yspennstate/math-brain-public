@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T16:10:45+04:00
   status: verified
   evidence: "frontier T234 pushes f00132cf63 5868732280; card claim_97da5c49; t234j_check.out"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Why did small-alpha GD on the T234 instance (d=40, n=60, step 1/20) look so slow to settle on the captured endpoint, and where

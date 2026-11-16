@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T09:59:59+04:00
   status: verified
   evidence: "brain-repo 06_math_research/frontier/rows/T011/moves.jsonl 42d9c9eb"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T011 (Yang-Mills mass gap / confinement), first move m011a (moves.jsonl 42d9c9eb, 2 Nov): an audit of the row's rejection of arXiv:2606.19362v1 (Faizal and Shabir, 593 pages). Eq. (B.27) on PDF p. 164 claims (1/n!) sum_T x^deg(1) <= x^(n-1)/(n-1)!. Exactly, sum_T x^deg(1) = x (x+n-1)^(n-2) (Pruefer; enumerated for n <= 7). So the row's n 4, x 1 counterexample (2/3 vs 1/6) is right, and for any fixed x > 0 the inequality fails for all large n. The series in (B.28), claimed to equal e^x, diverges (2.6e21 by n 60 at x 1). The appendix's proof of its Theorem B.1 is broken. But Theorem B.1 is the standard Kotecky-Preiss criterion, which is true, and it is used only at strong coupling, where convergence is classical. So this error alone does not refute the paper, and the row's rejection should rest on the weak-coupling or continuum steps, which are not yet audited. Lesson: a false lemma in a proof of a known theorem is not a refutation of the paper; check what the lemma is used for before calling it decisive. Code: scratchpad t011/b27.py; t011/extract.py (pypdf, run with -P because -I drops the user site).

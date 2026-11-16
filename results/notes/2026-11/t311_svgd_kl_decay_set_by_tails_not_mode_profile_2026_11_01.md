@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T12:37:24+04:00
   status: provisional
   evidence: "t311/eigen_prereg.txt, lag3.txt; move m311a 912db7d0"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T311 (mean-field SVGD, pi = N(0,1), Gaussian RBF kernel bandwidth h), Target 1, 1 Nov 2026, an agent. Row folder

@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T03:26:45+04:00
   status: provisional
   evidence: "06_math_research/frontier/rows/T240/L1_agent/l1_phi.txt"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 T240, 3 Nov 03:2x. (L1) is written out with numbers in 06_math_research/frontier/rows/T240/L1_agent on brain-repo main (L1_WITH_NUMBERS.md, l1_phi.py, l1_phi.txt; floats, not bounds).

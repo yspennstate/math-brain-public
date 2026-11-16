@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T01:18:12+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T412 target 2 (alphabet S = L), moves 5c520bc9 and 529fe980 (adaptive note), files 9de7a895 (perm.py, perm.txt). Target: uniform permutation of [L]. Each masked position's exact conditional is uniform on the m unused symbols, so a step of size s is collision-free with probability prod_(j<s)(1 - j/m). For fixed sizes TV = 1 - prod over steps exactly. For any schedule, adaptive included, TV >= 1 - exp(-(L-K)^2/(2KL)) (Cauchy-Schwarz on t_k = s_k - 1, with m_k <= L), so K = Omega(L). A sqrt-grid schedule gives -log(1-TV) of 1.3-1.95 L/K for K <= L/5. Simulation at L 1000, K 200: invalid fraction 0.9980 against the exact 0.9982. Not yet compared with the Chen-Cong-Li total-correlation bound (2511.04647). Open: binary alphabet.

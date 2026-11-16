@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T07:47:51+04:00
   status: provisional
   evidence: "rows/T024/moves.jsonl 4e5285e2, 4327ead6"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T024 (TV cutoff for random walk on all transitive spectral expanders), first frontier moves, 2 Nov 2026, an agent. m024a (rows/T024/moves.jsonl 4e5285e2) and m024b (4327ead6); t024_sl2b.c, t024_cut.py and t024_lam2.c are in 06_math_research/frontier/rows/T024.

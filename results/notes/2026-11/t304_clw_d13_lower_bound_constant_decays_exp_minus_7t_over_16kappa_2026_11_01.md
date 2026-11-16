@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T04:44:46+04:00
   status: provisional
   evidence: ""
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 Row T304, moves 25b67f76, 998b7f03, 314b8ee4 (1 Nov). Read from the paper's LaTeX source (arxiv e-print), not the PDF: the PDF text extraction garbles eq. 3.5. Family F(d, l, L) = {l I <= Hess U <= L I}, so kappa = L/l is bounded. The oracle gives grad U plus W_t and its weighted integral. Theorem 1.1: C_low sqrt(d) N^(-3/2) <= inf worst-case L2 strong error at time T <= C_up sqrt(d) N^(-3/2), for N >= N_0 independent of d. Eq. 3.5 has Cbar = exp((3Cx/(2Cv) - T)(1 - sqrt(1 - u_R/L))) x ...; Lemma 2.2 forces T >= 12 Cx/Cv, so the exponent is <= -7T/(16 kappa). This bounds the constant the proof delivers, not the true complexity. Two gaps to a sampling lower bound: (a) the error is strong error against the same-W path; (b) at T = a kappa log(sqrt d/eps) the proved bound is at best (sqrt d/eps)^((2/3)(1 - 7a/16)). Repair idea: a perturbation estimate localised near the terminal time. Method note: on this Mac there is no pdftotext; fetch https://arxiv.org/e-print/<id> (gzip tar of the LaTeX) for exact formulas. Related: [[t360_robust_overfitting_in_isotropic_linear_model_2026_11_01]] (same PDF-extraction route).

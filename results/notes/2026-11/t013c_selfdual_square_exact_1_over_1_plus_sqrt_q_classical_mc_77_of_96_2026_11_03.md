@@ -8,7 +8,6 @@ metadata:
   status: provisional
   superseded_by: t013c_finished_grid_no_exponent_q2_r_half_rect_offset_0p009_p0p001_2026_11_03
   evidence: "~/codex_fleet/20261102/workers/m5f-T013c/REVIEW.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 T013c (FK crossing probabilities, q = 2 and 3, rectangle vs disk) was left unread when lead an agent stopped at

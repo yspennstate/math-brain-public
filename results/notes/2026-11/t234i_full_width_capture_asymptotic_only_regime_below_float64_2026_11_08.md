@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T15:44:29+04:00
   status: provisional
   evidence: "~/codex_fleet/20261108_pro/workers/OPEN-T234i/REPORT.md"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Is every small full-width start on the T234 instance (d=40, n=60, GD step 1/20) captured at a rank-two interpolant with trace excess >= 0.3408? (T234i, 8 Nov 2026, Codex worker, reviewed by an agent.)

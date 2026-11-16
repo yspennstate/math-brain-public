@@ -7,7 +7,6 @@ metadata:
   created: 2026-11-12
   status: provisional
   evidence: consolidated in the 12 Nov nap from the three linked VERIFIED cards; no new measurement
-  originSessionId: 8b83b7f2-2e10-4ad2-af07-87980231a2fa
   modified: 2026-11-12T20:41:52.103Z
 ---
 

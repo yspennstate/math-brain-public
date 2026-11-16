@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T14:18:24+04:00
   status: verified
   evidence: "frontier T234 open_t234h_agent_11_08 (355402bf07); card claim_a513ea73; t234h_check.out"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does full-width GD at step 1/20 escape the rank-one plateau on the d=40, n=60 instance, and where to? Yes for the leading outgoing family, conditionally (8 Nov, T234h, Codex, reviewed by an agent): every outgoing phase lands at rank-two interpolants with trace above the planted trace.

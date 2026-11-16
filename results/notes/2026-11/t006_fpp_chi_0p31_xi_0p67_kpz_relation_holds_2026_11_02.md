@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T06:46:51+04:00
   status: provisional
   evidence: "rows/T006/moves.jsonl 8e96e72c"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T006 (planar first-passage percolation: the KPZ relation chi = 2 xi - 1 and the values 1/3, 2/3), first frontier move, 2 Nov 2026, an agent. Move m006a, rows/T006/moves.jsonl 8e96e72c; t006_fpp.c, t006_fit.py and runs in 06_math_research/frontier/rows/T006.

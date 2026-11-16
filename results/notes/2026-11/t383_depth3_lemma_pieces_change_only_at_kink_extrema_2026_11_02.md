@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T02:27:43+04:00
   status: provisional
   evidence: "research_pushes/2026-11-02-loop-T383-depth3-route (research-repo 708e3d9); move e179425"
-  originSessionId: b9a49845-179c-4e8f-8401-adcc0c5c2952
 ---
 
 T383 target 1, depth 3 (two hidden layers, 1-D input, segment [A, B]), 2 Nov. At research-repo research_pushes/2026-11-02-loop-T383-depth3-route/DEPTH3_ROUTE.md (708e3d9); frontier move brain-repo e179425.

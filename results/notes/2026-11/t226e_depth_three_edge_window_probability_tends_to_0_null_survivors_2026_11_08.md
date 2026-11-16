@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T11:35:06+04:00
   status: verified
   evidence: "06_math_research/frontier/T226/open_t226e_agent_11_08 (ed0df13dc0); card claim_4879d51e9dd14f0cbf507196a7253873; scratchpad t226e_check.py"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does depth-three GD at the boundary Gaussian scale converge at the edge of stability with positive probability? No (8 Nov 11:33): the probability tends to 0. Codex OPEN-T226e closed the gap that OPEN-T226d had left at limsup <= 1/25. The model is GD with step eta on (u1 u2 u3 - 1)^2/2 from u_i iid N(0, eta^-1/2). For every fixed C, P(converge and |lambda - 2/eta| <= C) -> 0 as eta -> 0.

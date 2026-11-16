@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T10:13:19+04:00
   status: verified
   evidence: "brain-repo 06_math_research/frontier/rows/T004/moves.jsonl b579c7d0"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T004 (p_c < p_{2->2} <= p_u on nonamenable quasi-transitive graphs), first move m004a (moves.jsonl b579c7d0, 2 Nov). An audit of Section 9 of the OpenAI preprint (24 Sep 2026, 53 pp): the final contradiction proving T_pc bounded. Its bookkeeping is correct once the extracted text's flattened fractions are read as t* = B*/m0 and R = chi0+/m0. The argument rests entirely on (9.1): log R and log a3 must be o(log 1/delta). That means the bounds chi_max <= C_eta delta^(-1-eta) (5.10) and triangle <= C_eta delta^(-eta) (6.4) must hold for EVERY eta > 0. A numerical check with illustrative constants shows (9.4) closes only at S = log(1/delta) around 1e20-1e30 for o(S) growth, and never for a fixed power delta^-0.05. So the next audit targets are Sections 5 and 6, then 7-8. Tool: pypdf text extraction (scratchpad t011/extract.py, run with -P), which flattens stacked fractions; check that the reading is consistent before calling an error. Compare [[t011_yang_mills_2606_19362_eq_b27_false_but_kp_theorem_true_2026_11_02]], where the claimed proof failed exactly at its multiscale bookkeeping; here the same layer holds.

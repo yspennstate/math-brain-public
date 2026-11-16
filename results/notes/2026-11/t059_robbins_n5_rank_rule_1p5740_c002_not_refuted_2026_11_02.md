@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T08:43:06+04:00
   status: provisional
   evidence: "rows/T059/moves.jsonl ac8d188e"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T059 (Robbins' problem), first frontier move, 2 Nov 2026, an agent. m059a is in rows/T059/moves.jsonl (ac8d188e); the folder holds harvest.json (claims C001-C004 from w674), not hunt.json.

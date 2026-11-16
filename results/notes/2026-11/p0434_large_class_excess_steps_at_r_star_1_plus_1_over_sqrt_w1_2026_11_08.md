@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-08T10:02:21-05:00
   status: provisional
   evidence: codex_fleet/runs/own_p0434/eps_step.out
-  originSessionId: 18a8f632-b336-4ece-9e3a-6682ec02c3a1
   modified: 2026-11-08T15:06:20.261Z
 ---
 

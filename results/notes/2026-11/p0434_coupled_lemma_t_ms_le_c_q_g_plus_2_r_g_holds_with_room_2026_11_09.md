@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-09T07:08:42-05:00
   status: provisional
   evidence: ~/codex_fleet/runs/own_p0434/pprime_random.out; pprime_hunt.out; pprime_check.out
-  originSessionId: 18a8f632-b336-4ece-9e3a-6682ec02c3a1
   modified: 2026-11-09T13:23:38.550Z
 ---
 

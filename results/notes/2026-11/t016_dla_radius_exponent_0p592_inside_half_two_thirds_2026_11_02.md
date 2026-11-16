@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T06:23:23+04:00
   status: provisional
   evidence: "rows/T016/moves.jsonl a93f038c"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T016 (planar DLA radius growth), first frontier move, 2 Nov 2026, an agent. Move m016a, rows/T016/moves.jsonl a93f038c; t016_dla.c, t016_fit.py and the raw runs in 06_math_research/frontier/rows/T016.

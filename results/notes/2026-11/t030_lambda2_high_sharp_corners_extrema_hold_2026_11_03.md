@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T04:18:43+04:00
   status: provisional
   evidence: "06_math_research/frontier/rows/T030/reviews_agent/REVIEW_T030_QUAD_SURVEY.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 T030 review, 3 Nov 04:17 (an agent), of an agent's 2 Nov survey of 400 convex quadrilaterals

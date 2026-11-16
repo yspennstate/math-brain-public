@@ -8,7 +8,6 @@ metadata:
   status: superseded
   superseded_by: t319_fixed_width_depth_growth_stops_2026_11_01
   evidence: ""
-  originSessionId: b9a49845-179c-4e8f-8401-adcc0c5c2952
 ---
 
 

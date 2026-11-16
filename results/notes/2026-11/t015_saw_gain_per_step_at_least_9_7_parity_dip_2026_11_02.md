@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T06:02:42+04:00
   status: provisional
   evidence: "rows/T015/moves.jsonl d3e4f431"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T015 (prove E|omega_n|^2 >= c n for strict self-avoiding walk in d = 2, 3, 4), first frontier move, 2 Nov 2026, an agent. Move m015a, rows/T015/moves.jsonl d3e4f431; t015_saw_enum.c and run outputs in 06_math_research/frontier/rows/T015.

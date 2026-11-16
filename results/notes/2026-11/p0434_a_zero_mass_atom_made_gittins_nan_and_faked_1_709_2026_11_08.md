@@ -5,7 +5,6 @@ metadata:
   node_type: memory
   type: project
   status: verified
-  originSessionId: 637c11d8-331f-4f03-ac7c-c997f7076cfb
   modified: 2026-11-09T04:08:44.161Z
 ---
 

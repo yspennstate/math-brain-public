@@ -5,7 +5,6 @@ metadata:
   node_type: memory
   status: verified
   type: feedback
-  originSessionId: agent-8e3d-41eb-b74a-1bc14932cde7
   modified: 2026-11-15T12:16:10.749Z
 ---
 

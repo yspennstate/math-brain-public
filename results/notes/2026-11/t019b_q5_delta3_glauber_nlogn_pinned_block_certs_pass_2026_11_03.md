@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T18:01:56+04:00
   status: provisional
   evidence: "06_math_research/frontier/rows/T019/m5f_T019b_pinned_block/REVIEW.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 Codex worker m5f-T019b (report 3 Nov 13:38; lead an agent stopped before reading it; reviewed by an agent 3 Nov) gives a computer-assisted route to O(n log n) single-site heat-bath Glauber mixing for proper 5-colourings on every graph of maximum degree 3.

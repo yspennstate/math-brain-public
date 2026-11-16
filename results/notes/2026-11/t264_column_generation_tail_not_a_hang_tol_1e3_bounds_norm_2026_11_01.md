@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T22:20:08+04:00
   status: provisional
   evidence: "grid5g_log.txt, grid5f 35 CPU-h no output"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T264's grid5f.py (min-norm ReLU interpolation in d = 2 by column generation over HiGHS, mvn4.py solve(), tol 1e-6, up to 3000 rounds,

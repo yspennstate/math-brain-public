@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T21:35:21+04:00
   status: provisional
   evidence: "brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2_reseed.md commit 6c0ab4752f"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 Correction to [[t013c_finished_grid_no_exponent_q2_r_half_rect_offset_0p009_p0p001_2026_11_03]], measured on 3 Nov between 21:2x and 21:33 +04.

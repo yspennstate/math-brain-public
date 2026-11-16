@@ -8,7 +8,6 @@ metadata:
   status: superseded
   superseded_by: t007_wolff_fixed_cluster_count_xi_matches_alles_2026_11_02
   evidence: "rows/T007/moves.jsonl 3431990c"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T007 (Polyakov's conjecture: 2D O(N), N >= 3, has a finite correlation length at every beta), first frontier move, 2 Nov 2026, an agent. Move m007a, rows/T007/moves.jsonl 3431990c; t007_o3.c, t007_slopes.py and the runs are in 06_math_research/frontier/rows/T007.

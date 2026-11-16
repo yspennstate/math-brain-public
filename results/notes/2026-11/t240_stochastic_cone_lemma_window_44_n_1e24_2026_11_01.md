@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-01T23:46:48+04:00
   status: provisional
   evidence: "rows/T240/L3_stochastic_cone.md, moves d76f8868"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T240 (soft committee plateau escape), 1 Nov: the plan's (L3), the stochastic cone lemma, is written out and pushed (rows/T240/L3_stochastic_cone.md, move in moves.jsonl d76f8868).

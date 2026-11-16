@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T19:14:37+04:00
   status: provisional
   evidence: "count-only rerun of t019_seq_run.py 4 7 5: 745 groups, 4,010,676 tuples; lead jsonl 4 groups 864,422 tuples 2077.8 s"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
 ---
 
 T019 at maximum degree 4, q = 7: the lead's five-free enumeration is about 2 core-hours from done, not 100. Measured

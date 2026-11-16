@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T06:49:47+04:00
   status: provisional
   evidence: "rows/T012/moves.jsonl 93a36eb5"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T012 (infinite cycles of the interchange process in d = 3, 4; proved d >= 5, Elboim-Sly 2211.17023), first frontier move, 2 Nov 2026, an agent. Move m012a, rows/T012/moves.jsonl 93a36eb5; t012_interchange.c, t012_cross.py and runs in 06_math_research/frontier/rows/T012.

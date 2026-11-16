@@ -8,7 +8,6 @@ metadata:
   status: superseded
   superseded_by: t371_concave_cube_radius_0p42_to_0p45_not_half_2026_11_01
   evidence: ""
-  originSessionId: b9a49845-179c-4e8f-8401-adcc0c5c2952
   modified: 2026-11-01T10:11:23.746Z
 ---
 

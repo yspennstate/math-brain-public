@@ -8,7 +8,6 @@ metadata:
   created_at: 2026-11-11T03:07:04+02:00
   status: provisional
   evidence: repo main 227e6bc; code/table_out.txt; Mac 2 ~/p0073/ex7.jsonl
-  originSessionId: agent-8e3d-41eb-b74a-1bc14932cde7
   modified: 2026-11-11T01:50:40.640Z
 ---
 

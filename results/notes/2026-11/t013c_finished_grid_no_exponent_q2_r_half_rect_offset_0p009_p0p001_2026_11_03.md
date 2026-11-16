@@ -6,7 +6,6 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T21:21:36+04:00
   evidence: "brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2.md commit cde07a4356"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
   status: superseded
 superseded_by: t013c_r_half_offset_did_not_replicate_16_fresh_seeds_chi2_2p3_of_3_2026_11_03
 ---

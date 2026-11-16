@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T11:03:03+04:00
   status: verified
   evidence: "~/brain/online/frontier_rows/T226/open_t226d_agent_11_08/REPORT.md"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does depth three keep depth two's answer (edge-window convergence probability tends to 0) at the boundary Gaussian scale? Partly (8 Nov, Codex OPEN-T226d, row T226): it is proved to be at most 1/25, not 0.

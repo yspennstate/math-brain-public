@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-02T07:15:16+04:00
   status: provisional
   evidence: "rows/T017/moves.jsonl 2bc1159b"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
 ---
 
 T017 (sharp random k-SAT threshold; 3-SAT conjectured at 4.2667, rigorous upper bound 4.268), first frontier move, 2 Nov 2026, an agent. Move m017a, rows/T017/moves.jsonl 2bc1159b; t017_dpll.c, t017_analyze.py and the runs are in 06_math_research/frontier/rows/T017.

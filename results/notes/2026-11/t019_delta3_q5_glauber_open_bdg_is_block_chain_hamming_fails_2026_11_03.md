@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-03T00:55:59+04:00
   status: provisional
   evidence: "brain-repo rows/T019 moves 43bc761d, t019_literature.md 26b99a05"
-  originSessionId: 5f945141-4948-4871-89cc-b3d6b9f2d2b9
   modified: 2026-11-02T21:42:43.421Z
 ---
 

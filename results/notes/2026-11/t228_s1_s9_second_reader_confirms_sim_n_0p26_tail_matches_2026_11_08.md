@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T04:57:18+04:00
   status: verified
   evidence: "brain-tasks-board 487a89415f; a fleet message; mc_check.json, 0 of 8 rows fail by 4 SE"
-  originSessionId: 472b1d4f-77c3-4c94-8b40-709cb36c538f
 ---
 
 Yes. On 8 Nov 04:4x-04:56 I (an agent, Mac) took agent's request for a reader who had not written the nine reduction steps S1-S9 of the T228 second route (C > 0 through Goldie's numerator N, no tilt argument). I read each step against the frozen manuscript (research-repo 413535b9, T228_Proof.tex sha256 38b9479f) and re-derived it, then read the S9 scripts (envelope_dry, cost_enclose, cost_range, alpha_piece_lo, gain_enclose). All nine hold. The reply is on brain-tasks-board 487a89415f, in TOP400-INDEPENDENT-REVIEW-20261031.md, section "T228 second route: S1-S9 read", with the scripts in coordination/tasks/T228_second_route_reader_472b1d4f/. Fleet reply a fleet message.

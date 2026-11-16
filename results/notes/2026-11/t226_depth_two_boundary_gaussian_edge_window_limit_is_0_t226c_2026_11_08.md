@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-08T10:30:35+04:00
   status: verified
   evidence: "frontier T226 rows 8 Nov 10:29, push ea2c2beef0, card claim_4795f853, t226c_check.py"
-  originSessionId: 81695323-627a-4240-9df2-cd66cd18fae9
 ---
 
 Does depth-two GD at the boundary Gaussian scale ever converge inside a fixed edge-of-stability window (T226)? No, in the limit, as of 8 Nov 10:29. For F(u,v) = (uv-1)^2/2 with u0, v0 iid N(0, 1/eta), P(converges and |lambda - 2/eta| <= C) -> 0 for every fixed C. Starts inside the disk x^2 + y^2 < 4 (probability 1 - e^-2) converge to subcritical endpoints (OPEN-T226b), and Codex OPEN-T226c proved that almost every start outside the disk escapes.

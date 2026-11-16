@@ -6,7 +6,6 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T18:20:23+04:00
   evidence: "~/codex_fleet/20261102/workers/m5f-T019c/REPORT.md"
-  originSessionId: 5009ea7f-1f15-49f8-b73c-df81dd7f43f3
   status: superseded
 superseded_by: t019c_five_free_2_core_hours_not_100_groups_sorted_by_size_2026_11_03
 ---

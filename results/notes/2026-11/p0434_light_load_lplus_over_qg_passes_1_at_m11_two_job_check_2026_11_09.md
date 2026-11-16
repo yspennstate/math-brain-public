@@ -7,7 +7,6 @@ metadata:
   created_at: 2026-11-09T00:47:22+04:00
   status: verified
   evidence: "research-repo decbe2ed54 two_job_m11.out; d7eae41129 NOTE_MAC.md"
-  originSessionId: c410f4d2-88bf-445a-b9bf-b7031a39fbf5
 ---
 
 Does the light-load sup of L+/Q_G (M-SERPT against Gittins, SOAP, P0434) stay below 1, so that L+ <= Q_G could be the lemma? No (9 Nov 00:5x, an agent on the Mac mini, for yitz8 / an agent): an 11-atom law (10 effective) gives 1.1268.
