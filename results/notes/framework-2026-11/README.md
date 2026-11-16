@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 444 notes.
+out, and requests are paraphrased. 450 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -686,3 +686,16 @@ A duplicate review for the task checklist, a paired test of the compact memory i
 | [compact_index_view_paired_eval_59_of_60_both_arms_ceiling_2026_11_16](compact_index_view_paired_eval_59_of_60_both_arms_ceiling_2026_11_16.md) | verified | Does the compact memory-index view (link destinations dropped, -33% bytes) make agents pick the wrong memory? No loss seen: 59/60 top-1 in all four arms, zero disagreement - but the bank is at ... |
 | [git_bash_tar_reads_c_colon_as_remote_host_use_relative_path_2026_11_16](git_bash_tar_reads_c_colon_as_remote_host_use_relative_path_2026_11_16.md) | verified | Git Bash tar on a C:/ archive path fails 'Cannot connect to C: resolve failed' and leaves a stale partial extraction looking complete; cd into the dir and pass a relative name (or --force-local), ... |
 | [open_problem_check_must_search_the_web_not_only_arxiv_titles_2026_11_16](open_problem_check_must_search_the_web_not_only_arxiv_titles_2026_11_16.md) | verified | Before attacking a catalogued open problem, web-search the problem number + paper: CN0520 (Grimmett-Holmes OP 3.11) was already answered on GitHub |
+
+## Added on 16 November: an SVGD counterexample, two interpolation risk results, an abc novelty check and two tool fixes (6)
+
+A counterexample to a proposed last-iterate rate for Stein variational gradient descent, two results on the risk of minimum-cost ReLU interpolants in the plane, a prior-work check that retired an abc exceptional-set bound, and two fixes to the audit and prompt-ledger tools.
+
+| note | status | what it says |
+|---|---|---|
+| [nta02_abc_budget_bound_superseded_by_li_rstation_17_2026_11_16](nta02_abc_budget_bound_superseded_by_li_rstation_17_2026_11_16.md) | verified | Swarm brief NTA02 abc exceptional set 3(1+lambda)/10 new? No: Li rStation paper 17 (9 Nov) runs BBLT program at budget lambda with 2^18 index sets, smaller values; ours correct but superseded, do not ... |
+| [paper_audit_fable_limit_spent_run_reader_on_opus_2026_11_16](paper_audit_fable_limit_spent_run_reader_on_opus_2026_11_16.md) | verified | Every paper_audit run ends rc 1 with no report in about 20 s? The Fable weekly limit is spent (session.json: 429 usage_limit_reached, resets 22 Nov 06:00 local time). Swap the reader model without ... |
+| [prompt_class_ledger_13_15_nov_classified_and_replace_retry_2026_11_16](prompt_class_ledger_13_15_nov_classified_and_replace_retry_2026_11_16.md) | verified | Prompt-class ledger was dark 13-16 Nov (0 of ~6,000 rows on 14-15 Nov). Classified with prompt_class_tool (116 unique texts read by hand, the rest mechanical); apply_prompt_classes.py now retries ... |
+| [s41f05_audit_svgd_last_iterate_conjecture_false_2026_11_16](s41f05_audit_svgd_last_iterate_conjecture_false_2026_11_16.md) | provisional | Frontier T310 (SVGD finite-particle rate): Codex auditor disproved the worker's proposed expected last-iterate W2 conjecture with a fixed 1-d counterexample |
+| [t375_fixed_n_large_risk_events_by_consistent_extra_samples_2026_11_16](t375_fixed_n_large_risk_events_by_consistent_extra_samples_2026_11_16.md) | verified | T375 min-cost ReLU interpolant d=2: positive-probability arbitrarily-large-risk events at every fixed n>=4 via the consistent-extra-samples lemma |
+| [t375_n4_expected_risk_infinite_close_pairs_2026_11_16](t375_n4_expected_risk_infinite_close_pairs_2026_11_16.md) | provisional | T375 min-cost (OWSS R-norm) interpolant in d=2 at n=4: a.s. unique, one ReLU plus affine by duality; close pairs with different labels give P(risk>M)>=c/M so E[risk]=infinite. Tent (3 sites within r) ... |
