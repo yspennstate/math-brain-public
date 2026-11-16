@@ -1,0 +1,508 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Low-intensity Voronoi limits of correlated point processes in the hyperbolic plane},
+pdfauthor={Yitzchak Shmalo}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Lip}{\mathrm{Lip}}
+\newcommand{\Vor}{\mathrm{Vor}}
+\newcommand{\area}{A}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Low-intensity Voronoi limits of correlated point processes]{Low-intensity Voronoi limits of correlated point
+processes in the hyperbolic plane}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60G55, 60D05, 60G57, 51M10}
+\keywords{ideal Poisson--Voronoi tessellation, hyperbolic plane, low-intensity limit, correlation functions,
+determinantal point process, $\alpha$-hyperbolic ensemble}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+The Voronoi tessellations of a Poisson process of intensity $\lambda$ on the hyperbolic plane converge, as
+$\lambda\to0$, to the ideal Poisson--Voronoi tessellation. D'Achille and Khezeli asked whether other point processes
+can produce a different random ideal Voronoi diagram in the same limit, and named the $\alpha$-hyperbolic ensemble, as
+$\alpha\to0$, as a natural candidate. We show that this candidate gives the ideal Poisson--Voronoi tessellation again.
+More generally, the limit is the ideal Poisson--Voronoi tessellation whenever the $k$-point correlation functions are
+bounded by $C^k\lambda^k$ and the normalized correlations $\rho_k/\lambda^k$ tend to one uniformly on configurations whose points are at mutual
+distance at least $2\log(1/\lambda)-L$, for every fixed $k$ and $L$. Among families satisfying the bound, a different limit
+therefore requires, for some $k$, a relative discrepancy of the $k$-point correlation that does not vanish at distances
+$2\log(1/\lambda)+O(1)$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $X(\lambda)$ be a Poisson process of intensity $\lambda$ on the hyperbolic plane $\HH^2$. As $\lambda\to0$ the
+nuclei of its Voronoi tessellation leave every bounded set, yet the tessellation itself converges. Bhupatiraju~\cite{Bhu19}
+proved that the low-intensity limit of Bernoulli--Voronoi measures, with ties broken by labels, on the $d$-regular tree
+with $d\ge3$ exists~\cite[Theorem~2.1]{Bhu19}
+and studied low-intensity Poisson--Voronoi boundaries in the hyperbolic plane~\cite[Chapter~3]{Bhu19}. Budzinski, Curien
+and Petri~\cite{BCP25} studied low-intensity Poisson--Voronoi tessellations of $\HH^2$, used them to bound the
+Cheeger constant of closed hyperbolic surfaces of large genus, and conjectured that a limiting random tessellation
+exists. D'Achille, Curien, Enriquez, Lyons and \"Unel~\cite{DCE26} proved this and studied the limit, the ideal
+Poisson--Voronoi tessellation (IPVT): its cells are indexed by a Poisson process of points of the boundary at
+infinity with real delay marks, each point carrying a horofunction shifted by its delay. Fr\k{a}czyk, Mellick and
+Wilkens~\cite{FMW23} used low-intensity limits of Poisson--Voronoi tessellations of higher rank symmetric spaces to
+prove fixed price one in higher rank. D'Achille and Khezeli~\cite{DK26} gave a necessary and sufficient criterion for
+the convergence of the shifted Poisson nuclei on a proper pointed measured metric space, with convergence of the
+diagrams under a nondegeneracy condition, and showed that on graphs with counting measure satisfying their growth
+conditions Bernoulli and
+Poisson nuclei have the same subsequential diagram limits~\cite[Lemma~4.9]{DK26}.
+
+In their list of problems, D'Achille and Khezeli ask~\cite[Question~7.2]{DK26} whether a non-trivial random ideal
+Voronoi diagram, different from the IPVT, can be obtained as a low-intensity limit of the Voronoi tessellations of a
+point process other than the Poisson process. As a natural candidate in dimension two they propose the
+$\alpha$-hyperbolic ensemble, a family of point processes indexed by a parameter $\alpha>0$ studied by Bufetov,
+Garc\'{\i}a-Zelada and Lin~\cite{BGZL23}, in the limit $\alpha\to0$. This is the determinantal point process on the
+unit disc with the weighted Bergman kernel of weight $(1-|z|^2)^{\alpha-1}$. These invariant determinantal processes
+were studied by Jancovici and T\'ellez~\cite{JT98} on the hyperbolic plane; the kernel for every real $\alpha>0$ is
+in~\cite[Section~4.3.11]{HKPV09}, and for integer $\alpha$ the process is the set of singular points of a
+matrix-valued Gaussian analytic function, by the theorem of Krishnapur~\cite{Kri09}. For $\alpha=1$ it is the zero
+set of the Gaussian power series with independent standard complex coefficients, by the theorem of Peres and
+Vir\'ag~\cite{PV05}. Its intensity is $\alpha/(4\pi)$ with respect to hyperbolic area, so $\alpha\to0$ is a
+low-intensity limit.
+
+We show that the candidate gives the IPVT again. This settles the proposed candidate; whether some other point process
+gives a different limit remains open. The reason is general. Write $F(r)=2\pi(\cosh r-1)$ for the area of
+a hyperbolic disc of radius $r$, let $o$ be a fixed point, and for small $\lambda>0$ let $t=t(\lambda)$ be the radius
+with $\lambda F(t)=1$, so that $t=\log(1/\lambda)+O(1)$.
+
+\begin{theorem}\label{thm:main}
+For $0<\lambda<\lambda_0$ let $\Phi_\lambda$ be a simple point process on $\HH^2$ with correlation functions
+$\rho_k=\rho^\lambda_k$ with respect to hyperbolic area, with $\rho_1\equiv\lambda$. Assume:
+\begin{enumerate}
+\item[(A)] there is a constant $C\ge1$ with $\rho_k\le C^k\lambda^k$ for all $k$ and $\lambda$;
+\item[(B)] for every $k\ge2$, $b\in\R$ and $L>0$,
+\[
+  \sup\Bigl\{\Bigl|\frac{\rho_k(x_1,\dots,x_k)}{\lambda^k}-1\Bigr| : x_i\in B(o,t+b),\ d(x_i,x_j)\ge 2t-L
+  \text{ for }i\ne j\Bigr\}\longrightarrow0\qquad(\lambda\to0).
+\]
+\end{enumerate}
+Then, as $\lambda\to0$, the Voronoi tessellation of $\Phi_\lambda$ converges in distribution to the IPVT of $\HH^2$, and
+the shifted nuclei of $\Phi_\lambda$ converge to the same Poisson process as those of the Poisson process of intensity
+$\lambda$.
+\end{theorem}
+
+The precise meaning of the convergence is given in Section~\ref{sec:setting}. The bound (A) controls the
+configurations excluded in (B) and gives the exponential moments used in Step~2 of the proof. The theorem does not
+assume that $\Phi_\lambda$ is invariant under the
+isometries of $\HH^2$.
+
+\begin{corollary}\label{cor:ensemble}
+As $\alpha\to0$, the Voronoi tessellation of the $\alpha$-hyperbolic ensemble converges in distribution to the IPVT of
+$\HH^2$.
+\end{corollary}
+
+The nuclei that shape the cells near $o$ lie at distance $t+O(1)$ from it, and two of them are typically at distance
+$2t+O(1)$ from each other. Theorem~\ref{thm:main} therefore says that, among families satisfying (A), a different
+limit needs, for some $k$, normalized $k$-point correlations that stay away from one at that scale. In the
+$\alpha$-hyperbolic ensemble the normalized correlations approach one exponentially fast in the distance, at a rate
+that does not depend on $\lambda$. Section~\ref{sec:needs} discusses the constructions that fail and the hard-core case
+that remains open.
+
+The proof works on the space of shifted nuclei introduced in~\cite{DCE26,FMW23} with the topology of
+D'Achille and Khezeli~\cite[Section~3.1]{DK26}. We show that the shifted nuclei processes converge to the same Poisson
+limit as in the Poisson case, by the method of factorial moments; the passage from nuclei to tessellations is then
+the argument of~\cite[Proposition~3.3]{DK26}, which does not use the Poisson property of the approximating processes.
+
+\section{The setting}\label{sec:setting}
+
+We use the Poincar\'e disc $\D$ with the metric $4|dz|^2/(1-|z|^2)^2$ of curvature $-1$, hyperbolic area $\area$, and
+origin $o=0$. Balls are closed, $B(x,r)$, and
+\[
+  F(r)=\area(B(o,r))=2\pi(\cosh r-1).
+\]
+For $0<\lambda<1/F(2)$ let $t=t(\lambda)$ be the radius with $\lambda F(t)=1$, the shift of~\cite[(3.1)]{DK26}.
+Since $F(r)\ge \pi e^r/2$ for $r\ge2$, we have $t\ge2$ and
+\begin{equation}\label{eq:t}
+  \lambda e^{t}\le 2/\pi,\qquad t=\log(1/\lambda)-\log\pi+o(1)\quad(\lambda\to0).
+\end{equation}
+
+\emph{Shifted nuclei.} Let $\Lip^1$ be the set of $1$-Lipschitz functions on $\D$ and $\Lip^1_0$ the subset of those
+vanishing at $o$, with the topology of uniform convergence on compact sets; $\Lip^1_0$ is compact. A function
+$f\in\Lip^1$ is identified with the pair $(f-f(o),f(o))\in\Lip^1_0\times\R$, and $f(o)$ is called its delay. Put
+$S=\Lip^1_0\times[-\infty,\infty)$ and let $\M$ be the space of Radon measures on $S$ with the vague topology. A set is
+relatively compact in $S$ exactly when it is contained in $\Lip^1_0\times[-\infty,b]$ for some $b\in\R$. For $s\in\R$
+and $x\in\D$ let $\iota_s(x)=d(x,\cdot)-s\in\Lip^1$, with delay $d(o,x)-s$; for a locally finite set $\varphi\subset\D$
+let $\iota_s\varphi=\sum_{x\in\varphi}\delta_{\iota_s(x)}$. Since
+\begin{equation}\label{eq:preimage}
+  \iota_s^{-1}\bigl(\Lip^1_0\times[-\infty,b]\bigr)=B(o,s+b),
+\end{equation}
+with $B(o,r)=\emptyset$ for $r<0$, $\iota_s\varphi$ belongs to $\M$.
+
+\emph{Voronoi diagrams.} For a locally finite family $(f_i)$ in $\Lip^1$ with delays tending to $+\infty$ the cells are
+$C_i=\{y\in\D: f_i(y)\le f_j(y)\text{ for all }j\}$, and $\Vor((f_i))$ is the collection of the nonempty cells (for a
+general family some cells can be empty, and these are discarded), a point process on the space $\mathcal F$ of
+nonempty closed subsets of $\D$ with the Fell topology~\cite[Section~2.2]{DK26}; point measures on $\mathcal F$ carry
+the vague topology. To record which function generates which cell we also use the marked process
+$\sum_i\delta_{(f_i,C_i)}$ on $S\times\mathcal F$, over the $i$ with $C_i\ne\emptyset$, with the vague topology on the
+product. Subtracting a constant from every $f_i$ does not change the cells, so $\Vor(\iota_s\varphi)=
+\Vor(\varphi)$ for every $s$, where $\Vor(\varphi)$ is the usual Voronoi tessellation of $\varphi$.
+
+\emph{The Poisson limit.} For $\theta\in\partial\D$ let $\beta_\theta$ be the Busemann function of $\theta$ normalized by
+$\beta_\theta(o)=0$. Let $\mu$ be the image of the measure $(2\pi)^{-1}d\theta\otimes e^{s}ds$ on $\partial\D\times\R$
+under $(\theta,s)\mapsto(\beta_\theta,s)$, and let $\Pi$ be a Poisson process on $S$ with intensity $\mu$. Put
+$\mu_\lambda=\lambda\,(\iota_{t(\lambda)})_\#\area$, the intensity measure of $\iota_{t(\lambda)}X(\lambda)$. We use three
+facts.
+
+\begin{enumerate}
+\item[(F1)] $\mu_\lambda\to\mu$ in $\M$ as $\lambda\to0$, and $\mu$ is diffuse. This is the full convergence
+of~\cite[Theorem~1.2]{DK26} on $\HH^2$, see the proof of~\cite[Proposition~1.1]{DK26} and~\cite{DCE26}. As a check,
+$\mu_\lambda(\Lip^1_0\times[-\infty,b])=\lambda F(t+b)\to e^b=\mu(\Lip^1_0\times[-\infty,b])$.
+\item[(F2)] Almost surely the delays of the points of $\Pi$ are distinct and $\Vor(\Pi)$ is nondegenerate, that is,
+every cell is the closure of the set where the defining inequalities are strict. The delays are distinct because the
+image of $\mu$ on the delay coordinate is $e^s\,ds$, which has no atoms. Nondegeneracy is~\cite[Corollary~5.4]{DK26}
+together with~\cite[Lemma~5.3]{DK26}, since $\HH^2$ is a CAT(0) Riemannian manifold and $\mu$ is diffuse. The random
+diagram $\Vor(\Pi)$ is the IPVT of $\HH^2$, and $\Vor(X(\lambda))\to\Vor(\Pi)$~\cite{DCE26},~\cite[Proposition~1.1]{DK26}.
+\item[(F3)] The passage from nuclei to diagrams, Lemma~\ref{lem:transfer} below.
+\end{enumerate}
+
+\begin{lemma}\label{lem:transfer}
+Let $t_n\to\infty$ and let $\Phi_n$ be random locally finite subsets of $\D$ such that $\iota_{t_n}\Phi_n\to\Pi$ in
+distribution in $\M$. Then $\Vor(\Phi_n)\to\Vor(\Pi)$ in distribution as point processes on $\mathcal F$, and the
+marked processes $\sum_{x\in\Phi_n}\delta_{(\iota_{t_n}(x),C_x)}$ converge in distribution to
+$\sum_i\delta_{(f_i,C_i)}$ as point processes on $S\times\mathcal F$, where $(f_i)$ are the points of $\Pi$, $C_x$ and
+$C_i$ are the corresponding cells, and empty cells are discarded in both.
+\end{lemma}
+
+\begin{proof}
+This is part~(i) of~\cite[Proposition~3.3]{DK26} with $X(\lambda_n)$ replaced by $\Phi_n$. That proof applies
+Skorokhod's representation theorem to the convergence of the shifted nuclei processes in $\M$ and then argues on a
+fixed outcome: for each $N$ and all large $n$ the first $N$ points of $\Pi$, ordered by delay, are limits of points of
+$\iota_{t_n}\Phi_n$, and a slight modification of~\cite[Theorem~2.3]{DCE26} gives the convergence of the diagrams on the
+event of (F2). The Poisson property of $X(\lambda_n)$ is used only to obtain the convergence in $\M$, through part~(iv)
+of~\cite[Proposition~3.2]{DK26}, and here that convergence is the hypothesis. The limit is the same process $\Pi$, for
+which (F2) holds.
+
+Only finitely many functions matter on a bounded set, and this makes the argument a finite one. Let $f_1$ have the
+smallest delay $s_1$ of a family. Since the functions are $1$-Lipschitz, on $B(o,r)$ every $f_i$ with delay $s_i>s_1+2r$
+satisfies $f_i\ge s_i-r>s_1+r\ge f_1$, so its cell does not meet $B(o,r)$. On the coupled outcome choose $c>s_1+2r+1$
+with no point of $\Pi$ at delay $c$. The sets $\Lip^1_0\times[-\infty,c]$ are compact in $S$, so for large $n$ the
+points of $\iota_{t_n}\Phi_n$ with delay at most $c$ are finitely many, as many as those of $\Pi$, and converge to them
+one by one; in particular the smallest delays converge, and no point of small delay can appear unseen. Only these
+points determine the cells on $B(o,r)$. Strict inequalities between finitely many of them hold with a positive margin
+on compact subsets of the set where they are strict and survive small perturbations, and weak inequalities pass to the limit; by nondegeneracy this gives
+the local Fell convergence of the cells on $B(o,r)$, and the convergence of the marked processes.
+The marks used in~\cite{DK26} to break ties between equal delays play no role, since the delays of $\Pi$ are distinct.
+\end{proof}
+
+\emph{Correlation functions.} A simple point process $\Phi$ on $\D$ has correlation functions $\rho_k$ with respect to
+$\area$ if for all disjoint Borel sets $P_1,\dots,P_m$ and integers $k_1,\dots,k_m\ge0$ with $K=k_1+\dots+k_m$,
+\begin{equation}\label{eq:corr}
+  \E\prod_{i=1}^m\bigl(\Phi(P_i)\bigr)_{k_i}=\int_{P_1^{k_1}\times\dots\times P_m^{k_m}}\rho_K\,d\area^{K},
+\end{equation}
+where $(n)_k=n(n-1)\cdots(n-k+1)$, with $(n)_0=1$ and $\rho_0=1$; see~\cite[Section~1.2]{HKPV09}. The Poisson process of intensity $\lambda$ has
+$\rho_k\equiv\lambda^k$.
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:main}
+
+In the notation of Section~\ref{sec:setting}, we prove that $\iota_{t(\lambda)}\Phi_\lambda\to\Pi$ in distribution in
+$\M$ as $\lambda\to0$. Lemma~\ref{lem:transfer} then gives the convergence of $\Vor(\Phi_\lambda)$ to the IPVT, jointly
+with the shifted nuclei. Condition (B) refers to the origin; for invariant processes the choice of the origin does not
+matter. The first step is a bound on the pairs of points of a large ball that are closer than $2t-L$.
+
+\begin{lemma}\label{lem:pairs}
+For $T\ge1$ and $R>0$,
+\[
+  m(T,R):=\area\otimes\area\bigl\{(x,y)\in B(o,T)^2: d(x,y)<R\bigr\}\le 2F(1)F(T)+12\pi^2e^{T+R/2}.
+\]
+\end{lemma}
+
+\begin{proof}
+The pairs in which one point lies in $B(o,1)$ have measure at most $2F(1)F(T)$. Write the other points in polar
+coordinates, $x=(r,\omega)$ and $y=(r',\omega')$ with $1\le r,r'\le T$, where the area element is
+$\sinh r\,dr\,d\omega$, and
+let $\psi\in(-\pi,\pi]$ be the angle between them. By the hyperbolic law of cosines,
+\[
+  e^{d(x,y)}\ge\cosh d(x,y)=\cosh r\cosh r'-\sinh r\sinh r'\cos\psi\ge 2\sinh r\sinh r'\sin^2(\psi/2).
+\]
+For $r\ge1$ we have $\sinh r\ge e^r/3$, and $|\sin(\psi/2)|\ge|\psi|/\pi$, so $d(x,y)<R$ forces
+$\psi^2<\tfrac92\pi^2e^{R-r-r'}$ and hence $|\psi|<3\pi e^{(R-r-r')/2}$. For fixed $r,r',\omega$ the set of such $\omega'$
+has measure at most $6\pi e^{(R-r-r')/2}$. Using $\sinh r\le e^r/2$,
+\[
+  \int_1^T\!\!\int_1^T 2\pi\cdot6\pi e^{(R-r-r')/2}\sinh r\sinh r'\,dr\,dr'\le 3\pi^2e^{R/2}\Bigl(\int_0^Te^{r/2}dr\Bigr)^2
+  \le12\pi^2e^{T+R/2}.\qedhere
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Write $\xi_\lambda=\iota_{t}\Phi_\lambda$. Fix $b\in\R$ and disjoint Borel sets $A_1,\dots,A_m\subset
+\Lip^1_0\times[-\infty,b]$ with $\mu(\partial A_i)=0$. Let $P_i=\iota_t^{-1}(A_i)$; by~\eqref{eq:preimage} these are
+disjoint subsets of $B=B(o,t+b)$, and $\xi_\lambda(A_i)=\Phi_\lambda(P_i)$, $\mu_\lambda(A_i)=\lambda\area(P_i)$.
+
+\emph{Step 1: factorial moments.} Fix $k_1,\dots,k_m$ with $K=\sum k_i\ge1$, let $Q=P_1^{k_1}\times\dots\times
+P_m^{k_m}\subset B^K$, and for $L>0$ let $G_L\subset Q$ be the set of $K$-tuples whose points are pairwise at distance at
+least $2t-L$. By~\eqref{eq:corr},
+\[
+  \Delta_\lambda:=\E\prod_i\bigl(\xi_\lambda(A_i)\bigr)_{k_i}-\prod_i\mu_\lambda(A_i)^{k_i}=\int_Q(\rho_K-\lambda^K)\,d\area^K.
+\]
+For $K=1$ this vanishes because $\rho_1\equiv\lambda$. For $K\ge2$ we split $Q$ into $G_L$ and $Q\setminus G_L$. On $G_L$,
+condition (B) gives
+\[
+  \Bigl|\int_{G_L}(\rho_K-\lambda^K)\Bigr|\le\varepsilon_\lambda\,(\lambda F(t+b))^K,\qquad\varepsilon_\lambda\to0.
+\]
+A tuple of $Q\setminus G_L$ has a pair of coordinates at distance less than $2t-L$, so by Lemma~\ref{lem:pairs},
+\begin{align*}
+  \area^K(Q\setminus G_L)&\le\binom K2F(t+b)^{K-2}\,m(t+b,2t-L)\\
+  &\le\binom K2F(t+b)^{K-2}\bigl(2F(1)F(t+b)+12\pi^2e^{2t+b-L/2}\bigr).
+\end{align*}
+By (A) the integrand is at most $(C^K+1)\lambda^K$ in absolute value there. With $\lambda F(t+b)=F(t+b)/F(t)\to e^b$,
+$\lambda e^t\le2/\pi$ from~\eqref{eq:t}, and $\lambda F(1)\to0$, we get
+\[
+  \limsup_{\lambda\to0}|\Delta_\lambda|\le(C^K+1)\binom K2e^{(K-2)b}\cdot48\,e^{b-L/2}.
+\]
+Since $L$ is arbitrary, $\Delta_\lambda\to0$. By (F1), $\mu_\lambda(A_i)\to\mu(A_i)$, so
+\begin{equation}\label{eq:fm}
+  \E\prod_i\bigl(\xi_\lambda(A_i)\bigr)_{k_i}\longrightarrow\prod_i\mu(A_i)^{k_i}.
+\end{equation}
+
+\emph{Step 2: the counts converge.} By~\eqref{eq:corr} and (A), the left side of~\eqref{eq:fm} is at most
+$(C\lambda F(t+b))^K\le c^K$ with $c=Ce^{b+1}$, for all small $\lambda$. For $N=(N_1,\dots,N_m)$ with values in
+$\{0,1,\dots\}^m$ and $z\in[0,1]^m$,
+\[
+  \E\prod_iz_i^{N_i}=\sum_{k_1,\dots,k_m\ge0}\E\prod_i(N_i)_{k_i}\prod_i\frac{(z_i-1)^{k_i}}{k_i!},
+\]
+which follows from $z^n=\sum_k(n)_k(z-1)^k/k!$ by Fubini's theorem, because
+\[
+  \sum_{k_1,\dots,k_m\ge0}\E\prod_i(N_i)_{k_i}\prod_i\frac1{k_i!}=\E\,2^{N_1+\dots+N_m},
+\]
+which is finite when the factorial moments are bounded by $c^K$. Apply this to $N=(\xi_\lambda(A_1),\dots,\xi_\lambda(A_m))$. The terms are bounded by $c^K/\prod_ik_i!$, which is
+summable, so by~\eqref{eq:fm} and dominated convergence the generating functions converge on $[0,1]^m$ to
+$\prod_i\exp(\mu(A_i)(z_i-1))$. Hence $(\xi_\lambda(A_1),\dots,\xi_\lambda(A_m))$ converges in distribution to
+independent Poisson variables with means $\mu(A_i)$, which is the law of $(\Pi(A_1),\dots,\Pi(A_m))$.
+
+\emph{Step 3: convergence in $\M$.} Let $\mathcal B$ be the class of relatively compact Borel sets $A\subset S$ with
+$\mu(\partial A)=0$, equivalently $\Pi(\partial A)=0$ almost surely. Any finitely many sets of $\mathcal B$ are finite
+unions of disjoint sets of $\mathcal B$ (the atoms of the algebra they generate, whose boundaries lie in the union of
+the boundaries), so Step 2 gives the joint convergence in distribution of $(\xi_\lambda(A_1),\dots,\xi_\lambda(A_m))$ for
+all $A_1,\dots,A_m\in\mathcal B$. Since $S$ is locally compact, second countable and Hausdorff, this implies
+$\xi_\lambda\to\Pi$ in distribution in $\M$~\cite[Theorem~4.11]{Kal17}. The convergence of the diagrams follows from
+Lemma~\ref{lem:transfer}, applied along any sequence $\lambda_n\to0$.
+\end{proof}
+
+\begin{remark}
+Because the sets $\Lip^1_0\times[-\infty,b]$ are compact in $S$, the convergence includes the points of small delay:
+in the limit no nucleus comes close to $o$. This is the part of the topology of~\cite[Section~3.1]{DK26} that is
+vague at $+\infty$ and weak at $-\infty$, and it is what Lemma~\ref{lem:transfer} needs.
+\end{remark}
+
+\section{\texorpdfstring{The $\alpha$-hyperbolic ensemble}{The alpha-hyperbolic ensemble}}\label{sec:ensemble}
+
+Let $m$ be Lebesgue measure on $\D$ and, for $\alpha>0$, $q_\alpha(z)=\frac\alpha\pi(1-|z|^2)^{\alpha-1}$. The
+orthogonal projection of $L^2(\D,q_\alpha\,dm)$ onto its subspace of holomorphic functions has kernel
+$(1-z\bar w)^{-\alpha-1}$~\cite[Section~4.3.11]{HKPV09}, and the $\alpha$-hyperbolic ensemble $\mathcal H_\alpha$ is the
+corresponding determinantal point process on $\D$~\cite[Definition~1.2]{BGZL23}. Written with respect to $m$, its
+kernel is
+\[
+  K_\alpha(z,w)=\sqrt{q_\alpha(z)}\,\frac{1}{(1-z\bar w)^{\alpha+1}}\,\sqrt{q_\alpha(w)}
+  =\frac\alpha\pi\,\frac{(1-|z|^2)^{(\alpha-1)/2}(1-|w|^2)^{(\alpha-1)/2}}{(1-z\bar w)^{\alpha+1}},
+\]
+which is Hermitian and positive semidefinite, and the process is simple~\cite[Chapter~4]{HKPV09}. We prove Corollary~\ref{cor:ensemble} in the stronger form
+$\iota_{t(\alpha/4\pi)}\mathcal H_\alpha\to\Pi$ in distribution in $\M$.
+
+\begin{proof}[Proof of Corollary~\ref{cor:ensemble}]
+With respect to hyperbolic area $d\area=4\,dm/(1-|z|^2)^2$ the kernel is
+$K^\area_\alpha(z,w)=\tfrac14(1-|z|^2)(1-|w|^2)K_\alpha(z,w)$, and its diagonal is the constant $\lambda=\alpha/(4\pi)$.
+The correlation functions are $\rho_k(x_1,\dots,x_k)=\lambda^k\det M$ with $M_{ij}=K^\area_\alpha(x_i,x_j)/\lambda$. The
+matrix $M$ is positive semidefinite with unit diagonal, and from
+$|1-z\bar w|^2-|z-w|^2=(1-|z|^2)(1-|w|^2)$ and $|z-w|/|1-z\bar w|=\tanh(d(z,w)/2)$,
+\[
+  |M_{ij}|^2=\Bigl(\frac{(1-|x_i|^2)(1-|x_j|^2)}{|1-x_i\bar x_j|^2}\Bigr)^{\alpha+1}
+  =\operatorname{sech}^{2(\alpha+1)}\bigl(d(x_i,x_j)/2\bigr).
+\]
+By Hadamard's inequality~\cite[Theorem~7.8.1, p.~505]{HJ13}, $\det M\le\prod_iM_{ii}=1$, so (A) holds with $C=1$. Every
+permutation other than the identity moves at least two indices, and $|M_{ij}|\le1$, so
+\[
+  |\det M-1|\le\sum_{\sigma\ne\mathrm{id}}\prod_i|M_{i\sigma(i)}|\le k!\max_{i\ne j}|M_{ij}|^2.
+\]
+If $d(x_i,x_j)\ge2t-L$, then $|M_{ij}|\le\operatorname{sech}^{\alpha+1}(t-L/2)\le2^{\alpha+1}e^{-(\alpha+1)(t-L/2)}$, which
+tends to $0$ as $\lambda\to0$, uniformly in the configuration. This is (B). Since $\lambda\to0$ exactly when $\alpha\to0$,
+Theorem~\ref{thm:main} applies.
+\end{proof}
+
+\begin{remark}
+Bufetov, Garc\'{\i}a-Zelada and Lin study $\mathcal H_\alpha$ for fixed $\alpha$ on discs of radius tending to one; the
+limit $\alpha\to0$ considered here is a different regime. The process is invariant under the automorphisms of $\D$,
+since $|M_{ij}|$ depends only on the distances and an automorphism changes $K^\area_\alpha$ by a factor
+$c(z)\bar c(w)$ with $|c|=1$, which leaves determinants unchanged. The theorem does not need this.
+\end{remark}
+
+\section{What a different limit requires}\label{sec:needs}
+
+Let $x,y\in\D$ lie at distances $t+s$ and $t+s'$ from $o$, at angle $\psi$. As $t\to\infty$ with $s,s'\in\R$ and
+$\psi\not\equiv0\pmod{2\pi}$ fixed, the law of cosines gives
+\begin{equation}\label{eq:limitdist}
+  d(x,y)=2t+s+s'+2\log|\sin(\psi/2)|+o(1).
+\end{equation}
+The expansion is not uniform as $\psi\to0$; the proof does not need it there, since Lemma~\ref{lem:pairs} handles close
+pairs. By~\eqref{eq:t}, $2t=2\log(1/\lambda)+O(1)$. The nuclei that matter for the cells meeting a fixed ball have delays
+$s=O(1)$, so their mutual distances are $2\log(1/\lambda)+O(1)$. Theorem~\ref{thm:main} therefore reads as follows.
+Suppose a family satisfies (A) and its Voronoi tessellations have a limit other than the IPVT, or no limit. Then for
+some $k$, $b$ and $L$, along a sequence $\lambda_n\to0$, the supremum in (B) stays bounded away from zero: the relative
+error of the $k$-point correlation does not vanish on configurations in $B(o,t+b)$ with mutual distances at least
+$2t-L$. This need not be the two-point correlation. Under (A), the IPVT is the limit whenever, for every $k$,
+$|\rho_k/\lambda^k-1|\le h_k(\min_{i\ne j}d(x_i,x_j))$ with $h_k$ independent of $\lambda$ and $h_k(r)\to0$ as
+$r\to\infty$, and also whenever the relative errors tend to zero uniformly beyond distance $(2-\delta)\log(1/\lambda)$
+for some $\delta>0$, since $2t-L$ eventually exceeds that distance. A nonincreasing envelope $h_{k,\lambda}$ that depends on
+$\lambda$ also suffices if $h_{k,\lambda}(2t-L)\to0$ for every fixed $L>0$. Decay of absolute errors, or relative decay for each fixed intensity
+without uniform control at this scale, does not by itself imply (B).
+
+The condition is necessary for a different limit, not sufficient, as the simplest example shows.
+
+\begin{example}[Mixed Poisson processes]
+Let $W$ be a random variable with values in $[w_0,w_1]$, $0<w_0<w_1$, with $\E W=1$, that is not constant, and given
+$W$ let $\Phi_\lambda$ be a Poisson process of intensity $\lambda W$. Then $\rho_k=\lambda^k\E W^k$, so (A) holds with
+$C=w_1$ and (B) fails for $k=2$, since $\E W^2>1$. Given $W=w$, the process $\iota_{t-\log w}\Phi_\lambda$ is Poisson with
+intensity measure $w\,\lambda(\iota_{t-\log w})_\#\area$, the image of $w\mu_\lambda$ under the shift of every delay by
+$\log w$, which converges to $\mu$ by (F1), since the factor $e^{-\log w}$ from translating the density $e^s$ cancels
+$w$; so $\iota_{t-\log w}\Phi_\lambda\to\Pi$ by Steps~2 and~3 of the proof of Theorem~\ref{thm:main}, applied to the
+Poisson case. Lemma~\ref{lem:transfer} gives $\Vor(\Phi_\lambda)\to\Vor(\Pi)$
+given $W=w$, for every $w$, and hence unconditionally. So the limit is the IPVT.
+\end{example}
+
+Short-range clustering does not change the limit either.
+
+\begin{example}[Poisson cluster processes]
+Take Poisson parents of intensity $\kappa\lambda$, with $\kappa>0$ fixed, and attach to them independent identically
+distributed decorations, independent of the parents, whose fixed law is isometry-covariant; each decoration is a
+nonempty finite simple configuration within a fixed distance $\Delta$ of its parent, with finite mean size $\E N$.
+The offspring then have intensity $\kappa\lambda\E N$, and $\kappa=(\E N)^{-1}$ keeps it equal to $\lambda$. An offspring at distance
+$\delta\le\Delta$ from its parent, at angle $\omega$ to the parent's outward radial direction, has limiting delay
+$s+V$ with $V=\log(\cosh\delta+\sinh\delta\cos\omega)$ by the law of cosines, so a parent with limiting coordinates
+$(\theta,s)$ has offspring at $(\theta,s+V_j)$ with $|V_j|\le\Delta$, and the law of $V=\min_jV_j$ does not depend on
+$(\theta,s)$. Only parents with $s\le b+\Delta$ have offspring of delay at most $b$, so the limit of the shifted
+nuclei is a locally finite Poisson cluster process. Offspring of one parent share the direction $\theta$, so their limiting functions differ by constants
+and only the offspring of least delay has a nonempty cell (ties have probability zero); the other offspring are
+eventually dominated on every fixed ball, so the finite comparison in the proof of Lemma~\ref{lem:transfer} carries the
+diagram limit from the representatives to all the offspring. By the marked mapping theorem
+these representatives form a Poisson process of intensity $a\,e^s\,ds\,d\theta/(2\pi)$, where
+\[
+  \kappa\int e^{s}\,\Prob\{s+V\in dv\}\,ds=\kappa\,\E[e^{-V}]\,e^{v}\,dv,\qquad a=\kappa\,\E[e^{-V}]\in(0,\infty),
+\]
+and shifting every delay by $\log a$ gives intensity $\mu$ and preserves every cell, so the diagram is again the IPVT.
+\end{example}
+
+The natural ways of producing long-range dependence lose either the dependence or the intensity at the scale
+$2t$. For instance, the Mat\'ern hard-core process of type II with exclusion distance $R$, obtained from a Poisson process
+of any intensity $\nu$ with independent uniform marks by keeping the points with no point of smaller mark within
+distance $R$, has intensity $\nu\int_0^1e^{-\nu F(R)u}\,du=(1-e^{-\nu F(R)})/F(R)\le1/F(R)$. For $R=2t-L$ this is at most
+of order $\lambda^2e^{L}$, far below $\lambda$. The
+following case is not covered by the theorem.
+
+\begin{question}\label{q:hardcore}
+By~\eqref{eq:limitdist}, an exclusion distance $2t-L$ becomes, in the limit coordinates $(\theta,s)\in\partial\D\times\R$,
+the condition
+\[
+  s_i+s_j+2\log|\sin((\theta_i-\theta_j)/2)|\ge-L\qquad(i\ne j)
+\]
+on every pair of nuclei, which says that the horoballs $\{x:\beta_{\theta_i}(x)+s_i\le-L/2\}$, the limits of the
+balls of radius $t-L/2$ about the original nuclei, have pairwise disjoint interiors. Is there a family of isometry-invariant point processes of intensity of
+order $\lambda$ on $\HH^2$, with exclusion distance $2t-L$, whose shifted nuclei converge to a hard-core process on
+$\partial\D\times\R$ with this constraint, and is the Voronoi diagram of such a limit different from the IPVT?
+\end{question}
+
+Under $\Pi$ the expected number of pairs of points with delays at most $b$ that violate the constraint is finite, by
+the same computation as in the proof of Lemma~\ref{lem:pairs}, and it is positive. A hard-core limit of this kind
+therefore differs from $\Pi$ in law on every window of delays $[-\infty,b]$; whether its Voronoi diagram differs from the
+IPVT is the content of Question~\ref{q:hardcore}.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation program (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Data availability}
+No data were generated or analysed for this paper. The \LaTeX{} source of this version is available at\\
+\url{https://github.com/yspennstate/hyperbolic-voronoi-correlated-nuclei/tree/v1.1.1}.
+
+The paper is part of the Math Brain project, whose public repository is given in~\cite{MathBrainRepo}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Claude agents (Anthropic) proved Theorem~\ref{thm:main}, Lemma~\ref{lem:pairs} and Corollary~\ref{cor:ensemble} and
+prepared the manuscript; Codex agents (OpenAI) refereed the proofs. The question and the candidate process are due to
+Matteo D'Achille and Ali Khezeli~\cite{DK26}, whose framework is used throughout. The ideal Poisson--Voronoi
+tessellation of $\HH^2$ was conjectured by Thomas Budzinski, Nicolas Curien and Bram Petri~\cite{BCP25} and constructed
+by Matteo D'Achille, Nicolas Curien, Nathana\"el Enriquez, Russell Lyons and Meltem \"Unel~\cite{DCE26}; Sandeep
+Bhupatiraju~\cite{Bhu19} studied the low-intensity limit earlier on regular trees and in the hyperbolic plane. The
+$\alpha$-hyperbolic ensemble is the one studied by Alexander Bufetov, David Garc\'{\i}a-Zelada and Zhaofeng
+Lin~\cite{BGZL23}; these determinantal processes were studied by Jancovici and T\'ellez~\cite{JT98} and, for integer
+$\alpha$, through matrix Gaussian analytic functions, by Manjunath Krishnapur~\cite{Kri09}. New here are the correlation
+criterion of Theorem~\ref{thm:main} and its application in Corollary~\ref{cor:ensemble}. The author directed the work
+and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\begin{thebibliography}{99}
+\bibitem{BGZL23} A.~I.~Bufetov, D.~Garc\'{\i}a-Zelada and Z.~Lin, \emph{Fluctuations of the process of moduli for the
+Ginibre and hyperbolic ensembles}, J. Math. Phys. Anal. Geom. \textbf{19} (2023), no.~1, 74--106,
+\doi{10.15407/mag19.01.074}, \arxiv{2202.11687}.
+\bibitem{Bhu19} S.~Bhupatiraju, \emph{The low-intensity limit of Bernoulli--Voronoi and Poisson--Voronoi measures},
+Ph.D. thesis, Indiana University, Bloomington, 2019,
+\url{https://scholarworks.iu.edu/dspace/items/0af0462b-d7ff-4ef4-98b1-7f93bb59fe32}.
+\bibitem{BCP25} T.~Budzinski, N.~Curien and B.~Petri, \emph{On Cheeger constants of hyperbolic surfaces}, Invent.
+Math. \textbf{242} (2025), no.~2, 511--530, \doi{10.1007/s00222-025-01361-w}, \arxiv{2207.00469}.
+\bibitem{DCE26} M.~D'Achille, N.~Curien, N.~Enriquez, R.~Lyons and M.~\"Unel, \emph{Ideal Poisson--Voronoi
+tessellations on hyperbolic spaces}, Ann. Probab. \textbf{54} (2026), no.~2, 846--891, \doi{10.1214/25-AOP1781},
+\arxiv{2303.16831}.
+\bibitem{DK26} M.~D'Achille and A.~Khezeli, \emph{Convergence towards ideal Poisson--Voronoi tessellations with a focus
+on Diestel--Leader graphs}, preprint (2026), \arxiv{2606.30517v2}.
+\bibitem{FMW23} M.~Fr\k{a}czyk, S.~Mellick and A.~Wilkens, \emph{Poisson--Voronoi tessellations and fixed price in higher
+rank}, Ann. of Math., to appear; preprint (2023), \arxiv{2307.01194}.
+\bibitem{HJ13} R.~A.~Horn and C.~R.~Johnson, \emph{Matrix Analysis}, 2nd ed., Cambridge University Press, Cambridge,
+2013, \doi{10.1017/CBO9781139020411}.
+\bibitem{HKPV09} J.~B.~Hough, M.~Krishnapur, Y.~Peres and B.~Vir\'ag, \emph{Zeros of Gaussian Analytic Functions and
+Determinantal Point Processes}, University Lecture Series~51, American Mathematical Society, Providence, RI, 2009,
+\doi{10.1090/ulect/051}.
+\bibitem{JT98} B.~Jancovici and G.~T\'ellez, \emph{Two-dimensional Coulomb systems on a surface of constant negative
+curvature}, J. Statist. Phys. \textbf{91} (1998), no.~5--6, 953--977, \doi{10.1023/A:1023079916489}.
+\bibitem{Kri09} M.~Krishnapur, \emph{From random matrices to random analytic functions}, Ann. Probab. \textbf{37}
+(2009), no.~1, 314--346, \doi{10.1214/08-AOP404}, \arxiv{0711.1378}.
+\bibitem{Kal17} O.~Kallenberg, \emph{Random Measures, Theory and Applications}, Probability Theory and Stochastic
+Modelling~77, Springer, Cham, 2017, \doi{10.1007/978-3-319-41598-7}.
+\bibitem{PV05} Y.~Peres and B.~Vir\'ag, \emph{Zeros of the i.i.d.\ Gaussian power series: a conformally invariant
+determinantal process}, Acta Math. \textbf{194} (2005), no.~1, 1--35, \doi{10.1007/BF02392515}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain}, public software repository, snapshot of 14 November 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+manuscript dated 26 October 2026, Zenodo release 12 November 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24},
+\doi{10.5281/zenodo.24150837}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, snapshot of 13 November 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}

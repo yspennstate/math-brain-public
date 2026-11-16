@@ -1,0 +1,702 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\definecolor{linkblue}{RGB}{22,68,105}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={First-order coverage asymptotics for the inertial Boolean model},
+  pdfauthor={Yitzchak Shmalo},
+  pdfsubject={Mobile Boolean model, coverage time}}
+\urlstyle{same}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{1.5em}
+\setlist[enumerate]{itemsep=0.35em,topsep=0.45em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Leb}{\operatorname{Leb}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Coverage in the inertial Boolean model}
+\fancyhead[R]{\small 16 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\title{\vspace{-1.4em}\textbf{First-order coverage asymptotics\\for the inertial Boolean model}}
+\author{Yitzchak Shmalo\\[0.4em]
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem\\
+\small Givat Ram, Jerusalem, Israel}
+\date{16 November 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+
+\begin{abstract}
+Points of a Poisson process of intensity $\lambda$ in $\R^d$ move along
+straight lines with independent velocities distributed as $V$, and each
+carries a closed ball of radius $r$. Konstantopoulos asked for the asymptotics
+of the first time $C(LK)$ at which the swept region contains the dilated
+compact set $LK$; the Brownian case is due to Peres, Sinclair, Sousi and
+Stauffer. Put $a=\lambda\omega_{d-1}r^{d-1}\E\abs{V}$, with $\omega_{d-1}$
+the volume of the unit ball of $\R^{d-1}$. If $d\ge2$, $0<\E\abs V<\infty$
+and $K$ has nonempty interior, then $C(LK)/\log L\to d/a$ almost surely and
+in $L^1$; for $K$ of Minkowski dimension $\alpha>1$ the limit is $\alpha/a$,
+in probability and in $L^1$. Under the tail condition
+$(\log h)\,\E[\abs{V}\ind_{\abs{V}>h}]\to0$ this holds for every $\alpha$ and
+every $d\ge1$. In dimension one the condition cannot be dropped: for one
+speed law with finite mean, $C([0,L])/\log\log L$ converges in law to an
+exponential variable.
+\end{abstract}
+
+\noindent\textit{Mathematics Subject Classification (2020):} 60D05, 60G55, 60K35.\\
+\textit{Keywords:} coverage time, dynamic Boolean model, mobile geometric graphs, Poisson point process, stochastic geometry.
+
+\section{Introduction}\label{sec:intro}
+
+The dynamic Boolean model of van den Berg, Meester and White~\cite{BMW97}
+places a ball around each point of a Poisson process and lets the points move.
+Konstantopoulos~\cite{Kon14} surveyed detection (the first time some ball
+reaches a given set), coverage and percolation for such mobile Boolean models,
+with two kinds of motion in mind: Brownian, and inertial, in which every point
+moves at constant velocity. For the Brownian model with intensity $\lambda$
+and radius $r$, Peres, Sinclair, Sousi and Stauffer~\cite[Theorem~1.4]{PSSS13}
+showed that the time $T_{\mathrm{cov}}(Q_R)$ to cover a cube $Q_R$ of side $R$
+satisfies, as $R\to\infty$,
+\[
+\E\,T_{\mathrm{cov}}(Q_R)\sim
+\begin{cases}
+\dfrac{\pi}{8\lambda^2}(\log R)^2, & d=1,\\[1.2ex]
+\dfrac{1}{\lambda\pi}\log R\,\log\log R, & d=2,\\[1.2ex]
+\dfrac{d\log R}{\lambda\,c(d)\,r^{d-2}}, & d\ge3,
+\end{cases}
+\]
+where $c(d)r^{d-2}t$ is the leading term of the expected volume of the Wiener
+sausage of radius $r$ up to time $t$, and that
+$T_{\mathrm{cov}}(Q_R)/\E\,T_{\mathrm{cov}}(Q_R)\to1$ in probability; they
+record the question as one proposed by Konstantopoulos. They also treat line
+segments and fractal targets~\cite[Theorem~4.2]{PSSS13}. Open problem~1
+of~\cite{Kon14} asks for the
+corresponding asymptotics in the inertial case. Gracar, Jahnel, L\"uchtrath and
+Vu~\cite{GJLV26}, working on dynamic Boolean models driven by stable
+processes, name linear motion among the
+mobility schemes that may behave differently. We give the first-order
+behaviour of the inertial coverage time.
+
+\subsection{Model}
+Let $\mu$ be a probability law on $\R^d$, let $\lambda>0$ and $r>0$, and let
+$\Pi$ be a Poisson process on $\R^d\times\R^d$ with intensity
+$\lambda\dd x\,\mu(\dd v)$. A point $(x,v)\in\Pi$ is a particle that starts at
+$x$ and is at $x+\tau v$ at time $\tau\ge0$. Write $V$ for a random vector with law
+$\mu$, $m=\E\abs{V}$, $B$ for the closed unit ball and $\omega_j$ for the
+volume of the unit ball of $\R^j$, with $\omega_0=1$. The region swept by
+time $t$ is
+\[
+W(t)=\bigcup_{(x,v)\in\Pi}\bigl(x+[0,t]v+rB\bigr),
+\]
+and for a compact set $A$ the coverage time is
+$C(A)=\inf\{t\ge0:A\subset W(t)\}$. Coverage here is cumulative: a point of
+$A$ counts as covered once some ball has passed over it, which is the
+convention of~\cite{Kon14} and~\cite{PSSS13}. We write
+\[
+a=\lambda\,\omega_{d-1}\,r^{d-1}\,m,\qquad
+a_\rho=\lambda\,\omega_{d-1}\,\rho^{d-1}\,m\quad(0<\rho\le r).
+\]
+For a nonempty compact $K$, $N(K,\eta)$ is the least number of closed balls of
+radius $\eta$ that cover $K$, and $K$ has Minkowski dimension $\alpha$ when
+$\log N(K,\eta)/\log(1/\eta)\to\alpha$ as $\eta\downarrow0$. A compact set with
+nonempty interior has Minkowski dimension $d$. Constants $c,c_d,c_{d,K}$ are
+positive, depend only on the parameters named, and may change from line to
+line.
+
+\subsection{Results}
+The basic quantity is the point law, the probability that a fixed point is
+still uncovered at time $t$. When $0<m<\infty$ it equals
+$\exp(-\lambda\omega_dr^d-at)$ (\cref{lem:point}). A set $LK$ with $K$ of
+Minkowski dimension $\alpha$ contains about $L^\alpha$ points at mutual
+distances of order one, and if these were independent the coverage time would
+be close to $(\alpha/a)\log L$. They are not independent: by time $t$ a
+particle of speed $\abs v$ has swept a region of length $t\abs v$, and it
+covers points that far apart. Fix $0<\delta<\varepsilon<1$, put
+$t=(1-\varepsilon)(\alpha/a)\log L$, and take points $y_1,\dots,y_k$ of $LK$
+at mutual distances at least $s=3(L^\delta+r)$, with
+$k\ge L^{(1-\delta)\alpha+o(1)}$. Call a particle slow if its speed is at most
+$L^\delta/t$ and fast otherwise. A slow particle covers at most one of the
+$y_i$ by time $t$, so with respect to the slow particles the $y_i$ are
+independent. The probability that a given point is covered by time $t$ by a
+fast particle is at most
+\[
+\gamma_L=\lambda\,\E\Bigl[\bigl(\omega_dr^d+\omega_{d-1}r^{d-1}t\abs V\bigr)
+\ind_{\{\abs V>L^\delta/t\}}\Bigr].
+\]
+Under the tail condition~\eqref{eq:T} below, $\gamma_L\to0$ and
+\[
+\Pp\bigl(C(LK)\le t\bigr)\le\exp\bigl(-L^{\alpha(\varepsilon-\delta)+o(1)}\bigr)+\gamma_L
+\]
+in every dimension and for every $\alpha>0$. If only $m<\infty$ is assumed,
+then $\gamma_L=o(\log L)$ and may be unbounded. Let $U$ be the number of $y_i$
+outside $W(t)$. Two of the $y_i$ can be covered by one particle only if the
+second lies within distance $2r$ of a line through the first, and at most
+$c_{d,K}L/s$ of the $y_i$ do (\cref{lem:tube}). Hence
+\[
+\frac{\operatorname{Var}U}{(\E U)^2}\le\frac1{\E U}
++c_{d,K}\,e^{\gamma_L}\gamma_L\,\frac{L/s}{k}
+\le L^{-\alpha(\varepsilon-\delta)+o(1)}+L^{(1-\delta)(1-\alpha)+o(1)},
+\]
+which tends to zero when $\alpha>1$, and in particular for sets with nonempty
+interior when $d\ge2$. For $\alpha=1$ the second term is
+$c_{d,K}e^{\gamma_L}\gamma_L$, which tends to zero only if $\gamma_L$ does,
+and for $d=1$ \cref{thm:heavy} gives a speed law with finite mean for which
+$C([0,L])$ is of order $\log\log L$.
+
+No condition on $\mu$ beyond $0<m<\infty$ is needed in the first theorem.
+
+\begin{theorem}\label{thm:finite-mean}
+Let $d\ge2$ and $0<m<\infty$.
+\begin{enumerate}[label=(\roman*)]
+\item If $K$ is compact with nonempty interior, then
+$C(LK)/\log L\to d/a$ almost surely and in $L^1$ as $L\to\infty$.
+\item If $K$ is compact with Minkowski dimension $\alpha>1$, then
+$C(LK)/\log L\to\alpha/a$ in probability and in $L^1$.
+\end{enumerate}
+\end{theorem}
+
+In one dimension, and for thin targets in any dimension, we assume the tail
+condition
+\begin{equation}\label{eq:T}
+(\log h)\,\E\bigl[\abs{V}\ind_{\{\abs{V}>h\}}\bigr]\to0\qquad(h\to\infty).
+\tag{T}
+\end{equation}
+It holds whenever $\E[\abs{V}\log(2+\abs{V})]<\infty$, since
+$(\log h)\E[\abs{V}\ind_{\abs{V}>h}]\le\E[\abs{V}\log(2+\abs{V})\ind_{\abs{V}>h}]$
+for $h>1$; in particular it holds for bounded speeds.
+
+\begin{theorem}\label{thm:log-moment}
+Let $d\ge1$, $0<m<\infty$, and assume~\eqref{eq:T}.
+\begin{enumerate}[label=(\roman*)]
+\item Let $K$ be a nonempty compact set with Minkowski dimension
+$\alpha\in[0,d]$. Then $C(LK)/\log L\to\alpha/a$ in probability and
+in~$L^1$.
+\item If $\E\abs{V}^{1+p}<\infty$ for some $p>0$ and $K$ has nonempty
+interior, the convergence $C(LK)/\log L\to d/a$ holds almost surely.
+\end{enumerate}
+\end{theorem}
+
+For $\alpha=0$ the statement means $C(LK)=o(\log L)$ in probability and in
+$L^1$. The $L^1$ statements give $\E C(LK)\sim(\alpha/a)\log L$ when
+$\alpha>0$. For $d\ge2$, \cref{thm:log-moment} adds to \cref{thm:finite-mean}
+the targets of dimension $\alpha\le1$; for $d=1$ it is the only one of the
+three theorems that identifies the limit of $C(LK)/\log L$. The next result shows that some condition beyond a finite mean is
+needed when $d=1$.
+
+\begin{theorem}\label{thm:heavy}
+Let $d=1$ and let the speed $V\ge0$ have survival function
+\[
+\Pp(V>u)=\frac{1}{u\log u\,(\log\log u)^2}\quad(u\ge u_0=e^e),\qquad
+\Pp(V>u)=e^{-e-1}\quad(0\le u<u_0).
+\]
+Then $\E V=1+e^{-1}$ and, for every $\lambda,r>0$,
+\[
+\frac{C([0,L])}{\log\log L}\Longrightarrow\operatorname{Exp}(\lambda)
+\qquad(L\to\infty),
+\]
+where $\operatorname{Exp}(\lambda)$ is the exponential law with rate
+$\lambda$. In particular $C([0,L])/\log L\to0$ in probability.
+\end{theorem}
+
+The law in \cref{thm:heavy} has
+$(\log h)\E[V\ind_{V>h}]\sim\log h/\log\log h\to\infty$, so it violates
+\eqref{eq:T}. Coverage is then achieved by a single particle fast enough to
+sweep the whole interval, at a time of order $\log\log L$.
+
+\subsection{Relation to earlier work}
+The question is that of~\cite{Kon14}. The Brownian answer~\cite{PSSS13} gives
+the first-order asymptotics of the expected coverage time, with concentration
+in probability;
+\cref{thm:finite-mean} gives the inertial analogue for $d\ge2$ under a finite
+mean alone, with almost-sure convergence for sets with nonempty interior. In
+$d\ge3$ the Brownian and inertial answers have the same shape, a constant
+times $\log R$; in $d=1$ and $d=2$ the Brownian time is larger by a factor
+$\log R$ and $\log\log R$, while the inertial one stays of order $\log L$
+under a finite mean when $d=2$ and under~\eqref{eq:T} when $d=1$. The upper
+bounds (\cref{sec:upper}) discretise the target by a finite set of points, as
+in~\cite{PSSS13} and in the static coverage theory of Janson~\cite{Jan86} and
+Hall~\cite{Hal88}. In the plane the point law of \cref{lem:point} is
+Theorem~1(2) of Liu, Dousse, Nain and Towsley~\cite{LDNT11}, whose area
+coefficient $\pi r^2+2rt\abs v$ is the case $d=2$ of the formula. The lower
+bounds are new: \cref{thm:log-moment} rests on the estimate for $\gamma_L$
+displayed above, and \cref{thm:finite-mean} on the variance bound, in which
+the correlation created by fast particles is controlled by the count of points
+near a line in \cref{lem:tube}. Janson's theorem~\cite{Jan86} on coverage by
+scaled copies of a random set does not apply directly, since the shape of the
+swept region changes with the time scale. A different coverage question for
+straight-line motion is studied by
+D\"oring, de Jonge and Yang~\cite{DJY25}: on a fixed time horizon, cylinders
+around random lines through the base of the unit cube in $\mathbb{R}^d$ must
+cover the cube, and they find the order of the radius needed, and its
+constant for uniform directions, as the intensity grows. There the radius
+shrinks and the horizon is fixed; here the radius is fixed and the time
+grows.
+
+The detection formula (14)--(15) of~\cite{Kon14} carries the coefficient
+$\sigma_{d-1}=d\omega_d$ in the term linear in $t$. The region swept by one
+particle up to time $t$ is a capsule, a cylinder of length $t\abs v$ and
+radius $r$ with two half-balls at its ends, and its volume carries
+$\omega_{d-1}$ (\cref{lem:point}); in the plane its area is
+$\pi r^2+2rt\abs v$.
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Section & What it proves & What it uses\\
+\midrule
+\ref{sec:basic} & point law, local finiteness & Poisson void probabilities\\
+\ref{sec:upper} & upper bounds, uniform integrability ($m<\infty$) & \cref{lem:point}, union bound over a net\\
+\ref{sec:log} & lower bound of \cref{thm:log-moment} & \cref{lem:point}, \eqref{eq:T}, Markov's inequality\\
+\ref{sec:finite} & lower bound of \cref{thm:finite-mean} & \cref{lem:tube}, second moment method\\
+\ref{sec:heavy} & \cref{thm:heavy} & the explicit speed law\\
+\ref{sec:remarks} & constant speed, zero and infinite mean speed & \cite{Jan86,Hal88}, \cref{lem:point}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The centred fluctuations of $C(LK)$ for $d\ge2$, and the first-order
+behaviour for $\alpha\le1$ and $d\ge2$ without~\eqref{eq:T}, are open.
+
+\section{The point law and local finiteness}\label{sec:basic}
+
+For $y\in\R^d$ and $t\ge0$ let
+$H_t(y)=\{(x,v):y\in x+[0,t]v+rB\}$ be the set of initial conditions whose
+particle covers $y$ by time $t$. Its section at a fixed velocity $v$ is the
+capsule $y-[0,t]v+rB$.
+
+\begin{lemma}\label{lem:point}
+$\Leb(y-[0,t]v+rB)=\omega_dr^d+\omega_{d-1}r^{d-1}t\abs{v}$. Consequently, if
+$m<\infty$,
+\[
+\Pp\bigl(y\notin W(t)\bigr)=\exp\bigl(-\lambda\omega_dr^d-at\bigr).
+\]
+The same holds with $r$ replaced by any $\rho\in(0,r]$ and $a$ by $a_\rho$.
+\end{lemma}
+
+\begin{proof}
+Rotate so that $v$ points along the first axis. The capsule is the union of a
+cylinder of length $t\abs v$ whose cross-section is a ball of radius $r$ in
+$\R^{d-1}$, and two half-balls of radius $r$ at its ends; these pieces have
+disjoint interiors. For $d=1$ the capsule is an interval of length
+$2r+t\abs v$, which agrees with the formula since $\omega_0=1$. The number of
+points of $\Pi$ in $H_t(y)$ is Poisson with mean
+$\lambda\int\Leb(y-[0,t]v+rB)\,\mu(\dd v)=\lambda\omega_dr^d+at$.
+\end{proof}
+
+\begin{lemma}\label{lem:finite}
+Assume $m<\infty$. Almost surely, for every bounded set $A$ and every $T>0$,
+only finitely many particles meet $A+rB$ during $[0,T]$. Hence for every
+compact $A$, $\{C(A)\le t\}=\{A\subset W(t)\}$.
+\end{lemma}
+
+\begin{proof}
+If $A+rB$ lies in a ball of radius $R_0$ about the origin, the particles that
+meet $A+rB$ by time $T$ have initial conditions in a set of intensity at most
+$\lambda(\omega_dR_0^d+\omega_{d-1}R_0^{d-1}Tm)<\infty$, by the computation of
+\cref{lem:point} with $r$ replaced by $R_0$. Their number is therefore finite
+almost surely, and a countable exhaustion gives the first claim. For the
+second, let $t_n\downarrow t$ with $A\subset W(t_n)$. Only finitely many
+particles are relevant, so for each $y\in A$ one of them satisfies
+$\operatorname{dist}(y,x+[0,t_n]v)\le r$ for infinitely many $n$; letting
+$n\to\infty$ gives $\operatorname{dist}(y,x+[0,t]v)\le r$.
+\end{proof}
+
+Restrictions of $\Pi$ to disjoint sets are independent Poisson processes; in particular the particles
+with $\abs v\le b$ and those with $\abs v>b$ form independent processes, and
+if the sets $H_t(y_i)$, restricted to one velocity class, are disjoint, then
+the events that the $y_i$ are uncovered by that class are independent.
+
+\section{Upper bounds and uniform integrability}\label{sec:upper}
+
+\begin{lemma}\label{lem:net}
+Assume $0<m<\infty$. Let $A$ be compact, $\zeta\in(0,r)$, and let $\mathcal N$
+be a $\zeta$-net of $A$, that is, a finite set such that every point of $A$
+lies within distance $\zeta$ of $\mathcal N$. Then
+\[
+\Pp\bigl(C(A)>t\bigr)\le\abs{\mathcal N}\exp\bigl(-\lambda\omega_d(r-\zeta)^d-a_{r-\zeta}t\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Suppose every $z\in\mathcal N$ lies within distance $r-\zeta$ of the segment
+$x+[0,t]v$ of some particle. For $y\in A$ pick $z\in\mathcal N$ with
+$\abs{y-z}\le\zeta$; the same segment is within distance $r$ of $y$. So
+$A\subset W(t)$ unless some $z\in\mathcal N$ is missed by the balls of radius
+$r-\zeta$ around the same particles. Apply \cref{lem:point} with
+$\rho=r-\zeta$, a union bound and \cref{lem:finite}.
+\end{proof}
+
+\begin{lemma}\label{lem:ui}
+Assume $0<m<\infty$. There is a constant $B_0$, depending on $d$ and $r$, such
+that every cube $Q$ of side $\ell\ge1$ satisfies
+$\Pp(C(Q)>t)\le B_0\ell^d e^{-a_{r/2}t}$. Consequently, for every compact $K$,
+the family $\{C(LK)/\log L:L\ge e\}$ is uniformly integrable.
+\end{lemma}
+
+\begin{proof}
+A cubic lattice of mesh $r/(2\sqrt d)$ meets a $r/2$-neighbourhood of $Q$ in
+at most $B_0\ell^d$ points and gives an $r/2$-net of $Q$. For the second
+claim enclose $K$ in a cube of side $\ell_0\ge1$ and
+put $X_L=C(LK)/\log L$. Then
+$\Pp(X_L>u)\le B_0\ell_0^dL^de^{-a_{r/2}u\log L}$, which for
+$u\ge2d/a_{r/2}$ is at most $B_0\ell_0^de^{-a_{r/2}u/2}$ when $L\ge e$. This
+bound does not depend on $L$, and its tail integral tends to zero.
+\end{proof}
+
+\begin{lemma}\label{lem:interp}
+Let $K$ be compact with nonempty interior. There are $\theta>1$ and
+$c_1,c_2>0$ such that, with $L_n=\theta^n$, there are cubes $Q_n^-$ of side
+$c_1L_n$ and $Q_n^+$ of side $c_2L_n$ with $Q_n^-\subset LK\subset Q_n^+$ for
+every $L\in[L_n,L_{n+1}]$. Consequently, if for every $\varepsilon\in(0,1)$
+\[
+\sum_n\Pp\Bigl(C(Q_n^+)>\tfrac{(1+\varepsilon)d}{a}\log L_n\Bigr)<\infty
+\quad\text{and}\quad
+\sum_n\Pp\Bigl(C(Q_n^-)\le\tfrac{(1-\varepsilon)d}{a}\log L_n\Bigr)<\infty,
+\]
+then $C(LK)/\log L\to d/a$ almost surely.
+\end{lemma}
+
+\begin{proof}
+Let $z_0+[-s_0/2,s_0/2]^d\subset K\subset[-R_0,R_0]^d$ with $s_0>0$, and
+choose $\theta>1$ with $(\theta-1)\lVert z_0\rVert_\infty\le s_0/4$. Put
+$Q_n^-=L_nz_0+[-s_0L_n/4,s_0L_n/4]^d$ and
+$Q_n^+=[-\theta R_0L_n,\theta R_0L_n]^d$. For $L\in[L_n,\theta L_n]$ and every
+vector $w\in\R^d$ with $\lVert w\rVert_\infty\le s_0L_n/4$,
+\[
+\lVert L_nz_0+w-Lz_0\rVert_\infty\le(\theta-1)L_n\lVert z_0\rVert_\infty+s_0L_n/4\le s_0L_n/2\le s_0L/2,
+\]
+so $Q_n^-\subset LK$, and $LK\subset[-R_0L,R_0L]^d\subset Q_n^+$. Since $C$ is
+monotone under inclusion, $C(Q_n^-)\le C(LK)\le C(Q_n^+)$ for
+$L\in[L_n,L_{n+1}]$, and $\log L/\log L_n\to1$. Borel--Cantelli and a sequence
+$\varepsilon\downarrow0$ finish the proof.
+\end{proof}
+
+\begin{proposition}\label{prop:upper}
+Assume $0<m<\infty$ and let $K$ be a nonempty compact set.
+\begin{enumerate}[label=(\roman*)]
+\item If $K$ has Minkowski dimension $\alpha$, then for every $u>\alpha/a$,
+$\Pp(C(LK)>u\log L)\to0$.
+\item If $K$ has nonempty interior, then
+$\limsup_{L\to\infty}C(LK)/\log L\le d/a$ almost surely.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) Choose $\zeta\in(0,r)$ with $a_{r-\zeta}u>\alpha$ (any $\zeta$ if
+$\alpha=0$). The centres of $N(K,\zeta/L)$ balls of radius $\zeta/L$
+covering $K$, scaled by $L$, form a $\zeta$-net of $LK$ of size
+$N(K,\zeta/L)=L^{\alpha+o(1)}$, so \cref{lem:net} gives
+$\Pp(C(LK)>u\log L)\le L^{\alpha-a_{r-\zeta}u+o(1)}\to0$.
+
+(ii) Fix $\varepsilon>0$ and $\zeta\in(0,r)$ with
+$(1+\varepsilon)((r-\zeta)/r)^{d-1}>1$, and let $Q_n^+$ and $L_n$ be as in
+\cref{lem:interp}. A lattice of mesh $\zeta/\sqrt d$ gives a $\zeta$-net of
+$Q_n^+$ with at most $c_\zeta(1+c_2L_n)^d$ points, so at
+$t=(1+\varepsilon)d\log L_n/a$ \cref{lem:net} gives
+$\Pp(C(Q_n^+)>t)=O(L_n^{-\kappa})$ with
+$\kappa=d(1+\varepsilon)((r-\zeta)/r)^{d-1}-d>0$. Since $L_n=\theta^n$ the
+bound is summable in $n$, so almost surely
+$C(Q_n^+)\le(1+\varepsilon)(d/a)\log L_n$ for all large $n$, and
+$C(LK)\le C(Q_n^+)$ for $L\in[L_n,L_{n+1}]$. Let $\varepsilon\downarrow0$
+along a sequence.
+\end{proof}
+
+By \cref{lem:ui} and \cref{prop:upper}(i), \cref{thm:finite-mean,thm:log-moment}
+reduce to lower bounds: convergence in probability together with uniform
+integrability gives $L^1$ convergence.
+
+\section{Lower bounds under the tail condition}\label{sec:log}
+
+Throughout this section $\varepsilon\in(0,1)$ and $\delta\in(0,\varepsilon)$
+are fixed, and particles are split into slow and fast ones at a speed $b_L$
+that grows like a power of $L$.
+
+\begin{proof}[Proof of \cref{thm:log-moment}]
+If $\alpha=0$ there is nothing to prove, since $C(LK)\ge0$. Let $\alpha>0$
+and put
+\[
+t=\frac{(1-\varepsilon)\alpha}{a}\log L,\qquad b_L=\frac{L^\delta}{t}.
+\]
+Call a particle slow if $\abs v\le b_L$ and fast otherwise. A slow particle
+that covers $y$ by time $t$ starts within distance $R_L=L^\delta+r$ of $y$.
+Take a maximal subset $\{y_1,\dots,y_k\}$ of $LK$ with mutual distances at
+least $3R_L$. Its balls of radius $3R_L$ cover $LK$, so
+$k\ge N(K,3R_L/L)=L^{(1-\delta)\alpha+o(1)}$. The slow parts of the sets
+$H_t(y_i)$ are disjoint, so the events that $y_i$ is not covered by a slow
+particle are independent, each with probability
+\[
+q_{\mathrm s}=\exp\Bigl(-\lambda\E\bigl[(\omega_dr^d+\omega_{d-1}r^{d-1}t\abs V)\ind_{\{\abs V\le b_L\}}\bigr]\Bigr)
+\ge e^{-\lambda\omega_dr^d}L^{-(1-\varepsilon)\alpha}.
+\]
+Let $U$ be the number of $y_i$ not covered by slow particles. Then
+$\Pp(U=0)\le\exp(-kq_{\mathrm s})$ and
+$kq_{\mathrm s}\ge L^{\alpha(\varepsilon-\delta)+o(1)}\to\infty$.
+
+A fixed point is covered by a fast particle with probability at most
+\begin{equation}\label{eq:gamma}
+\gamma_L=\lambda\omega_dr^d\,\Pp(\abs V>b_L)
++\lambda\omega_{d-1}r^{d-1}t\,\E\bigl[\abs V\ind_{\{\abs V>b_L\}}\bigr].
+\end{equation}
+Since $\log b_L=\delta\log L-\log t$, the ratio $t/\log b_L$ is bounded, and
+\eqref{eq:T} gives $\gamma_L\to0$. The fast process is independent of the slow
+one. Conditionally on the slow process and on $U>0$, the expected number of
+the $U$ slow-uncovered points that a fast particle covers is at most
+$\gamma_LU$, so by Markov's inequality all of them are covered with
+conditional probability at most $\gamma_L$. Hence
+\begin{equation}\label{eq:lower-log}
+\Pp\bigl(C(LK)\le t\bigr)\le\Pp(U=0)+\gamma_L\to0 .
+\end{equation}
+With \cref{prop:upper}(i) and \cref{lem:ui} this proves~(i).
+
+For (ii), let $\E\abs V^{1+p}=M<\infty$. Then
+$\Pp(\abs V>b)\le Mb^{-1-p}$ and $\E[\abs V\ind_{\abs V>b}]\le Mb^{-p}$,
+so $\gamma_L\le c\,M(1+t)^{1+p}L^{-\delta p}$. Apply the argument above to
+the cubes $Q_n^-$ of \cref{lem:interp}, with $\alpha=d$ and $L$ replaced by
+$L_n$; the points $y_i$ are taken in $Q_n^-$, whose side is a fixed multiple
+of $L_n$. Both terms in~\eqref{eq:lower-log} are bounded by negative powers of
+$L_n$ and are summable, and \cref{lem:interp} with \cref{prop:upper}(ii)
+gives almost-sure convergence.
+\end{proof}
+
+\section{Finite mean in dimension at least two}\label{sec:finite}
+
+\begin{lemma}[Points near a line]\label{lem:tube}
+Let $r\le s\le\ell$, and let $\mathcal Y$ be a set of points with mutual
+distances at least $s$, contained in a cube of side $\ell$. For every
+$y\in\mathcal Y$ and every unit vector $e$, the number of $z\in\mathcal Y$
+whose distance to the line $y+\R e$ is at most $2r$ is at most $c_d\ell/s$,
+with $c_d=4\sqrt d\,3^{2d-1}\omega_{d-1}/\omega_d$.
+\end{lemma}
+
+\begin{proof}
+The balls of radius $s/3$ about these points $z$ have disjoint interiors.
+They lie in the set of points within distance $2r+s/3\le3s$ of the line and
+within distance $\sqrt d\,\ell+s\le2\sqrt d\,\ell$ of $y$ along it, which has
+volume at most $4\sqrt d\,\ell\,\omega_{d-1}(3s)^{d-1}$. Each ball has volume
+$\omega_d(s/3)^d$, and dividing gives the bound.
+\end{proof}
+
+The bound is uniform in $e$, so $\mu$ may charge a single direction.
+
+\begin{proof}[Proof of \cref{thm:finite-mean}]
+Fix $\varepsilon\in(0,1)$ and $\delta\in(0,\varepsilon)$, let $\alpha=d$ in
+case~(i) and $\alpha>1$ in case~(ii), and put
+\[
+t=\frac{(1-\varepsilon)\alpha}{a}\log L,\qquad b_L=\frac{L^\delta}{t},\qquad
+s=3(L^\delta+r).
+\]
+In case~(ii) let $\mathcal Y=\{y_1,\dots,y_k\}$ be a maximal subset of $LK$
+with mutual distances at least $s$, so that
+$k\ge N(K,s/L)=L^{(1-\delta)\alpha+o(1)}$. In case~(i) let $\mathcal Y$ be the
+points of a lattice of mesh $s$ inside a cube of side $\ell$ contained in
+$LK$, with $\ell$ a fixed multiple of $L$, so that $k\ge c(\ell/s)^d$. In
+both cases $\mathcal Y$ lies in a cube of side $c_KL$, where $c_K$ depends
+only on $K$.
+
+Let $U$ be the number of points of $\mathcal Y$ not in $W(t)$, now for the
+whole process. By \cref{lem:point}, each is uncovered with probability
+$q=e^{-\lambda\omega_dr^d-at}$, so $\E U=kq$. For $y\ne z$ let
+$I(y,z)=\lambda\,(\Leb\otimes\mu)\bigl(H_t(y)\cap H_t(z)\bigr)$, where
+$\Leb\otimes\mu$ is the product of Lebesgue measure and $\mu$. The void
+probability of the union $H_t(y)\cup H_t(z)$ gives
+\begin{equation}\label{eq:pair}
+\Pp\bigl(y,z\notin W(t)\bigr)=q^2e^{I(y,z)}.
+\end{equation}
+Slow particles cannot cover two points of $\mathcal Y$, so only fast particles
+contribute to $I(y,z)$, and $0\le I(y,z)\le\gamma_L$ with $\gamma_L$ as
+in~\eqref{eq:gamma}. Since $m<\infty$ and $b_L\to\infty$,
+$\E[\abs V\ind_{\abs V>b_L}]\to0$, and as $t=O(\log L)$ we get
+$\gamma_L=o(\log L)$.
+
+Fix $y$ and a velocity $v\ne0$. The projections of the capsules
+$y-[0,t]v+rB$ and $z-[0,t]v+rB$ onto the hyperplane orthogonal to $v$ are
+balls of radius $r$ about the projections of $y$ and $z$. So the capsules can
+meet only if $z$ lies within distance $2r$ of the line $y+\R v$, and then
+their intersection has volume at most $\omega_dr^d+\omega_{d-1}r^{d-1}t\abs v$.
+By \cref{lem:tube}, applied with $\ell=c_KL$, and Tonelli's theorem,
+\[
+\sum_{z\ne y}I(y,z)\le\lambda\int_{\{\abs v>b_L\}}c_{d,K}\frac{L}{s}
+\bigl(\omega_dr^d+\omega_{d-1}r^{d-1}t\abs v\bigr)\mu(\dd v)
+=c_{d,K}\frac{L}{s}\gamma_L,
+\]
+with $c_{d,K}=c_dc_K$. For $0\le I\le\gamma$ we have $e^I-1\le Ie^\gamma$.
+The variance of a sum of indicators and~\eqref{eq:pair} give
+\[
+\frac{\operatorname{Var}U}{(\E U)^2}
+\le\frac1{kq}+\frac1{k^2}\sum_{y\ne z}\bigl(e^{I(y,z)}-1\bigr)
+\le\frac1{kq}+c_{d,K}\,e^{\gamma_L}\gamma_L\,\frac{L/s}{k}.
+\]
+The first term is at most $L^{-\alpha(\varepsilon-\delta)+o(1)}$. Since
+$\gamma_L=o(\log L)$, the factor $e^{\gamma_L}\gamma_L$ is $L^{o(1)}$, and
+$L/s=L^{1-\delta+o(1)}$, so the second term is at most
+$L^{(1-\delta)(1-\alpha)+o(1)}$. Both tend to zero because $\alpha>1$; in
+case~(i) this is where $d\ge2$ enters. By Chebyshev's inequality
+$\Pp(C(LK)\le t)\le\Pp(U=0)\le\operatorname{Var}U/(\E U)^2\to0$. With
+\cref{prop:upper}(i) and \cref{lem:ui} this gives convergence in probability
+and in $L^1$.
+
+In case~(i) both terms are bounded by a negative power of $L$. Running the
+argument on the cubes $Q_n^-$ of \cref{lem:interp} gives summable bounds, and
+\cref{lem:interp} with \cref{prop:upper}(ii) gives almost-sure convergence.
+\end{proof}
+
+\section{A finite-mean speed law in dimension one}\label{sec:heavy}
+
+\begin{proof}[Proof of \cref{thm:heavy}]
+\emph{The law.} The survival function is continuous at $u_0$, where both
+expressions equal $e^{-e-1}$, and decreases to zero. The substitution
+$w=\log\log u$ gives, for $h\ge u_0$,
+\begin{equation}\label{eq:tail-int}
+\int_h^\infty\Pp(V>u)\dd u=\frac1{\log\log h},\qquad
+F(h):=\E[V\ind_{V>h}]=\frac{1}{\log h\,(\log\log h)^2}+\frac{1}{\log\log h}.
+\end{equation}
+Hence $\E V=u_0e^{-e-1}+1=1+e^{-1}$.
+
+Fix $\sigma>0$ and put $t=\sigma\log\log L$ and $H_L=(L-2r)/t$, which exceeds
+$u_0$ for large $L$. A particle $(x,v)$ with $v=V\ge0$ covers by time $t$ the
+interval $[\xi,\xi+\Delta]$ with $\xi=x-r$ and $\Delta=tV+2r$; the points
+$\xi$ form a Poisson process of rate $\lambda$. In this section the particles
+are split into three classes, at the speeds $h_L=\sqrt L/t$ and $H_L$.
+
+\emph{Long particles}, $V>H_L$, have $\Delta>L$. Such a particle spans $[0,L]$
+when $\xi\in[L-\Delta,0]$, so the number of spanning particles is Poisson with
+mean
+\[
+\beta_L=\lambda\E\bigl[(tV+2r-L)_+\bigr]=\lambda t\int_{H_L}^\infty\Pp(V>u)\dd u
+=\frac{\lambda\sigma\log\log L}{\log\log H_L}\to\lambda\sigma .
+\]
+A long particle meets $[0,L]$ when $\xi\in[-\Delta,L]$, so the long particles
+that meet $[0,L]$ without spanning it have mean number
+$2\lambda L\,\Pp(V>H_L)=2\lambda L/(H_L\log H_L(\log\log H_L)^2)\to0$.
+
+\emph{Slow particles}, $V\le h_L$, have $\Delta\le\sqrt L+2r$. Choose points of
+$[0,L]$ with spacing $2(\sqrt L+2r)$; there are $n_L\ge c\sqrt L$ of them, and
+the slow parts of their sets $H_t(\cdot)$ are disjoint. The number $U_L$ of
+them not covered by slow particles is binomial with parameters $n_L$ and
+\[
+q_L\ge\exp\bigl(-\lambda(2r+t\E V)\bigr)=e^{-2\lambda r}(\log L)^{-\lambda\sigma\E V},
+\]
+so $\Pp(U_L=0)\le\exp(-n_Lq_L)\to0$.
+
+\emph{Intermediate particles}, $h_L<V\le H_L$, form a Poisson process
+independent of the other two classes. A fixed point is covered by one with
+probability at most
+\[
+g_L=\lambda\E\bigl[(tV+2r)\ind_{\{h_L<V\le H_L\}}\bigr]
+\le2\lambda r\,\Pp(V>h_L)+\lambda t\bigl(F(h_L)-F(H_L)\bigr).
+\]
+With $\Lambda_L=\log\log L$ we have $\log\log h_L=\Lambda_L-\log2+o(1)$ and
+$\log\log H_L=\Lambda_L+o(1)$, so by~\eqref{eq:tail-int}
+$F(h_L)-F(H_L)=O(\Lambda_L^{-2})$, and since $t=\sigma\Lambda_L$, $g_L\to0$. As
+in \cref{sec:log}, conditionally on the slow process the probability that
+intermediate particles cover all $U_L>0$ slow-uncovered points is at most
+$g_L$.
+
+\emph{Conclusion.} Let $S_L$ be the event that some particle spans $[0,L]$. If
+$[0,L]\subset W(t)$ and $S_L$ fails, then either a long particle meets $[0,L]$
+without spanning it, or $U_L=0$, or intermediate particles cover every
+slow-uncovered point. Therefore
+\[
+0\le\Pp\bigl(C([0,L])\le t\bigr)-\Pp(S_L)\le2\lambda L\,\Pp(V>H_L)+\Pp(U_L=0)+g_L\to0,
+\]
+and $\Pp(S_L)=1-e^{-\beta_L}\to1-e^{-\lambda\sigma}$. At $\sigma=0$ the
+probability of initial coverage tends to zero, since linearly many points at
+mutual distance more than $2r$ are initially uncovered independently with
+probability $e^{-2\lambda r}$. This proves convergence of the distribution
+functions at every point, and the last claim follows by tightness.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}[Constant speed on the line]\label{rem:gumbel}
+If $d=1$ and every particle has the same speed $\nu>0$, each particle covers an
+interval of length $\nu t+2r$ starting at a point of a Poisson process of rate
+$\lambda$. The coverage time is then a reparametrisation of the classical
+problem of covering $[0,L]$ by intervals of a fixed length placed at Poisson
+points~\cite{Jan86,Hal88}, and
+$\lambda\nu\,C([0,L])+2\lambda r-\log(\lambda L)$ converges in law to the
+standard Gumbel distribution. This refines the case $d=1$, $\alpha=1$ of
+\cref{thm:log-moment} for this law.
+\end{remark}
+
+\begin{remark}[Zero and infinite mean speed]\label{rem:extreme}
+If $m=0$, nothing moves, and $\Pp(C(LK)<\infty)\to0$ for $K$ with nonempty
+interior. If $m=\infty$, then by the computation of \cref{lem:point} with
+radius $r/2$ the set $H_t(y)$ has infinite intensity for every $t>0$, so every
+point of a countable $r/2$-net of $\R^d$ is covered by a ball of radius $r/2$
+by time $t$, almost surely. Enlarging the balls to radius $r$ covers all of
+$\R^d$. Hence $C(K)=0$ almost surely for every compact $K$; this matches the
+observation in~\cite{Kon14} that the detection time vanishes when the mean
+speed is infinite.
+\end{remark}
+
+\section*{Acknowledgments and funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit 530550103).
+
+The question answered here is Open problem~1 of Takis Konstantopoulos~\cite{Kon14}. The Brownian case, and the method of discretising the target by a net, are due to Yuval Peres, Alistair Sinclair, Perla Sousi and Alexandre Stauffer~\cite{PSSS13}. The static coverage theory behind the upper bounds and behind \cref{rem:gumbel} is that of Svante Janson~\cite{Jan86} and Peter Hall~\cite{Hal88}, and the dynamic Boolean model is that of Jacob van den Berg, Ronald Meester and Damien White~\cite{BMW97}. The planar case of the point law is due to Benyuan Liu, Olivier Dousse, Philippe Nain and Don Towsley~\cite{LDNT11}.
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Code and data availability}
+The source of this paper and a short simulation that checks the point law of \cref{lem:point} in the plane are at \url{https://github.com/yspennstate/inertial-boolean-coverage}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The proofs, literature comparison and writing were produced by AI systems in the author-directed Math Brain project: Codex (OpenAI) produced the first proofs, and Claude (Anthropic) checked them against the sources and wrote the text. The problem is that of Konstantopoulos~\cite{Kon14}; the Brownian precedent of Peres, Sinclair, Sousi and Stauffer~\cite{PSSS13} and the coverage theory of Janson~\cite{Jan86} and Hall~\cite{Hal88} are the earlier work on which the results rest, as set out in the introduction. What is new is the lower bounds of \cref{thm:finite-mean,thm:log-moment}, the count of \cref{lem:tube} and \cref{thm:heavy}; the upper bounds follow the net method of~\cite{PSSS13}. The author selected the problem and directed the work; the author did not carry out the mathematics or the writing. Responsibility for submission or publication rests with the author. The checks are internal research verification, not external peer review or proof-assistant formalization.
+
+\begin{thebibliography}{99}
+
+\bibitem{BMW97} J.~van~den~Berg, R.~Meester and D.~G.~White, Dynamic Boolean models, \emph{Stochastic Process. Appl.} \textbf{69} (1997), 247--257.
+
+\bibitem{DJY25} H.~D\"oring, L.~de~Jonge and X.~Yang, Coverage of the unit cube by dynamic Boolean models, arXiv:2506.22286, 2025.
+
+\bibitem{GJLV26} P.~Gracar, B.~Jahnel, L.~L\"uchtrath and A.~D.~Vu, Detection, coverage and percolation in dynamic Boolean models with random radii based on $\alpha$-stable processes, arXiv:2602.22109, 2026.
+
+\bibitem{Hal88} P.~Hall, \emph{Introduction to the Theory of Coverage Processes}, Wiley, New York, 1988.
+
+\bibitem{Jan86} S.~Janson, Random coverings in several dimensions, \emph{Acta Math.} \textbf{156} (1986), 83--118.
+
+\bibitem{Kon14} T.~Konstantopoulos, The mobile Boolean model: an overview and further results, arXiv:1407.6834, 2014.
+
+\bibitem{LDNT11} B.~Liu, O.~Dousse, P.~Nain and D.~Towsley, Dynamic coverage of mobile sensor networks, arXiv:1101.0376, 2011.
+
+\bibitem{PSSS13} Y.~Peres, A.~Sinclair, P.~Sousi and A.~Stauffer, Mobile geometric graphs: detection, coverage and percolation, \emph{Probab. Theory Related Fields} \textbf{156} (2013), 273--305; theorem numbers as in arXiv:1008.0075v2.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\end{thebibliography}
+\end{document}

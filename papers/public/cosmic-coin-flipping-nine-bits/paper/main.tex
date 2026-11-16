@@ -1,0 +1,351 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={One bit is optimal for cosmic coin flipping on at most nine bits},pdfauthor={Yitzchak Shmalo}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\MAJ}{\mathrm{MAJ}}
+\newcommand{\fl}{\operatorname{fl}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Cosmic coin flipping on at most nine bits]{One bit is optimal for cosmic coin flipping on at most nine
+bits}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{06E30, 68R05, 94A60, 65G50}
+\keywords{non-interactive correlation distillation, cosmic coin flipping, noise stability, regular Boolean
+functions, computer-assisted proof}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+In the cosmic coin flipping problem of Mossel and O'Donnell, $k$ parties receive independent $\epsilon$-noisy copies of
+$n$ uniform bits and each outputs a uniform bit, aiming to maximize the probability that all outputs agree. Mossel and
+O'Donnell asked whether, for $2\le k\le 9$, the best antisymmetric protocol is for every party to output its first
+bit. The cases $k\le5$ follow from work of Witsenhausen, Mossel and O'Donnell, and Yu. We prove that the answer is
+positive for $6\le k\le 9$ whenever $n\le 9$. By symmetrization it suffices to compare the first-bit function with the
+$319{,}124$ antisymmetric left-monotone functions on nine bits. After the substitution $t=2\epsilon/(1-2\epsilon)$ we
+show that, for every other function, the coefficients of degrees $1$ to $nk-2$ of the numerator of the difference of
+agreement probabilities are positive, using floating-point arithmetic with a rigorous error bound. For $n\le8$ an
+exact computation confirms the inequalities.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $x$ be uniform on $\{0,1\}^n$, and let $y^{(1)},\dots,y^{(k)}$ be obtained from $x$ independently by flipping each
+coordinate with probability $\epsilon\in(0,1/2)$. Party $i$ sees only $y^{(i)}$ and outputs $f_i(y^{(i)})$, where
+$f_i\colon\{0,1\}^n\to\{0,1\}$ is fixed in advance and balanced, that is, $|f_i^{-1}(1)|=2^{n-1}$. Mossel and
+O'Donnell~\cite{MO05} asked for the protocol $(f_1,\dots,f_k)$ maximizing
+\[
+  P(f_1,\dots,f_k;\epsilon)=\Prob\bigl[f_1(y^{(1)})=\dots=f_k(y^{(k)})\bigr].
+\]
+A function $f$ is antisymmetric if $f(\bar x)=1-f(x)$, where $\bar x$ is the complement of $x$, and a protocol is
+antisymmetric if all its functions are. Antisymmetric functions are balanced, and antisymmetry makes the common output
+uniform. The same question on trees and with other noise models is the non-interactive correlation distillation
+problem of Mossel, O'Donnell, Regev, Steif and Sudakov~\cite{MORSS06}; the case $k=2$ goes back to
+Witsenhausen~\cite{W75}, and recent work of Kamath, Kumar and Manurangsi~\cite{KKM26} treats related two-party
+conjectures. Li and M\'edard~\cite{LM21} study the same moments of noisy Boolean functions in the regimes of small
+and large noise and of large moment order.
+
+For $k=2$ and $k=3$ Mossel and O'Donnell proved that the best protocol has every party output a single bit of its
+input~\cite[Theorem~1.3]{MO05}, and they showed that for fixed odd $n\ge3$ and fixed $\epsilon$ the majority of all
+$n$ bits is optimal, and better than one bit, once $k$ is large enough~\cite[Theorem~1.5]{MO05}. Yu proved that among
+all balanced functions the single bit maximizes the symmetric $\alpha$-stability for $2\le\alpha\le5$, in every
+dimension and for every correlation~\cite[Corollary~2]{Yu23}; with $\alpha=k$ and correlation $1-2\epsilon$ this is the
+case $k\le5$ of the question below. Write $\MAJ_r(x)$ for the majority of $x_1,\dots,x_r$ ($r$ odd); $\MAJ_1(x)=x_1$
+is the first-bit function. For $x,y\in\{0,1\}^n$ write $x\le_L y$ if $\sum_{i\le m}x_i\le\sum_{i\le m}y_i$ for every
+$m$, and call $f$ left-monotone if $f(x)\le f(y)$ whenever $x\le_L y$. Such functions are also called
+regular Boolean functions. A signed permutation is a map $T(x)_j=x_{\pi(j)}\oplus b_j$ with $\pi$ a permutation of
+the coordinates, $b\in\{0,1\}^n$ and $\oplus$ addition modulo $2$. The symmetrization theorem of Mossel and O'Donnell~\cite[Theorem~1.4]{MO05} says
+that every protocol maximizing $P$, among all protocols or among antisymmetric ones, has $f_1=\dots=f_k=f$ with
+$f\circ T$ left-monotone for a signed permutation $T$. When all parties use $f$,
+\begin{equation}\label{eq:Pk}
+  P_k(f;\epsilon):=P(f,\dots,f;\epsilon)=\E_x\bigl[p_f(x)^k+(1-p_f(x))^k\bigr],\qquad
+  p_f(x)=\sum_{y}f(y)\,\epsilon^{d(x,y)}(1-\epsilon)^{n-d(x,y)},
+\end{equation}
+where $d$ is Hamming distance. For small $n$ the problem is therefore a comparison of finitely many polynomials in
+$\epsilon$ on $(0,1/2)$. Mossel and O'Donnell counted $7$, $135$, $2470$ and $319{,}124$ antisymmetric left-monotone
+functions for $n=5,7,8,9$, plotted the seven polynomials for $n=5$, and found that $\MAJ_1$ is best for $2\le k\le9$
+while $\MAJ_3$ beats it on an interval of $\epsilon$ when $k=10$ or $11$~\cite[Fact~5.1, Proposition~5.2]{MO05}. They
+posed the following.
+
+\medskip\noindent\textbf{Open Problem 1} \cite{MO05}. Prove or disprove: for fixed $n$, $\epsilon$ and $2\le k\le 9$,
+the best antisymmetric protocol is for all parties to use $\MAJ_1$.
+
+\begin{theorem}\label{thm:main}
+Let $1\le n\le 9$, $2\le k\le 9$ and $0<\epsilon<1/2$. For every antisymmetric left-monotone $f\colon\{0,1\}^n\to\{0,1\}$
+other than $\MAJ_1$,
+\[
+  P_k(f;\epsilon)<P_k(\MAJ_1;\epsilon).
+\]
+\end{theorem}
+
+\begin{corollary}\label{cor:op1}
+Open Problem~1 has a positive answer for $n\le 9$: if $n\le 9$ and $2\le k\le 9$, every antisymmetric protocol that
+maximizes $P(f_1,\dots,f_k;\epsilon)$ has all parties output the same function $x_i\oplus b$ for one coordinate $i$
+and one $b\in\{0,1\}$.
+\end{corollary}
+
+\begin{proof}
+A maximizer exists since there are finitely many protocols. By~\cite[Theorem~1.4]{MO05} it has the form
+$f_1=\dots=f_k=f$ with $f\circ T$ left-monotone for some signed permutation $T$. A signed permutation commutes with
+complementation of all coordinates and maps the uniform source and its noisy copies to a source and copies with the
+same joint law, so $f\circ T$ is antisymmetric and $P_k(f\circ T;\epsilon)=P_k(f;\epsilon)$. Theorem~\ref{thm:main}
+gives $f\circ T=\MAJ_1$. With $i=\pi^{-1}(1)$ we have $T(x)_i=x_1\oplus b_i$, so $f(z)=z_i\oplus b_i$ for every $z$. A function of fewer than $n$ bits is a
+function of $n$ bits that ignores the rest, and appending ignored coordinates preserves antisymmetry,
+left-monotonicity and the agreement probability, so the statement for $n=9$ contains those for $n<9$.
+\end{proof}
+
+For $k=2,3$ the theorem is contained in~\cite[Theorem~1.3]{MO05}, and for $k=4,5$ the optimality of $\MAJ_1$ follows
+from~\cite[Corollary~2]{Yu23}, which covers all balanced functions in every dimension; the new cases are
+$6\le k\le 9$. The computation below covers $k\le5$ as well and gives the strict inequality there.
+For $n\ge5$ the range of $k$ cannot be extended, since for $n=5$ and $k=10$ the function $\MAJ_3$ beats $\MAJ_1$ at
+$\epsilon=0.26$~\cite[Proposition~5.2]{MO05}. The proof of Theorem~\ref{thm:main} is a computation, organized so that
+every step is either exact or carries a proved error bound. Section~\ref{sec:poly} reduces each comparison to the
+positivity of the coefficients of one polynomial, Section~\ref{sec:float} explains why floating-point coefficients
+suffice, and Section~\ref{sec:comp} describes the enumeration and the results, together with an exact check for
+$n\le8$.
+
+\section{Agreement probabilities as polynomials}\label{sec:poly}
+
+Put $t=2\epsilon/(1-2\epsilon)$, an increasing bijection from $(0,1/2)$ onto $(0,\infty)$. Then
+\[
+  \epsilon=\frac{t}{2(1+t)},\qquad 1-\epsilon=\frac{2+t}{2(1+t)},\qquad
+  \epsilon^{d}(1-\epsilon)^{n-d}=\frac{t^{d}(2+t)^{n-d}}{(2(1+t))^{n}} .
+\]
+For $f\colon\{0,1\}^n\to\{0,1\}$ and $x\in\{0,1\}^n$ let
+\[
+  q_{f,x}(t)=\sum_{y}f(y)\,t^{d(x,y)}(2+t)^{n-d(x,y)},\qquad R_{f,k}(t)=\sum_{x}q_{f,x}(t)^k .
+\]
+Each $q_{f,x}$ has degree at most $n$ and nonnegative integer coefficients, and $p_f(x)=q_{f,x}(t)/(2(1+t))^n$. If $f$
+is antisymmetric then $p_f(\bar x)=1-p_f(x)$, because $d(\bar x,y)=d(x,\bar y)$ and $f(\bar y)=1-f(y)$, where $\bar y$ is the complement of $y$. So the two
+sums in~\eqref{eq:Pk} are equal, and
+\begin{equation}\label{eq:PR}
+  P_k(f;\epsilon)=\frac{2^{1-n}\,R_{f,k}(t)}{(2(1+t))^{nk}} .
+\end{equation}
+
+\begin{lemma}\label{lem:ends}
+For balanced $f$ the coefficients of $t^0$, $t^{nk-1}$ and $t^{nk}$ in $R_{f,k}$ do not depend on $f$.
+\end{lemma}
+
+\begin{proof}
+Only $y=x$ contributes to the constant term of $q_{f,x}$, so $q_{f,x}(0)=2^nf(x)$ and the constant term of $R_{f,k}$
+is $2^{nk}|f^{-1}(1)|=2^{nk+n-1}$. Each $t^{d}(2+t)^{n-d}$ is monic of degree $n$ with coefficient $2(n-d)$ at
+$t^{n-1}$. Hence the leading coefficient of every $q_{f,x}$ is $|f^{-1}(1)|=2^{n-1}$, and its coefficient at $t^{n-1}$
+is $\sum_y f(y)\,2(n-d(x,y))$. It follows that the coefficient of $t^{nk}$ in $R_{f,k}$ is $2^n2^{(n-1)k}$ and that
+of $t^{nk-1}$ is
+\[
+  k\,2^{(n-1)(k-1)}\sum_{y}f(y)\sum_{x}2\bigl(n-d(x,y)\bigr)=k\,2^{(n-1)(k-1)}\cdot2^{n-1}\cdot n\,2^{n},
+\]
+since $\sum_x d(x,y)=n2^{n-1}$ for every $y$.
+\end{proof}
+
+Let $D_{f,k}=R_{\MAJ_1,k}-R_{f,k}$. By Lemma~\ref{lem:ends}, $D_{f,k}$ has zero constant term and degree at most
+$nk-2$. By~\eqref{eq:PR}, $P_k(\MAJ_1;\epsilon)-P_k(f;\epsilon)$ has the sign of $D_{f,k}(t)$. Hence:
+
+\begin{corollary}\label{cor:coef}
+Let $f$ be antisymmetric and $nk\ge3$. If the coefficients of $t^1,\dots,t^{nk-2}$ in $D_{f,k}$ are all
+positive, then
+$P_k(f;\epsilon)<P_k(\MAJ_1;\epsilon)$ for every $\epsilon\in(0,1/2)$.
+\end{corollary}
+
+The condition is sufficient, not necessary. It is the case of Descartes' rule of signs with no sign change, and it
+fails, for example, for $f=\MAJ_3$ with $n=5$ and $k=10$, where the difference changes sign. For the values in
+Theorem~\ref{thm:main} it always holds.
+
+\section{Floating-point coefficients with a proved error bound}\label{sec:float}
+
+The coefficients of $R_{f,k}$ are integers of up to about $50$ decimal digits when $n=k=9$, and computing them
+exactly for all $319{,}124$ functions is slow. Since every quantity entering $R_{f,k}$ is nonnegative, ordinary
+double-precision arithmetic has a relative error that can be bounded in advance, and a coefficient of $D_{f,k}$ is
+certified positive once it exceeds that bound.
+
+We use the standard model of floating-point arithmetic: for $a,b$ representable and $\circ\in\{+,\times\}$, the computed
+result is $\fl(a\circ b)=(a\circ b)(1+\delta)$ with $|\delta|\le u=2^{-53}$, as long as neither overflow
+nor underflow occurs~\cite[Section~2.2]{Hig02}. Since $q_{f,x}(1)\le\sum_y3^{n-d(x,y)}=4^n$, every coefficient of $R_{f,k}$ is at
+most $2^n4^{nk}<10^{52}$, far below the overflow threshold, and every nonzero value computed below, the thresholds included, exceeds
+$10^{-15}$, far above the underflow threshold. If $|\delta_i|\le u$ and $mu<1$, then
+$\prod_{i=1}^m(1+\delta_i)=1+\theta$ with $|\theta|\le\gamma_m=mu/(1-mu)$~\cite[Lemma~3.1]{Hig02}.
+
+\begin{lemma}\label{lem:nonneg}
+Assume the model above and $mu<1$. Let a number $A$ be computed from exactly representable nonnegative inputs by additions and multiplications only. Each
+occurrence of a term in the fully unfolded expansion of $A$ as a sum of products of inputs is then multiplied by its
+own product of factors $1+\delta_i$, one for each rounding that affects it, counted with multiplicity. If no occurrence
+carries more than $m$ such factors, the computed value is $\hat A=A(1+\theta)$ with $|\theta|\le\gamma_m$.
+\end{lemma}
+
+\begin{proof}
+Each term $T_j\ge0$ of $A$ appears in $\hat A$ as $T_j(1+\theta_j)$ with $|\theta_j|\le\gamma_m$ by the bound above,
+so $\hat A-A=\sum_jT_j\theta_j$ and $|\hat A-A|\le\gamma_m\sum_jT_j=\gamma_mA$.
+\end{proof}
+
+The arithmetic is IEEE binary64 with rounding to nearest. We compute the coefficient vector of $q_{f,x}$ from the
+expansion of $t^d(2+t)^{n-d}$ as a matrix product. Every input, product and partial sum in it is a nonnegative integer
+at most $q_{f,x}(1)\le4^n\le2^{18}$, so it is computed exactly, in any order of summation and with or without fused
+multiply-add. We then form $q_{f,x}^k$ by $k-1$ convolutions with the exact vector $q_{f,x}$. Each coefficient of a
+convolution is a sum of at most $n+1$ products, accumulated one at a time, so an occurrence of a term acquires at most
+$n+2$ rounding factors per convolution. Summing over the $2^n$ points $x$ adds at most $2^n-1$ more, in any order.
+Hence every coefficient $A$ of $R_{\MAJ_1,k}$ and $B$ of $R_{f,k}$ is computed with relative error at most $\gamma_m$,
+where $m=(k-1)(n+2)+2^n+1$. If $\hat A=A(1+\theta_A)$ and $\hat B=B(1+\theta_B)$, then
+\[
+  A-B\ \ge\ \frac{\hat A}{1+\gamma_m}-\frac{\hat B}{1-\gamma_m},
+\]
+which is positive as soon as $\hat A-\hat B>\gamma_m(\hat A+\hat B)$. Our program computes $\gamma=4mu/(1-mu)$ and
+accepts a coefficient only if $\fl(\hat A-\hat B)>\fl(2\gamma\,\fl(\hat A+\hat B))$. The computed $\gamma$ is at least
+$4\gamma_m(1-u)/(1+u)$, so the computed threshold is at least $8\gamma_m(\hat A+\hat B)(1-u)^3/(1+u)$, and acceptance
+gives $\hat A-\hat B>8\gamma_m(\hat A+\hat B)(1-u)^3/(1+u)^2>\gamma_m(\hat A+\hat B)$. For $n=k=9$ we have $m=601$ and
+$8\gamma_m<5.4\cdot10^{-13}$.
+
+\section{The computation}\label{sec:comp}
+
+This section describes how the functions are listed, gives the outcome of the certificate, and reports two checks
+made by different methods.
+
+\subsection*{Enumeration}
+Write $\uparrow\!x=\{y:x\le_L y\}$ and $\downarrow\!x=\{y:y\le_L x\}$. Complementation reverses $\le_L$, since the
+prefix sums of $\bar x$ are $m-\sum_{i\le m}x_i$; so it maps $\uparrow\!x$ onto $\downarrow\!\bar x$. The antisymmetric
+left-monotone functions are listed by a depth-first search. A state is a pair of disjoint sets $(I,O)$, with $I$
+up-closed and $O=\bar I:=\{\bar x:x\in I\}$. At each step the least undecided point $x$ is set either to $1$, adding $\uparrow\!x$ to $I$
+and $\downarrow\!\bar x$ to $O$, or to $0$, adding $\uparrow\!\bar x$ to $I$ and $\downarrow\!x$ to $O$. A branch
+whose two sets meet is abandoned. Every antisymmetric left-monotone function is reached exactly once, at the leaf
+whose choices agree with it. The search returns $1,1,2,3,7,21,135,2470,319124$ functions for $n=1,\dots,9$. This
+agrees with the counts of Mossel and O'Donnell~\cite{MO05} and with the number of self-dual regular Boolean functions
+computed by Knuth (sequence A109456 of~\cite{OEIS}; see also Hausmann~\cite{Hau15}). As a further check, for $n=7$ we
+filtered the $1{,}422{,}564$ self-dual monotone functions for left-monotonicity by a separate program and obtained the
+same $135$.
+
+\subsection*{Results}
+For $n\le2$ the only antisymmetric left-monotone function is $\MAJ_1$. For $3\le n\le 9$, every $k$ with
+$2\le k\le 9$ and every antisymmetric left-monotone $f\ne\MAJ_1$, all coefficients
+of $t^1,\dots,t^{nk-2}$ in $D_{f,k}$ passed the test of Section~\ref{sec:float}. By Corollary~\ref{cor:coef} this
+proves Theorem~\ref{thm:main}. Table~\ref{tab:margin} shows how far the test is from failing. It lists the smallest
+value of $(\hat A-\hat B)/(\hat A+\hat B)$ over all functions, all $k$ and all middle coefficients; the relative
+threshold $2\gamma$ is below $6\cdot10^{-13}$.
+
+\begin{table}[tbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccc}
+\toprule
+$n$ & 3 & 4 & 5 & 6 & 7 & 8 & 9\\\midrule
+functions & 2 & 3 & 7 & 21 & 135 & 2470 & 319124\\
+margin & $7.9\cdot10^{-3}$ & $4.3\cdot10^{-3}$ & $1.9\cdot10^{-3}$ & $7.6\cdot10^{-4}$ &
+$3.0\cdot10^{-4}$ & $1.2\cdot10^{-4}$ & $4.9\cdot10^{-5}$\\\bottomrule
+\end{tabular}
+\medskip
+\caption{The margin is the smallest value of $(\hat A-\hat B)/(\hat A+\hat B)$, where $\hat A-\hat B$ is the computed
+coefficient of $t^j$ in $D_{f,k}$, over $1\le j\le nk-2$, all antisymmetric left-monotone $f\ne\MAJ_1$ and
+$2\le k\le 9$. In every case it is attained
+at $k=2$. For $n\le2$ the function $\MAJ_1$ is the only one.}
+\label{tab:margin}
+\end{table}
+
+As a check on the method, we applied the same program to $n=5$ and $k=10,11,12$. It certifies $4$, $4$ and $2$ of the
+six functions other than $\MAJ_1$. At $k=10$ one of the two rejected functions is $\MAJ_3$, which beats $\MAJ_1$ on an
+interval of $\epsilon$, in agreement with~\cite[Fact~5.1]{MO05}. The other is $\MAJ_5$, which lies below $\MAJ_1$ on
+all of $(0,1/2)$ although its difference with $\MAJ_1$ has a negative coefficient. At $k=11$ the rejected functions
+are again $\MAJ_3$ and $\MAJ_5$, and both beat $\MAJ_1$ somewhere.
+
+\subsection*{\texorpdfstring{Exact check for $n\le8$}{Exact check for n <= 8}}
+For $3\le n\le 8$ and $4\le k\le 9$ we also computed $P_k(\MAJ_1;\epsilon)-P_k(f;\epsilon)$ in exact rational
+arithmetic, as a polynomial in $\epsilon$, with SymPy~\cite{SymPy}. We wrote it as $\epsilon^a(1-2\epsilon)^bg(\epsilon)$,
+with $a,b\ge0$ integers and $g$ a polynomial not vanishing at $0$ or $1/2$, substituted $\epsilon=t/(2(1+t))$ in $g$ and cleared the denominator. For every $f\ne\MAJ_1$ the coefficients of the resulting
+polynomial in $t$ were nonnegative and not all zero, which proves $P_k(f;\epsilon)<P_k(\MAJ_1;\epsilon)$ on $(0,1/2)$
+independently of Section~\ref{sec:float}. Separately, we evaluated
+$(P_k(\MAJ_1;\epsilon)-P_k(f;\epsilon))/(\epsilon(1-2\epsilon)^2)$ in double precision at $4000$ equally spaced points
+of $(0,1/2)$ for $n=7,8$ and $2\le k\le 9$; for $n=7$ the functions were obtained by a second program, which filters
+the self-dual monotone functions. The smallest value found was $1.6\cdot10^{-2}$ for $n=7$ and $8.2\cdot10^{-3}$ for
+$n=8$, both at $k=9$ near $\epsilon=1/2$.
+
+\subsection*{Larger values of the number of bits}
+For $n=10$ there are $1{,}214{,}554{,}343$ self-dual regular functions~\cite{OEIS}, and the same computation would take
+several thousand times longer. From $n=5$ on, the relative margins in Table~\ref{tab:margin} shrink by a factor of
+about $2.5$ for each added bit. They give no evidence against a positive answer to Open Problem~1 for every $n$, but they do not
+suggest a proof either.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Data availability}
+The programs that enumerate the functions and certify the coefficients, the exact and numerical checks, and their
+output are available with the \LaTeX{} source of the paper at\\
+\url{https://github.com/yspennstate/cosmic-coin-flipping-nine-bits/tree/v1.0}.
+The computations were run with Python 3.13.2, NumPy 2.2.3 (Accelerate BLAS) and SymPy 1.13.1.
+
+The paper is part of the Math Brain project, whose public repository is given in~\cite{MathBrainRepo}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Claude agents (Anthropic) designed and ran the computation, proved Lemmas~\ref{lem:ends} and~\ref{lem:nonneg}, and
+prepared the manuscript; Codex agents (OpenAI) refereed the proofs and the programs. The problem, the reduction to one
+left-monotone function, the cases $k=2,3$, the function counts and the analysis of $n=5$ are due to Elchanan Mossel and
+Ryan O'Donnell~\cite{MO05}, the case $k=2$ goes back to Hans Witsenhausen~\cite{W75}, and the cases $k=4,5$ follow from
+Lei Yu's theorem on symmetric stability~\cite{Yu23}; the rounding-error bounds are Nicholas Higham's~\cite{Hig02}.
+Corollary~\ref{cor:coef} is an elementary sufficient condition. New here are the certified computation and
+Theorem~\ref{thm:main} for $6\le k\le9$. The author directed the work and is responsible for the content of the
+paper.
+
+\begin{thebibliography}{99}
+\bibitem{Hau15} J.-C. Hausmann, \emph{Counting polygon spaces, Boolean functions and majority games}, 2015,
+\arxiv{1501.07553}.
+\bibitem{Hig02} N.~J. Higham, \emph{Accuracy and Stability of Numerical Algorithms}, 2nd ed., SIAM, Philadelphia,
+2002, \doi{10.1137/1.9780898718027}.
+\bibitem{KKM26} P.~Kamath, R.~Kumar and P.~Manurangsi, \emph{When majority fails: tight bounds for correlation
+distillation conjectures}, 2026, \arxiv{2604.06590}.
+\bibitem{LM21} J.~Li and M.~M\'edard, \emph{Boolean functions: noise stability, non-interactive correlation
+distillation, and mutual information}, IEEE Trans. Inform. Theory \textbf{67} (2021), 778--789,
+\doi{10.1109/TIT.2020.3041028}, \arxiv{1801.04462}.
+\bibitem{MO05} E.~Mossel and R.~O'Donnell, \emph{Coin flipping from a cosmic source: on error correction of truly
+random bits}, Random Structures Algorithms \textbf{26} (2005), 418--436, \doi{10.1002/rsa.20062}, \arxiv{math/0406504}.
+\bibitem{MORSS06} E.~Mossel, R.~O'Donnell, O.~Regev, J.~E. Steif and B.~Sudakov, \emph{Non-interactive correlation
+distillation, inhomogeneous Markov chains, and the reverse Bonami--Beckner inequality}, Israel J. Math. \textbf{154}
+(2006), 299--336, \doi{10.1007/BF02773611}, \arxiv{math/0410560}.
+\bibitem{OEIS} OEIS Foundation, \emph{The On-Line Encyclopedia of Integer Sequences}, sequence A109456, number of
+Boolean functions of $n$ variables that are self-dual and regular, contributed by D.~E. Knuth, accessed November 2026,
+\url{https://oeis.org/A109456}.
+\bibitem{SymPy} SymPy Development Team, \emph{SymPy: a Python library for symbolic mathematics}, version 1.13.1, 2024,
+\url{https://www.sympy.org}.
+\bibitem{W75} H.~S. Witsenhausen, \emph{On sequences of pairs of dependent random variables}, SIAM J. Appl. Math.
+\textbf{28} (1975), 100--113, \doi{10.1137/0128010}.
+\bibitem{Yu23} L.~Yu, \emph{On the $\Phi$-stability and related conjectures}, Probab. Theory Related Fields
+\textbf{186} (2023), 1045--1080, \doi{10.1007/s00440-023-01209-5}, \arxiv{2104.08740}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain}, public software repository, snapshot of 14 November 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+manuscript dated 26 October 2026, Zenodo release 12 November 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24},
+\doi{10.5281/zenodo.24150837}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, snapshot of 13 November 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}

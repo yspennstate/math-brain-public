@@ -1,0 +1,444 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\inv}{\operatorname{inv}}
+\newcommand{\dW}{d_{\mathrm W}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+
+\title[Inversions and two-sided descents]{A joint central limit theorem for inversions and two-sided descents}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\subjclass[2020]{60F05, 05A05, 60C05}
+\keywords{random permutation, inversions, descents, inverse descents, central limit theorem, Stein's method}
+
+\begin{abstract}
+Let $\pi$ be a uniform random permutation of $n$ elements, let $I(\pi)$ be its number of inversions and let
+$T(\pi)=D(\pi)+D(\pi^{-1})$ be the number of descents of $\pi$ plus the number of descents of $\pi^{-1}$. We show that
+$I$ and $T$, centred and scaled by their standard deviations, converge jointly to a pair of independent standard normal
+variables, with the Wasserstein distance of every unit linear combination to the standard normal law at most a constant
+times $n^{-1/2}$. The same holds with $T$ replaced by any statistic that adds a fixed function over all windows of $k$
+consecutive positions of $\pi$ and of $\pi^{-1}$, provided its variance grows linearly, and the triple
+$(I,D(\pi),D(\pi^{-1}))$, standardized in the same way, converges to a standard normal vector in $\mathbb R^3$. Exactly,
+$\Cov(I,T)=(n-1)/2$. The proof replaces $I$ by its Hoeffding projection on the point process that generates $\pi$
+and applies Chatterjee's normal approximation by interaction graphs, as Chatterjee and Diaconis did for $T$ alone.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+For a permutation $\pi$ of $[n]=\{1,\dots,n\}$ write $I(\pi)=\#\{i<j:\pi(i)>\pi(j)\}$ for the number of inversions
+and $D(\pi)=\#\{1\le i<n:\pi(i)>\pi(i+1)\}$ for the number of descents. When $\pi$ is uniform, both are
+asymptotically normal. For $I$ this is the normality of Kendall's rank statistic~\cite{Kendall}, a U-statistic in the
+sense of Hoeffding~\cite{Hoeffding}; for $D$ it follows from the representation of descents as a one-dependent
+sequence. Chatterjee and Diaconis~\cite{CD} studied the two-sided statistic
+\[
+T(\pi)=D(\pi)+D(\pi^{-1}),
+\]
+the number of descents of $\pi$ plus the number of descents of its inverse, and proved a central limit theorem for
+it with a Wasserstein rate $n^{-1/2}$, using the method of interaction graphs introduced by Chatterjee~\cite{Ch08}.
+The asymptotic independence of the descent counts of $\pi$ and $\pi^{-1}$, and with it the normality of $T$, had been
+obtained earlier by Vatutin~\cite{Vatutin}. The two-sided statistic was later studied on finite Coxeter groups by
+Röttger~\cite{Rottger}, Brück and Röttger~\cite{BruckRottger} and Féray~\cite{FerayCoxeter}, and for Mallows
+permutations by He~\cite{He}.
+
+The pair $(I,D)$ is also understood. Fang and Röllin~\cite[Corollary~3.8]{FangRollin} proved that the standardized
+vector $(I,D)$ is close to a standard normal vector in $\mathbb R^2$, with an error of order $n^{-1/2}$ on convex sets,
+and Dörr and Heiny~\cite{DorrHeiny} also proved the joint central limit theorem and studied the joint extremes. Since
+$\pi\mapsto\pi^{-1}$ preserves the uniform law and $I(\pi^{-1})=I(\pi)$, the pair $(I(\pi),D(\pi^{-1}))$ has the law of
+$(I,D)$, so this result covers the inverse descents as well. It does not settle the joint law of $I$ with $T$, which
+involves $D(\pi)$ and $D(\pi^{-1})$ simultaneously: two bivariate normal limits that share a coordinate do not determine
+the trivariate limit. In the outlook of his paper on generalized inversions and descents, Dörr~\cite[Section~5]{Dorr}
+notes that the joint asymptotic normality of $T$ with the number of inversions has not been investigated. This paper
+proves it.
+
+Fix $k\ge2$. For a sequence of $k$ distinct reals let $\operatorname{st}$ denote its pattern, the permutation of $[k]$
+with the same relative order. For functions $f,g$ from the symmetric group $S_k$ to $[-1,1]$ set
+\begin{equation}\label{eq:W}
+F(\pi)=\sum_{i=1}^{n-k+1}f\bigl(\operatorname{st}(\pi(i),\dots,\pi(i+k-1))\bigr),\qquad
+G(\pi)=F_g(\pi^{-1}),\qquad W=F(\pi)+G(\pi),
+\end{equation}
+where $F_g$ is defined as $F$ with $g$ in place of $f$. We call $W$ a two-sided local statistic of window length $k$.
+The function applied to a window does not depend on the window's position; this is used in Lemma~\ref{lem:graph}.
+The statistic $T$ is the case $k=2$, $f=g=\mathbf 1\{\cdot=21\}$, and $D(\pi)$, $D(\pi^{-1})$, the numbers of peaks
+of $\pi$ and of $\pi^{-1}$ are of the same form, and so is a linear combination of statistics with a common window
+length once it is scaled so that $|f|,|g|\le1$. For a random variable $X$ with
+positive variance write $X'=(X-\E X)/\sqrt{\Var X}$, and let $\dW(X,Y)=\sup\{|\E h(X)-\E h(Y)|:h\text{ is 1-Lipschitz}\}$ be the Wasserstein distance and $Z$ a standard normal
+variable.
+
+\begin{theorem}\label{thm:main}
+Fix $k\ge2$ and $c>0$. There are constants $C$ and $n_1$, depending only on $k$ and $c$, such that the following holds.
+Let $\pi$ be uniform on $S_n$ with $n\ge n_1$, and let $W$ be a two-sided local statistic of window length $k$ with
+$\Var W\ge cn$. Then for every $(a,b)\in\mathbb R^2$ with $a^2+b^2=1$,
+\[
+\dW\bigl(aI'+bW',Z\bigr)\le Cn^{-1/2}.
+\]
+In particular, if $W=W_n$ is such a statistic for each $n$ with $\liminf_n\Var(W_n)/n>0$, then
+$(I',W_n')$ converges in distribution to a standard normal vector in $\mathbb R^2$.
+\end{theorem}
+
+The bound is a family of one-dimensional bounds, one for each direction; it is not a bound in a multivariate
+distance. The convergence in distribution follows from it by the Cramér--Wold device.
+
+\begin{corollary}\label{cor:T}
+For $n\ge2$, $\Cov(I,T)=(n-1)/2$, and $\Var T=(n+7)/6-1/n$. The correlation of $I$ and $T$ is
+$(3\sqrt6+o(1))/n$, and $(I',T')$ converges in distribution to a standard normal vector in $\mathbb R^2$, with
+$\dW(aI'+bT',Z)\le Cn^{-1/2}$ uniformly over $a^2+b^2=1$ for all $n\ge n_1$, where $C$ and $n_1$ are universal constants.
+\end{corollary}
+
+\begin{corollary}\label{cor:triple}
+The vector $\bigl(I',D(\pi)',D(\pi^{-1})'\bigr)$ converges in distribution to a standard normal vector in
+$\mathbb R^3$.
+\end{corollary}
+
+Three observations make the proof work. The first is the coupling of Chatterjee and Diaconis~\cite{CD}: $\pi$ is the
+permutation induced by $n$ independent uniform points of the unit square, so that $\pi$ and $\pi^{-1}$ are read from
+the same points by the two coordinate orders. On this space $I$ is the number of discordant pairs of points, a
+U-statistic of order two, and its Hoeffding projection~\cite{Hoeffding} is a sum of independent terms, one per point
+(Lemma~\ref{lem:hoeff}). A sum of functions of single coordinates creates no interactions in the sense
+of~\cite{Ch08}, so the interaction graph that Chatterjee and Diaconis built for $T$ serves without change for every
+linear combination of the projection with $W$ (Lemma~\ref{lem:graph}). The second is an exact conditioning identity
+for consecutive windows (Lemma~\ref{lem:window}), which shows that $I$ and $W$ are almost uncorrelated, so that the
+limiting covariance is the identity. The third is that the projection is within $\sqrt{14/(2n+5)}$ of $I'$ in $L^2$, which
+transfers the rate from the projection to $I$ itself. Each step is elementary; the joint statement does not follow from
+the marginal results or from the bivariate results with $D$ alone.
+
+Section~\ref{sec:moments} proves the covariance identities, Section~\ref{sec:proj} the projection,
+Section~\ref{sec:graph} the interaction graph and the replacement bound, and Section~\ref{sec:proofs} the theorem and
+its corollaries.
+
+\section{Covariances}\label{sec:moments}
+
+For $\sigma\in S_k$ write $\inv(\sigma)$ for its number of inversions. If $\sigma$ is uniform on $S_k$, then
+$\Var\inv(\sigma)=k(k-1)(2k+5)/72$; for $k=n$ this is $\Var I$.
+
+\begin{lemma}\label{lem:window}
+Let $2\le k\le n$, let $\pi$ be uniform on $S_n$, let $1\le i\le n-k+1$ and let $\sigma=\operatorname{st}(\pi(i),\dots,\pi(i+k-1))$.
+Then
+\[
+\E\bigl(I(\pi)\mid\sigma\bigr)=\inv(\sigma)+\E I(\pi)-\E\inv(\sigma).
+\]
+Consequently $\Cov\bigl(I(\pi),h(\sigma)\bigr)=\Cov\bigl(\inv(\sigma),h(\sigma)\bigr)$ for every $h:S_k\to\mathbb R$,
+and the same holds with $\pi^{-1}$ in place of $\pi$ in the definition of $\sigma$.
+\end{lemma}
+
+\begin{proof}
+Let $B=\{i,\dots,i+k-1\}$, let $S=\pi(B)$ be the set of values in the window, and let $\rho$ be the restriction of
+$\pi$ to $[n]\setminus B$. The map $\pi\mapsto(\sigma,S,\rho)$ is a bijection onto the set of triples with
+$\sigma\in S_k$, $S$ a $k$-subset of $[n]$ and $\rho$ a bijection from $[n]\setminus B$ onto $[n]\setminus S$; hence
+$\sigma$ is uniform and independent of $(S,\rho)$. Split the inversions into the pairs inside $B$, the pairs outside
+$B$, and the pairs with one position $p\notin B$ and one position $q\in B$. The first count is $\inv(\sigma)$ and the
+second is a function of $\rho$. Because $B$ is a set of consecutive positions, every $p\notin B$ lies either to the
+left of all of $B$ or to the right of all of $B$. In the first case the number of $q\in B$ forming an inversion with
+$p$ is $\#\{s\in S:s<\rho(p)\}$, in the second case it is $\#\{s\in S:s>\rho(p)\}$; neither depends on $\sigma$. So
+$I(\pi)=\inv(\sigma)+\Phi(S,\rho)$ for a function $\Phi$, and the independence of $\sigma$ from $(S,\rho)$ gives
+$\E(I\mid\sigma)=\inv(\sigma)+\E\Phi$. Taking expectations identifies the constant. The covariance identity follows
+from $\Cov(I,h(\sigma))=\Cov(\E(I\mid\sigma),h(\sigma))$. For $\pi^{-1}$ use that $\pi^{-1}$ is uniform and
+$I(\pi^{-1})=I(\pi)$.
+\end{proof}
+
+The lemma needs the window to consist of consecutive positions: for a non-consecutive set of positions the
+cross term depends on how the window's values are arranged relative to the positions in its gaps.
+
+\begin{lemma}\label{lem:cov}
+Let $W$ be a two-sided local statistic of window length $k\le n$. Then
+\[
+\bigl|\Cov(I,W)\bigr|\le 2(n-k+1)\sqrt{k(k-1)(2k+5)/72}\le 2n\sqrt{k^3/24}.
+\]
+Moreover $\Cov(I,D(\pi))=\Cov(I,D(\pi^{-1}))=(n-1)/4$ and $\Cov(I,T)=(n-1)/2$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:window}, each of the $n-k+1$ windows of $\pi$ contributes
+$\Cov(\inv(\sigma),f(\sigma))$ to $\Cov(I,F)$, where $\sigma$ is uniform on $S_k$, and by the Cauchy--Schwarz
+inequality and $|f|\le1$ this is at most $\sqrt{\Var\inv(\sigma)}$ in absolute value. The windows of $\pi^{-1}$ are
+treated in the same way. The second inequality is $k(k-1)(2k+5)\le3k^3$, that is, $k^2-3k+5>0$. For $k=2$ and $f$ the
+indicator of $21$, $\inv(\sigma)=f(\sigma)$ is a Bernoulli$(1/2)$ variable, so each window contributes $1/4$.
+\end{proof}
+
+The value $\Var T=(n+7)/6-1/n$ for $n\ge2$ is computed in~\cite{CD}. Together with the classical value
+$\Var D(\pi)=\Var D(\pi^{-1})=(n+1)/12$ it gives $\Cov(D(\pi),D(\pi^{-1}))=(n-1)/(2n)$. An enumeration of $S_n$ for $n\le8$ confirms these formulas and
+Lemma~\ref{lem:cov}.
+
+\section{The point model and the projection of the inversion count}\label{sec:proj}
+
+Let $P_1,\dots,P_n$ be independent uniform points of $[0,1]^2$, $P_a=(U_a,V_a)$. With probability one the $U_a$ are
+distinct and the $V_a$ are distinct. List the points by increasing first coordinate and let $\pi(i)$ be the rank, among
+$V_1,\dots,V_n$, of the second coordinate of the $i$-th point. Then $\pi$ is uniform on $S_n$, and $\pi^{-1}(j)$ is
+the rank of the first coordinate of the point whose second coordinate has rank $j$. A descent of $\pi$ is a pair of
+points adjacent in the first coordinate order whose second coordinates decrease; a descent of $\pi^{-1}$ is a pair
+adjacent in the second order whose first coordinates decrease. An inversion of $\pi$ is a discordant pair:
+\[
+I=\sum_{a<b}h(P_a,P_b),\qquad h(p,q)=\mathbf 1\{(u-u')(v-v')<0\}\quad\text{for }p=(u,v),\ q=(u',v').
+\]
+This is the coupling of~\cite[Section~5]{CD}.
+
+\begin{lemma}\label{lem:hoeff}
+Let $n\ge2$, let $\psi(u,v)=-2(u-\tfrac12)(v-\tfrac12)$ and $L=6n^{-1/2}\sum_{a=1}^n\psi(P_a)$. Then $\E L=0$, $\Var L=1$,
+$|\psi|\le\tfrac12$, and
+\[
+\E\bigl(I'-L\bigr)^2\le\frac{14}{2n+5}.
+\]
+\end{lemma}
+
+\begin{proof}
+For $p=(u,v)$ and $P_2$ uniform, $\E h(p,P_2)=u(1-v)+(1-u)v=\tfrac12+\psi(p)$. Hence $\E h=\tfrac12$, $\E\psi=0$ and
+$\E\psi^2=4\cdot(1/12)^2=1/36$, so $\Var L=1$. Put $\tilde h(p,q)=h(p,q)-\tfrac12-\psi(p)-\psi(q)$. Then
+$\E(\tilde h(P_1,P_2)\mid P_1)=0$, so the variables $\tilde h(P_a,P_b)$, $a<b$, are uncorrelated with each other
+(also when two pairs share a point) and with every $\psi(P_c)$, and
+$\E\tilde h^2=\Var h-2\Var\psi=\tfrac14-\tfrac2{36}=\tfrac7{36}$. Summing over pairs,
+\[
+I-\E I=(n-1)\sum_a\psi(P_a)+R,\qquad R=\sum_{a<b}\tilde h(P_a,P_b),\qquad \E R^2=\binom n2\frac7{36}.
+\]
+This gives $\Var I=n(n-1)^2/36+7n(n-1)/72=n(n-1)(2n+5)/72$. Dividing by $\sqrt{\Var I}$,
+$I'=r_nL+R/\sqrt{\Var I}$ with $r_n=\sqrt{2(n-1)/(2n+5)}\in[0,1]$ and $\E(R^2)/\Var I=7/(2n+5)=1-r_n^2$. Since $L$ and $R$ are
+uncorrelated,
+\[
+\E(I'-L)^2=(1-r_n)^2+(1-r_n^2)=2(1-r_n)\le2(1-r_n^2)=\frac{14}{2n+5}.\qedhere
+\]
+\end{proof}
+
+\section{The interaction graph}\label{sec:graph}
+
+We use the normal approximation theorem of Chatterjee~\cite[Theorem~2.5]{Ch08} in the form stated by Chatterjee and
+Diaconis~\cite[Theorem~4.1]{CD}. Let $\mathcal X$ be a measurable space and $\phi:\mathcal X^n\to\mathbb R$ measurable.
+A graphical rule assigns to each $x\in\mathcal X^n$ a simple graph $\mathcal G(x)$ on $[n]$; it is symmetric if
+relabelling the coordinates of $x$ relabels the graph accordingly. For $x,x^*\in\mathcal X^n$ let $x^i$ be $x$ with
+$x_i$ replaced by $x_i^*$, and $x^{ij}$ the vector with both $x_i$ and $x_j$ replaced. The rule is an interaction
+rule for $\phi$ if, whenever $\{i,j\}$ is an edge of none of $\mathcal G(x)$, $\mathcal G(x^i)$, $\mathcal G(x^j)$,
+$\mathcal G(x^{ij})$, we have $\phi(x)-\phi(x^j)=\phi(x^i)-\phi(x^{ij})$. A symmetric graphical rule
+$\mathcal G'$ on $\mathcal X^{n+4}$ is an extension of $\mathcal G$ if $\mathcal G(x_1,\dots,x_n)$ is a subgraph of
+$\mathcal G'(x_1,\dots,x_{n+4})$ for all $x_1,\dots,x_{n+4}$.
+
+\begin{theorem}[Chatterjee]\label{thm:chatterjee}
+Let $\phi$ admit a symmetric interaction rule $\mathcal G$ with an extension $\mathcal G'$ on $\mathcal X^{n+4}$. Let
+$X_1,X_2,\dots$ be independent and identically distributed in $\mathcal X$, $X=(X_1,\dots,X_n)$, $X^*$ an independent
+copy of $X$, $\Phi=\phi(X)$ and $\sigma^2=\Var\Phi>0$. Let $\Delta_j\phi=\Phi-\phi(X^j)$ with $X^j$ formed from $X$
+and $X^*$ as $x^j$ is formed from $x$ and $x^*$, $M=\max_j|\Delta_j\phi|$, and $\delta=1+$ the degree of the vertex $1$ in
+$\mathcal G'(X_1,\dots,X_{n+4})$. Then, for a universal constant $C_0$,
+\[
+\dW\Bigl(\frac{\Phi-\E\Phi}{\sigma},Z\Bigr)\le\frac{C_0n^{1/2}}{\sigma^2}\bigl(\E M^8\bigr)^{1/4}\bigl(\E\delta^4\bigr)^{1/4}
++\frac1{2\sigma^3}\sum_{j=1}^n\E|\Delta_j\phi|^3.
+\]
+\end{theorem}
+
+Take $\mathcal X=[0,1]^2$. Call $x\in\mathcal X^m$ generic if its first coordinates are distinct and its second
+coordinates are distinct. For generic $x$ let $\pi_x$ be the permutation it induces as in Section~\ref{sec:proj}, and
+for $a\in[m]$ let $\alpha_x(a)$ and $\beta_x(a)$ be the ranks of the first and second coordinate of $x_a$. For
+non-generic $x$ define $\pi_x$ by breaking ties by the index, which makes every statistic below measurable; its values
+there play no role.
+
+\begin{lemma}\label{lem:graph}
+Fix $k\ge2$, let $W(x)=F(\pi_x)+G(\pi_x)$ be a two-sided local statistic of window length $k$, let $s>0$, and let
+$\phi=\lambda\sum_a\psi(x_a)+\mu W/s$ with real $\lambda,\mu$. Let $\mathcal G(x)$, for $x\in\mathcal X^n$, be the
+complete graph if $x$ is not generic, and otherwise the graph in which $a\ne b$ are joined when
+$|\alpha_x(a)-\alpha_x(b)|\le k-1$ or $|\beta_x(a)-\beta_x(b)|\le k-1$. Let $\mathcal G'$ on $\mathcal X^{n+4}$ be
+defined in the same way with $k+3$ in place of $k-1$. Then $\mathcal G$ is a symmetric interaction rule for $\phi$,
+$\mathcal G'$ is an extension of $\mathcal G$, every vertex of $\mathcal G'(x)$ has degree at most $4k+12$ when $x$ is
+generic, and for generic $x$ and $x^j$
+\[
+|W(x)-W(x^j)|\le 8k-4.
+\]
+\end{lemma}
+
+\begin{proof}
+Symmetry is clear, since genericity and ranks are unchanged by relabelling. If $x_1,\dots,x_n$ is not generic, neither
+is $x_1,\dots,x_{n+4}$, and both graphs are complete. If $x_1,\dots,x_{n+4}$ is not generic, $\mathcal G'$ is complete.
+Otherwise, adding four points changes a difference of ranks among the first $n$ points by at most $4$, so every edge of
+$\mathcal G(x_1,\dots,x_n)$ is an edge of $\mathcal G'(x_1,\dots,x_{n+4})$. In a generic configuration each vertex has
+at most $2(k+3)$ neighbours in each order, which gives the degree bound.
+
+For the interaction property, the part $\lambda\sum_a\psi(x_a)$ satisfies $\phi(x)-\phi(x^j)=\phi(x^i)-\phi(x^{ij})$
+identically, because it is a sum of functions of one coordinate each. It therefore suffices to prove the identity for
+$F(\pi_x)$; the argument for $G$ is the same with the roles of the two coordinates exchanged. Suppose $\{i,j\}$ is an
+edge of none of the four graphs. Then the four configurations are generic, and in each of them the first-coordinate
+ranks of the $i$-th and the $j$-th points differ by at least $k$.
+
+Regard a generic configuration as the sequence of its points listed by first coordinate; $F$ adds $f$ over the
+patterns, in the second coordinate, of all blocks of $k$ consecutive points. Removing a point $z$ deletes the blocks
+that contain $z$ and creates the blocks that contain both the last points before $z$ and the first points after $z$;
+every other block keeps its points and their relative order. So the change of $F$ caused by removing $z$ is a function
+of the ordered list of $z$, the at most $k-1$ points immediately before $z$ and the at most $k-1$ points immediately
+after it, through their second coordinates; it does not depend on the absolute position of $z$ in the sequence, which
+is where the fact that $f$ is the same on all windows is used. Removing $z$ deletes at most $k$ blocks and creates
+at most $k-1$, so this change is at most $2k-1$ in absolute value. The same holds for inserting a point.
+
+Now $F(\pi_x)-F(\pi_{x^i})$ is the change caused by removing $x_i$ from $x$, plus the change caused by inserting
+$x_i^*$ into the result. In $x$ there are at least $k-1$ points strictly between $x_i$ and $x_j$ in the first order, so
+the $k-1$ points immediately before and after $x_i$ do not include $x_j$ and are not altered when $x_j$ is removed.
+The same holds in $x^j$ for $x_i$ and $x_j^*$. Hence removing $x_i$ causes the same change in $x$ as in $x^j$, and the
+neighbourhoods of $x_i$ in the two configurations, after $x_i$ is removed, still agree. Applying the same argument to
+$x^i$ and $x^{ij}$ shows that inserting $x_i^*$ causes the same change in both. Therefore
+$F(\pi_x)-F(\pi_{x^i})=F(\pi_{x^j})-F(\pi_{x^{ij}})$, which is the required identity. Finally, for generic $x$ and
+$x^j$, $W(x)-W(x^j)$ is a removal and an insertion for $F$ and for $G$, at most $2(2k-1)$ each.
+\end{proof}
+
+\begin{remark}
+The bound $|W(x)-W(x^j)|\le8k-4$ uses that $f$ and $g$ do not depend on the window's position. If different windows
+carry different functions, removing a point shifts the positions of all later windows, and a single replacement can
+change the statistic by an amount of order $n$.
+\end{remark}
+
+\section{Proofs}\label{sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Realize $\pi=\pi_X$ from independent uniform points $X=(P_1,\dots,P_n)$, let $s=\sqrt{\Var W}\ge\sqrt{cn}$, and fix
+$a^2+b^2=1$. Apply Theorem~\ref{thm:chatterjee} to $\phi=6an^{-1/2}\sum_{l=1}^n\psi(x_l)+bW/s$, so that $\phi(X)-\E\phi(X)=aL+bW'$.
+By Lemma~\ref{lem:graph} the hypotheses hold, and since $X$, $X^*$ and $X_1,\dots,X_{n+4}$ are generic with
+probability one, $\delta\le4k+13$ and
+\[
+M\le\frac{6|a|}{\sqrt n}+\frac{(8k-4)|b|}{s}\le\frac{m_0}{\sqrt n},\qquad m_0=6+\frac{8k}{\sqrt c},
+\]
+with probability one, using $|\psi(p)-\psi(q)|\le1$. Next, $\sigma^2=\Var(aL+bW')=1+2ab\Cov(L,W')$. By Lemma~\ref{lem:cov},
+$|\Cov(I',W')|\le2n\sqrt{k^3/24}/(\sqrt{\Var I}\,s)\le c_1n^{-1}$ for a constant $c_1$ depending on $k$ and $c$, and
+by Lemma~\ref{lem:hoeff} and the Cauchy--Schwarz inequality
+\[
+|\Cov(L,W')|\le|\Cov(I',W')|+\|L-I'\|_2\le c_1n^{-1}+\sqrt{14/(2n+5)}.
+\]
+Here $\Var I=n(n-1)(2n+5)/72\ge n^3/36$ for $n\ge2$, so one may take $c_1=12\sqrt{k^3/24}/\sqrt c$. Choose
+$n_1\ge\max(k,2)$ so that the right side is at most $1/4$ for $n\ge n_1$; then $\tfrac12\le\sigma^2\le\tfrac32$. Since
+$(\E M^8)^{1/4}\le m_0^2/n$ and $(\E\delta^4)^{1/4}\le4k+13$, Theorem~\ref{thm:chatterjee} gives
+\[
+\varepsilon_n:=\dW\Bigl(\frac{aL+bW'}{\sigma},Z\Bigr)\le\frac{2C_0(4k+13)m_0^2}{\sqrt n}+\frac{n}{2\sigma^3}\Bigl(\frac{m_0}{\sqrt n}\Bigr)^3
+\le\frac{2C_0(4k+13)m_0^2+\sqrt2\,m_0^3}{\sqrt n}.
+\]
+It remains to pass from $aL+bW'$ to $aI'+bW'$ and from $\sigma$ to $1$. The Wasserstein distance between two random
+variables defined on one space is at most the mean of their absolute difference, and
+$\dW(\sigma X,\sigma Y)=\sigma\,\dW(X,Y)$. Hence
+\[
+\dW(aI'+bW',Z)\le|a|\,\|I'-L\|_2+\sigma\varepsilon_n+|\sigma-1|\,\E|Z|.
+\]
+The first term is at most $\sqrt{14/(2n+5)}\le3n^{-1/2}$ by Lemma~\ref{lem:hoeff}. In the last,
+$|\sigma-1|\le|\sigma^2-1|\le|\Cov(L,W')|\le c_1n^{-1}+3n^{-1/2}$. All three terms are at most a constant depending
+on $k$ and $c$ times $n^{-1/2}$, which proves the bound.
+
+For the convergence in distribution, $\liminf\Var(W_n)/n>0$ gives $c>0$ with $\Var W_n\ge cn$ for all large $n$, so
+$aI'+bW_n'$ converges to $N(0,1)$, the law of $aZ_1+bZ_2$ for independent standard normal $Z_1,Z_2$, for every unit
+vector $(a,b)$, and by scaling for every $(a,b)$. The Cramér--Wold device completes the proof.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:T}]
+The covariance is Lemma~\ref{lem:cov} and the variance is computed in~\cite{CD}. Since $36\Var I/n^3\to1$ and
+$6\Var T/n\to1$, the correlation $\frac{n-1}2\bigl(\Var I\Var T\bigr)^{-1/2}$ equals $(1+o(1))\frac n2\cdot\frac{6\sqrt6}{n^2}
+=(3\sqrt6+o(1))/n$. The statistic $T$ is two-sided local with $k=2$, and $\Var T\ge n/6$ for all $n\ge2$, so
+Theorem~\ref{thm:main} applies with $k=2$ and $c=1/6$; the constants it gives are universal.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:triple}]
+Write $E=D(\pi^{-1})$ and $s_D^2=(n+1)/12$, the common variance of $D(\pi)$ and $E$. By Cramér--Wold it suffices to show
+that $aI'+bD(\pi)'+cE'$ converges to $N(0,a^2+b^2+c^2)$ for every $(a,b,c)$. If $b=c=0$ this is the central limit
+theorem for $I$, which follows from Lemma~\ref{lem:hoeff} and the central limit theorem for the independent sum $L$.
+Otherwise let $m=\max(|b|,|c|)$ and $W=(b/m)D(\pi)+(c/m)E$, a two-sided local statistic of window length $2$ with
+$f=(b/m)\mathbf 1\{\cdot=21\}$ and $g=(c/m)\mathbf 1\{\cdot=21\}$. From the variances recalled after
+Lemma~\ref{lem:cov},
+\[
+m^2\Var W=(b^2+c^2)\frac{n+1}{12}+bc\,\frac{n-1}n\ge(b^2+c^2)\Bigl(\frac n{12}-\frac12\Bigr)\ge\frac{(b^2+c^2)n}{24}
+\]
+for $n\ge12$, and $b^2+c^2\ge m^2$, so $\Var W\ge n/24$. By Theorem~\ref{thm:main}, $(I',W')$ converges to a standard
+normal vector in $\mathbb R^2$. Now $bD(\pi)'+cE'=\tau_nW'$ with $\tau_n=m\sqrt{\Var W}/s_D$, and
+$\tau_n^2=b^2+c^2+12bc(n-1)/(n(n+1))\to b^2+c^2$. Hence $aI'+bD(\pi)'+cE'=aI'+\tau_nW'$ converges to
+$N(0,a^2+b^2+c^2)$.
+\end{proof}
+
+\section*{Notation}
+
+\noindent\begin{tabular}{p{0.3\textwidth}p{0.45\textwidth}p{0.15\textwidth}}
+$[n]$, $S_n$, $\pi$ & the first $n$ positive integers; the symmetric group; a uniform element & Section~\ref{sec:intro}\\
+$I$, $D$, $T$ & inversions; descents; $D(\pi)+D(\pi^{-1})$ & Section~\ref{sec:intro}\\
+$k$, $\operatorname{st}$, $f$, $g$ & window length; pattern of a sequence; window functions & \eqref{eq:W}\\
+$F$, $G$, $W$ & sums over the windows of $\pi$ and of $\pi^{-1}$; their sum & \eqref{eq:W}\\
+$X'$, $Z$, $\dW$ & standardization; standard normal variable; Wasserstein distance & Section~\ref{sec:intro}\\
+$\inv(\sigma)$ & inversions of $\sigma\in S_k$ & Section~\ref{sec:moments}\\
+$P_a=(U_a,V_a)$, $h$ & uniform points of $[0,1]^2$; discordance kernel & Section~\ref{sec:proj}\\
+$\psi$, $\tilde h$, $L$, $R$, $r_n$ & Hoeffding projection and remainder of $I$ & Lemma~\ref{lem:hoeff}\\
+$\mathcal G$, $\mathcal G'$, $x^i$, $x^{ij}$ & interaction rule, its extension, replaced configurations &
+Section~\ref{sec:graph}\\
+$\Delta_j\phi$, $M$, $\delta$ & the quantities of Chatterjee's theorem & Section~\ref{sec:graph}\\
+$\alpha_x$, $\beta_x$, $\pi_x$ & ranks of the coordinates; induced permutation & Section~\ref{sec:graph}\\
+$c$, $C$, $C_0$, $c_1$, $m_0$, $n_1$ & constants & Section~\ref{sec:proofs}\\
+\end{tabular}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to
+Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared,
+persistent memory in which the agents record claims,
+proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each
+other's work. For more on the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain
+repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Data availability}
+The code that checks Lemma~\ref{lem:cov} and the variance formulas by enumerating $S_n$ for $n\le8$ is in the
+repository~\cite{Repo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Claude agents (Anthropic) proved Theorem~\ref{thm:main} and its corollaries and prepared the manuscript; a Codex agent
+(OpenAI) refereed the proofs. The coupling and the interaction graph are those of Chatterjee and Diaconis~\cite{CD}. The
+question is Dörr's~\cite{Dorr}. The joint statements, which answer Dörr's question, are the new results; Lemma~\ref{lem:window} is the conditioning
+identity they use. The author
+directed the work and is responsible for the paper.
+
+\begin{thebibliography}{99}
+\bibitem{BruckRottger} B.~Brück and F.~Röttger, \emph{A central limit theorem for the two-sided descent statistic on
+Coxeter groups}, Electron. J. Combin. \textbf{29} (2022), Paper P1.1, \arxiv{1908.07955}.
+\bibitem{Ch08} S.~Chatterjee, \emph{A new method of normal approximation}, Ann. Probab. \textbf{36} (2008),
+1584--1610, \doi{10.1214/07-AOP370}.
+\bibitem{CD} S.~Chatterjee and P.~Diaconis, \emph{A central limit theorem for a new statistic on permutations}, Indian
+J. Pure Appl. Math. \textbf{48} (2017), 561--573, \arxiv{1608.01666}.
+\bibitem{Dorr} P.~Dörr, \emph{Joint asymptotic normality and extremes of generalized inversions and descents},
+preprint, 2024; version~5, 2026, \arxiv{2404.06598}.
+\bibitem{DorrHeiny} P.~Dörr and J.~Heiny, \emph{Joint extremes of inversions and descents of random permutations},
+J. Theoret. Probab. \textbf{38} (2025), Paper No.~42, \arxiv{2309.17314}.
+\bibitem{FangRollin} X.~Fang and A.~Röllin, \emph{Rates of convergence for multivariate normal approximation with
+applications to dense graphs and doubly indexed permutation statistics}, Bernoulli \textbf{21} (2015), 2157--2189,
+\doi{10.3150/14-BEJ639}.
+\bibitem{FerayCoxeter} V.~Féray, \emph{On the central limit theorem for the two-sided descent statistics in Coxeter
+groups}, Electron. Commun. Probab. \textbf{25} (2020), Paper No.~28, \arxiv{1911.10939}.
+\bibitem{He} J.~He, \emph{A central limit theorem for descents of a Mallows permutation and its inverse}, Ann. Inst.
+Henri Poincaré Probab. Stat. \textbf{58} (2022), 667--694, \arxiv{2005.09802}.
+\bibitem{Hoeffding} W.~Hoeffding, \emph{A class of statistics with asymptotically normal distribution}, Ann. Math.
+Statist. \textbf{19} (1948), 293--325, \doi{10.1214/aoms/1177730196}.
+\bibitem{Kendall} M.~G.~Kendall, \emph{A new measure of rank correlation}, Biometrika \textbf{30} (1938), 81--93,
+\doi{10.1093/biomet/30.1-2.81}.
+\bibitem{Rottger} F.~Röttger, \emph{Asymptotics of a locally dependent statistic on finite reflection groups},
+Electron. J. Combin. \textbf{27} (2020), Paper P2.24, \arxiv{1812.00372}.
+\bibitem{Vatutin} V.~A.~Vatutin, \emph{The numbers of ascending segments in a random permutation and in one inverse to
+it are asymptotically independent}, Discrete Math. Appl. \textbf{6} (1996), 41--52, \doi{10.1515/dma.1996.6.1.41}.
+\bibitem{Repo} Y.~Shmalo, \emph{Inversions and two-sided descents: paper and enumeration program}, 2026,
+\url{https://github.com/yspennstate/inversions-two-sided-descents-clt}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+2026, \doi{10.5281/zenodo.24150837},
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}

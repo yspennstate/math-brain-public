@@ -1,0 +1,353 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\definecolor{linkblue}{RGB}{22,68,105}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={Pair meeting times can concentrate while coalescence is slow},
+  pdfauthor={Yitzchak Shmalo},
+  pdfsubject={Coalescing random walks, meeting times, Kingman coalescent}}
+\urlstyle{same}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{1.5em}
+\setlist[enumerate]{itemsep=0.35em,topsep=0.45em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Exp}{\operatorname{Exp}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Pair meeting times and slow coalescence}
+\fancyhead[R]{\small 16 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\title{\vspace{-1.4em}\textbf{Pair meeting times can concentrate while coalescence is slow}}
+\author{Yitzchak Shmalo\\[0.4em]
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem\\
+\small Givat Ram, Jerusalem, Israel}
+\date{16 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For coalescing random walks driven by a chain with uniform stationary law, Aldous asked what conditions, beyond concentration of the mean meeting times of pairs from independent uniform starts, give a mean coalescence time asymptotic to twice the stationary mean meeting time $\tau$. We study a weighted complete graph on $m$ vertices joined to a two-vertex trap with scale $r\to\infty$. The pair means concentrate exactly when $r=o(m)$, and in every fixed $L^p$ exactly when $r=m^{o(1)}$. Then $\tau\sim m$, while the coalescence time divided by $2mr$ tends to a mean-one exponential law in Wasserstein distance, with all moments. With $r=\log m$ the ratio of the mean coalescence time to $2\tau$ grows like $\log m$. Both stages of the plan Aldous proposed hold; the hand-off between them fails, because once few walkers remain, one of them sits in the trap. The worst-start mixing time is at least of order $mr$, much larger than $\tau$.
+\end{abstract}
+
+\noindent\textit{Keywords:} coalescing random walks, meeting time, Kingman coalescent, voter model, mean-field behaviour.\\
+\textit{Mathematics Subject Classification (2020):} 60J27, 60K35, 05C81.
+
+\section{Introduction}
+
+Let $\nu$ be a symmetric nonnegative function on pairs of distinct points of a finite set of size $n$, with $\sum_y\nu(x,y)=1$ for every $x$. Run continuous-time walkers that jump from $x$ to $y$ at rate $\nu(x,y)/2$. The stationary law is uniform. This is the setting of Aldous's survey of finite Markov information-exchange processes~\cite{Ald13}, where the half-speed chain is the one that drives the voter model and coalescing random walks. Write $h(x,y)$ for the mean meeting time of two independent walkers started at $x$ and $y$, with $h(x,x)=0$, and
+\[
+\tau=\frac1{n^2}\sum_{x,y}h(x,y)
+\]
+for the mean meeting time from independent uniform starts. Let $T$ be the time for coalescing walkers, one started at each point, to reduce to a single walker.
+
+On the complete graph the number of walkers is a pure death chain and $\E T\sim2\tau$; the limit law of $T/\tau$ is that of the total time of Kingman's coalescent~\cite[Chapter~14]{AF}. Cox~\cite{Cox89} proved the same first-order behaviour on the torus $(\mathbb Z/m\mathbb Z)^d$ for $d\ge2$. In a sequence of chains with $n\to\infty$, Aldous~\cite[Section~5.5]{Ald13} imposed the concentration condition
+\begin{equation}\label{eq:52}
+\frac1{n^2}\,\bigl|\{(x,y):\ h(x,y)\notin(1\pm\delta)\tau\}\bigr|\to0\qquad\text{for every }\delta>0,
+\end{equation}
+and asked, as his Open Problem~2, what further conditions imply
+\begin{equation}\label{eq:53}
+\E T\sim2\tau .
+\end{equation}
+He proposed two stages. In Stage~1, for fixed $k$, the mean time for $k$ walkers started at independent uniform points to coalesce should be asymptotic to $2(1-1/k)\tau$. In Stage~2, the time for the $n$ initial walkers to reduce to $k(n)$ walkers, with $k(n)\to\infty$ slowly, should be $o(\tau)$. For Stage~1 he noted that, by results on mixing times from~\cite{Ald82}, \eqref{eq:52} should give a total variation mixing time $\tau_{\mathrm{mix}}=o(\tau)$, after which the meeting events of distinct pairs over intervals of length between $\tau_{\mathrm{mix}}$ and $\tau$ are nearly independent; this route is carried out on the two-dimensional torus by Z\"ahle, Cox and Durrett~\cite{ZCD05}.
+
+The strongest general results are those of Oliveira. In~\cite{Oli12} he showed that the coalescence time of any reversible chain is bounded by a universal constant times the maximal hitting time. In~\cite{Oli13} he proved mean-field behaviour, with Wasserstein bounds, for transitive reversible chains whose mixing time is small compared with the meeting time, and for general chains under a stronger mixing condition. Hermon~\cite{Her} proved, for transitive chains, the Aldous--Fill conjecture that a relaxation time of smaller order than the meeting time suffices. Kanade, Mallmann-Trenn and Sauerwald~\cite{KMS19} compared coalescence with the worst-case meeting time over pairs of starting points, and Hermon, Li, Yao and Zhang~\cite{HLYZ22} studied the early, rapid phase of coalescence from full occupancy. Oliveira~\cite{Oli13} also recorded two families without mean-field behaviour: growing cycles, whose pair means do not concentrate, and stars under simple random walk, whose stationary law is not uniform.
+
+Below we describe a family of weighted graphs in Aldous's setting that satisfies \eqref{eq:52}, and its $L^p$ strengthening for every fixed $p$, while \eqref{eq:53} fails by a logarithmic factor. The mechanism is elementary: $\E T$ is at least the largest pair mean, and \eqref{eq:52} says nothing about a set of pairs of proportion $O(1/n)$. Because every row of $\nu$ sums to one, a single vertex cannot hold a walker for long; two vertices joined by an edge of weight nearly one can. The graph is a complete graph on $m$ vertices, the core, joined to such a pair, the trap, by edges of weight $\eps/m$. A walker in the trap leaves at rate $\eps/2$. With $\eps=1/(mr)$, pairs of core points meet in time about $m$, while a pair with one walker in the trap meets in time about $2mr$.
+
+\begin{theorem}\label{thm:main}
+Let $m\to\infty$, $n=m+2$, and let $\nu$ be the weights \eqref{eq:weights} below with $\eps=1/(m\log m)$. Then:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item $n^{-2}\sum_{x,y}\abs{h(x,y)/\tau-1}^p\to0$ for every fixed $p\ge1$; in particular \eqref{eq:52} holds;
+\item $\tau\sim m$, $\E T\sim2m\log m$, so $\E T/(2\tau)\sim\log m\sim\log n$; moreover $T/(2m\log m)$ converges to an exponential law of mean one in Wasserstein distance, with all moments and with moment generating functions on $(-\infty,1)$;
+\item Stage~1 holds: for each fixed $k\ge2$ the time for $k$ walkers started at independent uniform points to coalesce, divided by $\tau$, converges in law and in mean to the total time of Kingman's coalescent started from $k$ lineages, whose mean is $2(1-1/k)$; and Stage~2 holds: the time for the $n$ walkers to reduce to $k$ walkers has mean at most $6m/k$ for large $m$;
+\item the worst-start total variation mixing time satisfies $t_{\mathrm{mix}}(1/4)/\tau\to\infty$.
+\end{enumerate}
+\end{theorem}
+
+Parts (i) and (ii) are special cases of \cref{thm:slow,thm:conc}, which treat a general trap scale $r$ and give exact conditions for concentration. Part~(iii) is \cref{prop:stages}, and part~(iv) is \cref{prop:mix}. The finite bounds behind them, \cref{thm:finite}, hold for every $m\ge2$ and $0<\eps\le1$ apart from $(m,\eps)=(2,1)$. \Cref{sec:graph} computes the pair means, \cref{sec:finite} proves the finite bounds, \cref{sec:scale} takes the limit, and \cref{sec:stages} treats the two stages and the mixing time.
+
+The family does not answer Open Problem~2, which asks for sufficient conditions; it shows what such conditions must control. Since both stages hold, the two-stage plan fails only at the hand-off: after Stage~2 the surviving walkers are not at independent uniform points, because with high probability one of them sits in the trap (\cref{rem:handoff}). Any further condition must therefore control the positions of the survivors, or exclude small sets of pairs with large meeting times. The graph is not vertex-transitive, so it is consistent with the transitive theorems of~\cite{Oli13,Her}; its mixing time is too large for the general theorem of~\cite{Oli13}. In the worst-pair normalisation of~\cite{KMS19} the family is unremarkable: $\E T$ is asymptotic to the largest pair mean. Its interest lies in the gap between the average and the worst pair.
+
+\section{The graph and its pair meeting times}\label{sec:graph}
+
+Fix an integer $m\ge2$ and $0<\eps\le1$, and put $n=m+2$. The vertex set is the disjoint union of a core $U$ with $|U|=m$ and a trap $V=\{v_1,v_2\}$. For distinct vertices set
+\begin{equation}\label{eq:weights}
+\nu(x,y)=
+\begin{cases}
+a:=\dfrac{1-2\eps/m}{m-1}, & x,y\in U,\\[0.6em]
+\eps/m, & \text{one of }x,y\text{ in }U\text{ and the other in }V,\\[0.3em]
+1-\eps, & \{x,y\}=V,
+\end{cases}
+\end{equation}
+and $\nu(x,x)=0$. A core row sums to $(m-1)a+2\eps/m=1$ and a trap row to $1-\eps+\eps=1$. The weights are nonnegative, the edges between $U$ and $V$ are positive, so the chain is irreducible, and every walker jumps at total rate $1/2$. When $m=2$ and $\eps=1$ the graph is the four-cycle and $a=0$; every other admissible pair $(m,\eps)$ has $a>0$.
+
+Permutations of $U$ and of $V$ preserve $\nu$, so $h$ takes three values off the diagonal: $A$ on distinct pairs in $U$, $B$ on pairs with one point in each of $U$ and $V$, and $C$ on the pair $V$. Put
+\[
+b=\frac{2\eps}m,\qquad d=m+2-\eps,\qquad D=ad+b(3-\eps).
+\]
+
+\begin{lemma}\label{lem:pairs}
+The values $A,B,C$ are the unique solution of
+\begin{equation}\label{eq:pairsys}
+(a+b)A-bB=1,\qquad -\frac{\eps(m-1)}{2m}A+\frac{\eps(m+2)}{2m}B-\frac{\eps}{2m}C=1,\qquad C-\eps B=1,
+\end{equation}
+namely
+\begin{equation}\label{eq:pairsol}
+A=\frac{m+6-\eps+2\eps/m}{D},\qquad B=\frac{(m-1)A+2m/\eps+1}{d},\qquad C=1+\eps B,
+\end{equation}
+and
+\begin{equation}\label{eq:tau}
+\tau=\frac{m(m-1)A+4mB+2C}{n^2}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+From a distinct core pair, the walkers meet at rate $a$ (each jumps onto the other at rate $a/2$) and the pair becomes mixed at rate $b$. From a mixed pair, the trap walker moves onto the core walker at rate $\eps/(2m)$ and to another core point at rate $\eps(m-1)/(2m)$; the core walker moves onto the trap walker at rate $\eps/(2m)$ and to the other trap point at rate $\eps/(2m)$. From the trap pair, the walkers meet at rate $1-\eps$ and the pair becomes mixed at rate $\eps$. Moves that keep the type of the pair do not enter. First-step analysis gives \eqref{eq:pairsys}. The pair chain killed on the diagonal is a finite irreducible chain with positive killing, so its absorption time is integrable and the Poisson equations have a unique solution. Solving gives \eqref{eq:pairsol}; $D>0$ because $b>0$, $3-\eps>0$ and $a\ge0$. The ordered pairs of the three types number $m(m-1)$, $4m$ and $2$, and the $n$ diagonal pairs contribute zero, which gives \eqref{eq:tau}.
+\end{proof}
+
+Let $M=\max(A,B,C)$. Clearing denominators, with $P=(m-2\eps)d+2\eps(m-1)(3-\eps)$,
+\[
+A=\frac{(m-1)(m^2+6m-\eps m+2\eps)}{P},\qquad B=\frac{N_B}{\eps P},
+\]
+where $N_B=(m+2\eps(m-2))(2m+\eps)+\eps m(m-1)^2$,
+and one checks the identity
+\begin{equation}\label{eq:BA}
+N_B-\eps(m-1)(m^2+6m-\eps m+2\eps)=\bigl(m-(m+1)\eps\bigr)\bigl(2m-(m-2)\eps\bigr).
+\end{equation}
+Hence $B\ge A$ when $\eps\le m/(m+1)$. In that range also $1-\eps-a=(m-2)(m-(m+1)\eps)/(m(m-1))\ge0$, and the first and third equations of \eqref{eq:pairsys} give
+\[
+B-C=(1-\eps-a)B+(a+b)(B-A)\ge0 .
+\]
+So $M=B$ for $0<\eps\le m/(m+1)$. At $\eps=m/(m+1)$ all edges have weight $1/(m+1)$ and $A=B=C=m+1$.
+
+\section{Finite bounds}\label{sec:finite}
+
+Let $H_K$ be the first time at which at most $K$ walkers remain, so $T=H_1$. If $k$ core points and $j$ trap points are occupied, the rate at which some walker jumps onto an occupied point is
+\begin{equation}\label{eq:death}
+\delta(k,j)=a\frac{k(k-1)}2+(1-\eps)\frac{j(j-1)}2+\frac{\eps kj}m .
+\end{equation}
+
+\begin{lemma}\label{lem:death}
+For $0<\eps\le1$ and $s=k+j\ge3$, $\delta(k,j)\ge a\,s(s-1)/6$. The constant $1/6$ cannot be increased uniformly over the family.
+\end{lemma}
+
+\begin{proof}
+Subtract $as(s-1)/6$ from \eqref{eq:death}. If $j=0$ the difference is $ak(k-1)/3$. If $j=1$, then $k\ge2$ and the difference is $ak(k-2)/3+\eps k/m\ge0$. If $j=2$, then $k\ge1$; with the constant $Q=1-\eps-a+2\eps/m=((m-2)-\eps(m-3))/(m-1)$ the difference is
+\[
+\frac a3(k-1)(k-2)+Q+\frac{2\eps(k-1)}m.
+\]
+For $m=2$, $Q=\eps$, and for $m\ge3$, $Q=(1+(m-3)(1-\eps))/(m-1)>0$. For optimality take $m=2$, $k=1$, $j=2$: then $\delta=1$, $a=1-\eps$ and $\delta/(as(s-1))=1/(6(1-\eps))\to1/6$ as $\eps\to0$, through connected graphs.
+\end{proof}
+
+\begin{theorem}\label{thm:finite}
+Let $m\ge2$, $0<\eps\le1$ and $(m,\eps)\ne(2,1)$. Put
+\[
+L=M+\frac6a\Bigl(\frac12-\frac1n\Bigr),\qquad X=\frac{\eps T}2,\qquad \Delta=\frac{\eps L}2-1+\frac4n .
+\]
+Then
+\begin{align}
+M\le\E T&\le L,\label{eq:sandwich}\\
+\E H_K&\le\frac6a\Bigl(\frac1K-\frac1n\Bigr),\qquad 2\le K\le n,\label{eq:HK}\\
+W_1\bigl(\mathrm{Law}(X),\Exp(1)\bigr)&\le\Delta,\label{eq:W1}
+\end{align}
+where $\Exp(1)$ has mean one and $W_1$ is the Wasserstein distance of order one. For every nonempty initial set $S$ of occupied points, with $T_S$ its coalescence time,
+\begin{equation}\label{eq:moments}
+\E T_S^j\le j!\,L^j\quad(j=1,2,\dots),\qquad \E\exp\bigl(\theta\eps T_S/2\bigr)\le\frac1{1-\theta\eps L/2}\quad(0\le\theta<2/(\eps L)).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Whatever the configuration, while $s\ge3$ walkers remain the time to the next merger is killed at rate at least $as(s-1)/6$ by \cref{lem:death}, so its conditional survival function is at most $\exp(-as(s-1)t/6)$. The strong Markov property at successive mergers gives
+\[
+\E H_K\le\sum_{s=K+1}^n\frac6{as(s-1)}=\frac6a\Bigl(\frac1K-\frac1n\Bigr),
+\]
+which is \eqref{eq:HK}. At $H_2$ the two remaining walkers meet in mean time at most $M$, which gives the upper bound in \eqref{eq:sandwich}. For the lower bound, in the graphical construction two lineages started at $x$ and $y$ move as independent walkers until they meet, and they meet no later than $T$; maximise over $x,y$.
+
+For \eqref{eq:W1}, follow the lineages started at a core point and at a trap point. Let $\sigma$ be the first time their pair leaves the mixed type or meets. By the rates in the proof of \cref{lem:pairs} this happens at total rate $\ell=\eps(m+2)/(2m)$ from every mixed pair, so $\sigma\sim\Exp$ with mean $1/\ell$, and $\sigma\le T$. The variable $Y=\eps\sigma/2$ is exponential with mean $c=m/n$, and $Y\le X$. Hence $\E\abs{X-Y}=\E X-c$, while coupling $Y=cZ$ with $Z\sim\Exp(1)$ gives $W_1(\mathrm{Law}(Y),\Exp(1))\le1-c=2/n$. By the triangle inequality and \eqref{eq:sandwich},
+\[
+W_1\bigl(\mathrm{Law}(X),\Exp(1)\bigr)\le\E X-c+1-c=\E X-1+\frac4n\le\Delta .
+\]
+
+For \eqref{eq:moments}: in the graphical construction the lineages from $S$ are among those from all points, so $T_S\le T$ and $F_1(S):=\E T_S\le L$. Write $F_j(S)=\E T_S^j$, which is finite since $\Pp(T_S>2kL)\le2^{-k}$ by Markov's inequality and the strong Markov property. From $T^j=j\int_0^T(T-t)^{j-1}\dd t$ and the Markov property at time $t$,
+\[
+F_j(S)=j\,\E_S\int_0^{T_S}F_{j-1}(S_t)\dd t\le j\,(j-1)!\,L^{j-1}\,\E T_S\le j!\,L^j ,
+\]
+by induction on $j$, where $S_t$ is the occupied set at time $t$. Summing the exponential series, which has nonnegative terms, gives the second bound.
+\end{proof}
+
+\section{The trap scale}\label{sec:scale}
+
+From now on $m\to\infty$, $r=r_m\to\infty$ is real, and $\eps=1/(mr)$. Then $\eps T/2=T/(2mr)$, so $X$ of \cref{thm:finite} is the natural normalisation.
+
+\begin{lemma}\label{lem:asym}
+Uniformly in $r\ge1$,
+\begin{gather*}
+A=m+O(1),\qquad B=2mr+m+O(r+1),\\
+C=3+O\Bigl(\frac1r+\frac1m\Bigr),\qquad \tau=m+8r+O\Bigl(1+\frac rm\Bigr).
+\end{gather*}
+\end{lemma}
+
+\begin{proof}
+Here $b=2/(m^2r)$, $a=(m-1)^{-1}(1+O(m^{-2}))$ and $D=ad+b(3-\eps)=1+O(1/m)$, so $A=m+O(1)$. Next $2m/\eps=2m^2r$ and $2m^2r/d=2mr\,(1-2/m+O(m^{-2}))=2mr-4r+O(r/m)$, while $(m-1)A/d=m+O(1)$; this gives $B$. Then $C=1+\eps B=3+O(1/r+1/m)$. Finally $m(m-1)A/n^2=m+O(1)$, $4mB/n^2=8r+O(1+r/m)$ and $2C/n^2=O(m^{-2})$.
+\end{proof}
+
+\begin{theorem}\label{thm:slow}
+As $m\to\infty$ with $r\to\infty$ and $\eps=1/(mr)$,
+\begin{equation}\label{eq:W1rate}
+W_1\Bigl(\mathrm{Law}\Bigl(\frac T{2mr}\Bigr),\Exp(1)\Bigr)=O\Bigl(\frac1r+\frac1m\Bigr),
+\end{equation}
+and for every fixed real $p>0$ and $\theta<1$,
+\begin{equation}\label{eq:momlim}
+\E\Bigl(\frac T{2mr}\Bigr)^p\to\Gamma(p+1),\qquad \E\exp\Bigl(\frac{\theta T}{2mr}\Bigr)\to\frac1{1-\theta}.
+\end{equation}
+No upper bound on the growth of $r$ is needed.
+\end{theorem}
+
+\begin{proof}
+Eventually $\eps\le m/(m+1)$, so $M=B$. Since $6/a=O(m)$, \cref{lem:asym} gives $\eps L/2=1+O(1/r+1/m)$, hence $\Delta=O(1/r+1/m)$ and \eqref{eq:W1rate} follows from \eqref{eq:W1}. Fix $0\le\theta<\theta'<1$. Since $\eps L/2\to1$, \eqref{eq:moments} bounds $\E\exp(\theta'X)$ uniformly for large $m$, so $\exp(\theta X)$ and every fixed power $X^p$ are uniformly integrable. Convergence in $W_1$ implies convergence in law, and with uniform integrability this gives \eqref{eq:momlim} for $p>0$ and $0\le\theta<1$. For $\theta<0$ the function $x\mapsto e^{\theta x}$ is bounded and continuous on $[0,\infty)$.
+\end{proof}
+
+For fixed $p\ge1$ put
+\begin{equation}\label{eq:Dp}
+D_p=\frac1{n^2}\sum_{x,y}\Bigl|\frac{h(x,y)}\tau-1\Bigr|^p=\frac{m(m-1)\abs{A/\tau-1}^p+4m\abs{B/\tau-1}^p+2\abs{C/\tau-1}^p+n}{n^2},
+\end{equation}
+where the last term counts the diagonal pairs.
+
+\begin{theorem}\label{thm:conc}
+Under the assumptions of \cref{thm:slow}:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item condition \eqref{eq:52} holds if and only if $r=o(m)$;
+\item for fixed $p\ge1$, $D_p\to0$ if and only if $r^p/m\to0$; hence $D_p\to0$ for every fixed $p\ge1$ if and only if $r=m^{o(1)}$;
+\item if $r=o(m)$, then $\tau\sim m$, $\E T\sim2mr$ and $\E T/(2\tau)\sim r$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By \cref{lem:asym}, $A/m\to1$ and $\tau/m=1+8r/m+O(1/m+r/m^2)$, and distinct core pairs make up a proportion $1-O(1/m)$ of all ordered pairs. If $r=o(m)$ then $A/\tau\to1$ and \eqref{eq:52} holds. If $r/m\not\to0$, along a subsequence $r/m\ge c>0$, so $\tau/m\ge1+8c+o(1)$ and $A/\tau$ stays bounded away from one on a proportion of pairs tending to one; \eqref{eq:52} fails. This proves (a).
+
+For (b), if $r=o(m)$ then \cref{lem:asym} bounds \eqref{eq:Dp} by $O_p\bigl(((1+r)/m)^p+r^p/m+1/m\bigr)$, which tends to zero when $r^p/m\to0$. Conversely, $D_p\to0$ implies \eqref{eq:52} by Markov's inequality, hence $r=o(m)$; then $B/\tau\sim2r$ and the mixed term of \eqref{eq:Dp} is asymptotic to $2^{p+2}r^p/m$, which must tend to zero. For the last statement, $r^p/m\to0$ for every $p$ means that eventually $\log r\le\log m/p$ for each $p$, that is, $\log r/\log m\to0$.
+
+For (c), $\tau\sim m$ by \cref{lem:asym}, and \eqref{eq:sandwich} with $M=B$ and $L-B=O(m)=o(mr)$ gives $\E T\sim B\sim2mr$.
+\end{proof}
+
+At the boundary $r=\sqrt m$, condition \eqref{eq:52} holds while $D_2\to16$, all of it from the mixed pairs. At $r=m$, $\tau/m\to9$ and a typical pair has $h/\tau\to1/9$, so \eqref{eq:52} fails although \cref{thm:slow} still applies. If $r$ stays bounded the conclusion changes: for $r=1$, $X=T/(2mr)$ has $\E X\ge\eps M/2=\eps B/2\to3/2$ by the lower bound in \eqref{eq:sandwich}, so $W_1(\mathrm{Law}(X),\Exp(1))\ge\abs{\E X-1}\ge1/2-o(1)$ and $T/(2mr)$ does not converge to $\Exp(1)$.
+
+\section{The two-stage plan}\label{sec:stages}
+
+\begin{proposition}\label{prop:stages}
+Let $r\to\infty$ with $r=o(m)$ and $\eps=1/(mr)$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(Stage 2)} For $2\le K\le n$ and $m$ large, $\E H_K\le 6m/K$. In particular $\E H_{k(n)}=o(\tau)$ whenever $k(n)\to\infty$.
+\item \textup{(Stage 1)} Fix $k\ge2$. Start $k$ coalescing walkers at independent uniform points and let $T^{(k)}$ be their coalescence time. Then $T^{(k)}/\tau$ converges in law to $\sum_{i=2}^k\xi_i$, with independent $\xi_i\sim\Exp$ of mean $\binom i2^{-1}$, and $\E T^{(k)}\sim2(1-1/k)\tau$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) Since $\eps\le1/2$ eventually, $a=(m-2\eps)/(m(m-1))\ge1/m$, and \eqref{eq:HK} gives $\E H_K\le6m/K$; and $\tau\sim m$.
+
+(b) Let $G$ be the event that the $k$ starting points lie in $U$ and are distinct; $\Pp(G^c)\le2k/n+k^2/m=O(1/m)$. On $G$ realise the walk as follows. Each walker in $U$ jumps to each other point of $U$ at rate $a/2$, by a family of Poisson clocks; independently, it carries a clock of rate $\eps/m$ that sends it into $V$. Let $T'$ be the coalescence time of the walk that uses only the first family of clocks, which is coalescing random walk on the complete graph on $U$ with every pair of distinct walkers merging at rate $a$. From $i$ walkers at distinct points the next merger comes at rate $a\binom i2$ and leaves $i-1$ walkers at distinct points, so $aT'$ has exactly the law of $\sum_{i=2}^k\xi_i$; in particular $\E T'=2(1-1/k)/a$ and $\E T'^2\le6/a^2\le6m^2$. Let $\rho$ be the first ring of a trap clock of a live walker. On $G\cap\{\rho>T'\}$ we have $T^{(k)}=T'$. Given the complete-graph walk, at most $k$ walkers are alive, so
+\[
+\Pp(\rho\le T')\le\frac{k\eps}m\,\E T'\le\frac{2k\eps}{am}\le2k\eps=\frac{2k}{mr}.
+\]
+Thus $T^{(k)}=T'$ on an event of probability $1-O(1/m)$, and since $a\tau\to1$ the convergence in law follows.
+
+For the mean, write $\E T^{(k)}=\E[T';E]+\E[T^{(k)};G^c]+\E[T^{(k)};G\cap\{\rho\le T'\}]$ with $E=G\cap\{\rho>T'\}$. By \eqref{eq:moments}, $\E[T^{(k)};G^c]\le L\,\Pp(G^c)=O(mr/m)=O(r)$. On $G\cap\{\rho\le T'\}$ we have $T^{(k)}\le\rho+R$, where by the strong Markov property at $\rho$ and \eqref{eq:moments} the remaining time $R$ has conditional mean at most $L$; since $\rho\le T'$ there,
+\[
+\E\bigl[T^{(k)};G\cap\{\rho\le T'\}\bigr]\le\bigl(\E T'^2\bigr)^{1/2}\Pp(\rho\le T')^{1/2}+L\,\Pp(\rho\le T')=O\bigl(m\,(mr)^{-1/2}\bigr)+O(1).
+\]
+Finally $\E[T';E]=\E T'-\E[T';E^c]$ and $\E[T';E^c]\le(\E T'^2)^{1/2}\Pp(E^c)^{1/2}=O(m^{1/2})$. Altogether $\E T^{(k)}=2(1-1/k)/a+O(r+m^{1/2})$, and $2/a\sim2m\sim2\tau$ while $r+m^{1/2}=o(m)$.
+\end{proof}
+
+\begin{remark}\label{rem:handoff}
+The two stages do not combine because the survivors of Stage~2 are not at independent uniform points. Fix $K\ge2$ and follow the lineage started at $v_1$. It stays in $V$ until it makes a jump to $U$, which happens at rate $\eps/2$, so the probability that it has left $V$ by time $H_K$ is at most $\eps\E H_K/2\le3\eps m/K=3/(rK)\to0$. With probability tending to one, then, one of the $K$ survivors is in the trap, whereas $K$ independent uniform points meet $V$ with probability at most $2K/n$. A survivor in the trap and one in the core meet in mean time $B\sim2mr$, which is where the extra factor $r$ in $\E T$ comes from.
+\end{remark}
+
+\begin{proposition}\label{prop:mix}
+For every $m\ge2$ and $0<\eps\le1$ the total variation mixing time of one walker from the worst starting point satisfies
+\[
+t_{\mathrm{mix}}(1/4)\ge\frac{\log\bigl(4m/(m+2)\bigr)}{\eps\,(1/2+1/m)} .
+\]
+With $\eps=1/(mr)$ and $r=o(m)$, $\liminf t_{\mathrm{mix}}(1/4)/(\tau r)\ge2\log4$.
+\end{proposition}
+
+\begin{proof}
+The indicator that the walker is in $V$ is itself a Markov chain on two states: from every point of $V$ the rate into $U$ is $\eps/2$, and from every point of $U$ the rate into $V$ is $\eps/m$. Started in $V$,
+\[
+\Pp(X_t\in V)-\frac2{m+2}=\frac m{m+2}\exp\bigl(-\eps(1/2+1/m)t\bigr),
+\]
+and the left side is a lower bound for the total variation distance to the uniform law. It exceeds $1/4$ until the stated time. The limit follows from $\tau\sim m$.
+\end{proof}
+
+So \eqref{eq:52}, even in every fixed $L^p$, does not give $\tau_{\mathrm{mix}}=o(\tau)$ when $\tau_{\mathrm{mix}}$ is the usual worst-start mixing time. Stage~1 holds here nonetheless, by the direct coupling above rather than through mixing.
+
+\section*{Acknowledgments and funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit 530550103).
+
+The question is Open Problem~2 of David Aldous~\cite{Ald13}, together with the two-stage plan proposed there. The mean-field picture rests on the complete-graph computation in the monograph of Aldous and James Allen Fill~\cite{AF}, on the torus theorem of J.~Theodore Cox~\cite{Cox89} and on the work of Roberto Imbuzeiro Oliveira~\cite{Oli12,Oli13}, whose Wasserstein formulation is followed in \cref{thm:finite,thm:slow}. The transitive case is due to Jonathan Hermon~\cite{Her}.
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Code and data availability}
+The source of this paper and an exact-arithmetic script that checks the formulas of \cref{sec:graph,sec:finite} are at \url{https://github.com/yspennstate/two-site-trap-coalescence}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The proofs and writing were produced by AI systems in the author-directed Math Brain project: Codex (OpenAI) produced the first proofs, and Claude (Anthropic) checked them against the sources, proved the Stage~1 part of \cref{prop:stages} and wrote the text. The problem and the two-stage plan are Aldous's~\cite{Ald13}, and the example is set against the mean-field theorems of Cox, Oliveira and Hermon described in the introduction; the family of graphs and every statement about it are new, by standard methods. The author selected the problem and directed the work, did not carry out the mathematics or the writing, and is responsible for submission. The checks are internal verification, not peer review or formalization.
+
+\begin{thebibliography}{99}
+
+\bibitem{Ald82} D.~J.~Aldous, Some inequalities for reversible Markov chains, \emph{J. London Math. Soc. (2)} \textbf{25} (1982), 564--576.
+
+\bibitem{Ald13} D.~Aldous, Interacting particle systems as stochastic social dynamics, \emph{Bernoulli} \textbf{19} (2013), 1122--1149; arXiv:1309.6766.
+
+\bibitem{AF} D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002, recompiled 2014, \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+
+\bibitem{Cox89} J.~T.~Cox, Coalescing random walks and voter model consensus times on the torus in $\mathbb Z^d$, \emph{Ann. Probab.} \textbf{17} (1989), 1333--1366.
+
+\bibitem{Her} J.~Hermon, Some inequalities for reversible Markov chains and branching random walks via spectral optimization, arXiv:1908.08525.
+
+\bibitem{HLYZ22} J.~Hermon, S.~Li, D.~Yao and L.~Zhang, Mean field behavior during the Big Bang regime for coalescing random walks, \emph{Ann. Probab.} \textbf{50} (2022), 1813--1884.
+
+\bibitem{KMS19} V.~Kanade, F.~Mallmann-Trenn and T.~Sauerwald, On coalescence time in graphs: when is coalescing as fast as meeting?, in \emph{Proceedings of the Thirtieth Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 2019)}, SIAM, 2019, 956--965; arXiv:1611.02460.
+
+\bibitem{Oli12} R.~I.~Oliveira, On the coalescence time of reversible random walks, \emph{Trans. Amer. Math. Soc.} \textbf{364} (2012), 2109--2128.
+
+\bibitem{Oli13} R.~I.~Oliveira, Mean field conditions for coalescing random walks, \emph{Ann. Probab.} \textbf{41} (2013), 3420--3461.
+
+\bibitem{ZCD05} I.~Z\"ahle, J.~T.~Cox and R.~Durrett, The stepping stone model. II. Genealogies and the infinite sites model, \emph{Ann. Appl. Probab.} \textbf{15} (2005), 671--699.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\end{thebibliography}
+\end{document}

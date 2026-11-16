@@ -1,0 +1,449 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Hone}{\mathcal{H}^1}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Span length in the Poisson line SIRSN]{The length of the network spanning $k$ random points in the
+Poisson line SIRSN}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60D05, 60G55, 90B15}
+\keywords{scale-invariant random spatial network, SIRSN, improper Poisson line process, random metric, network
+length}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Place $k$ independent uniform points in a square of area $k$ and join every pair by its route in a scale-invariant
+random spatial network. Aldous asked for a proof that the expected total length of the union of these routes is
+asymptotic to $\ell k$, where $\ell$ is the mean length per unit area of the network on a unit-rate Poisson process. We
+prove this for the network of geodesics of the planar improper Poisson line process whose line speeds have a power-law
+intensity with exponent $\gamma>2$. The lower bound holds for every scale-invariant random spatial network. For the upper bound we show that all
+geodesics between points of the unit square lie in the disc of radius $R$ about its centre outside an event of
+probability $O(R^{-a})$, for every $0<a<\gamma-1$. Since $\gamma-1>1$, this and a moment bound of Kahn show that for each
+$\delta>0$ the expected length of the union at distance more than $\delta\sqrt k$ from the square is $O(\sqrt k)$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+The result below was proved by AI agents (Claude, Anthropic). It answers a question of Aldous~\cite{Aldous} for the
+network of geodesics of the improper Poisson line process, which Aldous proposed~\cite[Section~4.1]{Aldous}, Kendall
+constructed~\cite{Kendall} and Kahn proved to be a scale-invariant random spatial network~\cite{Kahn}; the proof rests
+on Theorems~3.1 and~6.1 of Kahn and on the argument that proves his Theorem~5.1.
+
+A scale-invariant random spatial network (SIRSN) assigns to every pair of points $z,z'$ of the plane a random route
+$\mathcal R(z,z')$ between them~\cite[Section~2.2]{Aldous}; the notion was introduced by Aldous and
+Ganesan~\cite{AG}. The finite-dimensional distributions of the routes are
+invariant under translations, rotations and Euclidean scaling, and the route between two points at unit distance has
+finite mean length~\cite[(15)]{Aldous}. For a finite set of points, the union
+$\spn(z_1,\dots,z_k)=\bigcup_{i,j}\mathcal R(z_i,z_j)$ is called their span. If $\Xi(\lambda)$ is a Poisson process of
+intensity $\lambda$ independent of the routes, the span $S(\lambda)$ of its points is a translation-invariant random
+set, and its mean length per unit area at $\lambda=1$,
+\[
+\ell:=\text{mean length per unit area of } S(1),
+\]
+is required to be finite~\cite[(16)]{Aldous}. The last requirement~\cite[(17)--(20)]{Aldous} concerns the
+routes with the unit discs about their endpoints removed: the mean length per unit area of the union of these pieces,
+over all pairs of points of $\Xi(\lambda)$, must stay bounded as $\lambda\to\infty$. By~\cite[Lemma~20]{Aldous} it
+implies that $\ell$ is finite, so the finiteness of $\ell$ is not a separate requirement. By scaling, $S(\lambda)$ has mean length per unit area
+$\ell\lambda^{1/2}$~\cite[(12)]{Aldous}.
+
+Aldous~\cite[Section~8.4.3, Open Problem~35]{Aldous} asks for a proof of the following claim, which he describes
+as intuitively obvious but hard to prove: if $Z_1,\dots,Z_k$ are independent and uniform in a square of area $k$, then
+\begin{equation}\label{eq:aldous}
+\E\,\Hone\bigl(\spn(Z_1,\dots,Z_k)\bigr)\sim\ell k\qquad(k\to\infty),
+\end{equation}
+that is, the ratio of the two sides tends to $1$. Here $\Hone$ is length (one-dimensional Hausdorff measure), so a
+segment shared by several routes is counted once. Aldous locates the difficulty in showing that the span does not,
+with small probability, have very large length far from the square.
+
+The first SIRSN constructed with proof is the binary hierarchy model of
+Aldous~\cite[Section~3]{Aldous}. The second is the network of geodesics of
+the improper Poisson line process, proposed by Aldous~\cite[Section~4.1]{Aldous}; Poisson line patterns had been used
+by Aldous and Kendall~\cite{AK} to design networks of near-minimal length on prescribed points. Kendall~\cite{Kendall} constructed the random metric and proved
+its basic properties in the plane, and Kahn~\cite{Kahn} proved that its geodesics form a SIRSN in every dimension.
+Blanc~\cite{Blanc} computes Hausdorff dimensions for this metric, and Blanc, Curien and Kahn~\cite{BCK} study the
+structure of its geodesics in the plane. Kendall~\cite{KendallRRF} studies scale-invariant random flights in the
+environment of these lines, and calls the network the Poisson line SIRSN. Each line of the process carries a speed; the speeds have a power-law
+intensity whose exponent $\gamma$ we call the speed exponent (Section~\ref{sec:model}), and a geodesic is a path of
+least time that moves along the lines at no more than their speeds. We prove~\eqref{eq:aldous} for the Poisson line
+SIRSN.
+
+\begin{theorem}\label{thm:main}
+Let $\gamma>2$ and let the routes be the geodesics of the planar improper Poisson line process $\Pi$ with speed exponent
+$\gamma$. Let $Q_k$ be the square of side $\sqrt k$ centred at $0$, let $Z_1,\dots,Z_k$ be independent, uniform in
+$Q_k$ and independent of $\Pi$, and let $L_k=\Hone(\spn(Z_1,\dots,Z_k))$. Then
+\[
+\lim_{k\to\infty}\frac1k\,\E L_k=\ell .
+\]
+\end{theorem}
+
+Write $B(c,r)$ for the open disc with centre $c$ and radius $r$, $T(x,y)$ for the least time of a path from $x$
+to $y$, $Q=[-\tfrac12,\tfrac12]^2$ for the unit square centred at $0$, and $T^*=\sup_{x,y\in Q}T(x,y)$ for the time diameter of $Q$.
+Three results of Kahn~\cite{Kahn} are used: his Theorems~3.1 and~6.1, and the argument that proves his
+Theorem~5.1. The time diameter satisfies
+$\Prob(T^*>t)\le C_0\exp(-c_0t^{\gamma-1})$, with $C_0,c_0$ depending on $\gamma$~\cite[Theorem~3.1]{Kahn}. For a countable set $\Xi$ independent of the
+lines, the total length inside $B(c,r)$ of the geodesics between points of $\Xi$ outside $B(c,2r)$ has $p$th moment at
+most $K_pr^p$ for every $p\ge1$, with $K_p$ not depending on $\Xi$~\cite[Theorem~6.1 and its proof]{Kahn}; this is
+Lemma~\ref{lem:far} below. The geodesic between two fixed points has finite mean Euclidean
+length~\cite[Theorem~5.1]{Kahn}, and the proof shows that this length has finite moments of every order below
+$\gamma-1$; so for a fixed pair $x,y$ the geodesic leaves $B(x,R)$ with probability at most $CR^{-a}$, for every
+$a<\gamma-1$, with $C$ depending on $a$, $\gamma$ and $|x-y|$.
+
+Fix $\delta>0$. Lemma~\ref{lem:far} alone does not bound the span far from $Q_k$. The points at distance between $2^j\delta\sqrt k$ and
+$2^{j+1}\delta\sqrt k$ from $Q_k$ are covered by a bounded number of discs of radius $2^j\delta\sqrt k/4$, so
+Lemma~\ref{lem:far} gives a multiple of $2^j\delta\sqrt k$ for the expected length of the span there, and the sum over $j\ge0$
+diverges. The bound for a fixed pair has the decay that is missing, but for one geodesic: in Kahn's proof the discs are
+centred at the endpoint $x$ and the time bound is $T(x,y)$, and both change with the pair, while the span is a union
+of $\binom k2$ geodesics.
+
+We centre the discs at $0$ and replace $T(x,y)$ by $T^*$. If a geodesic between two points of $Q$ reaches distance $R$
+from $0$, then for every $\rho\in[3,R]$ it covers Euclidean length at least $\rho-1$ inside $B(0,\rho)$ in time at most
+$T^*$, so some line of speed at least $\rho/(2T^*)$ hits $B(0,\rho)$. The computation in Kahn's proof bounds the
+probability that this happens at every dyadic radius up to $R$. For $0<a<\gamma-1$ it gives a constant $C_a$,
+depending on $a$ and $\gamma$, and for every $R>0$ an event $E'(R)$ of the line process with
+\begin{equation}\label{eq:exit-intro}
+\Prob(E'(R))\le C_aR^{-a},
+\end{equation}
+outside which every geodesic between two points of $Q$ lies in $B(0,R)$ (Lemma~\ref{lem:exit}). The rate is that of the bound for a fixed pair; one event
+now serves all pairs of points of $Q$.
+
+By scaling, the span of $Z_1,\dots,Z_k$ reaches distance $2^j\delta\sqrt k$ from
+$Q_k$ only on an event of probability at most $C_a(2^j\delta)^{-a}$. By H\"older's inequality and Lemma~\ref{lem:far}, its
+expected length at distance between $2^j\delta\sqrt k$ and $2^{j+1}\delta\sqrt k$ from $Q_k$ is at most
+$C\sqrt k\,2^{j(1-a(1-1/p))}$, where $C$ depends on $\gamma$, $\delta$, $a$ and $p$. Since $\gamma-1>1$ we may take
+$a>1$ and then $p$ with $a(1-1/p)>1$, and the sum over $j\ge0$ is at most a multiple of $\sqrt k$. Within distance $\delta\sqrt k$
+of $Q_k$ we fix $\varepsilon>0$ and compare with a Poisson process of intensity $1+\varepsilon$: with probability tending to $1$ the span is
+contained in the span $S(1+\varepsilon)$, whose mean length per unit area is $\ell(1+\varepsilon)^{1/2}$. This gives
+$\limsup_kk^{-1}\E L_k\le\ell$. The matching lower bound (Proposition~\ref{prop:lower}) holds for every SIRSN and
+uses only translation invariance, scaling and the monotonicity of the span in the set of points.
+
+Section~\ref{sec:model} recalls the line process and Kahn's results, Section~\ref{sec:lower} proves the lower bound,
+Section~\ref{sec:exit} proves Lemma~\ref{lem:exit}, and Section~\ref{sec:upper} completes the proof.
+
+\section{The line process and its geodesics}\label{sec:model}
+
+We follow Kahn~\cite[Section~2]{Kahn}. Let $\mu$ be the
+motion-invariant measure on the set of lines of $\R^2$, normalised so that the lines hitting a compact convex set $W$
+have measure half the perimeter of $W$; in particular the lines hitting a disc of radius $r$ have measure $\pi r$. For
+$\gamma>2$, let $\Pi$ be a Poisson point process of marked lines $(l,v)$ with intensity
+$\mu(dl)\,(\gamma-1)v^{-\gamma}\,dv$ on lines times $(0,\infty)$; $v$ is the speed of $l$, and $\gamma$ is the speed
+exponent. This $\Pi$ is the improper Poisson line process of Kendall~\cite{Kendall} and Kahn~\cite{Kahn}. The number of
+lines of speed at least $v$ hitting a disc of radius $r$ is Poisson with mean
+\begin{equation}\label{eq:count}
+\pi r\,v^{-(\gamma-1)},
+\end{equation}
+and the restrictions of $\Pi$ to disjoint sets of lines are independent. A $\Pi$-path is a Lipschitz path
+$\xi:[0,T]\to\R^2$ such that for almost every $t$ either $\xi'(t)=0$ or $\xi$ moves along a line of $\Pi$ whose speed
+is at least $|\xi'(t)|$; $T$ is its time. Kendall proved~\cite{Kendall} (see~\cite[Theorem~2.4]{Kahn}) that almost
+surely every two points $x,y$ are joined by $\Pi$-paths of finite time, that the infimum $T(x,y)$ of their times is
+attained, and that finite-time paths have finite Euclidean length. A path attaining $T(x,y)$ is a geodesic. For fixed
+$x,y$ the geodesic is almost surely unique~\cite[Theorem~4.4]{Kendall}; by Fubini, if $\Xi$ is a countable random set
+independent of $\Pi$, then almost surely all geodesics between points of $\Xi$ are unique, and we write $g_{xy}$ for
+them. This network of geodesics is a SIRSN~\cite[Theorem~6.2]{Kahn}; the routes are $\mathcal R(x,y)=g_{xy}$.
+
+\emph{Scaling.} For $s>0$, the image of $\Pi$ under $x\mapsto sx$, with every speed multiplied by $s^{1/(\gamma-1)}$,
+has the law of $\Pi$, by~\eqref{eq:count}. Times are multiplied by $s^{(\gamma-2)/(\gamma-1)}$, so geodesics are mapped
+to geodesics. The same holds for translations and rotations, without changing speeds.
+
+\emph{Speeds near a disc.} For a disc $B$ let $V(B)$ be the largest speed of a line of $\Pi$ hitting $B$; it is finite
+almost surely by~\eqref{eq:count}. A $\Pi$-path that stays in $B$ moves only along lines hitting $B$, so if it covers
+Euclidean length $r$ inside $B$ its time is at least $r/V(B)$~\cite[(15)]{Kahn}.
+
+\emph{Time diameter.} With $Q$ and $T^*$ as in Section~\ref{sec:intro}, by~\cite[Theorem~3.1]{Kahn},
+applied to the set $Q$ and the lines hitting a neighbourhood of $Q$ (restricting the lines can only increase times),
+there are constants $C_0,c_0>0$ depending on $\gamma$ only such that
+\begin{equation}\label{eq:diam}
+\Prob(T^*>t)\le C_0\exp(-c_0t^{\gamma-1})\qquad(t>0).
+\end{equation}
+
+\emph{Geodesics between distant points.} For a countable set $\Xi$, $c\in\R^2$ and $r>0$ let
+\[
+\Lambda_{c,r}(\Xi)=\Hone\Bigl(\,\bigcup_{x,y\in\Xi\setminus B(c,2r)}g_{xy}\cap B(c,r)\Bigr).
+\]
+
+\begin{lemma}\label{lem:far}
+Let $\gamma>2$. For every $p\ge1$ there is $K_p<\infty$, depending on $p$ and $\gamma$ only, such that
+$\E[\Lambda_{c,r}(\Xi)^p]\le K_p\,r^p$ for every countable random set $\Xi$ independent of $\Pi$, every $c\in\R^2$
+and every $r>0$.
+\end{lemma}
+
+\begin{proof}
+Kahn~\cite[Theorem~6.1]{Kahn} considers the dense countable set $\Xi_\infty$ formed by an increasing sequence of
+Poisson processes of intensities $n\in\mathbb N$, and the length inside $B(0,\frac13)$ of the union of the geodesics
+between its points with the unit discs about both endpoints removed. He proves that there are
+$\eta_{\max},C,C_1>0$ depending on $\gamma$ only such that this length exceeds $C(\ln(C_1/\eta))^2$ with probability
+at most $\eta$, for every $\eta<\eta_{\max}$. The first step of his proof bounds that length by
+$\Lambda_{0,1/3}(\Xi_\infty)$, and the rest of the proof bounds $\Lambda_{0,1/3}(\Xi_\infty)$ on an event determined by
+$\Pi$, using the point set only through the uniqueness of the geodesics between its points. That uniqueness holds for
+every countable set independent of $\Pi$, so
+$\Prob\bigl(\Lambda_{0,1/3}(\Xi)>C(\ln(C_1/\eta))^2\bigr)\le\eta$ for $\eta<\eta_{\max}$, with the same constants.
+Hence $\Prob(\Lambda_{0,1/3}(\Xi)>t)\le C_1\exp(-(t/C)^{1/2})$ for large $t$, and the moments of $\Lambda_{0,1/3}(\Xi)$
+are bounded independently of $\Xi$. For general $c$ and $r$, the map $x\mapsto(x-c)/(3r)$ with the speed change above
+carries $\Pi$ to a process with the law of $\Pi$, geodesics to geodesics, and $\Xi$ to a countable set $\Xi'$
+independent of the new lines, so $\Lambda_{c,r}(\Xi)$ has the law of $3r\,\Lambda_{0,1/3}(\Xi')$.
+\end{proof}
+
+\section{The lower bound}\label{sec:lower}
+
+\begin{proposition}\label{prop:lower}
+For every SIRSN, with $Q_k$, $Z_1,\dots,Z_k$ and $L_k$ as in Theorem~\ref{thm:main},
+\[
+\liminf_{k\to\infty}\frac1k\,\E L_k\ge\ell .
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $\varepsilon\in(0,1)$, $\Delta\ge1$ and $M>0$. Let $Z_1,Z_2,\dots$ be independent and uniform in $Q_k$, let $N$ be an
+independent Poisson variable with mean $(1-\varepsilon)k$, and let $\Xi$ consist of $Z_1,\dots,Z_N$ together with an
+independent Poisson process of intensity $1-\varepsilon$ on $\R^2\setminus Q_k$, all independent of the routes. Then
+$\Xi$ is a Poisson process of intensity $\lambda=1-\varepsilon$ and $\Xi\cap Q_k=\{Z_1,\dots,Z_N\}$. The span is
+monotone in the point set, so $L_k\ge\Hone(\spn(\Xi\cap Q_k))$ on $\{N\le k\}$.
+
+Call the half-open unit cell $C_z=z+[0,1)^2$, $z\in\Z^2$, a bulk cell if the disc $B_z=B(c_z,\Delta)$ about its centre
+$c_z$ lies in $Q_k$. For $\sqrt k\ge2\Delta+2$ there are $n_k\ge(\sqrt k-2\Delta-2)^2$ bulk cells, and $n_k\le k$ because the bulk cells are disjoint
+subsets of $Q_k$ of area $1$. For a bulk cell, $\spn(\Xi\cap Q_k)\supset\spn(\Xi\cap B_z)$. The cells are disjoint,
+so with $\mathbf 1$ denoting an indicator,
+\[
+L_k\,\mathbf 1_{\{N\le k\}}\ \ge\ \mathbf 1_{\{N\le k\}}\sum_{z\ \mathrm{bulk}}Y_z,\qquad
+Y_z=\min\bigl\{\Hone\bigl(\spn(\Xi\cap B_z)\cap C_z\bigr),M\bigr\}.
+\]
+By translation invariance of the routes and of $\Xi$, $h_{M,\Delta}:=\E Y_z$ does not depend on $z$. Since $0\le Y_z\le
+M$ and $n_k\le k$,
+\[
+\E L_k\ \ge\ n_kh_{M,\Delta}-Mk\,\Prob(N>k).
+\]
+By the Chernoff bound $\Prob(N>k)$ decays exponentially in $k$, so $\liminf_kk^{-1}\E L_k\ge h_{M,\Delta}$.
+
+Now let $\Delta\to\infty$. Every route between two points of $\Xi$ lies in $\spn(\Xi\cap B(c_z,\Delta))$ for $\Delta$ large, so these
+sets increase to $S(\lambda)$, and $\Hone(\,\cdot\cap C_z)$ increases to $\Hone(S(\lambda)\cap C_z)$ by continuity
+of measure from below. By monotone convergence $h_{M,\Delta}\uparrow\E\min\{\Hone(S(\lambda)\cap C_z),M\}$, and as $M\to\infty$
+this increases to $\E\,\Hone(S(\lambda)\cap C_z)=\ell\lambda^{1/2}$, the mean length per unit area of $S(\lambda)$
+times the area of the cell. Finally let $\varepsilon\to0$.
+\end{proof}
+
+\section{Geodesics between points of the unit square}\label{sec:exit}
+
+\begin{lemma}\label{lem:exit}
+Let $\gamma>2$ and, for $R>0$, let $E(R)$ be the set of configurations of $\Pi$ for which some geodesic between two
+points of $Q$ is not contained in $B(0,R)$. For every $0<a<\gamma-1$ there is $C_a\ge1$, depending on $a$ and $\gamma$, and for every $R>0$ an event
+$E'(R)\supset E(R)$ determined by $\Pi$, such that $\Prob(E'(R))\le C_aR^{-a}$.
+\end{lemma}
+
+The argument follows Kahn's proof of~\cite[Theorem~5.1]{Kahn}, displays (15)--(22) there, with three changes.
+The discs are centred at the centre of $Q$ and not at an endpoint, which halves the speed thresholds. The time
+$T(x,y)$ of one geodesic is replaced by $T^*$, so that the bound holds for all pairs of points of $Q$ at once. Kahn
+conditions on $\{T(x,y)\le T_n\}$; here the events are determined by the lines alone, and their independence takes
+the place of the conditioning. The computation is written out below with his letters.
+
+\begin{proof}[Proof of Lemma~\ref{lem:exit}]
+Let $R\ge3$ and suppose $E(R)$ occurs: $g$ is a geodesic from $x\in Q$ to $y\in Q$ through a point $w$ with $|w|\ge
+R$. Let $3\le\rho\le R$ and $r=\rho-1$. Since $|x|<1$, $|w-x|>R-1\ge r$, so the part of $g$ from $x$ to its first exit
+from $B(x,r)$ has Euclidean length at least $r$ and lies in $B(x,r)\subset B(0,\rho)$. Its time is at most $T(x,y)\le
+T^*$, so $V(B(0,\rho))\ge r/T^*\ge\rho/(2T^*)$. Hence
+\begin{equation}\label{eq:constraint}
+E(R)\cap\{T^*\le\tau\}\subset\bigcap_{3\le\rho\le R}\bigl\{V(B(0,\rho))\ge\rho/(2\tau)\bigr\}
+\end{equation}
+for every $\tau>0$; the value of $\tau$ is chosen below.
+
+Fix $r_0\ge4$ and an integer $m\ge0$ with $2^mr_0\le R$. Write $r_l=2^lr_0$, $V_l=V(B(0,r_l))$ and
+$v_l=r_l/(2\tau)$, so $v_l=2^lv_0$, and let $G=\bigcap_{l=0}^m\{V_l\ge v_l\}$. On $G$ define $l_0=0$ and, as long as
+some $l\le m$ has $v_l>V_{l_i}$, let $l_{i+1}$ be the least such $l$; it exceeds $l_i$ because $V_{l_i}\ge v_{l_i}$.
+The recursion stops at some $l_I$, and we set $l_{I+1}=m+1$. Then $V_{l_i}\ge v_{l_{i+1}-1}$ for $0\le i\le I$, and
+$V_{l_i}<v_{l_{i+1}}$ for $i<I$.
+
+For a fixed integer $I\in[0,m]$ and a fixed sequence $0=l_0<l_1<\dots<l_I\le m$, with $l_{I+1}=m+1$, let $D_i$
+($0\le i\le I$) be the event that some line of speed at least $v_{l_{i+1}-1}$ hits $B(0,r_{l_i})$ and, if $i\ge1$,
+misses $B(0,r_{l_{i-1}})$. If $G$ occurs and the recursion above produces this sequence, then every $D_i$ occurs:
+$V_{l_i}\ge v_{l_{i+1}-1}$ gives a line of that speed hitting $B(0,r_{l_i})$, and for $i\ge1$ it misses
+$B(0,r_{l_{i-1}})$ because $V_{l_{i-1}}<v_{l_i}\le v_{l_{i+1}-1}$. So $G$ is contained in the union over $I$ and over
+the sequences of $D_0\cap\dots\cap D_I$. For a fixed sequence, $D_i$ is determined by the lines hitting
+$B(0,r_{l_i})$ but not $B(0,r_{l_{i-1}})$ (all lines hitting $B(0,r_{l_0})$ for $i=0$). These sets of lines are
+disjoint, so $D_0,\dots,D_I$ are independent, and by~\eqref{eq:count}
+\[
+\Prob(D_i)\le\pi r_{l_i}v_{l_{i+1}-1}^{-(\gamma-1)}
+=2^{-(\gamma-1)(l_{i+1}-l_i-1)}\pi r_{l_i}^{2-\gamma}(2\tau)^{\gamma-1}
+\le2^{-(\gamma-1)(l_{i+1}-l_i)}\beta,
+\]
+where $\beta=2^{\gamma-1}\pi r_0^{2-\gamma}(2\tau)^{\gamma-1}$, using $r_{l_i}\ge r_0$ and $\gamma>2$. The product of
+the factors $2^{-(\gamma-1)(l_{i+1}-l_i)}$ over $0\le i\le I$ is $2^{-(\gamma-1)(m+1)}$. Summing over the sequences, of
+which there are $\binom mI$ for each $I$,
+\[
+\Prob(G)\le\sum_{I=0}^m\binom mI2^{-(\gamma-1)(m+1)}\beta^{I+1}\le\bigl(2^{-(\gamma-1)}(1+\beta)\bigr)^{m+1}.
+\]
+
+Now fix $\kappa$ with $a<\kappa<\gamma-1$, and put $\tau=(\theta\ln R)^{1/(\gamma-1)}$ with $\theta=a/c_0$, so that
+$\Prob(T^*>\tau)\le C_0R^{-a}$ by~\eqref{eq:diam}. Choose
+\[
+r_0=\max\Bigl\{4,\Bigl(\frac{2^{\gamma-1}\pi(2\tau)^{\gamma-1}}{2^{\gamma-1-\kappa}-1}\Bigr)^{1/(\gamma-2)}\Bigr\},
+\]
+so that $1+\beta\le2^{\gamma-1-\kappa}$ and $\Prob(G)\le2^{-\kappa(m+1)}$. Since $r_0=O((\ln R)^{1/(\gamma-2)})$, there
+is $R_a\ge4$ such that $r_0\le R$ and $(r_0/R)^\kappa\le R^{-a}$ for all $R\ge R_a$. For such $R$ let $m$ be the
+largest integer with $2^mr_0\le R$. Then $2^{m+1}>R/r_0$, the radii $r_0,\dots,r_m$ lie in $[4,R]$, and
+by~\eqref{eq:constraint} the event $E'(R)=\{T^*>\tau\}\cup G$ contains $E(R)$ and satisfies
+\[
+\Prob(E'(R))\le\Prob(T^*>\tau)+\Prob(G)\le C_0R^{-a}+(r_0/R)^{\kappa}\le(C_0+1)R^{-a}.
+\]
+For $R<R_a$ let $E'(R)$ be the whole probability space. The lemma holds with $C_a=\max\{C_0+1,R_a^{\,a}\}$.
+\end{proof}
+
+\section{The upper bound}\label{sec:upper}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Proposition~\ref{prop:lower} it remains to show $\limsup_kk^{-1}\E L_k\le\ell$. Fix $\varepsilon,\delta\in(0,1)$.
+
+\emph{Poissonization.} In this proof, let $Z_1,Z_2,\dots$ be independent and uniform in $Q_k$, let $N$ be an independent Poisson
+variable with mean $(1+\varepsilon)k$, and let $\Xi$ consist of $Z_1,\dots,Z_N$ together with an independent Poisson
+process of intensity $\lambda=1+\varepsilon$ on $\R^2\setminus Q_k$, everything independent of $\Pi$. On $\{N\ge k\}$,
+$L_k\le L':=\Hone(\spn(\Xi\cap Q_k))$, and $L_k$ is independent of $N$, so
+\[
+\E L_k\,\Prob(N\ge k)=\E[L_k;N\ge k]\le\E L'.
+\]
+Since $\Prob(N\ge k)\to1$, it suffices to bound $\E L'$.
+
+\emph{Near the square.} Let $U_0=\{w:\operatorname{dist}(w,Q_k)<\delta\sqrt k\}$, of area $k(1+4\delta+\pi\delta^2)\le
+(1+2\delta)^2k$. Since $\spn(\Xi\cap Q_k)\subset S(\lambda)$, the span of all of $\Xi$,
+\[
+\E\,\Hone\bigl(\spn(\Xi\cap Q_k)\cap U_0\bigr)\le\ell\lambda^{1/2}(1+2\delta)^2k .
+\]
+
+\emph{Far from the square.} For $j\ge0$ let $\rho_j=2^j\delta\sqrt k$ and $A_j=\{w:\rho_j\le\operatorname{dist}(w,Q_k)
+<2\rho_j\}$; the sets $U_0,A_0,A_1,\dots$ cover the plane. Fix $0<a<\gamma-1$. Since $0\in Q_k$, a point $w$ of $A_j$
+has $|w|\ge\rho_j$, so if $\spn(\Xi\cap Q_k)$ meets $A_j$, some geodesic between two points of $Q_k$ is not contained
+in $B(0,\rho_j)$. Scaling by $k^{-1/2}$ maps $Q_k$ to $Q$ and geodesics to geodesics, so this happens only on the
+event $F_j$, the image under the scaling of $E'(2^j\delta)$ in Lemma~\ref{lem:exit}, and
+$\Prob(F_j)\le q_j:=\min\{1,C_a(2^j\delta)^{-a}\}$.
+
+Let $s_j=\rho_j/4$ and let $\mathcal C_j\subset A_j$ be a maximal set of points at mutual distance at least $s_j$.
+The discs $B(c,s_j)$, $c\in\mathcal C_j$, cover $A_j$, and the discs $B(c,s_j/2)$ are disjoint and lie in the square
+of side $\sqrt k+5\rho_j$ centred at $0$, so
+\[
+\#\mathcal C_j\le\frac{(\sqrt k+5\rho_j)^2}{\pi s_j^2/4}=\frac{64}{\pi}\Bigl(\frac1{2^j\delta}+5\Bigr)^2\le
+\frac{64}{\pi}\Bigl(\frac1\delta+5\Bigr)^2=:\nu_\delta .
+\]
+Every point of $Q_k$ is at distance at least $\rho_j=4s_j>2s_j$ from each $c\in\mathcal C_j$, so
+$\spn(\Xi\cap Q_k)\cap B(c,s_j)$ is contained in the set whose length is $\Lambda_{c,s_j}(\Xi)$. Hence
+\[
+\Hone\bigl(\spn(\Xi\cap Q_k)\cap A_j\bigr)\le\mathbf 1_{F_j}\sum_{c\in\mathcal C_j}\Lambda_{c,s_j}(\Xi).
+\]
+By H\"older's inequality and Lemma~\ref{lem:far}, for $p>1$,
+\[
+\E\,\Hone\bigl(\spn(\Xi\cap Q_k)\cap A_j\bigr)\le \nu_\delta K_p^{1/p}s_j\,q_j^{1-1/p}
+=\frac{\nu_\delta K_p^{1/p}\delta}{4}\sqrt k\;2^j\min\bigl\{1,C_a(2^j\delta)^{-a}\bigr\}^{1-1/p}.
+\]
+Since $\gamma-1>1$ we may take $a\in(1,\gamma-1)$ and then $p$ so large that $a(1-1/p)>1$. The series over $j\ge0$
+then converges, and its sum is at most $C(\delta)\sqrt k$, with $C(\delta)$ independent of $k$.
+
+\emph{Conclusion.} Adding the two parts,
+\[
+\E L_k\le\frac{\ell(1+\varepsilon)^{1/2}(1+2\delta)^2k+C(\delta)\sqrt k}{\Prob(N\ge k)},
+\]
+so $\limsup_kk^{-1}\E L_k\le\ell(1+\varepsilon)^{1/2}(1+2\delta)^2$. Letting $\delta,\varepsilon\to0$ completes the
+proof.
+\end{proof}
+
+\section*{Notation}
+\begin{tabular}{@{}p{0.22\textwidth}p{0.52\textwidth}p{0.18\textwidth}@{}}
+symbol & meaning & first appears\\
+$\mathcal R(z,z')$, $\spn$ & route between $z$ and $z'$; union of the routes between given points & Section~\ref{sec:intro}\\
+$S(\lambda)$, $\ell$ & span of a Poisson process of intensity $\lambda$; mean length per unit area of $S(1)$ &
+Section~\ref{sec:intro}\\
+$\Hone$ & length (one-dimensional Hausdorff measure) & \eqref{eq:aldous}\\
+$Q_k$, $L_k$ & square of side $\sqrt k$ centred at $0$; length of the span of $Z_1,\dots,Z_k$ &
+Theorem~\ref{thm:main}\\
+$\Pi$, $\gamma$ & line process, speed exponent & Section~\ref{sec:intro}\\
+$\mu$ & invariant measure on lines & Section~\ref{sec:model}\\
+$T(x,y)$, $B(c,r)$ & least time from $x$ to $y$; open disc & Section~\ref{sec:intro}\\
+$g_{xy}$, $V(B)$ & the geodesic from $x$ to $y$; largest speed of a line hitting the disc $B$ & Section~\ref{sec:model}\\
+$Q$, $T^*$, $C_0$, $c_0$ & unit square centred at $0$; its time diameter; constants in~\eqref{eq:diam} &
+Section~\ref{sec:intro}\\
+$\Lambda_{c,r}(\Xi)$ & length in $B(c,r)$ of the geodesics between points of $\Xi$ outside $B(c,2r)$ &
+Section~\ref{sec:model}\\
+$K_p$, $\Xi$ & moment constant of $\Lambda_{c,r}$; a countable or Poisson point set & Section~\ref{sec:intro}\\
+$\delta$, $\varepsilon$ & width of the neighbourhood of $Q_k$ in units of $\sqrt k$; intensity correction &
+Section~\ref{sec:intro}\\
+$N$ & Poisson count used to compare with $Z_1,\dots,Z_k$ & Section~\ref{sec:lower}\\
+$C_z$, $B_z$, $\Delta$, $Y_z$, $M$, $h_{M,\Delta}$, $n_k$ & unit cells, discs about their centres, radius, truncated lengths,
+truncation level, their mean, number of bulk cells & Section~\ref{sec:lower}\\
+$E(R)$ & set of configurations with a geodesic between points of $Q$ leaving $B(0,R)$ & Lemma~\ref{lem:exit}\\
+$E'(R)$, $C_a$ & the event of $\Pi$ containing $E(R)$; its constant & Section~\ref{sec:intro}\\
+$r_l$, $V_l$, $v_l$, $G$, $D_i$, $\beta$, $\tau$, $\kappa$ & radii, speeds and events of the proof of Lemma~\ref{lem:exit} &
+Section~\ref{sec:exit}\\
+$U_0$, $A_j$, $\rho_j$, $F_j$, $q_j$ & neighbourhood of $Q_k$, dyadic annuli around it, scaled copies of $E'$, their probabilities & Section~\ref{sec:upper}\\
+$s_j$, $\mathcal C_j$, $\nu_\delta$ & radius, centres and number of the discs covering $A_j$ & Section~\ref{sec:upper}\\
+\end{tabular}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to
+Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared,
+persistent memory in which the agents record claims,
+proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each
+other's work. For more on the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain
+repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Data availability}
+No data or code were produced for this work.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Claude agents (Anthropic) proved Theorem~\ref{thm:main} and prepared the manuscript, and other Claude agents refereed
+the proofs independently. The problem is due to Aldous~\cite{Aldous}. The network was proposed by
+Aldous~\cite{Aldous} and constructed by Kendall~\cite{Kendall}. The proof rests on Theorems~3.1 and~6.1 of
+Kahn~\cite{Kahn} and on the argument that proves his Theorem~5.1; these results are theirs. New here are the bound
+for this network and Lemma~\ref{lem:exit}, which adapts Kahn's argument to all pairs of points of $Q$ at once. The author directed the work and is responsible for
+the content of the paper.
+
+\begin{thebibliography}{99}
+\bibitem{Aldous} D.~J.~Aldous, \emph{Scale-invariant random spatial networks}, Electron. J. Probab. \textbf{19}
+(2014), 1--41, \doi{10.1214/EJP.v19-2920}; section, display and problem numbers as in \arxiv{1204.0817v1}.
+\bibitem{AG} D.~J.~Aldous and K.~Ganesan, \emph{True scale-invariant random spatial networks}, Proc. Natl. Acad. Sci.
+USA \textbf{110} (2013), 8782--8785, \doi{10.1073/pnas.1304329110}.
+\bibitem{AK} D.~J.~Aldous and W.~S.~Kendall, \emph{Short-length routes in low-cost networks via Poisson line
+patterns}, Adv. in Appl. Probab. \textbf{40} (2008), 1--21, \doi{10.1239/aap/1208358883}.
+\bibitem{Blanc} G.~Blanc, \emph{Fractal properties of Aldous--Kendall random metric}, preprint, 2022,
+\arxiv{2207.03349}.
+\bibitem{BCK} G.~Blanc, N.~Curien and J.~Kahn, \emph{Geodesics in planar Poisson roads random metric}, preprint,
+2024, \arxiv{2407.07887}.
+\bibitem{Kahn} J.~Kahn, \emph{Improper Poisson line process as SIRSN in any dimension}, Ann. Probab. \textbf{44}
+(2016), 2694--2725, \doi{10.1214/15-AOP1032}; theorem and display numbers as in \arxiv{1503.03976}.
+\bibitem{KendallRRF} W.~S.~Kendall, \emph{Rayleigh random flights on the Poisson line SIRSN}, Electron. J.
+Probab. \textbf{25} (2020), 1--36, \doi{10.1214/20-EJP526}.
+\bibitem{Kendall} W.~S.~Kendall, \emph{From random lines to metric spaces}, Ann. Probab. \textbf{45} (2017),
+469--517, \doi{10.1214/14-AOP935}; theorem numbers as in \arxiv{1403.1156}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \doi{10.5281/zenodo.24150837},
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}

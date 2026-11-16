@@ -1,0 +1,296 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\definecolor{linkblue}{RGB}{22,68,105}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={An improved lower bound for the card-cyclic-to-random shuffle},
+  pdfauthor={Yitzchak Shmalo},
+  pdfsubject={Card shuffling, mixing time, eigenfunctions}}
+\urlstyle{same}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{1.5em}
+\setlist[enumerate]{itemsep=0.35em,topsep=0.45em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\C}{\mathbb C}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\tv}[1]{\lVert#1\rVert_{\mathrm{TV}}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\re}{Re}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Lower bound for card-cyclic-to-random}
+\fancyhead[R]{\small 16 November 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\title{\vspace{-1.4em}\textbf{An improved lower bound for the card-cyclic-to-random shuffle}}
+\author{Yitzchak Shmalo\\[0.4em]
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem\\
+\small Givat Ram, Jerusalem, Israel}
+\date{16 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In the card-cyclic-to-random shuffle of $n$ cards, the cards labelled $1,\dots,n$ are removed in turn, cyclically, and each is reinserted at a uniformly random position. Morris, Ning and Peres proved that the mixing time is of order $n\log n$, with a lower bound of $c\,n\log n$ for every $c<1/(2+2a)$, where $-a+ib$ is a root of $e^{-z}=1-z$ and $a$ is about $2.089$. We raise the lower constant from about $0.162$ to $1/(2a)$, about $0.239$. On functions of the relative order of pairs of cards the chain acts as the exterior square of an explicit $n\times n$ matrix. Two eigenvectors of that matrix give an exact eigenfunction of the chain, with eigenvalue of modulus $1-a/n+O(n^{-2})$, and a second-moment argument finishes the proof. Whether the shuffle has cutoff remains open.
+\end{abstract}
+
+\noindent\textit{Keywords:} card shuffling, mixing time, card-cyclic-to-random, eigenfunction, Wilson's method.\\
+\textit{Mathematics Subject Classification (2020):} 60J10, 60C05.
+
+\section{Introduction}
+
+Take a deck of $n$ cards labelled $1,\dots,n$. At step $t=1,2,\dots$ remove the card labelled $1+((t-1)\bmod n)$ and reinsert it at one of the $n$ possible positions, chosen uniformly and independently of everything else. This is the card-cyclic-to-random shuffle, introduced by Pinsky~\cite{Pin}, who showed that a single pass through the deck leaves it far from uniform. The chain is time-inhomogeneous, but one pass of $n$ steps is a doubly stochastic, irreducible and aperiodic transition, so the deck converges to the uniform law $\pi$ on $S_n$. Write
+\[
+d_n(t)=\max_{\sigma}\tv{\Pp_\sigma(\sigma_t\in\cdot)-\pi},\qquad t_{\mathrm{mix},n}(\eps)=\min\{t:d_n(t)\le\eps\}.
+\]
+
+Morris, Ning and Peres~\cite{MNP} proved that the mixing time has order $n\log n$. Their lower bound \cite[Theorem~1]{MNP} states that $t_{\mathrm{mix},n}(\eps)\ge c\,n\log n$ for large $n$ whenever $c<1/(2+2a)$, about $0.162$, with $a$ as in \eqref{eq:az}, about $2.089$, and their upper bound \cite[Theorem~2]{MNP} has constant $1/(\log2-\log(e-1))\approx6.587$. Bernstein and Nestoridi~\cite[Corollary~19]{BN} lowered the upper constant to $3/2$ by comparison with the random-to-random shuffle, using the comparison technique for time-inhomogeneous chains of Saloff-Coste and Z\'u\~niga~\cite{SCZ}. Jonasson~\cite{Jon} proved the order $n\log n$ for the variant in which the cards are relabelled by position after every pass. Whether the shuffle has cutoff is asked in \cite{MNP} and is Question~6(c) in the list of open problems of Levin and Peres~\cite[Chapter~26]{LP}.
+
+The constant comes from the equation $e^{-z}=1-z$. On $(2\pi,5\pi/2)$ the function
+\[
+h(b)=b\cot b-1-\log\frac b{\sin b}
+\]
+decreases strictly from $+\infty$ to $-1-\log(5\pi/2)$ (\cref{lem:root}); let $b$ be its zero and put
+\begin{equation}\label{eq:az}
+a=\log\frac b{\sin b},\qquad z=-a+ib .
+\end{equation}
+Then $a>0$ and $e^{-z}=1-z$. To twelve digits $a=2.08884301561$ and $b=7.46148928565$, and $z=1+W_{1}(-1/e)$ for the branch $W_1$ of the Lambert function. In \cite{MNP} the same pair $(a,b)$ is the smallest positive solution of $b=e^a\sin b$, $a=e^a\cos b-1$.
+
+\begin{theorem}\label{thm:main}
+For every $0<c<1/(2a)$,
+\[
+d_n\bigl(\lfloor c\,n\log n\rfloor\bigr)\to1\qquad(n\to\infty),
+\]
+the distance being attained, up to $o(1)$, from the sorted deck. Hence, for every fixed $\eps\in(0,1)$,
+\[
+\liminf_{n\to\infty}\frac{t_{\mathrm{mix},n}(\eps)}{n\log n}\ge\frac1{2a}=0.239366958772\dots
+\]
+\end{theorem}
+
+The lower bound of \cite{MNP} follows a barrier that moves with the cards and compares the fraction of cards on its left with a deterministic profile $\tfrac12+\tfrac12e^{-as}\sin(bs)$, with $s$ the number of completed passes; the profile decays at the rate $a$ per pass, and the coefficient $1/(2+2a)$ comes from balancing that decay against the fluctuations of the barrier and an approximation error of order $n^{2c-1}$. Here the same decay appears as the exact eigenvalue of an observable of the chain. The observable is a combination of the pair-order functions $f_{ij}=\pm1$, according to whether card $i$ lies above or below card $j$. In a frame that rotates with the labels, one step of the chain maps the span of the $f_{ij}$ into itself and acts there as the exterior square $\wedge^2M$ of an explicit companion-type matrix $M$ (\cref{prop:wedge}). The eigenvalues of $M$ near the unit circle are $e^{s/n}$ with $s$ close to a zero of $(1-e^{-s})/s-1$; the zeros nearest the imaginary axis are $s=0$ and $s=z$. Taking the wedge of the two corresponding eigenvectors gives an eigenfunction $\Psi_n$ of the chain with eigenvalue of modulus $1-a/n+O(n^{-2})$. From there the argument is Wilson's second-moment method~\cite{Wil}, see also \cite[Chapter~13]{LP}, in the form for a complex eigenvalue given in \cite[Lemma~2]{Wil03}: $\Psi_n$ is of order $n^2$ at the sorted deck, a single step changes it by $O(n)$, and the variance under $\pi$ is $O(n^3)$. Jonasson's lower bound for the relabelled variant~\cite{Jon} builds its test function from an eigenvector for the motion of a single card; $\Psi_n$ is built from pairs of cards and is an exact eigenfunction of the shuffle in the rotating frame.
+
+The statement that the eigenvalue governs the decay of order information is already implicit in the profile of \cite{MNP}; what is new is the exact eigenfunction and the resulting constant. \Cref{sec:frame} sets up the pair-order functions, \cref{sec:eigen} finds the eigenvectors of $M$, \cref{sec:proof} proves \cref{thm:main}, and \cref{sec:small} records exact values for small decks.
+
+\section{Pair-order functions in a rotating frame}\label{sec:frame}
+
+Let $\rho$ be the relabelling that replaces each label $i>1$ by $i-1$ and the label $1$ by $n$. If $\sigma_t$ is the deck after $t$ steps, put $Y_t=\rho^t\sigma_t$, applying $\rho$ to the labels. The card removed at step $t+1$ carries label $1$ in the frame of $Y_t$, so $(Y_t)$ is a time-homogeneous Markov chain: from $Y_t$, reinsert card $1$ at a uniform position, then apply $\rho$. Write $Q$ for its transition operator on functions, $(Qf)(\sigma)=\E[f(Y_1)\mid Y_0=\sigma]$. Relabelling is a bijection of $S_n$ that preserves $\pi$, so $\sigma_t$ and $Y_t$ are at the same total variation distance from $\pi$, and $\pi Q=\pi$.
+
+For distinct labels $i,j$ let $f_{ij}(\sigma)=1$ if card $i$ lies above card $j$ in $\sigma$ and $f_{ij}(\sigma)=-1$ otherwise, so $f_{ji}=-f_{ij}$. Let $P_i$ be the operator of reinserting card $i$ at a uniform position.
+
+\begin{lemma}\label{lem:insert}
+For distinct $i,j$,
+\[
+P_if_{ij}=\frac1n\sum_{l\ne i,j}f_{lj},
+\]
+and $P_kf_{ij}=f_{ij}$ for $k\notin\{i,j\}$.
+\end{lemma}
+
+\begin{proof}
+Remove card $i$. If $N$ of the other $n-2$ cards lie above card $j$, then card $j$ is at position $N+1$ of the remaining deck, and exactly $N+1$ of the $n$ insertion positions put card $i$ above card $j$. So $P_if_{ij}=2(N+1)/n-1$. On the other hand $\sum_{l\ne i,j}f_{lj}=N-(n-2-N)=2N+2-n$, and the two expressions agree. Moving a third card does not change the relative order of $i$ and $j$.
+\end{proof}
+
+Let $e_1,\dots,e_n$ be the standard basis of $\C^n$ and let $\Phi:\wedge^2\C^n\to\C^{S_n}$ be the linear map with $\Phi(e_i\wedge e_j)=f_{ij}$ for $i\ne j$; this is consistent with $e_j\wedge e_i=-e_i\wedge e_j$. Define the $n\times n$ matrix $M$ by
+\begin{equation}\label{eq:M}
+Me_i=e_{i+1}\quad(1\le i<n),\qquad Me_n=\frac1n\sum_{l=2}^ne_l .
+\end{equation}
+
+\begin{proposition}\label{prop:wedge}
+$Q\Phi(w)=\Phi\bigl((\wedge^2M)w\bigr)$ for every $w\in\wedge^2\C^n$.
+\end{proposition}
+
+\begin{proof}
+It suffices to take $w=e_i\wedge e_j$ with $i<j$. Card $i$ in the frame after a step was card $\rho^{-1}(i)$ before the relabelling, where $\rho^{-1}(i)=i+1$ for $i<n$ and $\rho^{-1}(n)=1$. Hence $Qf_{ij}=P_1f_{\rho^{-1}(i)\rho^{-1}(j)}$. If $j<n$ both labels exceed $1$ after the shift and $Qf_{ij}=f_{i+1,j+1}=\Phi(Me_i\wedge Me_j)$. If $j=n$, \cref{lem:insert} gives
+\[
+Qf_{in}=P_1f_{i+1,1}=-P_1f_{1,i+1}=-\frac1n\sum_{l\ne1,i+1}f_{l,i+1}=\frac1n\sum_{l=2}^nf_{i+1,l},
+\]
+where the term $l=i+1$, which is absent, would contribute $e_{i+1}\wedge e_{i+1}=0$. This is $\Phi(e_{i+1}\wedge Me_n)=\Phi(Me_i\wedge Me_n)$.
+\end{proof}
+
+The functions $f_{ij}$ with $i<j$ are linearly independent, since exchanging two adjacent cards $i$ and $j$ changes $f_{ij}$ and no other $f_{kl}$; hence $\Phi$ is injective.
+
+\section{Two eigenvectors}\label{sec:eigen}
+
+\begin{lemma}\label{lem:root}
+The function $h$ decreases strictly on $(2\pi,5\pi/2)$ from $+\infty$ to $-1-\log(5\pi/2)$. With $a,b,z$ as in \eqref{eq:az}, $a>0$ and $e^{-z}=1-z$.
+\end{lemma}
+
+\begin{proof}
+As $b\downarrow2\pi$, $b\cot b$ grows like $2\pi/(b-2\pi)$ and $\log(b/\sin b)$ only like $\log(1/(b-2\pi))$, so $h\to+\infty$; at $5\pi/2$ the cotangent vanishes. For the monotonicity,
+\[
+b\sin^2b\;h'(b)=2b\sin b\cos b-b^2-\sin^2b=-(b\cos b-\sin b)^2-b^2\sin^2b<0 .
+\]
+At the zero, $\sin b\in(0,1)$ gives $a=\log(b/\sin b)>0$, and $e^a\sin b=b$, $e^a\cos b=b\cot b=1+a$. These two equations say $e^{a-ib}=1+a-ib$, that is $e^{-z}=1-z$.
+\end{proof}
+
+For $s\in\C$ put
+\[
+F_n(s)=\frac1n\sum_{k=1}^{n-1}e^{-ks/n}-1,\qquad F(s)=\int_0^1e^{-sx}\dd x-1=\frac{1-e^{-s}}s-1 .
+\]
+
+\begin{lemma}\label{lem:eigvec}
+If $F_n(s)=0$, then the vector $v(s)$ with
+\[
+v_1(s)=0,\qquad v_j(s)=\frac1n\sum_{k=1}^{j-1}e^{-ks/n}\quad(2\le j\le n),
+\]
+satisfies $Mv(s)=e^{s/n}v(s)$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:M}, $(Mv)_1=0$ and $(Mv)_j=v_{j-1}+v_n/n$ for $j\ge2$. The condition $F_n(s)=0$ says $v_n(s)=1$, and $e^{s/n}v_j(s)=\frac1n\sum_{k=0}^{j-2}e^{-ks/n}=v_{j-1}(s)+\frac1n$.
+\end{proof}
+
+Equivalently, with $r=e^{s/n}$, the nonzero eigenvalues of $M$ found this way solve $nr^{n-1}=\sum_{k=0}^{n-2}r^k$.
+
+\begin{lemma}\label{lem:roots}
+For large $n$, $F_n$ has a real zero $s_{0,n}=-2/n+O(n^{-2})$ and a zero $s_{1,n}=z+O(1/n)$.
+\end{lemma}
+
+\begin{proof}
+On compact subsets of $\C$, $F_n=F+O(1/n)$ and $F_n'=F'+O(1/n)$, by the error bound for Riemann sums of a smooth integrand. The zeros of $F$ at $0$ and $z$ are simple: $F'(0)=-1/2$, and $F'(z)=(ze^{-z}-1+e^{-z})/z^2=-1$ by $e^{-z}=1-z$. Rouch\'e's theorem on small disjoint disks around $0$ and $z$ gives exactly one zero of $F_n$ in each for large $n$. The zero near $0$ is real, because $F_n$ is real on the real line and the zero in the disk is unique; and $F_n(0)=-1/n$, $F_n'(0)=-(n-1)/(2n)$, with $F_n''$ bounded near $0$, give $s_{0,n}=-2/n+O(n^{-2})$. The zero near $z$ satisfies $s_{1,n}-z=O(1/n)$ because $F_n(z)=O(1/n)$ and $F_n'$ stays away from $0$ there.
+\end{proof}
+
+Let $u=v(s_{0,n})$, $v=v(s_{1,n})$ and
+\begin{equation}\label{eq:lambda}
+\lambda_n=e^{(s_{0,n}+s_{1,n})/n},\qquad \log\abs{\lambda_n}=\frac{\re(s_{0,n}+s_{1,n})}n=-\frac an+O(n^{-2}).
+\end{equation}
+The eigenvalues $e^{s_{0,n}/n}$ and $e^{s_{1,n}/n}$ of $M$ are distinct for large $n$, so $u\wedge v\ne0$, and $(\wedge^2M)(u\wedge v)=\lambda_n\,u\wedge v$. By \cref{prop:wedge} the function
+\begin{equation}\label{eq:Psi}
+\Psi_n=\Phi(u\wedge v)=\sum_{i<j}(u_iv_j-u_jv_i)f_{ij}
+\end{equation}
+satisfies $Q\Psi_n=\lambda_n\Psi_n$.
+
+\section{Proof of the main theorem}\label{sec:proof}
+
+\begin{lemma}\label{lem:size}
+Let $V(x)=(1-e^{-zx})/z$. Uniformly in $1\le j\le n$, with $x_j=(j-1)/n$,
+\[
+u_j=x_j+O(1/n),\qquad v_j=V(x_j)+O(1/n).
+\]
+In particular the coefficients $u_iv_j-u_jv_i$ are bounded by a constant $K$ independent of $n$, and
+\begin{equation}\label{eq:A}
+\frac{\Psi_n(\mathrm{id})}{n^2}\to A=-\frac2{3z}-\frac1{z^2}\ne0,
+\end{equation}
+where $\mathrm{id}$ is the sorted deck, with card $1$ on top.
+\end{lemma}
+
+\begin{proof}
+The first two statements are Riemann sums for $\int_0^{x}e^{-sy}\dd y$ with $s$ in a compact set, together with $s_{0,n}\to0$ and $s_{1,n}\to z$. On the sorted deck every $f_{ij}$ with $i<j$ equals $1$, so $\Psi_n(\mathrm{id})/n^2$ is a Riemann sum for
+\[
+A=\iint_{0<x<y<1}\bigl(xV(y)-yV(x)\bigr)\dd x\dd y=\int_0^1\Bigl(x^2-\frac12\Bigr)V(x)\dd x .
+\]
+Since $1-e^{-z}=z$, $\int_0^1V=\bigl(1-(1-e^{-z})/z\bigr)/z=0$, and $\int_0^1x^2e^{-zx}\dd x=2/z^3-e^{-z}(1/z+2/z^2+2/z^3)=1+1/z$. Hence $A=\frac1z\bigl(\frac13-1-\frac1z\bigr)$, which is the value in \eqref{eq:A}. It vanishes only if $z=-3/2$, and $z$ is not real.
+\end{proof}
+
+The next lemma is the second-moment estimate of \cite[Lemma~2]{Wil03}, which allows a complex eigenvalue; we give its short proof in the present notation.
+
+\begin{lemma}\label{lem:var}
+There is a constant $C$, independent of $n$ and $\sigma$, such that for every deck $\sigma$
+\begin{equation}\label{eq:condvar}
+\E\bigl[\abs{\Psi_n(Y_1)-\lambda_n\Psi_n(\sigma)}^2\bigm|Y_0=\sigma\bigr]\le Cn^2 .
+\end{equation}
+Consequently, from any fixed starting deck,
+\begin{equation}\label{eq:var}
+\Var\Psi_n(Y_t)\le\frac{Cn^2}{1-\abs{\lambda_n}^2}\quad(t\ge0),\qquad \E_\pi\Psi_n=0,\qquad \E_\pi\abs{\Psi_n}^2\le\frac{Cn^2}{1-\abs{\lambda_n}^2},
+\end{equation}
+where $\Var X=\E\abs{X-\E X}^2$, and both bounds are $O(n^3)$.
+\end{lemma}
+
+\begin{proof}
+Given $Y_0=\sigma$, the possible values of $Y_1$ differ only in the position of the card that was moved, which after relabelling is card $n$; the relative order of the other cards is the same for all of them. Two possible values of $Y_1$ therefore differ in at most the $n-1$ functions $f_{in}$, each by at most $2$, so their $\Psi_n$-values differ by at most $2K(n-1)$. Since $\E[\Psi_n(Y_1)\mid Y_0=\sigma]=(Q\Psi_n)(\sigma)=\lambda_n\Psi_n(\sigma)$, the left side of \eqref{eq:condvar} is a conditional variance, at most the square of the diameter of the set of possible values, which gives \eqref{eq:condvar} with $C=4K^2$.
+
+By the law of total variance and $\E[\Psi_n(Y_{t+1})\mid Y_t]=\lambda_n\Psi_n(Y_t)$,
+\[
+\Var\Psi_n(Y_{t+1})\le Cn^2+\abs{\lambda_n}^2\Var\Psi_n(Y_t),
+\]
+and iterating from $\Var\Psi_n(Y_0)=0$ gives the first bound. Under $\pi$, $\E_\pi\Psi_n=\E_\pi Q\Psi_n=\lambda_n\E_\pi\Psi_n$ with $\lambda_n\ne1$, so $\E_\pi\Psi_n=0$; the same decomposition in stationarity gives $\E_\pi\abs{\Psi_n}^2\le Cn^2+\abs{\lambda_n}^2\E_\pi\abs{\Psi_n}^2$. Finally $1-\abs{\lambda_n}^2=2a/n+O(n^{-2})$ by \eqref{eq:lambda}.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Fix $0<c<1/(2a)$, let $t=\lfloor c\,n\log n\rfloor$, and start from the sorted deck. Put $\mu_t=\E\Psi_n(Y_t)=\lambda_n^t\Psi_n(\mathrm{id})$. By \eqref{eq:lambda} and \eqref{eq:A},
+\[
+\abs{\mu_t}^2=\abs{\lambda_n}^{2t}\abs{\Psi_n(\mathrm{id})}^2=n^{4-2ac+o(1)} .
+\]
+Let $E=\{\sigma:\abs{\Psi_n(\sigma)-\mu_t}<\abs{\mu_t}/2\}$. By Chebyshev's inequality and \eqref{eq:var},
+\[
+\Pp_{\mathrm{id}}(Y_t\notin E)\le\frac{4\Var\Psi_n(Y_t)}{\abs{\mu_t}^2}=n^{-1+2ac+o(1)}
+\]
+and, since every $\sigma\in E$ has $\abs{\Psi_n(\sigma)}>\abs{\mu_t}/2$,
+\[
+\pi(E)\le\frac{4\E_\pi\abs{\Psi_n}^2}{\abs{\mu_t}^2}=n^{-1+2ac+o(1)} .
+\]
+Here and below $o(1)$ is as $n\to\infty$ with $c$ fixed. Both bounds tend to $0$ because $2ac<1$. Hence $\tv{\Pp_{\mathrm{id}}(Y_t\in\cdot)-\pi}\ge\Pp_{\mathrm{id}}(Y_t\in E)-\pi(E)\to1$, and the same holds for $\sigma_t=\rho^{-t}Y_t$. The phase of $\lambda_n^t$ rotates with $t$, but $E$ is a disk around the mean itself, so the rotation costs nothing.
+\end{proof}
+
+\begin{remark}\label{rem:other}
+Any two distinct eigenvalues $e^{s/n},e^{s'/n}$ of $M$ give an eigenfunction in the same way, with $\abs{\lambda}=e^{\re(s+s')/n}$. Among pairs of zeros of $F$ the choice $\{0,z\}$, or its conjugate $\{0,\bar z\}$, decays slowest. Indeed $0$ is the only real zero, since $(1-e^{-s})/s$ decreases strictly on the real line. A nonreal zero $-\alpha+i\beta$ with $\beta>0$ satisfies $e^\alpha\sin\beta=\beta$ and $e^\alpha\cos\beta=1+\alpha$; the first forces $\alpha>0$ because $\sin\beta<\beta$, then the second forces $\cos\beta>0$, and $\beta\cot\beta<1$ on $(0,\pi/2)$ excludes the first interval. So $\beta\in(2k\pi,2k\pi+\pi/2)$ for some $k\ge1$, the case $k=1$ is $z$ by \cref{lem:root}, and for $k\ge2$, $\alpha=\log(\beta/\sin\beta)>\log(4\pi)>a$. A better constant would need either observables outside the span of the $f_{ij}$ or a different argument.
+\end{remark}
+
+\section{Small decks}\label{sec:small}
+
+The exact laws are easy to compute for small $n$, and they show that the asymptotic constant says little at moderate sizes. For $n=3$ the distance from every starting deck is $d_3(t)=\frac12\,3^{-(t-1)}$ for $t\ge1$. The worst-start thresholds $t_{\mathrm{mix},n}(1/4)$ for $n=2,\dots,6$ are $1,2,3,5,6$ steps; for comparison $n\log n/(2a)$ is $0.33,0.79,1.33,1.93,2.57$. The sorted deck is not always the worst start: for $n=4$ after five steps it is at distance $1/32$, while the deck $1,2,4,3$ is at distance $3/64$. \Cref{thm:main} uses only the sorted deck. These values were computed in exact rational arithmetic over all starting decks by the script in the repository listed below.
+
+\section*{Acknowledgments and funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit 530550103).
+
+The shuffle is due to Ross G. Pinsky~\cite{Pin}. The order $n\log n$ of its mixing time, the lower bound with constant $1/(2+2a)$ and the question of cutoff are due to Ben Morris, Weiyang Ning and Yuval Peres~\cite{MNP}, and the present constant improves theirs by replacing their barrier profile with an exact eigenfunction built from the same root of $e^{-z}=1-z$. The upper bound $\tfrac32n\log n$ is due to Megan Bernstein and Evita Nestoridi~\cite{BN}. The second-moment method for lower bounds is David Bruce Wilson's~\cite{Wil}.
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Code and data availability}
+The \LaTeX\ source and a script that checks \cref{prop:wedge}, the root asymptotics and the small-deck values are at \url{https://github.com/yspennstate/card-cyclic-lower-bound}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The proofs and writing were produced by AI systems in the author-directed Math Brain project: Codex (OpenAI) produced the proof and the computations, a second Codex agent audited them, and Claude (Anthropic) checked the proof against the sources and wrote the text. The shuffle is Pinsky's, the mixing order, the earlier constant and the question are those of Morris, Ning and Peres, and the method is Wilson's; the pair-order eigenfunction and the constant $1/(2a)$ are new. The author selected the problem and directed the work, did not carry out the mathematics or the writing, and is responsible for submission. The checks are internal verification, not peer review or formalization.
+
+\begin{thebibliography}{99}
+
+\bibitem{BN} M.~Bernstein and E.~Nestoridi, Cutoff for random to random card shuffle, \emph{Ann. Probab.} \textbf{47} (2019), 3303--3320, doi:10.1214/19-AOP1340; arXiv:1703.06210.
+
+\bibitem{Jon} J.~Jonasson, Card-cyclic-to-random shuffling with relabeling, \emph{ALEA Lat. Am. J. Probab. Math. Stat.} \textbf{12} (2015), 793--810, arXiv:1501.05485.
+
+\bibitem{LP} D.~A.~Levin and Y.~Peres, \emph{Markov Chains and Mixing Times}, second edition, American Mathematical Society, Providence, RI, 2017.
+
+\bibitem{MNP} B.~Morris, W.~Ning and Y.~Peres, Mixing time of the card-cyclic-to-random shuffle, \emph{Ann. Appl. Probab.} \textbf{24} (2014), 1835--1849, doi:10.1214/13-AAP964; arXiv:1207.3406.
+
+\bibitem{Pin} R.~G.~Pinsky, Probabilistic and combinatorial aspects of the card-cyclic to random insertion shuffle, \emph{Random Structures Algorithms} \textbf{46} (2015), 362--390, doi:10.1002/rsa.20505; arXiv:1105.3618.
+
+\bibitem{SCZ} L.~Saloff-Coste and J.~Z\'u\~niga, Convergence of some time inhomogeneous Markov chains via spectral techniques, \emph{Stochastic Process. Appl.} \textbf{117} (2007), 961--979, doi:10.1016/j.spa.2006.11.004.
+
+\bibitem{Wil} D.~B.~Wilson, Mixing times of lozenge tiling and card shuffling Markov chains, \emph{Ann. Appl. Probab.} \textbf{14} (2004), 274--325, doi:10.1214/aoap/1075828054.
+
+\bibitem{Wil03} D.~B.~Wilson, Mixing time of the Rudvalis shuffle, \emph{Electron. Commun. Probab.} \textbf{8} (2003), 77--85, doi:10.1214/ECP.v8-1071, arXiv:math/0210469.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\end{thebibliography}
+\end{document}

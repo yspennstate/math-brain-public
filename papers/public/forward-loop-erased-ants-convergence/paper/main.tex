@@ -1,0 +1,292 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+
+\title[Forward-loop-erased ants at distance two]{Convergence of the forward-loop-erased ants process at distance two}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\subjclass[2020]{60K35, 60J10, 05C81}
+\keywords{reinforced random walk, ants process, loop-erased random walk, P\'olya urn, shortest paths}
+
+\begin{abstract}
+In the forward-loop-erased ants process, the $n$th ant walks from a nest $N$ to a food source $F$ with transition
+probabilities proportional to the current edge weights, and every edge of the chronological loop erasure of its path
+gains weight one. Armfield and Mailler showed that when $N$ and $F$ are at distance two the ants find the shortest
+paths, and left open whether $W(n)/n$ converges. We show that it converges almost surely and that every path of length
+two keeps a positive share in the limit. The key fact is that for a common neighbour $i$ of $N$ and $F$ the relative
+drift of $W_{\{N,i\}}(n)W_{\{i,F\}}(n)$ is the inverse effective conductance between $N$ and $F$, the same for all $i$,
+up to a summable error; hence ratios of these products converge on every finite graph.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Kious, Mailler and Schapira~\cite{KMS22a,KMS22b} introduced a family of reinforced random walk models for the foraging
+of ants. The edges of a finite graph $G=(V,E)$ carry weights $W_e(n)$, all equal to $1$ at time $0$. At step $n$ an ant
+starts at the nest $N$ and performs a random walk on $G$ with conductances $W(n)$, stopped when it reaches the food
+source $F$; a set of edges extracted from its trajectory is then reinforced, every edge of the set gaining weight one.
+Different extraction rules give different models: the loop-erased and geodesic rules select a simple path from $N$ to
+$F$, while the trace rule selects every edge the ant traversed. Kious, Mailler and Schapira conjectured that in the
+backward-loop-erased version (the loop erasure of the time-reversed trajectory) and the uniform-geodesic version the
+ants find the shortest paths and the process converges. They proved this for series-parallel graphs with source $N$ and
+sink $F$ and for the lozenge graph respectively~\cite{KMS22a}. In the trace-reinforced version the ants do not always
+find the shortest paths~\cite{KMS22b}. Mailler and Varin~\cite{MV26} proved convergence
+for a two-nest process with the backward erasure on triangle-series-parallel graphs.
+
+Armfield and Mailler~\cite{AM} studied the forward-loop-erased version, in which the reinforced path $\gamma_n$ is the
+chronological loop erasure of the $n$th trajectory; the model and their distance-two theorem also appear in Armfield's
+thesis~\cite[Chapter~2]{Arm26}. Their Theorem~1.1 states that if $\{N,F\}\notin E$ and $N$ and $F$
+have $k\ge1$ common neighbours $1,\dots,k$, so that $S=\{\{N,i\},\{i,F\}:i\in[k]\}$ is the set of edges on shortest
+paths, then almost surely
+\begin{equation}\label{eq:AM}
+\text{(a)}\ \ \frac{W_{\{N,i\}}(n)-W_{\{i,F\}}(n)}{n}\to0\quad(i\in[k]),\qquad
+\text{(b)}\ \ \frac{W_e(n)}{n}\to0\quad(e\notin S).
+\end{equation}
+Other edges between the vertices $i\in[k]$ and the rest of the graph are allowed. They remark that convergence of
+$W(n)/n$ is open; on the graph reduced to $S$ the path counts form a $k$-colour P\'olya urn, and they suggest that a
+proof would need the weights off $S$ to vanish fast enough for that comparison to hold, as in the method
+of~\cite{KMS22a}.
+
+The main result answers this question without any rate for the weights off $S$.
+
+\begin{theorem}\label{thm:main}
+Under the assumptions of~\cite[Theorem~1.1]{AM} there is a random vector $(\lambda_1,\dots,\lambda_k)$ with
+$\lambda_i>0$ for every $i$ and $\sum_i\lambda_i=1$ such that, almost surely,
+\[
+\frac{W_{\{N,i\}}(n)}{n}\to\lambda_i,\qquad \frac{W_{\{i,F\}}(n)}{n}\to\lambda_i\quad(i\in[k]),\qquad
+\frac{W_e(n)}{n}\to0\quad(e\notin S).
+\]
+In particular the forward-loop-erased ants process converges, and every shortest path keeps a positive share of the
+reinforcement in the limit.
+\end{theorem}
+
+The input from~\cite{AM} is their Theorem~1.1 and two identities for the probability that an edge at $N$ or at $F$ is
+reinforced (\cite[Lemmas~2.12 and~2.13]{AM}), which we reprove in Section~\ref{sec:edges} for completeness. The new
+ingredient is Proposition~\ref{prop:ratio}: for vertices $i,j$ adjacent to both $N$ and $F$, on any finite graph, the
+ratio of the products $Q_i(n)=W_{\{N,i\}}(n)W_{\{i,F\}}(n)$ and $Q_j(n)$ converges almost surely to a finite positive
+limit. The point is that in the conditional drift of $\log Q_i$ the probability $h_i$ that a walk from $i$ reaches $F$
+before $N$ cancels: the edge at $N$ is reinforced with probability proportional to $W_{\{N,i\}}h_i$ and the edge at $F$
+with probability proportional to $W_{\{i,F\}}(1-h_i)$, so the relative drift of the product is $1/C(n)$ up to a
+summable error, the same for all $i$. Armfield and Mailler used a suitably normalized sum of these products as a
+stochastic approximation in their proof of~\eqref{eq:AM}(a); here each $Q_i$ is followed separately. The square root
+that turns Proposition~\ref{prop:ratio} into Theorem~\ref{thm:main} comes from~\eqref{eq:AM}(a), which gives
+$Q_i(n)/n^2-(W_{\{N,i\}}(n)/n)^2\to0$.
+
+We do not determine the law of $\lambda$. In simulations (Section~\ref{sec:numerics}) the log ratios of different
+seeds are separated at $n=10^5$ and appear to stabilize, consistent with the P\'olya urn heuristic of~\cite{AM}: on the graph reduced to $S$, started
+from unit weights, the
+limit would have the uniform law on the simplex.
+
+\section{Edge probabilities at the nest and at the food}\label{sec:edges}
+
+Fix conductances $w=(w_e)_{e\in E}$ with $w_e>0$, write $\pi_v=\sum_{e\ni v}w_e$, let $X$ be the random walk with these
+conductances started at $N$ and stopped at $\tau_F$, the hitting time of $F$, and let $\gamma=\mathrm{LE}(X)$ be its
+chronological loop erasure. For $v\in V$ let $h(v)=\Prob_v(\tau_F<\tau_N)$ and let
+\[
+C=\pi_N\Prob_N(\tau_F<\tau_N^+)=\sum_{u\sim N}w_{\{N,u\}}h(u)
+\]
+be the effective conductance between $N$ and $F$.
+
+\begin{lemma}[{\cite[Lemmas~2.12 and~2.13]{AM}}]\label{lem:edges}
+For $u\sim N$, $\Prob(\{N,u\}\in\gamma)=w_{\{N,u\}}h(u)/C$. For $u\sim F$ with $u\ne N$,
+$\Prob(\{u,F\}\in\gamma)=w_{\{u,F\}}(1-h(u))/C$.
+\end{lemma}
+
+\begin{proof}
+The path $\gamma$ is simple, starts at $N$ and ends at $F$, so an edge at $N$ lies on $\gamma$ only as its first edge
+and an edge at $F$ only as its last edge. During chronological loop erasure the current erased path always ends at the
+current position of the walk, and a vertex is removed only when the walk returns to a vertex that precedes it on the
+current path.
+
+Let $\sigma$ be the time of the last visit of $X$ to $N$ before $\tau_F$. After $\sigma$ the walk does not return to $N$,
+so $X_{\sigma+1}$ is never removed and the first edge of $\gamma$ is $\{N,X_{\sigma+1}\}$. The expected number of visits
+to $N$ before $\tau_F$ is $1/\Prob_N(\tau_F<\tau_N^+)=\pi_N/C$, and each visit is the last one followed by a step to $u$
+with probability $(w_{\{N,u\}}/\pi_N)\,h(u)$. Hence $\Prob(X_{\sigma+1}=u)=w_{\{N,u\}}h(u)/C$.
+
+The vertex $F$ is first visited at time $\tau_F$, so the last edge of $\gamma$ is $\{X_{\tau_F-1},F\}$. Let $g(x,y)$ be
+the expected number of visits to $y$ before $\tau_F$ by the walk started at $x$. Then
+$\Prob(X_{\tau_F-1}=u)=g(N,u)\,w_{\{u,F\}}/\pi_u$. By reversibility $g(x,y)/\pi_y$ is symmetric in $x$ and
+$y$, also for the walk killed at $F$~\cite[Exercise~2.1(e) and the proof of Proposition~2.1]{LP17}, and by the strong Markov property $g(u,N)=\Prob_u(\tau_N<\tau_F)\,g(N,N)=(1-h(u))\pi_N/C$.
+Therefore $g(N,u)/\pi_u=g(u,N)/\pi_N=(1-h(u))/C$.
+\end{proof}
+
+\section{Ratios of products}\label{sec:ratio}
+
+Let $(W(n))_{n\ge0}$ be the forward-loop-erased ants process on a finite connected graph $G$ with distinct vertices
+$N,F$, let $\F_n$ be the $\sigma$-field generated by $W(0),\dots,W(n)$, and write $C(n)$ and $h_v(n)$ for the
+quantities of Section~\ref{sec:edges} computed with $w=W(n)$. For a vertex $i\notin\{N,F\}$ adjacent to both $N$ and $F$
+put
+\[
+A_i(n)=W_{\{N,i\}}(n),\qquad B_i(n)=W_{\{i,F\}}(n),\qquad Q_i(n)=A_i(n)B_i(n).
+\]
+
+\begin{proposition}\label{prop:ratio}
+Let $i,j\notin\{N,F\}$ be vertices adjacent to both $N$ and $F$. Then $\log\bigl(Q_i(n)/Q_j(n)\bigr)$ converges almost
+surely to a finite random variable.
+\end{proposition}
+
+\begin{proof}
+Write $a_n=A_i(n+1)-A_i(n)$ and $b_n=B_i(n+1)-B_i(n)$, both in $\{0,1\}$, and
+\[
+\xi_n=\frac{Q_i(n+1)}{Q_i(n)}-1=\frac{a_n}{A_i(n)}+\frac{b_n}{B_i(n)}+\frac{a_nb_n}{Q_i(n)}.
+\]
+By Lemma~\ref{lem:edges}, $\E[a_n\mid\F_n]=A_i(n)h_i(n)/C(n)$ and $\E[b_n\mid\F_n]=B_i(n)(1-h_i(n))/C(n)$, so
+\begin{equation}\label{eq:drift}
+\E[\xi_n\mid\F_n]=\frac{1}{C(n)}+\frac{g_n}{Q_i(n)},\qquad g_n=\E[a_nb_n\mid\F_n]=\Prob\bigl(\gamma_{n+1}=(N,i,F)\mid\F_n\bigr).
+\end{equation}
+Since $\log(1+x)=x-r(x)$ with $0\le r(x)\le x^2/2$ for $x\ge0$, and $Q_i(0)=1$,
+\begin{equation}\label{eq:decomp}
+\log Q_i(n)=\sum_{m<n}\frac{1}{C(m)}+D_i(n)+M_i(n)-R_i(n),
+\end{equation}
+where $D_i(n)=\sum_{m<n}g_m/Q_i(m)$, $M_i(n)=\sum_{m<n}(\xi_m-\E[\xi_m\mid\F_m])$ and $R_i(n)=\sum_{m<n}r(\xi_m)$.
+
+Each of the last three terms converges almost surely, by the following deterministic bound. If $a_m=1$ for the $\ell$th
+time, then $A_i(m)=\ell$; hence $\sum_m a_m/A_i(m)^2\le\sum_{\ell\ge1}\ell^{-2}=\pi^2/6$, and the same holds for $b$ and
+$B_i$. As $(a_mb_m/Q_i(m))^2\le a_m/A_i(m)^2$, we get $\xi_m^2\le3\bigl(2a_m/A_i(m)^2+b_m/B_i(m)^2\bigr)$ and
+\[
+\sum_{m\ge0}\xi_m^2\le\frac{3\pi^2}{2}.
+\]
+Thus $R_i(n)$ is nondecreasing and bounded by $3\pi^2/4$, and $M_i$ is a martingale with
+$\E[M_i(n)^2]\le\E\sum_m\xi_m^2\le3\pi^2/2$, so it converges almost surely. Finally $D_i(n)$ is nondecreasing, and if
+$a_mb_m=1$ for the $\ell$th time then $A_i(m)\ge\ell$ and $B_i(m)\ge\ell$, so
+\[
+\E\Bigl[\sum_{m\ge0}\frac{g_m}{Q_i(m)}\Bigr]=\E\Bigl[\sum_{m\ge0}\frac{a_mb_m}{Q_i(m)}\Bigr]\le\sum_{\ell\ge1}\frac{1}{\ell^2}<\infty,
+\]
+and $D_i(n)$ converges almost surely. The first sum in~\eqref{eq:decomp} does not depend on $i$, so subtracting the
+decomposition for $j$ gives
+$\log(Q_i(n)/Q_j(n))=(D_i-D_j)(n)+(M_i-M_j)(n)-(R_i-R_j)(n)$, which converges almost surely.
+\end{proof}
+
+\begin{remark}
+The proposition uses neither the distance between $N$ and $F$ nor any lower bound on the hitting probabilities $h_i$.
+On its own it does not say that $Q_i(n)$ grows like $n^2$; this is where~\eqref{eq:AM} enters.
+\end{remark}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Every reinforced path is simple and starts at $N$, so exactly one edge at $N$ gains weight at each step and
+$\sum_{e\ni N}W_e(n)=n+\deg N$. By~\eqref{eq:AM}(b) the edges at $N$ outside $S$ have $W_e(n)/n\to0$, hence with
+$s_i(n)=A_i(n)/n$ and $t_i(n)=B_i(n)/n$,
+\[
+\sum_{i\in[k]}s_i(n)\to1,\qquad s_i(n)-t_i(n)\to0\quad(i\in[k])
+\]
+almost surely, the second by~\eqref{eq:AM}(a). The normalization $n+n_e$ of~\cite{AM} does not affect these limits,
+since $|W_e(n)/n-W_e(n)/(n+n_e)|\le n_e(n+1)/(n(n+n_e))\to0$.
+Since $s_i(n)\le(n+\deg N)/n\le1+\deg N$, it follows that $Q_i(n)/n^2-s_i(n)^2=s_i(n)(t_i(n)-s_i(n))\to0$.
+
+By Proposition~\ref{prop:ratio}, $Q_i(n)/Q_1(n)\to\rho_i\in(0,\infty)$ almost surely, with $\rho_1=1$. As $Q_1(n)/n^2$ is
+bounded,
+\[
+\frac{Q_i(n)}{n^2}-\rho_i\frac{Q_1(n)}{n^2}=\Bigl(\frac{Q_i(n)}{Q_1(n)}-\rho_i\Bigr)\frac{Q_1(n)}{n^2}\to0,
+\]
+and therefore $s_i(n)^2-\rho_is_1(n)^2\to0$. Using $|\sqrt x-\sqrt y|\le\sqrt{|x-y|}$ we get
+$s_i(n)-\sqrt{\rho_i}\,s_1(n)\to0$ for every $i$. Summing over $i$ gives $s_1(n)\sum_l\sqrt{\rho_l}\to1$, so
+\[
+s_i(n)\to\lambda_i:=\frac{\sqrt{\rho_i}}{\sum_{l\in[k]}\sqrt{\rho_l}}\in(0,1],\qquad t_i(n)\to\lambda_i,
+\]
+and $\sum_i\lambda_i=1$, with $\lambda_i<1$ when $k\ge2$. Together with~\eqref{eq:AM}(b) this is
+Theorem~\ref{thm:main}. Finally, a reinforced path other than $(N,i,F)$ that uses the edge $\{N,i\}$ also uses an edge
+outside $S$, so the number of such paths up to time $n$ is $o(n)$ by~\eqref{eq:AM}(b), and the frequency of the path
+$(N,i,F)$ among the first $n$ reinforced paths also tends to $\lambda_i$. \qed
+
+\section{Simulations}\label{sec:numerics}
+
+The code in the repository~\cite{Repo} checks Lemma~\ref{lem:edges} against $2\cdot10^5$ simulated loop-erased paths
+for random conductances on two graphs (all deviations are within $1.4$ standard errors), and runs the process from unit
+weights to $n=10^5$ on both graphs with three seeds each. Graph~A has common neighbours $2,3$ of $N=0$ and $F=1$, extra
+vertices $4,5$ with edges $\{0,4\},\{4,2\},\{3,5\},\{5,1\}$ and chords $\{2,3\},\{4,5\}$; graph~B has common neighbours
+$2,3,4$, extra vertices $5,6$ with edges $\{0,5\},\{5,2\},\{5,6\},\{6,4\},\{6,1\}$ and chords $\{2,3\},\{3,4\}$. The
+table lists $\log(Q_3(n)/Q_2(n))$.
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+ & $n=2\cdot10^3$ & $10^4$ & $3\cdot10^4$ & $6\cdot10^4$ & $10^5$\\\midrule
+A, seed 1 & $-3.915$ & $-3.955$ & $-3.905$ & $-3.881$ & $-3.865$\\
+A, seed 2 & $-3.530$ & $-3.544$ & $-3.478$ & $-3.495$ & $-3.490$\\
+A, seed 3 & $-2.390$ & $-2.302$ & $-2.265$ & $-2.280$ & $-2.293$\\
+B, seed 1 & $-0.643$ & $-0.737$ & $-0.745$ & $-0.752$ & $-0.731$\\
+B, seed 2 & $-0.338$ & $-0.415$ & $-0.364$ & $-0.334$ & $-0.333$\\
+B, seed 3 & $0.533$ & $0.523$ & $0.515$ & $0.550$ & $0.540$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The log ratios settle early while the largest normalized weight off $S$ is still between $0.03$ and $0.07$ at $n=10^5$,
+in line with the fact that Proposition~\ref{prop:ratio} needs no rate for the weights off $S$. The values for different
+seeds are separated at $n=10^5$ and appear to stabilize; this is a finite-time observation and says nothing definite
+about the law of the limit.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to
+Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared,
+persistent memory in which the agents record claims,
+proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each
+other's work. For more on the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain
+repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Data availability}
+The code that checks Lemma~\ref{lem:edges} and produces the table of Section~\ref{sec:numerics} is in the
+repository~\cite{Repo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper is part of a broader research project on AI proving problems. Claude agents (Anthropic) proved
+Proposition~\ref{prop:ratio} and Theorem~\ref{thm:main} and prepared the manuscript; Codex agents (OpenAI) refereed the
+proofs. The model is that of Kious, Mailler and Schapira~\cite{KMS22a} with the forward loop erasure of Armfield and
+Mailler~\cite{AM}, whose Theorem~1.1 and edge identities are used here; the question of convergence is theirs.
+Proposition~\ref{prop:ratio} and Theorem~\ref{thm:main} are the new results. The author directed the work and is
+responsible for the paper.
+
+\begin{thebibliography}{99}
+\bibitem{AM} W.~Armfield and C.~Mailler, \emph{The forward-loop-erased ants walk}, preprint, 2026,
+\arxiv{2610.18453}.
+\bibitem{Arm26} W.~Armfield, \emph{An analysis of learning processes through reinforced random walks}, PhD thesis,
+University of Bath, 2026.
+\bibitem{KMS22a} D.~Kious, C.~Mailler and B.~Schapira, \emph{Finding geodesics on graphs using reinforcement learning},
+Ann. Appl. Probab. \textbf{32} (2022), 3889--3929, \arxiv{2010.04820}.
+\bibitem{KMS22b} D.~Kious, C.~Mailler and B.~Schapira, \emph{The trace-reinforced ants process does not find shortest
+paths}, J. \'Ec. polytech. Math. \textbf{9} (2022), 505--536, \arxiv{2106.10559}.
+\bibitem{LP17} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge Series in Statistical and
+Probabilistic Mathematics~42, Cambridge University Press, 2016.
+\bibitem{MV26} C.~Mailler and P.~Varin, \emph{The two-nest ants process on triangle-series-parallel graphs}, preprint,
+2026, \arxiv{2601.22855}.
+\bibitem{Repo} Y.~Shmalo, \emph{Forward-loop-erased ants at distance two: paper and simulation code}, 2026,
+\url{https://github.com/yspennstate/forward-loop-erased-ants-convergence}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+2026, \doi{10.5281/zenodo.24150837},
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}

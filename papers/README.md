@@ -107,6 +107,16 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | The giant component of bilateral preference graphs with random budgets | [bilateral-preference-giant-component](https://github.com/yspennstate/bilateral-preference-giant-component) |
 | The variance of the typical cell of a hyperbolic Poisson-Voronoi tessellation at low intensity | [hyperbolic-voronoi-typical-cell-variance](https://github.com/yspennstate/hyperbolic-voronoi-typical-cell-variance) |
 | Slabs are more noise stable than balls at large Gaussian measure, for every correlation | [symmetric-gaussian-noise-stability-slabs](https://github.com/yspennstate/symmetric-gaussian-noise-stability-slabs) |
+| Almost every finite Markov chain has only coalescing grand couplings | [grand-coupling-coalescence](https://github.com/yspennstate/grand-coupling-coalescence) |
+| Convergence of the forward-loop-erased ants process at distance two | [forward-loop-erased-ants-convergence](https://github.com/yspennstate/forward-loop-erased-ants-convergence) |
+| An improved lower bound for the card-cyclic-to-random shuffle | [card-cyclic-lower-bound](https://github.com/yspennstate/card-cyclic-lower-bound) |
+| Pair meeting times can concentrate while coalescence is slow | [two-site-trap-coalescence](https://github.com/yspennstate/two-site-trap-coalescence) |
+| A joint central limit theorem for inversions and two-sided descents | [inversions-two-sided-descents-clt](https://github.com/yspennstate/inversions-two-sided-descents-clt) |
+| The length of the network spanning k random points in the Poisson line SIRSN | [sirsn-k-point-span-length](https://github.com/yspennstate/sirsn-k-point-span-length) |
+| First-order coverage asymptotics for the inertial Boolean model | [inertial-boolean-coverage](https://github.com/yspennstate/inertial-boolean-coverage) |
+| Cosmic coin flipping with at most nine bits | [cosmic-coin-flipping-nine-bits](https://github.com/yspennstate/cosmic-coin-flipping-nine-bits) |
+| Low-intensity Voronoi limits of correlated point processes in the hyperbolic plane | [hyperbolic-voronoi-correlated-nuclei](https://github.com/yspennstate/hyperbolic-voronoi-correlated-nuclei) |
+| Major roads and span length in scale-invariant random spatial networks | [sirsn-major-roads-binary-hierarchy](https://github.com/yspennstate/sirsn-major-roads-binary-hierarchy) |
 
 Six more are kept here with their working files:
 

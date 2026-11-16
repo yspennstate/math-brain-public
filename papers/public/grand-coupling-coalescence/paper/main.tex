@@ -1,0 +1,306 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\newcommand{\rk}{\operatorname{rk}}
+\setlength{\emergencystretch}{2.5em}
+
+\begin{document}
+
+\title[Coalescence of grand couplings]{Almost every finite Markov chain has only coalescing grand couplings}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\subjclass[2020]{60J10, 60J22, 15B51, 20M20}
+\keywords{Markov chain, grand coupling, coalescence, coupling from the past, doubly stochastic matrix,
+transformation semigroup}
+
+\begin{abstract}
+A grand coupling of a finite Markov chain runs copies of the chain from every state by applying independent random
+maps with a common law; its coalescence number is the eventual number of distinct trajectories. Grimmett and Holmes
+asked whether, for a random transition matrix with independent uniform weights, every grand coupling has
+coalescence number one almost surely. We show that it does. If some grand coupling of $P$ has coalescence number
+$k\ge2$, then there are $k$ states $W$ and a partition $\{Z_w:w\in W\}$ of the state space with $w\in Z_w$ such that the
+matrix $\bigl(P(w,Z_{w'})\bigr)_{w,w'\in W}$ is doubly stochastic; for $k$ equal to the number of states this is the
+Birkhoff--von Neumann condition. Each such condition is a non-trivial affine equation in $P$, and there are finitely
+many, so the matrices with a non-coalescing grand coupling form a Lebesgue-null set.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $S=\{1,\dots,n\}$ with $n\ge2$, and let $P=(p_{i,j})$ be an irreducible transition matrix on $S$. Write $F_S$ for
+the set of maps $f:S\to S$. Following Grimmett and Holmes~\cite{GH21,GH26}, a \emph{grand coupling} of $P$ is a
+probability measure $\mu$ on $F_S$ such that
+\begin{equation}\label{eq:consistent}
+\mu\{f\in F_S: f(i)=j\}=p_{i,j}\qquad\text{for all }i,j\in S.
+\end{equation}
+Let $L_P$ be the set of grand couplings of $P$. Given $\mu\in L_P$, let $F_1,F_2,\dots$ be independent random maps with
+law $\mu$ and put $X^i_t=F_t\circ\dots\circ F_1(i)$. Each $X^i$ is a Markov chain with transition matrix $P$ started at
+$i$, and two of these chains move together once they meet. The number of coalescence classes, that is, of
+trajectories that remain distinct for all time, is almost surely constant~\cite[Lemma~2]{GH21}; it is the
+\emph{coalescence number} $k(\mu)$, and
+\[
+K(P)=\{k(\mu):\mu\in L_P\}.
+\]
+The coalescence of all trajectories is what the coupling-from-the-past algorithm of Propp and Wilson~\cite{PW96}
+requires, and Grimmett and Holmes showed that the forward and backward processes have the same set
+$K(P)$~\cite{GH21}. By~\cite[Theorem~3.13]{GH26}, $1\in K(P)$ if and only if $P$ is aperiodic, the independence coupling
+attaining $k=1$. At the other end, $n\in K(P)$ if and only if $P$ is doubly stochastic~\cite[Theorem~4]{GH21}: a
+coupling with $k(\mu)=n$ is supported on permutations, and conversely a doubly stochastic matrix is a mixture of
+permutation matrices by the theorem of Birkhoff and von Neumann~\cite{Bir46} (see~\cite[Theorem~2.6]{GH26}), so the
+coupling that picks a random permutation with these weights has $k=n$.
+
+To ask what happens for a typical matrix, Grimmett and Holmes~\cite[Remark~2.4]{GH26} let $Q$ be the law of the matrix
+with entries $p_{i,j}=q_{i,j}/\sum_{l}q_{i,l}$, where the $q_{i,j}$ are independent and uniform on $(0,1)$. A $Q$-random
+matrix has all entries in $(0,1)$, so it is irreducible and aperiodic, and it has many grand couplings. From a bound
+on the largest coalescence number in terms of the invariant distribution they deduced that $K(P)=\{1\}$ with positive
+$Q$-probability~\cite[Theorem~3.5, Remark~3.7]{GH26}, and they showed that for $Q$-a.e.\ $P$ every block measure is
+trivial~\cite[Lemma~5.1]{GH26}. They asked~\cite[Open problem~3.8]{GH26}: is $K(P)=\{1\}$ for $Q$-a.e.\ $P$? We answer
+this question.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge2$. The set of irreducible transition matrices $P$ on $S$ with $K(P)\neq\{1\}$ is contained in a finite union
+of affine hyperplanes, none of which contains the set of stochastic matrices. In particular it has Lebesgue measure
+zero in the set of stochastic matrices, and $K(P)=\{1\}$ for $Q$-a.e.\ $P$; the same holds for any law of $P$ that is
+absolutely continuous with respect to Lebesgue measure.
+\end{theorem}
+
+Theorem~\ref{thm:main} follows from a necessary condition for $k\in K(P)$, which may be of independent interest.
+
+\begin{theorem}\label{thm:structure}
+Let $P$ be an irreducible transition matrix on $S$ and let $\mu\in L_P$ have $k=k(\mu)\ge2$. Then there exist a set
+$W\subseteq S$ with $|W|=k$ and a partition $\{Z_w:w\in W\}$ of $S$ with $w\in Z_w$ for each $w$, such that
+\begin{equation}\label{eq:columns}
+\sum_{x\in W}P(x,Z_w)=1\qquad\text{for every }w\in W,
+\end{equation}
+where $P(x,Z)=\sum_{z\in Z}p_{x,z}$. Equivalently, the $k\times k$ matrix $B=\bigl(P(w,Z_{w'})\bigr)_{w,w'\in W}$ is
+doubly stochastic. Moreover the pair $(W,\{Z_w\})$ can be chosen to depend only on the support of $\mu$, and
+\eqref{eq:columns} holds with $P(x,Z_w)$ replaced by $\mathbf{1}[g(x)\in Z_w]$ for every map $g$ in that support.
+\end{theorem}
+
+The rows of $B$ sum to one because the sets $Z_{w'}$ partition $S$, so \eqref{eq:columns} is exactly the statement
+that the columns of $B$ sum to one. When $k=n$ we have $W=S$ and $Z_w=\{w\}$, and \eqref{eq:columns} says that $P$ is
+doubly stochastic, which recovers the easy half of the Birkhoff--von Neumann characterization of $n\in K(P)$. In
+general $W$ is the image of an idempotent map of least rank in the semigroup generated by the support of $\mu$, and
+$Z_w$ is the fibre of that idempotent over $w$; the condition says that each step of the chain, followed by this
+idempotent, permutes $W$. Irreducibility is assumed to match the setting of~\cite{GH26}; the proofs below do not use
+it, so both theorems hold for every transition matrix on $S$.
+
+The question, the model, the coalescence number and the law $Q$ are due to Grimmett and Holmes, who also showed that
+$k(\mu)$ is the least rank in the semigroup generated by the support of $\mu$~\cite[Theorem~3(a)]{GH21}. The
+permutation property behind Theorem~\ref{thm:structure} is not new either: for a word of least rank, Yano~\cite[\S4.2,
+(4.6)--(4.9)]{Yan13} shows that every map in the support, followed by that word, permutes its image, and he uses the
+resulting permutation process to study random walks driven by road colorings. The images of least size and the fact
+that every word maps one of them onto another go back to Friedman's work on the road coloring problem~\cite{Fri90}
+(see~\cite[Lemma~2.3]{Yan13}), and Budzban and Mukherjea~\cite{BM00} study that problem through the semigroup
+generated by the colors. What is new here is the step from this pointwise statement to a linear condition on $P$ itself,
+Theorem~\ref{thm:structure}. Its consequence is Theorem~\ref{thm:main}: the obstruction to $k\ge2$ is always one of
+finitely many affine equations in the entries of $P$, whatever the support of the coupling, and this answers Open
+problem~3.8 of~\cite{GH26}.
+
+Section~\ref{sec:semigroup} collects the facts about transformation semigroups, Section~\ref{sec:proofs} proves the two
+theorems, and Section~\ref{sec:checks} describes a computer check for $n\le5$.
+
+\section{Least rank in a semigroup of maps}\label{sec:semigroup}
+
+For $f\in F_S$ write $\rk f=|f(S)|$. For a finite set $\Sigma\subseteq F_S$ let $M(\Sigma)$ be the set of all
+compositions $g_t\circ\dots\circ g_1$ with $t\ge0$ and $g_1,\dots,g_t\in\Sigma$ (the empty composition is the identity),
+and let $r(\Sigma)=\min\{\rk f:f\in M(\Sigma)\}$.
+
+\begin{lemma}[{\cite[Theorem~3(a)]{GH21}}]\label{lem:rank}
+Let $\mu\in L_P$ and $\Sigma=\operatorname{supp}\mu$. Then $k(\mu)=r(\Sigma)$.
+\end{lemma}
+
+\begin{proof}
+Since $F_S$ is finite, so is $\Sigma$, and every element of $\Sigma$ has positive $\mu$-mass. Let
+$A_t=F_t\circ\dots\circ F_1(S)$, the set of positions occupied at time $t$; the number of distinct trajectories at time
+$t$ is $|A_t|$, which is non-increasing in $t$, and $k(\mu)=\lim_t|A_t|$. Each $F_t\circ\dots\circ F_1$ lies in
+$M(\Sigma)$, so $|A_t|\ge r(\Sigma)$. Fix $h=g_L\circ\dots\circ g_1\in M(\Sigma)$ with $\rk h=r(\Sigma)$. Almost surely
+there is a time $t$ with $(F_{t+1},\dots,F_{t+L})=(g_1,\dots,g_L)$, and then
+$A_{t+L}=h(A_t)\subseteq h(S)$, so $|A_{t+L}|\le r(\Sigma)$. Hence $|A_t|=r(\Sigma)$ for all large $t$.
+\end{proof}
+
+\begin{lemma}\label{lem:idempotent}
+Let $\Sigma\subseteq F_S$ be finite and $r=r(\Sigma)$. There is $e\in M(\Sigma)$ with $\rk e=r$ and $e\circ e=e$. For such
+$e$, let $W=e(S)$. Then $e$ fixes every point of $W$, and for every $g\in M(\Sigma)$ the map $x\mapsto e(g(x))$ is a
+bijection of $W$ onto itself.
+\end{lemma}
+
+\begin{proof}
+Take $f\in M(\Sigma)$ with $\rk f=r$. The powers of $f$ lie in the finite set $M(\Sigma)$, so $f^a=f^{a+b}$ for some
+$a,b\ge1$, and then $e=f^{ab}$ satisfies $e\circ e=e$. Since $e(S)\subseteq f(S)$ and $\rk e\ge r=\rk f$, we have
+$e(S)=f(S)$ and $\rk e=r$. Every $w\in W$ has the form $w=e(y)$, so $e(w)=e(e(y))=w$. Let $g\in M(\Sigma)$. Then
+$e\circ g\circ e\in M(\Sigma)$, so its image $e(g(e(S)))=e(g(W))$ has at least $r=|W|$ elements. As $e(g(W))\subseteq W$,
+the map $x\mapsto e(g(x))$ sends $W$ onto $W$, and it is a bijection because $W$ is finite.
+\end{proof}
+
+Lemma~\ref{lem:idempotent} is the familiar structure of the minimal ideal of a finite semigroup, specialised to
+semigroups of maps; see~\cite[Chapter~1]{How95} for idempotent powers. Its last statement, for maps $g$ in the support
+and with a word of least rank in place of $e$, is~\cite[(4.7)--(4.9)]{Yan13}; an idempotent is convenient here because
+its fibres contain the points of its image. We also record which maps can carry a
+coupling with $k\ge2$. For a non-empty family $\mathcal H$ of $k$-element subsets of $S$, let $\operatorname{End}(\mathcal H)$
+be the set of $f\in F_S$ that map every member of $\mathcal H$ bijectively onto a member of $\mathcal H$, and let $M_f$
+be the $0$--$1$ matrix of $f$, with $(M_f)_{i,j}=\mathbf 1[f(i)=j]$.
+
+\begin{lemma}\label{lem:support}
+Let $\mu\in L_P$ with $k=k(\mu)\ge2$. There is a non-empty family $\mathcal H$ of $k$-element subsets of $S$ with
+$\operatorname{supp}\mu\subseteq\operatorname{End}(\mathcal H)$, and then $P=\sum_f\mu(f)M_f$ lies in the convex hull of
+$\{M_f:f\in\operatorname{End}(\mathcal H)\}$.
+\end{lemma}
+
+\begin{proof}
+Let $\Sigma=\operatorname{supp}\mu$, take $g_0\in M(\Sigma)$ with $\rk g_0=k$ (Lemma~\ref{lem:rank}) and put
+$\mathcal H=\{h(g_0(S)):h\in M(\Sigma)\}$. Each member is the image of $h\circ g_0\in M(\Sigma)$, so it has at least $k$
+elements, and at most $k$ since it is the image of a $k$-element set. For $f\in\Sigma$ and $A=h(g_0(S))\in\mathcal H$
+we have $f(A)=(f\circ h)(g_0(S))\in\mathcal H$, so $|f(A)|=k=|A|$ and $f$ maps $A$ bijectively onto a member of
+$\mathcal H$. The last statement is~\eqref{eq:consistent}.
+\end{proof}
+
+\section{Proofs of the theorems}\label{sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:structure}]
+Let $\Sigma=\operatorname{supp}\mu$. By Lemma~\ref{lem:rank}, $r(\Sigma)=k\ge2$. Take $e$ and $W=e(S)$ as in
+Lemma~\ref{lem:idempotent}, so $|W|=k$, and set $Z_w=e^{-1}(w)$ for $w\in W$. These sets partition $S$, and $w\in Z_w$
+because $e(w)=w$. Let $g\in\Sigma$ and $w\in W$. By Lemma~\ref{lem:idempotent} exactly one $x\in W$ has $e(g(x))=w$,
+that is, $g(x)\in Z_w$. Thus
+\begin{equation}\label{eq:pointwise}
+\sum_{x\in W}\mathbf{1}[g(x)\in Z_w]=1\qquad\text{for every }g\in\Sigma\text{ and }w\in W.
+\end{equation}
+Integrating~\eqref{eq:pointwise} against $\mu$ and using~\eqref{eq:consistent} gives
+$\sum_{x\in W}\mu\{g:g(x)\in Z_w\}=\sum_{x\in W}P(x,Z_w)=1$, which is~\eqref{eq:columns}. The pair $(W,\{Z_w\})$ was
+built from $\Sigma$ alone.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Suppose $K(P)\ne\{1\}$, and take $\mu\in L_P$ with $k(\mu)\ge2$. Theorem~\ref{thm:structure} gives a set $W$ with
+$|W|\ge2$, a point $w\in W$ and a set $Z=Z_w$ such that
+\begin{equation}\label{eq:hyperplane}
+\sum_{x\in W}\sum_{z\in Z}p_{x,z}=1 .
+\end{equation}
+Here $w\in Z$, and $Z\ne S$ because any $w'\in W\setminus\{w\}$ lies in $Z_{w'}$, which is disjoint from $Z$. For fixed $n$
+there are finitely many triples $(W,w,Z)$ with $2\le|W|$, $w\in W$ and $w\in Z\subseteq S\setminus(W\setminus\{w\})$, so
+the set of such $P$ lies in a finite union of affine hyperplanes~\eqref{eq:hyperplane}.
+
+It remains to show that each of these hyperplanes meets the set of stochastic matrices in a set of measure zero, for
+Lebesgue measure on that set (a product of $n$ simplices) and for $Q$. Fix $(W,w,Z)$ and $x_1\in W$. Moving mass in row
+$x_1$ from a state of $S\setminus Z$ to a state of $Z$, with the other rows fixed, changes the left side
+of~\eqref{eq:hyperplane} and keeps $P$ stochastic, so the hyperplane does not contain the set of stochastic matrices, and
+its intersection with the product of simplices, a convex set of full dimension, has measure zero. For $Q$, condition on
+the rows $(q_{x,\cdot})_{x\ne x_1}$. Writing $c=1-\sum_{x\in W\setminus\{x_1\}}P(x,Z)$, which depends only on these rows,
+equation~\eqref{eq:hyperplane} becomes
+\[
+(1-c)\sum_{z\in Z}q_{x_1,z}-c\sum_{z\notin Z}q_{x_1,z}=0 .
+\]
+The coefficients $1-c$ and $-c$ are not both zero, so this is a non-trivial linear equation in the vector
+$(q_{x_1,z})_{z\in S}$, which is uniform on $(0,1)^n$ and independent of the other rows. Its conditional probability is
+therefore zero, and by Fubini's theorem~\eqref{eq:hyperplane} has $Q$-probability zero. A finite union of null sets is
+null. The same argument applies to any law of $P$ that is absolutely continuous with respect to Lebesgue measure on the
+product of simplices.
+\end{proof}
+
+\begin{remark}\label{rem:necessary}
+For $k=n$ the condition of Theorem~\ref{thm:structure} is also sufficient, by the Birkhoff--von Neumann theorem, as
+recalled in the introduction. For $2\le k<n$ it is not sufficient in general. Take $n=3$ and $k=2$. For each choice of
+$W$ and of the partition, the two column conditions in~\eqref{eq:columns} are equivalent, since the entries of $B$ sum
+to $k$; so the condition defines finitely many pieces of hyperplanes, each meeting the interior of the set of stochastic
+matrices (for instance $W=\{1,2\}$, $Z_1=\{1,3\}$, $Z_2=\{2\}$ gives $p_{1,2}+p_{2,2}=1$). These pieces have dimension $5$,
+while by Lemma~\ref{lem:support} and the computation of Section~\ref{sec:checks} the matrices with $2\in K(P)$ lie in
+finitely many polytopes of dimension at most $4$. So the condition holds on a set of positive five-dimensional measure
+of matrices with $2\notin K(P)$.
+\end{remark}
+
+\begin{example}
+In Example~3.10 of~\cite{GH26}, $S=\{1,2,3,4\}$ and the support of $\mu$ consists of the maps written $(1212)$, $(1221)$,
+$(3434)$ and $(3443)$, where $(j_1j_2j_3j_4)$ denotes the map $r\mapsto j_r$. Here $k(\mu)=2$. The map $e=(1212)$ is an
+idempotent of rank two, so $W=\{1,2\}$, $Z_1=\{1,3\}$ and $Z_2=\{2,4\}$. Every map in the support sends $1$ into
+$\{1,3\}$ and $2$ into $\{2,4\}$, so $B$ is the identity matrix. In Example~6.2 of~\cite{GH26} the uniform matrix on six
+states has a grand coupling with $k=2$; there $|W|=2$ and each $Z_w$ has three elements, and~\eqref{eq:columns} reads
+$2\cdot3/6=1$.
+\end{example}
+
+\section{A computer check}\label{sec:checks}
+
+The proofs above do not depend on computation. As a check on the statements, a short program~\cite{Repo} enumerates
+finite sets $\Sigma$ of maps, computes the semigroup $M(\Sigma)$ and its least rank $r(\Sigma)$, and, whenever $r(\Sigma)\ge2$,
+verifies~\eqref{eq:pointwise} for an idempotent of least rank. For $n=3$ it treats every $\Sigma$ with at most three
+elements (3303 sets, 233 of them with $r(\Sigma)\ge2$), and for $n=4$ and $n=5$ it treats $10^5$ random sets of one to
+four maps each ($25029$ and $24989$ of them with $r(\Sigma)\ge2$). A second program enumerates, for $n\le5$, every
+non-empty family $\mathcal H$ of $k$-element subsets of $S$ with $k\ge2$, computes $\operatorname{End}(\mathcal H)$, and
+finds the affine dimension of $\{M_f:f\in\operatorname{End}(\mathcal H)\}$ as the rank of an integer matrix. There are
+$8$, $79$ and $2078$ such families for $n=3,4,5$, and the largest dimension is $4$, $9$ and $16$ respectively, below
+the dimension $n(n-1)$ of the set of stochastic matrices; by Lemma~\ref{lem:support} this gives a second proof of
+Theorem~\ref{thm:main} for $n\le5$.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to
+Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared,
+persistent memory in which the agents record claims,
+proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each
+other's work. For more on the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain
+repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Data availability}
+The programs described in Section~\ref{sec:checks} are in the repository~\cite{Repo}.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper is part of a broader research project on AI proving problems. Claude agents (Anthropic) proved
+Theorems~\ref{thm:main} and~\ref{thm:structure}, wrote the programs of Section~\ref{sec:checks} and prepared the
+manuscript; Codex agents (OpenAI) refereed the proofs. The grand couplings, the coalescence number, the set $K(P)$, the
+law $Q$ and the question answered here are due to Grimmett and Holmes~\cite{GH21,GH26}, and Lemma~\ref{lem:rank} is
+their Theorem~3(a) of~\cite{GH21}. The permutation property in Lemma~\ref{lem:idempotent} is due to Yano~\cite{Yan13}.
+The new results are the linear condition on $P$ in Theorem~\ref{thm:structure} and Theorem~\ref{thm:main}. The author
+directed the work
+and is responsible for the paper.
+
+\begin{thebibliography}{99}
+\bibitem{Bir46} G.~Birkhoff, \emph{Three observations on linear algebra}, Univ. Nac. Tucum\'an. Revista A \textbf{5}
+(1946), 147--151.
+\bibitem{BM00} G.~Budzban and A.~Mukherjea, \emph{A semigroup approach to the road coloring problem}, in: Probability
+on Algebraic Structures, Contemp. Math.~261, Amer. Math. Soc., Providence, RI, 2000, pp.~195--207,
+\doi{10.1090/conm/261/04141}.
+\bibitem{Fri90} J.~Friedman, \emph{On the road coloring problem}, Proc. Amer. Math. Soc. \textbf{110} (1990),
+1133--1135, \doi{10.2307/2047767}.
+\bibitem{GH21} G.~R.~Grimmett and M.~Holmes, \emph{Non-coupling from the past}, in: In and Out of Equilibrium~3:
+Celebrating Vladas Sidoravicius, Progress in Probability~77, Birkh\"auser/Springer, Cham, 2021, pp.~471--485,
+\doi{10.1007/978-3-030-60754-8_22}.
+\bibitem{GH26} G.~R.~Grimmett and M.~Holmes, \emph{Coalescence in Markov chains}, J. Theoret. Probab. \textbf{39} (2026), no.~3,
+\doi{10.1007/s10959-026-01500-w}, \arxiv{2510.13572}.
+\bibitem{How95} J.~M.~Howie, \emph{Fundamentals of Semigroup Theory}, London Mathematical Society Monographs, New
+Series~12, Clarendon Press, Oxford, 1995.
+\bibitem{PW96} J.~G.~Propp and D.~B.~Wilson, \emph{Exact sampling with coupled Markov chains and applications to
+statistical mechanics}, Random Structures Algorithms \textbf{9} (1996), 223--252.
+\bibitem{Yan13} K.~Yano, \emph{Random walk in a finite directed graph subject to a road coloring}, J. Theoret.
+Probab. \textbf{26} (2013), 259--283, \doi{10.1007/s10959-011-0398-8}, \arxiv{1005.0079}.
+\bibitem{Repo} Y.~Shmalo, \emph{Coalescence of grand couplings: paper and check programs}, 2026,
+\url{https://github.com/yspennstate/grand-coupling-coalescence}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+2026, \doi{10.5281/zenodo.24150837},
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}
