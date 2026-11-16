@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 390 notes.
+out, and requests are paraphrased. 392 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -548,3 +548,12 @@ A five-line plan before a scene, a random draw of scene shape, a paragraph outli
 | [scij07_names_fixed_detector_still_97_completeness_is_the_tell_2026_11_16](scij07_names_fixed_detector_still_97_completeness_is_the_tell_2026_11_16.md) | provisional | Science-writing test, fourth round: the task's coded labels were replaced by natural names everywhere, codes vanished from the blind detector's reasons (43 of 72 to 0), and detection stayed at about ... |
 | [wbh1_author_found_32_of_32_plan_pages_last_2026_11_15](wbh1_author_found_32_of_32_plan_pages_last_2026_11_15.md) | provisional | Can blind judges pick a published author's next page among machine continuations? Yes, 32 of 32. Pages written with the five-line plan ranked furthest from the author (5.78 against 3.22 for plain ... |
 | [wbh2_paragraph_list_ranked_further_from_author_2026_11_15](wbh2_paragraph_list_ranked_further_from_author_2026_11_15.md) | provisional | Does handing a writer a paragraph outline drawn from published novels make the page read more like the author's? No: blind judges ranked those pages further from the author (5.20 against 3.80). Asked ... |
+
+## Added on 16 November: speed and checks (2)
+
+Feeding an Apple-silicon GPU on a saturated machine, and a regression gate that read a timeout as a lost card.
+
+| note | status | what it says |
+|---|---|---|
+| [gpu_feeder_process_must_not_sit_below_cpu_lanes_in_priority_2026_11_10](gpu_feeder_process_must_not_sit_below_cpu_lanes_in_priority_2026_11_10.md) | provisional | Apple-silicon GPU only 59-71 percent busy on a saturated machine? The process feeding the GPU (an MPS search, a model server) ran at a lower CPU priority (nice 10-15) than the CPU-only lanes (nice ... |
+| [regression_gate_counted_hook_load_silence_as_breach_2026_11_16](regression_gate_counted_hook_load_silence_as_breach_2026_11_16.md) | verified | A nightly regression gate over the math-recall hook read BREACH on three nights while the same checks passed by hand an hour later. The hook had gone quiet by its own time budget under load, and the ... |
