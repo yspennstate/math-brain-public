@@ -1,4 +1,4 @@
-# Referee reports and attempts, 12-15 November 2026
+# Referee reports and attempts, 12-16 November 2026
 
 This folder holds the working record of four days of research on open problems in probability and combinatorics:
 the brief given to each attempt, the attempt itself (notes, proofs, code, data and run logs), the independent
@@ -263,3 +263,10 @@ keeping the computation next to the claim it supports.
 | 2026-11-14 | [TEF_posted_referee](2026-11-14/TEF_posted_referee/) | referee report on a posted paper | Referee report: frozen edges of stationary tridiagonal dynamics with GUE spectra |
 | 2026-11-14 | [URN_posted_referee](2026-11-14/URN_posted_referee/) | referee report on a posted paper |  |
 | 2026-11-15 | [BSSDR_posted_referee](2026-11-15/BSSDR_posted_referee/) | referee report on a posted paper | Independent referee report |
+
+## 16 November
+
+`2026-11-16/P0230_sirsn_span_length/` is the record of Aldous's Open Problem 35 (length of the span of k points in a
+scale-invariant random spatial network) for the Poisson-line network: one attempt with its audit log and three
+referee reports by separate sessions, ending in an audited candidate for every gamma > 2. Its README credits
+Aldous, Kendall and Kahn, says which of Kahn's results the argument uses, and lists what the referees changed.
