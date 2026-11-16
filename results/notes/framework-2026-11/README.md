@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 450 notes.
+out, and requests are paraphrased. 456 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -699,3 +699,16 @@ A counterexample to a proposed last-iterate rate for Stein variational gradient 
 | [s41f05_audit_svgd_last_iterate_conjecture_false_2026_11_16](s41f05_audit_svgd_last_iterate_conjecture_false_2026_11_16.md) | provisional | Frontier T310 (SVGD finite-particle rate): Codex auditor disproved the worker's proposed expected last-iterate W2 conjecture with a fixed 1-d counterexample |
 | [t375_fixed_n_large_risk_events_by_consistent_extra_samples_2026_11_16](t375_fixed_n_large_risk_events_by_consistent_extra_samples_2026_11_16.md) | verified | T375 min-cost ReLU interpolant d=2: positive-probability arbitrarily-large-risk events at every fixed n>=4 via the consistent-extra-samples lemma |
 | [t375_n4_expected_risk_infinite_close_pairs_2026_11_16](t375_n4_expected_risk_infinite_close_pairs_2026_11_16.md) | provisional | T375 min-cost (OWSS R-norm) interpolant in d=2 at n=4: a.s. unique, one ReLU plus affine by duality; close pairs with different labels give P(risk>M)>=c/M so E[risk]=infinite. Tent (3 sites within r) ... |
+
+## Added on 16 November: paper-hook audits, refused tool calls, Zenodo references and prompt-rule audits (6)
+
+What a pattern-list lint can and cannot show about a paper, why a refused tool call may still have run, a scanner exclusion for scheduler status values, filling Zenodo references on records with outside DOIs, why a sound referee verdict is not a novelty check, and an audit of the agents that turn prompts into rules.
+
+| note | status | what it says |
+|---|---|---|
+| [audit_prompt_to_rules_2026_11_14](audit_prompt_to_rules_2026_11_14.md) | verified | Audit 14 Nov of the agents turning the owner's prompts into rules/hooks/cards: agent briefs stored as the user's words (72 relabelled), correction flag 238->760, H20 reflexes fire on 1 in 6 tool ... |
+| [paper_hooks_audit_pattern_lists_measure_their_own_sentences_2026_11_12](paper_hooks_audit_pattern_lists_measure_their_own_sentences_2026_11_12.md) | verified | Paper-writing hooks pass a clean lint, is the paper edited? No: a Fable audit reworded the faults and the hooks caught 0 of 38, 2 of 24, 5 of 14; gate on an independent reader's verdict for the exact ... |
+| [referee_sound_is_not_a_novelty_check_2026_11_12](referee_sound_is_not_a_novelty_check_2026_11_12.md) | provisional | P0032 Brownian prefix two-sided criterion Thorisson 1996; SOUND referee lacked literature access |
+| [refused_tool_call_may_have_finished_read_its_output_files_2026_11_12](refused_tool_call_may_have_finished_read_its_output_files_2026_11_12.md) | verified | Tool call came back 'rejected' or 'interrupted by user'? It may have run to its end first. Read its own output files and the target's mtime before saying nothing was done (12 Nov: all 13 steps of a ... |
+| [scan_secrets_task_scheduler_status_values_blocked_nightly_push_2026_11_12](scan_secrets_task_scheduler_status_values_blocked_nightly_push_2026_11_12.md) | verified | Nightly push blocked by a '2FA code' in a scheduled-task report? Task Scheduler status 267008-267015; rule now passes those eight values (681b048c) |
+| [zenodo_references_on_external_doi_records_by_metadata_edit_2026_11_12](zenodo_references_on_external_doi_records_by_metadata_edit_2026_11_12.md) | verified | Zenodo record with a ResearchGate/arXiv DOI has empty References but refuses a new version? Metadata edit fills it, files and DOI kept; read the list from the record's own PDF with PyMuPDF ... |
