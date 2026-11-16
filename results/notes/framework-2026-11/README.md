@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 456 notes.
+out, and requests are paraphrased. 459 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -712,3 +712,13 @@ What a pattern-list lint can and cannot show about a paper, why a refused tool c
 | [refused_tool_call_may_have_finished_read_its_output_files_2026_11_12](refused_tool_call_may_have_finished_read_its_output_files_2026_11_12.md) | verified | Tool call came back 'rejected' or 'interrupted by user'? It may have run to its end first. Read its own output files and the target's mtime before saying nothing was done (12 Nov: all 13 steps of a ... |
 | [scan_secrets_task_scheduler_status_values_blocked_nightly_push_2026_11_12](scan_secrets_task_scheduler_status_values_blocked_nightly_push_2026_11_12.md) | verified | Nightly push blocked by a '2FA code' in a scheduled-task report? Task Scheduler status 267008-267015; rule now passes those eight values (681b048c) |
 | [zenodo_references_on_external_doi_records_by_metadata_edit_2026_11_12](zenodo_references_on_external_doi_records_by_metadata_edit_2026_11_12.md) | verified | Zenodo record with a ResearchGate/arXiv DOI has empty References but refuses a new version? Metadata edit fills it, files and DOI kept; read the list from the record's own PDF with PyMuPDF ... |
+
+## Added on 16 November: long-path file moves, a late priority raise and the prompt-history fold (3)
+
+Windows long paths in an offload tool, a scheduler that now raises a job when the machine goes idle, and a prompt store that reads both typed histories.
+
+| note | status | what it says |
+|---|---|---|
+| [gh_offload_hold_secrets_rename_failed_past_260_chars_2026_11_13](gh_offload_hold_secrets_rename_failed_past_260_chars_2026_11_13.md) | verified | gh_offload --hold-secrets died with WinError 3 on codex worktree copies (paths past 260 chars); fixed 13 Nov with the long-path prefix on rename src and dst; nothing uploaded or deleted by the failed ... |
+| [prompt_store_reads_both_histories_and_rechecks_machine_turns_2026_11_14](prompt_store_reads_both_histories_and_rechecks_machine_turns_2026_11_14.md) | verified | Owner-prompt store missing older prompts from the owner or showing agent ticks as the owner's? Since 14 Nov build.py folds ~/.claude and ~/.codex history.jsonl (8,502 more, back to 18 Mar), masks ... |
+| [run_bounded_read_owner_away_once_at_launch_gate_starved_after_he_left_2026_11_13](run_bounded_read_owner_away_once_at_launch_gate_starved_after_he_left_2026_11_13.md) | verified | Bounded job (regression gate, dream, hourly index) starved or INCONCLUSIVE though the owner left hours ago? run_bounded read the away verdict once at launch; since 13 Nov it raises the job to Normal ... |
