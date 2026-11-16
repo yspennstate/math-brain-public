@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 396 notes.
+out, and requests are paraphrased. 400 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -568,3 +568,14 @@ A remote gate that read an unreadable number as no room, a scheduled check that 
 | [headless_check_answer_is_not_the_last_message_2026_11_13](headless_check_answer_is_not_the_last_message_2026_11_13.md) | verified | A weekly scheduled check that runs a headless Claude session and scores its answer gave no verdict for three weeks, and its last verdict scored the wrong text. Two causes: the session inherited a low ... |
 | [remote_gate_unreadable_number_is_not_no_room_2026_11_16](remote_gate_unreadable_number_is_not_no_room_2026_11_16.md) | provisional | A launch gate that waits for free memory on another machine sat idle for hours with that machine nearly empty. The number read over ssh came back on repeated lines, the shell's integer test failed on ... |
 | [writing_hook_fired_on_negated_and_far_apart_words_2026_11_14](writing_hook_fired_on_negated_and_far_apart_words_2026_11_14.md) | verified | The writing-brain hook decided whether a prompt asked for writing by finding a write verb anywhere and a writing noun anywhere. It fired on negated asks ('don't keep rewriting ...') and on prompts ... |
+
+## Added on 16 November: blind tests of the word tools (4)
+
+Three blind A/B tests of word palettes and a page check, none of which helped a page, and a test showing a writer chooses well among three offered words.
+
+| note | status | what it says |
+|---|---|---|
+| [story_palette_blind_test_no_effect_lean_is_length_2026_11_15](story_palette_blind_test_no_effect_lean_is_length_2026_11_15.md) | provisional | Three dictionary words offered per story brief: better stories? No by the pre-set rule under two judge families (Opus S 18 / A 7 / ties 15; Codex S 19 / A 7 / ties 14; bar 26 of 40). The lean is ... |
+| [word_page_check_blind_test_no_effect_2026_11_15](word_page_check_blind_test_no_effect_2026_11_15.md) | provisional | Handing a reviser the word walk's page check (habitual and repeated words, each with near words) made no detectable difference in a blind test: 40 pairs, R 13, P 12, ties 15, sense +0.03. It moved ... |
+| [word_palette_blind_test_plain_beats_palette_2026_11_15](word_palette_blind_test_plain_beats_palette_2026_11_15.md) | provisional | Does handing a writer a palette of less common dictionary words that fit the brief make better pages? Blind A/B on 40 briefs: plain 16, palette 10, ties 14 under Opus judges; 15-15-10 under Codex ... |
+| [word_slot_three_offers_writer_judges_70_of_80_2026_11_15](word_slot_three_offers_writer_judges_70_of_80_2026_11_15.md) | provisional | word_slot prints three replacement offers for a flagged word. Does a writing agent choose well among them, or keep its own word? A blind Codex judge was right on 70 of 80 labelled decisions against ... |
