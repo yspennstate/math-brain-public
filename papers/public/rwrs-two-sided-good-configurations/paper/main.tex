@@ -1,0 +1,519 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Two-sided conditioning in random walk in random scenery]{Good configurations of random walk in random scenery
+under two-sided conditioning}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60K37, 60G10, 82B20}
+\keywords{random walk in random scenery, bad configurations, quasilocality, continuity of conditional probabilities}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Let $(S_t)_{t\in\Z}$ be a nearest-neighbour random walk on $\Z$ with $S_0=0$ and probability $p$ of a step to the
+right, and let $(C_x)_{x\in\Z}$ be an independent field of independent fair signs. The reduced random walk in random
+scenery is the colour process $Y_t=C_{S_t}$. Den Hollander and Steif conjectured that, under conditioning on the
+colours at all nonzero times, every configuration is bad for $Y_0$ when $1/2\le p<4/5$ and every configuration is good
+when $4/5<p\le1$. We prove that every configuration is good when $27/28<p\le1$. More precisely, the conditional
+probabilities of $Y_0$ given the colours at the times $0<|t|\le m$ converge uniformly as $m\to\infty$, with an explicit
+modulus, to a version of the conditional probability that is continuous everywhere. For colours with $\PP(C_x=1)=\alpha$
+the same holds when $p>27/(27+4\beta^2)$, where $\beta=\min(\alpha,1-\alpha)$. The proof writes the posterior law of
+the walk as a gas of disjoint time intervals separated by cut times, bounds the activities of the intervals, and swaps
+the central part of two coupled samples between common cut times.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+We describe the reduced random walk in random scenery, recall the notion of a bad configuration and the conjecture of
+den Hollander and Steif, and state the result.
+
+\subsection{The process}
+Fix $p\in[1/2,1]$ and put $q=1-p$. Let $(X_t)_{t\in\Z}$ be independent with $\PP(X_t=1)=p$ and $\PP(X_t=-1)=q$, and let
+$S_0=0$ and $S_t-S_{t-1}=X_t$ for every $t\in\Z$; thus $S_{-k}=-(X_{-k+1}+\dots+X_0)$ for $k\ge1$. Independently of
+$(X_t)$, let $(C_x)_{x\in\Z}$ be independent with $\PP(C_x=1)=\alpha$ and $\PP(C_x=-1)=1-\alpha$, where
+$\alpha\in(0,1)$, and write $\mu(1)=\alpha$, $\mu(-1)=1-\alpha$ and $\beta=\min(\alpha,1-\alpha)$. The \emph{reduced
+random walk in random scenery} is the stationary process
+\[
+Y_t=C_{S_t},\qquad t\in\Z.
+\]
+Only $(Y_t)$ is observed, not the walk. The case $\alpha=1/2$ of fair colours is the one considered in
+\cite{dHS06}. In ergodic theory random walk in random scenery appears through Kalikow's $T,T^{-1}$ transformation \cite{Kal82}; the
+survey \cite{dHS06} describes its role as a source of non-Gibbsian measures.
+
+\subsection{Bad configurations}
+For $n\ge0$ let $\Lambda_n=\{-n,\dots,n\}$. For a configuration $\eta\in\{-1,1\}^{\Z\setminus\{0\}}$ and $m\ge1$ put
+\begin{equation}\label{eq:gm}
+g_m(\eta)=\PP\bigl(Y_0=1\mid Y_t=\eta_t\text{ for all }t\in\Lambda_m\setminus\{0\}\bigr).
+\end{equation}
+Every finite conditioning event has positive probability, since a monotone walk reads distinct sites. Following
+\cite[Section~2.6]{dHS06} (see also \cite{MRM99,vEFS93}), $\eta$ is \emph{bad} for $Y_0$ if there is $\varepsilon>0$ such
+that for every $n$ there are $m\ge n$ and a configuration $\delta$ equal to $\eta$ on $\Lambda_n\setminus\{0\}$ with
+$|g_m(\eta)-g_m(\delta)|\ge\varepsilon$; otherwise $\eta$ is \emph{good}. The difference $|g_m(\eta)-g_m(\delta)|$ is the
+total variation distance between the two conditional laws of $Y_0$. Every version of the conditional probability of
+$Y_0$ given $(Y_t)_{t\ne0}$ is discontinuous at a bad configuration, and there is a version continuous at every good
+configuration \cite{dHSvdW05,MRM99}.
+
+\subsection{The conjecture and what is known}
+Den Hollander and Steif \cite[Conjecture~2.16]{dHS06} conjectured that for fair colours every configuration is bad for
+$Y_0$ when $1/2\le p<4/5$ and every configuration is good when $4/5<p\le1$. The theorems that precede the conjecture in
+\cite[Section~2.6]{dHS06} concern the joint process of steps and colours observed outside time zero, and the earlier
+paper \cite{dHSvdW05} classifies the bad configurations of that joint process; these results do not address the reduced
+process. For the reduced process with \emph{one-sided} conditioning, on the colours at the times $t<0$ only, Blach\`ere,
+den Hollander and Steif \cite[Theorem~1.3]{BdHS11} proved, for the walk that does not hold, that every configuration is bad for $1/2<p<4/5$, that good and bad
+configurations coexist at $p=1/2$, and that every configuration is good for $p>1/(1+5^5/12^6)$, a value just above $0.99895$; walks
+that hold are also treated there. The rest of the one-sided good half is \cite[Conjecture~1.4]{BdHS11}, and the phase
+diagram of the reduced process is Question~B of Steif \cite{Ste21}.
+
+\subsection{The result}
+
+\begin{theorem}\label{thm:main}
+Let $\alpha\in(0,1)$, $\beta=\min(\alpha,1-\alpha)$, and
+\[
+\frac{27}{27+4\beta^2}<p\le1 .
+\]
+Then $g_m$ converges uniformly on $\{-1,1\}^{\Z\setminus\{0\}}$ as $m\to\infty$ to a continuous function $g$, and $g$
+is a version of $\PP(Y_0=1\mid(Y_t)_{t\ne0})$. Moreover there is a sequence $\varepsilon_n\to0$, depending only on
+$p$ and $\alpha$ and given in \eqref{eq:modulus}, such that $|g_m(\eta)-g_m(\delta)|\le\varepsilon_n$ whenever $m\ge n$
+and $\eta=\delta$ on $\Lambda_n\setminus\{0\}$. In particular every configuration is good for $Y_0$.
+\end{theorem}
+
+\begin{corollary}\label{cor:fair}
+For fair colours, every configuration is good for $Y_0$ when $27/28<p\le1$.
+\end{corollary}
+
+Corollary~\ref{cor:fair} is the case $\beta=1/2$, and it proves the good half of \cite[Conjecture~2.16]{dHS06} for
+$27/28<p\le1$. The range $4/5<p\le27/28$ and the bad half remain open.
+
+\subsection{The value \texorpdfstring{$4/5$}{4/5}}
+The value $4/5$ comes from a large-deviation balance which the proof below does not attempt to reach. A monochromatic
+record of length $N$ can be read by a path with a fraction $v\ge1/2$ of right steps; such a path costs
+$N(v\log(v/p)+(1-v)\log((1-v)/q))$ in the exponent and needs about $(2v-1)N$ new sites of the right colour, each at
+cost $\log2$. The total $J_p(v)=v\log(v/p)+(1-v)\log((1-v)/q)+(2v-1)\log2$ is strictly convex with
+$J_p'(1/2)=\log(4q/p)$, so its minimum on $[1/2,1]$ is at zero speed exactly when $p\le4/5$. Below $4/5$ a conditioned
+walk can afford to return and reuse scenery, and distant colours can then influence the colour at the origin
+\cite[Section~1.3]{BdHS11}. The proof of Theorem~\ref{thm:main} replaces this balance by a crude count, which costs the
+gap between $4/5$ and $27/28$; see Remark~\ref{rem:sharp}.
+
+\subsection{Idea of the proof}
+Fix the conditioning window $\Lambda_m$. A time $k$ is a positive cut of the walk if the spatial edge
+$\{S_k,S_k+1\}$ is crossed exactly once, from left to right, at time $k$. Splitting the window at the positive cuts
+gives blocks with disjoint spatial ranges, so the posterior law of the walk, given any colours on
+$\Lambda_m\setminus\{0\}$, is a hard-core gas of disjoint time intervals with local activities
+(Lemma~\ref{lem:gas}). A block that contains no positive cut takes at least a third of its steps to the left
+(Lemma~\ref{lem:third}), which bounds the activities by $\rho^L$ for an interval of $L$ steps, with $\rho<1$ exactly in
+the range of Theorem~\ref{thm:main} (Lemma~\ref{lem:activity}). The gas is then dominated by independent intervals
+(Lemma~\ref{lem:domination}), so two posterior walks, conditioned on configurations that agree on $\Lambda_n$, have a
+common positive cut on each side of the origin inside $\Lambda_n$ with probability close to one
+(Lemma~\ref{lem:common}). Exchanging the blocks between two common cuts preserves the joint weight and exchanges the
+two colours at the origin, which proves the bound on $|g_m(\eta)-g_m(\delta)|$.
+
+The full proof occupies Sections~\ref{sec:cuts}--\ref{sec:proof}. Section~\ref{sec:cuts} decomposes a path into blocks,
+Section~\ref{sec:gas} writes the posterior law as an interval gas and bounds its activities, Section~\ref{sec:common}
+finds common cuts, and Section~\ref{sec:proof} proves Theorem~\ref{thm:main}. Section~\ref{sec:remarks} discusses the
+constant and the exact finite-window computations, and Appendix~\ref{app:notation} lists the notation.
+
+\section{Positive cuts and blocks}\label{sec:cuts}
+
+Fix integers $a<b$ and a nearest-neighbour path $s=(s_a,\dots,s_b)$. Call $k\in\{a,\dots,b-1\}$ a \emph{positive
+cut} of $s$ if
+\begin{equation}\label{eq:cut}
+\max_{a\le j\le k}s_j\le s_k\qquad\text{and}\qquad\min_{k<j\le b}s_j>s_k .
+\end{equation}
+Then $s_{k+1}=s_k+1$, and $k$ is a positive cut exactly when the spatial edge $\{s_k,s_k+1\}$ is crossed only once by
+$s$, at time $k$: a path that crosses this edge once, from left to right, stays at or to the left of $s_k$ before time
+$k$ and at or to the right of $s_k+1$ after it, and conversely \eqref{eq:cut} rules out a second crossing.
+
+Splitting $\{a,\dots,b\}$ at the positive cuts, that is, between $k$ and $k+1$ for every positive cut $k$, gives
+consecutive \emph{blocks} $I=\{u,\dots,v\}$. Different blocks have disjoint spatial ranges, every block other than the
+first starts at its minimum, and every block other than the last ends at its maximum.
+
+\begin{lemma}\label{lem:blocks}
+The map from a path to its sequence of blocks, each taken up to spatial translation, is a bijection onto the sequences
+of consecutive blocks $I_1,\dots,I_J$ covering $\{a,\dots,b\}$, each carrying a nearest-neighbour path, such that
+\begin{enumerate}
+\item every block other than the first starts at its minimum and every block other than the last ends at its maximum;
+\item no block has a positive cut of its own path.
+\end{enumerate}
+The path is recovered by joining consecutive blocks with one step to the right, and its positive cuts are exactly
+these joining steps.
+\end{lemma}
+
+\begin{proof}
+Let $s$ be a path. The blocks satisfy (1). A spatial edge inside the range of a block is crossed only by steps of that
+block, since the ranges of different blocks are disjoint and the joining steps cross edges between ranges; hence a
+positive cut of the path of a block would be a positive cut of $s$ inside the block, which does not exist. So (2)
+holds. Conversely, given blocks with (1) and (2), translate each block so that it starts one site to the right of the
+end of the previous block. By (1), the ranges are disjoint and ordered from left to right, and every joining step
+satisfies \eqref{eq:cut}. An edge inside the range of a block is crossed only by that block, so by (2) no step inside
+a block is a positive cut of the joined path. The two constructions are inverse to each other.
+\end{proof}
+
+The first block need not start at its minimum, the last need not end at its maximum, and a single block covering
+$\{a,\dots,b\}$ has neither restriction; these cases are included in everything below. A block with one vertex is a
+\emph{singleton}.
+
+For a block $I=\{u,\dots,v\}$ write $L=v-u$ for its number of steps, $\ell$ for its number of steps to the left and
+$d=s_v-s_u=L-2\ell$ for its displacement.
+
+\begin{lemma}\label{lem:third}
+For every block, $L\le3\ell$.
+\end{lemma}
+
+\begin{proof}
+If $d\le0$ then $L=d+2\ell\le2\ell$. Let $d>0$. Each of the $d$ spatial edges between $s_u$ and $s_v$ is crossed by the
+path of the block once more from left to right than from right to left. By Lemma~\ref{lem:blocks}(2) and the
+characterisation of positive cuts after \eqref{eq:cut}, none of them is crossed only once, so each is crossed at least
+once from right to left. These crossings are distinct left steps, hence $\ell\ge d$ and $L=d+2\ell\le3\ell$.
+\end{proof}
+
+\section{The interval gas}\label{sec:gas}
+
+Fix $m\ge1$, put $a=-m$, $b=m$, and fix a configuration $\eta$ on $\Lambda_m\setminus\{0\}$. The law of
+$(Y_t)_{t\in\Lambda_m}$ does not change if the walk is anchored at $S_a=0$ instead of $S_0=0$: translating the scenery
+by $S_a$ gives, conditionally on the steps, a field with the same independent law. We use this anchoring throughout.
+For a path $s$ on $\Lambda_m$ the probability of the steps is $p^{b-a-\ell(s)}q^{\ell(s)}$, where $\ell(s)$ is the number
+of left steps, and the probability that $C_{s_t}=\eta_t$ for all $t\in\Lambda_m\setminus\{0\}$ is zero if two
+observations at the same site disagree and otherwise $\prod_x\mu(\eta(x))$, the product over the distinct sites $x$
+visited at an observed time, $\eta(x)$ being the common colour observed there. As reference we use the value for the
+path that only steps to the right,
+\[
+B=p^{b-a}\prod_{t\in\Lambda_m\setminus\{0\}}\mu(\eta_t).
+\]
+
+For a block $I$ carrying a path $w$, let $h_I$ be the number of observed times in $I$, that is, of times in
+$I\setminus\{0\}$, and let $r_I(w)$ be the number of distinct sites visited by $w$ at observed times. Define the
+\emph{weight} of $(I,w)$ as zero if two observations in $I$ at the same site disagree, and otherwise
+\begin{equation}\label{eq:weight}
+A_I(w)=\Bigl(\frac qp\Bigr)^{\ell(w)}\prod_{t\in I\setminus\{0\}}\mu(\eta_t)^{-1}\prod_x\mu(\eta(x)),
+\end{equation}
+the last product over the $r_I(w)$ distinct sites visited at observed times in $I$. Let $w_I$ be the sum of $A_I(w)$
+over the paths $w$ on $I$, up to translation, that satisfy the restrictions of Lemma~\ref{lem:blocks}: no positive cut,
+and the boundary conditions in (1) that apply to $I$ according to whether $I$ contains $a$, $b$, both or neither. We call
+$w_I$ the \emph{activity} of $I$. A singleton has activity $1$.
+
+\begin{lemma}\label{lem:gas}
+The probability of the event $\{Y_t=\eta_t,\ t\in\Lambda_m\setminus\{0\}\}$ equals
+\begin{equation}\label{eq:gas}
+B\sum_{\mathcal I}\prod_{I\in\mathcal I}w_I ,
+\end{equation}
+where $\mathcal I$ runs over the sets of pairwise disjoint intervals of $\Lambda_m$ with at least two vertices; the
+vertices outside $\bigcup\mathcal I$ are singleton blocks. The same holds for the probability of the event
+$\{Y_t=\eta_t,\ t\in\Lambda_m\setminus\{0\}\}\cap\{Y_0=1\}$ if, in the weights of the paths of the block that contains
+$0$, time $0$ is treated as an observed time with colour $1$, so that the site $S_0$ joins the sites in the last product
+of \eqref{eq:weight}, while the factor $\prod_{t\in I\setminus\{0\}}\mu(\eta_t)^{-1}$ is unchanged. For the singleton
+block $\{0\}$ this activity is $\mu(1)$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:blocks}, paths on $\Lambda_m$ correspond to sequences of blocks, and the sequence is determined by
+the set of non-singleton blocks and the paths they carry. The joining steps are steps to the right, so the step
+probability of the path, divided by $p^{b-a}$, is the product over blocks of $(q/p)^{\ell}$. The spatial ranges of
+different blocks are disjoint, so the colour constraints of different blocks involve different sites, and the
+probability of the colours factorises over blocks. Dividing by $B$, which is the product over blocks of
+$\prod_{t\in I\setminus\{0\}}\mu(\eta_t)$, gives the product of the weights \eqref{eq:weight}. Summing over the paths of
+each block gives \eqref{eq:gas}. For the second statement observe that the site $S_0$ belongs to the range of the block
+containing $0$ only, so the colour at time $0$ is constrained only inside that block. If that site is also visited at
+an observed time it must carry colour $1$, and its factor $\mu(1)$ already appears once in the product; if not, its
+colour is independent of everything else and contributes the factor $\mu(1)$.
+\end{proof}
+
+Normalising \eqref{eq:gas} gives a probability measure on sets $\mathcal I$ of disjoint intervals, the \emph{posterior
+interval gas}; its weights are the products of the activities, and there is no further interaction. Marking each
+interval with its path, distributed proportionally to $A_I(w)$, and the block of $0$ with its colour at time $0$ gives
+the posterior law of the walk and of $Y_0$. Lemma~\ref{lem:gas} is exact for every configuration $\eta$.
+
+\begin{lemma}\label{lem:activity}
+Let $\tau=q/(p\beta^2)$ and suppose $\tau<4/27$. Then every interval $I$ with $L\ge1$ steps has activity
+\[
+w_I\le\rho^L,\qquad \rho=\Bigl(\frac{27\tau}{4}\Bigr)^{1/3}<1 .
+\]
+The condition $\tau<4/27$ is equivalent to $p>27/(27+4\beta^2)$.
+\end{lemma}
+
+\begin{proof}
+Let $w$ be a path on $I$ with weight $A_I(w)\ne0$, and let $R_I$ be the number of sites in its range. A
+nearest-neighbour path visits every site of its range, and at most one vertex of $I$, the time $0$, is unobserved, so
+\[
+h_I=L+1-e_I,\qquad r_I(w)\ge R_I-e_I,\qquad R_I\ge|d|+1,
+\]
+where $e_I=1$ if $0\in I$ and $e_I=0$ otherwise. Hence $h_I-r_I(w)\le L+1-R_I\le L-|d|\le2\ell$. In
+\eqref{eq:weight} the colour factors of the $r_I(w)$ distinct sites cancel against $r_I(w)$ of the $h_I$ factors
+$\mu(\eta_t)^{-1}$, and each of the remaining $h_I-r_I(w)$ factors is at most $\beta^{-1}$. Therefore
+\[
+0\le A_I(w)\le\Bigl(\frac qp\Bigr)^{\ell}\beta^{-2\ell}=\tau^{\ell}.
+\]
+A path on $I$ is determined by its $L$ steps, and by Lemma~\ref{lem:third} it has $\ell\ge L/3$ left steps. Hence, for
+every $z\ge1$,
+\[
+w_I\le\sum_{\ell\ge L/3}\binom L\ell\tau^{\ell}\le\sum_{\ell=0}^{L}\binom L\ell\tau^{\ell}z^{\ell-L/3}
+=z^{-L/3}(1+\tau z)^L .
+\]
+Since $\tau<4/27<1/2$ we may take $z=1/(2\tau)$, which gives $w_I\le(2\tau)^{L/3}(3/2)^L=(27\tau/4)^{L/3}=\rho^L$.
+Finally $27\tau<4$ means $27q<4p\beta^2$, that is, $p>27/(27+4\beta^2)$.
+\end{proof}
+
+For fair colours $\tau=4q/p$, $\rho^3=27q/p$, and the condition is $p>27/28$.
+
+\begin{lemma}\label{lem:domination}
+Let $\mathcal I$ be distributed according to a finite interval gas with activities $w_I\ge0$, and let $(\xi_I)$ be
+independent Bernoulli variables with $\PP(\xi_I=1)=w_I/(1+w_I)$. Then $(\I\{I\in\mathcal I\})_I$ and $(\xi_I)_I$ can be
+coupled so that $\I\{I\in\mathcal I\}\le\xi_I$ for every $I$.
+\end{lemma}
+
+\begin{proof}
+Fix an interval $I$ and condition on the presence or absence of any set of other intervals. Removing $I$ maps every
+admissible set containing $I$ injectively to an admissible set without $I$ that agrees on the conditioned intervals,
+and divides its weight by $w_I$. Hence the conditional odds of $I\in\mathcal I$ are at most $w_I$, and its conditional
+probability is at most $w_I/(1+w_I)$. Order the intervals, let $(U_I)$ be independent uniform variables on $[0,1]$, put
+$\xi_I=\I\{U_I\le w_I/(1+w_I)\}$, and let $I\in\mathcal I$ if $U_I$ is at most the conditional probability of $I$ given
+the earlier decisions. This gives the law of the gas and the required inequality.
+\end{proof}
+
+\section{Common cuts}\label{sec:common}
+
+By Lemmas~\ref{lem:activity} and~\ref{lem:domination}, and since $x\mapsto x/(1+x)$ is increasing, the posterior
+interval gas for any configuration is dominated by independent Bernoulli variables $\xi_I$ with
+$\PP(\xi_I=1)=\rho^L/(1+\rho^L)$ for an interval of $L$ steps. A time edge $\{k,k+1\}$ of $\Lambda_m$ is \emph{covered}
+by an interval that contains both $k$ and $k+1$; it is a positive cut exactly when no interval of $\mathcal I$ covers it.
+For $1\le K<r$ put
+\begin{equation}\label{eq:bound}
+c=\exp\Bigl(-\frac{2\rho}{(1-\rho)^2}\Bigr),\qquad
+\Phi(r,K)=(1-c)^{\lfloor r/(K+1)\rfloor}
++2\rho^{K+1}\Bigl(\frac{r+K+1}{1-\rho}+\frac{\rho}{(1-\rho)^2}\Bigr).
+\end{equation}
+
+\begin{lemma}\label{lem:common}
+Assume $\rho<1$. Let $\mathcal I$ and $\mathcal I'$ be independent posterior interval gases on $\Lambda_m$ for two
+configurations, and let $E$ be a set of $r$ consecutive time edges of $\Lambda_m$. For every $1\le K<r$, the probability
+that no edge of $E$ is a positive cut of both walks is at most $\Phi(r,K)$.
+\end{lemma}
+
+\begin{proof}
+Couple $\mathcal I$ and $\mathcal I'$ with independent dominating families $(\xi_I)$ and $(\xi'_I)$ as above. An edge
+not covered by any interval with $\xi_I=1$ or $\xi'_I=1$ is a positive cut of both walks, so it suffices to bound the
+probability that every edge of $E$ is covered in one of the two families. Choose $s=\lfloor r/(K+1)\rfloor$ edges of $E$
+spaced $K+1$ apart. An interval of at most $K$ steps covers at most one of them. A fixed edge is covered by at most $L$
+intervals of $L$ steps, so the probability that it is covered by no interval of at most $K$ steps in either family is
+at least
+\[
+\prod_{L\ge1}\bigl(1+\rho^L\bigr)^{-2L}\ge\exp\Bigl(-2\sum_{L\ge1}L\rho^L\Bigr)=c ,
+\]
+using $\log(1+x)\le x$. These events for the $s$ chosen edges depend on disjoint sets of independent variables, so the
+probability that each chosen edge is covered by a short interval is at most $(1-c)^s$. At most $r+L$ intervals of $L$
+steps cover some edge of $E$, so the probability that an interval of more than $K$ steps with $\xi_I=1$ or $\xi'_I=1$
+covers an edge of $E$ is at most
+\[
+2\sum_{L>K}(r+L)\rho^L=2\rho^{K+1}\Bigl(\frac{r+K+1}{1-\rho}+\frac{\rho}{(1-\rho)^2}\Bigr).
+\]
+If neither event occurs, some chosen edge is covered by no interval in either family. Intervals that do not fit inside
+$\Lambda_m$ are absent, which only helps, so the bound does not depend on $m$ or on the configurations.
+\end{proof}
+
+With $K=\lfloor\sqrt r\rfloor$ both terms of $\Phi(r,K)$ tend to zero as $r\to\infty$, since $\lfloor r/(K+1)\rfloor\to\infty$
+and $r\rho^{\sqrt r}\to0$. The constant $c$ can be very small; it affects the rate, not the convergence.
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+For $p=1$ the walk is $S_t=t$, so $(Y_t)$ is an independent sequence and $g_m\equiv\alpha$. Assume
+$27/(27+4\beta^2)<p<1$, so that $\rho<1$ by Lemma~\ref{lem:activity}. Put
+\begin{equation}\label{eq:modulus}
+\varepsilon_n=\min\bigl(1,\,2\Phi(n,\lfloor\sqrt n\rfloor)\bigr)\quad(n\ge2),\qquad\varepsilon_0=\varepsilon_1=1 .
+\end{equation}
+
+Let $m\ge n\ge2$ and let $\eta$, $\delta$ be configurations that agree on $\Lambda_n\setminus\{0\}$. Sample
+independently the marked posterior interval gases on $\Lambda_m$ for $\eta$ and for $\delta$, as after
+Lemma~\ref{lem:gas}, and let $U$ and $V$ be the two colours at time $0$, so that $\PP(U=1)=g_m(\eta)$ and
+$\PP(V=1)=g_m(\delta)$. Let $G$ be the event that the two walks have a common positive cut among the $n$ edges
+$\{k,k+1\}$ with $-n\le k\le-1$, and another among the $n$ edges with $0\le k\le n-1$. On $G$ let $k_-$ be the largest
+common positive cut with $k_-\le-1$ and $k_+$ the smallest with $k_+\ge0$, and exchange between the two samples all the
+marked blocks contained in $\{k_-+1,\dots,k_+\}$, including the colours at time $0$.
+
+These blocks lie in $\Lambda_n$, where the two configurations agree, and none of them is the first or the last block,
+so by \eqref{eq:weight} each has the same weight in both samples, and the joint weight of the pair is preserved. The
+exchange does not change the set of common positive cuts, since inside $\{k_-+1,\dots,k_+\}$ it exchanges the two cut
+sets and leaves their intersection unchanged. So it maps $G$ to itself, chooses the same $k_\pm$ when applied again, and
+is a weight-preserving involution of $G$ that exchanges $U$ and $V$. Therefore
+$\E[(\I\{U=1\}-\I\{V=1\})\I_G]=0$, and by Lemma~\ref{lem:common} applied to each side,
+\[
+|g_m(\eta)-g_m(\delta)|=\bigl|\E[(\I\{U=1\}-\I\{V=1\})\I_{G^c}]\bigr|\le\PP(G^c)\le\varepsilon_n .
+\]
+This is the bound of Theorem~\ref{thm:main}, uniform in $m\ge n$ and in the two configurations; for $n\le1$ it holds
+trivially. Since $\varepsilon_n\to0$, no configuration is bad.
+
+For $m\ge n$, $g_n(\eta)$ is an average of the values $g_m(\delta)$ over configurations $\delta$ that agree with $\eta$
+on $\Lambda_n\setminus\{0\}$, so $|g_m(\eta)-g_n(\eta)|\le\varepsilon_n$. Hence $(g_m)$ is uniformly Cauchy and converges
+uniformly to a function $g$, which is continuous because each $g_m$ depends on finitely many coordinates. By the
+martingale convergence theorem, $g_m((Y_t)_{t\ne0})\to\PP(Y_0=1\mid(Y_t)_{t\ne0})$ almost surely, so $g$ is a version of
+this conditional probability. \qed
+
+\section{Remarks}\label{sec:remarks}
+
+We comment on the constant and on the finite-window computations that accompany the paper.
+
+\begin{remark}\label{rem:sharp}
+The constant $27/28$ comes from two losses. Lemma~\ref{lem:third} uses only that a block without a positive cut spends
+a third of its steps going left, and Lemma~\ref{lem:activity} then counts all step sequences with that many left steps,
+ignoring that most of them do have positive cuts. The colour bound $\beta^{-1}$ per repeated observation is also
+attained only by records that match the walk perfectly. Reaching $4/5$ would need control of the activities of
+conditioned blocks close to the large-deviation balance described in the introduction, or a different separation
+argument. Theorem~\ref{thm:main} says nothing about the bad half of the conjecture. The coexistence of good and bad
+configurations at $p=1/2$ in the one-sided setting \cite[Theorem~1.3(iii)]{BdHS11} is not a counterexample to the
+two-sided conjecture, since observations at positive times can change the argument.
+\end{remark}
+
+\begin{remark}\label{rem:general}
+For general colours the large-deviation heuristic of the introduction, applied to a record of the less likely colour,
+with cost $\log(1/\beta)$ per new site, suggests the boundary $p=1/(1+\beta^2)$ in place of $4/5$; for $\beta=1/2$ this is $4/5$. The bound
+$27/(27+4\beta^2)$ of Theorem~\ref{thm:main} lies above it for every $\beta$.
+\end{remark}
+
+\begin{remark}\label{rem:finite}
+For rational $p$ and fair colours the probabilities $g_m(\eta)$ can be computed exactly. Anchor the walk at time $-m$.
+Since the walk has nearest-neighbour steps, its range is an interval that grows at an endpoint, so a state consisting of the
+position within the range, the length of the range and the colours on it, up to translation, carries all the
+information needed; each step multiplies the weight by $p$ or $q$, a revisit with the observed colour by $1$, and a
+new site by $1/2$, and a revisit with the other colour is discarded. Running this transfer with both colours at time $0$
+gives $g_m(\eta)=Z_+/(Z_++Z_-)$ in exact rational arithmetic. We computed $|g_m(\eta)-g_m(\delta)|$ for $\eta$ equal to
+$1$ at every nonzero time and four choices of $\delta$ agreeing with $\eta$ on $\Lambda_n\setminus\{0\}$, $n=2,4,6$,
+$m-n\in\{0,2,4,8,12,20,28\}$, and ten values of $p$ from $1/2$ to $199/200$: 840 comparisons with $m\le34$. For
+$\delta$ repeating the pattern $-1,-1,1,1$ outwards on both sides outside $\Lambda_n$ and $m=n+28$, the differences are
+the following.
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+$p$ & $n=2$ & $n=4$ & $n=6$\\
+\midrule
+$1/2$ & $0.2399$ & $0.0867$ & $0.0357$\\
+$4/5$ & $0.2321$ & $0.1082$ & $0.0595$\\
+$17/20$ & $0.2475$ & $0.1226$ & $0.0721$\\
+$97/100$ & $0.0668$ & $0.0141$ & $0.0035$\\
+$199/200$ & $0.0102$ & $0.0004$ & $0.0000$\\
+\bottomrule
+\end{tabular}
+\end{center}
+At $p=4/5$ and $n=4$ the difference grows with $m$, from $0.045$ at $m=6$ to $0.108$ at $m=32$. Badness concerns
+arbitrarily large $n$ and an optimisation over all alterations, so these numbers neither prove nor refute anything
+below $27/28$; they show only that the windows reachable by exact computation are far from the asymptotic regime. The
+code also checks the transfer against direct enumeration of all step sequences and against the interval-gas formula
+of Lemma~\ref{lem:gas} (417 exact checks), and it checks the block structure of Lemma~\ref{lem:blocks},
+Lemma~\ref{lem:third} and the bound $h_I-r_I(w)\le2\ell$ on the $58{,}474$ blocks of all $32{,}767$ step sequences of
+length at most $14$.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved Theorem~\ref{thm:main} and wrote the code of Remark~\ref{rem:finite}; a second Codex agent
+checked the proof and the literature as a referee; Claude agents (Anthropic) checked the steps and prepared the
+manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning
+its dissemination.
+
+\section*{Code availability}
+The code and data of Remark~\ref{rem:finite} are in the repository
+\begin{center}\url{https://github.com/yspennstate/rwrs-two-sided-good-configurations}.\end{center}
+They use Python~3 and its standard library only; all probabilities are stored as exact fractions.
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.0cm}p{8.0cm}p{3.1cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$p$, $q$ & probabilities of a step to the right and to the left & Section~\ref{sec:intro}\\
+$\PP$, $\E$ & probability and expectation & Section~\ref{sec:intro}\\
+$X_t$, $S_t$ & steps and position of the walk & Section~\ref{sec:intro}\\
+$C_x$, $\alpha$, $\mu$ & scenery, its probability of colour $1$, its law & Section~\ref{sec:intro}\\
+$\beta$ & $\min(\alpha,1-\alpha)$ & Section~\ref{sec:intro}\\
+$Y_t$ & the reduced process $C_{S_t}$ & Section~\ref{sec:intro}\\
+$\Lambda_n$ & $\{-n,\dots,n\}$ & \eqref{eq:gm}\\
+$\eta$, $\delta$ & configurations on $\Z\setminus\{0\}$ & \eqref{eq:gm}\\
+$g_m$, $g$ & conditional probability of $Y_0=1$ given $\Lambda_m\setminus\{0\}$, its limit & \eqref{eq:gm},
+Theorem~\ref{thm:main}\\
+$\varepsilon_n$ & the modulus of Theorem~\ref{thm:main} & \eqref{eq:modulus}\\
+$N$, $v$, $J_p$ & record length, fraction of right steps, large-deviation cost & Section~\ref{sec:intro}\\
+$\I$ & indicator & Lemma~\ref{lem:domination}\\
+$a$, $b$ & endpoints of the time window & Section~\ref{sec:cuts}\\
+$I=\{u,\dots,v\}$ & a block & Section~\ref{sec:cuts}\\
+$L$, $\ell$, $d$ & steps, left steps and displacement of a block & Section~\ref{sec:cuts}\\
+$B$ & weight of the path that only steps right & Section~\ref{sec:gas}\\
+$\eta(x)$ & colour observed at the site $x$ & Section~\ref{sec:gas}\\
+$h_I$, $r_I(w)$ & observed times in $I$, distinct sites visited at them & Section~\ref{sec:gas}\\
+$A_I(w)$, $w_I$ & weight of a block path, activity of an interval & \eqref{eq:weight}\\
+$\mathcal I$ & set of non-singleton blocks & \eqref{eq:gas}\\
+$R_I$, $e_I$ & size of the range, indicator that $0\in I$ & Lemma~\ref{lem:activity}\\
+$\tau$, $\rho$ & $q/(p\beta^2)$, $(27\tau/4)^{1/3}$ & Lemma~\ref{lem:activity}\\
+$z$ & auxiliary parameter of the binomial bound & Lemma~\ref{lem:activity}\\
+$\xi_I$, $U_I$ & dominating Bernoulli and uniform variables & Lemma~\ref{lem:domination}\\
+$c$, $\Phi(r,K)$ & constants of the common-cut bound & \eqref{eq:bound}\\
+$E$, $r$, $K$, $s$ & a set of $r$ edges, a length cut-off, number of chosen edges & Lemma~\ref{lem:common}\\
+$U$, $V$, $G$, $k_\pm$ & colours at time $0$, the event of common cuts, the chosen cuts & Section~\ref{sec:proof}\\
+$Z_\pm$ & weights with colour $\pm1$ at time $0$ & Remark~\ref{rem:finite}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{BdHS11} S.~Blach\`ere, F.~den Hollander and J.~E.~Steif, A crossover for the bad configurations of random walk
+in random scenery, \emph{Ann.\ Probab.} \textbf{39} (2011), no.~5, 2018--2041. \doi{10.1214/11-AOP664}
+\bibitem{dHS06} F.~den Hollander and J.~E.~Steif, Random walk in random scenery: a survey of some recent results, in
+\emph{Dynamics \& Stochastics}, IMS Lecture Notes Monogr.\ Ser.\ \textbf{48} (2006), 53--65.
+\doi{10.1214/074921706000000077}
+\bibitem{dHSvdW05} F.~den Hollander, J.~E.~Steif and P.~van der Wal, Bad configurations for random walk in random scenery
+and related subshifts, \emph{Stochastic Process.\ Appl.} \textbf{115} (2005), no.~7, 1209--1232.
+\doi{10.1016/j.spa.2005.03.001}
+\bibitem{Kal82} S.~A.~Kalikow, $T,T^{-1}$ transformation is not loosely Bernoulli, \emph{Ann.\ of Math.\ (2)} \textbf{115}
+(1982), no.~2, 393--409. \doi{10.2307/1971397}
+\bibitem{MRM99} C.~Maes, F.~Redig and A.~Van Moffaert, Almost Gibbsian versus weakly Gibbsian measures,
+\emph{Stochastic Process.\ Appl.} \textbf{79} (1999), no.~1, 1--15. \doi{10.1016/S0304-4149(98)00083-0}
+\bibitem{Ste21} J.~E.~Steif, Some results and open questions concerning Gibbs states, quasilocality and bilateral
+determinism, in Mini-Workshop: One-sided and Two-sided Stochastic Descriptions, \emph{Oberwolfach Rep.} \textbf{17}
+(2020), no.~1, 632--633. \doi{10.4171/OWR/2020/11}
+\bibitem{vEFS93} A.~C.~D.~van Enter, R.~Fern\'andez and A.~D.~Sokal, Regularity properties and pathologies of
+position-space renormalization-group transformations: scope and limitations of Gibbsian theory, \emph{J.\ Stat.\ Phys.}
+\textbf{72} (1993), no.~5--6, 879--1167. \doi{10.1007/BF01048183}
+\bibitem{MathBrainRepo} Y.~Shmalo, Math Brain: public snapshot, code and tests, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, Brain Framework, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+
+\end{document}

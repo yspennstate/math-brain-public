@@ -1,0 +1,579 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\BP}{\mathrm{BP}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Stationary measures of planar kinetically constrained models]{Stationary measures of planar kinetically
+constrained models with bounded conditional odds}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60K35, 82C22}
+\keywords{kinetically constrained models, Fredrickson--Andersen model, stationary measures, entropy production,
+bootstrap percolation}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Martinelli, Shapira and Toninelli conjectured that every stationary measure of a kinetically constrained spin model
+on $\Z^d$ is a mixture of the equilibrium product measure conditioned on the fibers of bootstrap percolation. In
+dimension one, and for translation invariant stationary measures in every dimension, stationarity is known to imply detailed
+balance. We prove that on $\Z^2$ every stationary measure whose single-site conditional probabilities are bounded away
+from $0$ and $1$ satisfies detailed balance, without translation invariance and although the transition rates vanish
+on a large set. If large boxes are also internally spanned at every positive density, such a measure is the
+equilibrium product measure; this applies to the one- and two-neighbour Fredrickson--Andersen models at every density.
+The proof adapts the entropy argument of Holley and Stroock to degenerate rates, the hypothesis on the conditional
+probabilities replacing a lower bound on the rates. We also record the classification of all stationary measures of
+the one-neighbour model on strips $\Z\times H$ with $H$ finite.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+We recall the models and the conjecture of Martinelli, Shapira and Toninelli, and state the results.
+
+\subsection{The models}
+Let $d\ge1$, let $G$ be $\Z^d$ or a strip $\Z\times H$ with $H$ a finite connected graph, and let
+$\Omega=\{0,1\}^G$. A site $x$ with $\eta_x=0$ is \emph{empty} and a site with $\eta_x=1$ is \emph{filled}. Fix
+$q\in(0,1)$, put $p=1-q$, and let $\pi=\pi_q$ be the product measure on $\Omega$ with $\pi(\eta_x=0)=q$ for every
+$x$; for $a\in(0,1)$, $\pi_a$ denotes the product measure with $\pi_a(\eta_x=0)=a$. To every site $x$ is attached a
+\emph{constraint} $c_x\colon\Omega\to\{0,1\}$ that depends only on the spins at finitely many sites other than $x$.
+We assume a uniform range: there is $r\ge1$ such that $c_x$ depends only on spins at sites $y\ne x$ whose first
+coordinates differ from that of $x$ by at most $r$ (on $\Z^2$: whose $\ell^\infty$ distance from $x$ is at most $r$).
+The kinetically constrained model is the Markov process on $\Omega$ with generator
+\begin{equation}\label{eq:generator}
+Lf(\eta)=\sum_{x\in G}c_x(\eta)\bigl(\pi_x(f)-f\bigr)(\eta)=\sum_{x\in G}c_x(\eta)\,r_x(\eta)\bigl(f(\eta^x)-f(\eta)\bigr),
+\end{equation}
+where $\pi_x(f)$ averages $f$ over the spin at $x$ with respect to $\pi$, $\eta^x$ is $\eta$ with the spin at $x$
+flipped, and $r_x(\eta)=q$ if $\eta_x=1$, $r_x(\eta)=p$ if $\eta_x=0$. Thus a filled site empties at rate $q$ and an
+empty site fills at rate $p$, provided its constraint is satisfied. The rates are bounded and of finite range, so $L$
+generates a Feller semigroup $(P_t)$, and $\pi$ is reversible \cite{CMRT08,HT25}. A probability measure $\mu$ on
+$\Omega$ is \emph{stationary} if $\mu P_t=\mu$ for all $t\ge0$; then $\mu(Lf)=0$ for every local function $f$, that is
+every function of finitely many spins. No translation invariance, reversibility or absolute continuity is assumed.
+
+The main examples are given by an \emph{update family} $\cU$, a finite collection of finite nonempty subsets of
+$\Z^d\setminus\{0\}$, through
+\begin{equation}\label{eq:update}
+c_x(\eta)=\mathbb I\{\text{there is }U\in\cU\text{ with }\eta_{x+u}=0\text{ for all }u\in U\},
+\end{equation}
+where $\mathbb I$ denotes an indicator.
+Such a constraint is \emph{monotone}: emptying a site never turns a satisfied constraint into an unsatisfied one. The
+Fredrickson--Andersen $j$-neighbour model (FA-$j$f) \cite{FA84} has $c_x=1$ when at least $j$ nearest neighbours of $x$
+are empty. On a strip the same definitions apply, with constraints that may depend on the site.
+
+\emph{Bootstrap percolation} empties, one after another, filled sites whose constraint is satisfied and never fills a
+site. For monotone constraints the limit $\BP(\eta)$ does not depend on the order. For a finite $V\subset G$ let
+$\mathcal G_V$ be the event that bootstrap percolation run inside $V$ from $\eta_V$, with every site outside $V$
+filled, empties all of $V$; we then say that $V$ is \emph{internally spanned}. The event $\mathcal G_V$ depends only on
+$\eta_V$ and is increasing in the set of empty sites.
+
+\subsection{The conjecture and what is known}
+Let $E=\{\beta\in\Omega:\BP(\beta)=\beta\}$. Martinelli, Shapira and Toninelli \cite[Conjecture~3]{MST25} conjectured
+that every stationary measure $\mu$ has the form $\mu=\int_E\pi(\,\cdot\mid\BP=\beta)\,\mu^*(d\beta)$ for a probability
+$\mu^*$ on $E$, the mixing measure; see also \cite[Conjecture~1.6]{Mar26}. For the conditioning at fibers of $\pi$-probability zero a
+specific choice of kernel is part of the statement; the results below involve only the fibers $\{\BP=0\}$ and, on
+strips, the single configuration $\mathbf 1$ with every site filled.
+
+The route in \cite{MST25} has two steps: show that a stationary measure satisfies \emph{detailed balance}, then identify
+reversible measures by internal spanning. A probability $\mu$ satisfies detailed balance if for every finite $W\subset
+G$ and every $x\in W$ such that $c_x$ depends only on spins in $W$,
+\begin{equation}\label{eq:db}
+c_x(\zeta)\,r_x(\zeta)\,\mu_W(\zeta)=c_x(\zeta^x)\,r_x(\zeta^x)\,\mu_W(\zeta^x)\qquad\text{for all }\zeta\in\{0,1\}^W,
+\end{equation}
+where $\mu_W$ is the marginal of $\mu$ on $W$. For translation invariant $\mu$ the first step follows from Holley's free
+energy argument \cite{Hol71}, \cite[Theorem~2.4]{MST25}; in dimension one it holds without translation invariance
+\cite[Theorem~2.5]{MST25}. For FA-1f, BABP and $\delta$-West on $\Z$ this gives the full classification
+\cite[Corollary~2.9]{MST25}, and the one-dimensional East model is classified in \cite[Theorem~2.12]{MST25}, the
+$d$-dimensional East model in \cite[Theorem~2.13]{MST25} by a different, oriented argument. In dimension two the
+entropy argument without translation invariance loses a logarithmic factor at the boundary \cite[Remark~2.16]{MST25}.
+
+For spin systems with rates bounded away from zero, Holley and Stroock \cite{HS77} showed that in dimensions one and
+two every stationary measure of a stochastic Ising model is a Gibbs state, without translation invariance; Moulin
+Ollagnier and Pinchon \cite{MOP77} gave the free energy argument for translation invariant stationary measures, and Jahnel and
+K\"oppl \cite{JK25} proved a general version for interacting particle systems in dimensions one and two under rates
+uniformly bounded away from zero. In kinetically constrained models the rates vanish on a set of positive measure, so
+these results do not apply directly. For FA-1f at high density, convergence to $\pi$ from initial laws with good control
+of the distance to the nearest empty site is known \cite{BCMRT13,MV19,HT25}.
+
+\subsection{Results}
+A probability $\mu$ on $\Omega$ has \emph{bounded conditional odds} if there is $\varepsilon\in(0,1/2]$ such that for
+every finite $V\subset G$, every $x\in V$ and every $\xi\in\{0,1\}^{V\setminus\{x\}}$ with $\mu(\eta_{V\setminus\{x\}}=\xi)>0$,
+\begin{equation}\label{eq:odds}
+\varepsilon\le\mu\bigl(\eta_x=0\bigm|\eta_{V\setminus\{x\}}=\xi\bigr)\le1-\varepsilon.
+\end{equation}
+Revealing the spins of a finite set one at a time shows that every finite configuration then has positive probability.
+Absolute continuity of the finite marginals with respect to $\pi$ is no restriction, since $\pi$ charges every finite
+configuration; \eqref{eq:odds} is a genuine hypothesis.
+
+\begin{theorem}\label{thm:balance}
+Let $G=\Z^2$ and let the constraints be of uniform finite range and independent of the spin they constrain. Every
+stationary measure with bounded conditional odds satisfies detailed balance \eqref{eq:db}.
+\end{theorem}
+
+\begin{theorem}\label{thm:identify}
+Let $G=\Z^2$, let the constraints be given by an update family as in \eqref{eq:update}, and let $V_n=[-n,n]^2$.
+Assume that $\pi_a(\mathcal G_{V_n})\to1$ as $n\to\infty$ for every $a\in(0,1)$. Then every stationary measure with
+bounded conditional odds equals $\pi$. This applies to FA-1f and FA-2f on $\Z^2$, for every $q\in(0,1)$.
+\end{theorem}
+
+For FA-1f the configuration $\mathbf 1$ is frozen and $\delta_{\mathbf 1}$ is stationary, so a stationary measure
+need not have bounded conditional odds. Theorem~\ref{thm:identify} applies to the part of $\mu$ off $\mathbf 1$:
+
+\begin{corollary}\label{cor:fa1f}
+Let $\mu$ be a stationary measure of FA-1f on $\Z^2$ with $\mu(\{\mathbf 1\})<1$. If
+$\nu=(\mu-\mu(\{\mathbf 1\})\delta_{\mathbf 1})/(1-\mu(\{\mathbf 1\}))$ has bounded conditional odds, then
+$\mu=(1-\lambda)\pi+\lambda\delta_{\mathbf 1}$ with $\lambda=\mu(\{\mathbf 1\})$.
+\end{corollary}
+
+On strips the boundary of a box has bounded size and no hypothesis on $\mu$ is needed.
+
+\begin{proposition}\label{prop:strip}
+Let $G=\Z\times H$ with $H$ a finite connected graph, and let $\mu$ be a stationary measure of FA-1f on $G$. Then
+$\mu=(1-\lambda)\pi+\lambda\delta_{\mathbf 1}$ with $\lambda=\mu(\{\mathbf 1\})$. The same holds for all monotone
+constraints of uniform finite range, possibly depending on the site, that allow every FA-1f move and vanish at
+$\mathbf 1$.
+\end{proposition}
+
+Proposition~\ref{prop:strip} also follows from \cite[Theorem~2.5 and Lemma~2.8]{MST25}: writing
+$H=\{h_0,\dots,h_{m-1}\}$ and sending $(k,h_i)$ to $mk+i$ turns the model into a one-dimensional model with
+site-dependent constraints of range at most $mr+m-1$, which those results allow. We include the short direct proof
+because it is the case $|B_n|$ bounded of the argument below.
+
+Theorems~\ref{thm:balance} and~\ref{thm:identify} do not settle the conjecture on $\Z^2$: a stationary measure need
+not have bounded conditional odds, and on fibers other than $\{\BP=0\}$ the identification of reversible measures is a
+separate problem. The proof uses the divergence of $\sum_n1/n$ and does not extend to $d\ge3$
+(Remark~\ref{rem:dim}).
+
+Section~\ref{sec:entropy} sets up the entropy balance for an arbitrary stationary measure. Section~\ref{sec:proofs}
+proves Theorem~\ref{thm:balance} and the balance part of Proposition~\ref{prop:strip}, Section~\ref{sec:ident} the
+identification, and Section~\ref{sec:fa2f} the internal spanning property of FA-2f.
+
+\section{Entropy balance}\label{sec:entropy}
+
+Throughout this section $\mu$ is a stationary measure and the constraints satisfy the hypotheses of
+Theorem~\ref{thm:balance}, on $G=\Z^2$ or on a strip. For a finite $V\subset G$, $\zeta\in\{0,1\}^V$ and $x\in V$ put
+\[
+a_V(x,\zeta)=\int\mathbb I\{\eta_V=\zeta\}\,c_x(\eta)\,r_x(\eta)\,\mu(d\eta),\qquad
+b_V(x)=\sum_{\zeta}\bigl|a_V(x,\zeta)-a_V(x,\zeta^x)\bigr|.
+\]
+Call $x$ \emph{interior} to $V$ if $c_x$ depends only on spins in $V$, and for interior $x$ put
+\[
+A_V(x)=\sum_\zeta\bigl(a_V(x,\zeta)-a_V(x,\zeta^x)\bigr)\log\frac{a_V(x,\zeta)}{a_V(x,\zeta^x)},
+\]
+with terms in which both values vanish equal to zero. We write $a=a_V(x,\zeta)$ and $a^x=a_V(x,\zeta^x)$ when $V$ and
+$x$ are fixed. Since $c_xr_x\le1$, $\sum_\zeta a_V(x,\zeta)\le1$ and $b_V(x)\le2$.
+
+\begin{lemma}\label{lem:zero}
+If $\mu_V(\zeta)=0$ then $a_V(x,\zeta)=a_V(x,\zeta^x)=0$ for every $x\in V$.
+\end{lemma}
+
+\begin{proof}
+Clearly $a_V(x,\zeta)=0$. Apply $\mu(Lf)=0$ to $f=\mathbb I\{\eta_V=\zeta\}$. A flip outside $V$ does not change
+$\eta_V$, so
+\[
+0=\sum_{y\in V}\sum_{\xi}a_V(y,\xi)\bigl(\mathbb I\{\xi^y=\zeta\}-\mathbb I\{\xi=\zeta\}\bigr)
+=\sum_{y\in V}a_V(y,\zeta^y)-\sum_{y\in V}a_V(y,\zeta).
+\]
+The second sum vanishes, and the first is a sum of nonnegative terms, so $a_V(y,\zeta^y)=0$ for every $y\in V$.
+\end{proof}
+
+In particular, at an interior $x$ with $a>0$ and $a^x>0$ both $\zeta$ and $\zeta^x$ have positive mass, and every
+pair in the sums below with a vanishing marginal mass contributes zero. Put $\rho_V=\mu_V/\pi_V$ on
+$\{\mu_V>0\}$ and
+\[
+\ell_V(x,\zeta)=\log\frac{\rho_V(\zeta)}{\rho_V(\zeta^x)}\qquad\text{when }\mu_V(\zeta)\mu_V(\zeta^x)>0 .
+\]
+
+\begin{lemma}\label{lem:abc}
+Let $V\subset W$ be finite.
+\begin{enumerate}
+\item[(a)] If $x$ is interior to $V$, then $0\le A_V(x)\le A_W(x)$.
+\item[(b)] $b_V(x)\le b_W(x)$ for every $x\in V$.
+\item[(c)] If $x$ is interior to $V$, then $b_V(x)^2\le A_V(x)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The function $\phi(u,v)=(u-v)\log(u/v)$ on $[0,\infty)^2$, with $\phi(0,0)=0$ and $\phi=+\infty$ when exactly one
+argument vanishes, is nonnegative, convex and positively homogeneous of degree one, hence subadditive. Since
+$a_V(x,\zeta)=\sum_\xi a_W(x,\xi)$ and $a_V(x,\zeta^x)=\sum_\xi a_W(x,\xi^x)$, the sums running over the extensions
+$\xi$ of $\zeta$ to $W$, subadditivity gives (a), and the triangle inequality gives (b). For (c), the logarithmic mean
+is at most the arithmetic mean, so $\phi(u,v)\ge2(u-v)^2/(u+v)$. By the Cauchy--Schwarz inequality,
+\[
+b_V(x)^2\le\sum_\zeta\frac{(a-a^x)^2}{a+a^x}\ \sum_\zeta(a+a^x)\le\frac{A_V(x)}2\cdot2 .\qedhere
+\]
+\end{proof}
+
+Now fix finite sets $I\subset V$ such that every $x\in I$ is interior to $V$, and put $B=V\setminus I$.
+
+\begin{lemma}\label{lem:balance}
+With $M=\max(p/q,q/p)$,
+\begin{equation}\label{eq:balance}
+\sum_{x\in I}A_V(x)=-\sum_{x\in B}\sum_\zeta\bigl(a_V(x,\zeta)-a_V(x,\zeta^x)\bigr)\ell_V(x,\zeta),
+\end{equation}
+where the inner sum runs over $\zeta$ with $\mu_V(\zeta)\mu_V(\zeta^x)>0$. For every $\lambda\ge1$ and $x\in B$,
+\begin{equation}\label{eq:tail}
+-\sum_\zeta\bigl(a_V(x,\zeta)-a_V(x,\zeta^x)\bigr)\ell_V(x,\zeta)\le\lambda\,b_V(x)+2M\lambda e^{-\lambda},
+\end{equation}
+and the left side of \eqref{eq:tail} is at most $2M/e$.
+\end{lemma}
+
+\begin{proof}
+Let $F$ be a function on $\{0,1\}^V$ equal to $\log\rho_V$ where $\mu_V>0$ and to $0$ elsewhere, and apply
+$\mu(Lf)=0$ to $f(\eta)=F(\eta_V)$:
+\[
+0=\sum_{x\in V}\sum_\zeta a_V(x,\zeta)\bigl(F(\zeta^x)-F(\zeta)\bigr)
+=-\frac12\sum_{x\in V}\sum_\zeta\bigl(a_V(x,\zeta)-a_V(x,\zeta^x)\bigr)\bigl(F(\zeta)-F(\zeta^x)\bigr),
+\]
+where the second form comes from replacing $\zeta$ by $\zeta^x$ and averaging. By Lemma~\ref{lem:zero} only pairs with
+$\mu_V(\zeta)\mu_V(\zeta^x)>0$ contribute, and for them $F(\zeta)-F(\zeta^x)=\ell_V(x,\zeta)$. Let $x\in I$. Then
+$c_x$ is a function of $\zeta$ that does not depend on $\zeta_x$, so $a=c_x(\zeta)r_x(\zeta)\mu_V(\zeta)$ and
+$a^x=c_x(\zeta)r_x(\zeta^x)\mu_V(\zeta^x)$. Since $r_x(\zeta)/r_x(\zeta^x)=\pi_V(\zeta^x)/\pi_V(\zeta)$, whenever
+$c_x(\zeta)=1$ we get $a/a^x=\rho_V(\zeta)/\rho_V(\zeta^x)$, that is $\ell_V(x,\zeta)=\log(a/a^x)$, and when
+$c_x(\zeta)=0$ both $a$ and $a^x$ vanish. Hence the terms with $x\in I$ add up to $-\frac12\sum_{x\in I}A_V(x)$, which
+proves \eqref{eq:balance}.
+
+For \eqref{eq:tail}, the summand is unchanged when $\zeta$ is replaced by $\zeta^x$, because both factors change
+sign. Split the $\zeta$ with $\ell=\ell_V(x,\zeta)$ into $|\ell|\le\lambda$, $\ell>\lambda$ and $\ell<-\lambda$. The
+first group contributes at most $\lambda b_V(x)$. If $\ell>\lambda$, then $-(a-a^x)\ell\le a^x\ell\le\mu_V(\zeta^x)\ell$,
+and
+\[
+\mu_V(\zeta^x)=\rho_V(\zeta^x)\pi_V(\zeta^x)=\mu_V(\zeta)\,\frac{\pi_V(\zeta^x)}{\pi_V(\zeta)}\,e^{-\ell}
+\le M\mu_V(\zeta)e^{-\ell}.
+\]
+Since $t\mapsto te^{-t}$ decreases on $[1,\infty)$, the second group contributes at most
+$M\lambda e^{-\lambda}\sum_\zeta\mu_V(\zeta)=M\lambda e^{-\lambda}$, and by the symmetry just noted the third
+group contributes the same. The same argument with threshold $0$, using $\sup_{t\ge0}te^{-t}=1/e$, bounds the whole
+sum by $2M/e$.
+\end{proof}
+
+Now let $V_n$ be boxes increasing in $n$, $I_n=V_{n-1}$ and $B_n=V_n\setminus V_{n-1}$, chosen so that every site of
+$V_{n-1}$ is interior to $V_n$. Put
+\[
+S_n=\sum_{x\in I_n}A_{V_n}(x).
+\]
+
+\begin{lemma}\label{lem:shell}
+$S_n$ is nondecreasing, $0\le S_n\le(2M/e)|B_n|$, and
+\begin{equation}\label{eq:current}
+\sum_{x\in B_n}b_{V_n}(x)\le\sqrt{|B_n|\,(S_{n+1}-S_n)} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The bound on $S_n$ is \eqref{eq:balance} with the last statement of Lemma~\ref{lem:balance}. Since
+$I_{n+1}=I_n\cup B_n$, Lemma~\ref{lem:abc}(a) gives
+$S_{n+1}\ge\sum_{x\in I_n}A_{V_n}(x)+\sum_{x\in B_n}A_{V_{n+1}}(x)=S_n+\sum_{x\in B_n}A_{V_{n+1}}(x)$. Every $x\in B_n$
+is interior to $V_{n+1}$, so by Lemma~\ref{lem:abc}(b) and (c) and the Cauchy--Schwarz inequality,
+\[
+\sum_{x\in B_n}b_{V_n}(x)\le\sum_{x\in B_n}\sqrt{A_{V_{n+1}}(x)}\le\sqrt{|B_n|\sum_{x\in B_n}A_{V_{n+1}}(x)}
+\le\sqrt{|B_n|(S_{n+1}-S_n)} .\qedhere
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:zeroS}
+If $S_n=0$ for every $n$, then $\mu$ satisfies detailed balance \eqref{eq:db}.
+\end{lemma}
+
+\begin{proof}
+Every summand of $A_{V_n}(x)$ is nonnegative, so $a_{V_n}(x,\zeta)=a_{V_n}(x,\zeta^x)$ for all $x\in V_{n-1}$ and all
+$\zeta$. Let $W$ be finite and $x\in W$ with $c_x$ depending only on spins in $W$. Choose $n$ with $W\cup\{x\}\subset
+V_{n-1}$ and sum the identity over the extensions of $\xi\in\{0,1\}^W$ to $V_n$; this gives
+$a_W(x,\xi)=a_W(x,\xi^x)$, which is \eqref{eq:db} because $a_W(x,\xi)=c_x(\xi)r_x(\xi)\mu_W(\xi)$ and
+$c_x(\xi)=c_x(\xi^x)$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:balance}}\label{sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:balance}]
+Let $V_n=[-nr,nr]^2$, so that every site of $V_{n-1}$ is interior to $V_n$ and
+\begin{equation}\label{eq:shellsize}
+|B_n|=(2nr+1)^2-(2(n-1)r+1)^2=8r^2n-4r^2+4r\le8r^2n .
+\end{equation}
+By \eqref{eq:odds}, for every finite $V$, $x\in V$ and $\zeta$, $\mu_V(\zeta)/\mu_V(\zeta^x)$ lies between
+$\varepsilon/(1-\varepsilon)$ and $(1-\varepsilon)/\varepsilon$; dividing by $\pi_V(\zeta)/\pi_V(\zeta^x)\in\{p/q,q/p\}$,
+\[
+|\ell_V(x,\zeta)|\le K:=\log\frac{1-\varepsilon}{\varepsilon}+\Bigl|\log\frac pq\Bigr| .
+\]
+Then \eqref{eq:balance} and \eqref{eq:current} give
+\begin{equation}\label{eq:planar}
+S_n\le K\sum_{x\in B_n}b_{V_n}(x)\le K\sqrt{8r^2n\,(S_{n+1}-S_n)},
+\end{equation}
+and also $S_n\le 2K|B_n|\le16Kr^2n$, since $b_{V_n}(x)\le2$. If $K=0$ then $S_n=0$. Otherwise put $C=8K^2r^2$ and
+$D=16Kr^2$, so that
+\[
+S_n^2\le Cn\,(S_{n+1}-S_n),\qquad S_n\le Dn\qquad(n\ge1).
+\]
+Suppose $S_m=s>0$ for some $m$. For $n\ge m$, since $S$ is nondecreasing, $S_{n+1}\ge S_n(1+S_n/(Cn))\ge
+S_n(1+s/(Cn))$, and $\prod_{n\ge m}(1+s/(Cn))=\infty$; hence $S_n\to\infty$. Choose $m'\ge m$ with $S_n\ge3C$ for
+$n\ge m'$. Then for $n\ge m'$
+\[
+S_{n+1}\ge S_n\Bigl(1+\frac3n\Bigr)\ge S_n\Bigl(\frac{n+1}n\Bigr)^2,
+\]
+so $S_n\ge S_{m'}(n/m')^2$, which contradicts $S_n\le Dn$. Therefore $S_n=0$ for all $n$, and Lemma~\ref{lem:zeroS}
+completes the proof.
+\end{proof}
+
+\begin{remark}\label{rem:dim}
+Two features of the plane are used: $|B_n|$ grows linearly, and $\sum_n1/n$ diverges. Without \eqref{eq:odds}, the
+truncation in \eqref{eq:tail} needs $\lambda$ of order $\log n$ to make $|B_n|\lambda e^{-\lambda}$ small, and the
+resulting factor $\log n$ in \eqref{eq:planar} breaks the argument; this is the obstruction of
+\cite[Remark~2.16]{MST25}. On $\Z^d$ with $d\ge3$ the same steps give $S_n^2\le Cn^{d-1}(S_{n+1}-S_n)$ and
+$S_n\le Dn^{d-1}$, which are consistent with a bounded positive sequence $S$, so no conclusion follows. The comparison
+with \cite{HS77}, where the same dichotomy between $d\le2$ and $d\ge3$ appears for rates bounded away from zero, is
+that here the bound \eqref{eq:odds} on the measure, not a bound on the rates, keeps the boundary terms of
+\eqref{eq:balance} of order $|B_n|$ times the boundary currents.
+\end{remark}
+
+\begin{proposition}\label{prop:stripbalance}
+On a strip $\Z\times H$ with $H$ finite, every stationary measure satisfies detailed balance, for all constraints
+of uniform finite range, possibly depending on the site, that do not depend on the spin they constrain.
+\end{proposition}
+
+\begin{proof}
+Let $V_n=[-nr,nr]\times H$. Then every site of $V_{n-1}$ is interior to $V_n$ and $|B_n|=2r|H|$ for all $n$. By
+Lemma~\ref{lem:shell}, $S_n$ is nondecreasing and bounded, so $S_{n+1}-S_n\to0$ and, by \eqref{eq:current},
+$\sum_{x\in B_n}b_{V_n}(x)\to0$. By \eqref{eq:balance} and \eqref{eq:tail}, for every $\lambda\ge1$,
+\[
+S_n\le\lambda\sum_{x\in B_n}b_{V_n}(x)+4Mr|H|\lambda e^{-\lambda}.
+\]
+Letting $n\to\infty$ and then $\lambda\to\infty$ gives $\lim_nS_n=0$. As $S$ is nonnegative and nondecreasing,
+$S_n=0$ for every $n$, and Lemma~\ref{lem:zeroS} applies.
+\end{proof}
+
+\section{Identification by internal spanning}\label{sec:ident}
+
+From now on the constraints are monotone, given by \eqref{eq:update} on $\Z^2$ or of the form in
+Proposition~\ref{prop:strip} on a strip.
+
+\begin{lemma}\label{lem:connect}
+Let $\mu$ satisfy detailed balance and let $V$ be finite. Then $\rho_V=\mu_V/\pi_V$ is constant on the configurations
+of $\mathcal G_V$. Consequently, if $\mu(\mathcal G_V)>0$, then $\mu(\eta_V\in\cdot\mid\mathcal
+G_V)=\pi(\eta_V\in\cdot\mid\mathcal G_V)$, and for every event $F$ depending only on $\eta_V$,
+\begin{equation}\label{eq:compare}
+|\mu(F)-\pi(F)|\le2\bigl(1-\mu(\mathcal G_V)\bigr)+2\bigl(1-\pi(\mathcal G_V)\bigr).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $\zeta\in\mathcal G_V$. Emptying filled sites of $V$ in the order of bootstrap percolation inside $V$ with filled
+exterior leads from $\zeta$ to the configuration $0_V$ in which every site of $V$ is empty. At each step the emptied
+site $x$ has its constraint satisfied with every site outside $V$ filled, hence, by monotonicity, with any spins
+outside $V$. Reversing such a path for another $\zeta'\in\mathcal G_V$ leads from $0_V$ to $\zeta'$; each reversed step
+fills a site whose constraint is satisfied, because the constraint does not depend on the spin at that site. So any two
+configurations of $\mathcal G_V$ are joined by a path of single flips at sites $x\in V$ whose constraint is satisfied
+whatever the spins outside $V$.
+
+For such a flip $\zeta\to\zeta^x$, let $W\supset V$ be finite and contain the sites on which $c_x$ depends. Then
+$c_x(\xi)=1$ for every extension $\xi$ of $\zeta$ to $W$, and \eqref{eq:db} gives $r_x(\xi)\mu_W(\xi)=r_x(\xi^x)\mu_W(\xi^x)$.
+Summing over the extensions gives $r_x(\zeta)\mu_V(\zeta)=r_x(\zeta^x)\mu_V(\zeta^x)$, that is
+$\rho_V(\zeta)=\rho_V(\zeta^x)$, with both sides of the first identity zero or both positive. Hence $\rho_V$ is constant on
+$\mathcal G_V$, which gives the identity of conditional laws. For \eqref{eq:compare}, for every probability $\nu$ with
+$\nu(\mathcal G_V)>0$ we have $|\nu(F)-\nu(F\mid\mathcal G_V)|\le\nu(\mathcal G_V^c)+\nu(F\cap\mathcal
+G_V)(1/\nu(\mathcal G_V)-1)\le2(1-\nu(\mathcal G_V))$; apply this to $\mu$ and to $\pi$. If $\mu(\mathcal G_V)=0$ the
+bound \eqref{eq:compare} is trivial.
+\end{proof}
+
+\begin{lemma}\label{lem:domination}
+If $\mu$ satisfies \eqref{eq:odds}, then $\mu(F)\ge\pi_\varepsilon(F)$ for every event $F$ that depends on finitely
+many spins and is increasing in the set of empty sites.
+\end{lemma}
+
+\begin{proof}
+Let $F$ depend on the spins at $x_1,\dots,x_N$. Let $U_1,\dots,U_N$ be independent uniform variables on $[0,1]$ and
+define $\eta_{x_k}=0$ if $U_k\le\mu(\eta_{x_k}=0\mid\eta_{x_1},\dots,\eta_{x_{k-1}})$ and $\eta_{x_k}=1$ otherwise, the
+conditional probability being evaluated at the values already constructed. The resulting spins have law
+$\mu$. Each conditional probability is a conditional probability given $\eta_{V\setminus\{x_k\}}$ with
+$V=\{x_1,\dots,x_k\}$ and is therefore at least $\varepsilon$ by \eqref{eq:odds}. Hence the set $\{x_k:U_k\le\varepsilon\}$, which has
+law $\pi_\varepsilon$, is contained in the set of empty sites, and $F$ is increasing.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:identify}]
+By Theorem~\ref{thm:balance}, $\mu$ satisfies detailed balance. The event $\mathcal G_{V_n}$ is increasing in the set of
+empty sites, so Lemma~\ref{lem:domination} and the hypothesis give $\mu(\mathcal G_{V_n})\ge\pi_\varepsilon(\mathcal
+G_{V_n})\to1$, and $\pi(\mathcal G_{V_n})=\pi_q(\mathcal G_{V_n})\to1$. By \eqref{eq:compare}, $\mu$ and $\pi$ agree on
+every event depending on finitely many spins, so $\mu=\pi$.
+
+For FA-1f, any empty site of the connected set $V_n$ empties all of $V_n$ by bootstrap percolation along paths, so
+$\mathcal G_{V_n}=\{\eta_{V_n}\ne1_{V_n}\}$ and $\pi_a(\mathcal G_{V_n})=1-(1-a)^{|V_n|}\to1$. For FA-2f the hypothesis
+is Lemma~\ref{lem:fa2f} below, a classical fact \cite{vE87,AL88}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:fa1f}]
+Both $\mu$ and $\delta_{\mathbf 1}$ are stationary, so $\nu$ is stationary; by Theorem~\ref{thm:identify}, $\nu=\pi$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:strip}]
+Let $\lambda=\mu(\{\mathbf 1\})$. If $\lambda=1$ there is nothing to prove. Otherwise
+$\nu=(\mu-\lambda\delta_{\mathbf 1})/(1-\lambda)$ is a stationary probability measure with $\nu(\{\mathbf 1\})=0$, and
+by Proposition~\ref{prop:stripbalance} it satisfies detailed balance. Since every FA-1f move is allowed and $V_n$ is
+connected, a single empty site in $V_n$ empties $V_n$, so $\mathcal G_{V_n}=\{\eta_{V_n}\ne1_{V_n}\}$. These events
+increase to $\{\mathbf 1\}^c$ along the increasing $V_n$, so $\nu(\mathcal G_{V_n})\to\nu(\{\mathbf 1\}^c)=1$, and
+$\pi(\mathcal G_{V_n})=1-p^{|V_n|}\to1$. By Lemma~\ref{lem:connect}, $\nu=\pi$.
+\end{proof}
+
+\section{Internal spanning for FA-2f}\label{sec:fa2f}
+
+The following lemma is classical; van Enter \cite{vE87} proved that two-neighbour bootstrap percolation on $\Z^2$
+empties the whole plane at every positive density, and Aizenman and Lebowitz \cite{AL88} and Holroyd \cite{Hol03}
+determined the scale at which boxes become internally spanned. We include a short proof of the form used above.
+
+\begin{lemma}\label{lem:fa2f}
+For FA-2f and every $a\in(0,1)$, $\pi_a(\mathcal G_{V_n})\to1$ as $n\to\infty$.
+\end{lemma}
+
+\begin{proof}
+By translation it suffices to treat $Q_N=[1,N]^2$. Put $t=1-a$, fix $C>3/|\log t|$, and let $L=\lceil C\log N\rceil$
+and $m=\lceil(\log N)^{1/3}\rceil$, so that $m<L<N$ for large $N$. Two facts about two-neighbour bootstrap percolation
+are used. If a $k\times j$ rectangle $R\subset Q_N$ is empty and a segment $T$ of $k$ (or $j$) sites adjacent to a
+side of $R$ contains an empty site $y$, then all of $T$ empties: the neighbours of $y$ in $T$ have two empty neighbours,
+one in $R$ and $y$, and the emptying propagates along $T$. Every site involved lies in $Q_N$, so the exterior may stay
+filled.
+
+Partition a subsquare of $Q_N$ into $J=\lfloor N/L\rfloor^2$ disjoint $L\times L$ blocks. Call a block good if its
+bottom-left $m\times m$ square is initially empty and, for $k=m,\dots,L-1$, the column segment of length $k$ to the
+right of the bottom-left $k\times k$ square and the row segment of length $k+1$ above the resulting $k\times(k+1)$
+rectangle each contain an initial empty site. These segments and the seed square are disjoint, so by the first fact a
+good block is internally emptied, and
+\[
+\pi_a(\text{good})\ge a^{m^2}\prod_{k=m}^{L-1}(1-t^k)(1-t^{k+1})\ge a^{m^2}\Bigl(1-\frac{2t^m}{1-t}\Bigr)\ge\frac{a^{m^2}}2
+\]
+for large $N$. Blocks are independent, so the probability that no block is good is at most
+$\exp(-Ja^{m^2}/2)$, which tends to $0$ because $\log J=2\log N-O(\log\log N)$ and $m^2=O((\log N)^{2/3})$.
+
+Let $\mathcal S$ be the event that some horizontal or vertical segment of $L$ sites in $Q_N$ is initially filled. There
+are at most $2N^2$ such segments, so $\pi_a(\mathcal S)\le2N^2t^L\le2N^{2-C|\log t|}\to0$. Suppose some block is good
+and $\mathcal S$ fails. The emptied block has height $L$; each column segment of length $L$ next to it contains an
+empty site, so by the first fact the block grows column by column into an empty band of height $L$ across $Q_N$. Each
+row of $Q_N$ next to the band contains an empty site, since it contains a segment of length $L$, so the band grows row
+by row until $Q_N$ is empty. Hence $\pi_a(\mathcal G_{Q_N})\ge1-\exp(-Ja^{m^2}/2)-2N^2t^L\to1$.
+\end{proof}
+
+\begin{remark}\label{rem:finite}
+In a finite box with fixed exterior, legal flips preserve the bootstrap limit, and any two configurations with the
+same limit are joined by legal flips, as in the proof of Lemma~\ref{lem:connect}. So the communicating classes of the
+finite chain are the bootstrap fibers, the restriction of $\pi$ to each fiber is reversible, and the stationary
+measures of the finite chain are exactly the mixtures of $\pi$ conditioned on the fibers. The difficulty in infinite
+volume is the passage from stationarity to detailed balance, which is what Theorem~\ref{thm:balance} supplies under
+\eqref{eq:odds}.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved Theorems~\ref{thm:balance} and~\ref{thm:identify}, Proposition~\ref{prop:strip} and
+Lemma~\ref{lem:fa2f}; a second Codex agent checked the proofs as a referee; Claude agents (Anthropic) checked the steps
+and prepared the manuscript. The author directed the work and is responsible for the content of the paper and for
+decisions concerning its dissemination.
+
+\section*{Code availability}
+A script that checks Remark~\ref{rem:finite} exactly for FA-1f and FA-2f on boxes of up to eight sites, with filled,
+empty and periodic boundary conditions and $q=1/3$ and $5/7$, is in the repository
+\begin{center}\url{https://github.com/yspennstate/kcm-planar-stationary-bounded-odds}.\end{center}
+For each of the $40$ cases it verifies in rational arithmetic that $\pi$ restricted to each bootstrap fiber is stationary
+and reversible, and that the dimension of the space of stationary vectors equals the number of fibers.
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.3cm}p{7.6cm}p{3.2cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$G$, $\Omega$, $\eta$, $\eta_x$ & lattice or strip, configurations, a configuration, the spin at $x$ ($0$ empty, $1$ filled) & Section~\ref{sec:intro}\\
+$q$, $p$, $\pi$, $\pi_a$ & density of empty sites, $p=1-q$, product measures & Section~\ref{sec:intro}\\
+$c_x$, $r$ & constraint at $x$, its range & Section~\ref{sec:intro}\\
+$r_x$, $\eta^x$, $L$, $P_t$ & flip rate, flipped configuration, generator, semigroup & \eqref{eq:generator}\\
+$\cU$ & update family & \eqref{eq:update}\\
+$\BP$, $E$, $\mathcal G_V$ & bootstrap limit, stable configurations, internal spanning of $V$ & Section~\ref{sec:intro}\\
+$\mathbf 1$, $1_V$, $0_V$ & all sites filled, all sites of $V$ filled, all sites of $V$ empty & Section~\ref{sec:intro}, Lemma~\ref{lem:connect}\\
+$\mathbb I$ & indicator & \eqref{eq:update}\\
+$H$ & finite connected graph, the cross-section of a strip & Section~\ref{sec:intro}\\
+$f$, $F$ & local function, event depending on finitely many spins & Section~\ref{sec:intro}, Lemma~\ref{lem:connect}\\
+$U$, $u$ & element of an update family, a site of it & \eqref{eq:update}\\
+$\beta$, $\mu^*$ & stable configuration, mixing measure & Section~\ref{sec:intro}\\
+$\zeta$, $\xi$ & configurations of a finite set & \eqref{eq:db}\\
+$\phi$ & $(u,v)\mapsto(u-v)\log(u/v)$ & Lemma~\ref{lem:abc}\\
+$U_k$ & independent uniform variables & Lemma~\ref{lem:domination}\\
+$R$, $T$, $\mathcal S$ & empty rectangle, adjacent segment, a filled segment of length $L$ exists & Lemma~\ref{lem:fa2f}\\
+$\mu_W$, $\mu$, $\nu$ & marginal on $W$, stationary measures & \eqref{eq:db}\\
+$\varepsilon$ & constant in the bounded odds condition & \eqref{eq:odds}\\
+$a_V$, $b_V$, $A_V$ & integrated flip rates, their imbalance, entropy production & Section~\ref{sec:entropy}\\
+$\rho_V$, $\ell_V$ & density of $\mu_V$ with respect to $\pi_V$, log ratio across a flip & Section~\ref{sec:entropy}\\
+$M$, $\lambda$ & $\max(p/q,q/p)$, truncation level & Lemma~\ref{lem:balance}\\
+$V_n$, $I_n$, $B_n$, $S_n$ & boxes, interiors, shells, entropy production in $V_n$ & Section~\ref{sec:entropy}\\
+$K$, $C$, $D$ & constants of the planar estimate & Section~\ref{sec:proofs}\\
+$Q_N$, $L$, $m$, $J$, $t$ & square, block size, seed size, number of blocks, $1-a$ & Lemma~\ref{lem:fa2f}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{AL88} M.~Aizenman and J.~L.~Lebowitz, Metastability effects in bootstrap percolation, \emph{J.\ Phys.\ A}
+\textbf{21} (1988), no.~19, 3801--3813. \doi{10.1088/0305-4470/21/19/017}
+\bibitem{BCMRT13} O.~Blondel, N.~Cancrini, F.~Martinelli, C.~Roberto and C.~Toninelli, Fredrickson--Andersen one spin
+facilitated model out of equilibrium, \emph{Markov Process.\ Related Fields} \textbf{19} (2013), no.~3, 383--406.
+\arxiv{1205.4584}
+\bibitem{CMRT08} N.~Cancrini, F.~Martinelli, C.~Roberto and C.~Toninelli, Kinetically constrained spin models,
+\emph{Probab.\ Theory Related Fields} \textbf{140} (2008), no.~3--4, 459--504. \doi{10.1007/s00440-007-0072-3}
+\bibitem{FA84} G.~H.~Fredrickson and H.~C.~Andersen, Kinetic Ising model of the glass transition, \emph{Phys.\ Rev.\
+Lett.} \textbf{53} (1984), no.~13, 1244--1247. \doi{10.1103/PhysRevLett.53.1244}
+\bibitem{HT25} I.~Hartarsky and C.~Toninelli, \emph{Kinetically Constrained Models}, SpringerBriefs in Mathematical
+Physics, Springer, Cham, 2025. \doi{10.1007/978-3-031-93115-4}
+\bibitem{Hol71} R.~Holley, Free energy in a Markovian model of a lattice spin system, \emph{Comm.\ Math.\ Phys.}
+\textbf{23} (1971), no.~2, 87--99. \doi{10.1007/BF01877751}
+\bibitem{HS77} R.~Holley and D.~W.~Stroock, In one and two dimensions, every stationary measure for a stochastic Ising
+model is a Gibbs state, \emph{Comm.\ Math.\ Phys.} \textbf{55} (1977), no.~1, 37--45. \doi{10.1007/BF01613147}
+\bibitem{Hol03} A.~E.~Holroyd, Sharp metastability threshold for two-dimensional bootstrap percolation, \emph{Probab.\
+Theory Related Fields} \textbf{125} (2003), no.~2, 195--224. \doi{10.1007/s00440-002-0239-x}
+\bibitem{JK25} B.~Jahnel and J.~K\"oppl, On the long-time behaviour of reversible interacting particle systems in one
+and two dimensions, \emph{Probab.\ Math.\ Phys.} \textbf{6} (2025), no.~2, 479--503. \doi{10.2140/pmp.2025.6.479}
+\bibitem{Mar26} F.~Martinelli, Kinetically constrained spin models: a short survey, in \emph{Proceedings of the
+International Congress of Mathematicians 2026}, vol.~5, 497--515. \doi{10.1137/25M180425X}
+\bibitem{MST25} F.~Martinelli, A.~Shapira and C.~Toninelli, Long time behaviour of one facilitated kinetically
+constrained models: results and open problems, preprint, 2025. \arxiv{2510.20461}
+\bibitem{MOP77} J.~Moulin Ollagnier and D.~Pinchon, Free energy in spin-flip processes is non-increasing, \emph{Comm.\
+Math.\ Phys.} \textbf{55} (1977), no.~1, 29--35. \doi{10.1007/BF01613146}
+\bibitem{MV19} T.~Mountford and G.~Valle, Exponential convergence for the Fredrickson--Andersen one-spin facilitated
+model, \emph{J.\ Theoret.\ Probab.} \textbf{32} (2019), no.~1, 282--302. \doi{10.1007/s10959-018-0812-6}
+\bibitem{vE87} A.~C.~D.~van Enter, Proof of Straley's argument for bootstrap percolation, \emph{J.\ Stat.\ Phys.}
+\textbf{48} (1987), no.~3--4, 943--945. \doi{10.1007/BF01019705}
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}

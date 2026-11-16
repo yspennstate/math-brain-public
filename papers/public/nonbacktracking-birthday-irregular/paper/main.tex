@@ -1,0 +1,478 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\vE}{\vec{E}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Non-backtracking walks on graphs of bounded degree ratio]{A birthday bound for non-backtracking walks on graphs
+of bounded degree ratio}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{05C81, 60J10, 60C05}
+\keywords{non-backtracking random walk, self-intersection, birthday paradox, irregular graphs}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Let $G$ be a finite simple graph on $n$ vertices with minimum degree $m\ge3$ and maximum degree $M$, and put
+$Q=M/(m-1)$. A non-backtracking random walk of length $k$ on $G$, started along any directed edge, is
+vertex-simple with probability at most $256\,Q(1+Q)\,n/k^2$. Hence the conjecture of Alon and Peres, that a
+non-backtracking walk of length $C(\varepsilon)\sqrt n$ self-intersects with probability at least $1-\varepsilon$,
+holds with $C(\varepsilon)$ depending only on $\varepsilon$ and a bound for $M/m$; for regular graphs of degree at
+least three one may take $C(\varepsilon)=31\varepsilon^{-1/2}$ for every degree. The expected self-intersection time
+is at most $32\sqrt{Q(1+Q)n}+2$, which removes the logarithmic factor from the bound of Bencs et al.\ for graphs of
+minimum degree at least three and bounded maximum degree. The proof adapts Dozier's argument for regular graphs:
+departures are weighted by the inverse branching at their vertex, and the deviating local derangement is resampled.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $G=(V,E)$ be a finite simple graph with $n=|V|$ vertices, write $N(v)$ for the neighbourhood and $d(v)=|N(v)|$
+for the degree of a vertex $v$, and assume that the minimum degree $m$ is at least $3$. Let $M$ be the maximum degree
+and $\vE=\{(u,v):\{u,v\}\in E\}$ the set of directed edges. The non-backtracking walk started along
+$\delta=(x_0,x_1)\in\vE$ is the sequence $X_0=x_0$, $X_1=x_1$, and, for $t\ge1$, $X_{t+1}$ chosen uniformly from
+$N(X_t)\setminus\{X_{t-1}\}$, independently of the past given $(X_{t-1},X_t)$. For $k\ge1$ put
+\[
+p_k(\delta)=\PP\bigl(X_0,X_1,\dots,X_k\text{ are distinct}\bigr).
+\]
+A walk of length $k$ has $k+1$ vertices, so $p_k(\delta)=0$ for $k\ge n$.
+
+Dozier~\cite{Doz26} proved that for fixed $d\ge3$ and $\varepsilon>0$ there is $C=C(d,\varepsilon)$ such that
+$p_k(\delta)<\varepsilon$ for every $d$-regular graph on $n$ vertices, every $\delta$ and every $k>C\sqrt n$. He stated
+the following conjecture of Alon and Peres, of which this is the fixed-degree case.
+
+\begin{conjecture}[Alon--Peres; {\cite[Conjecture~1.5]{Doz26}}]\label{conj:AP}
+For every $\varepsilon>0$ there is $C=C(\varepsilon)$ such that if $G$ is a graph on $n$ vertices with all degrees at
+least $3$ and $k>C\sqrt n$, then $p_k(\delta)<\varepsilon$ for every directed edge $\delta$.
+\end{conjecture}
+
+Closely related, Bencs, Goldberg, Jenssen, Jerrum, Pete, Regts and Yin~\cite{BGJ26} studied the self-intersection
+time of the walk started at a vertex $u$, whose first step is uniform on $N(u)$,
+\[
+T(G,u)=\min\{t\ge2: X_t\in\{X_0,\dots,X_{t-1}\}\}.
+\]
+They proved $\E\,T(G,u)=O_\Delta(\sqrt n\log n)$ for connected graphs with minimum degree at least $3$ and maximum
+degree $\Delta$~\cite[Theorem~1]{BGJ26}, improved this to $O(\sqrt n)$ for regular graphs with a uniform spectral
+gap~\cite[Theorem~2]{BGJ26}, showed that $\sqrt n$ is the right order on certain regular expanders~\cite[Theorem~3]{BGJ26},
+and asked whether $\E\,T(G,u)=O(\sqrt n)$ for every graph with minimum degree at least three~\cite[Question~4]{BGJ26}.
+For multigraphs the answer is negative; an example follows that question in~\cite{BGJ26}. The non-backtracking walk
+is a Markov chain on directed edges, and its mixing on regular graphs was studied by Alon, Benjamini, Lubetzky and
+Sodin~\cite{ABLS07} and by Lubetzky and Peres~\cite{LP16}; Theorem~2 of~\cite{BGJ26} combines the latter with the
+birthday paradox for Markov chains of Kim, Montenegro, Peres and Tetali~\cite[Theorem~3.6]{KMPT10}.
+
+Put
+\[
+Q=\frac{M}{m-1}.
+\]
+
+\begin{theorem}\label{thm:main}
+Let $G$ be a finite simple graph on $n$ vertices with minimum degree $m\ge3$ and maximum degree $M$. For every
+directed edge $\delta$ and every $k\ge1$,
+\[
+p_k(\delta)\le\min\Bigl\{1,\ \frac{256\,Q(1+Q)\,n}{k^2}\Bigr\}.
+\]
+\end{theorem}
+
+The constant $256$ is not optimised; the numerical checks described at the end of the paper suggest that
+$\max_{\delta,k}p_k(\delta)k^2/n$ is of order one on the graphs tested.
+
+\begin{corollary}\label{cor:constants}
+Let $0<\varepsilon<1$ and $D\ge1$. If $M/m\le D$ and $k>32D\sqrt{n/\varepsilon}$, then $p_k(\delta)<\varepsilon$ for
+every $\delta$. If $M\le\Delta$ and $k>8\sqrt{\Delta(\Delta+2)n/\varepsilon}$, then $p_k(\delta)<\varepsilon$ for every
+$\delta$. In particular, if $G$ is regular of any degree $d\ge3$ and $k>31\sqrt{n/\varepsilon}$, then
+$p_k(\delta)<\varepsilon$.
+\end{corollary}
+
+Thus Conjecture~\ref{conj:AP} holds on every class of graphs with bounded ratio of maximum to minimum degree, with a
+constant depending only on $\varepsilon$ and the bound for the ratio. For regular graphs this gives Dozier's theorem
+with a constant that does not depend on the degree.
+
+For $\delta\in\vE$ let $\tau(\delta)=\min\{t\ge2:X_t\in\{X_0,\dots,X_{t-1}\}\}$ for the walk started along $\delta$.
+
+\begin{corollary}\label{cor:expectation}
+For every directed edge $\delta$, $\E\,\tau(\delta)\le32\sqrt{Q(1+Q)n}+2$. Consequently, for every vertex $u$,
+$\E\,T(G,u)\le32\sqrt{Q(1+Q)n}+2$; if $M\le\Delta$ this is at most $16\sqrt{\Delta(\Delta+2)n}+2$, and if
+$M/m\le D$ it is at most $62D\sqrt n+2$.
+\end{corollary}
+
+For minimum degree at least three and maximum degree at most $\Delta$ this improves~\cite[Theorem~1]{BGJ26} from
+$O_\Delta(\sqrt n\log n)$ to $O(\Delta\sqrt n)$, without assuming that $G$ is connected, and by~\cite[Theorem~3]{BGJ26}
+the order $\sqrt n$ cannot be improved. It answers~\cite[Question~4]{BGJ26} for graphs of bounded degree ratio.
+
+The proof follows the argument of~\cite{Doz26}. A random plan fixes, at every vertex, how the walk leaves it as a
+function of how it arrived, so that the walk becomes a deterministic function of the plan; the measure on plans is
+chosen so that the plan walk is vertex-simple with probability exactly $p_k(\delta)$ (Section~\ref{sec:plans}). From a
+plan whose walk is simple, one deviates at an interior vertex of the walk. Deviations that never return to the walk are
+few because their continuations are disjoint, and deviations that return can be paired by reversing the excursion, so
+that a fixed proportion of all deviations self-intersect (Section~\ref{sec:departures}). Since an excursion is short,
+each self-intersecting plan arises from few simple ones (Section~\ref{sec:flow}). Two changes make this work when the
+degrees vary. Each deviation at a vertex $v$ is given weight $1/(d(v)-1)$, the probability that the walk takes a given
+exit at $v$; excursion reversal then changes weights by a factor at most $Q$. And the local derangement at the
+deviating vertex is resampled uniformly among those that take the chosen exit, which makes the transport of mass from
+simple plans to self-intersecting plans exact and avoids a factor equal to the number of derangements of $M$ objects.
+The degree ratio enters at three places: the number of non-returning deviations, the number of deviations returning to
+the last vertex of the walk, and the change of weight under reversal (Remark~\ref{rem:ratio}).
+
+\section{Plans}\label{sec:plans}
+
+For $d\ge2$ let $R_d$ be the number of derangements (fixed-point-free permutations) of a set with $d$ elements. A
+\emph{plan} is a family $\rho=(\pi_v)_{v\in V}$ in which $\pi_v$ is a derangement of $N(v)$. A plan defines a map
+$\phi_\rho:\vE\to\vE$, $\phi_\rho(u,v)=(v,\pi_v(u))$. At each vertex $v$ it maps the $d(v)$ directed edges entering $v$
+bijectively onto the $d(v)$ directed edges leaving $v$, so $\phi_\rho$ is a permutation of $\vE$, and since $\pi_v$ has
+no fixed point, $\phi_\rho(u,v)\ne(v,u)$. The \emph{walk} of $\rho$ from $\delta$ is the sequence of directed edges
+$\phi_\rho^{\,t}(\delta)$, $t\ge0$, and its vertices $x_0,x_1,\dots$, where $\phi_\rho^{\,t}(\delta)=(x_t,x_{t+1})$.
+
+Let $\mu$ be the uniform probability measure on plans, that is, the product of the uniform measures on the derangements
+of each $N(v)$. Every plan has $\mu$-mass $\prod_{v\in V}R_{d(v)}^{-1}$. Fix $\delta$ and $k$, and let $S$ be the set of
+plans whose walk from $\delta$ has $k+1$ distinct vertices $x_0,\dots,x_k$.
+
+\begin{lemma}\label{lem:derangement}
+Let $|N|=d\ge2$ and let $a\ne b$ be elements of $N$. Exactly $R_d/(d-1)$ derangements $\sigma$ of $N$ satisfy
+$\sigma(a)=b$.
+\end{lemma}
+
+\begin{proof}
+A permutation $\eta$ of $N$ fixing $a$ maps derangements to derangements by $\sigma\mapsto\eta\sigma\eta^{-1}$, and
+$\eta\sigma\eta^{-1}(a)=\eta(\sigma(a))$. The permutations fixing $a$ act transitively on $N\setminus\{a\}$, so the
+number of derangements with $\sigma(a)=b$ is the same for all $d-1$ choices of $b$, and these numbers add up to $R_d$.
+\end{proof}
+
+\begin{lemma}\label{lem:simple}
+$\mu(S)=p_k(\delta)$.
+\end{lemma}
+
+\begin{proof}
+Let $y_0,\dots,y_k$ be distinct vertices forming a path with $(y_0,y_1)=\delta$. The walk of $\rho$ from $\delta$
+follows this path exactly when $\pi_{y_i}(y_{i-1})=y_{i+1}$ for $1\le i\le k-1$. These conditions concern distinct
+vertices, hence are independent under $\mu$, and by Lemma~\ref{lem:derangement} the $i$-th has probability
+$1/(d(y_i)-1)$. The probability that the non-backtracking walk follows the path is the same product
+$\prod_{i=1}^{k-1}1/(d(y_i)-1)$. Summing over all such paths gives the lemma.
+\end{proof}
+
+The walk of a plan and the non-backtracking walk have the same law up to the first repeated vertex, but not after it;
+only the identity of Lemma~\ref{lem:simple} is used.
+
+\section{Departures}\label{sec:departures}
+
+Fix $\delta$, $k$ and an integer $L\ge1$. Let $\rho\in S$, let $P=(x_0,\dots,x_k)$ be its walk and $V(P)$ the set of
+its vertices. A \emph{departure} of $\rho$ is a pair $(i,\beta)$ with $1\le i\le k-1$ and $\beta=(x_i,z)\in\vE$ with
+$z\notin\{x_{i-1},x_{i+1}\}$. Its \emph{weight} is
+\[
+w_\rho(i)=\frac1{d(x_i)-1}.
+\]
+At index $i$ there are $d(x_i)-2$ departures, so the total weight of the departures of $\rho$ is
+\begin{equation}\label{eq:total}
+\sum_{i=1}^{k-1}\frac{d(x_i)-2}{d(x_i)-1}\ge\frac{k-1}2.
+\end{equation}
+
+The \emph{excursion} of the departure $(i,\beta)$ is the sequence of directed edges $f_1=\beta$,
+$f_{s+1}=\phi_\rho(f_s)$, stopped at the first $s$ for which the head of $f_s$ lies in $V(P)$, or at $s=L$ if there is
+no such $s\le L$. Write $f_s=(y_{s-1},y_s)$ for $1\le s\le r$, where $r\le L$ is the length of the excursion, so
+$y_0=x_i$ and $y_1,\dots,y_{r-1}\notin V(P)$. The departure is \emph{returning} if $y_r\in V(P)$; then $y_r=x_l$ for a
+unique $l$, its \emph{return index}. Otherwise it is \emph{non-returning}, $r=L$ and $y_1,\dots,y_L\notin V(P)$. The
+departure is \emph{certified} if the sequence $x_0,\dots,x_i,y_1,\dots,y_r$ has a repeated vertex, that is, if
+$y_1,\dots,y_r$ are not distinct or $y_r=x_l$ with $l\le i$.
+
+\begin{lemma}\label{lem:certified}
+Let $(i,\beta)$, $\beta=(x_i,z)$, be a certified departure of $\rho\in S$, and let $\psi$ be a plan that agrees with
+$\rho$ at every vertex other than $x_i$ and whose derangement at $x_i$ maps $x_{i-1}$ to $z$. Then the walk of $\psi$
+from $\delta$ has a repeated vertex among its first $i+L+1$ vertices. In particular $\psi\notin S$ if $i\le k-L$.
+\end{lemma}
+
+\begin{proof}
+The walk of $\psi$ visits $x_0,\dots,x_i$, because the derangements at $x_1,\dots,x_{i-1}$ are those of $\rho$; its next
+directed edge is $\beta$. The vertices $y_1,\dots,y_{r-1}$ lie outside $V(P)$, so they differ from $x_i$ and the
+derangements of $\psi$ there are those of $\rho$. Hence the walk of $\psi$ continues along $y_1,\dots,y_r$, and its
+first $i+r+1$ vertices are $x_0,\dots,x_i,y_1,\dots,y_r$, which contain a repeated vertex. Since $r\le L$, the claim
+follows.
+\end{proof}
+
+\begin{lemma}\label{lem:nonreturning}
+The departures of $\rho\in S$ that are non-returning and not certified have total weight at most $Qn/L$.
+\end{lemma}
+
+\begin{proof}
+Let $(i,\beta)$ be such a departure, with excursion $f_1,\dots,f_L$. These directed edges are distinct: if $f_s=f_t$
+with $s<t$, their tails would coincide, but the tail of $f_t$ is $y_{t-1}$, which lies outside $V(P)$ and so differs
+from $x_i$ when $s=1$, and which differs from $y_{s-1}$ when $s\ge2$ because the departure is not certified.
+
+The excursions of two different such departures $(i,\beta)$ and $(i',\beta')$, with edges $f_s$ and $f'_s$, are
+disjoint. Suppose that $f_s=f'_t$ with $s\le t$. Since $f_{s'+1}=\phi_\rho(f_{s'})$, $f'_{t'+1}=\phi_\rho(f'_{t'})$ and
+$\phi_\rho$ is injective, $f_{s-a}=f'_{t-a}$ for $0\le a<s$, and in particular $\beta=f_1=f'_{t-s+1}$. If $t>s$, the tail
+of $f'_{t-s+1}$ is a vertex $y'_{t-s}$ outside $V(P)$, while the tail of $\beta$ is $x_i\in V(P)$. So $t=s$ and
+$\beta=\beta'$, and since $P$ is simple the tail $x_i$ of $\beta$ determines $i$; the two departures coincide.
+
+There are $\sum_v d(v)\le nM$ directed edges, so there are at most $nM/L$ such departures, each of weight at most
+$1/(m-1)$.
+\end{proof}
+
+\begin{lemma}\label{lem:terminal}
+The returning departures of $\rho\in S$ with return index $k$ have total weight at most $Q$.
+\end{lemma}
+
+\begin{proof}
+Assign to such a departure the last directed edge $f_r$ of its excursion, which enters $x_k$. If two such departures
+have $f_r=f'_{r'}$ with $r\le r'$, the argument of Lemma~\ref{lem:nonreturning} gives $\beta=f'_{r'-r+1}$, then
+$r=r'$ and $\beta=\beta'$. So there are at most $d(x_k)\le M$ such departures, each of weight at most $1/(m-1)$.
+\end{proof}
+
+Returning departures with return index $0$ are certified. The returning departures with return index in
+$\{1,\dots,k-1\}$ are paired by reversing the excursion, as in~\cite{Doz26}. Let $\mathcal T$ be the set of triples
+$(\rho,i,\beta)$ with $\rho\in S$ and $(i,\beta)$ a returning departure of $\rho$ with return index
+$l\in\{1,\dots,k-1\}$. For such a triple, with excursion vertices $y_0=x_i,y_1,\dots,y_r=x_l$, let $\tilde\rho$ be
+the plan obtained from $\rho$ by replacing $\pi_v$ by $\pi_v^{-1}$ at every vertex $v\in\{y_1,\dots,y_{r-1}\}$, and
+put
+\[
+\Phi(\rho,i,\beta)=(\tilde\rho,\,l,\,(x_l,y_{r-1})).
+\]
+
+\begin{lemma}\label{lem:reversal}
+$\Phi$ is an involution of $\mathcal T$. For $(\rho,i,\beta)\in\mathcal T$ with $\Phi(\rho,i,\beta)=(\tilde\rho,l,\tilde\beta)$:
+\begin{enumerate}
+\item[(a)] $\mu(\tilde\rho)=\mu(\rho)$ and $\tilde\rho$ has the same walk $P$ from $\delta$;
+\item[(b)] $Q^{-1}\le w_\rho(i)/w_{\tilde\rho}(l)\le Q$;
+\item[(c)] at least one of $(i,\beta)$ for $\rho$ and $(l,\tilde\beta)$ for $\tilde\rho$ is certified.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The derangements at the vertices of $P$ are unchanged, and the inverse of a derangement is a derangement, so
+$\tilde\rho$ is a plan with walk $P$, and $\mu(\tilde\rho)=\mu(\rho)$ because $\mu$ is uniform. This is (a).
+
+The pair $(l,\tilde\beta)$ is a departure of $\tilde\rho$. If $r\ge2$, then $y_{r-1}\notin V(P)$. If $r=1$, then
+$y_{r-1}=x_i$, and $x_i=x_{l-1}$ would mean $\beta=(x_i,x_{i+1})$ while $x_i=x_{l+1}$ would mean $\beta=(x_i,x_{i-1})$,
+both excluded.
+
+For $1\le s\le r-1$ we have $\pi_{y_s}(y_{s-1})=y_{s+1}$, because $\phi_\rho(f_s)=f_{s+1}$, and the derangement of
+$\tilde\rho$ at $y_s$ is $\pi_{y_s}^{-1}$, which maps $y_{s+1}$ to $y_{s-1}$. This holds also when a vertex occurs
+several times among $y_1,\dots,y_{r-1}$, since the same inverse permutation is used at each occurrence. Hence
+$\phi_{\tilde\rho}(y_{s+1},y_s)=(y_s,y_{s-1})$, and the excursion of $(l,\tilde\beta)$ in $\tilde\rho$ is
+$(y_r,y_{r-1}),(y_{r-1},y_{r-2}),\dots,(y_1,y_0)$: its vertices $y_{r-1},\dots,y_1$ lie outside $V(P)$, and it
+returns to $V(P)$ at $y_0=x_i$ after $r\le L$ edges, so its return index is $i\in\{1,\dots,k-1\}$ and
+$\Phi(\rho,i,\beta)\in\mathcal T$. Applying the construction to $(\tilde\rho,l,\tilde\beta)$ inverts the same
+derangements again and yields the departure $(i,(x_i,y_1))=(i,\beta)$, so $\Phi\circ\Phi$ is the identity.
+
+For (b), $w_\rho(i)/w_{\tilde\rho}(l)=(d(x_l)-1)/(d(x_i)-1)$ lies between $(m-1)/(M-1)$ and $(M-1)/(m-1)$, and
+$(M-1)/(m-1)\le Q$.
+
+For (c), the two excursions visit the same vertices outside $V(P)$. If these visits contain a repetition, both
+departures are certified. Otherwise $(i,\beta)$ is certified exactly when $l\le i$, and $(l,\tilde\beta)$ exactly when
+$i\le l$.
+\end{proof}
+
+For $\rho\in S$ let $c(\rho)$ be the total weight of the certified departures of $\rho$, and let
+\[
+B=\frac1{\mu(S)}\sum_{\rho\in S}\mu(\rho)\,c(\rho)
+\]
+when $S\ne\emptyset$.
+
+\begin{proposition}\label{prop:certified}
+If $S\ne\emptyset$, then $(1+Q)B\ge\frac{k-1}2-\frac{Qn}L-Q$.
+\end{proposition}
+
+\begin{proof}
+Each departure of $\rho\in S$ is certified, or non-returning and not certified, or returning with return index $k$,
+or not certified with return index in $\{1,\dots,k-1\}$; returns to $x_0$ are certified. Write $u(\rho)$ for the total
+weight of the last class. By~\eqref{eq:total} and Lemmas~\ref{lem:nonreturning} and~\ref{lem:terminal},
+\begin{equation}\label{eq:split}
+\frac{k-1}2\le c(\rho)+\frac{Qn}L+Q+u(\rho).
+\end{equation}
+By Lemma~\ref{lem:reversal}(c), $\Phi$ maps the triples in $\mathcal T$ whose departure is not certified injectively
+into the triples in $\mathcal T$ whose departure is certified, and by (a) and (b) it changes $\mu(\rho)w_\rho(i)$ by a
+factor at most $Q$. Hence
+\[
+\sum_{\rho\in S}\mu(\rho)u(\rho)\le Q\sum_{\rho\in S}\mu(\rho)c(\rho).
+\]
+Multiplying~\eqref{eq:split} by $\mu(\rho)/\mu(S)$ and summing over $\rho\in S$ gives the claim.
+\end{proof}
+
+The comparison of $u$ with $c$ holds after summation over $\rho$, not for each plan separately, since $\Phi$ changes the
+plan.
+
+\section{Transport from simple to self-intersecting plans}\label{sec:flow}
+
+Assume $L<k$. For $\rho\in S$ let $c_0(\rho)$ be the total weight of the certified departures $(i,\beta)$ of $\rho$ with
+$i\le k-L$, and let $B_0=\mu(S)^{-1}\sum_{\rho\in S}\mu(\rho)c_0(\rho)$. The departures at a single index have total
+weight less than $1$, and $c_0$ omits $L-1$ indices, so $B_0\ge B-L$.
+
+\begin{proposition}\label{prop:flow}
+If $L<k$, then $p_k(\delta)\,B_0\le L$.
+\end{proposition}
+
+\begin{proof}
+For $\rho\in S$, a certified departure $(i,\beta)$ of $\rho$ with $i\le k-L$ and $\beta=(x_i,z)$, and a derangement
+$\sigma$ of $N(x_i)$ with $\sigma(x_{i-1})=z$, let $\psi$ be the plan obtained from $\rho$ by replacing $\pi_{x_i}$ by
+$\sigma$, and send mass $\mu(\rho)/R_{d(x_i)}$ from $\rho$ to $\psi$. By Lemma~\ref{lem:certified}, $\psi\notin S$. By
+Lemma~\ref{lem:derangement} there are $R_{d(x_i)}/(d(x_i)-1)$ choices of $\sigma$, so the departure $(i,\beta)$ sends
+total mass $\mu(\rho)w_\rho(i)$, the plan $\rho$ sends $\mu(\rho)c_0(\rho)$, and the total mass sent is
+$\mu(S)B_0=p_k(\delta)B_0$ by Lemma~\ref{lem:simple}.
+
+Fix $\psi\notin S$ and let $j$ be the least index such that the $j$-th vertex of the walk of $\psi$ from $\delta$ equals
+an earlier one. If mass is sent to $\psi$ from $(\rho,i,\beta,\sigma)$, then the walk of $\psi$ begins with the distinct
+vertices $x_0,\dots,x_i$, so $j\ge i+1$, and by Lemma~\ref{lem:certified} $j\le i+L$. Thus $i$ takes at most $L$
+values. Given $i$, the walk of $\psi$ determines $x_{i-1}$, $x_i$ and $\beta$, and $\sigma$ is the derangement of $\psi$
+at $x_i$; the source $\rho$ agrees with $\psi$ except at $x_i$, so there are at most $R_{d(x_i)}$ sources, each sending
+mass $\mu(\rho)/R_{d(x_i)}=\mu(\psi)/R_{d(x_i)}$ to $\psi$. The mass received by $\psi$ is therefore at most
+$L\mu(\psi)$, and the total mass received is at most $L\mu(S^c)\le L$.
+\end{proof}
+
+Choosing the replacement derangement uniformly, rather than fixing one for each departure, is what makes the mass
+received by $\psi$ from a given index at most $\mu(\psi)$; a fixed choice leads to a count of preimages that can be as
+large as $R_{d(x_i)}$.
+
+\section{Proofs of the theorem and the corollaries}\label{sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Put $A=1+Q$. Since $p_k(\delta)=0$ for $k\ge n$, and the bound is trivial when $k^2<256QAn$, we may assume
+$1\le k\le n-1$ and $k^2\ge256QAn$, and $S\ne\emptyset$. Then $k^2\ge256QAn>256QAk$, so $k>256QA$; as $Q>1$, this gives
+$k\ge16A$, $Q\le k/16$ and $k\ge4$. Let $L=\lceil16Qn/k\rceil$. From $k^2\ge256QAn$ we get $16Qn/k\le k/(16A)$, hence
+\[
+L\le\frac{16Qn}k+1\le\frac k{16A}+\frac k{16A}=\frac k{8A},
+\]
+and in particular $L<k$. Moreover $Qn/L\le k/16$. Proposition~\ref{prop:certified} gives
+\[
+B\ge\frac1A\Bigl(\frac{k-1}2-\frac k{16}-\frac k{16}\Bigr)\ge\frac k{4A},
+\]
+using $k\ge4$, so $B_0\ge B-L\ge k/(8A)$. By Proposition~\ref{prop:flow},
+\[
+p_k(\delta)\le\frac{L}{B_0}\le\frac{8AL}k\le\frac{128AQn}{k^2}+\frac{8A}k\le\frac{136AQn}{k^2}\le\frac{256AQn}{k^2},
+\]
+where the fourth inequality uses $k<n$ and $Q\ge1$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:constants}]
+If $M/m\le D$, then $Q=(M/m)\cdot m/(m-1)\le3D/2$, so $256Q(1+Q)\le384D+576D^2\le960D^2<1024D^2$, and
+$k>32D\sqrt{n/\varepsilon}$ gives $256Q(1+Q)n/k^2<\varepsilon$. If $M\le\Delta$, then $Q\le\Delta/2$ and
+$256Q(1+Q)\le64\Delta(\Delta+2)$. For regular graphs take $D=1$ in the bound $960D^2$ and use $31^2>960$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:expectation}]
+We have $\PP(\tau(\delta)>t)=p_t(\delta)$ for $t\ge1$, and $\PP(\tau(\delta)>0)=1$. Put $H=256Q(1+Q)n$ and
+$a=\lceil\sqrt H\rceil$. By Theorem~\ref{thm:main},
+\[
+\E\,\tau(\delta)=\sum_{t\ge0}\PP(\tau(\delta)>t)\le a+1+H\sum_{t>a}\frac1{t^2}\le a+1+\frac Ha\le2\sqrt H+2
+=32\sqrt{Q(1+Q)n}+2.
+\]
+The walk from $u$ whose first step is uniform on $N(u)$ is a mixture of the walks started along the edges $(u,v)$,
+$v\in N(u)$, and $T(G,u)$ is the corresponding mixture of the $\tau(u,v)$; this gives the bound for $\E\,T(G,u)$. The
+two special cases follow from $Q(1+Q)\le\Delta(\Delta+2)/4$ and from $Q(1+Q)\le960D^2/256<(62D/32)^2$.
+\end{proof}
+
+\begin{remark}\label{rem:ratio}
+The ratio $Q$ enters the proof in three places: the packing bound of Lemma~\ref{lem:nonreturning}, which compares the
+number $\sum_vd(v)$ of directed edges with the weight $1/(d(v)-1)$ of a departure; the number of departures returning to
+$x_k$ in Lemma~\ref{lem:terminal}, which can be as large as $d(x_k)$ while each such departure may carry weight
+$1/(m-1)$; and the change of weight under excursion reversal in Lemma~\ref{lem:reversal}(b), between a departure at a
+vertex of large degree and its reversal at a vertex of small degree. The packing loss can be expressed through the
+average degree instead: if a bounded number of vertices have large degree and all others have degree three, then
+$\sum_vd(v)=O(n)$ and the packing bound loses only a constant factor. The terminal and reversal losses can still be
+of order $M$ on such graphs, and the argument gives no bound uniform in the degrees.
+Conjecture~\ref{conj:AP} without a bound on the degree ratio, and~\cite[Question~4]{BGJ26} in general, remain open.
+The example after~\cite[Question~4]{BGJ26} shows that some use of simplicity of the graph is necessary, since the
+analogous statements fail for multigraphs.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved Theorem~\ref{thm:main}; a second Codex agent checked the proof as a referee; Claude agents
+(Anthropic) checked the steps and prepared the manuscript. The author directed the work and is responsible for the
+content of the paper and for decisions concerning its dissemination.
+
+\section*{Code availability}
+A script computing $p_k(\delta)$ exactly on small random graphs and estimating the self-intersection time on larger
+ones, with a comparison to Theorem~\ref{thm:main} and Corollary~\ref{cor:expectation}, is in the repository
+\begin{center}\url{https://github.com/yspennstate/nonbacktracking-birthday-irregular/tree/v1.1}.\end{center}
+On the graphs tested, $\max_{\delta,k}p_k(\delta)k^2/n$ is at most about $2.2$, and the mean self-intersection time is
+between $1.4\sqrt n$ and $2.2\sqrt n$.
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Symbol & Meaning & First used\\
+\midrule
+$G=(V,E)$, $n$ & the graph and its number of vertices & Section~\ref{sec:intro}\\
+$N(v)$, $d(v)$ & neighbourhood and degree of $v$ & Section~\ref{sec:intro}\\
+$m$, $M$ & minimum and maximum degree & Section~\ref{sec:intro}\\
+$\vE$ & directed edges & Section~\ref{sec:intro}\\
+$\delta=(x_0,x_1)$ & the starting directed edge & Section~\ref{sec:intro}\\
+$X_t$ & the non-backtracking walk & Section~\ref{sec:intro}\\
+$p_k(\delta)$ & probability that the walk of length $k$ is vertex-simple & Section~\ref{sec:intro}\\
+$T(G,u)$, $\tau(\delta)$ & self-intersection times from a vertex and from an edge & Section~\ref{sec:intro}\\
+$Q$ & $M/(m-1)$ & Section~\ref{sec:intro}\\
+$\varepsilon$, $C$ & a probability and the constant of Conjecture~\ref{conj:AP} & Section~\ref{sec:intro}\\
+$\Delta$, $D$ & bounds for $M$ and for $M/m$ & Section~\ref{sec:intro}\\
+$\PP$, $\E$ & probability and expectation for the walk & Section~\ref{sec:intro}\\
+$R_d$ & number of derangements of $d$ objects & Section~\ref{sec:plans}\\
+$\rho=(\pi_v)$, $\phi_\rho$ & a plan and its map on directed edges & Section~\ref{sec:plans}\\
+$\mu$ & uniform measure on plans & Section~\ref{sec:plans}\\
+$S$ & plans whose walk from $\delta$ is vertex-simple for $k$ steps & Section~\ref{sec:plans}\\
+$P=(x_0,\dots,x_k)$, $V(P)$ & the walk of a plan in $S$ and its vertex set & Section~\ref{sec:departures}\\
+$L$ & the maximal length of an excursion & Section~\ref{sec:departures}\\
+$(i,\beta)$, $w_\rho(i)$ & a departure and its weight & Section~\ref{sec:departures}\\
+$f_s=(y_{s-1},y_s)$, $r$, $l$ & excursion edges, length and return index & Section~\ref{sec:departures}\\
+$\psi$ & a plan differing from $\rho$ at one vertex & Lemma~\ref{lem:certified}\\
+$\mathcal T$, $\Phi$ & interior returns and excursion reversal & Section~\ref{sec:departures}\\
+$\tilde\rho$, $\tilde\beta$ & the reversed plan and departure & Lemma~\ref{lem:reversal}\\
+$c(\rho)$, $u(\rho)$, $B$ & certified weight, uncertified interior-return weight, mean of $c$ & Section~\ref{sec:departures}\\
+$c_0(\rho)$, $B_0$ & the same with $i\le k-L$ & Section~\ref{sec:flow}\\
+$A$, $H$ & $1+Q$ and $256Q(1+Q)n$ & Section~\ref{sec:proofs}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{ABLS07} N.~Alon, I.~Benjamini, E.~Lubetzky and S.~Sodin, Non-backtracking random walks mix faster,
+\emph{Commun.\ Contemp.\ Math.} \textbf{9} (2007), no.~4, 585--603. \doi{10.1142/S0219199707002551}
+\bibitem{BGJ26} F.~Bencs, L.~A.~Goldberg, M.~Jenssen, M.~Jerrum, G.~Pete, G.~Regts and Y.~Yin, On the self-intersection
+time of non-backtracking random walks, preprint, 2026, \href{https://arxiv.org/abs/2608.09729}{arXiv:2608.09729}.
+\bibitem{Doz26} B.~Dozier, The birthday paradox for non-backtracking walks on regular graphs, preprint, 2026,
+\href{https://arxiv.org/abs/2608.26321}{arXiv:2608.26321}.
+\bibitem{KMPT10} J.~H.~Kim, R.~Montenegro, Y.~Peres and P.~Tetali, A birthday paradox for Markov chains with an
+optimal bound for collision in the Pollard rho algorithm for discrete logarithm, \emph{Ann.\ Appl.\ Probab.}
+\textbf{20} (2010), no.~2, 495--521. \doi{10.1214/09-AAP625}
+\bibitem{LP16} E.~Lubetzky and Y.~Peres, Cutoff on all Ramanujan graphs, \emph{Geom.\ Funct.\ Anal.}
+\textbf{26} (2016), no.~4, 1190--1216. \doi{10.1007/s00039-016-0382-7}
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}

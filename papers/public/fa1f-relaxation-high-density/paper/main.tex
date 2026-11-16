@@ -1,0 +1,492 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[FA-1f out of equilibrium at high density]{Relaxation of the one-dimensional Fredrickson--Andersen model from
+a single infection at high density}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60K35, 82C22}
+\keywords{kinetically constrained models, Fredrickson--Andersen model, relaxation to equilibrium, out of equilibrium}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Consider the one-spin facilitated Fredrickson--Andersen model on $\Z$ with equilibrium density $q$ of infected
+sites. For $q>1/2$ we prove that, for every initial law and every local function, the difference between the expectation
+at time $t$ and the equilibrium mean is bounded by an exponentially small term plus the probability that the
+initial distance from the origin to the nearest infection exceeds a fixed multiple of $t$; the constants depend
+only on $q$ and the support of the function. No independence, stationarity
+or uniform control of the gaps between infections is assumed. Hence the two conjectures of Martinelli, Shapira and
+Toninelli on convergence from any law with an infection, and on exponential relaxation when the distance from the
+origin to the nearest infection has an exponential tail, hold for every $q>1/2$; this includes a single initial
+infection. The proof transfers the relaxation theorem of Blondel, Cancrini, Martinelli, Roberto and Toninelli from
+uniform to origin-centred hypotheses.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $\Omega=\{0,1\}^{\Z}$. A site $x$ with $\eta_x=0$ is \emph{infected} and a site with $\eta_x=1$ is healthy. Fix
+$q\in(0,1)$, put $p=1-q$, and let $\pi$ be the product measure on $\Omega$ with $\pi(\eta_x=0)=q$ for every $x$. The
+one-spin facilitated Fredrickson--Andersen model (FA-1f) \cite{FA84} is the Markov process on $\Omega$ with generator
+\begin{equation}\label{eq:generator}
+Lf(\eta)=\sum_{x\in\Z}c_x(\eta)\bigl(\pi_x(f)-f\bigr)(\eta),\qquad c_x(\eta)=1-\eta_{x-1}\eta_{x+1},
+\end{equation}
+where $\pi_x(f)$ averages $f$ over the spin at $x$ with respect to $\pi$. Thus every site carries a rate-one clock,
+and at a ring the spin at $x$ is replaced by a fresh spin, infected with probability $q$, provided that at least one
+neighbour of $x$ is infected. The process is reversible with respect to $\pi$. We write $P_t$ for its semigroup and
+$\nu P_t f=\int P_tf\,d\nu$ for a probability measure $\nu$ on $\Omega$, called the \emph{initial law}. A function
+$f$ on $\Omega$ is local if it depends on finitely many spins; its support is the smallest such set of sites. For
+$x\in\Z$ let
+\begin{equation}\label{eq:dist}
+D_x(\eta)=\min\{|x-y|:\eta_y=0\},\qquad R(\eta)=D_0(\eta),
+\end{equation}
+with $\min\emptyset=\infty$. The following two conjectures are stated, in equivalent form, in the survey of Martinelli, Shapira and
+Toninelli \cite[Section~1.1, Conjectures~1 and~2]{MST25}; the first is also Conjecture~2.11 in \cite{Mar26}.
+
+\begin{conjecture}\label{conj:convergence}
+For every $q\in(0,1)$, every initial law $\nu$ with $\nu(R<\infty)=1$ and every local function $f$,
+$\lim_{t\to\infty}\nu P_tf=\pi(f)$.
+\end{conjecture}
+
+\begin{conjecture}\label{conj:rate}
+Let $q\in(0,1)$ and let $\nu$ satisfy $\nu(R>\ell)\le Ae^{-\kappa\ell}$ for all $\ell\ge0$, with $A<\infty$ and
+$\kappa>0$. Then for every local function $f$ there are $C,c>0$ with $|\nu P_tf-\pi(f)|\le Ce^{-ct}$ for all
+$t\ge0$.
+\end{conjecture}
+
+The condition $\nu(R<\infty)=1$ says that the initial configuration has at least one infection almost surely; it
+cannot be dropped, because the configuration without infections does not move. The difficulty is that FA-1f is not
+attractive and its constraint degenerates, so that neither monotone coupling nor the positive spectral gap of the
+equilibrium dynamics \cite{CMRT08} applies to an initial law that is singular with respect to $\pi$.
+
+Several cases are known. Blondel, Cancrini, Martinelli, Roberto and Toninelli \cite{BCMRT13} proved exponential
+relaxation for $q>1/2$ under the uniform hypothesis $\sup_x\nu(\theta^{D_x})<\infty$ for some $\theta>1$, which holds
+for every nontrivial product law; it fails for a single infection, where $D_x(\eta)=|x|$. Mountford and Valle
+\cite{MV19} proved exponential relaxation from a single infection, and from origin-centred initial laws as in
+Conjecture~\ref{conj:rate}, for $q$ sufficiently close to $1$. Cancrini, Martinelli, Schonmann and Toninelli
+\cite{CMST10} proved exponential relaxation for every $q$ when the finite-window densities of $\nu$ with respect to
+$\pi$ grow at most like a small exponential of the window size. The fronts of FA-1f were studied by Blondel,
+Deshayes and Toninelli \cite{BDT19}, and \cite[Theorem~6.2]{MST25} shows that a finite set of infections spreads
+linearly for every $q$.
+
+The main result removes the uniformity from the hypothesis of \cite{BCMRT13}.
+
+\begin{theorem}\label{thm:main}
+Let $q\in(1/2,1)$ and let $S\subset\Z$ be finite. There are $\gamma,c,C>0$ depending only on $q$ and $S$ such that
+for every initial law $\nu$, every function $f$ with support in $S$ and every $t\ge0$,
+\begin{equation}\label{eq:main}
+|\nu P_tf-\pi(f)|\le\|f\|_\infty\bigl(Ce^{-ct}+2\,\nu(R>\gamma t)\bigr).
+\end{equation}
+\end{theorem}
+
+\begin{corollary}\label{cor:conjectures}
+Let $q\in(1/2,1)$. Conjectures~\ref{conj:convergence} and~\ref{conj:rate} hold. More precisely, under the
+hypothesis of Conjecture~\ref{conj:rate} the rate can be taken as $\min\{c,\kappa\gamma\}$ with $c,\gamma$ from
+Theorem~\ref{thm:main}, and if $\nu(R>\ell)\le Ae^{-\kappa\ell^\beta}$ with $0<\beta<1$, then
+$|\nu P_tf-\pi(f)|\le C'e^{-c't^\beta}$. In particular, from a single infection at any site, every local function
+converges to its equilibrium mean exponentially fast.
+\end{corollary}
+
+Theorem~\ref{thm:main} has no uniform rate over all initial laws, and none is possible: if the only infection sits
+at distance $\ell$ from the support of $f$, the spins on the support cannot change before a chain of clock rings has
+crossed the distance $\ell$, which takes time of order $\ell$ (Lemma~\ref{lem:fp}). The term $\nu(R>\gamma t)$
+accounts for this.
+
+The proof has two parts. A Lyapunov estimate (Lemma~\ref{lem:drift}) shows that when $q>1/2$ the exponential moment
+$\E\,\theta^{D_x}$ at a fixed site forgets its initial value at an exponential rate. Running the process for most of
+the time interval, it follows that at sites within distance of order $t$ from the origin these moments are bounded
+uniformly. We then replace the spins far from the origin by infections, which makes the moment bound uniform over
+all sites, apply the theorem of \cite{BCMRT13} on the remaining time interval, and remove the replacement by finite
+speed of propagation. The restriction $q>1/2$ enters only through Lemma~\ref{lem:drift}; see
+Remark~\ref{rem:half}.
+
+Section~\ref{sec:prelim} collects the graphical construction, finite speed of propagation and the input from
+\cite{BCMRT13}. Lemma~\ref{lem:drift} is proved in Section~\ref{sec:drift}, and Theorem~\ref{thm:main} and
+Corollary~\ref{cor:conjectures} in Section~\ref{sec:proof}. Section~\ref{sec:further} contains two complements: the
+two extreme infections of a finite infected set move away from each other at linear speed when $q>1/2$
+(Proposition~\ref{prop:fronts}), and, for every $q$, the argument of \cite{CMST10} with explicit constants, applied
+to a class of correlated initial laws (Proposition~\ref{prop:allq}). A table of notation is in
+Appendix~\ref{app:notation}.
+
+\section{Preliminaries}\label{sec:prelim}
+
+This section fixes the construction of the process, proves finite speed of propagation in the form needed below,
+and states the relaxation theorem of \cite{BCMRT13}. Throughout, $C,C',C_0$ and $c,c',c_0$ denote positive
+constants whose dependence is stated where they are introduced; they do not change from line to line.
+
+\subsection{Graphical construction}
+Attach to each site $x\in\Z$ a Poisson process of rate one, the clock of $x$, and to its $k$-th ring an independent
+spin $s_{x,k}\in\{0,1\}$ with $\PP(s_{x,k}=0)=q$, all clocks and spins independent. Given $\eta\in\Omega$, the
+process $(\eta(t))_{t\ge0}$ with $\eta(0)=\eta$ is defined by setting $\eta_x(t)=s_{x,k}$ at the $k$-th ring of the
+clock of $x$ if $c_x(\eta(t-))=1$, and leaving the configuration unchanged otherwise. Since the constraint has range
+one, this defines the process on $\Z$ almost surely for every initial configuration, and its generator is
+\eqref{eq:generator}; see \cite{CMRT08}. We write $\PP_\eta$ and $\E_\eta$ for the law and expectation of this
+process, so that $P_tf(\eta)=\E_\eta f(\eta(t))$.
+
+\subsection{Finite speed of propagation}
+The following lemma is standard; we include the proof because it is used for processes whose dynamics outside a
+finite interval differ from FA-1f.
+
+\begin{lemma}\label{lem:fp}
+Let $I\subset\Z$ be an interval and $S\subset I$ finite, and let $d\ge1$ be the distance from $S$ to $\Z\setminus I$.
+Let $\eta(\cdot)$ and $\zeta(\cdot)$ be two processes built from the same clocks and spins, which at every site of
+$I$ follow the update rule of FA-1f, with arbitrary (possibly different) evolution outside $I$, adapted to the
+clocks and spins, and with $\eta_x(0)=\zeta_x(0)$ for $x\in I$. Then for $u\ge0$,
+\begin{equation}\label{eq:fp}
+\PP\bigl(\eta_y(\tau)\ne\zeta_y(\tau)\ \text{for some }y\in S\text{ and some time }\tau\le u\bigr)\le|S|\,\frac{(2u)^d}{d!}.
+\end{equation}
+If $d\ge8eu$, the right-hand side is at most $|S|\,4^{-d}$.
+\end{lemma}
+
+\begin{proof}
+Suppose $\eta_y(\tau)\ne\zeta_y(\tau)$ with $y\in I$ and $\tau\le u$. The spins at $y$ agreed at time $0$ and change only at
+rings of the clock of $y$, so there is a last ring of that clock at a time $\tau_1\le\tau$ just before which the spins at
+$y$ agreed and after which they disagree. Both processes use the spin $s_{y,k}$ of that ring, so the constraints
+$c_y$ of the two configurations differed just before $\tau_1$; hence a neighbour $y_1$ of $y$ had disagreeing spins
+at time $\tau_1-$. If $y_1\in I$, repeat the argument from $(y_1,\tau_1-)$. This produces sites $y_0=y,y_1,y_2,\dots$, each a
+neighbour of the previous one, and times $\tau\ge\tau_1>\tau_2>\dots$ such that the clock of $y_{j-1}$ rings at
+$\tau_j$, and
+the construction stops at the first $y_j\notin I$. If $y\in S$, at least $d$ steps are needed to leave $I$, so the
+clocks of $y_0,\dots,y_{d-1}$ ring at times $u\ge\tau_1>\dots>\tau_d\ge0$. For a fixed sequence $y_0,\dots,y_{d-1}$ of
+sites, the expected number of such decreasing $d$-tuples of rings is $u^d/d!$, by the factorial moment formula of a
+Poisson process (also when sites repeat), and there are at most $|S|\,2^{d-1}$ nearest-neighbour sequences starting
+in $S$. Markov's inequality gives \eqref{eq:fp}. If $d\ge8eu$, then $(2u)^d/d!\le(2eu/d)^d\le4^{-d}$, using
+$d!\ge(d/e)^d$.
+\end{proof}
+
+\subsection{Relaxation under a uniform moment bound}
+The input from \cite{BCMRT13} is the following.
+
+\begin{theorem}[{\cite[Theorem~2.1]{BCMRT13}}]\label{thm:bcmrt}
+Let $q\in(1/2,1)$, $\theta>1$, $K<\infty$ and $S\subset\Z$ finite. There are $C_0,c_0>0$ depending only on
+$q,\theta,K$ and $S$ such that for every initial law $\mu$ with $\sup_{x\in\Z}\mu(\theta^{D_x})\le K$, every $f$
+with support in $S$ and every $h\ge0$,
+\begin{equation}\label{eq:bcmrt}
+|\mu P_hf-\pi(f)|\le C_0\|f\|_\infty e^{-c_0h}.
+\end{equation}
+\end{theorem}
+
+\begin{remark}\label{rem:bcmrt}
+The initial law in \cite{BCMRT13} is arbitrary; independence is not assumed. The statement there lists the
+dependence of the constants on $q$, the support and the moment bound, and the proof shows that $\mu$ enters only
+through $\theta$ and $K$: after a reduction to an interval of length of order $h$, divided into blocks of length
+proportional to $h$, the proof compares the process with the process restricted to configurations with at least
+two infections in every block, and $\mu$ is used only to bound $\E_\mu\theta^{D_x(\eta(\tau))}$ at the block centres for
+$\tau\le h$, through the drift estimate of \cite[Proposition~4.1]{BCMRT13}, followed by a union bound over the blocks. In
+\cite[Section~3.2]{BCMRT13} the probability that the process leaves the set of good configurations before time $h$
+should be bounded by $(1+|\Lambda|h)\sup_{\tau\le h}\PP(\eta(\tau)\ \text{is not good})$, where $|\Lambda|$ is the size of
+the interval, as in \cite[Section~3]{BDT19}. Since $|\Lambda|$ grows linearly in $h$, this factor changes only the
+constants. In the proof below $\theta$ and $K$ are fixed in terms of $q$ alone.
+\end{remark}
+
+\section{The distance to the nearest infection}\label{sec:drift}
+
+For $q\in(1/2,1)$ we fix throughout
+\begin{equation}\label{eq:constants}
+\theta=\sqrt{q/p},\qquad a=\log\theta,\qquad \lambda=(\theta-1)\Bigl(\frac q\theta-p\Bigr),\qquad
+B=\frac{q}{q-p\theta}.
+\end{equation}
+Since $1<\theta<q/p$, both $\lambda$ and $B$ are positive.
+
+\begin{lemma}\label{lem:drift}
+Let $q\in(1/2,1)$. For every $\eta\in\Omega$, every $x\in\Z$ with $D_x(\eta)<\infty$ and every $s\ge0$,
+\begin{equation}\label{eq:drift}
+\E_\eta\bigl[\theta^{D_x(\eta(s))}\bigr]\le e^{-\lambda s}\,\theta^{D_x(\eta)}+B.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We first bound the generator applied to $g=\theta^{D_x}$. Let $D_x(\eta)=d\ge1$ and let $y$ be an infected site with
+$|x-y|=d$. The neighbour $y'$ of $y$ between $x$ and $y$ is healthy, is at distance $d-1$ from $x$, and satisfies
+$c_{y'}(\eta)=1$; it becomes infected at rate $q$, and then $D_x$ drops by one. A transition increases $D_x$ only if
+an infected site at distance $d$ from $x$ heals while it is the only infected site at that distance; this happens
+at rate at most $p$, and since a site can heal only next to an infected neighbour, which here is at distance $d+1$
+from $x$, the distance becomes $d+1$. All other transitions do not increase $D_x$. Hence
+\[
+Lg(\eta)\le q\,(\theta^{d-1}-\theta^d)+p\,(\theta^{d+1}-\theta^d)=-\lambda\,\theta^d.
+\]
+If $d=0$, the site $x$ heals at rate at most $p$, and then $D_x=1$, so $Lg(\eta)\le p(\theta-1)$. Since
+$-\lambda+q(\theta-1)/\theta=p(\theta-1)$, in both cases
+\begin{equation}\label{eq:lyapunov}
+Lg\le-\lambda g+b,\qquad b=\frac{q(\theta-1)}{\theta}.
+\end{equation}
+The same bound, with the same proof, holds for the process on an interval $\Lambda_N=[-N,N]$ in which the sites
+outside $\Lambda_N$ are infected and never updated, and in which $D_x$ counts these sites as infected: the frozen
+sites cannot heal, and a healthy site next to an infected one, frozen or not, still becomes infected at rate $q$.
+This process has finitely many states, so Dynkin's formula applies to it, and \eqref{eq:lyapunov} gives
+$\frac{d}{ds}\E g\le-\lambda\E g+b$, whence $\E g(s)\le e^{-\lambda s}g(0)+b/\lambda$. Note that $b/\lambda=B$.
+Start this process from the configuration $\eta^N$ equal to $\eta$ on $\Lambda_N$ and infected outside; then
+$D_x(\eta^N)\le D_x(\eta)$.
+
+Fix $M\ge1$ and an integer $k$ with $\theta^k\ge M$. The function $\min\{\theta^{D_x},M\}$ depends only on the spins
+in $[x-k,x+k]$. Build the process on $\Lambda_N$ and the process on $\Z$ from the same clocks and spins. Lemma~\ref{lem:fp}
+with $I=\Lambda_N$ and $S=[x-k,x+k]$ shows that the two agree on $S$ at time $s$ with probability tending to one as
+$N\to\infty$. Therefore
+\[
+\E_\eta\min\{\theta^{D_x(\eta(s))},M\}=\lim_{N\to\infty}\E\min\{\theta^{D_x(\eta^N(s))},M\}
+\le e^{-\lambda s}\theta^{D_x(\eta)}+B,
+\]
+and letting $M\to\infty$ gives \eqref{eq:drift} by monotone convergence.
+\end{proof}
+
+The bound \eqref{eq:lyapunov} is the infinite-volume form of \cite[Proposition~4.1]{BCMRT13}. For $D_x\ge1$ the estimate
+$Lg\le-\lambda g$ is sharp: equality holds when $x$ has a single nearest infection $y$, the site $y$ has an infected neighbour on the side away
+from $x$, and no other transition changes $D_x$.
+
+\section{Proof of Theorem~\ref{thm:main} and Corollary~\ref{cor:conjectures}}\label{sec:proof}
+
+Fix $q\in(1/2,1)$, a finite $S\subset\Z$ and an integer $m\ge0$ with $S\subset[-m,m]$, and take
+$\theta,a,\lambda,B$ from \eqref{eq:constants}. Set
+\begin{equation}\label{eq:parameters}
+\gamma=\frac{\lambda}{8a},\qquad \varepsilon=\min\Bigl\{\frac14,\frac{\gamma}{32e}\Bigr\},\qquad
+h=\varepsilon t,\qquad s=(1-\varepsilon)t,\qquad r=\lfloor\gamma t\rfloor,
+\end{equation}
+and $t_0=2(m+1)/\gamma$. Let $C_0,c_0$ be the constants of Theorem~\ref{thm:bcmrt} for
+$q$, $\theta$, $K=1+B$ and $S$; all of these depend only on $q$ and $S$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+\emph{Step 1: a moment bound near the origin.} Let $t\ge t_0$ and let $\eta$ be a configuration with
+$R(\eta)\le\gamma t$. For $|x|\le r$ the triangle inequality gives $D_x(\eta)\le|x|+R(\eta)\le2\gamma t$, so by
+Lemma~\ref{lem:drift} and $2a\gamma=\lambda/4$, $\varepsilon\le1/4$,
+\begin{equation}\label{eq:step1}
+\E_\eta\bigl[\theta^{D_x(\eta(s))}\bigr]\le\exp\Bigl(-\lambda(1-\varepsilon)t+\frac{\lambda t}{4}\Bigr)+B\le1+B
+\qquad(|x|\le r).
+\end{equation}
+
+\emph{Step 2: replacement.} Define the random configuration $\zeta$ by $\zeta_x=\eta_x(s)$ for $|x|\le r$ and
+$\zeta_x=0$ for $|x|>r$, and let $\mu$ be its law. For $|x|\le r$ we have $D_x(\zeta)\le D_x(\eta(s))$, and for
+$|x|>r$ we have $D_x(\zeta)=0$. By \eqref{eq:step1},
+\begin{equation}\label{eq:step2}
+\sup_{x\in\Z}\mu\bigl(\theta^{D_x}\bigr)\le1+B.
+\end{equation}
+The law $\mu$ depends on $\eta$ and $t$, is correlated and is not stationary; Theorem~\ref{thm:bcmrt} allows this, and
+its constants are the same for all these laws. Theorem~\ref{thm:bcmrt} gives
+\begin{equation}\label{eq:step3}
+|\mu P_hf-\pi(f)|\le C_0\|f\|_\infty e^{-c_0h}.
+\end{equation}
+
+\emph{Step 3: removing the replacement.} By the Markov property at time $s$, $P_tf(\eta)=\E_\eta[P_hf(\eta(s))]$,
+while $\mu P_hf=\E_\eta[P_hf(\zeta)]$. Given $\eta(s)$, run two copies of FA-1f for time $h$ from $\eta(s)$ and from
+$\zeta$ with the same fresh clocks and spins; their initial configurations agree on $[-r,r]$. Since $t\ge t_0$,
+\[
+r-m\ge\gamma t-1-m\ge\frac{\gamma t}{2}\ge8e\varepsilon t=8eh,
+\]
+so Lemma~\ref{lem:fp}, with $I=[-r,r]$ and $d\ge r-m$, gives
+\begin{equation}\label{eq:step4}
+\bigl|P_tf(\eta)-\mu P_hf\bigr|\le2\|f\|_\infty|S|\,4^{-\gamma t/2}.
+\end{equation}
+
+\emph{Step 4: conclusion.} By \eqref{eq:step3} and \eqref{eq:step4}, for $t\ge t_0$ and every $\eta$ with
+$R(\eta)\le\gamma t$,
+\[
+|P_tf(\eta)-\pi(f)|\le\|f\|_\infty\bigl(C_0e^{-c_0\varepsilon t}+2|S|e^{-(\gamma\log2)t}\bigr).
+\]
+Put $c=\min\{c_0\varepsilon,\gamma\log2\}$ and $C=\max\{C_0+2|S|,\,2e^{ct_0}\}$. Since $|P_tf-\pi(f)|\le2\|f\|_\infty$
+always, we obtain for all $t\ge0$
+\begin{equation}\label{eq:pointwise}
+\sup_{\eta:\,R(\eta)\le\gamma t}|P_tf(\eta)-\pi(f)|\le C\|f\|_\infty e^{-ct}.
+\end{equation}
+Integrating \eqref{eq:pointwise} against $\nu$ on $\{R\le\gamma t\}$ and using $|P_tf-\pi(f)|\le2\|f\|_\infty$ on
+$\{R>\gamma t\}$ gives \eqref{eq:main}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:conjectures}]
+If $\nu(R<\infty)=1$, then $\nu(R>\gamma t)\to0$ as $t\to\infty$, and \eqref{eq:main} gives
+Conjecture~\ref{conj:convergence}. Under the hypothesis of Conjecture~\ref{conj:rate},
+$\nu(R>\gamma t)\le Ae^{-\kappa\gamma t}$, and \eqref{eq:main} gives the rate $\min\{c,\kappa\gamma\}$. The
+stretched-exponential case is the same. For a single infection at a site $z$, $R=|z|$ is deterministic and the
+second term of \eqref{eq:main} vanishes for $t\ge|z|/\gamma$.
+\end{proof}
+
+\section{Two complements}\label{sec:further}
+
+The first result concerns the extreme infections of a finite infected set when $q>1/2$; the second gives exponential
+relaxation for every $q$ from initial laws whose local densities with respect to $\pi$ are not too large.
+
+\subsection{The extreme infections}
+For a configuration with finitely many infections let $X_+(\eta)$ and $X_-(\eta)$ be the largest and the smallest
+infected site. An infected site can heal only if it has an infected neighbour, so the set of infections never becomes
+empty; by Lemma~\ref{lem:fp} it stays finite at all times.
+
+\begin{proposition}\label{prop:fronts}
+Let $q\in(1/2,1)$ and let $\eta$ have finitely many infections, at least one. Then $\PP_\eta$-almost surely
+\[
+2q-1\le\liminf_{t\to\infty}\frac{X_+(\eta(t))}{t}\le\limsup_{t\to\infty}\frac{X_+(\eta(t))}{t}\le q,
+\]
+and symmetrically $-q\le\liminf_t X_-(\eta(t))/t\le\limsup_t X_-(\eta(t))/t\le-(2q-1)$.
+\end{proposition}
+
+\begin{proof}
+Write $X(t)=X_+(\eta(t))$. The site $X+1$ is healthy with an infected neighbour, so $X$ increases by one at rate $q$.
+The site $X$ can heal only if $X-1$ is infected, and then $X$ decreases by one; this happens at rate $p$ if
+$\eta_{X-1}=0$ and at rate $0$ otherwise. No other transition moves $X$. Hence
+\[
+X(t)-X(0)=M(t)+\int_0^t\bigl(q-p\,\mathbf 1\{\eta_{X(\tau)-1}(\tau)=0\}\bigr)\,d\tau,
+\]
+where $\mathbf 1$ denotes an indicator and $M$ is a martingale with jumps $\pm1$ whose predictable quadratic variation is at most $t$. By Doob's
+inequality, $\PP(\sup_{\tau\le2^{n+1}}|M(\tau)|>\delta2^n)\le4\cdot2^{n+1}/(\delta^24^n)$, which is summable in $n$, so
+$M(t)/t\to0$ almost surely by the Borel--Cantelli lemma. The integrand lies in $[q-p,q]=[2q-1,q]$. The statement for
+$X_-$ follows by reflection.
+\end{proof}
+
+The diameter $X_+-X_-$ grows linearly for every $q\in(0,1)$ by \cite[Theorem~6.2]{MST25}. For $q>1/2$,
+Proposition~\ref{prop:fronts} shows in addition that each extreme infection moves away from the origin at a linear
+speed, and Corollary~\ref{cor:conjectures} shows that in every fixed finite window the law of the process converges to
+equilibrium.
+
+\subsection{Initial laws close to equilibrium, every q}
+Let $g(q)>0$ be the spectral gap of FA-1f on $\Z$ in $L^2(\pi)$, which is positive for every $q\in(0,1)$
+\cite{CMRT08}. The following is \cite[Theorem~2.1]{CMST10} for FA-1f, with explicit constants.
+
+\begin{proposition}\label{prop:allq}
+Let $q\in(0,1)$, $v=16e$, and let $\nu$ satisfy, for some $K<\infty$ and $0\le b<2g(q)/v$,
+\begin{equation}\label{eq:density}
+\max_{\omega\in\{0,1\}^{[-r,r]}}\frac{\nu(\eta_{[-r,r]}=\omega)}{\pi(\eta_{[-r,r]}=\omega)}\le Ke^{br}
+\qquad(r=0,1,2,\dots).
+\end{equation}
+Then for every local $f$ there is $C<\infty$ with $|\nu P_tf-\pi(f)|\le Ce^{-c't}$ for all $t\ge0$, where
+$c'=\min\{g(q)-bv/2,\ 16e\log4\}>0$.
+\end{proposition}
+
+\begin{proof}
+Let $S\subset[-m,m]$ be the support of $f$ and $r=\lceil vt\rceil+m+1$. Let $\mu_r$ be the law that agrees with $\nu$
+on $[-r,r]$ and is $\pi$ outside, independently. Lemma~\ref{lem:fp} with $d\ge vt\ge8et$ gives
+$|\nu P_tf-\mu_rP_tf|\le2\|f\|_\infty|S|4^{-vt}$. The density $\phi_r=d\mu_r/d\pi$ depends only on the spins in
+$[-r,r]$, and by \eqref{eq:density}, $\|\phi_r-1\|_{L^2(\pi)}^2=\pi(\phi_r^2)-1\le Ke^{br}$. Since $\pi$ is invariant and
+$P_t$ contracts by $e^{-g(q)t}$ on functions of mean zero in $L^2(\pi)$,
+\[
+|\mu_rP_tf-\pi(f)|=\bigl|\pi\bigl((\phi_r-1)\,P_t(f-\pi(f))\bigr)\bigr|\le\sqrt K\,e^{br/2}e^{-g(q)t}\,2\|f\|_\infty,
+\]
+and $e^{br/2}\le e^{b(m+2)/2}e^{bvt/2}$.
+\end{proof}
+
+\begin{example}\label{ex:markov}
+Let $\nu$ be the law of a stationary Markov chain $(\eta_x)_{x\in\Z}$ on $\{0,1\}$ with transition matrix $T$ having
+positive entries, stationary vector $\alpha$, and $T_{ij}\le e^{\delta}\pi(\eta_0=j)$ for all $i,j$, where
+$0\le\delta<g(q)/v$. The probability of a word of length $2r+1$ divided by its $\pi$-probability is at most
+$\max_i\alpha_i/\pi(\eta_0=i)\cdot e^{2\delta r}$, so \eqref{eq:density} holds with $b=2\delta$, and
+Proposition~\ref{prop:allq} gives exponential relaxation for every $q$. If the two rows of $T$ differ, $\nu$ is not
+a product measure. Such laws satisfy the hypothesis of Conjecture~\ref{conj:rate}, since
+$\nu(R>r)=\alpha_1T_{11}^{2r}$, but the condition on $\delta$ is much stronger than that hypothesis when $g(q)$ is
+small.
+\end{example}
+
+\begin{remark}\label{rem:half}
+Lemma~\ref{lem:drift} needs $\theta<q/p$, which is possible only for $q>1/2$. For $q\le1/2$, $\theta>1$ and $d\ge1$, take the
+configuration whose infections are exactly the sites $d$ and $d+1$; for $g=\theta^{D_0}$ it has
+$Lg=\theta^d(\theta-1)(p-q/\theta)\ge0$, so no bound of the form \eqref{eq:lyapunov} with $\lambda>0$ holds for
+all large $d$. This is a statement about one
+Lyapunov function, not about the process. For $q\le1/2$ both conjectures remain open, including the case of a single
+infection. What is missing is a lower bound on the density of infections in a region of size of order $t$ around the
+initial infection, strong enough to run the block argument of \cite{BCMRT13}.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Codex agents (OpenAI) proved Theorem~\ref{thm:main} and Propositions~\ref{prop:fronts} and~\ref{prop:allq}; two further
+Codex agents checked the proofs as referees; Claude agents (Anthropic) checked the steps and prepared the manuscript.
+The author directed the work and is responsible for the content of the paper and for decisions concerning its
+dissemination.
+
+\section*{Code availability}
+A script that checks the generator inequality \eqref{eq:lyapunov}, in floating-point arithmetic, on every configuration of
+windows of up to twelve sites with frozen infected exterior, for several values of $q>1/2$, and that simulates the process from a single
+infection, is in the repository
+\begin{center}\url{https://github.com/yspennstate/fa1f-relaxation-high-density/tree/v1.1}.\end{center}
+In the simulations ($q=0.6$ and $q=0.75$, $300$ paths each) the probabilities that the origin is infected and that
+the sites $-1,0,1$ are all healthy are within two standard errors of $q$ and $p^3$ at $30$ of the $32$ recorded points; the two
+exceptions, the origin at $q=0.6$, $t=45$ and at $q=0.75$, $t=70$, are $2.3$ standard errors away.
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.5cm}p{7.3cm}p{3.3cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$\Omega$, $\eta$, $\eta_x$ & configurations, a configuration, the spin at $x$ ($0$ infected, $1$ healthy) & Section~\ref{sec:intro}\\
+$q$, $p$ & equilibrium probability of infection, $p=1-q$ & Section~\ref{sec:intro}\\
+$\pi$, $\pi_x$ & equilibrium product measure, average over the spin at $x$ & \eqref{eq:generator}\\
+$c_x$, $L$, $P_t$ & constraint, generator, semigroup & \eqref{eq:generator}\\
+$\nu$, $\mu$ & initial laws & Section~\ref{sec:intro}, Theorem~\ref{thm:bcmrt}\\
+$f$, $S$ & local function, a finite set containing its support & Section~\ref{sec:intro}\\
+$D_x$, $R$ & distance from $x$, and from $0$, to the nearest infection & \eqref{eq:dist}\\
+$\PP_\eta$, $\E_\eta$ & law and expectation of the process started at $\eta$ & Section~\ref{sec:prelim}\\
+$I$, $d$ & interval of agreement and distance from $S$ to its complement & Lemma~\ref{lem:fp}\\
+$\theta$, $a$, $\lambda$, $B$ & constants of the drift estimate & \eqref{eq:constants}\\
+$b$ & additive constant in the drift estimate & \eqref{eq:lyapunov}\\
+$\Lambda_N$, $\eta^N$ & interval with frozen infected exterior, restricted configuration & Lemma~\ref{lem:drift}\\
+$\gamma$, $\varepsilon$, $h$, $s$, $r$, $t_0$, $m$ & parameters of the proof of Theorem~\ref{thm:main} & \eqref{eq:parameters}\\
+$\zeta$ & configuration with exterior replaced by infections & Section~\ref{sec:proof}\\
+$C_0$, $c_0$ & constants of Theorem~\ref{thm:bcmrt} & \eqref{eq:bcmrt}\\
+$X_\pm$ & largest and smallest infected site & Proposition~\ref{prop:fronts}\\
+$g(q)$, $v$, $\phi_r$ & spectral gap, speed constant $16e$, density of $\mu_r$ & Proposition~\ref{prop:allq}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{BCMRT13} O.~Blondel, N.~Cancrini, F.~Martinelli, C.~Roberto and C.~Toninelli, Fredrickson--Andersen one spin
+facilitated model out of equilibrium, \emph{Markov Process.\ Related Fields} \textbf{19} (2013), no.~3, 383--406.
+\arxiv{1205.4584}
+\bibitem{BDT19} O.~Blondel, A.~Deshayes and C.~Toninelli, Front evolution of the Fredrickson--Andersen one spin
+facilitated model, \emph{Electron.\ J.\ Probab.} \textbf{24} (2019), paper no.~1, 32 pp. \doi{10.1214/18-EJP246}
+\bibitem{CMRT08} N.~Cancrini, F.~Martinelli, C.~Roberto and C.~Toninelli, Kinetically constrained spin models,
+\emph{Probab.\ Theory Related Fields} \textbf{140} (2008), no.~3--4, 459--504. \doi{10.1007/s00440-007-0072-3}
+\bibitem{CMST10} N.~Cancrini, F.~Martinelli, R.~Schonmann and C.~Toninelli, Facilitated oriented spin models: some
+non equilibrium results, \emph{J.\ Stat.\ Phys.} \textbf{138} (2010), no.~6, 1109--1123.
+\doi{10.1007/s10955-010-9923-x}
+\bibitem{FA84} G.~H.~Fredrickson and H.~C.~Andersen, Kinetic Ising model of the glass transition, \emph{Phys.\ Rev.\
+Lett.} \textbf{53} (1984), no.~13, 1244--1247. \doi{10.1103/PhysRevLett.53.1244}
+\bibitem{Mar26} F.~Martinelli, Kinetically constrained spin models: a short survey, in \emph{Proceedings of the
+International Congress of Mathematicians 2026}, vol.~5, 497--515. \doi{10.1137/25M180425X}
+\bibitem{MST25} F.~Martinelli, A.~Shapira and C.~Toninelli, Long time behaviour of one facilitated kinetically
+constrained models: results and open problems, preprint, 2025. \arxiv{2510.20461}
+\bibitem{MV19} T.~Mountford and G.~Valle, Exponential convergence for the Fredrickson--Andersen one-spin facilitated
+model, \emph{J.\ Theoret.\ Probab.} \textbf{32} (2019), no.~1, 282--302. \doi{10.1007/s10959-018-0812-6}
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}

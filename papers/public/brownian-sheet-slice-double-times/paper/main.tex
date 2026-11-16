@@ -1,0 +1,440 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\dimH}{\dim_{\mathrm H}}
+\newcommand{\dimB}{\overline{\dim}_{\mathrm B}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Double times on slices of the Brownian sheet]{Double times on slices of the Brownian sheet in dimensions four and five}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60G60, 60G15, 60J65, 28A80}
+\keywords{Brownian sheet, slices, double points, Hausdorff dimension, box dimension, exceptional times}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Let $B$ be a $d$-dimensional Brownian sheet. For $s>0$ the slice $t\mapsto B(s,t)$ is a multiple of $d$-dimensional
+Brownian motion, so for $d\ge4$ a fixed slice has no double points, while for $d\in\{4,5\}$ there are random exceptional
+slices that have them. Khoshnevisan asked whether, outside a single null set, the set of double times of every slice has
+Hausdorff dimension zero when $d\in\{4,5\}$. We prove that it does: almost surely, for every $s>0$ the set of pairs
+$u\ne v$ with $B(s,u)=B(s,v)$ has Hausdorff dimension zero, and its part in a product of two disjoint compact intervals
+has upper box dimension zero. For $d=5$ both statements also follow from the finiteness of these sets stated by Chen;
+the new case is $d=4$. The proof bounds high moments of the number of near-coincidences on a grid, using a
+conditional variance estimate obtained from Brownian bridges, and then takes a union over a grid of slices whose cost is
+absorbed by the choice of the moment.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $B=(B_1,\dots,B_d)$ be a continuous $\R^d$-valued Brownian sheet on $[0,\infty)^2$: the coordinates $B_i$ are
+independent centred Gaussian processes with
+\[
+\E[B_i(s,t)B_i(s',t')]=\min(s,s')\min(t,t').
+\]
+For fixed $s>0$ the process $t\mapsto s^{-1/2}B(s,t)$ is a standard Brownian motion in $\R^d$, which has no double
+points when $d\ge4$. Some slices do have double points. Let
+\[
+D_d=\{s\ge0:\ B(s,u)=B(s,v)\text{ for some }0<u<v\}.
+\]
+Lyons~\cite{Lyo86} proved that $D_d\ne\{0\}$ with positive probability if and only if $d\le5$, and Mountford~\cite{Mou90}
+proved that $\dimH D_d=\min(1,(3-d/2)_+)$ almost surely; see~\cite[(1.10) and (1.12)]{Kho05}. For $d\le3$ every slice
+has double points~\cite{Pen89,Pen90}. So $d\in\{4,5\}$ is the range in which the exceptional slices are rare (in
+$d=4$ they form a set of dimension one and Lebesgue measure zero) but present.
+
+For $s\ge0$ Khoshnevisan~\cite[(8.2)]{Kho05} considers
+\[
+Y_d(s)=\{(t_1,t_2)\in[0,\infty)^2:\ B(s,t_1)=B(s,t_2)\},
+\]
+and asks, as Open Problem~2 of~\cite[Section~8.2]{Kho05}, whether for $d\in\{4,5\}$ one has, outside a single null set,
+$\dimH Y_d(s)=0$ for all $s\ge0$. He conjectures that the answer is yes. As written, $Y_d(s)$ contains the diagonal
+$\{(t,t):t\ge0\}$, which has dimension one, and $Y_d(0)=[0,\infty)^2$ because $B(0,\cdot)=0$; the question concerns the
+double times off the diagonal on the slices $s>0$. For $s>0$ let
+\begin{equation}\label{eq:Ystar}
+Y^*_d(s)=\{(u,v)\in[0,\infty)^2:\ u\ne v,\ B(s,u)=B(s,v)\}.
+\end{equation}
+We write $\dimB$ for the upper box dimension, and we use the conventions $\dimH\emptyset=\dimB\emptyset=0$.
+
+\begin{theorem}\label{thm:main}
+Let $d\in\{4,5\}$. Almost surely the following holds simultaneously for all $s>0$.
+\begin{enumerate}
+\item[(a)] $\dimH Y^*_d(s)=0$.
+\item[(b)] For all compact intervals $I,J\subset[0,\infty)$ with $I\cap J=\emptyset$,
+$\dimB\bigl(Y^*_d(s)\cap(I\times J)\bigr)=0$.
+\end{enumerate}
+\end{theorem}
+
+Consequently, outside a single null set, $\dimH Y_d(s)=1$ for every $s>0$, the dimension coming from the diagonal alone.
+
+\begin{remark}\label{rem:scope}
+Theorem~\ref{thm:main} bounds the size of the double-time sets, not their number of points. The bound is compatible with
+nonempty and with infinite sets $Y^*_4(s)$, and with $D_4$ having dimension one. Khoshnevisan's Open Problem~3 asks
+whether, for $d\in\{4,5\}$, outside a single null set $Y_d(s)$ is finite for all $s>0$~\cite[Section~8.2]{Kho05}.
+Chen~\cite[Theorems~1.3.3 and~1.3.4]{Che26} states that the off-diagonal double-time sets are finite for every $s>0$
+when $d=5$, and that in $d=4$ every interval of slice parameters contains slices with infinitely many double times. A
+finite set has Hausdorff and upper box dimension zero, so for $d=5$ both parts of Theorem~\ref{thm:main} follow from
+the first statement; the case $d=4$ is new, and the projection argument of Section~\ref{sec:proof} gives $d=5$
+without~\cite{Che26}. At~\cite[(4.42)]{Che26} the field $F(x,y)=V(y)-U(x)$, built from two independent increments
+$U$ and $V$ of a slice, is treated as a Brownian sheet. Its covariance is $s(\min(x,x')+\min(y,y'))$, a sum rather
+than a product, and its rectangular increments vanish, so that step of the printed proof needs another argument. The
+proof below does not use these results.
+\end{remark}
+
+\begin{remark}\label{rem:low}
+For $d\le3$ the answer is no. At a fixed $s>0$ the slice is a multiple of Brownian motion in $\R^d$, whose set of double
+times $\{(u,v):u<v,\ W(u)=W(v)\}$ has Hausdorff dimension $2-d/2>0$ almost surely~\cite{Ros84}; see
+also~\cite[(4.2)]{KWX06}. This is the case that Khoshnevisan connects with intersection local
+times~\cite[Section~8.2]{Kho05}.
+\end{remark}
+
+\textbf{Why counting dimensions is not enough.} Away from the diagonal and from $s=0$, the field
+$X(s,u,v)=B(s,v)-B(s,u)$ has three parameters, each with H\"older exponent just below $1/2$, and $d$ independent
+coordinates. The zero set of $X$ has dimension $3-d/2$ for $d<6$~\cite[Theorem~5.1 and (8.1)]{Kho05}, and its
+projection on the $s$-axis, the set $D_d$, has dimension $\min(1,3-d/2)$ by~\cite[(1.12)]{Kho05}. Subtracting
+suggests that the fibres have dimension $\max(0,2-d/2)$, which is $0$ for $d\in\{4,5\}$. Dimension does not subtract
+fibre by fibre: the union of a horizontal and a vertical segment in the plane has dimension one, its projection on the
+first axis has dimension one, and one of its fibres is a segment. Theorem~\ref{thm:main} is a statement about every
+fibre, and its proof has to control all slices at once.
+
+\textbf{The idea of the proof.} Fix a compact interval $K=[a,b]$ of slice parameters with $a>0$ and two disjoint
+compact time intervals $I$ and $J$. For a grid of mesh $\delta=2^{-n}$ and a radius $r$ with $\delta\le r^2\le1$, let
+$N_n(s,r)$ be the number of grid pairs $(u,v)\in I\times J$ with $|B(s,v)-B(s,u)|\le r$. For fixed $s$ we show
+\[
+\E\bigl[N_n(s,r)^p\bigr]\le C_p\bigl(r^4\delta^{-2}(1+\log(1/\delta))\bigr)^p
+\qquad\text{for every }p\ge1
+\]
+in $d=4$ (Lemma~\ref{lem:moments}). The point is that the exponent of $r$ matches the exponent of $\delta$: the two time
+coordinates contribute $\delta^{-2}$, the four spatial coordinates contribute $r^4$, and their critical balance leaves
+only a logarithm. The moment bound comes from a lower bound on the variance of $B(s,v)-B(s,u)$ conditionally on earlier
+pair differences, which we obtain by conditioning further on the Brownian motion $t\mapsto B(s,t)$ at the endpoints of
+the earlier pairs and using that the remaining randomness consists of independent Brownian bridges
+(Lemma~\ref{lem:var}). With $r$ of order $\delta^{\alpha}$ for $\alpha$ close to $1/2$, Markov's inequality makes
+$N_n(s,r)>\delta^{-\eta}$ very unlikely, so unlikely that a union over the slices of the grid, at most a constant multiple of $\delta^{-1}$ of them, is
+affordable once $p$ is large. H\"older continuity of $B$ then transfers the bound to every real $s\in K$ and every exact
+double time.
+
+The proof uses only the Gaussian structure of a single slice and the H\"older continuity of the sheet. The sectorial
+local nondeterminism of Khoshnevisan, Wu and Xiao~\cite[Lemma~1.1]{KWX06} and their moment estimates for clusters of
+nearby values~\cite[Lemma~3.1]{KWX06} play a similar role for the full sheet; for a slice and two separated time
+intervals the Brownian bridge bound below is elementary. The double points of the full sheet, a different question, are
+treated in~\cite{DKNWX12,DM15}. Chen and Woessner~\cite{CW25} prove a statement that holds simultaneously over a
+continuum of parameters for the zero set of the sheet: almost surely no projection of large enough rank changes its
+Hausdorff dimension, which answers another question of Khoshnevisan.
+
+Section~\ref{sec:var} proves the conditional variance and small-ball bounds, Section~\ref{sec:moments} the moment bound,
+and Section~\ref{sec:proof} the theorem. Throughout, $C$ denotes a finite constant whose dependence is indicated, and
+whose value may change from line to line.
+
+\section{Conditional variance and small balls}\label{sec:var}
+
+Fix $0<a<b$, $K=[a,b]$, and compact intervals $I=[A_1,A_2]$ and $J=[A_3,A_4]$ with $0\le A_1<A_2<A_3<A_4$. Fix $s\in K$.
+For pairs $z_j=(u_j,v_j)\in I\times J$, $j=1,\dots,k$, put
+\[
+X_j=B(s,v_j)-B(s,u_j)\in\R^d.
+\]
+The pairs need not be distinct, and their coordinates may coincide with each other or with the endpoints of $I$ and
+$J$. For a further pair $(u,v)\in I\times J$ put $X=B(s,v)-B(s,u)$, and let
+\[
+U=\{A_1,A_2,u_1,\dots,u_k\},\qquad V=\{A_3,A_4,v_1,\dots,v_k\},
+\]
+\[
+\rho_U(u)=\min_{x\in U}|u-x|,\qquad \rho_V(v)=\min_{y\in V}|v-y|,\qquad \rho=\rho_U(u)+\rho_V(v).
+\]
+We call the points of $U\cup V$ anchors.
+
+\begin{lemma}\label{lem:var}
+For each coordinate $i$,
+\begin{equation}\label{eq:var}
+\Var\bigl(X^{(i)}\bigm| X^{(i)}_1,\dots,X^{(i)}_k\bigr)\ge\frac a2\,\rho,
+\end{equation}
+where $X^{(i)}$ and $X^{(i)}_j$ are the $i$-th coordinates of $X$ and $X_j$.
+\end{lemma}
+
+\begin{proof}
+The process $W(t)=B_i(s,t)$ is a Brownian motion with variance rate $s$. For a centred Gaussian family the conditional
+variance of one member $Z$ given others is the squared $L^2$ distance from $Z$ to their linear span; it is
+deterministic and does not increase when the family is enlarged. Let $\mathcal F$ be generated by $X^{(i)}_1,\dots,X^{(i)}_k$ and $\mathcal G$
+by the values of $W$ at all anchors. Each $X^{(i)}_j=W(v_j)-W(u_j)$ is $\mathcal G$-measurable, so $\mathcal F\subset\mathcal
+G$, and $\Var(X^{(i)}\mid\mathcal F)\ge\Var(X^{(i)}\mid\mathcal G)$.
+
+On an interval $[\ell,m]$ between consecutive anchors let $\beta(t)=W(t)-\bigl((m-t)W(\ell)+(t-\ell)W(m)\bigr)/(m-\ell)$.
+These residuals are centred Brownian bridges, independent of $\mathcal G$ and of the residuals on the other intervals,
+and $W(t)-\beta(t)$ is $\mathcal G$-measurable, so the conditional variance of $W(t)$ given $\mathcal G$ is that of
+$\beta(t)$. Since $A_1,A_2\in U$ and every point of $V$ exceeds $A_2$, the
+anchors adjacent to $u$ lie in $U$. If $u\in U$ its conditional variance is $0=\rho_U(u)$. Otherwise let $\ell<u<m$ be
+the adjacent anchors; the variance of the bridge at $u$ is
+\[
+s\,\frac{(u-\ell)(m-u)}{m-\ell}\ge\frac s2\min(u-\ell,\,m-u)=\frac s2\,\rho_U(u).
+\]
+The same holds for $v$ with $V$. The points $u$ and $v$ lie in different intervals between anchors, because $A_2$ and
+$A_3$ are anchors, so their bridges are independent and
+$\Var(X^{(i)}\mid\mathcal G)\ge\frac s2(\rho_U(u)+\rho_V(v))\ge\frac a2\rho$. Combined with the first paragraph this
+proves~\eqref{eq:var}. No invertibility of the covariance matrix of $X^{(i)}_1,\dots,X^{(i)}_k$ is needed.
+\end{proof}
+
+\begin{lemma}\label{lem:smallball}
+Let $d=4$. There is a constant $C$ depending only on $a$ such that for every $r>0$,
+\begin{equation}\label{eq:smallball}
+\PP\bigl(|X|\le r\bigm| X_1,\dots,X_k\bigr)\le\frac{C\,r^4}{(r^2+\rho)^2}
+\end{equation}
+almost surely, whatever the values of $X_1,\dots,X_k$.
+\end{lemma}
+
+\begin{proof}
+The coordinates of $B$ are independent, so given $X_1,\dots,X_k$ the coordinates of $X$ are independent Gaussian
+variables; the $i$-th has the conditional law of $X^{(i)}$ given $X^{(i)}_1,\dots,X^{(i)}_k$, with some mean $\mu_i$
+and the variance $\sigma^2$ of Lemma~\ref{lem:var}, which is the same for all $i$. If $\rho>0$ then $\sigma^2\ge
+a\rho/2>0$ and the conditional density of $X$ is at most $(2\pi\sigma^2)^{-2}$, so
+\[
+\PP\bigl(|X|\le r\bigm| X_1,\dots,X_k\bigr)\le\frac{\pi^2r^4}{2}\,(2\pi\sigma^2)^{-2}=\frac{r^4}{8\sigma^4}\le
+\frac{r^4}{2a^2\rho^2}.
+\]
+If $\rho\le r^2$ the right side of~\eqref{eq:smallball} is at least $C/4$, which is at least $1$ for $C\ge4$. If
+$\rho>r^2$ then $(r^2+\rho)^2\le4\rho^2$ and the display gives the bound with $C=2/a^2$. Hence~\eqref{eq:smallball}
+holds with $C=\max(4,2/a^2)$, including the case $\rho=0$, in which the conditional law may be degenerate.
+\end{proof}
+
+\section{Moments of the number of near-coincidences}\label{sec:moments}
+
+Let $\delta=2^{-n}$ and assume that $A_1,\dots,A_4$ lie in $\delta\Z$. Write $I_\delta=I\cap\delta\Z$ and
+$J_\delta=J\cap\delta\Z$.
+
+\begin{lemma}\label{lem:lattice}
+Let $0<\delta\le r^2\le1$, and let $U\subset I$ and $V\subset J$ be nonempty finite sets with at most $k+2$ elements each. Then
+\begin{equation}\label{eq:lattice}
+\sum_{u\in I_\delta}\sum_{v\in J_\delta}\frac{r^4}{(r^2+\rho_U(u)+\rho_V(v))^2}\le C\,(k+2)^2\,r^4\delta^{-2}
+\bigl(1+\log(1/\delta)\bigr),
+\end{equation}
+where $C$ depends only on the lengths of $I$ and $J$.
+\end{lemma}
+
+\begin{proof}
+Assign each $u\in I_\delta$ to a nearest point $x\in U$, so that $\rho_U(u)=|u-x|$, and each $v\in J_\delta$ to a
+nearest point $y\in V$. For fixed $x$ and an integer $j\ge0$, each of the half-open intervals $[x+j\delta,x+(j+1)\delta)$
+and $(x-(j+1)\delta,x-j\delta]$ contains exactly one point of $\delta\Z$, so at most two points $u$ satisfy
+$j\delta\le|u-x|<(j+1)\delta$; the same holds for $y$. Let $L$ be the sum of the lengths of $I$ and $J$. Summing over
+the at most $(k+2)^2$ pairs $(x,y)$ and over $j,l\ge0$ with $j+l\le L/\delta$, and putting $q=j+l$, which arises from
+$q+1$ pairs $(j,l)$, the left side of~\eqref{eq:lattice} is at most
+\[
+4(k+2)^2\sum_{q=0}^{\lfloor L/\delta\rfloor}\frac{(q+1)\,r^4}{(r^2+q\delta)^2}
+=4(k+2)^2\,r^4\delta^{-2}\sum_{q=0}^{\lfloor L/\delta\rfloor}\frac{q+1}{(r^2/\delta+q)^2}.
+\]
+Since $r^2/\delta\ge1$, each term of the last sum is at most $1/(q+1)$, and the sum is at most
+$1+\log(1+L/\delta)\le C_L(1+\log(1/\delta))$.
+\end{proof}
+
+For $s\in K$ and $r>0$ define the number of near-coincidences
+\[
+N_n(s,r)=\#\bigl\{(u,v)\in I_\delta\times J_\delta:\ |B(s,v)-B(s,u)|\le r\bigr\}.
+\]
+
+\begin{lemma}\label{lem:moments}
+Let $d=4$. For every integer $p\ge1$ there is a constant $C_p$, depending on $p$, $a$ and the lengths of $I$ and $J$,
+such that for all $s\in K$ and all $r$ with $\delta\le r^2\le1$,
+\begin{equation}\label{eq:moments}
+\E\bigl[N_n(s,r)^p\bigr]\le C_p\Bigl(r^4\delta^{-2}\bigl(1+\log(1/\delta)\bigr)\Bigr)^p.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write $\Lambda=r^4\delta^{-2}(1+\log(1/\delta))$ and $E(z)=\{|B(s,v)-B(s,u)|\le r\}$ for $z=(u,v)$. Then
+\[
+\E\bigl[N_n(s,r)^p\bigr]=\sum_{z_1,\dots,z_p}\PP\bigl(E(z_1)\cap\dots\cap E(z_p)\bigr),
+\]
+the sum running over ordered $p$-tuples of pairs in $I_\delta\times J_\delta$, repetitions allowed. Fix
+$z_1,\dots,z_{p-1}$, let $U$ and $V$ be the anchor sets built from them as in Section~\ref{sec:var}, and condition on
+$X_1,\dots,X_{p-1}$. By Lemma~\ref{lem:smallball},
+\[
+\PP\bigl(E(z_1)\cap\dots\cap E(z_p)\bigr)\le\PP\bigl(E(z_1)\cap\dots\cap E(z_{p-1})\bigr)\,
+\frac{C\,r^4}{(r^2+\rho_U(u_p)+\rho_V(v_p))^2},
+\]
+because the bound of Lemma~\ref{lem:smallball} does not depend on the values of $X_1,\dots,X_{p-1}$. Summing over $z_p$
+with Lemma~\ref{lem:lattice}, where $U$ and $V$ have at most $p+1$ elements, gives the factor $C(p+1)^2\Lambda$, and
+leaves the sum over $(p-1)$-tuples. Repeating the step $p$ times gives $\E[N_n(s,r)^p]\le C^p((p+1)!)^2\Lambda^p$. For
+$p=1$ the anchor sets are $\{A_1,A_2\}$ and $\{A_3,A_4\}$ and the same argument applies.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+\begin{lemma}\label{lem:holder}
+Let $R\subset[0,\infty)^2$ be a compact rectangle and $0<\alpha<1/2$. Almost surely there is a finite random $H$ such
+that
+\begin{equation}\label{eq:holder}
+|B(s,t)-B(s',t')|\le H\max(|s-s'|,|t-t'|)^\alpha\qquad\text{for all }(s,t),(s',t')\in R.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+On $R$, each coordinate satisfies $\Var(B_i(s,t)-B_i(s',t'))\le C_R(|s-s'|+|t-t'|)$: write the difference as
+$(B_i(s,t)-B_i(s',t))+(B_i(s',t)-B_i(s',t'))$ and use $\Var(Y+Z)\le2\Var Y+2\Var Z$, the two terms having variances
+$t|s-s'|$ and $s'|t-t'|$. Hence $\E|B(s,t)-B(s',t')|^q\le C_{q,R}\max(|s-s'|,|t-t'|)^{q/2}$ for every $q\ge2$, and the
+Kolmogorov continuity theorem for two-parameter processes (see for instance~\cite{Kho02}) gives a version
+satisfying~\eqref{eq:holder} for every $\alpha<1/2-2/q$. Taking $q$ large gives every $\alpha<1/2$. The sheet $B$ is
+continuous, so it coincides with this version on $R$ almost surely.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main} for $d=4$]
+Fix $K=[a,b]$ with $0<a<b$ and $I=[A_1,A_2]$, $J=[A_3,A_4]$ with $0\le A_1<A_2<A_3<A_4$, all endpoints dyadic rationals.
+Fix $\eta\in(0,1]$ and put $\alpha=1/2-\eta/16$, so that $2-4\alpha=\eta/4$. Fix an integer $M\ge1$. For $n$ large
+enough that the endpoints lie in $\delta\Z$, where $\delta=2^{-n}$, and that $4M^2\delta^{2\alpha}\le1$, put
+$r_n=2M\delta^\alpha$. Then $\delta\le r_n^2\le1$, and
+\[
+r_n^4\delta^{-2}\bigl(1+\log(1/\delta)\bigr)=16M^4\delta^{-\eta/4}(1+n\log2).
+\]
+Let $K_\delta=K\cap\delta\Z$, which has at most $C_K\delta^{-1}$ points. By Lemma~\ref{lem:moments}, Markov's
+inequality and a union bound, for every integer $p\ge1$,
+\[
+\PP\Bigl(\max_{s\in K_\delta}N_n(s,r_n)>\delta^{-\eta}\Bigr)\le C_K\delta^{-1}\,\delta^{p\eta}\,C_p\bigl(16M^4\delta^{-\eta/4}
+(1+n\log2)\bigr)^p=C_{p,M,K}(1+n)^p\,\delta^{3p\eta/4-1}.
+\]
+Choose $p$ with $3p\eta/4>1$. The right side is summable in $n$, so by the Borel--Cantelli lemma, almost surely, for all
+large $n$,
+\begin{equation}\label{eq:allgrid}
+N_n(s,r_n)\le\delta^{-\eta}\qquad\text{for every }s\in K_\delta.
+\end{equation}
+Intersect these events over $M\ge1$, and with the event of Lemma~\ref{lem:holder} for this $\alpha$ and the rectangle
+$K\times[0,A_4]$. On the intersection choose an integer $M\ge H$.
+
+Let $s\in K$ be arbitrary and $(u,v)\in Y^*_4(s)\cap(I\times J)$. Round $s$, $u$ and $v$ down to $\delta\Z$, obtaining
+$s_n\in K_\delta$, $u_n\in I_\delta$ and $v_n\in J_\delta$; this is possible because the left endpoints lie in
+$\delta\Z$. Since $B(s,u)=B(s,v)$, Lemma~\ref{lem:holder} gives
+\[
+|B(s_n,v_n)-B(s_n,u_n)|\le|B(s_n,v_n)-B(s,v)|+|B(s,u)-B(s_n,u_n)|\le2H\delta^\alpha\le r_n,
+\]
+so $(u_n,v_n)$ is counted by $N_n(s_n,r_n)$, and $(u,v)$ lies in the square $[u_n,u_n+\delta]\times[v_n,v_n+\delta]$.
+By~\eqref{eq:allgrid}, for all large $n$, uniformly in $s\in K$, the set $Y^*_4(s)\cap(I\times J)$ is covered by at most
+$\delta^{-\eta}$ squares of side $\delta$. Hence its upper box dimension is at most $\eta$. Intersecting over
+$\eta=1/m$, $m\ge1$, gives, almost surely, $\dimB(Y^*_4(s)\cap(I\times J))=0$ for all $s\in K$ simultaneously.
+
+The family of triples $(K,I,J)$ with dyadic endpoints, $a>0$ and $A_2<A_3$, is countable, so almost surely the
+conclusion holds for all of them at once. Any compact intervals $I',J'\subset[0,\infty)$ with $I'\cap J'=\emptyset$, say
+with $I'$ to the left of $J'$, are contained in dyadic intervals $I\supset I'$ and $J\supset J'$ that are still disjoint,
+and every $s>0$ lies in a dyadic $K$ with $a>0$; the case $I'$ to the right of $J'$ follows from the symmetry
+$(u,v)\mapsto(v,u)$ of $Y^*_4(s)$. This proves~(b). Every point of $Y^*_4(s)$ lies in one of the countably many sets
+$I\times J$ or $J\times I$ with dyadic $I,J$ separated by a positive gap. Since the Hausdorff dimension is at most the
+upper box dimension and is stable under countable unions, (a) follows from~(b).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main} for $d=5$]
+The first four coordinates of a five-dimensional Brownian sheet form a four-dimensional Brownian sheet $B'$, and
+$Y^*_5(s)\subset\{(u,v):u\ne v,\ B'(s,u)=B'(s,v)\}$ for every $s>0$. The case $d=4$ applied to $B'$ gives the result on
+the same event, for all $s>0$ at once.
+\end{proof}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved Theorem~\ref{thm:main}; a second Codex agent checked the proof as a referee; Claude agents
+(Anthropic) checked the steps and prepared the manuscript. The mathematics the paper rests on is due to others. The
+problem is Khoshnevisan's~\cite{Kho05}. The existence of exceptional slices and the dimension of $D_d$ are due to
+Lyons~\cite{Lyo86} and Mountford~\cite{Mou90}, and the double points of the slices for $d\le3$ to
+Penrose~\cite{Pen89,Pen90} and Rosen~\cite{Ros84}. The finiteness of the off-diagonal double-time sets for $d=5$,
+which gives both parts of Theorem~\ref{thm:main} in that dimension, is stated by Chen~\cite{Che26}. The method follows
+the moment and covering arguments of Khoshnevisan, Wu and Xiao~\cite{KWX06} for the Brownian sheet, with a Brownian
+bridge bound for one slice in place of sectorial local nondeterminism. What is new here is Theorem~\ref{thm:main} for
+$d=4$, with all slices controlled at once. The author directed the work and is responsible for the
+content of the paper and for decisions concerning its dissemination.
+
+\section*{Code availability}
+A numerical check of the conditional variance bound of Lemma~\ref{lem:var} on random configurations with repeated
+endpoints, and of the lattice sum of Lemma~\ref{lem:lattice}, is in the repository
+\begin{center}\url{https://github.com/yspennstate/brownian-sheet-slice-double-times/tree/v1.1}.\end{center}
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Symbol & Meaning & First used\\
+\midrule
+$B$, $B_i$ & the Brownian sheet and its coordinates & Section~\ref{sec:intro}\\
+$D_d$ & the slice parameters whose slice has a double point & Section~\ref{sec:intro}\\
+$Y_d(s)$ & Khoshnevisan's double-time set, diagonal included & Section~\ref{sec:intro}\\
+$Y^*_d(s)$ & the double times off the diagonal & \eqref{eq:Ystar}\\
+$\dimH$, $\dimB$ & Hausdorff and upper box dimension & Section~\ref{sec:intro}\\
+$K=[a,b]$ & a compact interval of slice parameters, $a>0$ & Section~\ref{sec:var}\\
+$I$, $J$; $A_1,\dots,A_4$ & disjoint compact time intervals and their endpoints & Section~\ref{sec:var}\\
+$z_j=(u_j,v_j)$, $X_j$, $X$ & pairs of times and the differences of the slice & Section~\ref{sec:var}\\
+$U$, $V$ & the anchors in $I$ and in $J$ & Section~\ref{sec:var}\\
+$\rho_U$, $\rho_V$, $\rho$ & distances to the anchors & Section~\ref{sec:var}\\
+$W$ & one coordinate of the slice, $t\mapsto B_i(s,t)$ & Lemma~\ref{lem:var}\\
+$\mathcal F$, $\mathcal G$ & the $\sigma$-fields of the earlier differences and of the anchors & Lemma~\ref{lem:var}\\
+$\sigma^2$ & the conditional variance of one coordinate of $X$ & Lemma~\ref{lem:smallball}\\
+$p$ & the order of the moment & Lemma~\ref{lem:moments}\\
+$\delta=2^{-n}$; $I_\delta$, $J_\delta$, $K_\delta$ & the grid mesh and the grid points & Section~\ref{sec:moments}\\
+$N_n(s,r)$ & the number of near-coincidences & Section~\ref{sec:moments}\\
+$\Lambda$ & $r^4\delta^{-2}(1+\log(1/\delta))$ & Lemma~\ref{lem:moments}\\
+$H$, $\alpha$ & the H\"older constant and exponent & Lemma~\ref{lem:holder}\\
+$\eta$, $M$, $r_n$ & the target dimension, a bound for $H$, the radius $2M\delta^\alpha$ & Section~\ref{sec:proof}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{Che26} K.~Chen, \emph{Uniform dimension results of level-sets of stable sheets}, doctoral thesis no.~11211, EPFL,
+Lausanne, 2026. \doi{10.5075/epfl-thesis-11211}
+\bibitem{CW25} K.~Chen and G.~Woessner, Zeros of the Brownian sheet, \emph{J.\ Theoret.\ Probab.} \textbf{38} (2025),
+article no.~33. \doi{10.1007/s10959-024-01399-1}
+\bibitem{DKNWX12} R.~C.~Dalang, D.~Khoshnevisan, E.~Nualart, D.~Wu and Y.~Xiao, Critical Brownian sheet does not have
+double points, \emph{Ann.\ Probab.} \textbf{40} (2012), no.~4, 1829--1859. \doi{10.1214/11-AOP665}
+\bibitem{DM15} R.~C.~Dalang and C.~Mueller, Multiple points of the Brownian sheet in critical dimensions, \emph{Ann.\
+Probab.} \textbf{43} (2015), no.~4, 1577--1593. \doi{10.1214/14-AOP912}
+\bibitem{Kho05} D.~Khoshnevisan, Slices of a Brownian sheet: new results and open problems, in \emph{Seminar on
+Stochastic Analysis, Random Fields and Applications V}, Progr.\ Probab.\ \textbf{59}, Birkh\"auser, Basel, 2008,
+135--174. \doi{10.1007/978-3-7643-8458-6_9}. Equation and section numbers refer to the version
+\href{https://arxiv.org/abs/math/0510518}{arXiv:math/0510518}.
+\bibitem{Kho02} D.~Khoshnevisan, \emph{Multiparameter Processes: An Introduction to Random Fields}, Springer
+Monographs in Mathematics, Springer, New York, 2002. \doi{10.1007/b97363}
+\bibitem{KWX06} D.~Khoshnevisan, D.~Wu and Y.~Xiao, Sectorial local non-determinism and the geometry of the Brownian
+sheet, \emph{Electron.\ J.\ Probab.} \textbf{11} (2006), paper no.~32, 817--843. \doi{10.1214/EJP.v11-353}
+\bibitem{Lyo86} T.~J.~Lyons, The critical dimension at which quasi-every Brownian path is self-avoiding, \emph{Adv.\ in
+Appl.\ Probab.} \textbf{18} (1986), suppl.\ \emph{Analytic and Geometric Stochastics}, 87--99.
+\bibitem{Mou90} T.~S.~Mountford, Double points and the Ornstein--Uhlenbeck process on Wiener space, \emph{Illinois J.\
+Math.} \textbf{34} (1990), no.~1, 38--48. \doi{10.1215/ijm/1255988489}
+\bibitem{Pen89} M.~D.~Penrose, On the existence of self-intersections for quasi-every Brownian path in space, \emph{Ann.\
+Probab.} \textbf{17} (1989), no.~2, 482--502. \doi{10.1214/aop/1176991411}
+\bibitem{Pen90} M.~D.~Penrose, Quasi-everywhere properties of Brownian level sets and multiple points, \emph{Stochastic
+Process.\ Appl.} \textbf{36} (1990), no.~1, 33--43. \doi{10.1016/0304-4149(90)90040-Y}
+\bibitem{Ros84} J.~Rosen, Self-intersections of random fields, \emph{Ann.\ Probab.} \textbf{12} (1984), no.~1, 108--119.
+\doi{10.1214/aop/1176993376}
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}

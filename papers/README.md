@@ -117,6 +117,18 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Cosmic coin flipping with at most nine bits | [cosmic-coin-flipping-nine-bits](https://github.com/yspennstate/cosmic-coin-flipping-nine-bits) |
 | Low-intensity Voronoi limits of correlated point processes in the hyperbolic plane | [hyperbolic-voronoi-correlated-nuclei](https://github.com/yspennstate/hyperbolic-voronoi-correlated-nuclei) |
 | Major roads and span length in scale-invariant random spatial networks | [sirsn-major-roads-binary-hierarchy](https://github.com/yspennstate/sirsn-major-roads-binary-hierarchy) |
+| Frozen edges of stationary tridiagonal dynamics with GUE spectra | [tridiagonal-edge-freezing](https://github.com/yspennstate/tridiagonal-edge-freezing) |
+| Polynomial components in spectrally subcritical percolation on near-regular graphs | [near-regular-percolation-components](https://github.com/yspennstate/near-regular-percolation-components) |
+| Finite touching sets between percolation clusters on grandparent graphs | [grandparent-graph-cluster-repulsion](https://github.com/yspennstate/grandparent-graph-cluster-repulsion) |
+| Good configurations of random walk in random scenery under two-sided conditioning | [rwrs-two-sided-good-configurations](https://github.com/yspennstate/rwrs-two-sided-good-configurations) |
+| Stationary measures of planar kinetically constrained models with bounded conditional odds | [kcm-planar-stationary-bounded-odds](https://github.com/yspennstate/kcm-planar-stationary-bounded-odds) |
+| Relaxation of the one-dimensional Fredrickson-Andersen model from a single infection at high density | [fa1f-relaxation-high-density](https://github.com/yspennstate/fa1f-relaxation-high-density) |
+| A birthday bound for non-backtracking walks on graphs of bounded degree ratio | [nonbacktracking-birthday-irregular](https://github.com/yspennstate/nonbacktracking-birthday-irregular) |
+| Double times on slices of the Brownian sheet in dimensions four and five | [brownian-sheet-slice-double-times](https://github.com/yspennstate/brownian-sheet-slice-double-times) |
+| On the regularity threshold of uniformly positive quadratic stochastic operators | [qso-regularity-threshold](https://github.com/yspennstate/qso-regularity-threshold) |
+| Zero speed for excited random walks on the event of non-transience | [excited-walk-zero-speed-non-transience](https://github.com/yspennstate/excited-walk-zero-speed-non-transience) |
+| Two instability intervals for a switched planar system with one non-Hurwitz matrix | [planar-switching-two-instability-intervals](https://github.com/yspennstate/planar-switching-two-instability-intervals) |
+| Law-determined norm inequalities do not imply complete mixability | [complete-mixability-norm-converse](https://github.com/yspennstate/complete-mixability-norm-converse) |
 
 Six more are kept here with their working files:
 

@@ -1,0 +1,573 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[The regularity threshold of positive quadratic stochastic operators]{On the regularity threshold of uniformly positive quadratic stochastic operators}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{37N25, 47H10, 92D25}
+\keywords{quadratic stochastic operator, regularity, heredity coefficients, Fisher--Rao metric, contraction, periodic orbit}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+A quadratic stochastic operator on the simplex of probability vectors in $\R^m$ is regular if all of its trajectories
+converge to one point. Ganikhodzhaev and Sarymsakov showed that the operator is regular when all of its heredity
+coefficients exceed $1/(2m)$, and Ganikhodzhaev and Rozikov asked for the least number $\lambda_m$ with this property.
+For $m=2$ we prove $\lambda_2=(3-\sqrt7)/4$. For every $m\ge3$ we prove that $\lambda_m$ lies between
+$(1-1/\sqrt{m+1})/(2m)$ and $2/(3m+2+\sqrt{m^2+12m+4})$, which is less than $1/(2m)$; in particular
+$2m\lambda_m\to1$. The upper bound comes from a contraction of the operator in the Fisher--Rao metric, which
+rests on two inequalities: the derivative of a quadratic stochastic operator at most doubles the Fisher information of
+a tangent vector, and the uniform-mixture map $q\mapsto\mu\mathbf 1+(1-m\mu)q$ multiplies it by at most
+$(1-m\mu)^2/[1-(m-2)\mu]$, where $\mu$ is the least heredity coefficient. The lower bound comes from an explicit family of operators with strictly positive coefficients
+and a two-cycle.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $m\ge2$ and let $S^{m-1}=\{x\in\R^m:x_i\ge0,\ \sum_ix_i=1\}$ be the simplex of probability vectors. A
+\emph{quadratic stochastic operator} is a map $V:S^{m-1}\to S^{m-1}$ of the form
+\begin{equation}\label{eq:qso}
+(Vx)_k=\sum_{i,j=1}^m P_{ij,k}\,x_ix_j,\qquad k=1,\dots,m,
+\end{equation}
+where the \emph{heredity coefficients} satisfy
+\begin{equation}\label{eq:coeff}
+P_{ij,k}\ge0,\qquad P_{ij,k}=P_{ji,k},\qquad \sum_{k=1}^mP_{ij,k}=1 .
+\end{equation}
+In the population model behind this definition, $P_{ij,k}$ is the probability that parents of types $i$ and $j$ have
+an offspring of type $k$, and $Vx$ is the distribution of types in the next generation when the present one is $x$; see
+the surveys~\cite{GR09,GMR11}. The operator $V$ is \emph{regular} if there is a point $p\in S^{m-1}$ with $V^nx\to p$
+for every $x\in S^{m-1}$. The point $p$ is then the only fixed point of $V$. Write
+\[
+\mu(P)=\min_{i,j,k}P_{ij,k}
+\]
+for the least heredity coefficient, and note that $\mu(P)\le1/m$ by~\eqref{eq:coeff}.
+
+Ganikhodzhaev and Sarymsakov~\cite{GS88} proved that $V$ is regular when $P_{ij,k}>1/(2m)$ for all $i,j,k$.
+Positive quadratic stochastic operators with more than one fixed point are known from the work of Krapivin and
+Lyubich~\cite{KL76}, and Fasino and Tudisco~\cite{FT20} recover the bound $1/(2m)$ from the optimal $\ell^1$ Lipschitz
+constant of~\eqref{eq:qso}, an ergodicity coefficient in the sense of Dobrushin~\cite{Dobrushin56}. The
+survey of Ganikhodzhaev and Rozikov~\cite[Theorem~7 and Problem~12]{GR09}, repeated in~\cite[Theorem~2.28 and
+Problem~2.29]{GMR11}, asks for the least number with this property, that is, for
+\begin{equation}\label{eq:lambda}
+\lambda_m=\inf\bigl\{\lambda\ge0:\ \text{every $V$ with $P_{ij,k}>\lambda$ for all $i,j,k$ is regular}\bigr\}.
+\end{equation}
+Equivalently, $\lambda_m$ is the supremum of $\mu(P)$ over the non-regular operators, with $\lambda_m=0$ if every
+operator with $\mu(P)>0$ is regular. Indeed, if $\lambda$ is admissible in~\eqref{eq:lambda}, then every non-regular
+operator has $\mu(P)\le\lambda$; conversely, every number at least the supremum is admissible, since an operator with
+all coefficients above it is regular. The same surveys give the value $(3-\sqrt7)/2$ for $m=2$. Saburov and
+Saburov~\cite{SS25} restate the question for general operators, where it is open, and answer it for a doubly
+stochastic class.
+
+\begin{theorem}\label{thm:binary}
+$\lambda_2=(3-\sqrt7)/4=0.0885\dots$. More precisely, every quadratic stochastic operator on $S^1$ with
+$\mu(P)\ge(3-\sqrt7)/4$ is regular, and for every $\delta\in\bigl(0,(3-\sqrt7)/4\bigr)$ the operator with heredity
+coefficients $P_{11,1}=P_{12,1}=\delta$ and $P_{22,1}=1-\delta$ has $\mu(P)=\delta$ and a two-cycle.
+\end{theorem}
+
+The surveys~\cite[Theorem~7(2)]{GR09} and~\cite[Theorem~2.28(ii)]{GMR11} state $\alpha_2=(3-\sqrt7)/2=0.177\dots$
+under the same normalization~\eqref{eq:coeff}. By Theorem~\ref{thm:binary} every operator with $\mu(P)\ge(3-\sqrt7)/4$ is
+regular, while the family in that theorem has a two-cycle for every $0<\delta<(3-\sqrt7)/4$, so the threshold is
+$(3-\sqrt7)/4$. Section~\ref{sec:binary} also shows that the bound of
+Theorem~\ref{thm:upper} below, applied with $m=2$, gives $\lambda_2\le(2-\sqrt2)/4=0.146\dots$.
+
+\begin{theorem}\label{thm:upper}
+Let $m\ge2$ and
+\[
+C_m=\frac{2}{3m+2+\sqrt{m^2+12m+4}}=\frac{3m+2-\sqrt{m^2+12m+4}}{4m^2}.
+\]
+If $\mu(P)>C_m$, then $V$ is a contraction of $S^{m-1}$ in the Fisher--Rao metric, and in particular it is regular.
+Hence $\lambda_m\le C_m$, and $C_m<1/(2m)$.
+\end{theorem}
+
+\begin{theorem}\label{thm:lower}
+Let $m\ge3$ and
+\[
+L_m=\frac{1-1/\sqrt{m+1}}{2m}.
+\]
+For every $\ell\in(0,L_m)$ there is a quadratic stochastic operator on $S^{m-1}$ with $\mu(P)=\ell$ and a two-cycle.
+Hence $\lambda_m\ge L_m$.
+\end{theorem}
+
+\begin{corollary}\label{cor:asym}
+For every $m\ge3$, $L_m\le\lambda_m\le C_m<1/(2m)$ (Table~\ref{tab:bounds} gives some values). In particular $2m\lambda_m\to1$ as $m\to\infty$, and
+$\lambda_m=1/(2m)-\varepsilon_m$ with $c_1m^{-2}\le\varepsilon_m\le c_2m^{-3/2}$ for absolute constants
+$c_1,c_2>0$.
+\end{corollary}
+
+\begin{proof}
+The first statement combines Theorems~\ref{thm:upper} and~\ref{thm:lower}. As $m\to\infty$,
+$1/(2m)-L_m=1/(2m\sqrt{m+1})$, and $3m+2+\sqrt{m^2+12m+4}=4m+8+O(1/m)$, so $1/(2m)-C_m=m^{-2}+O(m^{-3})$.
+\end{proof}
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{rccc}
+\toprule
+$m$ & $L_m$ & $C_m$ & $1/(2m)$\\
+\midrule
+3 & $1/12=0.0833$ & $1/9=0.1111$ & $0.1667$\\
+4 & $(5-\sqrt5)/40=0.0691$ & $(7-\sqrt{17})/32=0.0899$ & $0.125$\\
+5 & $0.0592$ & $0.0757$ & $0.1$\\
+10 & $0.0349$ & $0.0426$ & $0.05$\\
+100 & $0.004502$ & $0.004904$ & $0.005$\\
+\bottomrule
+\end{tabular}
+\caption{The bounds of Corollary~\ref{cor:asym} for some $m$.}\label{tab:bounds}
+\end{table}
+
+The exact value of $\lambda_m$ for $m\ge3$ remains open. For $m=3,4$, numerical optimization of operators with a
+two-cycle or with two distinct fixed points does not go beyond least coefficient $L_m$ (Section~\ref{sec:numerics}).
+
+\subsection*{Related work}
+For $m=2$ the trajectories of~\eqref{eq:qso} are those of a quadratic map of $[0,1]$. By Lyubich's analysis of
+quadratic interval maps~\cite{Lyubich74}, recalled in~\cite[Theorem~3.1]{KHG22}, this map is regular when the discriminant $D$ of $f(x)-x$ is less
+than $4$ and has a two-cycle when $D>4$. The proof of Theorem~\ref{thm:binary} needs, in addition, the largest value
+of $D$ under a lower bound on the coefficients and the case $D=4$. Fasino and Tudisco~\cite[Theorem~6.1 and
+Corollary~6.2]{FT20} compute the optimal Lipschitz constant of~\eqref{eq:qso} in the $\ell^1$ norm and recover the bound
+$1/(2m)$; the same contraction is Proposition~\ref{prop:l1} below. Theorem~\ref{thm:upper} replaces the $\ell^1$ norm
+by the Fisher--Rao metric, in which the uniform part of the coefficients improves the constant. Lipschitz estimates for
+polynomial operators on the simplex go back to Krapivin and Lyubich~\cite{KL77}, and Saburov~\cite{S26} uses contraction
+to prove global asymptotic stability of polynomial stochastic operators.
+
+\subsection*{Organization}
+The paper is arranged as follows; the notation is collected in Appendix~\ref{app:notation}.
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Section & Content & Used in\\
+\midrule
+\ref{sec:prelim} & $V=\mu\one+tW$; the $\ell^1$ contraction for $\mu(P)>1/(2m)$ & Sections~\ref{sec:upper}, \ref{sec:lower}\\
+\ref{sec:binary} & $m=2$: discriminant, second iterate, two-cycle & Theorem~\ref{thm:binary}\\
+\ref{sec:upper} & Fisher information bound, uniform mixture bound, contraction & Theorem~\ref{thm:upper}\\
+\ref{sec:lower} & a positive operator with a two-cycle for each $\ell<L_m$ & Theorem~\ref{thm:lower}\\
+\ref{sec:numerics} & optimization of two-cycles and fixed-point pairs for $m=3,4$ & Table~\ref{tab:search}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The uniform part of the coefficients}\label{sec:prelim}
+
+Let $\mu=\mu(P)$. If $\mu=1/m$, then every $P_{ij,k}$ equals $1/m$ and $V$ is constant. Otherwise put $t=1-m\mu>0$ and
+\[
+Q_{ij,k}=\frac{P_{ij,k}-\mu}{t}.
+\]
+The numbers $Q_{ij,k}$ again satisfy~\eqref{eq:coeff}. Let $W$ be the operator~\eqref{eq:qso} with coefficients
+$Q_{ij,k}$, and write $Q(x,y)$ for the symmetric bilinear map with $Q(x,y)_k=\sum_{i,j}Q_{ij,k}x_iy_j$, so that
+$W(x)=Q(x,x)$. Since $\sum_{i,j}x_ix_j=1$ on $S^{m-1}$,
+\begin{equation}\label{eq:split}
+V(x)=\mu\one+tW(x),\qquad x\in S^{m-1},
+\end{equation}
+where $\one=(1,\dots,1)$. In particular $(Vx)_k\ge\mu$ for every $x$ and $k$, so $V$ maps $S^{m-1}$ into
+$\Delta_\mu=\{x\in S^{m-1}:x_k\ge\mu\text{ for all }k\}$.
+
+\begin{proposition}\label{prop:l1}
+$\|Vx-Vy\|_1\le2t\|x-y\|_1$ for $x,y\in S^{m-1}$. Hence $V$ is regular if $\mu(P)>1/(2m)$.
+\end{proposition}
+
+\begin{proof}
+By symmetry, $W(x)-W(y)=Q(x,x-y)+Q(x-y,y)$. For a probability vector $z$ and any $h\in\R^m$,
+$\|Q(z,h)\|_1\le\sum_{i,j,k}Q_{ij,k}z_i|h_j|=\|h\|_1$. Hence $\|Vx-Vy\|_1\le2t\|x-y\|_1$, and $2t<1$ when
+$\mu>1/(2m)$; the Banach contraction principle on the compact set $S^{m-1}$ gives a fixed point $p$ with $V^nx\to p$ for
+every $x$.
+\end{proof}
+
+\section{Two types}\label{sec:binary}
+
+Let $m=2$, write $x$ for the first coordinate of a point of $S^1$, and put $a=P_{11,1}$, $b=P_{12,1}=P_{21,1}$ and
+$c=P_{22,1}$. The coefficients with $k=2$ are $1-a$, $1-b$ and $1-c$, so $\mu(P)\ge\delta$ means
+$a,b,c\in[\delta,1-\delta]$. The first coordinate of $Vx$ is
+\begin{equation}\label{eq:f}
+f(x)=ax^2+2bx(1-x)+c(1-x)^2=Ax^2+Bx+C,\qquad A=a-2b+c,\quad B=2(b-c),\quad C=c .
+\end{equation}
+Let $\delta_*=(3-\sqrt7)/4$, the smaller root of $8\delta^2-12\delta+1=0$.
+
+\begin{lemma}\label{lem:disc}
+Let $D=(B-1)^2-4AC$ be the discriminant of $f(x)-x$. Then $D=(2b-1)^2+4c(1-a)$. If $a,b,c\in[\delta,1-\delta]$ with
+$0<\delta\le1/2$, then $D\le5-12\delta+8\delta^2$, with equality for $a=b=\delta$, $c=1-\delta$. In particular $D\le4$
+when $\delta\ge\delta_*$.
+\end{lemma}
+
+\begin{proof}
+The identity is a direct expansion. Then $(2b-1)^2\le(1-2\delta)^2$ and $c(1-a)\le(1-\delta)^2$, both with equality at
+the stated point, and $(1-2\delta)^2+4(1-\delta)^2=5-12\delta+8\delta^2$. This is at most $4$ exactly when
+$8\delta^2-12\delta+1\le0$, which for $\delta\le1/2$ means $\delta\ge\delta_*$.
+\end{proof}
+
+\begin{lemma}\label{lem:second}
+$f(f(x))-x=(f(x)-x)H(x)$, where
+\[
+H(x)=A^2x^2+A(B+1)x+AC+B+1=\Bigl(Ax+\frac{B+1}{2}\Bigr)^2+\frac{4-D}{4}.
+\]
+\end{lemma}
+
+\begin{proof}
+Both identities are direct expansions.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:binary}]
+Assume $a,b,c\in[\delta,1-\delta]$ with $\delta\ge\delta_*$. Since $f(0)=c>0$ and $f(1)=a<1$, the function $f(x)-x$ has
+exactly one zero $p$ in $[0,1]$; it lies in $(0,1)$, and $f(x)>x$ for $x<p$, $f(x)<x$ for $x>p$. (If $A\ne0$ this holds
+because a quadratic polynomial that changes sign on $[0,1]$ has exactly one zero there; if $A=0$ the function is
+affine.)
+
+We claim that
+\begin{equation}\label{eq:f2}
+f(f(x))>x\ \text{ for } x<p,\qquad f(f(x))<x\ \text{ for } x>p .
+\end{equation}
+If $A=0$, then $f(x)=Bx+C$ with $B=2(b-c)=a-c$, so $|B|\le1-2\delta<1$, and $f(f(x))-x=(1+B)(f(x)-x)$ has the sign of $f(x)-x$. Let $A\ne0$. By
+Lemma~\ref{lem:disc}, $D\le4$. If $D<4$, then $H>0$ and~\eqref{eq:f2} follows from Lemma~\ref{lem:second}. If $D=4$,
+then $H$ vanishes only at $r=-(B+1)/(2A)$, and substituting $r$ into $f(x)-x=Ax^2+(B-1)x+C$ gives $(4-D)/(4A)=0$.
+So $r$ is a zero of $f(x)-x$, hence $r=p$ or $r\notin[0,1]$, and $H>0$ on $[0,1]\setminus\{p\}$; again~\eqref{eq:f2}
+follows.
+
+Let $x\in[0,1]$ and let $\Omega$ be the set of limit points of $(f^n(x))_{n\ge0}$. It is compact and non-empty, and
+$f(\Omega)=\Omega$: a limit point of $(f^{n_j}(x))$ is the image of a limit point of $(f^{n_j-1}(x))$, and the image of
+a limit point is a limit point. Let $a_0=\min\Omega$ and $b_0=\max\Omega$. Suppose $a_0<b_0$. If $\Omega\subset[p,1]$,
+then $b_0>p$ and $b_0=f(y)$ with $y\in\Omega$; but $f(p)=p<b_0$ and $f(y)<y\le b_0$ for $y>p$. The case
+$\Omega\subset[0,p]$ is symmetric, so $a_0<p<b_0$. Choose $u,v\in\Omega$ with $f(u)=b_0$ and $f(v)=a_0$; the same
+argument gives $u<p<v$. Since $f(u)=b_0\ge v>p=f(p)$, there is $w\in[u,p)$ with $f(w)=v$. Then
+$f(f(w))=a_0\le u\le w$, which contradicts~\eqref{eq:f2}. Hence $a_0=b_0$, so $f^n(x)$ converges, and its limit is a
+fixed point of $f$, that is, $p$. Thus $V$ is regular whenever $\mu(P)\ge\delta_*$, and $\lambda_2\le\delta_*$.
+
+Now let $0<\delta<\delta_*$ and $a=b=\delta$, $c=1-\delta$, so that $\mu(P)=\delta$ and, with $s=1-2\delta$,
+\begin{equation}\label{eq:fdelta}
+f(x)=\delta+s(1-x)^2 .
+\end{equation}
+Put $R=4s(1-\delta)-3$ and
+\[
+x_\pm=\frac{2s-1\pm\sqrt R}{2s}.
+\]
+Here $R=D-4$, which is positive by Lemma~\ref{lem:disc} because $5-12\delta+8\delta^2>4$, and $R<1$. Moreover $2s-1>0$
+and $(2s-1)^2-R=4\bigl((1-s)^2+s\delta\bigr)>0$, so $0<x_-<x_+<1$. Substitution in~\eqref{eq:fdelta} gives
+$f(x_+)=x_-$ and $f(x_-)=x_+$; equivalently, $x_\pm$ are the zeros of the quadratic factor $H$ of
+Lemma~\ref{lem:second}. So $V$ has a two-cycle and is not regular. Given $\lambda<\delta_*$, choose
+$\delta\in(\max(\lambda,0),\delta_*)$; all coefficients of this operator, namely $\delta$ and $1-\delta$, exceed
+$\lambda$. Hence $\lambda_2=\delta_*$.
+\end{proof}
+
+\begin{remark}\label{rem:binaryupper}
+For $m=2$, Theorem~\ref{thm:upper} gives the regularity of $V$ for $\mu(P)>C_2=(2-\sqrt2)/4=0.146\dots$, a weaker
+statement than Theorem~\ref{thm:binary}, by a different argument. The construction of Section~\ref{sec:lower} needs a
+third type.
+\end{remark}
+
+\section{A contraction in the Fisher--Rao metric}\label{sec:upper}
+
+For $x$ in the interior of $S^{m-1}$ and a tangent vector $h\in\R^m$ with $\sum_ih_i=0$, let
+\[
+|h|_x^2=\sum_{i=1}^m\frac{h_i^2}{x_i}.
+\]
+This is the Fisher--Rao metric. The map $x\mapsto2\sqrt x=(2\sqrt{x_1},\dots,2\sqrt{x_m})$ carries it to the round metric
+on the sphere of radius $2$, so $S^{m-1}$ is isometric to the closed positive orthant of that sphere, with the distance
+\begin{equation}\label{eq:dist}
+d(x,y)=2\arccos\Bigl(\sum_{i=1}^m\sqrt{x_iy_i}\Bigr).
+\end{equation}
+The distance $d$ is continuous on $S^{m-1}\times S^{m-1}$ and induces the usual topology, so $(S^{m-1},d)$ is compact
+and complete. For $x,y$ in the interior, the shorter great-circle arc between $2\sqrt x$ and $2\sqrt y$ stays in the
+open orthant, and its length is $d(x,y)$.
+
+\begin{lemma}\label{lem:fisher}
+Let $W$ be a quadratic stochastic operator with coefficients $Q_{ij,k}$, let $x$ be in the interior of $S^{m-1}$ and let
+$\sum_ih_i=0$. Then
+\[
+\sum_{k:\,W_k(x)>0}\frac{(DW(x)h)_k^2}{W_k(x)}\le2|h|_x^2,
+\]
+and $(DW(x)h)_k=0$ whenever $W_k(x)=0$.
+\end{lemma}
+
+\begin{proof}
+Put $u_i=h_i/x_i$. By symmetry of $Q$, $(DW(x)h)_k=2Q(x,h)_k=\sum_{i,j}Q_{ij,k}x_ix_j(u_i+u_j)$. If $W_k(x)=0$, then
+$Q_{ij,k}=0$ for all $i,j$, because every $x_ix_j$ is positive, and so $(DW(x)h)_k=0$. Otherwise the Cauchy--Schwarz
+inequality with the weights $Q_{ij,k}x_ix_j$, which sum to $W_k(x)$, gives
+\[
+(DW(x)h)_k^2\le W_k(x)\sum_{i,j}Q_{ij,k}x_ix_j(u_i+u_j)^2 .
+\]
+Divide by $W_k(x)$ and sum over $k$; since $\sum_kQ_{ij,k}=1$,
+\[
+\sum_k\frac{(DW(x)h)_k^2}{W_k(x)}\le\sum_{i,j}x_ix_j(u_i+u_j)^2=2\sum_ix_iu_i^2+2\Bigl(\sum_ix_iu_i\Bigr)^2=2|h|_x^2,
+\]
+because $\sum_ix_iu_i=\sum_ih_i=0$.
+\end{proof}
+
+\begin{lemma}\label{lem:mix}
+Let $q$ be a probability vector with positive entries, let $v\in\R^m$ with $\sum_kv_k=0$, and let $\mu>0$ and
+$t\ge0$. Then
+\[
+\sum_k\frac{v_k^2}{\mu+tq_k}\le\frac{1}{t+2\mu}\sum_k\frac{v_k^2}{q_k}.
+\]
+The constant is sharp. It is attained for $m=2$ at $q=(1/2,1/2)$, and for $m>2$ it is approached as $q$ tends to
+$(1/2,1/2,0,\dots,0)$.
+\end{lemma}
+
+\begin{proof}
+The right side minus the left side is $\frac{\mu}{t+2\mu}\sum_kv_k^2\frac{1-2q_k}{q_k(\mu+tq_k)}$, so it suffices to
+show
+\begin{equation}\label{eq:mix}
+\sum_kv_k^2\frac{1-2q_k}{q_k(\mu+tq_k)}\ge0 .
+\end{equation}
+If $q_k\le1/2$ for every $k$, each term is non-negative. Otherwise exactly one entry exceeds $1/2$, say $q_1=s>1/2$, and
+the others are positive and sum to $r=1-s<1/2$. For $k\ge2$ put $a_k=(1-2q_k)/(q_k(\mu+tq_k))>0$. The function
+$\varphi(q)=q(\mu+tq)/(1-2q)$ is non-negative, increasing and convex on $[0,1/2)$ and vanishes at $0$, so it is
+superadditive there, and
+\[
+\sum_{k\ge2}\frac1{a_k}=\sum_{k\ge2}\varphi(q_k)\le\varphi(r)=\frac{r(\mu+tr)}{2s-1}\le\frac{s(\mu+ts)}{2s-1}.
+\]
+By the Cauchy--Schwarz inequality and $\sum_{k\ge2}v_k=-v_1$,
+\[
+\sum_{k\ge2}a_kv_k^2\ge\frac{v_1^2}{\sum_{k\ge2}a_k^{-1}}\ge v_1^2\,\frac{2s-1}{s(\mu+ts)},
+\]
+which is the negative of the term $k=1$ in~\eqref{eq:mix}. For $q=(1/2,1/2,0,\dots,0)$ restricted to its support and
+$v=(1,-1,0,\dots,0)$, both sides equal $4/(t+2\mu)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:upper}]
+Let $\mu=\mu(P)>C_m$. If $\mu=1/m$, $V$ is constant. Otherwise write $V=\mu\one+tW$ as in~\eqref{eq:split}, with
+$t=1-m\mu$. Let $x$ be in the interior of $S^{m-1}$ and $\sum_ih_i=0$. Then $DV(x)h=t\,DW(x)h$ and $V_k(x)=\mu+tW_k(x)$.
+Apply Lemma~\ref{lem:mix} with $q=W(x)$ and $v=DW(x)h$, after deleting the coordinates with $W_k(x)=0$ (there $v_k=0$
+by Lemma~\ref{lem:fisher}, and the remaining entries of $q$ still sum to $1$ and those of $v$ to $0$), and then
+Lemma~\ref{lem:fisher}:
+\begin{equation}\label{eq:K}
+|DV(x)h|_{V(x)}^2=t^2\sum_k\frac{(DW(x)h)_k^2}{\mu+tW_k(x)}\le\frac{t^2}{t+2\mu}\sum_{k:\,W_k(x)>0}\frac{(DW(x)h)_k^2}{W_k(x)}\le K^2|h|_x^2,
+\end{equation}
+where
+\[
+K^2=\frac{2t^2}{t+2\mu}=\frac{2(1-m\mu)^2}{1-(m-2)\mu}.
+\]
+Let $x,y$ be in the interior and let $\gamma$ be the curve in $S^{m-1}$ whose image under $x\mapsto2\sqrt x$ is the
+shorter great-circle arc from $2\sqrt x$ to $2\sqrt y$. By~\eqref{eq:K} the curve $V\circ\gamma$, which joins $Vx$ to
+$Vy$, has Fisher--Rao length at most $K\,d(x,y)$, and $d(Vx,Vy)$ is at most that length because great-circle arcs are
+shortest on the sphere. So $d(Vx,Vy)\le K\,d(x,y)$ on the interior, and by continuity on all of $S^{m-1}$.
+
+Finally, $K<1$ is equivalent to $2(1-m\mu)^2<1-(m-2)\mu$, that is, to
+\[
+2m^2\mu^2-(3m+2)\mu+1<0 .
+\]
+The roots of this quadratic are $\bigl(3m+2\mp\sqrt{m^2+12m+4}\bigr)/(4m^2)$. The smaller one is $C_m$, and the larger
+one is at least $1/m$ because $\sqrt{m^2+12m+4}\ge m-2$. Hence $K<1$ for $C_m<\mu<1/m$, $V$ is a contraction of the
+complete metric space $(S^{m-1},d)$, and the Banach contraction principle shows that $V$ is regular. If all coefficients
+exceed $C_m$, then so does $\mu(P)$; thus $\lambda_m\le C_m$. At $\mu=1/(2m)$ one has $K^2=m/(m+2)<1$, and
+$1/(2m)<1/m$, so $C_m<1/(2m)$.
+\end{proof}
+
+\begin{remark}\label{rem:l1}
+The set $\Delta_\mu$ also gives a sharper $\ell^1$ bound than Proposition~\ref{prop:l1}. For $x\in\Delta_\mu$ let
+$B_{ki}=\sum_jQ_{ij,k}x_j$. The columns $i$ and $l$ of the stochastic matrix $B$ have overlap
+$\sum_k\min(B_{ki},B_{kl})\ge\sum_kQ_{il,k}\min(x_l,x_i)\ge\mu$, so the Dobrushin coefficient of $B$ is at most $1-\mu$.
+Since $DV(x)=2tB$ on the tangent space, integration along segments in the convex set $\Delta_\mu$ shows that $V$ contracts $\Delta_\mu$ in the
+$\ell^1$ norm with factor $2(1-m\mu)(1-\mu)$, which is less than $1$ for $\mu>1/(m+1+\sqrt{m^2+1})$. This threshold
+lies between $C_m$ and $1/(2m)$.
+\end{remark}
+
+\section{Positive operators with a two-cycle}\label{sec:lower}
+
+Let $m\ge3$. Divide the types into the classes $\mathcal A=\{1\}$, $\mathcal C=\{3\}$ and $\mathcal B=\{2,4,5,\dots,m\}$,
+and let $Q$ be the deterministic heredity rule in which the offspring of parents from the classes
+\[
+\mathcal A\mathcal A\text{ or }\mathcal A\mathcal B\ \text{ is of type }3,\qquad
+\mathcal C\mathcal C\text{ or }\mathcal C\mathcal B\ \text{ is of type }1,\qquad
+\mathcal A\mathcal C\text{ or }\mathcal B\mathcal B\ \text{ is of type }2 .
+\]
+That is, $Q_{ij,k}=1$ if $k$ is the type assigned to the classes of $i$ and $j$, and $Q_{ij,k}=0$ otherwise. For
+$0<\ell<1/m$ put $\tau=1-m\ell$ and
+\begin{equation}\label{eq:P}
+P_{ij,k}=\ell+\tau Q_{ij,k}.
+\end{equation}
+These coefficients satisfy~\eqref{eq:coeff}, take only the values $\ell$ and $1-(m-1)\ell$, and have $\mu(P)=\ell$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:lower}]
+Write $a=x_1$, $c=x_3$ and $z=\sum_{i\in\mathcal B}x_i=1-a-c$. By~\eqref{eq:split} and the rule above, the operator
+$V$ defined by~\eqref{eq:P} is
+\begin{equation}\label{eq:map}
+(Vx)_1=\ell+\tau(c^2+2cz),\qquad (Vx)_3=\ell+\tau(a^2+2az),\qquad (Vx)_k=\ell\ \ (k\ge4),
+\end{equation}
+and $(Vx)_2$ is determined by $\sum_k(Vx)_k=1$. Let $\ell\in(0,L_m)$, so that
+\begin{equation}\label{eq:tau}
+\tau>\frac12\Bigl(1+\frac1{\sqrt{m+1}}\Bigr).
+\end{equation}
+Put
+\[
+z_0=\frac1\tau-1=\frac{m\ell}{\tau},\qquad \sigma=2-\frac1\tau,\qquad
+\Lambda=\sigma^2-\frac{4\ell}{\tau}=\frac{(m+1)(2\tau-1)^2-1}{m\tau^2},
+\]
+where the last expression follows from $\ell=(1-\tau)/m$. By~\eqref{eq:tau}, $\sigma>0$ and $\Lambda>0$, so the numbers
+$u=(\sigma+\sqrt\Lambda)/2$ and $v=(\sigma-\sqrt\Lambda)/2$ are real and distinct, with $u+v=\sigma$ and $uv=\ell/\tau>0$;
+hence $u,v>0$. Since $z_0/\ell=m/\tau>m-3$, the points
+\[
+X=\bigl(u,\ z_0-(m-3)\ell,\ v,\ \ell,\dots,\ell\bigr),\qquad Y=\bigl(v,\ z_0-(m-3)\ell,\ u,\ \ell,\dots,\ell\bigr)
+\]
+have positive coordinates, and their coordinates sum to $u+v+z_0=1$; so $X\ne Y$ lie in $S^{m-1}$, and for both of them
+$z=z_0$. Using $\tau(1+z_0)=1$, $u+v+2z_0=1/\tau$ and $\ell=\tau uv$, \eqref{eq:map} gives at $X$
+\[
+(VX)_1=\tau uv+\tau v(v+2z_0)=\tau v(u+v+2z_0)=v,
+\]
+and in the same way $(VX)_3=u$. The coordinates $k\ge4$ equal $\ell$, and then $(VX)_2=z_0-(m-3)\ell$. So $VX=Y$, and by
+the symmetry between the types $1$ and $3$ in the rule, $VY=X$. The operator $V$ has the two-cycle $\{X,Y\}$ and is not
+regular, and $\mu(P)=\ell$. Given $\lambda<L_m$, choose $\ell\in(\max(\lambda,0),L_m)$; all coefficients
+of~\eqref{eq:P} exceed $\lambda$. Hence $\lambda_m\ge L_m$.
+\end{proof}
+
+\begin{remark}\label{rem:bifurcation}
+The two-cycle is born from the symmetric fixed point at $\ell=L_m$. In the coordinates $e=a-c$ and $z$ the map
+\eqref{eq:map} reads $e'=-\tau(1+z)e$ and $z'=(m-2)\ell+\frac\tau2(3z^2-2z+1-e^2)$, and the derivative at the fixed
+point with $e=0$ has the eigenvalue $-1$ in the direction of $e$ exactly when $\ell=L_m$. If the offspring types $1$ and
+$3$ are exchanged in the rule, the first equation becomes $e'=\tau(1+z)e$, and $X$, $Y$ are two distinct fixed points
+instead of a two-cycle.
+\end{remark}
+
+\begin{remark}\label{rem:examples}
+For some rational $\ell$ the cycle has explicit coordinates. For $m=3$ and $\ell=2/25$,
+$X=\bigl((13+\sqrt{17})/38,\ 6/19,\ (13-\sqrt{17})/38\bigr)$ and the coefficients are $2/25$ and $21/25$. For $m=4$ and
+$\ell=11/160$, $X=\bigl((18+\sqrt5)/58,\ 1441/4640,\ (18-\sqrt5)/58,\ 11/160\bigr)$. For $m=5$ and $\ell=7/120$,
+$X=\bigl((25+\sqrt{30})/85,\ 301/1020,\ (25-\sqrt{30})/85,\ 7/120,\ 7/120\bigr)$. In these three examples the cycle
+attracts a neighbourhood of itself: the derivative of $V^2$ at $X$, restricted to the tangent space of $S^{m-1}$, has
+spectral radius $0.947$, $0.993$ and $0.980$ respectively, computed from its exact characteristic polynomial.
+\end{remark}
+
+\section{Numerical searches}\label{sec:numerics}
+
+Table~\ref{tab:search} gives, for $m=3,4$, the largest least coefficient reached by numerical optimization of an
+operator with a two-cycle or with two distinct fixed points. For given points $X\ne Y$ of $S^{m-1}$, the largest $\mu(P)$
+subject to $VX=Y$ and $VY=X$ (or to $VX=X$ and $VY=Y$) is the value of a linear program in the coefficients. The points
+are optimized by differential evolution under a lower bound on the separation $|X_1-Y_1|$, which keeps a fixed point
+from counting as a cycle, and the best results are then refined in all variables together. The values approach $L_m$
+from below as the separation decreases, and none exceeds $L_m$. In random samples of $4{,}320$ operators with least
+coefficient between $L_m+10^{-4}$ and $C_m+10^{-4}$, the trajectories from the vertices and from four random points
+converge to a common limit. These computations do not exclude cycles of longer period, non-periodic invariant sets or a
+different family with least coefficient in $(L_m,C_m]$.
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{rcccc}
+\toprule
+$m$ & separation & largest $\mu(P)$ found & $L_m$ & $C_m$\\
+\midrule
+3 & $0.04$ & $0.083221$ & $0.083333$ & $0.111111$\\
+3 & $0.008$ & $0.083329$ & $0.083333$ & $0.111111$\\
+4 & $0.04$ & $0.069005$ & $0.069098$ & $0.089903$\\
+4 & $0.008$ & $0.069095$ & $0.069098$ & $0.089903$\\
+\bottomrule
+\end{tabular}
+\caption{Largest least coefficient of an operator with a two-cycle or two distinct fixed points reached by the
+optimization of Section~\ref{sec:numerics}, for two lower bounds on the separation $|X_1-Y_1|$.}\label{tab:search}
+\end{table}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved Theorems~\ref{thm:binary}, \ref{thm:upper} and~\ref{thm:lower}; a second Codex agent
+checked the proofs as a referee, gave the $\ell^1$ bound of Remark~\ref{rem:l1} its proof and ran the searches of
+Section~\ref{sec:numerics}; Claude agents (Anthropic) checked the steps and prepared the manuscript. The problem and the bound $1/(2m)$ are due
+to Rasul N. Ganikhodzhaev and A. T. Sarymsakov~\cite{GS88}, Ganikhodzhaev and Utkir A. Rozikov~\cite{GR09} and
+Ganikhodzhaev, Farrukh Mukhamedov and Rozikov~\cite{GMR11}; the binary discriminant criterion to Yu. I.
+Lyubich~\cite{Lyubich74}, as recalled by Karim, Hamzah and Nasir Ganikhodjaev~\cite{KHG22}; positive operators with
+several fixed points to Krapivin and Lyubich~\cite{KL76}; the ergodicity coefficient to Dobrushin~\cite{Dobrushin56} and
+the optimal $\ell^1$ contraction to Fasino and Tudisco~\cite{FT20}; the doubly stochastic case to M.~Kh. Saburov and
+Kh.~Kh. Saburov~\cite{SS25}. New here are the value of $\lambda_2$ with its boundary case, the Fisher--Rao contraction
+behind Theorem~\ref{thm:upper} and the two-cycles behind Theorem~\ref{thm:lower}. The author directed
+the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Code availability}
+Exact checks of the identities in Sections~\ref{sec:binary}--\ref{sec:lower}, of the two-cycles for $m=3,\dots,8$ and of
+the examples of Remark~\ref{rem:examples}, and the searches of Section~\ref{sec:numerics}, are in the repository
+\begin{center}\url{https://github.com/yspennstate/qso-regularity-threshold/tree/v1.1}.\end{center}
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Symbol & Meaning & First used\\
+\midrule
+$S^{m-1}$ & the simplex of probability vectors in $\R^m$ & Section~\ref{sec:intro}\\
+$P_{ij,k}$ & heredity coefficients of $V$ & \eqref{eq:qso}\\
+$\mu(P)$, $\mu$ & the least heredity coefficient & Section~\ref{sec:intro}\\
+$\lambda_m$ & the regularity threshold & \eqref{eq:lambda}\\
+$C_m$, $L_m$ & the upper and lower bounds for $\lambda_m$ & Theorems~\ref{thm:upper}, \ref{thm:lower}\\
+$t$ & $1-m\mu$ & Section~\ref{sec:prelim}\\
+$Q_{ij,k}$, $W$, $Q(x,y)$ & $P$, $V$ and the bilinear map without the uniform part & \eqref{eq:split}\\
+$\one$ & the vector $(1,\dots,1)$ & \eqref{eq:split}\\
+$\Delta_\mu$ & points of $S^{m-1}$ with all coordinates $\ge\mu$ & Section~\ref{sec:prelim}\\
+$a,b,c$; $A,B,C$ & coefficients of the binary map $f$ & \eqref{eq:f}\\
+$D$ & the discriminant of $f(x)-x$ & Lemma~\ref{lem:disc}\\
+$\delta_*$ & $(3-\sqrt7)/4$ & Section~\ref{sec:binary}\\
+$H$ & the quadratic factor of $f(f(x))-x$ & Lemma~\ref{lem:second}\\
+$|h|_x$, $d$ & the Fisher--Rao norm and distance & \eqref{eq:dist}\\
+$K$ & the Lipschitz constant of $V$ for $d$ & \eqref{eq:K}\\
+$\mathcal A,\mathcal B,\mathcal C$ & classes of types & Section~\ref{sec:lower}\\
+$\ell$, $\tau$ & the least coefficient and $1-m\ell$ in~\eqref{eq:P} & \eqref{eq:P}\\
+$z_0,\sigma,\Lambda,u,v$ & parameters of the two-cycle $X,Y$ & Section~\ref{sec:lower}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{FT20} D.~Fasino and F.~Tudisco, Ergodicity coefficients for higher-order stochastic processes, \emph{SIAM J.\
+Math.\ Data Sci.} \textbf{2} (2020), no.~3, 740--769. \doi{10.1137/19M1285214}
+\bibitem{GMR11} R.~Ganikhodzhaev, F.~Mukhamedov and U.~Rozikov, Quadratic stochastic operators and processes: results
+and open problems, \emph{Infin.\ Dimens.\ Anal.\ Quantum Probab.\ Relat.\ Top.} \textbf{14} (2011), no.~2, 279--335.
+\doi{10.1142/S0219025711004365}
+\bibitem{GR09} R.~N.~Ganikhodzhaev and U.~A.~Rozikov, Quadratic stochastic operators: results and open problems,
+preprint (2009), \href{https://arxiv.org/abs/0902.4207}{arXiv:0902.4207}.
+\bibitem{GS88} R.~N.~Ganikhodzhaev and A.~T.~Sarymsakov, A simple criterion for regularity of quadratic stochastic
+operators, \emph{Dokl.\ Akad.\ Nauk UzSSR} (1988), no.~11, 5--6 (in Russian).
+\bibitem{KHG22} S.~N.~Karim, N.~Z.~A.~Hamzah and N.~Ganikhodjaev, On the dynamics of geometric quadratic stochastic
+operator generated by 2-partition on countable state space, \emph{Malays.\ J.\ Math.\ Sci.} \textbf{16} (2022), no.~4,
+727--737. \doi{10.47836/mjms.16.4.06}
+\bibitem{Dobrushin56} R.~L.~Dobrushin, Central limit theorem for nonstationary Markov chains. I, \emph{Theory Probab.\
+Appl.} \textbf{1} (1956), no.~1, 65--80. \doi{10.1137/1101006}
+\bibitem{KL76} A.~A.~Krapivin and Yu.~I.~Lyubich, Estimate of the dimension of the set of fixed points of a class of
+quadratic operators, \emph{Sib.\ Math.\ J.} \textbf{17} (1976), no.~4, 704--707. \doi{10.1007/BF00971683}
+\bibitem{KL77} A.~A.~Krapivin and Yu.~I.~Lyubich, Estimates of Lipschitz constants for polynomial operators in a
+simplex, \emph{Soviet Math.\ Dokl.} \textbf{18} (1977), 718--721.
+\bibitem{Lyubich74} Yu.~I.~Lyubich, Iterations of quadratic mappings, in \emph{Mathematical Economics and Functional
+Analysis}, Nauka, Moscow, 1974 (in Russian).
+\bibitem{S26} M.~Saburov, Monte-Carlo methods for stochastic hyper-matrices and global asymptotic stability of
+polynomial stochastic operators, \emph{Funct.\ Anal.\ Appl.} \textbf{60} (2026), no.~3, 312--318.
+\doi{10.1134/S1234567826030109}
+\bibitem{SS25} M.~Kh.~Saburov and Kh.~Kh.~Saburov, The nonlinear Perron--Frobenius stability problem for cubic stochastic
+matrices, \emph{Russian Math.\ Surveys} \textbf{80} (2025), no.~5, 931--933. \doi{10.4213/rm10256e}
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24},
+\doi{10.5281/zenodo.24150837}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,578 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Frozen edges of tridiagonal GUE dynamics]{Frozen edges of stationary tridiagonal dynamics with GUE spectra}
+\author{Yitzchak Shmalo}
+\address{Yitzchak Shmalo, Tel Aviv University and Heights Labs}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60B20, 60J60, 15B52}
+\keywords{Dyson Brownian motion, tridiagonal matrix models, Gaussian unitary ensemble, Airy line ensemble, operator
+limits, reversible diffusions}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Vir\'ag asked whether matrix-valued Brownian motion has an operator limit. A natural candidate is a stationary
+diffusion on tridiagonal matrices with the Dumitriu--Edelman law of the Gaussian unitary ensemble (GUE) at every time.
+We show that the simplest such diffusion, with independent Ornstein--Uhlenbeck diagonal entries and independent radial
+Ornstein--Uhlenbeck off-diagonal entries, has frozen edge eigenvalues on the time scale on which Dyson Brownian motion
+moves. For each fixed $k$ the $k$ largest edge-scaled eigenvalues converge, uniformly on compact time intervals, to a
+vector that does not depend on time, so they do not converge to the Airy line ensemble. The same holds for every
+stationary reversible tridiagonal diffusion with this invariant law whose entry noise is bounded uniformly in the
+dimension. An exact tridiagonal realization of Dyson Brownian motion with these marginals needs entry noise that grows
+with the dimension. Vir\'ag's question remains open.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Vir\'ag's survey of operator limits of random matrices closes with a list of questions; Question~8 of
+\cite{Vir14}, on page~25 of the arXiv version, asks: \emph{are there operator limits of matrix-valued (say Hermitian)
+Brownian motion?} The static theory supplies the template. Dumitriu and Edelman \cite[Theorems~2.1 and~2.12]{DE02}
+showed that the Gaussian beta ensemble is the spectrum of a random Jacobi matrix with independent Gaussian diagonal and
+chi-distributed off-diagonal entries, and Ram\'irez, Rider and Vir\'ag \cite{RRV11} proved that, seen at the soft edge
+on the scale $n^{-1/6}$, these matrices converge to the stochastic Airy operator; see \cite[Theorem~5.1]{Vir14}. In the
+bulk the Sine$_\beta$ operator of Valk\'o and Vir\'ag \cite{VV17} plays the same role. A dynamic version would couple
+the matrices over physical time so that the operators converge as processes and the spectrum moves like Dyson Brownian
+motion.
+
+Two features make the question delicate. First, a static law on tridiagonal matrices says nothing about two-time laws.
+Second, the edge of the stochastic Airy operator is governed by a corner of the Jacobi matrix of size of order
+$n^{1/3}$, which grows with $n$, so a fixed number of tridiagonal entries cannot determine the edge dynamics.
+Edelman, Jeong and Nissim \cite[Theorem~3.1]{EJN24} proved that, for the tridiagonal model obtained from Dyson Brownian
+motion on real symmetric matrices, each fixed finite set of entries converges to independent Ornstein--Uhlenbeck
+processes with position-dependent rates, and they leave the operator limit as a problem \cite[Problem~4]{EJN24}.
+Holcomb and Paquette \cite{HP17} gave tridiagonal realizations of Dyson Brownian motion driven jointly by the
+eigenvalues and the spectral weights, and Allez and Guionnet \cite{AG13} constructed invariant matrix diffusions with
+Dyson eigenvalue dynamics. The spectral side is well understood: the largest eigenvalues of stationary Dyson Brownian motion
+converge at the edge to the Airy line ensemble \cite{CH14,Lan20,GXZ24}, and the general-beta line ensemble has been
+characterized through its pole dynamics \cite{HZ26}. None of these results produces a convergent family of random
+differential operators in physical time.
+
+The simplest dynamics with the right marginals assigns to every Dumitriu--Edelman entry its own stationary diffusion:
+an Ornstein--Uhlenbeck process for each diagonal entry and a radial Ornstein--Uhlenbeck process, of the dimension
+dictated by the chi law, for each off-diagonal entry. These are the beta-Hermite processes of Li \cite{Li10} at
+$\beta=2$, after a deterministic normalization; Li already observed that their eigenvalues do not follow Dyson's
+equations, and Yabuoku \cite{Yab23} computed the eigenvalue equations of related independent-entry processes.
+Akemann, Majumdar and P\"a{\ss}ler \cite{AMP26} started the same kind of process from the zero matrix, computed the
+joint law of its eigenvalues at every time and studied it under stochastic resetting. Our main
+result shows that at the edge these dynamics are far from Dyson's: on the time scale $n^{-1/3}$ on which the edge of
+Dyson Brownian motion moves by order one, the edge of the tridiagonal process does not move at all.
+
+\subsection{The process}\label{sec:process}
+Throughout, a GUE matrix $G$ has independent entries $G_{ii}\sim N(0,1)$ and $G_{ij}=(U_{ij}+iV_{ij})/\sqrt2$ for
+$i<j$, with $U_{ij},V_{ij}$ independent standard normal; its density is proportional to $\exp(-\Tr G^2/2)$ and its
+spectral edge is near $2\sqrt n$. For $\beta=2$ the Dumitriu--Edelman law is the law of the real symmetric tridiagonal
+matrix with independent entries
+\begin{equation}\label{eq:DE}
+a_i\sim N(0,1)\quad(1\le i\le n),\qquad b_i\sim\chi_{2(n-i)}/\sqrt2\quad(1\le i<n)
+\end{equation}
+on the diagonal and off the diagonal, and its eigenvalues have the joint law of the GUE eigenvalues
+\cite[Theorem~2.12]{DE02}. We call \eqref{eq:DE} the Dumitriu--Edelman law; a real tridiagonal matrix does not, of
+course, have the law of $G$ itself.
+
+Let $a_1(t),\dots,a_n(t)$ be independent stationary real Ornstein--Uhlenbeck processes, $da=-a\,dt+\sqrt2\,dW$, and let
+$Z_i(t)\in\RR^{2(n-i)}$, $1\le i<n$, be independent stationary vector Ornstein--Uhlenbeck processes whose coordinates are
+independent copies of the same scalar process, independent of the $a_i$. Put
+\begin{equation}\label{eq:process}
+b_i(t)=|Z_i(t)|/\sqrt2,\qquad T_n(t)=\operatorname{tridiag}\bigl(b_{i-1}(t),a_i(t),b_i(t)\bigr).
+\end{equation}
+We call $T_n$ the tridiagonal Ornstein--Uhlenbeck process. Let $\lambda_{1,n}(t)>\dots>\lambda_{n,n}(t)$ be its
+eigenvalues and define the edge-scaled eigenvalues
+\begin{equation}\label{eq:X}
+X_{j,n}(s)=n^{1/6}\bigl(\lambda_{j,n}(sn^{-1/3})-2\sqrt n\bigr).
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+The process $T_n$ is stationary, reversible and Markov, has continuous paths and simple spectrum at all times almost
+surely, and has the Dumitriu--Edelman law \eqref{eq:DE} at every time. Let $k\ge1$ and $S>0$, put
+$r_n=\sqrt{12\log n}$, and let $n$ satisfy $\lfloor n^{1/4}\rfloor\ge k$. Then
+\begin{equation}\label{eq:main}
+\EE\max_{1\le j\le k}\sup_{0\le s\le S}\bigl|X_{j,n}(s)-X_{j,n}(0)\bigr|^2
+\le 60\,kS\left(2\Bigl(\frac{6r_n+\pi^2k^2+2}{\sqrt n}\Bigr)^{1/2}+4n^{-5}\right).
+\end{equation}
+The right-hand side is $O_k\bigl(S\,n^{-1/4}(\log n)^{1/4}\bigr)$, with an implied constant depending only on $k$.
+\end{theorem}
+
+\begin{corollary}\label{cor:frozen}
+For each $k$ and $S$, the processes $(X_{1,n},\dots,X_{k,n})$ converge in law in $C([0,S],\RR^k)$ to the process that is
+constant in time and equal at every time to a vector with the joint law of the $k$ largest points of the Airy point process.
+For every $s>0$ the limit satisfies $X_1(s)=X_1(0)$ almost surely, while the top curve $\mathcal A_1$ of the Airy line
+ensemble satisfies $\PP\{\mathcal A_1(s)=\mathcal A_1(0)\}=0$.
+\end{corollary}
+
+Section~\ref{sec:normal} fixes the clock: with the normalization above, the edge of the rate-one matrix
+Ornstein--Uhlenbeck process at physical time $sn^{-1/3}$ corresponds to the Airy line ensemble at time $s$. The
+corollary therefore says that the tridiagonal Ornstein--Uhlenbeck process cannot have the Airy line ensemble as its edge
+limit on any time scale comparable to Dyson's.
+
+The proof uses only reversibility and the invariant law, so it extends to a class of diffusions
+(Corollary~\ref{cor:bounded}): if a stationary reversible diffusion on Jacobi matrices has the Dumitriu--Edelman
+invariant law and its entry noise has a covariance operator bounded by a constant $K$ independent of $n$, its edge
+freezes in the same way. Without reversibility there is still a pointwise restriction
+(Proposition~\ref{prop:growth}): an exact tridiagonal realization of Dyson Brownian motion with Dumitriu--Edelman
+marginals needs entry noise whose covariance operator has norm at least of order $n^{1/4}(\log n)^{-1/4}$. These
+statements rule out a natural class of candidates. They do not rule out operator limits with unbounded or correlated
+entry noise, nonreversible dynamics, other coordinate systems, or limits that are not tridiagonal at all, and they do
+not answer Question~8 in either direction.
+
+The proof of Theorem~\ref{thm:main} has three ingredients. A forward--backward martingale decomposition, in the spirit
+of Lyons and Zheng \cite{LZ88}, bounds the supremum of an increment of a stationary reversible diffusion by its
+\emph{carr\'e du champ} alone, with no control of the drift (Lemma~\ref{lem:maximal}). For the tridiagonal
+Ornstein--Uhlenbeck process the carr\'e du champ of an eigenvalue is at most three times the inverse participation
+ratio $\sum_i v_i^4$ of its eigenvector (Lemma~\ref{lem:noise}), whereas for the full matrix process it equals one.
+Finally, an elementary variational argument shows that the top eigenvectors of the Dumitriu--Edelman matrix are spread
+over at least $n^{1/4}$ coordinates (Lemma~\ref{lem:deloc}). The simulations of Section~\ref{sec:sims} suggest that
+the expected inverse participation ratio is of order $n^{-1/3}$; any bound tending to zero suffices for the proof.
+
+\subsection{Organization}
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+Section & Content\\
+\midrule
+\ref{sec:normal} & normalization of Dyson Brownian motion and the Airy clock\\
+\ref{sec:maximal} & maximal inequality (Lemma~\ref{lem:maximal}) and eigenvalue noise (Lemma~\ref{lem:noise})\\
+\ref{sec:proof} & delocalization (Lemma~\ref{lem:deloc}); proofs of Theorem~\ref{thm:main} and
+Corollary~\ref{cor:frozen}\\
+\ref{sec:extensions} & bounded noise (Corollary~\ref{cor:bounded}), exact realizations
+(Proposition~\ref{prop:growth}), Lanczos model\\
+\ref{sec:sims} & simulations of both processes\\
+\bottomrule
+\end{tabular}
+\end{center}
+In the simulations the two-time correlation of the largest edge-scaled eigenvalue of the tridiagonal
+Ornstein--Uhlenbeck process increases with $n$ toward one, while for Hermitian Brownian motion it stays near $0.4$.
+
+\section{Normalization and the clock}\label{sec:normal}
+
+Let $H(t)$ be the stationary rate-one Hermitian Ornstein--Uhlenbeck process with the GUE law of
+Section~\ref{sec:process} at each time: each diagonal entry is a scalar process $dx=-x\,dt+\sqrt2\,dW$, and the real
+and imaginary parts of each off-diagonal entry are independent processes $dx=-x\,dt+dW$. If $B(u)$ is Hermitian
+Brownian motion with $B(1)$ a GUE matrix, then $e^{-t}B(e^{2t})$ is this process. The eigenvalues of $H$ solve
+\begin{equation}\label{eq:DBM}
+d\lambda_j=\sqrt2\,dB_j+\Bigl(2\sum_{\ell\ne j}\frac{1}{\lambda_j-\lambda_\ell}-\lambda_j\Bigr)dt
+\end{equation}
+with independent Brownian motions $B_j$, which is Dyson Brownian motion at $\beta=2$ in this normalization; see
+\cite[Section~4.3]{AGZ10}. The martingale part of $X_j=n^{1/6}(\lambda_j-2\sqrt n)$ has quadratic variation
+$2n^{1/3}\,dt$, so on the clock $t=sn^{-1/3}$ it is $2\,ds$. In the normalization of Corwin and Hammond, the top curves
+$\mathcal A_i$ of the Airy line ensemble are such that $2^{-1/2}(\mathcal A_i(s)-s^2)$ are locally standard Brownian
+bridges \cite[equation~(4) and Theorem~3.1]{CH14}, so their quadratic variation is also $2\,ds$. Thus physical time
+$sn^{-1/3}$ for $H$ corresponds to Airy time $s$, with no further constant. The same time scale appears from the
+spectral side: the oscillator generator $-\partial_x^2+x^2/4-1/2$ of the scalar Ornstein--Uhlenbeck process, centred at
+$x=2\sqrt n$ and rescaled by $x=2\sqrt n+n^{-1/6}z$, satisfies
+$n^{-1/3}(-\partial_x^2+x^2/4-1/2-n)=-\partial_z^2+z+O(n^{-1/3})+O(n^{-2/3}z^2)$, the Airy operator.
+
+\section{The noise of an eigenvalue}\label{sec:maximal}
+
+This section bounds the movement of a stationary reversible diffusion by its carr\'e du champ and computes the carr\'e
+du champ of an eigenvalue of the tridiagonal Ornstein--Uhlenbeck process.
+
+\subsection{A maximal inequality for reversible diffusions}
+
+Let $Y=(Y_t)_{t\ge0}$ be a stationary Ornstein--Uhlenbeck process on $\RR^N$ with independent rate-one coordinates,
+$dY=-Y\,dt+\sqrt2\,dW$, with generator $L=\Delta-y\cdot\nabla$, invariant law the standard Gaussian measure $\gamma$,
+and carr\'e du champ $\Gamma(f)=|\nabla f|^2$.
+
+\begin{lemma}\label{lem:maximal}
+For every Lipschitz function $f:\RR^N\to\RR$ and every $U>0$,
+\[
+\EE\sup_{0\le t\le U}\bigl|f(Y_t)-f(Y_0)\bigr|^2\le 20\,U\int\Gamma(f)\,d\gamma .
+\]
+\end{lemma}
+
+\begin{proof}
+First let $f$ be smooth with bounded derivatives of all orders. By It\^o's formula,
+$M_t=f(Y_t)-f(Y_0)-\int_0^tLf(Y_r)\,dr$ is a martingale with $d\langle M\rangle_t=2\Gamma(f)(Y_t)\,dt$, so
+$\EE M_U^2=2U\int\Gamma(f)\,d\gamma$ by stationarity. The Gaussian transition kernel of $Y$ is symmetric with respect to
+$\gamma$, so the reversed process $\widehat Y_u=Y_{U-u}$, $0\le u\le U$, has the same law as $(Y_u)_{0\le u\le U}$. Let
+$\widehat M$ be the corresponding martingale for $\widehat Y$, with respect to the filtration of $\widehat Y$. The drift
+integrals cancel in the difference, and
+\[
+f(Y_t)-f(Y_0)=\tfrac12M_t-\tfrac12\bigl(\widehat M_U-\widehat M_{U-t}\bigr),\qquad 0\le t\le U.
+\]
+Hence $\sup_t|f(Y_t)-f(Y_0)|^2\le\frac12\sup_t|M_t|^2+2\sup_u|\widehat M_u|^2$. Doob's $L^2$ inequality bounds the
+expectation of each supremum by $4\cdot 2U\int\Gamma(f)\,d\gamma$, which gives the constant $4+16=20$.
+
+For Lipschitz $f$, let $f_\varepsilon=f*\rho_\varepsilon$ for a smooth compactly supported mollifier $\rho_\varepsilon$.
+Then $f_\varepsilon$ is smooth with bounded derivatives, $f_\varepsilon\to f$ uniformly, and
+$\nabla f_\varepsilon=(\nabla f)*\rho_\varepsilon\to\nabla f$ almost everywhere and boundedly, so
+$\int\Gamma(f_\varepsilon)\,d\gamma\to\int\Gamma(f)\,d\gamma$. The suprema converge uniformly, and the inequality
+passes to the limit.
+\end{proof}
+
+The proof uses neither a bound on the drift nor a spectral gap; only stationarity, reversibility and the martingale
+calculus enter. The same argument applies to any stationary reversible diffusion for which these are available, with
+$2\Gamma$ the density of the quadratic variation of $f(Y)$.
+
+\subsection{The carr\'e du champ of an eigenvalue}\label{sec:noise}
+
+We view $T_n$ as a function of the Gaussian coordinates $(a,Z)=(a_1,\dots,a_n,Z_1,\dots,Z_{n-1})$, which form a
+stationary Ornstein--Uhlenbeck process in dimension $N=n+n(n-1)$ as in Section~\ref{sec:maximal}.
+
+\begin{proof}[Proof of the structural statements of Theorem~\ref{thm:main}]
+The process $(a,Z)$ is a stationary reversible Gaussian Markov process. The transition kernel of each $Z_i$ commutes
+with rotations, so $|Z_i|$ is a Markov process and $(a,|Z_1|,\dots,|Z_{n-1}|)$ is a stationary reversible Markov
+process. At each time its law is that of independent $a_i\sim N(0,1)$ and $|Z_i|\sim\chi_{2(n-i)}$, which is
+\eqref{eq:DE} after dividing by $\sqrt2$. The smallest radial dimension is $2$, and the origin is polar for a
+two-dimensional Ornstein--Uhlenbeck process, so all $b_i(t)$ are positive for all $t$ almost surely. A Jacobi matrix with
+positive off-diagonal entries has simple spectrum, and the ordered eigenvalues depend continuously on the entries, so
+the paths of $\lambda_{j,n}$ are continuous. By It\^o's formula the off-diagonal entries solve
+\[
+db_i=\Bigl(\frac{2(n-i)-1}{2b_i}-b_i\Bigr)dt+d\widetilde W_i
+\]
+with independent Brownian motions $\widetilde W_i$.
+\end{proof}
+
+\begin{lemma}\label{lem:noise}
+Let $f=\lambda_{j,n}$, viewed as a function of $(a,Z)$. Then $f$ is $1$-Lipschitz, and at every point where the spectrum
+is simple and $b_i\ne0$ for all $i$,
+\[
+\Gamma(\lambda_{j,n})=\sum_{i=1}^nv_i^4+2\sum_{i=1}^{n-1}v_i^2v_{i+1}^2\le3\sum_{i=1}^nv_i^4,
+\]
+where $v=(v_1,\dots,v_n)$ is a unit eigenvector of $T_n$ for $\lambda_{j,n}$.
+\end{lemma}
+
+\begin{proof}
+The map $(a,Z)\mapsto T_n$ satisfies $\|T_n-T_n'\|_F^2=\sum_i(a_i-a_i')^2+2\sum_i(b_i-b_i')^2\le|(a,Z)-(a',Z')|^2$,
+since $|b_i-b_i'|\le|Z_i-Z_i'|/\sqrt2$, and ordered eigenvalues are $1$-Lipschitz in the Frobenius norm. At a simple
+eigenvalue, first-order perturbation gives $\partial\lambda_j/\partial a_i=v_i^2$ and
+$\partial\lambda_j/\partial b_i=2v_iv_{i+1}$. Since $|\nabla_{Z_i}b_i|^2=1/2$,
+\[
+\Gamma(\lambda_j)=\sum_iv_i^4+\tfrac12\sum_i(2v_iv_{i+1})^2,
+\]
+and $2v_i^2v_{i+1}^2\le v_i^4+v_{i+1}^4$ gives the bound.
+\end{proof}
+
+For the full Hermitian process $H$ the same computation over all matrix coordinates gives $\Gamma(\lambda_j)=1$, in
+agreement with the noise coefficient $\sqrt2$ in \eqref{eq:DBM}. Lemma~\ref{lem:noise} replaces this by the inverse
+participation ratio of the eigenvector, which is small when the eigenvector is spread out.
+
+\section{Proof of Theorem~\ref{thm:main} and Corollary~\ref{cor:frozen}}\label{sec:proof}
+\subsection{Delocalization of the top eigenvectors}\label{sec:deloc}
+
+Let $T$ have the Dumitriu--Edelman law \eqref{eq:DE}, with eigenvalues $\lambda_1>\dots>\lambda_n$ and unit
+eigenvectors $v^{(j)}$, and let $r_n=\sqrt{12\log n}$. Consider the event
+\begin{equation}\label{eq:En}
+E_n=\Bigl\{\max_i|a_i|\le r_n,\ \max_{i<n}\bigl|b_i-\sqrt{n-i}\bigr|\le r_n\Bigr\}.
+\end{equation}
+
+\begin{lemma}\label{lem:deloc}
+For $n\ge2$, $\PP(E_n^c)\le4n^{-5}$. If $\lfloor n^{1/4}\rfloor\ge j$, then on $E_n$
+\[
+\sum_i\bigl(v_i^{(j)}\bigr)^4\le2\Bigl(\frac{6r_n+\pi^2j^2+2}{\sqrt n+r_n}\Bigr)^{1/2},
+\]
+and consequently $\EE\sum_i(v_i^{(j)})^4\le2\bigl((6r_n+\pi^2j^2+2)/\sqrt n\bigr)^{1/2}+4n^{-5}$.
+\end{lemma}
+
+\begin{proof}
+For $R\sim\chi_d$, $\EE e^{\theta R^2}=(1-2\theta)^{-d/2}$, and the Chernoff bound gives
+$\PP(R^2\ge dy)\le\exp[-d(y-1-\log y)/2]$ for $y>1$ and $\PP(R^2\le dy)\le\exp[-d(y-1-\log y)/2]$ for $y<1$; see also
+\cite[Lemma~1]{LM00}. Since $y-1-\log y\ge(\sqrt y-1)^2$, this gives $\PP(|R-\sqrt d|>u)\le2e^{-u^2/2}$. With
+$d=2(n-i)$ and $u=\sqrt2\,r_n$, each $b_i$ leaves its window with probability at most $2e^{-r_n^2}=2n^{-12}$, and each
+$a_i$ with probability at most $2e^{-r_n^2/2}=2n^{-6}$. A union bound gives $\PP(E_n^c)\le4n^{-5}$.
+
+Assume $E_n$ and put $m=\lfloor n^{1/4}\rfloor\ge j$. Let $A$ be the leading $m\times m$ block of $T$ and let $B$ be the
+$m\times m$ tridiagonal Toeplitz matrix with zero diagonal and off-diagonal entries $\sqrt n$. For $i<m$,
+$0\le\sqrt n-\sqrt{n-i}\le m/\sqrt n$, so every entry of $A-B$ on the diagonal is at most $r_n$ and every off-diagonal
+entry is at most $r_n+m/\sqrt n$ in absolute value. The row-sum bound gives $\|A-B\|\le3r_n+2m/\sqrt n\le3r_n+2$. The
+eigenvalues of $B$ are $2\sqrt n\cos(\ell\pi/(m+1))$, and $2(1-\cos x)\le x^2$ with $(m+1)^2>\sqrt n$ gives
+$2\sqrt n\cos(j\pi/(m+1))\ge2\sqrt n-\pi^2j^2$. By Cauchy interlacing and Weyl's inequality,
+\begin{equation}\label{eq:lower}
+\lambda_j\ge2\sqrt n-3r_n-\pi^2j^2-2 .
+\end{equation}
+
+Let $w_i=|v^{(j)}_i|$, $w_0=w_{n+1}=0$, $M=\sqrt n+r_n$ and $D=\sum_{i=0}^n(w_{i+1}-w_i)^2$. On $E_n$ we have
+$|a_i|\le r_n$ and $0<b_i\le M$, so
+\[
+\lambda_j=\sum_ia_i(v^{(j)}_i)^2+2\sum_ib_iv^{(j)}_iv^{(j)}_{i+1}\le r_n+2M\sum_iw_iw_{i+1}=r_n+M(2-D),
+\]
+using $\sum_iw_i^2=1$. Together with \eqref{eq:lower}, $D\le(6r_n+\pi^2j^2+2)/M$. For every $i$,
+\[
+w_i^2=\sum_{\ell<i}(w_{\ell+1}-w_\ell)(w_{\ell+1}+w_\ell)\le D^{1/2}\Bigl(\sum_\ell(w_{\ell+1}+w_\ell)^2\Bigr)^{1/2}\le2D^{1/2},
+\]
+and $\sum_iw_i^4\le\max_iw_i^2$. Off $E_n$ the inverse participation ratio is at most one.
+\end{proof}
+
+An eigenvector spread evenly over a corner of size $n^{1/3}$ would have inverse participation ratio of order $n^{-1/3}$,
+and the simulated values of $\EE\,\Gamma(\lambda_1)$ in Section~\ref{sec:sims} fall at about this rate. The bound of
+Lemma~\ref{lem:deloc} is weaker, and it is enough for Theorem~\ref{thm:main}.
+
+\subsection{Conclusion of the proofs}
+
+Apply Lemma~\ref{lem:maximal} to $f=n^{1/6}\lambda_{j,n}$, which is Lipschitz by Lemma~\ref{lem:noise}, with
+$U=Sn^{-1/3}$. The spectrum is simple and all $b_i$ are positive $\gamma$-almost everywhere, so Lemma~\ref{lem:noise}
+identifies $\Gamma(f)$ almost everywhere and
+\[
+\EE\sup_{0\le s\le S}|X_{j,n}(s)-X_{j,n}(0)|^2\le20\,Sn^{-1/3}\cdot3n^{1/3}\,\EE\sum_i\bigl(v_i^{(j)}\bigr)^4
+=60\,S\,\EE\sum_i\bigl(v_i^{(j)}\bigr)^4,
+\]
+the expectation taken under the Dumitriu--Edelman law. Bounding the maximum over $j\le k$ by the sum and applying
+Lemma~\ref{lem:deloc} with $j\le k$ proves \eqref{eq:main}.
+
+For Corollary~\ref{cor:frozen}, the vector $(X_{1,n}(0),\dots,X_{k,n}(0))$ has the law of the $k$ largest edge-scaled GUE
+eigenvalues, which converges to the law of the $k$ largest points of the Airy point process \cite{TW94}. The map sending a
+vector to the constant path is continuous from $\RR^k$ to $C([0,S],\RR^k)$, and by \eqref{eq:main} the uniform distance
+between $(X_{j,n})_{j\le k}$ and the constant path at $(X_{j,n}(0))_{j\le k}$ tends to zero in probability. This proves
+the convergence.
+
+For the last statement, fix $s>0$ and an open interval $I\ni s$ whose closure does not contain $0$. By the Brownian Gibbs
+property \cite[Theorem~3.1]{CH14}, conditionally on the curves outside $I\times\{1\}$, the shifted top curve
+$2^{-1/2}(\mathcal A_1(x)-x^2)$ on $I$ is a Brownian bridge between its endpoint values conditioned to stay above the
+second curve. The conditioning event has positive probability, since the endpoints lie strictly above the continuous
+lower curve, so the conditional law is absolutely continuous with respect to the Brownian bridge law. The value of the
+bridge at the interior point $s$ has a continuous distribution, whereas $\mathcal A_1(0)$ is fixed by the conditioning.
+Hence $\PP\{\mathcal A_1(s)=\mathcal A_1(0)\}=0$. \qed
+
+By stationarity, $\operatorname{Cov}(\mathcal A_1(0),\mathcal A_1(s))=\operatorname{Var}(\mathcal A_1(0))-\frac12
+\EE(\mathcal A_1(s)-\mathcal A_1(0))^2$ is strictly smaller than the variance of the Tracy--Widom law, whereas the frozen
+limit has correlation one at every lag. Section~\ref{sec:sims} compares the two numerically.
+
+\section{Bounded noise and exact realizations}\label{sec:extensions}
+
+The proof of Theorem~\ref{thm:main} used two facts about the dynamics: reversibility, through Lemma~\ref{lem:maximal},
+and a bound on the carr\'e du champ of an eigenvalue in terms of the derivatives in the entries. Write $c=(a,b)$ for the
+entries of a Jacobi matrix with positive off-diagonal entries.
+
+\begin{corollary}\label{cor:bounded}
+Let $c(t)$ be a stationary reversible diffusion on Jacobi matrices with the Dumitriu--Edelman invariant law
+\eqref{eq:DE}, for which the forward and backward martingale calculus of Lemma~\ref{lem:maximal} holds for Lipschitz
+functions of the entries. Suppose its carr\'e du champ satisfies
+\begin{equation}\label{eq:bounded}
+\Gamma_n(f)\le K\Bigl(\sum_i|\partial_{a_i}f|^2+\sum_i|\partial_{b_i}f|^2\Bigr)
+\end{equation}
+with $K$ independent of $n$. Then the conclusion of Theorem~\ref{thm:main} holds with $60$ replaced by $100K$.
+\end{corollary}
+
+\begin{proof}
+The forward--backward argument gives Lemma~\ref{lem:maximal} with $\Gamma_n$ in place of $\Gamma$. By the derivative
+formulas in Lemma~\ref{lem:noise},
+$\Gamma_n(\lambda_j)\le K\bigl(\sum_iv_i^4+4\sum_iv_i^2v_{i+1}^2\bigr)\le5K\sum_iv_i^4$. Lemma~\ref{lem:deloc}
+concerns only the invariant law and applies unchanged.
+\end{proof}
+
+Condition \eqref{eq:bounded} is a bound on the covariance operator of the entry noise in the coordinates $(a,b)$; bounded
+individual covariances do not imply it. The assumption on the invariant law matters as well. The diagonal matrix of the
+ordered eigenvalues of stationary Dyson Brownian motion is a reversible continuous diffusion on (degenerate) tridiagonal
+matrices with bounded noise and GUE eigenvalues at every time, and its edge moves; its entry law is not \eqref{eq:DE}, and
+Lemma~\ref{lem:deloc} fails for it. If $K=K_n$ depends on $n$, the conclusion persists as long as
+$K_nn^{-1/4}(\log n)^{1/4}\to0$.
+
+Reversibility is not needed for a pointwise restriction on exact realizations of \eqref{eq:DBM}.
+
+\begin{proposition}\label{prop:growth}
+Let $c(t)$ be a stationary continuous semimartingale on Jacobi matrices with positive off-diagonal entries and the
+Dumitriu--Edelman law at each time, with quadratic covariation $d\langle c\rangle_t=2C_n(c_t)\,dt$, and suppose its
+eigenvalues solve \eqref{eq:DBM}. Then for almost every $t$, almost surely,
+\[
+\|C_n(c_t)\|_{\mathrm{op}}\ge\Bigl(5\sum_i\bigl(v_i^{(j)}(t)\bigr)^4\Bigr)^{-1}\qquad(1\le j\le n).
+\]
+In particular $\|C_n(c_t)\|_{\mathrm{op}}\to\infty$ in probability, and on the event $E_n$ of \eqref{eq:En} it is at least
+$\frac1{10}\bigl(\sqrt n/(6r_n+\pi^2+2)\bigr)^{1/2}$, which is of order $n^{1/4}(\log n)^{-1/4}$.
+\end{proposition}
+
+\begin{proof}
+By It\^o's formula the martingale part of $\lambda_j(c_t)$ has quadratic variation
+$2\nabla\lambda_j^{\mathsf T}C_n\nabla\lambda_j\,dt$, and by \eqref{eq:DBM} it is $2\,dt$. Hence
+$1=\nabla\lambda_j^{\mathsf T}C_n\nabla\lambda_j\le\|C_n\|_{\mathrm{op}}|\nabla\lambda_j|^2$, and
+$|\nabla\lambda_j|^2=\sum_iv_i^4+4\sum_iv_i^2v_{i+1}^2\le5\sum_iv_i^4$. The remaining statements follow from
+Lemma~\ref{lem:deloc} with $j=1$.
+\end{proof}
+
+The rates in the fixed-corner limits of \cite{EJN24} therefore cannot be extended to a tridiagonal model of Dyson
+Brownian motion with entry noise bounded uniformly in $n$.
+
+\begin{remark}\label{rem:lanczos}
+The tridiagonal model of Dyson Brownian motion obtained by Lanczos tridiagonalization is Markov, although it has no
+simple coefficient equation. Let $\mathcal C$ be the open set of Hermitian matrices for which $e_1$ is a cyclic vector,
+and let $J(H)$ be the Jacobi matrix with positive off-diagonal entries produced by the Lanczos recursion from $e_1$,
+with $H=Q(H)J(H)Q(H)^*$ and $Q(H)e_1=e_1$. The recursion uses products, inner products and divisions by positive
+residual norms, so $J$ and $Q$ are continuous on $\mathcal C$. With $K=\{U\in U(n):Ue_1=e_1\}$, one has
+$J(UHU^*)=J(H)$ for $U\in K$, and conversely $J(H)=J(H')$ implies $H'=UHU^*$ with $U=Q(H')Q(H)^*\in K$, so the fibres of
+$J$ are exactly the $K$-orbits. Let $P_t$ be the transition kernel of Hermitian Brownian motion or of the
+Ornstein--Uhlenbeck process $H$; it commutes with conjugation by unitary matrices, so $\int g(J(H'))\,P_t(H,dH')$ is
+constant on fibres. Define
+\[
+\overline P_tg(j)=\int g\bigl(J(H')\bigr)\,P_t(j,dH'),
+\]
+viewing $j$ as a Hermitian matrix. For $t>0$ the measure $P_t(H,\cdot)$ has a density, and the complement of
+$\mathcal C$ is an algebraic set of Lebesgue measure zero, so any Borel extension of $J$ off $\mathcal C$ leaves
+$\overline P_t$ unchanged. Then $\EE[g(J(H_{s+t}))\mid\mathcal F^H_s]=\overline P_tg(J(H_s))$ almost surely for each
+deterministic $s$ and $t>0$, and conditioning on the smaller filtration of $J(H)$ gives the Markov property at
+deterministic times; the Chapman--Kolmogorov identity follows from that of $P_t$. This is a statement at deterministic
+times; it does not by itself give a version of $J(H_t)$ defined and continuous at all times simultaneously, which would
+require showing that the path avoids the complement of $\mathcal C$. Proposition~\ref{prop:growth} applies to this model
+whenever it is a semimartingale in the entries.
+\end{remark}
+
+\section{Simulations}\label{sec:sims}
+
+We simulated both processes on the clock $t=sn^{-1/3}$ at $s=0,\frac14,1,3$, recording the two largest edge-scaled
+eigenvalues. The dense model is Hermitian Brownian motion $B(u)$ started at $u=1$ from a GUE matrix and observed at
+$u=e^{2sn^{-1/3}}$, divided by $\sqrt u$, which is exactly the process $H$ of Section~\ref{sec:normal}. The tridiagonal
+model uses the exact Gaussian transitions for the diagonal entries and the exact noncentral chi-square transitions for
+$|Z_i|^2$. Neither model discretizes a stochastic differential equation. Ensemble replicates are independent; the four
+observations within a replicate are coupled. Each pair of model and size draws its own stream from NumPy's
+\texttt{SeedSequence} with base seed $4620261113$. Table~\ref{tab:sims} gives the results for the largest eigenvalue at
+$s=1$, which is Airy time $1$.
+
+\begin{table}[ht]
+\centering
+\caption{Largest edge-scaled eigenvalue at lags $0$ and $1$: correlation with $95\%$ percentile bootstrap interval
+($500$ resamples) and mean squared increment $\EE(X_1(1)-X_1(0))^2$. The tridiagonal model has $2{,}000$ replicates at
+every size.}\label{tab:sims}
+\small
+\begin{tabular}{rrcccc}
+\toprule
+& \multicolumn{3}{c}{correlation} & \multicolumn{2}{c}{mean squared increment}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+$n$ & dense replicates & dense & tridiagonal & dense & tridiagonal\\
+\midrule
+64 & 1500 & 0.430 [0.388, 0.476] & 0.631 [0.601, 0.658] & 0.972 & 0.589\\
+128 & 1000 & 0.371 [0.315, 0.418] & 0.708 [0.687, 0.727] & 1.010 & 0.462\\
+256 & 600 & 0.359 [0.277, 0.442] & 0.763 [0.746, 0.782] & 1.067 & 0.373\\
+512 & 240 & 0.346 [0.229, 0.462] & 0.804 [0.788, 0.818] & 1.063 & 0.327\\
+1024 & 64 & 0.524 [0.293, 0.685] & 0.842 [0.829, 0.854] & 0.863 & 0.251\\
+2048 & 12 & 0.597 [0.120, 0.858] & 0.871 [0.861, 0.882] & 1.313 & 0.209\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The tridiagonal correlations increase and the tridiagonal increments decrease with $n$, as Theorem~\ref{thm:main}
+predicts; the increments are still of order $0.2$ at $n=2048$, consistent with the slow rate in \eqref{eq:main}. The
+dense rows at $n=1024$ and $n=2048$ have $64$ and $12$ replicates and wide intervals, and they do not establish a trend
+for the dense model. The mean of $\Gamma(\lambda_1)$ under the Dumitriu--Edelman law falls from $0.361$ at $n=64$ to
+$0.115$ at $n=2048$, against the value one for the dense process. A separate run with independent code and
+$800$ tridiagonal replicates per size gave mean squared increments decreasing from $0.586$ at $n=64$ to $0.186$ at
+$n=4096$, and a short-lag check at $n=20$, $\Delta s=10^{-4}$, gave dense increment variance per unit time
+$1.936\pm0.035$ against the prediction $2$ from \eqref{eq:DBM}. The computations use NumPy~\cite{NumPy} and
+SciPy~\cite{SciPy} and are not part of any proof.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved the results and wrote the code of Section~\ref{sec:sims}; a second Codex agent checked the
+proofs, the normalizations and the literature as a referee and ran the independent simulation; Claude agents (Anthropic)
+checked the steps and prepared the manuscript. The author directed the work and is responsible for the content of the
+paper and for decisions concerning its dissemination.
+
+\section*{Code availability}
+The code and data of Section~\ref{sec:sims} are in the repository
+\begin{center}\url{https://github.com/yspennstate/tridiagonal-edge-freezing}.\end{center}
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.0cm}p{8.0cm}p{3.1cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$G$ & GUE matrix, density proportional to $\exp(-\Tr G^2/2)$ & Section~\ref{sec:process}\\
+$a_i$, $b_i$ & diagonal and off-diagonal entries of a Jacobi matrix & \eqref{eq:DE}\\
+$Z_i$ & vector Ornstein--Uhlenbeck process in $\RR^{2(n-i)}$, $b_i=|Z_i|/\sqrt2$ & \eqref{eq:process}\\
+$T_n(t)$ & tridiagonal Ornstein--Uhlenbeck process & \eqref{eq:process}\\
+$\lambda_{j,n}$, $v^{(j)}$ & $j$-th largest eigenvalue, its unit eigenvector & Section~\ref{sec:process}\\
+$X_{j,n}(s)$ & edge-scaled eigenvalue at physical time $sn^{-1/3}$ & \eqref{eq:X}\\
+$k$, $S$ & number of edge eigenvalues, time horizon & Theorem~\ref{thm:main}\\
+$r_n$ & $\sqrt{12\log n}$ & Theorem~\ref{thm:main}\\
+$N$ & dimension of the Gaussian process $Y$ & Section~\ref{sec:maximal}\\
+$W$, $\widetilde W_i$, $B_j$ & standard Brownian motions & Sections~\ref{sec:process}--\ref{sec:maximal}\\
+$\mathcal A_i$ & curves of the Airy line ensemble & Corollary~\ref{cor:frozen}\\
+$H(t)$, $B(u)$ & Hermitian Ornstein--Uhlenbeck process, Hermitian Brownian motion & Section~\ref{sec:normal}\\
+$Y$, $L$, $\gamma$, $\Gamma$ & Gaussian Ornstein--Uhlenbeck process, generator, invariant law, carr\'e du champ &
+Section~\ref{sec:maximal}\\
+$M$, $\widehat M$ & forward and backward martingales & Lemma~\ref{lem:maximal}\\
+$E_n$ & event that all entries lie in their windows & \eqref{eq:En}\\
+$m$, $A$, $B$ & block size $\lfloor n^{1/4}\rfloor$, leading block, Toeplitz comparison matrix & Lemma~\ref{lem:deloc}\\
+$w_i$, $D$ & $|v^{(j)}_i|$, discrete Dirichlet energy of $w$ & Lemma~\ref{lem:deloc}\\
+$c$, $\Gamma_n$, $K$ & entries $(a,b)$, carr\'e du champ, noise bound & Corollary~\ref{cor:bounded}\\
+$C_n$ & covariance density of the entry noise & Proposition~\ref{prop:growth}\\
+$\mathcal C$, $J$, $Q$, $K$ & cyclic set, Lanczos map, Lanczos basis, stabilizer of $e_1$ & Remark~\ref{rem:lanczos}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{AMP26} G.~Akemann, S.~N.~Majumdar and P.~P\"a{\ss}ler, A tridiagonal matrix-valued process with stochastic
+resetting for arbitrary Dyson index $\beta>0$, preprint, 2026. \arxiv{2605.26945}
+\bibitem{AG13} R.~Allez and A.~Guionnet, A diffusive matrix model for invariant $\beta$-ensembles, \emph{Electron.\ J.\
+Probab.} \textbf{18} (2013), no.~62, 1--30. \doi{10.1214/EJP.v18-2073}
+\bibitem{AGZ10} G.~W.~Anderson, A.~Guionnet and O.~Zeitouni, \emph{An Introduction to Random Matrices}, Cambridge
+University Press, Cambridge, 2010. \doi{10.1017/CBO9780511801334}
+\bibitem{CH14} I.~Corwin and A.~Hammond, Brownian Gibbs property for Airy line ensembles, \emph{Invent.\ Math.}
+\textbf{195} (2014), 441--508. \doi{10.1007/s00222-013-0462-3}
+\bibitem{DE02} I.~Dumitriu and A.~Edelman, Matrix models for beta ensembles, \emph{J.\ Math.\ Phys.} \textbf{43} (2002),
+5830--5847. \doi{10.1063/1.1507823}
+\bibitem{EJN24} A.~Edelman, S.~Jeong and R.~Nissim, On the limit of the tridiagonal model for $\beta$-Dyson Brownian
+motion, preprint, 2024, revised 2026. \arxiv{2411.01633}
+\bibitem{GXZ24} V.~Gorin, J.~Xu and L.~Zhang, Airy$_\beta$ line ensemble and its Laplace transform, preprint, 2024.
+\arxiv{2411.10829}
+\bibitem{NumPy} C.~R.~Harris et al., Array programming with NumPy, \emph{Nature} \textbf{585} (2020), 357--362.
+\doi{10.1038/s41586-020-2649-2}
+\bibitem{HP17} D.~Holcomb and E.~Paquette, Tridiagonal models for Dyson Brownian motion, preprint, 2017.
+\arxiv{1707.02700}
+\bibitem{HZ26} J.~Huang and L.~Zhang, A convergence framework for Airy$_\beta$ line ensemble via pole evolution,
+\emph{Adv.\ Math.} \textbf{498} (2026), 111028. \doi{10.1016/j.aim.2026.111028}
+\bibitem{Lan20} B.~Landon, Edge scaling limit of Dyson Brownian motion at equilibrium for general $\beta\ge1$, preprint,
+2020. \arxiv{2009.11176}
+\bibitem{LM00} B.~Laurent and P.~Massart, Adaptive estimation of a quadratic functional by model selection, \emph{Ann.\
+Statist.} \textbf{28} (2000), 1302--1338. \doi{10.1214/aos/1015957395}
+\bibitem{Li10} L.-C.~Li, The beta-Hermite and beta-Laguerre processes, preprint, 2010. \arxiv{1007.3905}
+\bibitem{LZ88} T.~Lyons and W.~Zheng, A crossing estimate for the canonical process on a Dirichlet space and a
+tightness result, in \emph{Colloque Paul L\'evy sur les processus stochastiques}, Ast\'erisque \textbf{157--158}
+(1988), 249--271, Soci\'et\'e Math\'ematique de France, Paris.
+\bibitem{RRV11} J.~A.~Ram\'irez, B.~Rider and B.~Vir\'ag, Beta ensembles, stochastic Airy spectrum, and a diffusion,
+\emph{J.\ Amer.\ Math.\ Soc.} \textbf{24} (2011), 919--944. \doi{10.1090/S0894-0347-2011-00703-0}
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{MathBrainRepo} Y.~Shmalo, Math Brain: public snapshot, code and tests, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{BrainFramework} Y.~Shmalo, Brain Framework, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\bibitem{TW94} C.~A.~Tracy and H.~Widom, Level-spacing distributions and the Airy kernel, \emph{Comm.\ Math.\ Phys.}
+\textbf{159} (1994), 151--174. \doi{10.1007/BF02100489}
+\bibitem{VV17} B.~Valk\'o and B.~Vir\'ag, The Sine$_\beta$ operator, \emph{Invent.\ Math.} \textbf{209} (2017),
+275--327. \doi{10.1007/s00222-016-0709-x}
+\bibitem{Vir14} B.~Vir\'ag, Operator limits of random matrices, in \emph{Proceedings of the International Congress of
+Mathematicians, Seoul 2014}, Vol.~4, 247--272. \arxiv{1804.06953}
+\bibitem{SciPy} P.~Virtanen et al., SciPy 1.0: fundamental algorithms for scientific computing in Python, \emph{Nature
+Methods} \textbf{17} (2020), 261--272. \doi{10.1038/s41592-019-0686-2}
+\bibitem{Yab23} S.~Yabuoku, Eigenvalue processes of symmetric tridiagonal matrix-valued processes associated with
+Gaussian beta ensemble, \emph{Stochastic Process.\ Appl.} \textbf{164} (2023), 139--159. \doi{10.1016/j.spa.2023.07.004}
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,642 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\cx}{\le_{\mathrm{cx}}}
+\newcommand{\icx}{\le_{\mathrm{icx}}}
+\newcommand{\eqd}{\stackrel{d}{=}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\cN}{\mathcal{N}}
+
+\title[Norm inequalities and complete mixability]{Law-determined norm inequalities do not imply complete mixability}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\date{November 2026}
+\subjclass[2020]{60E15, 60E05, 91G70}
+\keywords{complete mixability, convex order, law-determined norm, rearrangement-invariant norm, majorization}
+
+\begin{document}
+\begin{abstract}
+A law $F$ with mean $\mu$ is $n$-completely mixable if there are $n$ random variables with law $F$ whose sum is
+almost surely $n\mu$. Wang proved that such a law satisfies a family of inequalities between the norms of the
+positive and negative parts of $X-t$ and $X-s$, where $X\sim F$ and $s=(n\mu-t)/(n-1)$, for every threshold $t$ and
+every law-determined norm, and asked when these inequalities are also sufficient (Open Problem~4 in his 2015
+survey). We show that for bounded $F$ the whole family is equivalent to the single convex-order condition
+$X-\mu\cx-(n-1)(X-\mu)$, and that the same holds for integrable $F$ if the norms are required to have the Fatou
+property. The inequalities do not imply $n$-complete mixability: for $n=3$ the analytic density
+$\frac1{10}+\frac{27}{10}(2x-1)^2$ on $[0,1]$ satisfies all of them and is not $3$-completely mixable, and for $n=3$
+and $n=4$ there are counterexamples with densities bounded away from zero on $[0,1]$ and with $C^\infty$ densities,
+the one for $n=4$ not symmetric. A Bernoulli$(p)$ law satisfies the inequalities exactly when $1/n\le p\le1-1/n$,
+while it is $n$-completely mixable exactly when $np$ is an integer. For $n=2$ the inequalities are equivalent to
+symmetry, hence to $2$-complete mixability, for every integrable law. For $n=3$ the examples refine the symmetric
+non-mixable laws of Yin and Zhu, and the reduction explains why those laws satisfy the inequalities.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+A law $F$ on $\R$ with finite mean $\mu$ is \emph{$n$-completely mixable} ($n$-CM) if there are random variables
+$X_1,\dots,X_n$, each with law $F$, such that $X_1+\dots+X_n=n\mu$ almost surely. Complete mixability appears in
+bounds on the value-at-risk of a sum with given marginals and in variance minimization; the survey of
+Wang~\cite{W15} collects what is known and lists open problems. All random variables below live on an atomless
+probability space, and $L^0$ denotes the space of all of them, modulo almost sure equality.
+
+Complete mixability was developed as a property of laws by Bin Wang and Ruodu Wang~\cite{WW11}, after earlier
+constant-sum constructions such as the symmetric unimodal one of R\"uschendorf and Uckelmann~\cite{RU02}. Ruodu Wang's
+norm inequalities and his Open Problem~4~\cite{W15} are the starting point here. The comparison argument uses
+Strassen's coupling theorem~\cite{Str65}, the convex-order criteria in Shaked and Shanthikumar~\cite{SS07} and the
+rearrangement-invariant norms of Bennett and Sharpley~\cite{BS88}. Yin and Zhu~\cite{YZ} already gave symmetric laws
+that are not $3$-completely mixable, and the polynomial example below is a positive-density refinement of theirs. We
+identify Wang's norm condition for bounded laws with a convex order, give non-symmetric counterexamples for $n=4$, and
+determine the Bernoulli norm range.
+
+\begin{definition}[{\cite[Definition~5]{W15}}]\label{def:norm}
+A \emph{law-determined norm} is a map $N\colon L^0\to[0,\infty]$ such that for all $X,Y\in L^0$ and $a\in\R$:
+(i) $N(aX)=|a|N(X)$; (ii) $N(X+Y)\le N(X)+N(Y)$; (iii) $N(X)=0$ implies $X=0$; (iv) $N(X)=N(Y)$ if $X\eqd Y$;
+(v) $N(X)\le N(Y)$ if $0\le X\le Y$.
+\end{definition}
+
+The value $+\infty$ is allowed, and neither completeness nor continuity is assumed. Write $x_+=\max(x,0)$ and
+$x_-=\max(-x,0)$.
+
+\begin{theorem}[{Wang~\cite[Theorem~5]{W15}}]\label{thm:wang}
+Let $F$ be $n$-CM with mean $\mu$ and $X\sim F$. Then for every law-determined norm $N$ and every $t\in\R$, with
+$s=(n\mu-t)/(n-1)$,
+\begin{equation}\label{eq:Nn}
+N\bigl((X-t)_+\bigr)\le(n-1)N\bigl((X-s)_-\bigr),\qquad N\bigl((X-t)_-\bigr)\le(n-1)N\bigl((X-s)_+\bigr).
+\end{equation}
+\end{theorem}
+
+We say that $F$ satisfies $\cN_n$ if~\eqref{eq:Nn} holds for every law-determined norm and every $t$. Open
+Problem~4 of~\cite{W15} asks under which additional conditions, for instance smoothness of the density, $\cN_n$ is
+sufficient for $n$-complete mixability, and asks for a characterization of law-determined norms. Our first result
+removes the norms from the question.
+
+\begin{theorem}\label{thm:A}
+Let $X$ have finite mean $\mu$, let $n\ge2$ and put $Y=n\mu-(n-1)X$.
+\begin{enumerate}
+\item If $X$ is bounded, $X$ satisfies $\cN_n$ if and only if
+\begin{equation}\label{eq:cx}
+X\cx Y,\qquad\text{equivalently}\qquad X-\mu\cx-(n-1)(X-\mu).
+\end{equation}
+\item If $X$ is integrable, $\cN_n$ implies~\eqref{eq:cx}, and~\eqref{eq:cx} implies~\eqref{eq:Nn} for every
+law-determined norm with the Fatou property~\eqref{eq:fatou}.
+\item If $X$ is integrable, $\cN_2$ holds if and only if $F$ is symmetric about $\mu$, which holds if and only if $F$
+is $2$-CM.
+\end{enumerate}
+\end{theorem}
+
+Here $\cx$ is the convex order: $U\cx V$ if $\E\phi(U)\le\E\phi(V)$ for every convex $\phi$ for which both
+expectations exist. Proposition~\ref{prop:nonfatou} shows that some restriction of this kind is needed in part (2)
+for the norm comparison underlying the proof: for unbounded variables, weak majorization does not imply comparison
+in every law-determined norm. The equivalence of $2$-complete mixability with symmetry is due to Wang and
+Wang~\cite[Proposition~2.3]{WW11}; part~(3) adds that $\cN_2$ already forces symmetry.
+
+With Theorem~\ref{thm:A}, a counterexample to the converse of Theorem~\ref{thm:wang} is a law that satisfies the
+convex-order condition~\eqref{eq:cx} and is not $n$-CM. Every bounded law symmetric about its mean satisfies
+\eqref{eq:cx} (Lemma~\ref{lem:sym}), so symmetric laws that are not $3$-CM, such as those in Examples~2.1 and~2.3 of
+Yin and Zhu~\cite{YZ}, already give counterexamples for $n=3$. The following results show that neither a smooth
+density, nor a density bounded away from zero, nor the absence of symmetry rescues the converse.
+
+\begin{theorem}\label{thm:B}
+$\cN_n$ does not imply $n$-complete mixability for $n=3,4$, even for laws on $[0,1]$ with a density that is bounded
+above and bounded away from zero. For $n=3$ the analytic density
+\begin{equation}\label{eq:poly}
+f(x)=\frac1{10}+\frac{27}{10}(2x-1)^2,\qquad0\le x\le1,
+\end{equation}
+is such an example. For $n=3$ and $n=4$ there are also $C^\infty$ densities on $\R$, supported on $[0,1]$ and positive on
+$(0,1)$, that satisfy $\cN_n$ and are not $n$-CM; for $n=4$ the examples are not symmetric.
+\end{theorem}
+
+\begin{theorem}\label{thm:C}
+Let $0<p<1$ and $n\ge2$. The Bernoulli$(p)$ law satisfies $\cN_n$ if and only if $1/n\le p\le1-1/n$. It is $n$-CM
+if and only if $np$ is an integer. In particular Bernoulli$(1/2)$ satisfies $\cN_3$ and is not $3$-CM.
+\end{theorem}
+
+The second statement of Theorem~\ref{thm:C} is known: Wang and Wang~\cite[Proposition~2.3]{WW11} construct the
+complete mixes, and the set of attainable laws of a sum of Bernoulli variables is determined by Mao and
+Wang~\cite[Example~3.1]{MW15}; a related divisibility criterion for binary matrices is due to Haus~\cite{Haus15}, as recalled
+in~\cite[Theorem~1]{BKP}. The new part is the norm criterion. For laws with finite support, complete
+mixability is decided by the count-vector condition of Puccetti, Wang and Wang~\cite[Theorem~3.2(b)]{PWW12}, which
+we recall as Proposition~\ref{prop:pww} and compare with $\cN_n$ on an example.
+
+On the positive side, $\cN_n$ is sufficient within some shape classes. For a monotone density on a bounded interval
+$[a,b]$, $\cN_n$ implies the mean condition $a+(b-a)/n\le\mu\le b-(b-a)/n$, which is sufficient by Wang and
+Wang~\cite[Theorem~2.4]{WW11}; a symmetric unimodal density is $n$-CM for every $n$ by Rüschendorf and
+Uckelmann~\cite{RU02}; a concave density on a bounded interval is $n$-CM for every $n\ge3$ by~\cite[Theorem~4.2]{PWW12}; and for $n\ge3$ a density
+bounded below by $3/(n(b-a))$ on its support $[a,b]$ is $n$-CM by~\cite[Theorem~3.4]{PWW13}. The examples of Theorem~\ref{thm:B} show
+that an arbitrary positive lower bound in place of $3/(n(b-a))$ does not suffice. For other necessary conditions and
+numerical tests see Wang and Wang~\cite{WW16}, Puccetti and Wang~\cite{PW15} and Komisarski and Labuschagne~\cite{KL}.
+
+For a fixed law and large $n$ the picture is different. It is proved in~\cite[Theorem~1.2]{ShLarge} that a law supported in an
+interval of length $R$ that dominates $q$ times the uniform law on an interval of length $2H$ is $n$-CM for every
+\begin{equation}\label{eq:large}
+n\ge\frac{6R/H+1}{q}.
+\end{equation}
+The density~\eqref{eq:poly} and the density of the law $F_3$ of Section~\ref{sec:dens} are at least $1/10$ on
+$[0,1]$, so~\eqref{eq:large} with $R=1$, $H=1/2$ and $q=1/10$ makes them $n$-CM for every $n\ge130$. The proof
+of~\eqref{eq:large} absorbs the error of the other copies with the uniform pieces of many copies, and for $n$ below
+the threshold it gives nothing. The examples here show that at $n=3$ a lower bound of $1/10$ on the density, and at
+$n=4$ a lower bound of $43/1000$, cannot take its place, even together with all of Wang's norm inequalities.
+
+Section~\ref{sec:norms} proves the comparison lemma for norms and the example of Proposition~\ref{prop:nonfatou};
+Section~\ref{sec:reduction} proves Theorem~\ref{thm:A}; Section~\ref{sec:atoms} treats atoms and proves
+Theorem~\ref{thm:C}; Section~\ref{sec:dens} proves Theorem~\ref{thm:B}; Section~\ref{sec:remarks} makes some remarks
+on Definition~\ref{def:norm} and states what remains open. Symbols are listed in Appendix~\ref{app:notation}.
+
+\section{Weak majorization and law-determined norms}\label{sec:norms}
+
+For $Z\ge0$ let $Z^*$ be its decreasing rearrangement on $(0,1)$ and $K_Z(a)=\int_0^aZ^*(u)\,du$ for $0\le a\le1$.
+For nonnegative integrable $U,V$, the relation $K_U\le K_V$ is weak submajorization, and it is equivalent to the
+increasing convex order $U\icx V$~\cite[Section~4.A]{SS07}. A law-determined norm $N$ has the \emph{Fatou property} if
+\begin{equation}\label{eq:fatou}
+0\le Z_j\uparrow Z\quad\Longrightarrow\quad N(Z_j)\uparrow N(Z),
+\end{equation}
+infinite limits included. Definition~\ref{def:norm} does not require~\eqref{eq:fatou}.
+
+\begin{lemma}\label{lem:comp}
+Let $U,V\ge0$ be integrable.
+\begin{enumerate}
+\item The following are equivalent: (a) $K_U(a)\le K_V(a)$ for $0\le a\le1$; (b) $\E(U-z)_+\le\E(V-z)_+$ for $z\ge0$;
+(c) $N(U)\le N(V)$ for every law-determined norm with the Fatou property.
+\item If $U$ and $V$ are bounded, (a) is equivalent to $N(U)\le N(V)$ for every law-determined norm.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The identities
+\[
+K_Z(a)=\inf_{z\ge0}\{az+\E(Z-z)_+\},\qquad\E(Z-z)_+=\sup_{0\le a\le1}\{K_Z(a)-az\}
+\]
+follow by splitting $\int_0^aZ^*$ at a point where $Z^*$ crosses $z$, and they give (a)$\Leftrightarrow$(b). For
+$0<a\le1$ the functional
+\[
+T_a(Z)=\frac1a\int_0^a|Z|^*(u)\,du=\frac1a\sup\{\E[|Z|H]:0\le H\le1,\ \E H\le a\}
+\]
+is a law-determined norm with the Fatou property: the dual formula gives subadditivity and monotone convergence gives
+\eqref{eq:fatou}. Hence comparison in all norms of either class implies (a).
+
+For the converse let $N$ be a law-determined norm and $\nu(Z)=N(|Z|)$. Then $\nu$ agrees with $N$ on nonnegative
+variables, and it is again a law-determined norm, since $|Z+W|\le|Z|+|W|$ together with (v) and (ii) gives
+subadditivity. If $\nu(V)=\infty$ there is nothing to prove, and if $V=0$ then (a) forces $U=0$. Otherwise pick
+$\varepsilon>0$ with $p=\Prob(V\ge\varepsilon)>0$; by (v) the indicator of an event of probability $p$ has finite
+norm. Finitely many translates of an arc of length $p$ cover the unit circle, so finitely many indicators of events of
+probability $p$ sum to at least $1$, and $C=\nu(1)<\infty$. Consequently, for bounded $Z,W$,
+\begin{equation}\label{eq:lip}
+\nu(Z)\le C\|Z\|_\infty,\qquad|\nu(Z)-\nu(W)|\le C\|Z-W\|_\infty.
+\end{equation}
+
+We show that $\nu(\E[V\mid\mathcal P])\le\nu(V)$ for bounded $V\ge0$ and every finite partition $\mathcal P$. On a cell
+of positive probability let $T$ be uniform on $(0,1)$ and $q$ the conditional quantile function of $V$, and put
+$V_j=q((T+j/m)\bmod1)$ on that cell, $0\le j<m$. Each $V_j$ has the law of $V$, and if $0\le V\le M$ the average
+$m^{-1}\sum_jV_j$, an equally spaced Riemann sum of the monotone function $q$, is within $M/m$ of
+$\E[V\mid\mathcal P]$ uniformly. Subadditivity, (iv) and~\eqref{eq:lip} give the claim as $m\to\infty$.
+
+By Strassen's theorem~\cite[Theorem~9]{Str65} (in the form for the increasing convex order,
+see~\cite[Theorem~4.A.5]{SS07}), (a) gives a coupling with $U\le\E[V\mid U]$ almost surely. Suppose first that $U$ and
+$V$ are bounded. Partition the range of $U$ into intervals of length at most $\delta$ and let $U_\delta$ be the left
+endpoint of the interval containing $U$. Then $U_\delta\le\E[V\mid\mathcal P_\delta]$, where $\mathcal P_\delta$ is the
+partition generated by $U_\delta$, so by (v) and the previous paragraph $\nu(U_\delta)\le\nu(V)$, and
+by~\eqref{eq:lip} $\nu(U)\le\nu(V)+C\delta$. Letting $\delta\to0$ proves (2).
+
+If $U,V$ are integrable and $N$ has the Fatou property, put $W_j=\E[V\wedge j\mid U]$. Conditional Jensen gives
+$W_j\cx V\wedge j$, so the bounded case and (v) give $\nu(W_j)\le\nu(V\wedge j)\le\nu(V)$. By conditional monotone
+convergence $W_j\uparrow\E[V\mid U]\ge U$, and~\eqref{eq:fatou} and (v) give $\nu(U)\le\nu(V)$.
+\end{proof}
+
+The Fatou property cannot be dropped from part (1) of Lemma~\ref{lem:comp}.
+
+\begin{proposition}\label{prop:nonfatou}
+There are nonnegative integrable $U,V$ with $U\cx V$ and a law-determined norm $N$ with $N(V)<\infty=N(U)$.
+\end{proposition}
+
+\begin{proof}
+On $(0,1)$ let $v(t)=(t\log^2(1/t))^{-1}$ for $0<t<e^{-3}$ and $v(t)=0$ for $e^{-3}\le t<1$; $v$ is decreasing with
+integral $1/3$. Let $T$ be uniform on $(0,1)$ and $V=v(T)$. For $k=1,2,\dots$ put $L_k=3^k$, $a_k=e^{-2L_k}$,
+$b_k=e^{-L_k}$ and $I_k=(a_k,b_k)$; these intervals are disjoint and lie in $(0,e^{-3})$, and
+$\int_{I_k}v=1/(2L_k)$. Let $U=u(T)$, where $u=v$ off $\bigcup_kI_k$ and $u$ equals the average
+$h_k=(2L_k(b_k-a_k))^{-1}$ of $v$ on $I_k$. Then $U$ is a conditional expectation of $V$, so $U\cx V$.
+
+Let $D$ be the set of $Z\in L^0$ such that $|Z|^*(t)\le Cv(t/m)$ for almost every $t\in(0,1)$, for some $C<\infty$
+and some integer $m\ge1$. The inequality $|Z+W|^*(t)\le|Z|^*(t/2)+|W|^*(t/2)$ shows that $D$ is a linear space; it
+is solid and law invariant, it is contained in $L^1$, and it contains $V$ and all bounded variables (take $m>e^3$).
+Define $N(Z)=\E|Z|$ for $Z\in D$ and $N(Z)=\infty$ otherwise. The properties of $D$ give (i)--(v).
+
+Put $t_k=(b_k-a_k)/2$. Since $u=h_k$ on a set of measure $2t_k$, $U^*(t)\ge h_k$ for $t\le t_k$, and for every fixed
+$m$ and every $t\in[t_k/2,t_k]$,
+\[
+\frac{U^*(t)}{v(t/m)}\ge\frac{h_k}{v(t_k/(2m))}=\frac{t_k\log^2(2m/t_k)}{2m\cdot2L_k(b_k-a_k)}
+=\frac{\log^2(2m/t_k)}{8mL_k}\to\infty
+\]
+as $k\to\infty$, because $\log(1/t_k)\ge L_k$. Hence $U\notin D$ and $N(U)=\infty$, while $N(V)=\E V=1/3$. (Also
+$N(U\wedge j)=\E[U\wedge j]\uparrow\E U$, so $N$ fails~\eqref{eq:fatou}.)
+\end{proof}
+
+Proposition~\ref{prop:nonfatou} concerns the comparison lemma, not Theorem~\ref{thm:wang}: we do not know an
+integrable law $F$ that satisfies~\eqref{eq:cx} and violates~\eqref{eq:Nn} for some law-determined norm without the
+Fatou property.
+
+\section{Reduction to a convex order; the case \texorpdfstring{$n=2$}{n=2}}\label{sec:reduction}
+
+\begin{proposition}\label{prop:red}
+Parts (1) and (2) of Theorem~\ref{thm:A} hold. Moreover, for bounded $X$ the first inequality in~\eqref{eq:Nn} for the
+norm $\E|\cdot|$ and all $t$ already implies $\cN_n$.
+\end{proposition}
+
+\begin{proof}
+Put $c=n-1$ and $s=(n\mu-t)/c$. Then pointwise
+\begin{equation}\label{eq:hinge}
+c(X-s)_-=(Y-t)_+,\qquad c(X-s)_+=(Y-t)_-.
+\end{equation}
+So the first inequality of~\eqref{eq:Nn} for $N=\E|\cdot|$ reads $\E(X-t)_+\le\E(Y-t)_+$ for all $t$, which, since
+$\E X=\E Y=\mu$, is $X\cx Y$~\cite[Theorem~3.A.1]{SS07}. Conversely, if $X\cx Y$, then for fixed $t$ both $x\mapsto(x-t)_+$
+and $x\mapsto(t-x)_+$ are convex, and composing them with increasing convex functions gives
+\[
+(X-t)_+\icx(Y-t)_+,\qquad(X-t)_-\icx(Y-t)_-.
+\]
+Lemma~\ref{lem:comp} and~\eqref{eq:hinge} give~\eqref{eq:Nn}, for every law-determined norm if $X$ is bounded and
+for every law-determined norm with the Fatou property if $X$ is integrable.
+\end{proof}
+
+The condition~\eqref{eq:cx} is a consequence of $n$-complete mixability that can be seen directly: if $X_1,\dots,X_n$
+is a complete mix and $Z_i=X_i-\mu$, then $Z_1=-\sum_{i\ge2}Z_i$, and for convex $\phi$,
+\[
+\E\phi(Z_1)\le\frac1{n-1}\sum_{i=2}^n\E\phi\bigl(-(n-1)Z_i\bigr)=\E\phi\bigl(-(n-1)Z_1\bigr).
+\]
+
+\begin{proposition}\label{prop:n2}
+For every integrable $F$, $\cN_2$, symmetry of $F$ about its mean, and $2$-complete mixability are equivalent.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:red}, $\cN_2$ gives $X\cx2\mu-X$. Reflection $x\mapsto2\mu-x$ preserves the convex order, so
+also $2\mu-X\cx X$, and the call functions $t\mapsto\E(X-t)_+$ and $t\mapsto\E(2\mu-X-t)_+$ coincide. Their right
+derivatives are $-\Prob(X>t)$ and $-\Prob(2\mu-X>t)$, so $X\eqd2\mu-X$. If $F$ is symmetric, $(X,2\mu-X)$ is a
+complete mix, and with $s=2\mu-t$ the law of $(X-t)_+$ is that of $(X-s)_-$ and the law of $(X-t)_-$ is that of
+$(X-s)_+$; thus every inequality in~\eqref{eq:Nn} is an equality. Finally a complete mix $(X_1,X_2)$ has
+$X_2=2\mu-X_1$, so $F$ is symmetric~\cite[Proposition~2.3]{WW11}.
+\end{proof}
+
+\section{Atoms}\label{sec:atoms}
+
+\begin{lemma}\label{lem:sym}
+Let $Z$ be integrable and symmetric about $0$, and $c\ge1$. Then $Z\cx cZ\eqd-cZ$. Consequently every bounded law
+symmetric about its mean satisfies $\cN_n$ for every $n\ge2$.
+\end{lemma}
+
+\begin{proof}
+Write $Z=c^{-1}(cZ)+(1-c^{-1})\cdot0$. For convex $\phi$, $\phi(Z)\le c^{-1}\phi(cZ)+(1-c^{-1})\phi(0)$, and
+$\phi(0)\le\E\phi(cZ)$ by Jensen. The second statement follows from Theorem~\ref{thm:A}(1) with $c=n-1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:C}]
+Let $B\sim\mathrm{Bernoulli}(p)$ and $Y=np-(n-1)B$, which takes the values $l=np-(n-1)$ and $h=np$. If $B\cx Y$, the
+support of $Y$ spans an interval containing $\{0,1\}$ (otherwise a hinge function beyond an endpoint violates the
+order), so $np\ge1$ and $np-(n-1)\le0$. Conversely, if $l\le0$ and $h\ge1$, every convex $\phi$ on $[l,h]$ lies below
+its chord through $(l,\phi(l))$ and $(h,\phi(h))$; taking expectations at $B$, and using that $Y$ lives on
+$\{l,h\}$ and has the same mean as $B$, gives $\E\phi(B)\le\E\phi(Y)$. Theorem~\ref{thm:A}(1) turns this into the
+norm statement.
+
+A sum of Bernoulli variables is an integer, so a complete mix requires $np\in\Z$. If $np=k$, the indicators of a
+uniformly random $k$-element subset of $\{1,\dots,n\}$ are Bernoulli$(p)$ and sum to $k$~\cite[Proposition~2.3]{WW11}.
+\end{proof}
+
+Not every lattice law with an unreachable target passes $\cN_n$: Bernoulli$(1/10)$ fails it for $n=3$. If $F$ is
+supported on $a+h\Z$ with $h>0$, an $n$-complete mix needs $n\mu\in na+h\Z$, and more precisely $n\mu\in A+\dots+A$
+($n$ summands) for the support $A$. Even reachability, together with the requirement that every atom occurs in some
+admissible $n$-tuple, does not suffice; the masses matter. For finite support the exact condition is the following.
+
+\begin{proposition}[{Puccetti, Wang and Wang~\cite[Theorem~3.2(b)]{PWW12}}]\label{prop:pww}
+Let $F\{a_j\}=p_j>0$ for $1\le j\le m$, and let $\mathcal K$ be the set of $k\in\Z_{\ge0}^m$ with $\sum_jk_j=n$ and
+$\sum_jk_ja_j=n\mu$. Then $F$ is $n$-CM if and only if $(p_1,\dots,p_m)$ lies in the convex hull of
+$\{k/n:k\in\mathcal K\}$.
+\end{proposition}
+
+In~\cite{PWW12} the statement is that a discrete law is $n$-CM if and only if it is a mixture of empirical laws of
+$n$ points with mean $\mu$; on a finite support the empirical law of such an $n$-tuple is the vector $k/n$. The proof is
+short: symmetrizing a complete mix by an independent uniform permutation produces a random count vector in
+$\mathcal K$ with mean $(np_j)_j$, and conversely a mixture of count vectors followed by a uniform permutation of the
+resulting multiset is a complete mix.
+
+\begin{example}\label{ex:three}
+Give the points $0,1,2$ the masses $49/100$, $1/50$, $49/100$, and let $n=3$. The law is symmetric about $1$, so it
+satisfies $\cN_3$ by Lemma~\ref{lem:sym}. The target $3$ is reachable and every atom occurs in an admissible triple,
+but the admissible unordered triples are $(0,1,2)$ and $(1,1,1)$, both containing the point $1$. By
+Proposition~\ref{prop:pww} a complete mix would need $\Prob(X=1)\ge1/3$, whereas $\Prob(X=1)=1/50$.
+\end{example}
+
+\section{Densities}\label{sec:dens}
+
+The densities below are excluded from complete mixability by a mass argument; its symmetric version is Example~2.1
+of Yin and Zhu~\cite{YZ}.
+
+\begin{lemma}\label{lem:mass}
+Let $X\sim F$ have mean $\mu$, let $A\subset\R$ be measurable, let $nA=\{x_1+\dots+x_n:x_i\in A\}$, and suppose that
+the distance from $n\mu$ to $nA$ is at least $d>0$. Let $q=\Prob(X\notin A)$. Then every coupling $X_1,\dots,X_n$ of
+$n$ copies of $F$ satisfies
+\begin{equation}\label{eq:mass}
+\E\Big(\sum_{i=1}^nX_i-n\mu\Big)^2\ge d^2(1-nq)_+.
+\end{equation}
+In particular $F$ is not $n$-CM if $q<1/n$.
+\end{lemma}
+
+\begin{proof}
+With probability at least $1-nq$ every $X_i$ lies in $A$, and then the sum is at distance at least $d$ from $n\mu$.
+\end{proof}
+
+\subsection{Two uniform components}
+For $0<\varepsilon<1/2$ and $0<p<1$ let
+\[
+G_{p,\varepsilon}=(1-p)\,\mathrm{U}[0,\varepsilon]+p\,\mathrm{U}[1-\varepsilon,1],
+\]
+the law of $(1-\varepsilon)B+\varepsilon U$ with independent $B\sim\mathrm{Bernoulli}(p)$ and $U\sim\mathrm U[0,1]$. Its
+mean is $(1-\varepsilon)p+\varepsilon/2$.
+
+\begin{lemma}\label{lem:G}
+If $1/n\le p\le1-1/n$, then $G_{p,\varepsilon}$ satisfies $\cN_n$.
+\end{lemma}
+
+\begin{proof}
+By the proof of Theorem~\ref{thm:C}, $B-p\cx-(n-1)(B-p)$, and by Lemma~\ref{lem:sym} the same holds for $U-1/2$. The
+convex order is preserved under sums of independent variables (condition on one summand, then on the
+other~\cite[Theorem~3.A.12]{SS07}), so it holds for $(1-\varepsilon)(B-p)+\varepsilon(U-1/2)$; apply
+Theorem~\ref{thm:A}(1).
+\end{proof}
+
+Let $G_3=G_{1/2,1/10}$ and $G_4=G_{2/5,1/20}$, with densities
+\[
+g_3=5\cdot\one_{[0,1/10]\cup[9/10,1]},\qquad g_4=12\cdot\one_{[0,1/20]}+8\cdot\one_{[19/20,1]}.
+\]
+Both satisfy $\cN_3$ and $\cN_4$ respectively. For $A_\varepsilon=[0,\varepsilon]\cup[1-\varepsilon,1]$,
+\begin{equation}\label{eq:nA}
+nA_\varepsilon=\bigcup_{k=0}^n\big[k(1-\varepsilon),\,k(1-\varepsilon)+n\varepsilon\big].
+\end{equation}
+For $G_3$ the target $3/2$ lies between the intervals ending at $6/5$ and starting at $9/5$, at distance $3/10$ from
+both. For $G_4$ the mean is $81/200$ and the target $81/50$ lies between the intervals ending at $23/20$ and starting
+at $19/10$, at distances $47/100$ and $7/25$. Since $\Prob(X\in A_\varepsilon)=1$, Lemma~\ref{lem:mass} with $q=0$
+shows that $G_3$ is not $3$-CM and $G_4$ is not $4$-CM.
+
+\subsection{A positive density}
+Let
+\begin{equation}\label{eq:F3F4}
+F_3=\tfrac9{10}G_3+\tfrac1{10}\mathrm U[0,1],\qquad F_4=\tfrac9{10}G_4+\tfrac1{10}H_4,
+\end{equation}
+where $H_4$ has density $h_4(x)=\frac{157}{100}-\frac{57}{50}x$ on $[0,1]$. The density $h_4$ integrates to $1$, is at
+least $43/100$, and $H_4$ has mean $81/200$.
+
+\begin{proposition}\label{prop:F}
+$F_3$ satisfies $\cN_3$ and is not $3$-CM; $F_4$ satisfies $\cN_4$ and is not $4$-CM. Their densities are bounded below
+on $[0,1]$ by $1/10$ and $43/1000$.
+\end{proposition}
+
+\begin{proof}
+$F_3$ is symmetric about $1/2$, so Lemma~\ref{lem:sym} applies. For $F_4$ we check $H_4\cx Y_H$, where
+$Y_H=4\mu-3H_4$ and $\mu=81/200$. For a law on $[0,1]$ with mean $\mu$ it suffices to compare call functions on
+$[0,1]$: for $t\le0$ the call function of $H_4$ is $\mu-t$, which by Jensen is at most that of $Y_H$, and for $t\ge1$ it
+is $0$. On $[0,1]$ the call function of $H_4$ is $C(t)=(1-t)^2(81-38t)/200$, and since $s=(4\mu-t)/3\in[0,1]$ for
+$t\in[0,1]$, the call function of $Y_H$ at $t$ is $3\,\E(s-H_4)_+=3\{C(s)+s-\mu\}$. Their difference is
+\[
+D(t)=3\{C(s)+s-\mu\}-C(t)=\frac{11875000t^3-35208750t^2+17910675t+10797948}{56250000},
+\]
+and its Bernstein coefficients of degree three on $[0,1]$ are
+\[
+\frac{299943}{1562500},\quad\frac{5589391}{18750000},\quad\frac{2750537}{14062500},\quad\frac{5374873}{56250000}.
+\]
+They are positive, so $D\ge0$ on $[0,1]$ and $H_4\cx Y_H$. The convex-order inequality~\eqref{eq:cx} is linear in the
+law when the mean is fixed, so it passes to the mixture $F_4$ of $G_4$ (Lemma~\ref{lem:G}) and $H_4$, both of mean
+$81/200$; Theorem~\ref{thm:A}(1) gives $\cN_4$.
+
+For $F_3$ take $A=[0,1/10]\cup[9/10,1]$: $q=\frac1{10}\cdot\frac45=\frac2{25}$ and $d=3/10$, so~\eqref{eq:mass} gives
+$\E(S-3/2)^2\ge\frac9{100}(1-\frac6{25})=\frac{171}{2500}$ for every coupling, where $S$ is the sum. For $F_4$ take
+$A=[0,1/20]\cup[19/20,1]$: integrating $h_4$ over $[1/20,19/20]$ gives $9/10$, so $q=9/100$, and~\eqref{eq:mass} gives
+$\E(S-81/50)^2\ge\frac{49}{625}(1-\frac{36}{100})=\frac{784}{15625}$. The density bounds come from the uniform and
+$H_4$ components.
+\end{proof}
+
+\subsection{An analytic density and smooth densities}
+
+\begin{proposition}\label{prop:poly}
+The density~\eqref{eq:poly} satisfies $\cN_3$ and is not $3$-CM.
+\end{proposition}
+
+\begin{proof}
+It integrates to $1$ and is symmetric about $1/2$, so Lemma~\ref{lem:sym} applies. If $x_1,x_2,x_3\in[0,1]$ sum to
+$3/2$, one of them lies in $[1/4,3/4]$: otherwise the numbers $2x_i-1$ all have absolute value greater than $1/2$, two
+of them have the same sign, and their sum has absolute value greater than $1$, which the third cannot cancel. So a
+complete mix would have at least one coordinate in $[1/4,3/4]$ almost surely, and $3\Prob(X\in[1/4,3/4])\ge1$. But
+\[
+\Prob(X\in[1/4,3/4])=\frac1{10}\cdot\frac12+\frac9{10}\cdot\Big(\frac12\Big)^3=\frac{13}{80}<\frac13.\qedhere
+\]
+\end{proof}
+
+The component $3(2x-1)^2$ of~\eqref{eq:poly} is an affine image of the case $r=1$ of Example~2.3 of Yin and
+Zhu~\cite{YZ}; the uniform component makes the density positive on the closed interval without removing the
+obstruction. Lemma~\ref{lem:mass} with $A=[0,1/5]\cup[4/5,1]$, $d=1/10$ and $q=159/625$ gives the quantitative bound
+$\E(S-3/2)^2\ge37/15625$.
+
+\begin{corollary}\label{cor:smooth}
+For $n=3,4$ there is a $C^\infty$ density on $\R$, supported on $[0,1]$ and positive on $(0,1)$, whose law satisfies
+$\cN_n$ and is not $n$-CM. For $n=4$ it is not symmetric.
+\end{corollary}
+
+\begin{proof}
+Let $\eta=1/100$ and let $W$ be independent of $X\sim F_n$, with density proportional to
+$\exp(-1/(1-(w/\eta)^2))$ on $(-\eta,\eta)$ and $0$ elsewhere. The law of $X+W$ has a $C^\infty$ density, supported on
+$[-\eta,1+\eta]$ and positive inside. Its centered convex order~\eqref{eq:cx} follows from those of $X$ and $W$
+(Lemma~\ref{lem:sym}) by independence, as in Lemma~\ref{lem:G}. With probability at least $9/10$ the variable $X+W$ lies
+in the enlarged core $A+[-\eta,\eta]$, $A=A_{1/10}$ or $A_{1/20}$, and the distance from the target to its $n$-fold sum
+set is at least $d_n-n\eta$, with $d_3=3/10$ and $d_4=7/25$. Since $1/10<1/n$, Lemma~\ref{lem:mass} excludes a complete
+mix. The affine map $x\mapsto(x+\eta)/(1+2\eta)$ moves the support to $[0,1]$ and preserves both properties; for
+$n=4$ the mean becomes $83/204\ne1/2$.
+\end{proof}
+
+A $C^\infty$ density with compact support tends to $0$ at the ends of its support, so Corollary~\ref{cor:smooth} and
+Proposition~\ref{prop:F} give different kinds of regularity; the density~\eqref{eq:poly} has both a positive lower
+bound and analyticity on the closed interval. None of this contradicts the sufficient lower bound $3/(n(b-a))$
+of~\cite[Theorem~3.4]{PWW13}: for $n=3$ on $[0,1]$ it equals $1$, and the density~\eqref{eq:poly} dips to $1/10$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:B}]
+Propositions~\ref{prop:F} and~\ref{prop:poly} and Corollary~\ref{cor:smooth}.
+\end{proof}
+
+\section{Remarks on \texorpdfstring{Definition~\ref{def:norm}}{the definition of a norm}, and open questions}\label{sec:remarks}
+
+Every argument in~\eqref{eq:Nn} is nonnegative, so only the restriction of a norm to nonnegative variables enters.
+These restrictions are exactly the maps $\nu$ from nonnegative variables to $[0,\infty]$ that are positively
+homogeneous, subadditive, definite, law invariant and monotone, since each such $\nu$ extends to a law-determined norm
+by $Z\mapsto\nu(|Z|)$ (the proof of Lemma~\ref{lem:comp}). The definition itself is broader than the absolute
+rearrangement-invariant norms: for $\alpha>0$,
+\[
+N_\alpha(Z)=\E|Z|+\alpha|\E Z|\ \ (Z\in L^1),\qquad N_\alpha(Z)=\infty\ \ (Z\notin L^1),
+\]
+satisfies (i)--(v), and a symmetric $\pm1$ variable $Z$ has $N_\alpha(Z)=1<1+\alpha=N_\alpha(|Z|)$. Among absolute norms
+with the Fatou property that are finite on bounded variables, one recovers the rearrangement-invariant Banach function
+norms on $(0,1)$, which have the Lorentz--Luxemburg representation as suprema of weighted integrals
+$\int_0^1|Z|^*(u)w(u)\,du$ over decreasing weights~\cite[Chapter~2]{BS88}; Proposition~\ref{prop:nonfatou} shows that
+Definition~\ref{def:norm} also admits norms outside this class.
+
+For bounded laws, Theorem~\ref{thm:A} says that no choice of law-determined norms gives more than~\eqref{eq:cx}, so
+Open Problem~4 becomes a question about the convex order: for which laws does $X-\mu\cx-(n-1)(X-\mu)$ imply
+$n$-complete mixability? The following questions remain open.
+\begin{enumerate}
+\item Does~\eqref{eq:cx} imply $n$-complete mixability for unimodal densities that are not symmetric?
+\item For fixed $n$ and mean, what is the smallest lower bound on a density on $[0,1]$ that, together with
+\eqref{eq:cx}, implies $n$-complete mixability? At mean $81/200$ for $n=4$ the examples above show that it is at
+least $43/1000$, and at mean $1/2$ for $n=3$ at least $1/10$, among laws satisfying~\eqref{eq:cx}, and~\cite[Theorem~3.4]{PWW13} shows that $3/n$ suffices
+without~\eqref{eq:cx}.
+\item For unbounded integrable laws, does~\eqref{eq:cx} imply~\eqref{eq:Nn} for every law-determined norm, including
+those without the Fatou property?
+\end{enumerate}
+The counterexamples are for fixed $n$ and say nothing about large $n$ for a fixed law; compare~\cite{ShLarge}.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its
+results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. A Codex agent
+(OpenAI) developed the norm reduction and the Bernoulli norm criterion, constructed the examples and performed the
+exact checks; a second Codex agent checked the proofs and recomputed every certificate with its own program; a Claude
+agent (Anthropic) prepared the manuscript. The results used from the literature are those of their authors: Ruodu
+Wang's norm inequalities and question~\cite{W15}; Bin Wang and Ruodu Wang's symmetry and Bernoulli results~\cite{WW11};
+Tiantian Mao and Ruodu Wang's description of Bernoulli aggregation~\cite{MW15}; the discrete criterion and density
+conditions of Giovanni Puccetti, Bin Wang and Ruodu Wang~\cite{PWW12,PWW13}; the symmetric unimodal construction of
+Ludger R\"uschendorf and Ludger Uckelmann~\cite{RU02}; the symmetric non-mixable laws of Chuancun Yin and Dan
+Zhu~\cite{YZ}; Volker Strassen's coupling theorem~\cite{Str65}; and the stochastic-order and rearrangement-invariant
+norm theory in Moshe Shaked and J.~George Shanthikumar~\cite{SS07} and Colin Bennett and Robert Sharpley~\cite{BS88}.
+The binary-matrix criterion mentioned in the introduction is due to Utz-Uwe Haus~\cite{Haus15}. New here are the norm reduction, its consequences for the norm condition, and the examples. These checks are not peer
+review. The author directed the work and is responsible for the content of the paper and
+for decisions concerning its dissemination.
+
+\section*{Code and data availability}
+The programs and their outputs are in the repository
+\url{https://github.com/yspennstate/complete-mixability-norm-converse/tree/v1.1}. The exact checks use SymPy~\cite{SymPy}; the linear programs use the HiGHS solver~\cite{HiGHS} through
+SciPy~\cite{SciPy}.
+
+The paper is part of the Math Brain project, whose public repository is~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{BKP} F.~Bellini, O.~E.~Karaşan and M.~Ç.~Pınar, Joint mixability of some integer matrices, \emph{Discrete
+Optim.} \textbf{20} (2016), 90--104.
+\url{https://doi.org/10.1016/j.disopt.2016.03.003}
+\bibitem{BS88} C.~Bennett and R.~Sharpley, \emph{Interpolation of Operators}, Pure and Applied Mathematics
+\textbf{129}, Academic Press, Boston, 1988.
+\bibitem{HiGHS} Q.~Huangfu and J.~A.~J.~Hall, Parallelizing the dual revised simplex method, \emph{Math. Program.
+Comput.} \textbf{10} (2018), 119--142.
+\url{https://doi.org/10.1007/s12532-017-0130-5}
+\bibitem{Haus15} U.-U.~Haus, Bounding stochastic dependence, joint mixability of matrices, and multidimensional
+bottleneck assignment problems, \emph{Oper. Res. Lett.} \textbf{43} (2015), 74--79.
+\bibitem{KL} A.~Komisarski and J.~Labuschagne, The distributions of the mean of random vectors with fixed marginal
+distribution, \emph{J. Theoret. Probab.} \textbf{37} (2024), 2121--2129.
+\url{https://doi.org/10.1007/s10959-023-01277-2}
+\bibitem{MW15} T.~Mao and R.~Wang, On aggregation sets and lower-convex sets, \emph{J. Multivariate Anal.}
+\textbf{138} (2015), 170--181.
+\url{https://doi.org/10.1016/j.jmva.2014.12.001}
+\bibitem{SymPy} A.~Meurer et al., SymPy: symbolic computing in Python, \emph{PeerJ Comput. Sci.} \textbf{3} (2017),
+e103.
+\url{https://doi.org/10.7717/peerj-cs.103}
+\bibitem{PW15} G.~Puccetti and R.~Wang, Detecting complete and joint mixability, \emph{J. Comput. Appl. Math.}
+\textbf{280} (2015), 174--187.
+\url{https://doi.org/10.1016/j.cam.2014.11.050}
+\bibitem{PWW12} G.~Puccetti, B.~Wang and R.~Wang, Advances in complete mixability, \emph{J. Appl. Probab.} \textbf{49}
+(2012), 430--440.
+\url{https://doi.org/10.1239/jap/1339878796}
+\bibitem{PWW13} G.~Puccetti, B.~Wang and R.~Wang, Complete mixability and asymptotic equivalence of worst-possible
+VaR and ES estimates, \emph{Insurance Math. Econom.} \textbf{53} (2013), 821--828.
+\url{https://doi.org/10.1016/j.insmatheco.2013.09.017}
+\bibitem{RU02} L.~Rüschendorf and L.~Uckelmann, Variance minimization and random variables with constant sum, in
+\emph{Distributions with Given Marginals and Statistical Modelling}, Kluwer, Dordrecht, 2002, 211--222.
+\url{https://doi.org/10.1007/978-94-017-0061-0_22}
+\bibitem{SS07} M.~Shaked and J.~G.~Shanthikumar, \emph{Stochastic Orders}, Springer Series in Statistics, Springer,
+New York, 2007. \url{https://doi.org/10.1007/978-0-387-34675-5}
+\bibitem{ShLarge} Y.~Shmalo, \emph{Absolutely continuous laws on a bounded interval are completely mixable for all large
+$n$}, preprint, 2026,
+\url{https://github.com/yspennstate/complete-mixability-large-n/tree/4bd67dbdd5b621c08a813b909d10219d4dd2d18f}.
+\bibitem{Str65} V.~Strassen, The existence of probability measures with given marginals, \emph{Ann. Math. Statist.}
+\textbf{36} (1965), 423--439.
+\url{https://doi.org/10.1214/aoms/1177700153}
+\bibitem{SciPy} P.~Virtanen et al., SciPy 1.0: fundamental algorithms for scientific computing in Python, \emph{Nat.
+Methods} \textbf{17} (2020), 261--272.
+\url{https://doi.org/10.1038/s41592-019-0686-2}
+\bibitem{WW11} B.~Wang and R.~Wang, The complete mixability and convex minimization problems with monotone marginal
+densities, \emph{J. Multivariate Anal.} \textbf{102} (2011), 1344--1360.
+\url{https://doi.org/10.1016/j.jmva.2011.05.002}
+\bibitem{WW16} B.~Wang and R.~Wang, Joint mixability, \emph{Math. Oper. Res.} \textbf{41} (2016), 808--826.
+\url{https://doi.org/10.1287/moor.2015.0755}
+\bibitem{W15} R.~Wang, Current open questions in complete mixability, \emph{Probab. Surv.} \textbf{12} (2015),
+13--32.
+\url{https://doi.org/10.1214/14-PS250}
+\bibitem{YZ} C.~Yin and D.~Zhu, Joint mixability of elliptical distributions and related families, preprint, 2017, revised 2023,
+\href{https://arxiv.org/abs/1706.05499v4}{arXiv:1706.05499v4}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24},
+doi:10.5281/zenodo.24150837.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\appendix
+\section{Notation}\label{app:notation}
+Symbols are listed in the order in which they first appear. Letters used only inside one proof are not listed.
+
+\medskip
+\begin{center}
+\small
+\begin{tabular}{@{}lp{0.6\textwidth}l@{}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$F$, $\mu$, $n$ & a law on $\R$, its mean, the number of copies & Section~\ref{sec:intro}\\
+$n$-CM & $n$-completely mixable & Section~\ref{sec:intro}\\
+$L^0$ & all random variables on the atomless probability space & Section~\ref{sec:intro}\\
+$N$ & a law-determined norm (Definition~\ref{def:norm}) & Section~\ref{sec:intro}\\
+$x_+$, $x_-$ & $\max(x,0)$ and $\max(-x,0)$ & Section~\ref{sec:intro}\\
+$t$, $s$ & a threshold and $s=(n\mu-t)/(n-1)$ & Theorem~\ref{thm:wang}\\
+$\cN_n$ & \eqref{eq:Nn} for every law-determined norm and every $t$ & Section~\ref{sec:intro}\\
+$Y$ & $n\mu-(n-1)X$ & Theorem~\ref{thm:A}\\
+$\cx$, $\icx$ & convex order, increasing convex order & Theorem~\ref{thm:A}, Section~\ref{sec:norms}\\
+$Z^*$, $K_Z$ & decreasing rearrangement of $Z\ge0$ and its integral & Section~\ref{sec:norms}\\
+$T_a$ & the norm $a^{-1}\int_0^a|Z|^*$ & Lemma~\ref{lem:comp}\\
+$\nu$ & the absolute extension $Z\mapsto N(|Z|)$ & Lemma~\ref{lem:comp}\\
+$\mathcal K$ & admissible count vectors & Proposition~\ref{prop:pww}\\
+$nA$ & the $n$-fold sum set of $A$ & Lemma~\ref{lem:mass}\\
+$G_{p,\varepsilon}$, $G_3$, $G_4$ & two-component uniform mixtures & Section~\ref{sec:dens}\\
+$A_\varepsilon$ & $[0,\varepsilon]\cup[1-\varepsilon,1]$ & \eqref{eq:nA}\\
+$F_3$, $F_4$, $H_4$ & laws with positive densities & \eqref{eq:F3F4}\\
+$S$ & the sum of a coupling of $n$ copies & Proposition~\ref{prop:F}\\
+$N_\alpha$ & a law-determined norm that is not absolute & Section~\ref{sec:remarks}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

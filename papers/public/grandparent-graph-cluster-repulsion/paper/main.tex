@@ -1,0 +1,366 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\GP}{\mathrm{GP}_b}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Cluster repulsion on grandparent graphs]{Finite touching sets between percolation clusters on grandparent
+graphs}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60K35, 82B43, 05C63}
+\keywords{Bernoulli percolation, cluster repulsion, nonunimodular graphs, grandparent graph, two-point function}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+A transitive graph exhibits cluster repulsion at the parameter $p$ if, almost surely, any two distinct clusters of
+Bernoulli bond percolation with parameter $p$ are joined by only finitely many edges. Timár proved cluster repulsion for
+every unimodular quasi-transitive graph and every $p$, and the nonunimodular case is open. Bell, Chu, Rodgers, Terlov and
+Tserunyan proved that on nonunimodular graphs the touching sets have finite modular weight, which leaves open whether
+two light clusters can touch along infinitely many edges. We prove cluster repulsion at every $p\in[0,1]$ for the
+grandparent graphs $\GP$, $b\ge2$, the standard transitive nonunimodular examples, whose infinite clusters are light for
+$1/b<p<1$. The proof shows that every two-point function $p\mapsto\PP_p(u\leftrightarrow v)$ is continuous on $(0,1)$,
+by integrating out each descendant cone through an exact one-variable equation and bounding the effect of the missing
+ancestors uniformly in $p$, and then applies the sprinkling argument of Häggström, Peres and Schonmann.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $G=(V,E)$ be an infinite, connected, locally finite transitive graph, and let $\PP_p$ be the law of Bernoulli bond
+percolation on $G$ with parameter $p\in[0,1]$: each edge is open with probability $p$, independently. For distinct open
+clusters $C$ and $D$ the touching set is
+\[
+\tau(C,D)=\{x\in C:\ \{x,y\}\in E\text{ for some }y\in D\}.
+\]
+Since $G$ has bounded degree, $\tau(C,D)$ is finite if and only if finitely many edges join $C$ and $D$. The graph
+exhibits cluster repulsion at $p$ if, $\PP_p$-almost surely, $\tau(C,D)$ is finite for every pair of distinct clusters.
+
+Häggström, Peres and Schonmann asked whether every quasi-transitive graph exhibits cluster repulsion for every
+$p$~\cite[p.~87]{HPS99}, and observed that it holds at every $p$ at which all two-point functions
+$p\mapsto\PP_p(u\leftrightarrow v)$ are continuous. Timár~\cite[Theorem~1.1]{Tim06a} proved cluster repulsion for every
+unimodular quasi-transitive graph. The survey of Häggström and Jonasson~\cite[end of Section~5]{HJ06} records the general
+statement as a conjecture and notes that the nonunimodular case remains open.
+
+On a nonunimodular graph, mass transport must be weighted by the modular function, and an infinite set can have finite
+total weight. Fix a closed transitive group $\Gamma$ of automorphisms with left Haar measure $m$ and a vertex $o$, and
+give $x$ the weight $m(\Gamma_x)/m(\Gamma_o)$, where $\Gamma_x$ is the stabilizer of $x$. A set of vertices is heavy if
+its total weight is infinite and light otherwise. Bell, Chu, Rodgers, Terlov and Tserunyan~\cite[Theorem~1.2]{BCRTT}
+proved that on every quasi-transitive graph the touching set of two distinct infinite clusters has finite weight. Finite
+weight gives finite cardinality only when the weights are bounded away from zero, which fails on a nonunimodular graph:
+on the grandparent graph of Section~\ref{sec:gp}, a downward ray has weights $1,b^{-1},b^{-2},\dots$. On a nonunimodular
+transitive graph a heavy infinite cluster and a light infinite cluster do not coexist, by the robust-property theorem
+of~\cite[Theorem~4.1.6]{HPS99} (see also~\cite{Tang19}). So what remains open of the question of Häggström, Peres and
+Schonmann~\cite[Question~1.1]{BCRTT} is whether two light infinite clusters can touch along infinitely many edges. Light infinite clusters occur on every
+nonunimodular transitive graph, since $p_c<p_h$ there~\cite{Hut20}.
+
+\subsection{Grandparent graphs}\label{sec:gp}
+Let $b\ge2$, let $T$ be the $(b+1)$-regular tree, fix an end $\xi$ of $T$, and for a vertex $x$ let $P(x)$ be its
+neighbour in the direction of $\xi$. The grandparent graph $\GP$ has the vertex set of $T$, the edges of $T$, and the
+edges $\{x,P^2(x)\}$ for every vertex $x$. It is transitive and nonunimodular (Lemma~\ref{lem:structure}), and it is the
+standard example of such a graph; percolation on it is discussed in \cite{HPS99,Tim06b,Spa09,MS26}. For $1/b<p<1$ it has
+infinitely many infinite clusters, all light (Remark~\ref{rem:light}).
+
+\begin{theorem}\label{thm:main}
+Let $b\ge2$ and $p\in[0,1]$. Then $\PP_p$-almost surely every two distinct clusters of Bernoulli bond percolation on $\GP$
+have finite touching sets.
+\end{theorem}
+
+The statement is for each fixed $p$, and for that $p$ it covers all pairs of clusters simultaneously. The proof does not
+use the weighted repulsion theorem of~\cite{BCRTT}. The equation~\eqref{eq:cone} for the reliability of a descendant cone
+is equivalent to equation~(7) of Ménard and Sénizergues~\cite{MS26} in the case of deterministic offspring, where it is
+used to compute $p_c$, and the decomposition of $\GP$ into pieces attached at two vertices goes back to
+Špakulová~\cite[Section~5.3]{Spa09}.
+
+\subsection{Idea of the proof}
+By the observation of Häggström, Peres and Schonmann (Lemma~\ref{lem:sprinkle}), it suffices to show that each two-point
+function is continuous on $(0,1)$. Fix $u,v$ and an ancestor $a$ of both. The descendant cones that hang off the finite
+tree spanned by $u$, $v$ and $a$ attach to it at no more than two vertices each, and each can be replaced by a single edge
+whose probability is an explicit continuous function of $p$ (Section~\ref{sec:cone}). This gives the connection
+probability inside the cone of $a$ as a continuous function of $p$. The edges that leave the cones of $a,P^3(a),P^6(a),
+\dots$ form disjoint sets of fixed size, and if all edges of one of them are closed the cluster of $u$ cannot leave that
+cone. This bounds the effect of the ancestors above $P^n(a)$ by a geometric term, uniformly for $p$ in compact subsets of
+$(0,1)$ (Section~\ref{sec:proof}).
+
+\section{Structure of the grandparent graph}\label{sec:structure}
+
+Fix a vertex $o$ and let $h$ be the height function on $T$ with $h(o)=0$ and $h(P(x))=h(x)+1$. For a vertex $x$, the
+children of $x$ are the $b$ vertices $y$ with $P(y)=x$, and the descendant cone $D(x)$ is the set consisting of $x$ and
+all vertices $y$ with $P^k(y)=x$ for some $k\ge1$.
+
+\begin{lemma}\label{lem:structure}
+The graph $\GP$ is transitive and has degree $b^2+b+2$. Every automorphism of $\GP$ commutes with $P$, and the weights
+are $m(\Gamma_x)/m(\Gamma_o)=b^{h(x)}$. In particular $\GP$ is not unimodular.
+\end{lemma}
+
+\begin{proof}
+A vertex $x$ is adjacent to $P(x)$, $P^2(x)$, its $b$ children and its $b^2$ grandchildren, so its degree is $b^2+b+2$.
+The automorphisms of $T$ that fix $\xi$ preserve $P$, hence preserve the added edges, and they act transitively.
+
+The relation $P$ can be read off from the unlabelled graph. The common neighbours of the endpoints of a tree edge
+$\{y,P(y)\}$ are $P^2(y)$ and the $b$ children of $y$, which is $b+1$ vertices, while the only common neighbour of the
+endpoints of an added edge $\{y,P^2(y)\}$ is $P(y)$. So the tree edges are determined by the graph. Among the tree
+neighbours of $x$, two are joined by an added edge exactly when one of them is $P(x)$ and the other is a child of $x$.
+This relation is a star with $b\ge2$ leaves, its centre $P(x)$ is unique, and so every automorphism maps $P(x)$ to
+$P(\varphi(x))$.
+
+The stabilizer of $x$ fixes $P(x)$, while the stabilizer of $P(x)$ permutes the $b$ children of $P(x)$ transitively.
+Therefore $|\Gamma_x P(x)|=1$ and $|\Gamma_{P(x)}x|=b$, and $m(\Gamma_{P(x)})/m(\Gamma_x)=|\Gamma_{P(x)}x|/|\Gamma_x
+P(x)|=b$. Iterating gives the weights $b^{h(x)}$, which are not constant, so $\GP$ is not unimodular.
+\end{proof}
+
+\begin{remark}\label{rem:light}
+Let $1/b<p<1$. Choose a ray $x_0,x_1=P(x_0),\dots$ and for each $k$ a child $z_k\neq x_{k-1}$ of $x_k$ (any child for
+$k=0$). The cones $D(z_k)$ are disjoint. Consider the event that all edges joining $D(z_k)$ to its complement are closed
+and that the open tree edges inside $D(z_k)$ contain an infinite path from $z_k$. The second condition has positive
+probability because the open tree edges below $z_k$ form a Galton--Watson tree with Binomial$(b,p)$ offspring, of mean
+$bp>1$. These events have the same positive probability and depend on disjoint sets of edges, so infinitely many of them
+occur almost surely, and each produces an infinite cluster contained in a cone. Häggström, Peres and Schonmann record
+that $p_c<p_h=p_u=1$ on $\GP$~\cite{HPS99}, so for $p<1$ there is no heavy cluster and every infinite cluster is light.
+In this range Theorem~\ref{thm:main} is not a consequence of the weighted statement of~\cite{BCRTT}.
+\end{remark}
+
+\section{The reliability of a descendant cone}\label{sec:cone}
+
+For a vertex $x$ let $H_x$ be the subgraph of $\GP$ induced by $D(x)\cup\{P(x)\}$, and let
+\[
+r(p)=\PP_p\bigl(x\leftrightarrow P(x)\text{ by an open path in }H_x\bigr),
+\]
+which does not depend on $x$.
+
+\begin{lemma}\label{lem:cone}
+For $0<p<1$, $r(p)$ is the unique solution $t\in[0,1]$ of
+\begin{equation}\label{eq:cone}
+t=F_p(t),\qquad F_p(t)=1-(1-p)(1-pt)^b,
+\end{equation}
+and $r$ is continuous on $(0,1)$.
+\end{lemma}
+
+\begin{proof}
+The edges of $H_x$ at $P(x)$ are $\{x,P(x)\}$ and the edges $\{y,P(x)\}$ for the $b$ children $y$ of $x$. For a child
+$y$, the edges with exactly one endpoint in $D(y)$ that lie in $H_x$ are $\{y,x\}$, $\{y,P(x)\}$ and the edges joining
+the children of $y$ to $x$. Take a simple open path from $x$ to $P(x)$ in $H_x$. Its last edge is either $\{x,P(x)\}$ or
+$\{y,P(x)\}$ for a child $y$. In the second case, the part of the path after its last visit to $x$ runs from $x$ to $y$
+inside $D(y)\cup\{x\}$, so $y\leftrightarrow x$ in $H_y$. Hence $x\leftrightarrow P(x)$ in $H_x$ if and only if
+$\{x,P(x)\}$ is open or, for some child $y$, the edge $\{y,P(x)\}$ is open and $y\leftrightarrow x$ in $H_y$. The graphs
+$H_y$ for different children $y$ have disjoint edge sets, so these $b+1$ events are independent. The first has
+probability $p$ and each of the others $pr(p)$, which gives $r(p)=F_p(r(p))$.
+
+The function $g(t)=F_p(t)-t$ is concave on $[0,1]$ with $g(0)=p>0$ and $g(1)=-(1-p)^{b+1}<0$. If $0<t_1<t_2$ were
+two zeros, concavity would give $g(t_1)\ge (1-t_1/t_2)g(0)+(t_1/t_2)g(t_2)>0$, a contradiction. So $g$ has exactly one
+zero in $[0,1]$, and it is $r(p)$. If $p_n\to p\in(0,1)$, every limit point of $r(p_n)$ is a zero of $F_p(t)-t$ by
+continuity of $(p,t)\mapsto F_p(t)$, hence equals $r(p)$; so $r$ is continuous.
+\end{proof}
+
+\begin{remark}\label{rem:iteration}
+Let $r_0=p$ and $r_{d+1}=F_p(r_d)$. By induction, $r_d$ is the probability that $x\leftrightarrow P(x)$ inside the part
+of $H_x$ within $d$ generations below $x$, so $r_d$ increases to $r(p)$ by continuity of measure. This identifies $r(p)$
+as the limit of the iteration started at $p$, without reference to the uniqueness argument.
+\end{remark}
+
+Fix vertices $u,v$ and a vertex $a$ with $u,v\in D(a)$, and let $S$ be the smallest subtree of $T$ containing $u$, $v$
+and $a$. Since $a$ is an ancestor of $u$ and $v$, the set $S\setminus\{a\}$ is closed under $P$. Let
+\[
+f_{u,v,a}(p)=\PP_p\bigl(u\leftrightarrow v\text{ by an open path in the subgraph of }\GP\text{ induced by }D(a)\bigr).
+\]
+
+\begin{lemma}\label{lem:finite}
+For all vertices $u,v$ and every vertex $a$ with $u,v\in D(a)$, the function $f_{u,v,a}$ is continuous on $(0,1)$.
+\end{lemma}
+
+\begin{proof}
+The set $D(a)\setminus S$ is the disjoint union of the cones $D(z)$ over the vertices $z\notin S$ with $P(z)\in S$, and
+there are finitely many of them. Fix such a $z$ and let $t=P(z)$. The edges between $D(z)$ and the rest of $D(a)$ are the
+tree edge $\{z,t\}$, the edges $\{y,t\}$ for the children $y$ of $z$, and, when $t\neq a$, the edge $\{z,P(t)\}$; so
+$D(z)$ is attached to $S$ only at $t$ and possibly at $s=P(t)\in S$. If $t=a$, the cone $D(z)$ is attached to $S$ at one
+vertex and does not affect connections between vertices of $S$. If $t\neq a$, let $K_z$ be the graph $H_z$ together with
+the vertex $s$ and the edge $\{z,s\}$. The only edge of $K_z$ at $s$ is $\{z,s\}$, so $K_z$ connects $s$ to $t$ if and
+only if $\{z,s\}$ is open and $z\leftrightarrow t$ in $H_z$, an event of probability $pr(p)$.
+
+The graphs $K_z$ use disjoint sets of edges, disjoint from the edges of $\GP$ inside $S$. Replace
+each by one additional edge between $s$ and $t$, open exactly when the subgraph connects $s$ to $t$. A finite open path
+from $u$ to $v$ in $D(a)$ becomes an open walk in the resulting finite multigraph on $S$ after each excursion into a cone
+is replaced by its additional edge, and conversely each open additional edge can be expanded into a finite open path
+through its cone. So $f_{u,v,a}(p)$ is the probability that $u$ and $v$ are connected in a finite multigraph whose edges
+are open independently, with probability $p$ for the edges of $\GP$ inside $S$ and probability $pr(p)$ for the
+additional edges. This is a polynomial in $p$ and $pr(p)$, hence continuous on $(0,1)$ by Lemma~\ref{lem:cone}.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+\begin{lemma}\label{lem:boundary}
+For every vertex $x$, the set $B(x)$ of edges of $\GP$ with exactly one endpoint in $D(x)$ is
+\[
+B(x)=\bigl\{\{x,P(x)\},\{x,P^2(x)\}\bigr\}\cup\bigl\{\{y,P(x)\}: P(y)=x\bigr\},
+\]
+which has $b+2$ elements. For every vertex $w$, the sets $B(w),B(P^3(w)),B(P^6(w)),\dots$ are pairwise disjoint.
+\end{lemma}
+
+\begin{proof}
+An edge of $\GP$ joins a vertex $y$ to $P(y)$ or to $P^2(y)$. It leaves $D(x)$ exactly when $y\in D(x)$ and the other
+endpoint is not, which happens for $y=x$ (both edges) and for the children $y$ of $x$ (the edge to $P^2(y)=P(x)$). Every
+edge of $B(x)$ has one endpoint at height $h(x)-1$ or $h(x)$. Every endpoint of an edge of $B(P^{3k}(w))$ has height at
+least $h(w)+3k-1$, while every edge of $B(P^{3j}(w))$ has an endpoint at height at most $h(w)+3j$. For $j<k$ we have
+$h(w)+3j<h(w)+3k-1$, so the two sets are disjoint.
+\end{proof}
+
+\begin{lemma}\label{lem:twopoint}
+For all vertices $u,v$, the function $p\mapsto\PP_p(u\leftrightarrow v)$ is continuous on $(0,1)$.
+\end{lemma}
+
+\begin{proof}
+Let $w$ be the nearest common ancestor of $u$ and $v$ in $T$, and let $a_n=P^n(w)$. If all edges of $B(a_k)$ are closed
+for some $k\le n$, then the open cluster of $u$ is contained in $D(a_k)\subseteq D(a_n)$, and $u\leftrightarrow v$ in
+$\GP$ if and only if $u\leftrightarrow v$ inside $D(a_n)$. The sets $B(a_k)$, $k\in\{0,3,6,\dots\}$, $k\le n$, are
+$\lfloor n/3\rfloor+1$ fixed, pairwise disjoint sets of $b+2$ edges by Lemma~\ref{lem:boundary}, so
+\begin{equation}\label{eq:tail}
+0\le\PP_p(u\leftrightarrow v)-f_{u,v,a_n}(p)\le\bigl[1-(1-p)^{b+2}\bigr]^{\lfloor n/3\rfloor+1}.
+\end{equation}
+For $0<\alpha<\beta<1$ and $p\in[\alpha,\beta]$ the right side is at most $[1-(1-\beta)^{b+2}]^{\lfloor n/3\rfloor+1}$,
+which tends to $0$ as $n\to\infty$. So $\PP_p(u\leftrightarrow v)$ is a uniform limit on $[\alpha,\beta]$ of the
+functions $f_{u,v,a_n}$, which are continuous by Lemma~\ref{lem:finite}.
+\end{proof}
+
+The following is the observation of Häggström, Peres and Schonmann~\cite[p.~87]{HPS99}; it also appears as~\cite[Lemma~3.5]{BCRTT}. We include the
+short proof.
+
+\begin{lemma}\label{lem:sprinkle}
+Let $G$ be a locally finite graph and $p\in(0,1)$. If $q\mapsto\PP_q(u\leftrightarrow v)$ is right continuous at $p$
+for all vertices $u,v$, then $\PP_p$-almost surely any two distinct clusters are joined by finitely many edges.
+\end{lemma}
+
+\begin{proof}
+Fix $u,v$ and let $A$ be the event that the clusters of $u$ and $v$ are distinct and joined by infinitely many edges.
+Couple $\PP_p$ and $\PP_q$, $q>p$, in the standard monotone way. Given the configuration at level $p$, each closed edge
+is open at level $q$ independently with probability $(q-p)/(1-p)>0$. On $A$ there are infinitely many closed edges
+joining the two clusters, so almost surely one of them opens and $u\leftrightarrow v$ at level $q$. Hence
+$\PP_q(u\leftrightarrow v)-\PP_p(u\leftrightarrow v)\ge\PP_p(A)$, and letting $q\downarrow p$ gives $\PP_p(A)=0$. Taking
+the union over the countably many pairs $u,v$ proves the lemma.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For $p\in(0,1)$ combine Lemmas~\ref{lem:twopoint} and~\ref{lem:sprinkle}. For $p=0$ every cluster is a single vertex
+and touching sets have at most one vertex. For $p=1$ there is one cluster.
+\end{proof}
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}
+The argument uses two features of $\GP$: each descendant cone is attached to the rest of the graph at no more than two
+vertices, and the edge boundaries of the cones along an ancestral line have bounded size. For general nonunimodular
+transitive graphs cluster repulsion remains open~\cite[Question~1.1]{BCRTT}.
+\end{remark}
+
+\begin{remark}\label{rem:sims}
+The repository contains exact checks and simulations. Exact enumeration in rational arithmetic confirms the recursion
+of Remark~\ref{rem:iteration} on nine finite networks (the largest with $13$ edges and $8192$ configurations), the
+replacement of attached cones by single edges on three cores, and Lemma~\ref{lem:boundary} for $b=2,3,4$, at
+$p\in\{1/5,11/20,4/5\}$. Simulations on binary descendant cones of depths $10$, $12$ and $14$ at $p\in\{0.55,0.65,0.75\}$
+with $12$ seeds each count the edges between distinct components with at least $64$ vertices; the largest number of
+edges between one pair was $14$. A finite window can split one cluster of $\GP$ into several components, so these counts
+illustrate the geometry and are not a test of Theorem~\ref{thm:main}.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved Theorem~\ref{thm:main} and wrote the code of Remark~\ref{rem:sims}; a second Codex agent
+checked the proof and the literature as a referee; Claude agents (Anthropic) checked the steps and prepared the
+manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning
+its dissemination.
+
+\section*{Code availability}
+The code and data of Remark~\ref{rem:sims} are in the repository
+\begin{center}\url{https://github.com/yspennstate/grandparent-graph-cluster-repulsion}.\end{center}
+They use Python~3 and its standard library only.
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.0cm}p{8.0cm}p{3.1cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$G=(V,E)$ & a transitive graph & Section~\ref{sec:intro}\\
+$\PP_p$ & Bernoulli bond percolation with parameter $p$ & Section~\ref{sec:intro}\\
+$\tau(C,D)$ & touching set of two clusters & Section~\ref{sec:intro}\\
+$u\leftrightarrow v$ & $u$ and $v$ are joined by an open path & Section~\ref{sec:intro}\\
+$\Gamma$, $\Gamma_x$, $m$ & automorphism group, stabilizer, Haar measure & Section~\ref{sec:intro}\\
+$b$, $T$, $\xi$ & branching number, $(b+1)$-regular tree, fixed end & Section~\ref{sec:intro}\\
+$P(x)$ & neighbour of $x$ towards $\xi$ & Section~\ref{sec:intro}\\
+$\GP$ & grandparent graph & Section~\ref{sec:intro}\\
+$h$ & height function, $h(P(x))=h(x)+1$ & Section~\ref{sec:structure}\\
+$D(x)$ & descendant cone of $x$ & Section~\ref{sec:structure}\\
+$H_x$ & subgraph induced by $D(x)\cup\{P(x)\}$ & Section~\ref{sec:cone}\\
+$r(p)$, $F_p$ & cone reliability and its equation & \eqref{eq:cone}\\
+$g$ & $F_p(t)-t$ & Lemma~\ref{lem:cone}\\
+$r_d$ & reliability of a cone cut at depth $d$ & Remark~\ref{rem:iteration}\\
+$S$ & tree spanned by $u$, $v$, $a$ & Section~\ref{sec:cone}\\
+$f_{u,v,a}$ & connection probability inside $D(a)$ & Section~\ref{sec:cone}\\
+$z$, $t$, $s$ & top of an attached cone and its attachment vertices & Lemma~\ref{lem:finite}\\
+$K_z$ & $H_z$ with the vertex $s$ and the edge $\{z,s\}$ & Lemma~\ref{lem:finite}\\
+$B(x)$ & edge boundary of $D(x)$ & Lemma~\ref{lem:boundary}\\
+$w$, $a_n$ & nearest common ancestor, $P^n(w)$ & Lemma~\ref{lem:twopoint}\\
+$\alpha$, $\beta$ & ends of a compact interval of parameters & Lemma~\ref{lem:twopoint}\\
+$q$ & a second parameter, $q>p$ & Lemma~\ref{lem:sprinkle}\\
+$A$ & event of infinitely many edges between two clusters & Lemma~\ref{lem:sprinkle}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{BCRTT} S.~Bell, T.~Chu, O.~Rodgers, G.~Terlov and A.~Tserunyan, Heavy repulsion of clusters in Bernoulli
+percolation, preprint (2025), \arxiv{2509.10631}.
+\bibitem{HJ06} O.~Häggström and J.~Jonasson, Uniqueness and non-uniqueness in percolation theory, \emph{Probab.\ Surv.}
+\textbf{3} (2006), 289--344. \doi{10.1214/154957806000000096}
+\bibitem{HPS99} O.~Häggström, Y.~Peres and R.~H.~Schonmann, Percolation on transitive graphs as a coalescent process:
+relentless merging followed by simultaneous uniqueness, in \emph{Perplexing Problems in Probability}, Progr.\ Probab.\
+\textbf{44}, Birkhäuser, Boston, 1999, 69--90.
+\bibitem{Hut20} T.~Hutchcroft, Nonuniqueness and mean-field criticality for percolation on nonunimodular transitive
+graphs, \emph{J.\ Amer.\ Math.\ Soc.} \textbf{33} (2020), no.~4, 1101--1165. \doi{10.1090/jams/953}
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{MathBrainRepo} Math Brain repository, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{BrainFramework} Y.~Shmalo, Brain Framework, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\bibitem{MS26} L.~Ménard and D.~Sénizergues, Percolation on grandparent graphs of Bienaymé trees, preprint (2026),
+\arxiv{2611.09762}.
+\bibitem{Spa09} I.~Špakulová, Critical percolation of virtually free groups and other tree-like graphs, \emph{Ann.\
+Probab.} \textbf{37} (2009), no.~6, 2262--2296. \doi{10.1214/09-AOP458}
+\bibitem{Tang19} P.~Tang, Heavy Bernoulli-percolation clusters are indistinguishable, \emph{Ann.\ Probab.} \textbf{47}
+(2019), no.~6, 4077--4115. \doi{10.1214/19-AOP1354}
+\bibitem{Tim06a} Á.~Timár, Neighboring clusters in Bernoulli percolation, \emph{Ann.\ Probab.} \textbf{34} (2006),
+no.~6, 2332--2343. \doi{10.1214/009117906000000485}
+\bibitem{Tim06b} Á.~Timár, Percolation on nonunimodular transitive graphs, \emph{Ann.\ Probab.} \textbf{34} (2006),
+no.~6, 2344--2364. \doi{10.1214/009117906000000494}
+\end{thebibliography}
+\end{document}

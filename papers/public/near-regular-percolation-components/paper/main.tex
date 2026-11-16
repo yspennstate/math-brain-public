@@ -1,0 +1,449 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Subcritical components on near-regular graphs]{Polynomial components in spectrally subcritical percolation on
+near-regular graphs}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{05C80, 60K35, 05C50}
+\keywords{Bernoulli percolation, finite graphs, spectral radius, largest component, branching processes}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Let $G$ be a finite graph with spectral radius $\lambda$ and maximum degree $\Delta$, and keep each edge independently
+with probability $p=(1-\varepsilon)/\lambda$. Christoph, Morawski and Wigderson asked for the typical size of the largest
+component in this regime, singling out graphs that are close to regular in the sense $\Delta\le(1+\delta)\lambda$. We
+show that the answer depends on the product $(1-\varepsilon)(1+\delta)$. When it is less than one, a known
+maximum-degree argument gives components of logarithmic order. When it is greater than one, there are connected graphs
+with $\Delta\le(1+\delta)\lambda$ whose largest component has at least $n^c$ vertices with high probability, for a
+constant $c>0$, and the spectral radius can be taken of order $n^a$ for any $0\le a<1$. When it equals one, the largest
+component has $O((\log n)^3)$ vertices with high probability. We also sharpen the resolvent bound of Christoph, Morawski
+and Wigderson for graphs with bounded ratio $\Delta/\lambda$. The optimal order in the polynomial regime remains open.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $G$ be a finite simple graph on $n$ vertices with adjacency matrix $A$, spectral radius $\lambda=\lambda(G)$ and
+maximum degree $\Delta=\Delta(G)$. Write $G_p$ for the random subgraph that keeps each edge independently with
+probability $p$, and $L_1(G_p)$ for the number of vertices of its largest component. Percolation on general finite
+graphs has a long history; see Alon, Benjamini and Stacey~\cite{ABS04} for the role of expansion, and
+Bollobás, Borgs, Chayes and Riordan~\cite{BBCR10} for dense graph sequences, where the threshold is $1/\lambda$.
+
+Christoph, Morawski and Wigderson~\cite{CMW26} proved that $1/\lambda$ is the critical probability for every graph in a
+strong sense. In the subcritical regime $p\le(1-\varepsilon)/\lambda$ they showed~\cite[Theorem~1.4]{CMW26} that
+\begin{equation}\label{eq:cmw}
+L_1(G_p)=O_\varepsilon\Bigl(\frac{\sqrt{n\Delta}}{\lambda}\log n\Bigr)\qquad\text{with high probability},
+\end{equation}
+and they asked~\cite[Question~5.2]{CMW26} for the tight upper bound in terms of $\Delta$ and $\lambda$. They single out
+graphs that are close to regular, $\Delta\le(1+\delta)\lambda$, with $\delta$ allowed to depend on $n$, and they note
+that finite $d$-ary trees have polynomial components~\cite[p.~20, footnote~7]{CMW26}. For trees the ratio
+$\Delta/\lambda$ is about $\sqrt d/2$, far from one.
+
+Throughout, $\varepsilon\in(0,1)$ is fixed and $q=1-\varepsilon$. The answer for near-regular graphs depends on whether
+$q(1+\delta)$ is below, above or equal to one.
+
+\begin{theorem}\label{thm:lower}
+Let $\delta>0$ satisfy $q(1+\delta)>1$ and let $0\le a<1$. There are connected graphs $G_h$, $h\ge1$, with
+$n_h\to\infty$ vertices, $\Delta(G_h)\le(1+\delta)\lambda(G_h)$ and $\lambda(G_h)=\Theta(n_h^{a})$, and a constant
+$c>0$ depending on $\varepsilon$, $\delta$ and $a$, such that for $p_h=q/\lambda(G_h)$,
+\[
+\PP\bigl(L_1((G_h)_{p_h})\ge n_h^{c}\bigr)\to1.
+\]
+\end{theorem}
+
+\begin{proposition}\label{prop:strict}
+If $\Delta\le(1+\delta)\lambda$ with $q(1+\delta)<1$ and $p\le q/\lambda$, then $L_1(G_p)=O_{\varepsilon,\delta}(\log
+n)$ with high probability. The order $\log n$ is attained by the cycle $C_n$.
+\end{proposition}
+
+\begin{theorem}\label{thm:boundary}
+If $p\lambda\le q$ and $p\Delta\le1$, then $L_1(G_p)=O_\varepsilon((\log n)^3)$ with high probability. In particular
+this holds when $\Delta\le(1+\delta)\lambda$ with $q(1+\delta)=1$ and $p\le q/\lambda$.
+\end{theorem}
+
+Proposition~\ref{prop:strict} is a special case of a theorem of Diskin, Erde, Kang and
+Krivelevich~\cite[Theorem~2]{DEKK25}, which needs only $p\Delta\le1-\kappa$; we include the short proof to fix
+constants. Theorem~\ref{thm:boundary} uses a multitype branching process dominated through the resolvent vector, in the
+spirit of the subcritical analysis of~\cite[Theorem~3]{BBCR10}.
+
+The constructions behind Theorem~\ref{thm:lower} join a clique, which sets the spectral radius, to a regular tree of
+slightly larger degree, which supplies a supercritical Galton--Watson process at $p=q/\lambda$. The tree alone has small
+spectral radius, so it does not raise $\lambda$, and the clique has degree close to $\lambda$, so the ratio
+$\Delta/\lambda$ stays below $1+\delta$. For a fixed ratio $\Delta/\lambda$ close to one, Theorem~\ref{thm:lower} needs
+$\varepsilon<\delta/(1+\delta)$; for $\delta=o(1)$ and fixed $\varepsilon$ Proposition~\ref{prop:strict} applies
+eventually. So the three statements describe the near-regular case for every fixed pair $(\varepsilon,\delta)$ up to
+the exponent in the polynomial regime and the power of $\log n$ at the boundary.
+
+The bound~\eqref{eq:cmw} loses in two places: a walk count from a vertex is bounded by $\sqrt{d(x)n}\,\lambda^{k-1}$, and
+the resulting weights are compared globally. Keeping the trivial bound $\Delta^k$ beside it gives the following
+refinement. Put
+\[
+R=\frac{\Delta}{\lambda},\qquad B=\frac{\sqrt{n\Delta}}{\lambda}.
+\]
+
+\begin{theorem}\label{thm:refine}
+Fix $a$ with $1<a<1/q$, let $\theta=1-qa$ and
+\[
+U_a=1+\sum_{j\ge1}a^{-j}\min\{R^j,B\}.
+\]
+If $n\ge2$ and $p\le q/\lambda$, then
+\[
+\PP\Bigl(L_1(G_p)\ge\big\lceil4\theta^{-2}U_a(1+3\log n)\big\rceil\Bigr)\le n^{-2}.
+\]
+\end{theorem}
+
+For fixed $R>1/q$ this gives (Remark~\ref{rem:exponent}), for every $0<\zeta<-\log q/\log R$,
+\begin{equation}\label{eq:refine}
+L_1(G_p)=O_{\varepsilon,R,\zeta}\bigl(B^{\log(qR)/\log R+\zeta}\log n\bigr)\qquad\text{with high probability},
+\end{equation}
+and the exponent of $B$ is below one, which improves~\eqref{eq:cmw} along sequences with $B\to\infty$. The upper
+exponent in~\eqref{eq:refine} and the lower exponent in Theorem~\ref{thm:lower} differ, and we do not know the optimal
+one. Question~5.2 of~\cite{CMW26} asks for a bound for every triple $(n,\Delta,\lambda)$, and the results here do not
+give it.
+
+Section~\ref{sec:lower} proves Theorem~\ref{thm:lower}, Section~\ref{sec:strict} Proposition~\ref{prop:strict},
+Section~\ref{sec:boundary} Theorem~\ref{thm:boundary} and Section~\ref{sec:refine} Theorem~\ref{thm:refine} with the
+exponent~\eqref{eq:refine}. Section~\ref{sec:examples} compares the bounds on small examples and describes the
+simulations.
+
+\paragraph{Conventions}
+Logarithms are natural. Asymptotic statements refer to $n\to\infty$, and ``with high probability'' means with
+probability tending to one. The constants implied by $O(\cdot)$ and $\Theta(\cdot)$ depend only on the parameters
+written as subscripts, or in Theorem~\ref{thm:lower} on the fixed construction. We write $\one$ for the all-ones
+vector and $e_x$ for the standard basis vector at $x$. The feasible parameters satisfy $\sqrt\Delta\le\lambda\le\Delta\le n-1$: the first inequality
+follows from $(A^2)_{xx}=d(x)$ and the second from the row sums of $A$. We write $W_k(x)=(A^k\one)_x$ for the number of
+walks of length $k$ from $x$. For $k\ge1$, by Cauchy--Schwarz,
+\begin{equation}\label{eq:walk}
+W_k(x)=\langle Ae_x,A^{k-1}\one\rangle\le\sqrt{d(x)}\,\lambda^{k-1}\sqrt n,
+\end{equation}
+and trivially $W_k(x)\le\Delta^k$. A symbol table is in Appendix~\ref{app:notation}.
+
+\section{Polynomial components above the margin}\label{sec:lower}
+
+This section builds the graphs of Theorem~\ref{thm:lower} and finds a supercritical Galton--Watson tree inside their
+percolation clusters.
+
+\subsection{The construction}
+Let $k,b\ge2$ be integers. For $h\ge1$ let $T_{b,h}$ be the complete rooted $b$-ary tree with levels $0,\dots,h$, and
+let $H_h$ be the graph obtained from the disjoint union of $T_{b,h}$ and the clique $K_{k+1}$ by adding one edge, the
+bridge, between the root of the tree and one vertex of the clique. For $m\ge1$, let $H_h[m]$ be the graph obtained by
+replacing each vertex of $H_h$ by an independent set of $m$ vertices, its block, and each edge by the complete bipartite
+graph between the two blocks. Its adjacency matrix is the Kronecker product $A_{H_h}\otimes J_m$, where $J_m$ is the
+$m\times m$ all-ones matrix.
+
+\begin{lemma}\label{lem:spectral}
+If $k\le b$ and $k\ge2\sqrt b$, then $k\le\lambda(H_h)\le k+1$ and $\Delta(H_h)=b+1$. Consequently
+$\lambda(H_h[m])=m\lambda(H_h)$ and $\Delta(H_h[m])=m(b+1)$.
+\end{lemma}
+
+\begin{proof}
+For a real vector $x$ on the tree, using $2|x_ux_v|\le b^{-1/2}x_u^2+b^{1/2}x_v^2$ for each parent $u$ of $v$,
+\[
+|x^{\mathsf T}A_{T_{b,h}}x|\le\sum_{u\text{ parent of }v}\bigl(b^{-1/2}x_u^2+b^{1/2}x_v^2\bigr)\le2\sqrt b\,\|x\|_2^2,
+\]
+since each vertex has at most $b$ children and at most one parent. So $\lambda(T_{b,h})\le2\sqrt b\le k$, and the
+disjoint union of the tree and $K_{k+1}$ has spectral radius $k$. The bridge has adjacency matrix of norm one, so
+$\lambda(H_h)\le k+1$, and $\lambda(H_h)\ge\lambda(K_{k+1})=k$ by monotonicity of the spectral radius. In $H_h$ an
+internal tree vertex has degree $b+1$, the root has $b$ children and the bridge, the clique vertex on the bridge has
+degree $k+1\le b+1$, and all other degrees are smaller. The eigenvalues of $A_{H_h}\otimes J_m$ are $m$ times those of
+$A_{H_h}$, and degrees are multiplied by $m$.
+\end{proof}
+
+\subsection{Choice of parameters}
+Suppose $q(1+\delta)>1$ and fix $r$ with $1/q<r<1+\delta$. For an integer $k$ put $b=\lfloor rk\rfloor$ and
+\[
+\mu=b\bigl(1-e^{-q/(k+1)}\bigr).
+\]
+As $k\to\infty$ we have $b/k\to r$ and $\mu\to rq>1$. Fix $k$ so large that
+\begin{equation}\label{eq:params}
+2\sqrt b\le k\le b,\qquad b+1<(1+\delta)k,\qquad\mu>1.
+\end{equation}
+These conditions are possible because $r>1/q>1$ and $r<1+\delta$. Fix $\tau\ge0$, let $m_h=\lceil b^{\tau h}\rceil$ and
+$G_h=H_h[m_h]$. Then $G_h$ is connected, has
+\[
+n_h=m_h\Bigl(k+1+\frac{b^{h+1}-1}{b-1}\Bigr)
+\]
+vertices, so that $\log n_h=(1+\tau)h\log b+O(1)$, and by Lemma~\ref{lem:spectral} and~\eqref{eq:params},
+\[
+\Delta(G_h)=m_h(b+1)<(1+\delta)m_hk\le(1+\delta)\lambda(G_h),\qquad\lambda(G_h)=\Theta(m_h)=\Theta\bigl(n_h^{\tau/(1+\tau)}\bigr).
+\]
+Taking $\tau=a/(1-a)$ gives $\lambda(G_h)=\Theta(n_h^a)$. Theorem~\ref{thm:lower} therefore follows from the next
+statement.
+
+\begin{proposition}\label{prop:lower}
+With $p_h=q/\lambda(G_h)$ and every $0<c<\log\mu/((1+\tau)\log b)$,
+\[
+\PP\bigl(L_1((G_h)_{p_h})\ge n_h^c\bigr)\to1\qquad(h\to\infty).
+\]
+\end{proposition}
+
+\subsection{An embedded branching process}
+Write $m=m_h$ and $p=p_h$. Fix a vertex $v_0$ in the block of a tree vertex $x_0$, and explore downwards as follows.
+Given a selected vertex $v$ in the block of a tree vertex $x$, for each child $y$ of $x$ test the $m$ edges from $v$ to
+the block of $y$; if at least one is open, select one of their endpoints by a fixed rule and continue from it. Each
+selected vertex lies in the open component of $v_0$, distinct selected vertices lie in distinct blocks, and the tested
+edge sets are pairwise disjoint. Given the past, a child block is reached with probability
+\begin{equation}\label{eq:success}
+1-(1-p)^m\ge1-e^{-mp}=1-e^{-q/\lambda(H_h)}\ge1-e^{-q/(k+1)}=:a_0,
+\end{equation}
+by Lemma~\ref{lem:spectral}. Thinning each success independently down to probability $a_0$, the selected vertices
+contain a Galton--Watson tree, started from $v_0$ and cut at the leaves of the subtree of $x_0$, whose offspring
+distribution is $X\sim\mathrm{Bin}(b,a_0)$ with $\EE X=\mu>1$.
+
+\begin{lemma}\label{lem:secondmoment}
+Let $Z_\ell$ be the size of generation $\ell$ of a Galton--Watson process with $Z_0=1$ and offspring mean $\mu>1$ and
+variance $\sigma^2$. Then $\PP(Z_\ell\ge\mu^\ell/2)\ge s_0$ for all $\ell\ge0$, where
+$s_0=\bigl(4+4\sigma^2/(\mu(\mu-1))\bigr)^{-1}$.
+\end{lemma}
+
+\begin{proof}
+Conditioning on $Z_\ell$ gives $\EE Z_{\ell+1}^2=\mu^2\EE Z_\ell^2+\sigma^2\mu^\ell$, hence
+\[
+\frac{\EE Z_\ell^2}{\mu^{2\ell}}=1+\frac{\sigma^2}{\mu(\mu-1)}\bigl(1-\mu^{-\ell}\bigr)\le\frac1{4s_0}.
+\]
+The Paley--Zygmund inequality $\PP(Z\ge\EE Z/2)\ge(\EE Z)^2/(4\EE Z^2)$ (see~\cite[Section~5.5]{LP16}) gives the claim.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:lower}]
+Fix $\eta\in(0,1)$ and let $j=\lfloor\eta h\rfloor$. The $b^j$ subtrees of $T_{b,h}$ rooted at level $j$, together
+with their blocks, have pairwise disjoint edge sets. Run the exploration above from one vertex in the root block of each
+subtree, using no edge to a parent block or to the clique. These explorations are independent, and by
+Lemma~\ref{lem:secondmoment} each reaches at least $\mu^{h-j}/2$ distinct vertices at depth $h-j$ of its subtree with
+probability at least $s_0$. All vertices reached by one exploration lie in one open component. Therefore
+\[
+\PP\bigl(L_1((G_h)_p)<\tfrac12\mu^{h-j}\bigr)\le(1-s_0)^{b^j}\to0.
+\]
+Given $c<\log\mu/((1+\tau)\log b)$, choose $\eta$ with $c<(1-\eta)\log\mu/((1+\tau)\log b)$. Since $\log
+n_h=(1+\tau)h\log b+O(1)$, we have $\mu^{h-j}/2\ge n_h^c$ for large $h$.
+\end{proof}
+
+\begin{remark}\label{rem:example}
+For $\varepsilon=0.02$, $\delta=0.1$, $k=100$ and $b=108$ the conditions~\eqref{eq:params} hold, $\Delta/\lambda\le
+109/100$, $\mu=1.04285\ldots$ and $\log\mu/\log b=0.00896\ldots$. With $m_h=108^h$ both $\lambda$ and $\Delta$ are of
+order $\sqrt{n}$, and $L_1\ge n^{0.004}$ with high probability. The large component sits inside one subtree, so it does
+not use the bridge. Since $k\ge2\sqrt b$ gives $\mu<qb/(k+1)<q\sqrt b/2$, the exponent in
+Proposition~\ref{prop:lower} is less than $1/(2(1+\tau))$, while $B=\Theta(n^{1/(2(1+\tau))})$ for these graphs; this
+is consistent with~\eqref{eq:cmw}.
+\end{remark}
+
+\section{Logarithmic components below the margin}\label{sec:strict}
+
+\begin{proof}[Proof of Proposition~\ref{prop:strict}]
+Put $\kappa=1-q(1+\delta)$, so that $p\Delta\le q\Delta/\lambda\le1-\kappa$. Explore the component of a vertex $x$ in
+breadth-first order, adding independent trials whenever a vertex has fewer than $\Delta$ unexplored neighbours. The
+total progeny is then dominated by that of a Galton--Watson process with offspring $\mathrm{Bin}(\Delta,p)$. If the
+total progeny is at least $s$, the first $N=s-1$ particles have at least $N$ children in total, and these children are
+a sum $S$ of $N\Delta$ independent Bernoulli$(p)$ variables with $\EE S\le(1-\kappa)N$. With $e^t=1/(1-\kappa)$,
+\[
+\PP(S\ge N)\le e^{-tN}\EE e^{tS}\le\exp\{-tN+(1-\kappa)N(e^t-1)\}=\exp\{N[\kappa+\log(1-\kappa)]\}\le
+e^{-\kappa^2N/2}.
+\]
+A union bound over $x$ gives $\PP(L_1(G_p)\ge s)\le n\exp(-\kappa^2(s-1)/2)$, which is $o(1)$ for
+$s=1+3\kappa^{-2}\log n$.
+
+For the cycle, $\lambda=\Delta=2$ and $p=q/2$. Split its edges into $\lfloor n/\ell\rfloor$ disjoint paths of
+$\ell=\lfloor c\log n\rfloor$ edges with $0<c<1/\log(1/p)$. The events that these paths are open are independent with
+probability $p^\ell$ each, and $\lfloor n/\ell\rfloor p^\ell\to\infty$, so with high probability one of them occurs and
+$L_1\ge\ell+1$.
+\end{proof}
+
+\section{The boundary case}\label{sec:boundary}
+
+\begin{proof}[Proof of Theorem~\ref{thm:boundary}]
+Assume $p>0$. Let $u=(I-pA)^{-1}\one=\sum_{j\ge0}p^jA^j\one$, which converges because $p\lambda\le q<1$, and let
+$U=\max_xu_x$. By~\eqref{eq:walk}, $p^jW_j(x)\le q^jB$, and $p^jW_j(x)\le(p\Delta)^j\le1$. With
+$J=\lceil\log B/\log(1/q)\rceil$ the first $J$ terms of $u_x-1$ are at most one and the rest are at most
+$q^{j-J}$, so
+\begin{equation}\label{eq:U}
+U\le1+J+\frac q{1-q}\le1+J+\frac1\varepsilon.
+\end{equation}
+Since $B\le\sqrt n$, this gives $U=O_\varepsilon(\log n)$.
+
+Consider the multitype branching process with type set $V(G)$ in which a particle of type $x$ has, independently for
+each neighbour $y$ of $x$, one child of type $y$ with probability $p$. Exploring the component of $x$ and using fresh
+independent trials for edges to vertices already discovered shows that $|C_x|$ is dominated by the total progeny $T$ of
+this process started from type $x$. The expected total progeny vector is $u$, and $pAu=u-\one$.
+
+Let $a=1/(2U^2)$ and $\theta=1/(4U^2)$, and let $T_g$ be the progeny in the first $g$ generations. We show by induction
+on $g$ that $\EE e^{\theta T_g}\le e^{au_x}$ for a process started at $x$. For $g=0$, $T_0=1$ and $\theta\le a\le
+au_x$. For the induction step, independence of the children and $e^z-1\le z+z^2$ for $0\le z\le1$, applied with
+$z=au_y\le1/2$, give
+\[
+\EE e^{\theta T_{g+1}}\le\exp\Bigl[\theta+p\sum_{y\sim x}\bigl(e^{au_y}-1\bigr)\Bigr]
+\le\exp\bigl[\theta+a(u_x-1)+a^2U(u_x-1)\bigr]\le e^{au_x},
+\]
+using $p\sum_{y\sim x}u_y=u_x-1$, $u_y^2\le Uu_y$, $u_x-1\le U$ and $\theta+a^2U^2=a$. By monotone convergence
+$\EE e^{\theta T}\le e^{aU}\le e^{1/2}$, so
+\[
+\PP(|C_x|\ge s)\le\PP(T\ge s)\le\exp\Bigl(\frac12-\frac s{4U^2}\Bigr).
+\]
+A union bound over $x$ with $s=4U^2(3\log n+1)$ gives $\PP(L_1(G_p)\ge s)\le n^{-2}$, and $s=O_\varepsilon((\log
+n)^3)$. If $\Delta\le(1+\delta)\lambda$, $q(1+\delta)=1$ and $p\le q/\lambda$, then $p\Delta\le1$.
+\end{proof}
+
+\section{A refinement of the resolvent bound}\label{sec:refine}
+
+\begin{proof}[Proof of Theorem~\ref{thm:refine}]
+Let $u=\sum_{j\ge0}(a\lambda)^{-j}A^j\one$. By~\eqref{eq:walk} and $W_j\le\Delta^j$, $(a\lambda)^{-j}W_j(x)\le
+a^{-j}\min\{R^j,B\}$, so $1\le u_x\le U_a$. The weights $w=u/U_a$ satisfy $U_a^{-1}\le w_x\le1$ and
+$Aw=a\lambda(w-U_a^{-1}\one)\le a\lambda w$.
+
+Explore the component $C$ of a vertex $x$, querying each edge from a discovered vertex to an undiscovered one at most
+once. Before the $i$-th query, let $z_i\in[0,1]$ be the weight of the undiscovered endpoint (after the exploration
+stops, pad with queries of weight zero), and let $Y_i$ be the indicator that the edge is open. Given the past, $Y_i$ is
+Bernoulli$(p)$, so for $t\in[0,1/2]$
+\[
+\EE\bigl[e^{tY_iz_i}\,\big|\,\mathcal F_{i-1}\bigr]\le\exp\bigl(p(e^{tz_i}-1)\bigr)\le\exp\bigl(pt(1+t)z_i\bigr).
+\]
+Hence $M_i=\exp\bigl(\sum_{l\le i}(tY_lz_l-pt(1+t)z_l)\bigr)$ is a supermartingale with $M_0=1$. When the exploration
+stops, $\sum Y_lz_l=w(C)-w_x\ge w(C)-1$ and $\sum z_l\le\sum_{v\in C}(Aw)_v\le a\lambda w(C)$. With $t=\theta/2$ and
+$pa\lambda\le qa=1-\theta$,
+\[
+\log M\ge\frac\theta2\bigl(w(C)-1\bigr)-\frac\theta2\Bigl(1+\frac\theta2\Bigr)(1-\theta)w(C)\ge\frac{\theta^2}4w(C)-1.
+\]
+By Markov's inequality $\PP(w(C)\ge z)\le\exp(1-\theta^2z/4)$. Since $|C|\le U_aw(C)$, a union bound over $x$ at
+$|C|\ge\lceil4\theta^{-2}U_a(1+3\log n)\rceil$ gives the bound $n\cdot n^{-3}$.
+\end{proof}
+
+\begin{remark}\label{rem:exponent}
+If $R=1$ then $U_a=a/(a-1)$. If $R>1$, let $J=\lfloor\log B/\log R\rfloor$; then $R^j\le B$ exactly for $j\le J$, and
+\[
+U_a=1+\sum_{j=1}^{J}\Bigl(\frac Ra\Bigr)^j+\frac{Ba^{-J}}{a-1}.
+\]
+For fixed $R$ and $a$ this is $O(1)$ if $R<a$, $O(1+\log B)$ if $R=a$, and $O(B^{1-\log a/\log R})$ if $R>a$. If
+$R<1/q$, choosing $a\in(R,1/q)$ recovers $L_1=O(\log n)$, in line with Proposition~\ref{prop:strict}. If $R>1/q$ is
+fixed and $0<\zeta<-\log q/\log R$, choose $a<1/q$ with $1-\log a/\log R\le\log(qR)/\log R+\zeta$; this gives
+\eqref{eq:refine}, whose exponent $\log(qR)/\log R+\zeta$ is less than one. The constants depend on $R$, $a$ and
+$\varepsilon$, so~\eqref{eq:refine} is a statement for fixed $R$, not a bound uniform in $R$.
+\end{remark}
+
+\section{Examples and computations}\label{sec:examples}
+
+\begin{remark}\label{rem:examples}
+The star $K_{1,t}$ has $\lambda=\sqrt t$, $\Delta=t$ and $n=t+1$; at $p=q/\sqrt t$ the centre keeps
+$\mathrm{Bin}(t,q/\sqrt t)$ leaves, so $L_1=(q+o(1))\sqrt t$ with high probability, while~\eqref{eq:cmw} gives
+$O(\sqrt t\log t)$. Joining $K_{k+1}$ by one edge to a leaf of $K_{1,D}$ with $k+1\le D\le k^2$ gives $\Delta=D$ and
+$k\le\lambda\le k+1$, and the largest component is of order $D/k+\log k$; such graphs realise every ratio $\Delta/\lambda$
+between about $1$ and $\sqrt\Delta$, but their components grow only through the star. Theorem~\ref{thm:lower} uses
+a branching tree instead, which gives polynomial growth at a bounded ratio.
+\end{remark}
+
+\begin{remark}\label{rem:sims}
+The repository contains a simulation of $1{,}200$ percolation samples on $30$ host graphs of up to $1{,}118{,}688$
+vertices, all at $p=(1-\varepsilon)/\lambda$, with $40$ samples per host. The hosts are the balanced complete bipartite
+graph, $K_{s,s^3}$, the star with and without a clique, the random graph $G(n,6/(n-1))$ with four added vertices of
+degree about $n^{0.6}2^{-i}$, $i=0,1,2,3$ (all with $\varepsilon=0.2$), and the graphs of Section~\ref{sec:lower}
+with $k=12$ and $b=16$, with and without blocks of size $2^h$ (with $\varepsilon=0.1$). Least-squares slopes of the
+logarithm of the median of $L_1$ against $\log n$ over the tested sizes are $0.17$ and $0.20$ for the two near-regular
+families, $0.18$ for the random graph with added vertices, $0.48$ for $K_{s,s^3}$, $0.49$ for the star, $0.52$ for the star with a clique and $0.27$ for
+the balanced complete bipartite graph, whose components are logarithmic by Proposition~\ref{prop:strict}. These slopes
+are descriptive: the tested heights are small, and the data do not distinguish a small power from slow polylogarithmic
+growth. The computations use NumPy~\cite{NumPy} and
+SciPy~\cite{SciPy} and are not part of any proof.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+A Codex agent (OpenAI) proved the results and wrote the code of Remark~\ref{rem:sims}; a second Codex agent checked the
+proofs and the literature as a referee; Claude agents (Anthropic) checked the steps and prepared the manuscript. The
+author directed the work and is responsible for the content of the paper and for decisions concerning its
+dissemination.
+
+\section*{Code availability}
+The code and data of Remark~\ref{rem:sims} are in the repository
+\begin{center}\url{https://github.com/yspennstate/near-regular-percolation-components}.\end{center}
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.0cm}p{8.0cm}p{3.1cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$G$, $n$, $A$ & finite simple graph, its order, its adjacency matrix & Section~\ref{sec:intro}\\
+$\lambda$, $\Delta$, $d(x)$ & spectral radius, maximum degree, degree of $x$ & Section~\ref{sec:intro}\\
+$G_p$, $L_1$ & percolated graph, order of its largest component & Section~\ref{sec:intro}\\
+$\varepsilon$, $q$ & subcritical margin, $q=1-\varepsilon$ & Section~\ref{sec:intro}\\
+$\delta$ & near-regularity parameter, $\Delta\le(1+\delta)\lambda$ & Section~\ref{sec:intro}\\
+$R$, $B$ & $\Delta/\lambda$ and $\sqrt{n\Delta}/\lambda$ & Section~\ref{sec:intro}\\
+$c$ & exponent of the large component & Theorem~\ref{thm:lower}\\
+$\one$, $e_x$ & all-ones vector, basis vector at $x$ & Section~\ref{sec:intro}\\
+$\PP$, $\EE$ & probability, expectation & Section~\ref{sec:intro}\\
+$v_0$, $x_0$ & starting vertex, its tree vertex & Section~\ref{sec:lower}\\
+$a$, $\theta$, $U_a$ & resolvent parameter, $1-qa$, weight bound & Theorem~\ref{thm:refine}\\
+$\zeta$ & slack in the exponent & \eqref{eq:refine}\\
+$W_k(x)$ & number of walks of length $k$ from $x$ & \eqref{eq:walk}\\
+$T_{b,h}$, $H_h$ & $b$-ary tree of height $h$, tree joined to $K_{k+1}$ & Section~\ref{sec:lower}\\
+$H_h[m]$, $J_m$ & blow-up with blocks of size $m$, all-ones matrix & Section~\ref{sec:lower}\\
+$r$, $\mu$, $\tau$ & ratio $b/k$, offspring mean, blow-up exponent & Section~\ref{sec:lower}\\
+$m_h$, $G_h$, $n_h$, $p_h$ & block size, constructed graph, its order, $q/\lambda(G_h)$ & Section~\ref{sec:lower}\\
+$a_0$, $X$ & success bound, offspring variable & \eqref{eq:success}\\
+$Z_\ell$, $\sigma^2$, $s_0$ & generation size, offspring variance, success bound & Lemma~\ref{lem:secondmoment}\\
+$\eta$, $j$ & fraction of the height, level of the subtrees & Proposition~\ref{prop:lower}\\
+$\kappa$, $S$, $N$ & $1-q(1+\delta)$, sum of offspring, its length & Section~\ref{sec:strict}\\
+$u$, $U$, $J$ & resolvent vector, its maximum, cut-off index & Section~\ref{sec:boundary}\\
+$T$, $T_g$, $C_x$ & total progeny, through generation $g$, component of $x$ & Section~\ref{sec:boundary}\\
+$w$, $z_i$, $Y_i$, $M_i$ & weights, query weight, query indicator, supermartingale & Section~\ref{sec:refine}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{ABS04} N.~Alon, I.~Benjamini and A.~Stacey, Percolation on finite graphs and isoperimetric inequalities,
+\emph{Ann.\ Probab.} \textbf{32} (2004), no.~3, 1727--1745. \doi{10.1214/009117904000000414}
+\bibitem{BBCR10} B.~Bollobás, C.~Borgs, J.~Chayes and O.~Riordan, Percolation on dense graph sequences, \emph{Ann.\
+Probab.} \textbf{38} (2010), no.~1, 150--183. \doi{10.1214/09-AOP478}
+\bibitem{CMW26} M.~Christoph, P.~Morawski and Y.~Wigderson, The critical probability for percolation on finite graphs,
+preprint (2026), \arxiv{2608.19145}.
+\bibitem{DEKK25} S.~Diskin, J.~Erde, M.~Kang and M.~Krivelevich, Percolation on high-dimensional product graphs,
+\emph{Random Structures Algorithms} \textbf{66} (2025), no.~1, e21268. \doi{10.1002/rsa.21268}; \arxiv{2209.03722}.
+\bibitem{NumPy} C.~R.~Harris et al., Array programming with NumPy, \emph{Nature} \textbf{585} (2020), 357--362.
+\doi{10.1038/s41586-020-2649-2}
+\bibitem{LP16} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge University Press, New York,
+2016. \doi{10.1017/9781316672815}
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{MathBrainRepo} Y.~Shmalo, Math Brain: public snapshot, code and tests, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{BrainFramework} Y.~Shmalo, Brain Framework, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\bibitem{SciPy} P.~Virtanen et al., SciPy 1.0: fundamental algorithms for scientific computing in Python, \emph{Nature
+Methods} \textbf{17} (2020), 261--272. \doi{10.1038/s41592-019-0686-2}
+\end{thebibliography}
+\end{document}
