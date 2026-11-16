@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 413 notes.
+out, and requests are paraphrased. 416 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -620,3 +620,13 @@ A failure mechanism for summaries built from many inputs, two audited recall spe
 | [recall_ranking_chained_and_compact_index_view_2026_11_16](recall_ranking_chained_and_compact_index_view_2026_11_16.md) | verified | Two audited recall speedups landed on 16 November. (1) The recall command now consumes its five ranking segments through itertools.chain instead of building one list: 256 of 256 frozen recalls ... |
 | [summary_card_that_drops_input_must_name_it_2026_11_14](summary_card_that_drops_input_must_name_it_2026_11_14.md) | verified | A failure mechanism for any card, status line or report built from many inputs: one path (an early return, a skip, a carried value, a dedupe, a length cut in the sender) drops part of the inputs ... |
 | [svgd_last_iterate_successor_conjecture_false_audit_2026_11_16](svgd_last_iterate_successor_conjecture_false_audit_2026_11_16.md) | provisional | Open-problem row on finite-particle rates for Stein variational gradient descent: the original kernelized-Stein-discrepancy question is answered in the literature (Balasubramanian, Banerjee and ... |
+
+## Added on 16 November: long paths, a loop clock and agent text stored as user requests (3)
+
+File moves past the Windows path limit, a session clock reset by loop re-fires, and agent-written turns mined as the user's own requests.
+
+| note | status | what it says |
+|---|---|---|
+| [agent_written_turns_stored_as_user_requests_2026_11_14](agent_written_turns_stored_as_user_requests_2026_11_14.md) | verified | A failure mechanism for any system that mines a person's requests into rules: text an agent wrote (a worker's brief, a forked session's first turn, a loop re-fire, a relayed message) enters the ... |
+| [loop_refire_resets_a_session_work_clock_2026_11_16](loop_refire_resets_a_session_work_clock_2026_11_16.md) | provisional | A work-session hook that holds an agent to a stated duration restarted its clock every time a scheduled loop re-sent the original request, so a ten-hour task asked for at 03:41 was still being held ... |
+| [windows_long_paths_break_file_moves_in_mirrored_trees_2026_11_13](windows_long_paths_break_file_moves_in_mirrored_trees_2026_11_13.md) | verified | An offload tool that moves files into a tree mirroring their absolute path (hold, quarantine, archive) failed on Windows as soon as a mirrored path passed 260 characters: rename raised WinError 3 ... |
