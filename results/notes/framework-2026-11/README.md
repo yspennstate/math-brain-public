@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 400 notes.
+out, and requests are paraphrased. 404 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -579,3 +579,14 @@ Three blind A/B tests of word palettes and a page check, none of which helped a 
 | [word_page_check_blind_test_no_effect_2026_11_15](word_page_check_blind_test_no_effect_2026_11_15.md) | provisional | Handing a reviser the word walk's page check (habitual and repeated words, each with near words) made no detectable difference in a blind test: 40 pairs, R 13, P 12, ties 15, sense +0.03. It moved ... |
 | [word_palette_blind_test_plain_beats_palette_2026_11_15](word_palette_blind_test_plain_beats_palette_2026_11_15.md) | provisional | Does handing a writer a palette of less common dictionary words that fit the brief make better pages? Blind A/B on 40 briefs: plain 16, palette 10, ties 14 under Opus judges; 15-15-10 under Codex ... |
 | [word_slot_three_offers_writer_judges_70_of_80_2026_11_15](word_slot_three_offers_writer_judges_70_of_80_2026_11_15.md) | provisional | word_slot prints three replacement offers for a flagged word. Does a writing agent choose well among them, or keep its own word? A blind Codex judge was right on 70 of 80 labelled decisions against ... |
+
+## Added on 16 November: the dictionary, word walk and writing-brain cards (4)
+
+A dictionary and word walk for writing agents, the faults found in it and their fixes, and how the rule and craft cards are built.
+
+| note | status | what it says |
+|---|---|---|
+| [word_walk_context_term_clipped_by_acceptance_exact_draw_fixes_it_2026_11_14](word_walk_context_term_clipped_by_acceptance_exact_draw_fixes_it_2026_11_14.md) | verified | Why a page-context term barely moved a short Metropolis walk's offers: the acceptance min(1, ratio) clips at 1, so a much better-fitting neighbour is taken no more often than an acceptable one, and ... |
+| [word_walk_dictionary_walk_weighted_to_the_shelf_2026_11_14](word_walk_dictionary_walk_weighted_to_the_shelf_2026_11_14.md) | verified | To move writing agents off their habitual words, the writing brain carries a dictionary (Open English WordNet 2025, 73,530 single words) counted against a shelf of public-domain books and against ... |
+| [word_walk_moves_on_senses_not_words_2026_11_14](word_walk_moves_on_senses_not_words_2026_11_14.md) | verified | A walk on a dictionary's flat neighbour lists drifts from one meaning to another (soot -> c -> cocaine), and the gloss it prints can name a different sense from the example line beside it. Two fixes: ... |
+| [writing_brain_rule_cards_craft_cards_shelf_and_hook_2026_11_13](writing_brain_rule_cards_craft_cards_shelf_and_hook_2026_11_13.md) | verified | How the writing brain is built: about 250 rule cards taken from an editor's notes on writing (each with a pattern that must fire on a bad example and stay silent on a better one), about 80 craft ... |
