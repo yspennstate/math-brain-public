@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 358 notes.
+out, and requests are paraphrased. 359 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -445,3 +445,11 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 | [codex_pool_usage_limit_grep_matched_quoted_brain_text_2026_11_15](codex_pool_usage_limit_grep_matched_quoted_brain_text_2026_11_15.md) | verified | Codex pool stopped on 'usage limit'? Check the matched line: on 15 Nov round 4 stopped falsely because a worker's log quoted brain text; count a limit only in the tail of an exited worker's log |
 | [prose_surface_measures_catch_2023_ai_not_ours_2026_11_14](prose_surface_measures_catch_2023_ai_not_ours_2026_11_14.md) | verified | Can sentence-length/word-rarity statistics tell our prose from human? They catch 2022-23 models (MAGE stories, held-out AUC 0.937 vs gpt-3.5/davinci-003/GLM/LLaMA-65B; sentence-length CV alone 0.856) ... |
 | [public_push_secret_scan_refuses_npy_in_text_list_2026_11_15](public_push_secret_scan_refuses_npy_in_text_list_2026_11_15.md) | verified | math-brain-public push_rest stops at 'SECRET SCAN ERROR: content had ambiguous NUL-heavy text encoding / REFUSED rc 2' and every later pass repeats it? A binary (.npy) sits in the TEXT order list; ... |
+
+## Added on 16 November (1)
+
+The math hook on a fresh install of this repository.
+
+| note | status | what it says |
+|---|---|---|
+| [public_math_hook_silent_without_objects_folder_2026_11_16](public_math_hook_silent_without_objects_folder_2026_11_16.md) | verified | Why does the math hook serve nothing on a fresh install? The root selection_integrity.py read artifacts from <store>/objects, which the public export does not ship (81,654 of 89,410 cards declare one), failed the integrity check and stayed silent. Fixed 0fe060548 on 16 Nov |
