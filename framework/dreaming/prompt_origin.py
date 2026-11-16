@@ -6,7 +6,7 @@ prompt_archive.py's record builder writes ts/session/cwd/source/class_provisiona
 and nothing else. It never wrote `origin`. So `origin` sat on 11,628 of 18,626 ledger records and
 was ABSENT on 6,997 - every one of them a live-hook record from 2026-07 (1,331) and 2026-08
 (5,667). build_prompt_views.py branches on `origin == "automation"`, so that branch was dead code
-across the whole recent period, and nothing could separate a prompt the owner typed from the same
+across the whole recent period, and nothing could separate a prompt the author typed from the same
 prompt re-fired by a /loop cron job.
 
 The damage lands exactly where he looks. He routinely tells an agent to "read my last 100 prompts".
@@ -30,7 +30,7 @@ Hybrid takes the 2026-08-21 loop group from 40 records to 2 distinct asks (exact
 loop-shaped records ledger-wide from 342 to 90.
 
 FIELDS WRITTEN
-  origin     "owner"      the owner typed it
+  origin     "owner"      the author typed it
              "automation" agent-authored loop scaffolding - a tick header this fleet wrote itself
   repeat_of  ts of the first sighting of this same ask (absent on the first occurrence)
   repeat_n   2,3,4... on repeats (absent on the first occurrence)
@@ -44,11 +44,14 @@ import os, io, json, re, hashlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 RECENT_KEEP = 800
 
-# Agent-authored scaffolding: a loop tick rewrites the owner's order into a mandate header carrying
+# Agent-authored scaffolding: a loop tick rewrites the author's order into a mandate header carrying
 # its own operating instructions. Those words are the fleet's, not his, and must never be read back
 # as an owner ask.
 _AGENT_AUTHORED = re.compile(
-    r"^\s*(OVERNIGHT\b.{0,60}\bMANDATE\b"
+    r"^[\s\ufeff]*(OVERNIGHT\b.{0,60}\bMANDATE\b"
+    # the weekly wake prompt typed by a scheduled task from the home folder, often behind a BOM, which \s does not
+    # match (on one machine, 8 Nov: 4 of its 8 ledger rows there were stored as his)
+    r"|You are waking as the continuous collaborator\b"
     r"|CONTINUE THE \d+-HOUR\b"
     r"|\[?(SYSTEM|AUTO|SCHEDULED)[- ]?(NOTIFICATION|TICK|FIRE)\b"
     # bank grader prompts: the acceptance arms call `claude -p` on this machine, and the
@@ -80,7 +83,11 @@ _AGENT_AUTHORED = re.compile(
     r"|/goal \[Restored\b"
     # the Codex app's own suggestion task, run in its install directory (30 Sep 03:01 it landed in the ledger and the hourly
     # block as his ask, and a verification card answered it)
-    r"|#\s*Overview\s+Generate \d+ to \d+ hyperpersonalized suggestions\b)", re.I)
+    r"|#\s*Overview\s+Generate \d+ to \d+ hyperpersonalized suggestions\b"
+    # a cron job's own tick prompt: "<Name> loop tick (his 7 Nov 21:38 order; ...)". Only ticks carrying the old
+    # "EACH TICK:" body were caught; 4,039 of 7,758 tick prompts in the 48 h to 8 Nov 04:4x were stored as his,
+    # filled the hourly block and the checklist, and raised the exact-clause overflow advice 370 times (an agent)
+    r"|[\w+/\-' ]{0,60}?\bloop tick\s*[(:])", re.I)
 # the Codex desktop app runs its own background tasks with its install directory as the working directory
 _CODEX_APP_CWD = re.compile(r"[\\/]AppData[\\/]Local[\\/]OpenAI[\\/]Codex[\\/]bin(?:[\\/]|$)", re.I)
 # the same grader prompts end with a JSON-only instruction; a body match catches variants
@@ -91,9 +98,31 @@ _TICK_BODY = re.compile(r"\bEACH TICK:\s", re.I)
 _LOOPISH = re.compile(r"^\s*(/loop\b|/dream\b|OVERNIGHT\b.{0,60}\bMANDATE\b|CONTINUE THE \d+-HOUR\b)", re.I)
 
 
+# A worker brief an agent wrote and handed to `claude -p` or `codex exec`: a capitalized "You are <role> ..." of at least
+# 140 characters, or the fleet's own hourly check. His own "you are" is lowercase or short. Measured 13 Nov 2026
+# (an agent): 33 such texts / 70 ledger rows were stored as his (the July auditor fleets, a
+# transport probe, HOURLY FLEET CHECK re-sent 38 times) and none of his own; the agents mining his prompts for rules read them.
+_WORKER_BRIEF = re.compile(r"^[\s\ufeff]*(?:(?-i:You are (?:a |an |the |one |role \d|[A-Z][A-Z_]{3,}\b|reviewing |refereeing |running |Claude ))"
+                           r"|HOURLY FLEET CHECK\b)", re.I)
+
+
+def _worker_brief(text):
+    t = text or ""
+    return bool(_WORKER_BRIEF.match(t)) and (t.lstrip().upper().startswith("HOURLY FLEET CHECK") or len(t) >= 140)
+
+
+# An agent's own tick or follow-up names him in the third person near its start: "Loop tick of his 22 Oct 23:10 order",
+# "FILM TICK for his 7 Oct 04:13 goal", "(his standing order of 5 Oct ...)". He never writes about himself as "his".
+# Measured 14 Nov 2026 on the 23,569-record store (an agent): 43 matches, 29 already caught,
+# the 14 new ones (353 ledger rows, 281 of them one cron tick) all agent-written; "runt his goal" does not match.
+_THIRD_PERSON_TICK = re.compile(
+    r"^[^\n]{0,120}?(?:\(|\bof |\bfor |: )his\b[^.\n\"]{0,50}?\b(?:order|orders|ask|goal|directive|standing order)\b", re.I)
+
+
 def is_agent_authored(text):
     return bool(_AGENT_AUTHORED.match(text or "") or _TICK_BODY.search(text or "")
-                or _GRADER_BODY.search(text or ""))
+                or _GRADER_BODY.search(text or "") or _worker_brief(text)
+                or _THIRD_PERSON_TICK.search((text or "")[:200]))
 
 
 def machine_turn(text, cwd="", session=""):

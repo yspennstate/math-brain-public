@@ -125,7 +125,7 @@ def anchors_for(trigger):
     when one requirement is kept (the v1 form), or a list of up to MAX_CONJ any-of lists, all required, when the
     pattern requires several unrelated pieces.
 
-    WHY (14 Nov 2026, an agent, T-20261113-049): only the strongest requirement used to be kept. A trigger
+    WHY (14 Nov 2026, an agent): only the strongest requirement used to be kept. A trigger
     built as "a paper word ... then a push word" passed the pre-check whenever EITHER word was present, and findall
     then scanned the text with a 400-character lookahead at every position. On 300 real tool calls the hook spent
     62 ms per call matching, 17.5 ms of it on three such triggers that passed the pre-check on 17-30 pct of calls."""

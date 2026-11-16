@@ -2002,7 +2002,7 @@ def list_compactions(paths):
 
 def shard(paths_file, state_file=None):
     """Process exactly the files listed (one path per line), with a cursor state of their own: shards run in parallel
-    (team C, his 20:04 order) without the global lock; a compaction saved by another shard is not saved again (sha)."""
+    (team C) without the global lock; a compaction saved by another shard is not saved again (sha)."""
     paths = [l.strip() for l in io.open(paths_file, encoding="utf-8") if l.strip() and not l.startswith("#")]
     state_file = state_file or os.path.join(ROOT, "shard_states", os.path.basename(paths_file) + ".json")
     os.makedirs(os.path.dirname(state_file), exist_ok=True)
