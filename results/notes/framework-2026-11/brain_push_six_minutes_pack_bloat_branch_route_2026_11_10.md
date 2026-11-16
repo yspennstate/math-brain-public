@@ -1,0 +1,27 @@
+---
+name: brain_push_six_minutes_pack_bloat_branch_route_2026_11_10
+description: "[VERIFIED] Brain-repo push hangs or never lands? Pushes take 4-6 min (31,681 pack files) while main moves every few seconds: replay onto FETCH_HEAD with merge-tree, push a side branch, merge_branch_api.py. Dream's 12:55 merge got 500 on a 2,125-behind base"
+metadata:
+  node_type: memory
+  type: project
+  created: 2026-11-10
+  created_at: 2026-11-10T17:55:43+02:00
+  status: provisional
+  evidence: ""
+  modified: 2026-11-10T20:49:17.941Z
+---
+
+10 Nov 17:3x-17:55, brain clone ~\brain-repo:
+- A plain push of a one-file commit to main never landed: each push took over 4 min (timeout 240 s twice) and main moved several times a minute meanwhile (three tries, three new bases). The same commit replayed with `git merge-tree --write-tree --merge-base=<commit>~1 FETCH_HEAD <commit>` + `git commit-tree -p FETCH_HEAD`, pushed to side branch an agent-governor-1748 (6 min 28 s for ONE changed file), then merged by merge_branch_api.py: status 201, merge 5c29157e70e2. Side branch deleted.
+- Why the push is slow: .git/objects/pack holds 31,681 files (about 15,800 packs) plus leftover tmp_pack_* files from killed fetches back to 9 Nov; C: is 95 pct full (112 GB free).
+- A fetch can fail 'fetch-pack: invalid index-pack output' or 'incorrect old value provided' when another agent fetches the same clone at the same moment; FETCH_HEAD is still written in the second case, so use FETCH_HEAD, not origin/main.
+- The 10:30 dream commit 28b1488 is still local: its side-branch merge got status 500 from GitHub at 12:55 (merge tool exit 4). Its branch sat on a base 2,125 commits behind main with 13 conflicting generated views; a branch replayed onto fresh main (as above) merged cleanly in seconds. Likely fix in dream_git_sync.ps1 Publish-ViaBranchMerge: replay onto FETCH_HEAD with merge-tree before pushing the branch. Not done yet.
+- Correction (19:3x): the pack directory holds 8,066 packs (28.3 GB; 8,060 of them promisor packs), not 15,800; the 31,681 count was every file (.pack/.idx/.rev/.promisor). 5,141 packs are under 1 MB.
+- Measured 19:16 with GIT_TRACE2_PERF on a dry-run push of an empty commit (30.1 s total): ref list 8.7 s (most of it credential manager), the pre-push cost guard 5.8 s, push_refs 0.2 s, and then 14.3 s loading the multi-pack index over 7,732 packs (1,182,010 objects). A real push adds pack-objects on top of that.
+- WHERE THE PACKS COME FROM: every lazy fetch in this blob:none clone lands as one more promisor pack. At 19:1x, two hand-rolled pushes ran a plain `git write-tree` on a temp index read from main, and each lazily fetched 76,500 objects. A `git cat-file -e <commit>` on a commit not yet local fetched 757,000 objects, the commit's whole history. Each `git show origin/main:<file>` for a missing blob adds one tiny pack. The shared push_paths.sh was not the cause; it has used --missing-ok since 2 Nov.
+- FIX 19:3x: brain_checkout_guard.py (PreToolUse) now refuses a plain write-tree in the brain repo (selftest 7 refused / 10 allowed, plus live hook controls). split_big_commit.py now uses --missing-ok. push_frontier.py was fixed by its owner. Still open: consolidating the small packs with a geometric repack at Idle priority, one job at a time, then measuring the dry-run again.
+- 20:4x SECOND SOURCE, fixed: the existence probes. github_push_cost_guard.py (2 sites), prepush_secret_gate.py (2), hook_liveness.py (dream-commit check) and dream_git_sync.ps1 (merge-base + 2 cat-file) asked `git cat-file -e <remote tip>^{commit}`; when main had moved, the tip was not local and git lazy-fetched its whole history - on EVERY push (pre-push hooks) and every wake. All now `git --no-lazy-fetch ...` (git 2.53 has it): a missing commit answers rc 128 in ~4 s; the plain probe on a fake id was still running after 8 min. Cost-guard selftest 24/24; live files and canonical copies sha-identical; on brain main as 2fca22c (20:5x). The first push_paths.sh run was REFUSED (rc 3, "would lose 3 lines"): its removal check counts an in-place edited line as a removed one; a diff against main showed only our own edits, so it was re-run with ALLOW_REMOVALS=1. Three git pushes then lost the race to a moving main and the Git Data API fallback landed it. Rule: in a blob:none clone, any "do we have X" probe carries --no-lazy-fetch.
+- 20:18 geometric repack started at Idle: packs=8123 promisor=8119 28.78 GB (brain_repack.log). gc.auto=0 in the clone, so nothing ever consolidated them. NEXT: when the log says done, re-run push_profile.ps1 and compare against the 30.1 s / 14.3 s-midx dry run.
+- 22:4x WEEKLY JOB FIXED: bin\repack_repos.ps1 used to SKIP a repo when free disk < 2 x objects + 10 GB (the brain was skipped 1 and 8 Nov). Now, when a repo has > 1000 packs or is short on disk, it runs a small-pack rollup instead: marked .keep on every pack >= 1 MB, `repack --geometric=2 -d --write-midx`, removes only its own marks, deletes tmp_pack_* older than a day. Tested on a throwaway repo with the branch forced: 22 packs -> 3 (2 big kept), a foreign .keep and a fresh tmp kept, fsck clean, all 22 commits. Canonical copy on brain main 77753aa (blob 3a7d7df, same as the live file). The 21:42 hand-run rollup of the brain (pinned 2,971 big packs) was still writing at 22:46.
+Related: [[dream_push_merge_locally_first_partial_clone_missing_ok_2026_11_10]] [[dream_commit_pushed_through_side_branch_server_merge_2026_11_10]] [[the_governor_restarts_itself_at_logon_now_2026_11_10]] [[slow_is_the_disk_not_the_cpu_2026_09_16]]
+
