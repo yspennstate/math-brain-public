@@ -2,6 +2,8 @@
 
 The paper on the brain itself, with the tests described in `../TESTS.md`, is in `math-brain-2026-10-24/` (PDF and LaTeX source).
 
+[PRIOR_WORK.md](PRIOR_WORK.md) gives, for each paper in `public/`, its abstract and the works its text cites most often, and [../results/CREDITS.md](../results/CREDITS.md) lists every author our papers cite. Both are generated from the papers' own sources.
+
 ## T067, T228 and T357: completed target papers
 
 The [31 October 2026 release](three-targets-2026-10-31/README.md) contains three complete papers, sources and verification records. Their mathematical targets are solved in the exact scope stated in each paper:
