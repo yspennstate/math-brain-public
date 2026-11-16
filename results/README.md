@@ -8,6 +8,7 @@
 | `scheduled-tasks/` | Campaigns run by scheduled tasks: the five-singular-values audits, the quadratic-form density problems and a collective round on open problems. |
 | `proofnet24-brain/` | Work on a probability correlation problem (P14), three collective rounds and the quadratic-form bounded density problem. |
 | `frontier-2026-10/` | Rows of the top-400 frontier board (probability and the theory of deep learning) whose results passed an independent check, the thirty-agent campaigns of 23 and 24 October, the T228 certificate, the T353 review and a two-agent referee test. Start with `frontier-2026-10/README.md`. |
+| `open-problem-catalogue-2026-11/` | 1,128 open problems in probability, networks and computation, each with its source, a quote from the source and a dated search for a later solution. Start with `open-problem-catalogue-2026-11/README.md`. |
 | `earlier-tests/` | Five earlier tests of the brain kept so their numbers can be recomputed: thirty brain-on/brain-off math tests with every agent's cost (Sep 2026), two three-arm recall tests (281 and 80 questions), a 100-item proof-audit test with and without the store, and the August replication of right notes against scrambled notes. Start with `earlier-tests/README.md`. |
 
 Each run folder keeps the agent's report together with the code and outputs that support it. A claim is only as strong as its verification files, so read the two together.
