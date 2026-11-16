@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 359 notes.
+out, and requests are paraphrased. 361 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -453,3 +453,12 @@ The math hook on a fresh install of this repository.
 | note | status | what it says |
 |---|---|---|
 | [public_math_hook_silent_without_objects_folder_2026_11_16](public_math_hook_silent_without_objects_folder_2026_11_16.md) | verified | Why does the math hook serve nothing on a fresh install? The root selection_integrity.py read artifacts from <store>/objects, which the public export does not ship (81,654 of 89,410 cards declare one), failed the integrity check and stayed silent. Fixed 0fe060548 on 16 Nov |
+
+## Added on 16 November (2)
+
+Two queue faults on the Apple machines that run the GPU and Codex work.
+
+| note | status | what it says |
+|---|---|---|
+| [swarm_keeper_quadratic_awk_stalled_mini1_codex_fleet_2026_11_16](swarm_keeper_quadratic_awk_stalled_mini1_codex_fleet_2026_11_16.md) | verified | A Codex swarm keeper launched nothing for 73 minutes while its pid was alive: an awk that appended every log line to one string is quadratic on a 66 MB log. Read from the last launch marker with grep -n and tail instead. |
+| [fillq_runner_ignored_its_own_cores_53_backfills_on_10_2026_11_16](fillq_runner_ignored_its_own_cores_53_backfills_on_10_2026_11_16.md) | verified | A job queue that counts only measured CPU, never the cores it has already launched, keeps admitting one-core fillers: 53 on 10 cores. Take the larger of measured use and launched cores. |
