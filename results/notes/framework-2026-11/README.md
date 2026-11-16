@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 376 notes.
+out, and requests are paraphrased. 379 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -499,3 +499,13 @@ GPU feeding on Apple hardware, checks that read nothing, compaction and dream fa
 | note | status | what it says |
 |---|---|---|
 | [paper_numeric_claims_broken_by_rerun_on_second_machine_2026_11_16](paper_numeric_claims_broken_by_rerun_on_second_machine_2026_11_16.md) | verified | A paper states 'below 1e-28' or 'never fell below' from one run? Rerun the repository's commands on a second machine first: on 16 Nov both sentences in one paper were wrong. |
+
+## Added later on 15 November (3)
+
+GPU feeding on Apple hardware, checks that read nothing, compaction and dream faults, and the math store.
+
+| note | status | what it says |
+|---|---|---|
+| [frontier_gate_read_an_offloaded_audit_path_every_dl_row_shut_2026_11_16](frontier_gate_read_an_offloaded_audit_path_every_dl_row_shut_2026_11_16.md) | verified | Why did the frontier gate say every deep-learning row was 'not audited yet'? Its audit path pointed at a worker folder that had been moved into the repository; opening a missing file returned ... |
+| [process_lint_catches_paper_self_narration_paper_lint_misses_2026_11_16](process_lint_catches_paper_self_narration_paper_lint_misses_2026_11_16.md) | verified | Paper has 'not proved here', 'we took six draws', 'AI agents' in the introduction, 'we are not aware of'? paper_lint passes these; framework/writing_brain/creative/process_lint.py flags them: 5 of 5 ... |
+| [scij04_distinct_topics_no_effect_judge_keys_on_full_fact_coverage_2026_11_16](scij04_distinct_topics_no_effect_judge_keys_on_full_fact_coverage_2026_11_16.md) | provisional | Writer arms on twelve distinct science hunts still read as machine to a blind judge (97 against humans 5-14, AUC 1.0); the writing-brain arm moved it by 0.6 points (not significant). The judge's ... |
