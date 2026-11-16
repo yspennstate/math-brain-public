@@ -1,0 +1,32 @@
+== 1. KS distance of sqrt(d) A to the semicircle law: Veronese normal and Gaussian-row control
+  d=20 designs=200: KS Veronese 0.0919+-0.0012 (edge 2.018)  Gaussian rows 0.0848+-0.0012 (edge 1.859)  ratio 1.08   [12s]
+  d=40 designs=100: KS Veronese 0.0542+-0.0009 (edge 2.021)  Gaussian rows 0.0498+-0.0010 (edge 1.917)  ratio 1.09   [393s]
+  d=60 designs=40: KS Veronese 0.0370+-0.0007 (edge 2.018)  Gaussian rows 0.0349+-0.0008 (edge 1.937)  ratio 1.06   [1446s]
+== 2. The sphere construction against the Gaussian-row Veronese normal, excess over Catalan
+  d=16 designs=300:  k=2: Veronese +0.389+-0.016 sphere +0.409+-0.019 ratio 1.05  k=3: Veronese +2.461+-0.116 sphere +2.689+-0.153 ratio 1.09  k=4: Veronese +12.502+-0.689 sphere +14.305+-0.991 ratio 1.14  k=5: Veronese +59.755+-3.822 sphere +72.353+-6.153 ratio 1.21   [1452s]
+  d=24 designs=200:  k=2: Veronese +0.290+-0.012 sphere +0.308+-0.012 ratio 1.06  k=3: Veronese +1.897+-0.094 sphere +1.994+-0.091 ratio 1.05  k=4: Veronese +9.912+-0.579 sphere +10.325+-0.560 ratio 1.04  k=5: Veronese +48.544+-3.327 sphere +50.090+-3.225 ratio 1.03   [1502s]
+  d=32 designs=120:  k=2: Veronese +0.234+-0.014 sphere +0.237+-0.011 ratio 1.01  k=3: Veronese +1.547+-0.109 sphere +1.508+-0.079 ratio 0.97  k=4: Veronese +8.139+-0.694 sphere +7.620+-0.447 ratio 0.94  k=5: Veronese +40.191+-4.171 sphere +35.867+-2.379 ratio 0.89   [1694s]
+  d=40 designs=80:  k=2: Veronese +0.175+-0.011 sphere +0.196+-0.011 ratio 1.12  k=3: Veronese +1.131+-0.077 sphere +1.289+-0.082 ratio 1.14  k=4: Veronese +5.754+-0.429 sphere +6.648+-0.471 ratio 1.16  k=5: Veronese +27.073+-2.215 sphere +31.779+-2.518 ratio 1.17   [2046s]
+== 3. Kurtosis of <z,U> along a typical direction, Gaussian row (3+24/d) and sphere row; and along the null direction
+  d=6: Gaussian row kurtosis 7.506 (3+12 Tr U^4 = 7.461; 3+24/d = 7.000)  sphere row 2.914
+  d=10: Gaussian row kurtosis 4.980 (3+12 Tr U^4 = 5.003; 3+24/d = 5.400)  sphere row 2.740
+  d=20: Gaussian row kurtosis 4.177 (3+12 Tr U^4 = 4.171; 3+24/d = 4.200)  sphere row 2.938
+  d=30: Gaussian row kurtosis 3.812 (3+12 Tr U^4 = 3.844; 3+24/d = 3.800)  sphere row 3.010
+  d=20: kurtosis along the null direction of one design 4.483; along an independent random direction 4.191
+== 4. Independent coordinates: three-point law of kurtosis kappa against Gaussian rows, d=14; and the dependence dial r
+  Gaussian rows:      k=2: +0.0373+-0.0012  k=3: +0.2681+-0.0075  k=4: +1.4878+-0.0391  k=5: +7.5569+-0.1931
+  three-point kappa=1 (nonzeros/row 105): k=2: +0.0332+-0.0012 (-2.5 se from Gaussian)  k=3: +0.2440+-0.0075 (-2.3 se from Gaussian)  k=4: +1.3773+-0.0390 (-2.0 se from Gaussian)  k=5: +7.0936+-0.1946 (-1.7 se from Gaussian)
+  three-point kappa=3 (nonzeros/row 35): k=2: +0.0371+-0.0012 (-0.1 se from Gaussian)  k=3: +0.2674+-0.0074 (-0.1 se from Gaussian)  k=4: +1.4817+-0.0384 (-0.1 se from Gaussian)  k=5: +7.5039+-0.1883 (-0.2 se from Gaussian)
+  three-point kappa=5 (nonzeros/row 21): k=2: +0.0415+-0.0012 (+2.6 se from Gaussian)  k=3: +0.2951+-0.0076 (+2.5 se from Gaussian)  k=4: +1.6243+-0.0400 (+2.4 se from Gaussian)  k=5: +8.2064+-0.2010 (+2.3 se from Gaussian)
+  three-point kappa=9 (nonzeros/row 12): k=2: +0.0554+-0.0014 (+10.2 se from Gaussian)  k=3: +0.3933+-0.0109 (+9.4 se from Gaussian)  k=4: +2.2192+-0.1048 (+6.5 se from Gaussian)  k=5: +12.1317+-1.3153 (+3.4 se from Gaussian)
+  rank-1 rows (XX^T - rI)/sqrt(2r): k=2: +0.4571+-0.0034  k=3: +2.9400+-0.0262  k=4: +15.2783+-0.1628  k=5: +75.1741+-0.9629
+  rank-2 rows (XX^T - rI)/sqrt(2r): k=2: +0.2344+-0.0027  k=3: +1.4748+-0.0186  k=4: +7.4079+-0.1054  k=5: +34.9216+-0.5652
+  rank-4 rows (XX^T - rI)/sqrt(2r): k=2: +0.1291+-0.0023  k=3: +0.8204+-0.0155  k=4: +4.1358+-0.0840  k=5: +19.4772+-0.4282
+  rank-8 rows (XX^T - rI)/sqrt(2r): k=2: +0.0809+-0.0022  k=3: +0.5291+-0.0145  k=4: +2.7393+-0.0784  k=5: +13.2428+-0.4059
+== 5. Operator norm of an r x r random matrix relative to 2 sqrt(r)
+  r=4: real symmetric 0.836; complex symmetric 0.851; complex Ginibre 0.776
+  r=16: real symmetric 0.941; complex symmetric 0.936; complex Ginibre 0.911
+  r=64: real symmetric 0.981; complex symmetric 0.976; complex Ginibre 0.966
+  r=256: real symmetric 0.993; complex symmetric 0.990; complex Ginibre 0.986
+done in 4552s
+EXIT 0
