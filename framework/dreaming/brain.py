@@ -36,6 +36,7 @@ import hashlib
 import importlib
 import importlib.util
 import io
+from itertools import chain as _recall_chain
 import json
 import os
 import re
@@ -2603,7 +2604,7 @@ def _query_semantic_scores(query, k=None, floor=None):
     (6 -> 2) and loses "how should the papers and readmes sound" (1 -> 2). A wash.
     AND IT DOES NOT REACH THE QUESTIONS IT WAS BUILT FOR. The worked example in the paragraph above, "which
     research box did we turn off", still misses: of its three golds the lane ranks one at 5 of its own
-    10-candidate list and the other two nowhere, and the same holds for "can i run a backtest on the trading
+    10-candidate list and the other two nowhere, and the same holds for "can i run a long job on the shared
     box" and "the lanes archive filled box 4 disk". The justification above, that 12 of the 14 hit@5 misses
     were this shape, was true of the 09-13 population and is not true now: measured 09-14, of 13 hit@5 misses
     SIX have their gold inside the 60-item lexical pool, four sit at lexical rank 61-136, and only three are
@@ -4856,7 +4857,7 @@ def _recall_body(query, n=8):
                 bsc = bsc * 0.85
             # NAME COVERAGE (2026-09-11 evening). When the query carries most of the words in the memory's
             # NAME, the name is the match: "the cpu load of the live unrelated systems" covers four of the five
-            # words of cpu_map_of_the_live_trading_stack and still ranked 8th, because BM25 saturates per
+            # words of a resource-map memory and still ranked 8th, because BM25 saturates per
             # term and long bodies carry the same words many times over. Coverage c = |query words in the
             # name| / |name words| (dates and stopwords excluded); at c >= 0.6 the bm25 score is multiplied
             # by 1 + c. Measured in the recall lab on the bm25 top-40: owner-voice bank hit@1 22 -> 26,
@@ -5199,9 +5200,10 @@ def _recall_body(query, n=8):
                     order = sorted(_w, key=lambda it: -it[1])
             except Exception:
                 pass
-        ranked = ([s for s, _ in order] + [s for _, s in ltail] +
-                  [s for _, s in gtail] + [s for _, s in stail]
-                  + demoted)
+        # Consume the five segments once, without allocating a combined list (S38M01, audited 16 Nov:
+        # 256/256 frozen recalls byte-identical, ranking peak 891 KB -> 2 KB). `ranked` is read once, below.
+        ranked = _recall_chain((s for s, _ in order), (s for _, s in ltail),
+                               (s for _, s in gtail), (s for _, s in stail), demoted)
         bmax = max((b for _, b in order), default=1.0) or 1.0
         bnorm = {s: b / bmax for s, b in order}
         _bm_block, _head_rows = set(bnorm), set(_head_set)
@@ -6012,7 +6014,7 @@ _PERMIT_RX3 = re.compile(r"^\s*(?:is\s+it\s+)?(?:ok|okay|fine|alright|allowed|ac
                           r"|[-:,\u2013\u2014]\s*(?:is\s+(?:that|this|it)\s+)?(?:ok|okay|fine|alright|allowed|acceptable|permitted)\s*\?+\s*$",
                           re.I)
 # q51 (3 Nov): the permission head after a leading clause. A hyphen counts only with spaces round it, so a name
-# like vanilla-brain is not a break.
+# like the framework repository is not a break.
 _LEAD_BREAK_RX = re.compile(r"[,;:.\u2013\u2014]|\s-+\s")
 
 
@@ -6191,7 +6193,7 @@ def _secret_refusal(*parts):
     credential typed into a memory today is caught only on its way out to a repo - it
     lives in the corpus, in MEMORY.md, and in every recall until then, and it survives
     in the index even if the file is later deleted. This is the same pattern set at the
-    earlier boundary, which is where vanilla-brain enforces it: refuse it at `remember`
+    earlier boundary, which is where the framework repository enforces it: refuse it at `remember`
     and the push gate never has to see it. Defence in depth, one shared pattern list,
     so the two boundaries can never disagree about what a secret is.
 

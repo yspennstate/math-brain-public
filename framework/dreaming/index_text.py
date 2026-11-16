@@ -71,3 +71,67 @@ def frontmatter_description(path):
         value = (value.replace('\\"', '"').replace('\\\\', '\\')
                  if quote == '"' else value.replace("''", "'"))
     return " ".join(value.split())
+
+
+# Canonical readers must restore this optional output view before parsing it.
+# Leave an adjacent opening parenthesis untouched: omitting the destination
+# there would make the short pointer indistinguishable from a full link.
+_PROMPT_MARKER = '<!-- brain-index-prompt-v1: self-link destinations omitted -->\n'
+_SELF_LINK = re.compile(r'^- \[([A-Za-z0-9_-]+\.md)\]\(\1\)(?!\()', re.M)
+_SHORT_POINTER = re.compile(r'^- \[([A-Za-z0-9_-]+\.md)\](?!\()', re.M)
+
+
+def prompt_index_text(text):
+    """Render self-links once, keeping all descriptions, tags and line endings.
+
+    This is an output view, never a replacement for MEMORY.md. The marker and
+    short-pointer syntax are reserved so restoration is unambiguous. Other
+    link labels, destinations and Markdown are left byte-for-byte intact.
+    """
+    if text.startswith(_PROMPT_MARKER) or _SHORT_POINTER.search(text):
+        raise ValueError('expected canonical index, not an existing prompt view')
+    compact, count = _SELF_LINK.subn(lambda m: '- [%s]' % m.group(1), text)
+    # Do not expand a small index merely to pay for the format marker.
+    if count and len(text) - len(compact) > len(_PROMPT_MARKER):
+        return _PROMPT_MARKER + compact
+    return text
+
+
+def restore_prompt_index(text):
+    """Restore the exact canonical rows from a marked prompt view."""
+    if not text.startswith(_PROMPT_MARKER):
+        if _SHORT_POINTER.search(text):
+            raise ValueError('unmarked short pointers are not a canonical index')
+        return text
+    body = text[len(_PROMPT_MARKER):]
+    # Prompt views cannot contain another marker or already-expanded self-links.
+    if body.startswith(_PROMPT_MARKER) or _SELF_LINK.search(body):
+        raise ValueError('mixed or nested prompt view')
+    restored, count = _SHORT_POINTER.subn(
+        lambda m: '- [%s](%s)' % (m.group(1), m.group(1)), body)
+    if not count:
+        raise ValueError('prompt view has no short pointers')
+    return restored
+
+
+def _index_text_cli(argv=None):
+    """Print either form; no index or memory is ever written by this command."""
+    import argparse
+    import sys
+    parser = argparse.ArgumentParser(description='Print a canonical or compact memory-index prompt.')
+    parser.add_argument('mode', choices=('canonical', 'prompt', 'restore'))
+    parser.add_argument('path', help='UTF-8 index file to read')
+    args = parser.parse_args(argv)
+    # newline='' keeps CRLF in a reversible view as well as in library use.
+    with open(args.path, encoding='utf-8', newline='') as handle:
+        text = handle.read()
+    if args.mode == 'prompt':
+        text = prompt_index_text(text)
+    elif args.mode == 'restore':
+        text = restore_prompt_index(text)
+    sys.stdout.buffer.write(text.encode('utf-8'))
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(_index_text_cli())

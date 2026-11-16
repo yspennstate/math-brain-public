@@ -17,6 +17,7 @@ measured improvement; never lower them to make a night green.
 """
 from __future__ import annotations
 
+import hashlib
 import io
 import json
 import os
@@ -264,6 +265,52 @@ def production_math_block(pout):
     return not problem, problem
 
 
+# LOAD SILENCE IS NOT A BREACH (2026-11-16, an agent). The hook has its own clock (30 s to rank, 60 s hard), and
+# when the box is loaded it goes quiet on purpose and writes why to mathbrain_silence_harness.tsv. The gate counted that
+# quiet as a content failure: the breaches of 13, 14 and 16 Nov (healthcheck rc=1; production flags "served no whole
+# math-brain block") each had the gate's own prompts silenced in the harness log at that minute by
+# integrity_budget_exhausted / budget_exhausted_before_ranking / hard_deadline, and the same checks by hand an hour later
+# passed (11 speak, 6 silent). Silence by the hook's clock says the box was slow, not that the brain lost the card, so it
+# reads INCONCLUSIVE like rc 3. Only rows written during this instrument's window, for one of this instrument's own
+# prompts (matched by the fingerprint the hook writes: the first 10 hex of sha1(prompt)), count; a failure with no such
+# row stays a BREACH. "budget_exceeded_..._proceeding" rows do not count: the hook went on and answered.
+HARNESS_TSV = os.path.join(HERE, "mathbrain_silence_harness.tsv")
+LOAD_SILENCE = re.compile(r"budget_exhaust|integrity_budget_exhausted|hard_deadline")
+
+
+def load_silences(since, prompts, path=HARNESS_TSV, tail_bytes=4 << 20):
+    """Reasons the hook gave for going quiet on one of `prompts` at or after epoch `since`, by its own clock."""
+    fps = set(hashlib.sha1(p.encode("utf-8", "replace")).hexdigest()[:10] for p in prompts)
+    out = []
+    try:
+        with open(path, "rb") as h:
+            h.seek(0, 2)
+            h.seek(max(0, h.tell() - tail_bytes))
+            text = h.read().decode("utf-8", "replace")
+    except OSError:
+        return out
+    for line in text.splitlines():
+        f = line.split("\t")
+        if len(f) < 4:
+            continue
+        try:
+            t = float(f[0])
+        except ValueError:
+            continue
+        if t >= since - 1 and f[3].strip() in fps and LOAD_SILENCE.search(f[2]) and "proceeding" not in f[2]:
+            out.append(f[2])
+    return out
+
+
+def healthcheck_prompts():
+    try:
+        sys.path.insert(0, HERE)
+        import math_sense_healthcheck as hc
+        return [r[1] for r in getattr(hc, "MUST_SPEAK", []) if len(r) > 1 and isinstance(r[1], str)]
+    except Exception:
+        return []
+
+
 def _main_locked():
     _GATE["t0"], _GATE["skipped"] = time.time(), []
     # --selftest is what work_finders' W86 and the referee pass to every gate; this script never knew it, so each of
@@ -273,6 +320,7 @@ def _main_locked():
     stamp = time.strftime("%Y%m%d_%H%M%S")
     row = {"as_of": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "quick": quick, "instruments": {}, "breaches": [], "errors": []}
 
+    _hc_t0 = time.time()
     rc, out, err, dt = run([PY, os.path.join(HERE, "math_sense_healthcheck.py")], 600)
     # 2026-11-04 (an agent): every nightly run from 27 Oct to 4 Nov came back rc 3 - the first row timed out twice
     # at 60 s and the other 16 were never asked - while the same check by hand that evening answered all 17 rows (11
@@ -296,7 +344,13 @@ def _main_locked():
     if rc == 3:
         row["errors"].append("math_sense_healthcheck could not judge (rc=3): a row timed out twice")
     elif rc != THRESH["healthcheck_rc"]:
-        row["breaches"].append("math_sense_healthcheck rc=%s" % rc)
+        _quiet = load_silences(_hc_t0, healthcheck_prompts())
+        if _quiet:
+            row["instruments"]["healthcheck"]["load_silences"] = _quiet[:8]
+            row["errors"].append("math_sense_healthcheck rc=%s with %d must-speak prompt(s) silenced by the hook's own "
+                                 "clock (%s): load, not content" % (rc, len(_quiet), _quiet[0]))
+        else:
+            row["breaches"].append("math_sense_healthcheck rc=%s" % rc)
 
     rc, out, err, dt = run([PY, os.path.join(HERE, "proof_sense.py"), "--selftest"], 300)
     row["instruments"]["proof_selftest"] = {"rc": rc, "seconds": dt, "tail": (out or err)[-200:]}
@@ -320,7 +374,12 @@ def _main_locked():
         row["instruments"]["production_flags"] = {"rc": p.returncode, "seconds": round(time.time() - t0, 1),
                                                   "served": served, "problem": problem,
                                                   "stderr_tail": (p.stderr or b"").decode("utf-8", "replace")[-200:]}
-        if not served:
+        _quiet = [] if served else load_silences(t0, [json.loads(payload)["prompt"]])
+        if _quiet:
+            row["instruments"]["production_flags"]["load_silences"] = _quiet[:4]
+            row["errors"].append("production flags: no block, but the hook went quiet by its own clock (%s): load, not "
+                                 "content" % _quiet[0])
+        elif not served:
             row["breaches"].append("production flags: `python -s hook_dispatch.py` served no whole math-brain block "
                                    "(%s; rc=%s)" % (problem, p.returncode))
     except Exception as exc:
