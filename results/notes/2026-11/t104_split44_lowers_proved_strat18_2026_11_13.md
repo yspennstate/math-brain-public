@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-13
   created_at: 2026-11-13T16:05:05+02:00
   status: verified
-  evidence: "my replay_all.py rerun 32/32 PASS from STRAT18_freeze on Mac mini 1 (strat18_myreplay.out), live==freeze hash diff; push 150 commit 1a3f83d5 verified 33/33"
+  evidence: "my replay_all.py rerun 32/32 PASS from STRAT18_freeze on worker machine 1 (strat18_myreplay.out), live==freeze hash diff; push 150 commit 1a3f83d5 verified 33/33"
 ---
 
-T104 (Alon Conj 1.5), 13 Nov 2026: Codex STRAT18 on Mac mini 1 (~/agent_run/STRAT18, freeze STRAT18_freeze, 70 hashed files strat18_freeze.sha256)
+T104 (Alon Conj 1.5), 13 Nov 2026: Codex STRAT18 on worker machine 1 (~/agent_run/STRAT18, freeze STRAT18_freeze, 70 hashed files strat18_freeze.sha256)
 PROVED by replay_all.py (32 exact stages, 24 inherited + 8 new):
 - split 4+4 (two connected four-vertex top carriers) with isolates OR arbitrary lower components of any size: T>=0 every N>=8 and infinity; two connected simple tops give T>0; positive lower trace gives T>0.
 - equality only at two equal edges + isolates.

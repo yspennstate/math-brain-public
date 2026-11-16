@@ -1,6 +1,6 @@
 ---
 name: p0434_coupled_lemma_t_ms_le_c_q_g_plus_2_r_g_holds_with_room_2026_11_09
-description: "P0434 9 Nov 07:3x: coupled candidate (P') T_MS <= cQ_G + 2R_G (implies 8.1) unbroken; q = T_MS/(cQ_G+2R_G) reaches 0.989 on the Mac mini near-2 law, as tight as 8.1 in heavy traffic"
+description: "P0434 9 Nov 07:3x: coupled candidate (P') T_MS <= cQ_G + 2R_G (implies 8.1) unbroken; q = T_MS/(cQ_G+2R_G) reaches 0.989 on the worker machine near-2 law, as tight as 8.1 in heavy traffic"
 metadata:
   node_type: memory
   type: project
@@ -20,7 +20,7 @@ lets the residence excess spend Q_MS's distance below c Q_G instead of a fixed (
 
 Measured (soap.py/split.py):
 - on the (P) breaker best6 (zP 1.507): zP' 0.00054 at its own 1-rho 8.2e-9; max 0.040 over 1-rho 1e-13..1e-2.
-- Mac mini 5-atom near-2 law: max zP' 0.0070.
+- worker-machine 5-atom near-2 law: max zP' 0.0070.
 - pprime_hunt.py (Nelder-Mead from the four near-2 laws exactly, 12 runs): best zP' 0.0984, reached by best6 drifting to
   1-rho 0.0597. Heavy-traffic starts stayed under 0.013.
 - pprime_random.py (random 2-6 atom laws, sizes log-uniform 1..1e4, Dirichlet(0.3), rho 0.3..0.99, seed 1249, 300 s,
@@ -37,7 +37,7 @@ Next: hunt zP' at moderate load on 3-6 atom laws; if it holds, prove (P') class 
   0.64909, 0.33476, 0.013084, 0.00023993], rho 0.997766. Three paths agree (soap float, soap_mp T ratio, grid N 2000
   and 8000): q 0.894419, T_MS/T_G 1.711315. The climb flattens 0.881 -> 0.891 -> 0.894 on a twin-atom shape.
 - Those hunts started away from heavy traffic. Measured on the near-2 laws themselves (pprime_q_near2.py, soap.py and
-  soap_mp at 50 digits agree): Mac mini law q 0.989193 at 1-rho 3.2e-7 (T_MS/T_G 1.977), best6 q 0.987642 at 1e-6.
+  soap_mp at 50 digits agree): worker-machine law q 0.989193 at 1-rho 3.2e-7 (T_MS/T_G 1.977), best6 q 0.987642 at 1e-6.
   Since c -> 2 as rho -> 1, (P') has no more room than 8.1 itself there; zP' small does not mean q small. (P') is
   alive and unproved, and the measure of its room is q, not zP'. The moderate-load basin tops out near q 0.933
   (pprime_hunt_long.out).

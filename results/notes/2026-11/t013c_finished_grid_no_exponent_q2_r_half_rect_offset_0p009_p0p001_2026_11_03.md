@@ -5,7 +5,7 @@ metadata:
   type: project
   created: 2026-11-03
   created_at: 2026-11-03T21:21:36+04:00
-  evidence: "brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2.md commit cde07a4356"
+  evidence: "the private repository, 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2.md commit cde07a4356"
   status: superseded
 superseded_by: t013c_r_half_offset_did_not_replicate_16_fresh_seeds_chi2_2p3_of_3_2026_11_03
 ---
@@ -21,7 +21,7 @@ What it shows:
 
 Open: fresh seeds at r = 1/2, L = 128 and 256, and an exact enumeration of the smallest r = 1/2 rect_medial graphs against the formula.
 
-Online: brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/ (commit cde07a4356, 24 new files incl. REVIEW_v2.md and t013c_handcheck.py), moves line f87a2713a6.
+Online: the private repository, 06_math_research/frontier/rows/T013/m5f_T013c/ (commit cde07a4356, 24 new files incl. REVIEW_v2.md and t013c_handcheck.py), moves line f87a2713a6.
 
 
 Related: [[t013c_selfdual_square_exact_1_over_1_plus_sqrt_q_classical_mc_77_of_96_2026_11_03]] - the same row at 77 of 96 runs; this one finishes it and replaces its C2 reading.

@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-13
   created_at: 2026-11-13T20:59:49+02:00
   status: verified
-  evidence: "I0103AR REPORT.md first line MAJOR (Mac 13 Nov); ledger row 13 Nov 20:50 laptop"
+  evidence: "I0103AR REPORT.md first line MAJOR (Mac 13 Nov); ledger row 13 Nov 20:50 workstation"
 ---
 
 I0103 (Randomstrasse101 2025, arXiv:2603.29571v1, Entry 12, Conjecture 29 on p.10: Paley ETF RIP beyond the square-root bottleneck) is still open as of 13 Nov 2026. Our claim (I0103A) and referee (I0103AR, verdict MAJOR) agree on the following.

@@ -42,6 +42,6 @@ for ANY s zeros and n-s ones, TV O(n^-c1) to uniform - so step 3 needs no coarse
 Remaining doubt (the hint for the next reader): the STOC version defers the Sec 3.1 coupling proofs (Lemmas 3.1-3.3)
 to a full version, and Lemma 2.2 leans on Friedman's expander theorem for a union of four random perfect matchings;
 our argument is unrefereed.
-Work files: scratchpad p0251/ of session agent (NOTES.md, slides, AF book text). Related: [[p0247_af_last_vertex_uniform_yes_under_dc_via_bht_open_torus_like_2026_11_14]].
-Note drafted 14 Nov 03:1x: scratchpad af-crossover-chain/paper/main.tex (7 pages, lints clean, references checked on
+Work files: scratch area p0251/ of session agent (NOTES.md, slides, AF book text). Related: [[p0247_af_last_vertex_uniform_yes_under_dc_via_bht_open_torus_like_2026_11_14]].
+Note drafted 14 Nov 03:1x: scratch area af-crossover-chain/paper/main.tex (7 pages, lints clean, references checked on
 Crossref); next an independent audit, then a public repo crossover-chain-mixing. No Zenodo before the audit.

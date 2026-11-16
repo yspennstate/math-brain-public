@@ -12,7 +12,7 @@ metadata:
 ---
 
 **What was seen (13 Nov 2026, an agent).** A batch test (prf_cli.py, launched hidden at BelowNormal by a VBS) calls
-`brain.py recall "<q>"` once per question. With the laptop at 87 pct CPU and physical memory critical, single calls took
+`brain.py recall "<q>"` once per question. With the workstation at 87 pct CPU and physical memory critical, single calls took
 649.6 s, 863.8 s, 806.0 s and 486.6 s. The recall server's own row for each of those calls says about 5 s
 (calls.jsonl `ms` 5301), and the client's `served` note lands only at the very end. The same question run from an
 interactive shell at Normal priority: 5.7 s, served.

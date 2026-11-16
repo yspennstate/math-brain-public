@@ -24,7 +24,7 @@ Not checked: b = 1/40, total connectedness under pinnings, the O(n^2) comparison
 
 Novelty: not found in a BCCPSV abstract read or a web search on 3 Nov. BDG(J) 1998/1999 full text is not yet searched for an existing O(n log n) statement.
 
-Status provisional until an expert reads PINNED_PROOF.md. Files: brain-repo 06_math_research/frontier/rows/T019/m5f_T019b_pinned_block/ (20 files, REMOTE_IDENTICAL).
+Status provisional until an expert reads PINNED_PROOF.md. Files: the private repository, 06_math_research/frontier/rows/T019/m5f_T019b_pinned_block/ (20 files, REMOTE_IDENTICAL).
 
 Related: [[t019_delta3_q5_glauber_open_bdg_is_block_chain_hamming_fails_2026_11_03]] (the row state before this: BDGJ O(n^8 log n), O(n log n) open; the 'Hamming coupling fails' there is the single-site one, and this uses blocks), [[t019_glauber_q5_cubic_exact_gap_n_gap_0p30_min_2026_11_02]] (the exact small-graph gaps this run reused), [[fleet_report_lead_reviews_line_stale_reviews_live_online_2026_11_03]] (how this report nearly went unread).
 

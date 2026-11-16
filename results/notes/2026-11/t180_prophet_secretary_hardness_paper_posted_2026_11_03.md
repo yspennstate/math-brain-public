@@ -9,7 +9,7 @@ metadata:
   evidence: "public repo github.com/yspennstate/prophet-secretary-hardness 96a0b92; code/check_output.txt interval run; code/continuum_output.txt"
 ---
 
-T180 posted 3 Nov 2026 (papers loop T-20261029-025, 6th of the top 10 on my count): github.com/yspennstate/prophet-secretary-hardness, head 96a0b92, public. Title "A prophet secretary instance with ratio below 0.7230". Index card in math-brain-public papers/README.md (01996a9ddb). PAPER_CANDIDATES.md row 6 marked POSTED.
+T180 posted 3 Nov 2026 (papers loop a checklist task, 6th of the top 10 on my count): github.com/yspennstate/prophet-secretary-hardness, head 96a0b92, public. Title "A prophet secretary instance with ratio below 0.7230". Index card in math-brain-public papers/README.md (01996a9ddb). PAPER_CANDIDATES.md row 6 marked POSTED.
 
 Result: the prophet secretary constant alpha < 0.72294. Instance I(400,30) (461 items): 400 prizes worth 1 w.p. 1e-9; 30 items worth 1.28233*kq w.p. 0.2065/30; 30 worth 1.38487*kq w.p. 0.17698/30; one sure item 0.823*kq (kq = 4e-7). The ratio V/E max lies in [0.722933460012600477658647124, ...127]: count DP (770,722 states) in mpmath.iv at 100 bits, 153 s. Prior best 0.7235 (Giambartolomei-Mallmann-Trenn-Saona arXiv:2304.04024, the same order-unaware setting); Bubna-Chiplunkar 0.7254; Correa-Saona-Ziliotto sqrt3-1; best algorithm 0.688 (Chen-Huang-Li-Tang arXiv:2411.01191).
 

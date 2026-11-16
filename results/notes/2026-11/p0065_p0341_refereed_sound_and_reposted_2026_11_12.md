@@ -9,7 +9,7 @@ metadata:
   evidence: "public commits f9e64f3 and b5bd8d7; ledger 92b692b4, 459d4388; brain d2420a01"
 ---
 
-Two posted papers came back from blind GPT-6.1 referee passes (Codex on Mac mini 1, normal speed, one process, no outside documents) on 12 Nov 2026 and were re-posted the same afternoon.
+Two posted papers came back from blind GPT-6.1 referee passes (Codex on worker machine 1, normal speed, one process, no outside documents) on 12 Nov 2026 and were re-posted the same afternoon.
 
 P0341, harmonic-descent-occupation-sums (https://github.com/yspennstate/harmonic-descent-occupation-sums, commit f9e64f3): every numbered result SOUND. The referee checked every lemma in exact fractions on finite grids, Corollary 3.2 in 60-digit arithmetic at seven admissible points, the whole table, and derived the BCM bound quoted in Remark 2.6 itself. Its six fixes were presentational: the introduction's window-sum heuristic said "about (6/pi^2) 2^-j log n" where the fixed-j limit is (6/pi^2)(-log(1-2^-j)) log n (j=1 gives log 2, not 1/2); "for j>=2" at the block separation N_j/2 > N_{j-1}; notation rows split (epsilon/M, c/eta) and extended (p, f, B, theta, x, lambda_j). With seven new rows the notation table no longer fit on one page (Overfull vbox 80pt while output active); it is now a longtable.
 

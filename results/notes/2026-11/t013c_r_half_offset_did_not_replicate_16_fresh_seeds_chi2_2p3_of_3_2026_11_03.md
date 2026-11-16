@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T21:35:21+04:00
   status: provisional
-  evidence: "brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2_reseed.md commit 6c0ab4752f"
+  evidence: "the private repository, 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2_reseed.md commit 6c0ab4752f"
 ---
 
 Correction to [[t013c_finished_grid_no_exponent_q2_r_half_rect_offset_0p009_p0p001_2026_11_03]], measured on 3 Nov between 21:2x and 21:33 +04.
@@ -22,5 +22,5 @@ Still true: the self-dual square matches 1/(1 + sqrt q) (C1, classical). No deca
 
 Lesson: a p = 0.001 offset in one Monte Carlo grid, read with a single SE estimator, earned a fresh-seed rerun before it went into a memory as a finding. The rerun cost 5 CPU minutes, and I filed the claim 15 minutes before running it.
 
-Online: brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2_reseed.md and reseed_r_half/ (commit 6c0ab4752f), moves line da6c4227f5.
+Online: the private repository, 06_math_research/frontier/rows/T013/m5f_T013c/REVIEW_v2_reseed.md and reseed_r_half/ (commit 6c0ab4752f), moves line da6c4227f5.
 

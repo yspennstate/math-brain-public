@@ -23,7 +23,7 @@ Files: ~/codex_fleet/runs/own_p0434 blend_mix.py, blend_mix2.py, NOTE.md 9 Nov 0
 
 Addendum 9 Nov 02:5x: falsification test mix_check.py (2107 law/load cases, 1-rho 0.5 to 1e-4): every ingredient holds, R_G >= E[X] tight at 0, Wierman's bound within 0.026, true ratio at most 1.267 against the bound 4.530 at 1e-4.
 
-Addendum 9 Nov 03:0x: the slack at mid load is in Lemma 5.6. The Mac mini law has Q_MS/Q_G 0.97 at rho 0.5 to 0.9 and reaches 2 only past 1-rho 1e-4 (mm_q_by_load.out). With c replaced by 1 route A gives <= 2 up to rho 0.797 (l(rho) = 2), so a load-dependent waiting lemma is the lever on the 0.626 edge. A climb on Q_MS/Q_G stalls on the plateau of laws where both policies coincide; seed it off that plateau.
+Addendum 9 Nov 03:0x: the slack at mid load is in Lemma 5.6. The worker machine law has Q_MS/Q_G 0.97 at rho 0.5 to 0.9 and reaches 2 only past 1-rho 1e-4 (mm_q_by_load.out). With c replaced by 1 route A gives <= 2 up to rho 0.797 (l(rho) = 2), so a load-dependent waiting lemma is the lever on the 0.626 edge. A climb on Q_MS/Q_G stalls on the plateau of laws where both policies coincide; seed it off that plateau.
 
 Addendum 9 Nov 03:1x (corrects the 03:0x hope): seeded off the plateau, the climb finds Q_MS/Q_G 1.147 at rho 0.7 (c 1.292) and 1.236 at rho 0.8 (c 1.382) on small ordinary laws (q_sup_mid.out). Route A reaches 2 at rho iff (2 - 2/c)(1/(1-rho) - l) <= 2 - l; at 0.7 that needs c <= 1.095, and at 0.8 l > 2 kills it for any c. So the best possible waiting lemma moves the edge only somewhere in (0.626, 0.7), not to 0.797; past 0.7 the residence side (Lemma 5.7 or the trivial bound) must improve too. q_sup_065.py measures rho 0.65.
 

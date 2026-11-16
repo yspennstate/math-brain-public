@@ -54,7 +54,7 @@ excluded by boundedness of f^(k-1), outward direction on both sides, the H^3 int
 ADDENDUM 7 (1 Nov, T402 m402i, moves 57fe3451): all d, proved lower side - uniform mass on a radius-L ball, KSD^2 <= |K|_1 |grad nu + x nu|_2^2
 ~ L^(d+2) by Young's inequality, so under second moments W1 >= c b^(d/(d+2)) KSD^(2/(d+2)) for every bounded integrable kernel; in d >= 3
 the moment-bounded counterpart of Gorham-Mackey Thm 6. Upper side 2/(d+2) expected (cut-off argument) but needs the multivariate Stein
-Hessian for Lipschitz h, which carries logs in d >= 2. Also: a full-repo `git grep origin/main` on brain-repo ran past 120 s on this
+Hessian for Lipschitz h, which carries logs in d >= 2. Also: a full-repo `git grep origin/main` on the private repository ran past 120 s on this
 Mac under disk pressure - search a row's own files with git show instead.
 
 ADDENDUM 8 (1 Nov, T402 m402j, moves 35a45493) - CORRECTIONS: (1) the sin-family cap 1/(nu - 1/2) is the d = 1 value; in R^d it is

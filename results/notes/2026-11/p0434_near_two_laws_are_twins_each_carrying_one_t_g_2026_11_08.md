@@ -11,7 +11,7 @@ metadata:
 
 P0434 (Conj. 8.1, T_MS <= 2 T_G), 8 Nov 19:0x, an agent. Class by class (g_k = p_k T_G,k / T_G, m_k = p_k
 T_MS,k / T_G), the laws near 2 all look the same. The small classes hold about 0.99 of T_G under Gittins and about
-0.004 under M-SERPT. Two near-tied twin classes (sizes 2.1909 and 2.1943 on the Mac mini law; 2.1300 and 2.1302 on the
+0.004 under M-SERPT. Two near-tied twin classes (sizes 2.1909 and 2.1943 on the worker machine law; 2.1300 and 2.1302 on the
 polished 1.985 law) hold about 0.009 under Gittins and 0.97-0.99 EACH under M-SERPT. So the factor 2 is two twins,
 each absorbing about one whole T_G.
 

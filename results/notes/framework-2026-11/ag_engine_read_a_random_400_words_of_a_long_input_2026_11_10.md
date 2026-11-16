@@ -17,7 +17,7 @@ Why did an AG card fire on one run and stay silent on the next, same input? Unti
 
 **The fix.** `toks = sorted(toks)`, no cut. The text is already capped at 8,000 characters, so the lookup is at most a few more index queries. Live `~/.claude/agentic/ag_core.py` f9a403b81810b282 (was 2308dd60aab1a593, backup `ag_core.py.bak_tokcap_20261110`); selftest PASS, 965 cards, 2,203 checks.
 
-**What it leaves open.** `ambient.json` (measured 10 Nov 03:14) was taken with the old engine, so long tool inputs were under-counted there and some cards may be louder than their recorded rate. Re-run `tools/ambient_rate.py` when the laptop has memory to spare (it reads about 900 sessions) before any decision on SPEAK.
+**What it leaves open.** `ambient.json` (measured 10 Nov 03:14) was taken with the old engine, so long tool inputs were under-counted there and some cards may be louder than their recorded rate. Re-run `tools/ambient_rate.py` when the workstation has memory to spare (it reads about 900 sessions) before any decision on SPEAK.
 
 **The general form.** Slicing a `set` (or a dict built from one) to cap work picks a different subset in every process. Cap after sorting, or cap the input, never the set. Related: [[a_hook_cards_examples_do_not_measure_its_ambient_rate_replay_and_hold_2026_11_10]].
 

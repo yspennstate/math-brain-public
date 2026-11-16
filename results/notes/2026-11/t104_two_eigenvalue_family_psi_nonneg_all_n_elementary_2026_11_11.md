@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-11
   created_at: 2026-11-11T08:11:44+02:00
   status: verified
-  evidence: "all_n_check.py: scalar facts n=14..2000 exact, 22,260 vectors every step asserted exactly; all_n_check2.py 5,325 arbitrary vectors, four cases; split_dense.c n<=14 zero negative coefficients; readers 11 Nov: an agent no gap + Lean lean_checks_agent/t104_all_n 628d7761 (steps 1-3, N>=14); Codex referee gpt-6.1-sol high on Mac mini 1 SOUND (AUDIT_CODEX_ALLN_REPORT.md); family_F_check.py direct Specht check n=5..7, 6,120 graphs"
+  evidence: "all_n_check.py: scalar facts n=14..2000 exact, 22,260 vectors every step asserted exactly; all_n_check2.py 5,325 arbitrary vectors, four cases; split_dense.c n<=14 zero negative coefficients; readers 11 Nov: an agent no gap + Lean lean_checks_agent/t104_all_n 628d7761 (steps 1-3, N>=14); Codex referee gpt-6.1-sol high on worker machine 1 SOUND (AUDIT_CODEX_ALLN_REPORT.md); family_F_check.py direct Specht check n=5..7, 6,120 graphs"
 ---
 
-T104 (G. Alon's 2/3 Specht-module conjecture, arXiv 2610.22151, Conj. 1.5), two-eigenvalue family: is Psi(x) >= 0 for every n? A proof is written (11 Nov 2026, an agent): n = 5..13 by the cone certificate, n >= 14 by a short elementary argument. Checked step by step in exact arithmetic; read on 11 Nov by two independent readers: an agent (hostile read, no gap, exact constants n = 14..3000, then Lean for steps 1 to 3, lean_checks_agent/t104_all_n, commit 628d7761) and a Codex referee on Mac mini 1 (gpt-6.1-sol, high; verdict SOUND, AUDIT_CODEX_ALLN_REPORT.md). Continues [[t104_two_eigenvalue_family_n5_to_10_certified_aux_bound_fails_n14_2026_11_11]] and [[t104_psi_nonneg_one_positive_coordinate_all_n_2026_11_11]].
+T104 (G. Alon's 2/3 Specht-module conjecture, arXiv 2610.22151, Conj. 1.5), two-eigenvalue family: is Psi(x) >= 0 for every n? A proof is written (11 Nov 2026, an agent): n = 5..13 by the cone certificate, n >= 14 by a short elementary argument. Checked step by step in exact arithmetic; read on 11 Nov by two independent readers: an agent (hostile read, no gap, exact constants n = 14..3000, then Lean for steps 1 to 3, lean_checks_agent/t104_all_n, commit 628d7761) and a Codex referee on worker machine 1 (gpt-6.1-sol, high; verdict SOUND, AUDIT_CODEX_ALLN_REPORT.md). Continues [[t104_two_eigenvalue_family_n5_to_10_certified_aux_bound_fails_n14_2026_11_11]] and [[t104_psi_nonneg_one_positive_coordinate_all_n_2026_11_11]].
 
 Psi = (n-4)(2q-1) - 2(n-3)p^2 + C m, C = (n-1)(n^2-6n+6+2nq), q = Q/T^2, p^2 = P^2/T^3, m = max_{i<j} x_i x_j / T.
 
@@ -20,7 +20,7 @@ The argument for n >= 14.
 
 What made it work, after a day of cone certificates: the bound for m does not have to be one polynomial. The pair (x_1, x_2) or (x_n, x_(n-1)) gives m directly, and the only region where that is below 1/(n(n-1)) is a neighbourhood of the edge of radius 2/n^2, where first-order perturbation is enough. The polynomial lower bound Phi' for m (which fails at n = 14) and the power-mean bounds (fail from n = 14 and n = 30) were the wrong tool; the identity in step 1 was already in hand and the question to ask was "where exactly is m small".
 
-Independent evidence: the split certificate (T^3 Psi_A on {x_2 + x_(n-1) >= 0}, T^3 Psi_B on the complement, in extreme-ray coordinates) has no negative coefficient for n = 5..14 at least (split_dense.c on Mac mini 2; sympy to n = 11; an agent separately to n = 10).
+Independent evidence: the split certificate (T^3 Psi_A on {x_2 + x_(n-1) >= 0}, T^3 Psi_B on the complement, in extreme-ray coordinates) has no negative coefficient for n = 5..14 at least (split_dense.c on worker machine 2; sympy to n = 11; an agent separately to n = 10).
 
 Files: 06_math_research/t104_alon_agent_2026_11_11/ GAP_STATE_FORM.md (section "Psi >= 0 for every n"), all_n_check.py, all_n_check2.py, split_dense.c, split_rays.py, split_dense_status.txt. What would change it: a reader who breaks step 2 (the bound for b in case II) or the constants of step 3; what the family means for the conjecture itself is in the first memory of the chain.
 

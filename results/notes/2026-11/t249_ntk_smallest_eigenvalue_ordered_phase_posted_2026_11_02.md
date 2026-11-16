@@ -9,7 +9,7 @@ metadata:
   evidence: "git ls-remote github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase main = 8277f3d536a3 (2 Nov 01:3x); scripts rerun 2 Nov match paper numerics; ar5iv 1912.13053 Table 1/Sec 6.2/App B read 2 Nov"
 ---
 
-T249 is posted as public repo github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase (commit 8277f3d, 2 Nov 2026 01:3x, author yspennstate). It holds the README, paper/t249.tex and t249.pdf, and code/t249_kappa_check.py, t249_ninput.py and t249_series.py. This is paper 4 of 10 for the top-ten papers loop (T-20261029-025).
+T249 is posted as public repo github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase (commit 8277f3d, 2 Nov 2026 01:3x, author yspennstate). It holds the README, paper/t249.tex and t249.pdf, and code/t249_kappa_check.py, t249_ninput.py and t249_series.py. This is paper 4 of 10 for the top-ten papers loop.
 
 Result: deep tanh net, infinite width, sigma_b^2>0, ordered phase chi_1<1, n distinct inputs on the fixed-point sphere:
 lambda_min(Theta_L) = kappa * lambda_perp_min(-A) * L chi_1^L * (1+O(1/L)), with kappa = q* + B T*/chi_1, T* = q*/(1-chi_1), B = chi'(1).

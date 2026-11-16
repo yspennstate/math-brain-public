@@ -11,6 +11,6 @@ metadata:
 
 T372 move m372b (an agent, 1 Nov, row DOSSIER 0484cd92, moves 7589e16f): Target 1 answered from the abstract of Li, Wang, Yu
 (NeurIPS 2022) on SGD with weight decay for scale-invariant losses: the number of steps to reach the stationary regime is
-Theta((T + ln(lambda/eta)) / (eta lambda)). Taken from the abstract only - the Mac mini cannot extract PDF text, and the theorem text with
+Theta((T + ln(lambda/eta)) / (eta lambda)). Taken from the abstract only - the worker machine cannot extract PDF text, and the theorem text with
 its exact hypotheses is still owed on the row (read the arXiv e-print LaTeX source next). Related: [[t372_sgd_weight_decay_stationary_law_power_law_2026_10_30]].
 

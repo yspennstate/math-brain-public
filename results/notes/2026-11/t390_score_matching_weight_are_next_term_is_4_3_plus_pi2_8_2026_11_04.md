@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-04
   created_at: 2026-11-04T12:32:38+02:00
   status: verified
-  evidence: "rank10_t390_check.py/.json in brain-repo 12_cognitive_architecture/top10_7_10_agent (mpmath 40 digits, two independent quadratures); board brain-tasks-board df6beda"
+  evidence: "rank10_t390_check.py/.json in the private repository, 12_cognitive_architecture/top10_7_10_agent (mpmath 40 digits, two independent quadratures); board the private task board df6beda"
 ---
 
 Review 4 Nov 2026 (an agent, rank 10 TOP400 review). Source research-repo 465b73ba T390_weight_are_asymptotic.md.

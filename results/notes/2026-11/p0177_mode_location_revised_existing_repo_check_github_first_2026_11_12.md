@@ -30,7 +30,7 @@ The free density can have a second local maximum just above the threshold (0.8 d
 delta_50), so the free statement is about the global maximizer, not unimodality.
 
 Checks: code/mode_checks.py (SymPy coefficients, mpmath maximizers, threshold scans); Codex referee gpt-6.1-sol on
-Mac mini 1, own programs, verdict SOUND, seven editorial points applied. The second threshold in Corollary 4(i) was
+worker machine 1, own programs, verdict SOUND, seven editorial points applied. The second threshold in Corollary 4(i) was
 ported from the 5 Nov version after the referee ran and was checked by hand only. Novelty: arXiv fielded searches
 and the four works citing Hasebe-Ueda show nothing on the mode's location; not otherwise verified.
 

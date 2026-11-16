@@ -28,7 +28,7 @@ QC coefficient k m_{k-1} (not 2k) and uniqueness only within laws with an expone
 06_math_research/referee_reports/2026-11-12/P0347R. Paper offered to an agent (mesh topic referee/p0347).
 Related: [[lumping_r_merges_partial_one_block_lemma_k7_open_2026_11_12]].
 
-**Full limit law, 12 Nov 22:30 laptop time:** a second Codex run (P0347L) proved (S_n-ES_n)/(n log n) -> W with all
+**Full limit law, 12 Nov 22:30 workstation time:** a second Codex run (P0347L) proved (S_n-ES_n)/(n log n) -> W with all
 moments, the same W for Colless (joint limit (W,W), Var(S-C) = O(n^2 log n)), a_k from h_{k-1} a_k = k a_{k-1} +
 int R_k dnu, |a_k| <= 2^k k!, and a characteristic-function fixed point unique among centered laws with an exponential
 moment. The hard referee P0347LR returned MINOR: the only change is the same endpoint bound P0347R asked for

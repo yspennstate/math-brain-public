@@ -9,7 +9,7 @@ metadata:
   evidence: "public mains d2f0b5b6, ae7926df, 9861d629 confirmed by git ls-remote; ledger commits fa2b416d, 65797165, 8333bafa; referee reports under agent_run/p0253|p0033|p0032/referee"
 ---
 
-Three posted probability papers got their first outside referee pass on 12 Nov 2026 (Codex gpt-6.1-sol at high on Mac mini 1, own programs, no access to the repo code or earlier audits). All three verdicts were SOUND; every fix was wording, attribution or presentation. This continues [[p0452_p0243_independent_referee_passes_what_they_found_2026_11_12]].
+Three posted probability papers got their first outside referee pass on 12 Nov 2026 (Codex gpt-6.1-sol at high on worker machine 1, own programs, no access to the repo code or earlier audits). All three verdicts were SOUND; every fix was wording, attribution or presentation. This continues [[p0452_p0243_independent_referee_passes_what_they_found_2026_11_12]].
 
 | problem | repo | before | after | what changed |
 |---|---|---|---|---|

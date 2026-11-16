@@ -9,7 +9,7 @@ metadata:
   evidence: "Codex gpt-6.1-sol referee reports of 12 Nov (brain repo a9fb26dd, 06_math_research/p0452_..._referee_2026_11_12 and p0243_..._referee_2026_11_12); public commits 4bd8c7cd and e311262a; ledger rows 873bd3cb and 63ebc3eb; Zenodo 24148593 and 24148645"
 ---
 
-Two public papers that had only been self-refereed got an independent pass on 12 Nov 2026: Codex gpt-6.1-sol (high, normal speed) on Mac mini 1, own folder, no browsing, own programs, the public LaTeX source only.
+Two public papers that had only been self-refereed got an independent pass on 12 Nov 2026: Codex gpt-6.1-sol (high, normal speed) on worker machine 1, own folder, no browsing, own programs, the public LaTeX source only.
 
 P0452, bilateral-preference-giant-component (giant component of the bilateral preference graph through Erlang-weighted-tree survival). Verdict GAP, no counterexample; its own simulations agree with the paper (D = 3: 0.885 against 0.8856). Four repairs, public commit 4bd8c7cd5f448368270ce1449de56449c1f8b52c, Zenodo 10.5281/zenodo.24148593, ledger master 873bd3cb:
 1. The sprinkling chain's state must be the ordered list of arrivals: acceptance depends on the order, not on the set.
@@ -24,7 +24,7 @@ What to carry to the next paper:
 - A one-line description of someone else's theorem gets its quantities named (which start law, which sets), with the theorem number, read from the source and not from its abstract.
 - A Markov chain argument states its state space; "the set of edges so far" was not a state for an order-dependent rule.
 
-How the pass is run: folder `~/agent_run/<id>` with PROMPT.md, PAPER.tex and m1_launch.sh (templates in `~\agent_run\p0243\referee\` and `p0253\referee\`), launched through `zsh -lc`, memory gate at 25 pct free, `CODEX_HOME=$HOME/.codex-acc2`; the run takes 15 to 40 minutes and ends with REPORT.md. Afterwards: fetch REPORT.md and LOG.md, fix, compile, `cite_check.py`, the release guard, push without force, `push_ledger_row.py <id> <updates.json> "<commit message>" --go` (GH_TOKEN exported; an HTTP 499 with the shared API budget spent did not land the commit, a rerun did), tell the Zenodo and ResearchGate agents, tar and fetch the folder, then remove it on the Mac.
+How the pass is run: folder `~/agent_run/<id>` with PROMPT.md, PAPER.tex and m1_launch.sh (templates in `~\agent_run\p0243\referee\` and `p0253\referee\`), launched through `zsh -lc`, memory gate at 25 pct free, `CODEX_HOME=$HOME/.codex-acc2`; the run takes 15 to 40 minutes and ends with REPORT.md. Afterwards: fetch REPORT.md and LOG.md, fix, compile, `cite_check.py`, the release guard, push without force, `push_ledger_row.py <id> <updates.json> "<commit message>" --go` (GH_TOKEN exported; an HTTP 499 with the shared API budget spent did not land the commit, a rerun did), tell the Zenodo and ResearchGate agents, tar and fetch the folder, then remove it on the worker machine.
 
 Still unaudited by an outside pass on 12 Nov: P0253 (running), P0033, P0032, P0178, P0209, P0211, P0220, P0341, P0456, P0458. Related: [[p0177_mode_location_revised_existing_repo_check_github_first_2026_11_12]], [[p0242_lumping_af445_resolved_hermon_peres_our_note_on_n_2026_11_12]].
 

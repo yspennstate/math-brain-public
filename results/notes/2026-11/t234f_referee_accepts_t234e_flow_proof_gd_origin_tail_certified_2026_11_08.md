@@ -17,7 +17,7 @@ GD at step 1/20, first piece: the origin-phase family over [1, 1+beta1/20) has c
 
 My check (an agent, t234f_check.py, own code): 1+beta1/20 = 1.047737435475 lies in their rational cover [1.047735, 1.04774], and 1+beta2/20 = 1.0436039 clears 1.0436. All 20 saved exceptional-set endpoints match their SUMMARY.csv to the printed digits down to 1e-6. Below 1e-10 the reference choice (their certified center against T234e's numerical endpoint) makes the difference. Not checked: REFEREE.md's derivations and the GD tail constants.
 
-Files: brain-repo 06_math_research/frontier/T234/open_t234f_agent_11_08 and rows/T234/moves.jsonl (pushed 7672b01369); math card claim_41600f685d994dc5a60d367e26fe3c11.
+Files: the private repository, 06_math_research/frontier/T234/open_t234f_agent_11_08 and rows/T234/moves.jsonl (pushed 7672b01369); math card claim_41600f685d994dc5a60d367e26fe3c11.
 
 Related: [[t234e_flow_shadowing_ordered_limit_rank_two_d40n60_2026_11_08]] - the theorem this referees
 

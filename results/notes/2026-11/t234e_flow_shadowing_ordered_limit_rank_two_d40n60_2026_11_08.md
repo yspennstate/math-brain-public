@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-08
   created_at: 2026-11-08T12:51:06+04:00
   status: verified
-  evidence: "frontier T234 6011147edb; claim_72ab825a; scratchpad t234e_check.py"
+  evidence: "frontier T234 6011147edb; claim_72ab825a; scratch area t234e_check.py"
 ---
 
 Does small-init gradient flow on the T234 instance (d40 n60 seed 60001) end at the rank-two interpolant from a real small start, not just on the certified reference path? Yes, conditionally (8 Nov, OPEN-T234e, frontier T234, pushed 6011147edb, card claim_72ab825a24144687ae6f826f6f74b161).

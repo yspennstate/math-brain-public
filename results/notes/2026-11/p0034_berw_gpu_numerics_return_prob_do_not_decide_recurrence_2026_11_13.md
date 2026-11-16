@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-The C0132 GPU loop on Mac mini 2 (~/gpu_work/c0132_mc, ew_loop.py + ew_gpu.py, MLX Metal kernel, one walker per thread, bitmap of visited sites, walk censored on leaving a box of side L started at its centre; stopped by its STOP file since 12 Nov) left 84,470 batch rows in summary.jsonl. Nobody had read them. Aggregated 13 Nov by an agent (scratchpad ew_agg.py on the Mac, ew_fit.py here).
+The C0132 GPU loop on worker machine 2 (~/gpu_work/c0132_mc, ew_loop.py + ew_gpu.py, MLX Metal kernel, one walker per thread, bitmap of visited sites, walk censored on leaving a box of side L started at its centre; stopped by its STOP file since 12 Nov) left 84,470 batch rows in summary.jsonl. Nobody had read them. Aggregated 13 Nov by an agent (scratch ew_agg.py on the worker machine, ew_fit.py here).
 
 Mode 0 is P0034's walk exactly (first visit: horizontal step; revisit: vertical step; Lyons-Peres Q2.27 = 2D balanced excited walk, recurrence conjectured by Angel-Holmes-Ramirez 2023, see [[p0034_is_2d_balanced_excited_walk_open_angel_holmes_ramirez_2026_11_13]]). p = P(return to start before leaving the box), walkers 5.9e9 at L=128 down to 2.3e7 at L=2048, 0 censored:
 
@@ -24,5 +24,5 @@ P(ever return) is the limit of p as L grows (the box only censors), so recurrenc
 
 What the data do say: mean returns before exit grow by 1.19, 1.35, 1.52, 1.72 per doubling of L (2D simple walk: (2/pi) ln 2 = 0.44, constant), i.e. roughly (ln L)^k with k drifting 1.8 -> 2.0 - returns come in clusters (a revisit steps vertically, a fresh site horizontally, so the walk re-crosses its own column). Exit time stays diffusive (E[tau]/L^2 0.26-0.28). Controls: the 3D modes M(1,2) and M(2,1) level off at p = 0.559 and 0.353 by L = 256, as transience (Peres-Popov-Sousi) requires.
 
-**How to apply:** do not spend GPU extending this loop to settle P0034: separating a = 0 from a = 0.1 needs L of order 1e4 and above with se near 5e-4, about 1e13 walker-steps with L^2/8 bytes of bitmap per walker - not a Mac mini job. A proof route, not more numerics, is what P0034 needs; the (ln L)^2 return count is the one numeric fact worth carrying into one. Raw data stay on Mac mini 2 (summary.jsonl, 84,470 rows).
+**How to apply:** do not spend GPU extending this loop to settle P0034: separating a = 0 from a = 0.1 needs L of order 1e4 and above with se near 5e-4, about 1e13 walker-steps with L^2/8 bytes of bitmap per walker - not a worker machine job. A proof route, not more numerics, is what P0034 needs; the (ln L)^2 return count is the one numeric fact worth carrying into one. Raw data stay on worker machine 2 (summary.jsonl, 84,470 rows).
 

@@ -9,7 +9,7 @@ metadata:
   evidence: "referee REPORT.md verdict SOUND for both; public 4beeb48a and 66cce3a3 match git ls-remote; ledger 68b4ac50 and e25d15c9"
 ---
 
-Two more posted papers went through the outside referee on Mac mini 1 (Codex gpt-6.1-sol, high, normal speed, own programs, no repository code, no literature access). Both SOUND.
+Two more posted papers went through the outside referee on worker machine 1 (Codex gpt-6.1-sol, high, normal speed, own programs, no repository code, no literature access). Both SOUND.
 
 P0209 relaxation-time-normal-approximation (Aldous-Fill Open Problem 4.30): four-state construction and P(S_s <= 0) >= 1 - 4/s sound; 1,000,000-run checks at five (b,s) pairs all above 1 - 4/s; ten wording points fixed. Public 66cce3a3, ledger e25d15c9, Zenodo new version 10.5281/zenodo.24149781.
 

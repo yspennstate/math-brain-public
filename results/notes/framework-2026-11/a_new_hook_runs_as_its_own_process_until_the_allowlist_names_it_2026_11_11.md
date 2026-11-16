@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-11
   created_at: 2026-11-11T07:11:55+02:00
   status: verified
-  evidence: "hook_profile.jsonl 11 Nov 06:20-07:07: running_script_edit_guard.py 's' med 311 ms -> 'i' 0.4-18 ms; recognize_on_read.py 's' med 421 ms -> 'i' 124 ms; allowlist 334 -> 336; equality tests scratchpad rsg_eq.py and ror_eq.py, 0 mismatches"
+  evidence: "hook_profile.jsonl 11 Nov 06:20-07:07: running_script_edit_guard.py 's' med 311 ms -> 'i' 0.4-18 ms; recognize_on_read.py 's' med 421 ms -> 'i' 124 ms; allowlist 334 -> 336; equality tests scratch area rsg_eq.py and ror_eq.py, 0 mismatches"
   lesson: true
 ---
 

@@ -21,5 +21,5 @@ Fixes the referee asks for, needed before any paper:
 
 Open: whole space, general boundaries, superlinear noise g_i (the survey's follow-up). An arbitrary mixed Hessian fails estimate (11); the claim needs the constructed polynomial.
 
-How to use: before writing an I0071 paper, apply 1-4 and ask agent (asked 13 Nov 18:4x laptop, topic paper/I0071). Runs archived from mini1 ~/agent_run/I0071A and I0071AR. What would change this: a referee finding (11) false for the constructed polynomial, or a 2026 paper proving the same.
+How to use: before writing an I0071 paper, apply 1-4 and ask agent (asked 13 Nov 18:4x workstation, topic paper/I0071). Runs archived from mini1 ~/agent_run/I0071A and I0071AR. What would change this: a referee finding (11) false for the constructed polynomial, or a 2026 paper proving the same.
 

@@ -17,5 +17,5 @@ Checks: sd_exact_verify.py 10 4 (every shard ends '# done', every line well form
 
 Published: paper Prop. 4.11 now 3 <= n <= 10 (12 pp, 0 Overfull); yspennstate/wasserstein-layered-permutation-copulas ee5dd5fa6b66773350c18fe8558d79f9a17bcde1 ("Every permutation for n at most ten", with the four shard outputs, ~4.8 MB each); ledger open-problems-repo master e10e538bd1447accba11e8416a41ebf5d8c89860 [skip ci]. Status still partial: general n open.
 
-Next size: n = 11 is about 5.0e6 classes (11x), roughly 8-10 h on four laptop shards at this rate; the margin shrinks like ~0.11/n^2 (~9e-4 at n=11), still far above the 2^-40 rounding. This route proves fixed n only; it gives no general-n argument.
+Next size: n = 11 is about 5.0e6 classes (11x), roughly 8-10 h on four workstation shards at this rate; the margin shrinks like ~0.11/n^2 (~9e-4 at n=11), still far above the 2^-40 rounding. This route proves fixed n only; it gives no general-n argument.
 

@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-11
   created_at: 2026-11-11T08:22:01+02:00
   status: provisional
-  evidence: "public repo main 4e495ad3c3c2da33cf1e5a12a69b0a979f3a29ac; ledger master 0d3566bc; public table 3ece41eb; Zenodo 24126303; referee note and Lean check brain commit 44955280; pool runs on Mac mini 2 (6 seeds)"
+  evidence: "public repo main 4e495ad3c3c2da33cf1e5a12a69b0a979f3a29ac; ledger master 0d3566bc; public table 3ece41eb; Zenodo 24126303; referee note and Lean check brain commit 44955280; pool runs on worker machine 2 (6 seeds)"
 ---
 
 P0065 is Lyons-Peres Question 17.29 (Lyons-Pemantle-Peres 1997; Lin 2019 Question 1): on a leafless Galton-Watson tree with non-constant offspring number N of finite mean m, is the Hausdorff dimension d_lambda of harmonic measure of the lambda-biased walk increasing in lambda on [0, m)?
@@ -22,7 +22,7 @@ Where it is
 
 Route, in case the rest of the interval is tried: the formula of Lin and Rousselin, d_lambda = E[W L]/E[W]; on trees with all degrees at least k the conductance recursion is a sup-norm contraction with constant lambda/k in logarithmic coordinates, uniformly in the tree, and so is the differentiated recursion. That gives C^1 on [0, k0) and the slope at 0 by differentiating under the expectation. The contraction is lost at lambda >= k0, and for lambda > 0 neither term of d' = E_Q[L'] + Cov_Q(L, W'/W) has an obvious sign.
 
-Numbers (pool 2*10^5, 300 iterations, 6 seeds, Mac mini 2): exact slope against pool average at 0 for the laws {1,2}, {2,4}, {1,2,3}, geometric: 0.02166 / 0.02206, 0.02708 / 0.02720, 0.04954 / 0.04925, 0.05496 / 0.05572. d_lambda increases along the whole grid lambda/m = 0 ... 0.9 for all four laws in every seed.
+Numbers (pool 2*10^5, 300 iterations, 6 seeds, worker machine 2): exact slope against pool average at 0 for the laws {1,2}, {2,4}, {1,2,3}, geometric: 0.02166 / 0.02206, 0.02708 / 0.02720, 0.04954 / 0.04925, 0.05496 / 0.05572. d_lambda increases along the whole grid lambda/m = 0 ... 0.9 for all four laws in every seed.
 
 Size of the doubt: one author, one referee read by another agent, a Lean check of the slope algebra only (not of the regularity argument).
 

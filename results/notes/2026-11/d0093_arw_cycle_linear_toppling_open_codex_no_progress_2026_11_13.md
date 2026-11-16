@@ -14,7 +14,7 @@ Richey, "Activated random walk on a cycle", AIHP 55 (2019), arXiv 1709.09163) gi
 n^{-delta} for the number of topplings T in the fast phase on the n-cycle. The problem: remove the log^2 n, to order n.
 
 Status 13 Nov 2026: open.
-- Codex report referee_reports/2026-11-13/D0093A (run on Mac mini 1, gpt-6.1-sol, one pass, unrefereed):
+- Codex report referee_reports/2026-11-13/D0093A (run on worker machine 1, gpt-6.1-sol, one pass, unrefereed):
   NO_PROGRESS. No linear bound for the conservative cycle, even with probability only tending to one, and no
   counterexample. Its diagnosis: the n log^2 n is the cost of gathering particles at sources spaced order log n apart,
   and a uniform geometric bound on the site odometer cannot hold (by an infinite-line result). Its literature table,

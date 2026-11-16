@@ -25,7 +25,7 @@ hopcount >= k_n is (C_* + o(1)) alpha^(-(k_n - b_n)), C_* = 0.0110396527896; at 
 least c n^(5 - alpha log 4) times a power of log n, so the plain second moment method fails; P(M_n = n-1) =
 n/(2 (n-1)!). No lower bound beyond Addario-Berry, Broutin and Lugosi (2010).
 
-What the simulations say (Dijkstra from every vertex, n = 250..4000, 8000 down to 120 graphs, on Mac mini 2 through
+What the simulations say (Dijkstra from every vertex, n = 250..4000, 8000 down to 120 graphs, on worker machine 2 through
 fillq): the mean of M_n sits 1.72, 1.86, 1.95, 2.11, 2.15 below k*_n (the level where the exact first moment is 1),
 i.e. 5.13 to 5.60 below b_n, and the gap grows by 0.47 (s.e. 0.10) over that range. The frequency of {M_n >= k} just
 above k*_n is 0.16 down to 0.08 of the first moment.
@@ -57,7 +57,7 @@ Tools worth reusing:
 - a slow drift in a simulated mean has two readings whenever log log n and 1/log n are the candidates: compute what
   each predicts over the simulated range before writing a conjecture down.
 
-Referee: Codex gpt-6.1-sol at high on Mac mini 1 passed Theorems 1-2 and Propositions 3-4 with its own enumeration
+Referee: Codex gpt-6.1-sol at high on worker machine 1 passed Theorems 1-2 and Propositions 3-4 with its own enumeration
 and simulations and found two wrong remarks (order of the Gaussian error after Theorem 2; wording of the
 Hamilton-path event), both corrected before posting. It had no network, so the literature rests on the citation pass
 (22 outside entries, each checked against Crossref or arXiv; Chen-Ma arXiv:2604.20139 Proposition 3.1 credited for

@@ -11,7 +11,7 @@ metadata:
 
 Can a brain test built in this session keep its key away from the brain arms by denying the key folder? Not by command rules alone. ~/.claude/dreaming/.verify_gate_turns, written by verify_gate.py, keeps each session turn's events with the full text of the commands typed (1,061 files, 35 MB on 8 Nov 14:05). A heredoc that writes or patches the items lands there word for word. Brain arms may read ~/.claude/dreaming, and a plain `rg -l <word> ~/.claude/dreaming` names no denied path, so the live audit passes it.
 
-Measured on this Mac, 8 Nov 13:59 to 14:04, while building DIAG4:
+Measured on this worker machine, 8 Nov 13:59 to 14:04, while building DIAG4:
 - A string that only DIAG3's key and my patch heredoc held ("brain-test-store") was searched for in ~/.claude/dreaming, ~/.claude/brain_graph, ~/brain, the memory folder, ~/.claude/mail and the mesh. The one hit was .verify_gate_turns/029c4d3d8928b49f6001.json, which held the whole patch command.
 - The deny rules also passed `rg -l <word> ~/.codex-acc2` (the clue checker's session, with every cause, is under it), `rg -l <word> ~/.claude/projects` (session transcripts) and `rg -l <word> ~/.claude/brain_graph` (compaction texts).
 - DIAG3 stayed valid. No brain run searched those trees: their commands were scanned, and their transcripts hold none of the leak markers (the private key folder name, the clue-check file names, the earlier results' folder names and body phrases).

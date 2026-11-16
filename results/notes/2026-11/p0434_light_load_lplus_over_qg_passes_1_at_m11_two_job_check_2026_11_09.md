@@ -9,7 +9,7 @@ metadata:
   evidence: "research-repo decbe2ed54 two_job_m11.out; d7eae41129 NOTE_MAC.md"
 ---
 
-Does the light-load sup of L+/Q_G (M-SERPT against Gittins, SOAP, P0434) stay below 1, so that L+ <= Q_G could be the lemma? No (9 Nov 00:5x, an agent on the Mac mini, for yitz8 / an agent): an 11-atom law (10 effective) gives 1.1268.
+Does the light-load sup of L+/Q_G (M-SERPT against Gittins, SOAP, P0434) stay below 1, so that L+ <= Q_G could be the lemma? No (9 Nov 00:5x, an agent on the worker machine, for yitz8 / an agent): an 11-atom law (10 effective) gives 1.1268.
 
 The chain: m 7 0.8291, 8 0.8538, 9 0.8912 (yitz8's seeded adv_lowload_mac.py), m 10 0.9684, m 11 1.1268 (adv_lowload_mac_ext.py, which also starts a new atom as a near-twin of every atom and past the tail). The 0.78 leveling guess in their NOTE.md was wrong; the seeded chain also undershoots, since the near-twin atoms of mass ~1e-7 in the m 7-9 optima carry nothing (sup(m) >= the next row).
 

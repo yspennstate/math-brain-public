@@ -24,7 +24,7 @@ Our partial result (an agent, 14 Nov, unrefereed):
   same-direction coupling is monotone; the enclosed area is a martingale; the gap drift is the Laplacian of g^2 (no
   linear eigenfunctions, unlike the Caputo-Labbe-Lacoin adjacent walk).
 
-Numerics (exact dense eigenvalues, scratchpad p0254/gap_exact.py, cap C(K,m) <= 6000):
+Numerics (exact dense eigenvalues, scratch area p0254/gap_exact.py, cap C(K,m) <= 6000):
   m=2, K=3..39: tau2 = 2.0000 for every K.
   m=3, K=4..34: 4.0000 at K=4, decreasing to 3.7154.
 So tau2 looks NONINCREASING in K. Conjecture (ours): sup_K tau2(m,K) = (m+1)/(1-cos(2 pi/(m+1))) ~ (m+1)^3/(2 pi^2),
@@ -36,7 +36,7 @@ So tau2 is NONINCREASING in K on every case computed (m=2..10, 82 rows). Conject
 attained at one hole. Proving that monotonicity (adding a vacant box never slows the chain) would close the tau2 half for
 every K. The smell test passes: the K -> infinity limit is the continuum gap chain, which should be Theta(m^3) too.
 
-Large K (14 Nov, sparse Lanczos, scipy eigsh k=4 'LA' tol 1e-11 on the exact chain, C(K,m) <= 60000, scratchpad p0254/gap_big.py,
+Large K (14 Nov, sparse Lanczos, scipy eigsh k=4 'LA' tol 1e-11 on the exact chain, C(K,m) <= 60000, scratch area p0254/gap_big.py,
 log gap_big.log; lambda2 has multiplicity 2 from rotation; the K=34, m=3 row matches the dense solve, 3.7154): 78 more rows, zero rises.
 m=3 to K=72 (24m): 3.7154 -> 3.6965; m=4 to K=36 (9m): 6.4233 -> 6.3249; m=5 to K=25: 10.48 -> 10.18; m=6 to K=21: 16.11 -> 15.56;
 m=7 to K=19: 23.87 -> 22.81. The m=3 sequence flattens (3.7133 at K=36, 3.7020 at K=54, 3.6980 at K=66), consistent with a finite

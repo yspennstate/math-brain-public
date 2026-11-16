@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-P0434 (M-SERPT against Gittins on [1, K], 2 < K <= 9/4), route item 110 (an agent, 8 Nov 2026 20:0x-21:1x), pushed in brain-repo f981a9cf under 06_math_research/frontier/P0434/route_agent_2026_11_08 (w3cm2, w3cm2wide, w3cm2probe, w3cm2close, w3cm2br2, each .py with its .out).
+P0434 (M-SERPT against Gittins on [1, K], 2 < K <= 9/4), route item 110 (an agent, 8 Nov 2026 20:0x-21:1x), pushed in the private repository f981a9cf under 06_math_research/frontier/P0434/route_agent_2026_11_08 (w3cm2, w3cm2wide, w3cm2probe, w3cm2close, w3cm2br2, each .py with its .out).
 
 The third-atom sup past first order in m, with the atom at 1 + d(K - 1) of mass m and the K mass and load free:
 - Small m: S2 - sup = a m + b m^2 with a = c(K, d)(S2 - 1) as in item 109, and b > 0 at every cell (K 2.05 to 9/4, d .05/.5/.95).

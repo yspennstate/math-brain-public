@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-02
   created_at: 2026-11-02T23:15:42+04:00
   status: provisional
-  evidence: "brain-repo main 06_math_research/frontier/rows/T013/moves.jsonl 2c00d0e5"
+  evidence: "the private repository, 06_math_research/frontier/rows/T013/moves.jsonl 2c00d0e5"
 ---
 
-T013 (conformal invariance of critical planar FK models for generic q in (1,4)), first move m013a, moves.jsonl 2c00d0e5 on brain-repo main, 2 Nov 2026.
+T013 (conformal invariance of critical planar FK models for generic q in (1,4)), first move m013a, moves.jsonl 2c00d0e5 on the private repository main, 2 Nov 2026.
 
 What ran: Swendsen-Wang at p_c(q) = sqrt q/(1+sqrt q), free boundary conditions on the square lattice, q = 1, 2, 3. The probability that one open cluster joins two boundary arcs, in an aligned rectangle (aspect r = 1/2, 1, 2) and in a disk with two symmetric arcs at the same cross-ratio (theta 1.39837, 0.78540, 0.17243). 40,000 sweeps per point, L = 32, 64, 128 (rectangle height L, disk radius L). Files t013_fk.c, t013_params.py, t013_sweep_out.txt in rows/T013.
 

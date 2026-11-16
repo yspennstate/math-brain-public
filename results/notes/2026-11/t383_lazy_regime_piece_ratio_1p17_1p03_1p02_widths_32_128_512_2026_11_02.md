@@ -9,7 +9,7 @@ metadata:
   evidence: "research_pushes/2026-11-02-loop-T383-lazy-regions (research-repo 82a79eb); frontier move ffda510"
 ---
 
-T383 target 1 (does the linear-region count stay within a constant factor of its initial value in the lazy/NTK regime?): numerics on 2 Nov, at research-repo research_pushes/2026-11-02-loop-T383-lazy-regions (82a79eb; README.md, lazy_regions.py, check_count.py, run1.txt). Frontier move on T383 at brain-repo ffda510.
+T383 target 1 (does the linear-region count stay within a constant factor of its initial value in the lazy/NTK regime?): numerics on 2 Nov, at research-repo research_pushes/2026-11-02-loop-T383-lazy-regions (82a79eb; README.md, lazy_regions.py, check_count.py, run1.txt). Frontier move on T383 at the private repository ffda510.
 
 Setup: depth 3 with two hidden layers of width m, 1-D input, NTK parametrization, all weights N(0,1). Full-batch GD at lr 1 for 2,000 steps on sin(3x) at 64 points; every run fit (loss 0.003-0.009). Pieces of the hidden map on [-3,3] are counted exactly: first-layer breakpoints, then the exact zeros of the second layer's affine pre-activations on each interval. The counter equals a 2,000,001-point grid count on 3 of 3 nets.
 

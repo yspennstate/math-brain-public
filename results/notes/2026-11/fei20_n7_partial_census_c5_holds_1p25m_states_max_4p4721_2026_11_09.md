@@ -28,5 +28,5 @@ found so far.
 
 I read the report and its audit list; I did not recompute the witness myself. Pushed to frontier T021
 fei20_reserve_c5_n7_partial_2026_11_09 (4ea60bffa9, 135 files). The checkpoints (census pkl, payments sqlite) are
-still on the Mac.
+still on the worker machine.
 

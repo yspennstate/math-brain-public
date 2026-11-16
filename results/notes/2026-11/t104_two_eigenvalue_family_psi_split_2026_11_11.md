@@ -25,7 +25,7 @@ What the numbers say. Minimum of Psi over x is 0 for n = 4..8 (two independent c
 
 Scar. The first proof attempt bounded m by the mean over all pairs of negatives and bounded q and p3 separately; it lost for 2/3 < u < (n-1)/n. The loss was the choice of pairs, not D: keep D exact and choose the set of pairs by x.
 
-Where. brain-repo/06_math_research/t104_alon_agent_2026_11_11/ (GAP_STATE_FORM.md, two_eig_family.py, psi_split_check.py, psi_threshold_check.py and their .out files); independent check under 06_math_research/lean_checks_agent/t104_alon_n4/psi_referee/ (brain main 5c3b3e24).
+Where. the private repository, 06_math_research/t104_alon_agent_2026_11_11/ (GAP_STATE_FORM.md, two_eig_family.py, psi_split_check.py, psi_threshold_check.py and their .out files); independent check under 06_math_research/lean_checks_agent/t104_alon_n4/psi_referee/ (brain main 5c3b3e24).
 
 What would change it. A vector with Psi < 0 (then the gap-weighted state does not prove Conjecture F even on this family), or a proof of the prefix-set inequality (then the family is done and the general case a lam + b >= 0 is the next step).
 

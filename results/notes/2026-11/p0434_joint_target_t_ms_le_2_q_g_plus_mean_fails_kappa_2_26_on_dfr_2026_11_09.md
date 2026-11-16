@@ -9,7 +9,7 @@ metadata:
   evidence: "~/codex_fleet/runs/own_p0434/kappa_three_phase_check.out"
 ---
 
-P0434 (M-SERPT vs Gittins, Scully et al. Conj. 8.1), 9 Nov 05:4x, an agent, laptop yitz8.
+P0434 (M-SERPT vs Gittins, Scully et al. Conj. 8.1), 9 Nov 05:4x, an agent, workstation yitz8.
 
 The joint target T_MS <= 2 (Q_G + E[X]) is FALSE. On a DFR law (M-SERPT = Gittins = FB, so T_MS/T_G = 1) the ratio
 kappa = T_MS/(Q_G + E[X]) reaches 2.263: dust carrying load share 0.6715, plus a big part 0.999 Exp(mean 0.729) +

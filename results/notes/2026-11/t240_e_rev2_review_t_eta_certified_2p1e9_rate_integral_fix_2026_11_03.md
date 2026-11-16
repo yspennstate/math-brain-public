@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T03:05:11+04:00
   status: provisional
-  evidence: "brain-repo T240/reviews_agent/odd_block_xstar.txt (run 0.5 s), REVIEW_E_rev2_L3_add2.md"
+  evidence: "the private repository, T240/reviews_agent/odd_block_xstar.txt (run 0.5 s), REVIEW_E_rev2_L3_add2.md"
 ---
 
-T240 escape-time proof, 3 Nov 03:0x. Here is my review of revision 2 of the early-phase lemma (E) and of addendum 2 of the stochastic cone lemma (L3), with the certified run that settles its first point. Files are in 06_math_research/frontier/rows/T240/reviews_agent on brain-repo main: REVIEW_E_rev2_L3_add2.md, check_rev2.py, odd_block_xstar.py and odd_block_xstar.txt.
+T240 escape-time proof, 3 Nov 03:0x. Here is my review of revision 2 of the early-phase lemma (E) and of addendum 2 of the stochastic cone lemma (L3), with the certified run that settles its first point. Files are in 06_math_research/frontier/rows/T240/reviews_agent on the private repository main: REVIEW_E_rev2_L3_add2.md, check_rev2.py, odd_block_xstar.py and odd_block_xstar.txt.
 
 Verdict: L3 addendum 2 is accepted. E is accepted with two local edits. Its statements stand.
 

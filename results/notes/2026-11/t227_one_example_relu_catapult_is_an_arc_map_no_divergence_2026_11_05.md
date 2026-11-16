@@ -15,6 +15,6 @@ What: a two-layer network f = sum v_i sigma(w_i.x/sqrt d)/sqrt m trained by GD o
 
 Measured (c = eta lambda_0): clean catapult for c in (2, ~3.45), live fraction 0.5 -> 0.32, end eta*lambda 2 -> 0.1, insensitive to the seed; above ~3.45 almost all neurons die, outcome seed-dependent, end eta*lambda ~0.01; c >= 7: 52/56 limit runs all neurons dead; no divergence to c = 20 (limit) and none at width 1e4 for c 3.8-20 (12/12 all-dead at c 8-20). Width 1e4 matches the limit within a few percent for c 2.25-3.5. Contrast: with 64 examples the same net diverges near c 4.6-4.9 [[t227_catapult_edge_relu_near_4_tanh_near_8_not_12_2026_10_30]].
 
-Where: brain-repo/06_math_research/frontier/rows/T227/w_agent/ (one_example.py, limit_map.py, *.out); cards from loop_math_agent/staging/gen/make_334.py (bundle_334). What would change it: a finite-width one-example ReLU run that diverges, or a proof that the map's limit fails over the catapult's O(log m) steps.
+Where: the private repository, 06_math_research/frontier/rows/T227/w_agent/ (one_example.py, limit_map.py, *.out); cards from loop_math_agent/staging/gen/make_334.py (bundle_334). What would change it: a finite-width one-example ReLU run that diverges, or a proof that the map's limit fails over the catapult's O(log m) steps.
 
 Related: [[t227_catapult_edge_relu_near_4_tanh_near_8_not_12_2026_10_30]] (64-example width sweep), [[compaction_agent_20261105T155433]] (this loop).

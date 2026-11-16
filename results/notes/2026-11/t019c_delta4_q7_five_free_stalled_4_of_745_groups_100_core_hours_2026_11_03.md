@@ -13,7 +13,7 @@ superseded_by: t019c_five_free_2_core_hours_not_100_groups_sorted_by_size_2026_1
 T019 at maximum degree 4 with q = 7 (the step after T019b's Delta 3, q 5) is stalled, not running. Read 3 Nov 18:2x.
 
 - Lead an agent stopped at 13:53 and is off the mesh. Its five-free enumeration
-  (frontier/t019_seq_run_4_7_5.jsonl in its scratchpad, driver t019_seq_run.py) wrote 4 of the 745 planned groups
+  (frontier/t019_seq_run_4_7_5.jsonl in its scratch area, driver t019_seq_run.py) wrote 4 of the 745 planned groups
   between 13:12 and 13:46, then stopped. No t019 process is alive.
 - At about 8.5 min a group (4 groups in 34 min, one core, 120k-256k local problems each), the remaining 741 groups need
   roughly 100 core-hours. Do not restart it as is on the 16 GB Mac, least of all under swap distress. It needs a symmetry

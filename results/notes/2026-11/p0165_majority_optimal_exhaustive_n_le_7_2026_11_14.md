@@ -14,7 +14,7 @@ P0165, O'Donnell's open problem on many-player correlation distillation. Model: 
 14 Nov 2026 (an agent): exhaustive checks against the best of Maj_1..Maj_n on eps in {0.01..0.49} (14 values), r = 2..40 plus 50..1000:
 - n=5 all 65,536 odd f: max excess 4e-14.
 - n=5, 6 self-dual monotone (81, 2646 - OEIS A001206): 1.9e-13, 1.7e-13.
-- n=7 all 1,422,564 self-dual monotone f (sdm7.py, chunked, Mac mini 1 fillq, 2200 s, ~300 MB): 8.9e-13 at eps 0.08 r 1000. Round-off; no non-majority beats a majority by more than 1e-9 anywhere.
+- n=7 all 1,422,564 self-dual monotone f (sdm7.py, chunked, worker machine 1 fillq, 2200 s, ~300 MB): 8.9e-13 at eps 0.08 r 1000. Round-off; no non-majority beats a majority by more than 1e-9 anywhere.
 Which majority wins moves with r (eps 0.1, n 5: dictator to r=12, Maj_5 from r=16).
 Caveat: n=6,7 cover monotone odd f only; that compression toward monotone does not lower agreement is unproved (n=5 full search agrees).
 Files: 12_cognitive_architecture/math/trio_1011/op/P0165/ (NOTE.md, STATUS.md, ex5.py, sdm.py, sdm7.py, outputs). Store card claim_810d519a21a76e34.

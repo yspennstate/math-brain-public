@@ -9,7 +9,7 @@ metadata:
   evidence: "N5_N6_PROBE_2026_11_10.md, kn_minus_edge_face.out"
 ---
 
-P0245 (Aldous-Fill Open Problem 6.30, is (n-1)H_{n-1} the least stationary cover time of a reversible chain on n states?): random-restart searches on Mac mini 1 (10 Nov) covered about 92,000 local optimisations at n=5 (with and without holding), 7,500 at n=6, 400 Nelder-Mead restarts at n=6 and 100 at n=7. None went below K_n beyond float error (|gap| < 1.3e-14).
+P0245 (Aldous-Fill Open Problem 6.30, is (n-1)H_{n-1} the least stationary cover time of a reversible chain on n states?): random-restart searches on worker machine 1 (10 Nov) covered about 92,000 local optimisations at n=5 (with and without holding), 7,500 at n=6, 400 Nelder-Mead restarts at n=6 and 100 at n=7. None went below K_n beyond float error (|gap| < 1.3e-14).
 
 The only other local minimum they reach is K_n minus one edge {a,b}: weight 1 on the 2(n-2) edges at a or b, weight t on the other edges, no holding. Best t and gap above K_n:
 - n=4: t 0.20212, 5.931646 vs 5.5 (rel 0.0785)

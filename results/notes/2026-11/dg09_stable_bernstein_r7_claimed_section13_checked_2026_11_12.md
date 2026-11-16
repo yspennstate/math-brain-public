@@ -17,7 +17,7 @@ Their repository github.com/wgaom/stable-bernstein-R7 (commit 619b75d4 on 12 Nov
 
 Checked by us: Section 13 in full (8 exact symbolic checks: flat-model J(t) = 32 sqrt(w5) t^(5/2), volume constant 1/(48 sqrt(w5)), the Brendle chain, J_inf >= 32 sqrt(w5), all equalities in the flat model). Not checked: about 70 pages (Sections 3-12, 14) and the certificates. One paper uses the theorem as input (Z. Wang 2609.19120).
 
-How to apply: do not attack DG09; keep it REPORTED_SOLVED. Cheapest upgrade: build the Lean folder on a Mac mini after reading its lakefile. Same routine as [[dg08_cartan_hadamard_solved_2026_key_inequality_checked_2026_11_12]].
+How to apply: do not attack DG09; keep it REPORTED_SOLVED. Cheapest upgrade: build the Lean folder on a worker machine after reading its lakefile. Same routine as [[dg08_cartan_hadamard_solved_2026_key_inequality_checked_2026_11_12]].
 
 Evidence: 06_math_research/dg09_stable_bernstein_agent_2026_11_12/DG09_CHECK.md, dg09_check.out.
 

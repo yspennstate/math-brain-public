@@ -12,7 +12,7 @@ metadata:
 Question: when a reversible chain is lumped by r = n - q merges, does the stopping-rule mixing time grow by at most r+1
 (the conjecture that would give K(n) = floor(n/2))?
 
-Status 12 Nov 2026: partial, no counterexample. Codex run K6P (Mac mini 1), checked by an agent.
+Status 12 Nov 2026: partial, no counterexample. Codex run K6P (worker machine 1), checked by an agent.
 
 Proved (checked by hand and by direct hitting solves on 400 random chains):
 - Rank-r update: Fhat = F - F C (C^T F C)^{-1} C^T F, columns of C the r differences e_a - e_b inside blocks.

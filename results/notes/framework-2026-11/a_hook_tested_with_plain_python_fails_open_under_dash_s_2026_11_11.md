@@ -10,7 +10,7 @@ metadata:
   lesson: true
 ---
 
-A PreToolUse guard (running_script_edit_guard.py, meant to refuse an Edit/Write of a bash script that is running right now) passed its 11 tests and still let every live edit through. The hooks run as `python -s`, which drops the user site-packages, and psutil on this laptop lives only there (AppData/Roaming/Python/Python314/site-packages). Under `-s` the `import psutil` raised, the guard's top-level handler failed open, and nothing was logged. The tests ran plain `python`, so they imported psutil fine and passed.
+A PreToolUse guard (running_script_edit_guard.py, meant to refuse an Edit/Write of a bash script that is running right now) passed its 11 tests and still let every live edit through. The hooks run as `python -s`, which drops the user site-packages, and psutil on this workstation lives only there (AppData/Roaming/Python/Python314/site-packages). Under `-s` the `import psutil` raised, the guard's top-level handler failed open, and nothing was logged. The tests ran plain `python`, so they imported psutil fine and passed.
 
 Fix (11 Nov 06:0x, sha256 29dddb50412f): a `_psutil()` helper imports psutil and, on ModuleNotFoundError, appends `site.getusersitepackages()` to sys.path and retries (the same pattern as math_sense._ensure_user_site); the fail-open handler now appends a traceback to running_script_edit_guard.err (capped at 200 KB). The tests now run `python -s`. Verified three ways: 11/11 tests under -s, a replayed real-shaped Edit event through hook_dispatch.py returned deny, and a real Edit tool call on a running script was refused by the harness.
 

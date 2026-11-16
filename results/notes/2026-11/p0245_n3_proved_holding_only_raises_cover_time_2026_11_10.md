@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Proof and sympy script: brain-repo/12_cognitive_architecture/codex_local_1108/briefs/OPEN3/independent_check_agent/HOLDING_STEP_2026_11_10.md and n3_sym_proof.py (10 Nov 2026, an agent). Status provisional: machine algebra, checked a second way (ordered substitution, all coefficients nonnegative) and against 400 Nelder-Mead starts (min exactly 1). Next question: whether the holding part stays coefficient-positive at n=4. Related: [[p0245_four_state_stationary_cover_time_bound_certified_2026_11_10]].
+Proof and sympy script: the private repository, 12_cognitive_architecture/codex_local_1108/briefs/OPEN3/independent_check_agent/HOLDING_STEP_2026_11_10.md and n3_sym_proof.py (10 Nov 2026, an agent). Status provisional: machine algebra, checked a second way (ordered substitution, all coefficients nonnegative) and against 400 Nelder-Mead starts (min exactly 1). Next question: whether the holding part stays coefficient-positive at n=4. Related: [[p0245_four_state_stationary_cover_time_bound_certified_2026_11_10]].
 
 **Correction (10 Nov 06:5x, same author):** the slug says "holding only raises" - that is wrong. The proof bounds E_pi C - 3 >= 0; it does not say adding holding raises E_pi C (the denominator D contains h). Random test: 41 of 3,000 three-state chains have lower E_pi C with holding than without (n4_check_ctrl.py in briefs/OPEN3/independent_check_agent). The bound itself stands.
 - **Independent audit (an agent, 10 Nov 19:3x):** separate exact solver, 300 Nelder-Mead starts, min exactly 3.000000000000 at K_3, none below; holding lowered E_pi C on 195/3000 (N(0,2) log-weights). Bound confirmed numerically. briefs/OPEN3/audit_agent/AUDIT_N3_2026_11_10.md

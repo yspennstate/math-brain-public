@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-P0434 (M-SERPT vs Gittins). Route item 47, brain-repo main 49d03bbe, 06_math_research/frontier/P0434/route_agent_2026_11_08/w3tiecf_agent.py/.out/_R.txt.
+P0434 (M-SERPT vs Gittins). Route item 47, the private repository main 49d03bbe, 06_math_research/frontier/P0434/route_agent_2026_11_08/w3tiecf_agent.py/.out/_R.txt.
 
 - On the tie r(1) = r(0) with m -> 1, the tie p(K-1)(1-w-p) = w+p is LINEAR in w: w = p((K-1)(1-p)-1)/(1+p(K-1)). Parametrising by p instead of solving for p removed a two-root ambiguity.
 - soapsym at five tie points (K 2.18 to 9/4) gives one rational; at m=1 and w=w(K,p) it is R_tie(K,p,eps), degree 10 over 10. Matches soap.ratio to 1e-9 at those points and at every new maximiser.

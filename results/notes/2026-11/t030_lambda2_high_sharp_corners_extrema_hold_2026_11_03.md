@@ -27,7 +27,7 @@ Reusable checks:
   Neumann corner. It is not evidence against an interior extremum near the boundary. Count interior local extrema
   instead.
 
-Files: 06_math_research/frontier/rows/T030/reviews_agent/ on brain-repo main, and a move appended to
+Files: 06_math_research/frontier/rows/T030/reviews_agent/ on the private repository main, and a move appended to
 T030/moves.jsonl.
 
 

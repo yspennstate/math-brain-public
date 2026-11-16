@@ -11,7 +11,7 @@ metadata:
   modified: 2026-11-10T20:49:17.941Z
 ---
 
-10 Nov 17:3x-17:55, brain clone ~\brain-repo:
+10 Nov 17:3x-17:55, brain clone ~\the private repository:
 - A plain push of a one-file commit to main never landed: each push took over 4 min (timeout 240 s twice) and main moved several times a minute meanwhile (three tries, three new bases). The same commit replayed with `git merge-tree --write-tree --merge-base=<commit>~1 FETCH_HEAD <commit>` + `git commit-tree -p FETCH_HEAD`, pushed to side branch an agent-governor-1748 (6 min 28 s for ONE changed file), then merged by merge_branch_api.py: status 201, merge 5c29157e70e2. Side branch deleted.
 - Why the push is slow: .git/objects/pack holds 31,681 files (about 15,800 packs) plus leftover tmp_pack_* files from killed fetches back to 9 Nov; C: is 95 pct full (112 GB free).
 - A fetch can fail 'fetch-pack: invalid index-pack output' or 'incorrect old value provided' when another agent fetches the same clone at the same moment; FETCH_HEAD is still written in the second case, so use FETCH_HEAD, not origin/main.

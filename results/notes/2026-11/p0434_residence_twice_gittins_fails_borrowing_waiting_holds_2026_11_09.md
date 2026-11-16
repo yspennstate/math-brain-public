@@ -1,6 +1,6 @@
 ---
 name: p0434_residence_twice_gittins_fails_borrowing_waiting_holds_2026_11_09
-description: "P0434 9 Nov 06:2x: (P0) R_MS <= 2 R_G FALSE (2.05 random, 3.07 Mac mini law); candidate (P) R_MS <= 2R_G + (2-c)Q_G alive, zP <= 0.644 (needs <= 1)"
+description: "P0434 9 Nov 06:2x: (P0) R_MS <= 2 R_G FALSE (2.05 random, 3.07 worker-machine law); candidate (P) R_MS <= 2R_G + (2-c)Q_G alive, zP <= 0.644 (needs <= 1)"
 metadata:
   node_type: memory
   type: project
@@ -20,13 +20,13 @@ T = Q + R (waiting, residence) with soap's split_T. Lemma 5.6 gives Q_MS <= c Q_
 (P0) R_MS <= 2 R_G is FALSE.
 - Random discrete laws (resid_vs_gittins.py, seed 1213, 31146 cases, 2-6 atoms, rho 0.3..0.99): max R_MS/R_G 2.051 at
   s [0.2233, 0.8321, 1.1887, 2.1479, 167.4655], p [3e-05, 0.58269, 0.39992, 0.01735, 1e-05], rho 0.99.
-- Mac mini near-2 law along 1-rho (resid_vs_gittins_twins*.py): R_MS/R_G -> 3.069, but R_G/T_G is about 1e-4 there,
+- worker-machine near-2 law along 1-rho (resid_vs_gittins_twins*.py): R_MS/R_G -> 3.069, but R_G/T_G is about 1e-4 there,
   so residence is a negligible part of T_G and the excess is paid out of waiting slack.
 
 Candidate (P) R_MS <= 2 R_G + (2-c) Q_G (with Lemma 5.6 it gives Conj. 8.1) is still alive. zP = (R_MS-2R_G)/((2-c)Q_G),
 (P) iff zP <= 1:
 - random laws: max zP 0.0080 (31146 cases); max T_MS/T_G 1.279 as a control.
-- Mac mini law: zP peaks 0.644 at 1-rho 3e-9 (0.568 at 1e-8, 0.536 at 1e-9) and tends to 0.002 at 1e-14; the
+- worker-machine law: zP peaks 0.644 at 1-rho 3e-9 (0.568 at 1e-8, 0.536 at 1e-9) and tends to 0.002 at 1e-14; the
   conjecture's own slack zC = (R_MS-2R_G)/(2Q_G-Q_MS) stays under 0.005.
 - zp_hunt.py (Nelder-Mead, 5 atoms, 12 starts, seed 1227): no start beat 0.644; jittered starts lose the twin tie.
 

@@ -9,7 +9,7 @@ metadata:
   evidence: "06_math_research/frontier/rows/T240/L1_agent/l1_phi.txt"
 ---
 
-T240, 3 Nov 03:2x. (L1) is written out with numbers in 06_math_research/frontier/rows/T240/L1_agent on brain-repo main (L1_WITH_NUMBERS.md, l1_phi.py, l1_phi.txt; floats, not bounds).
+T240, 3 Nov 03:2x. (L1) is written out with numbers in 06_math_research/frontier/rows/T240/L1_agent on the private repository main (L1_WITH_NUMBERS.md, l1_phi.py, l1_phi.txt; floats, not bounds).
 
 - (L1) holds as the plan states it: sqrt N u(T_2) -> l Phi_o(T_2) Z_0 + G^u with Z_0 ~ N(0, I_2), nondegenerate. Phi_o is the 2x2 odd variational flow on B = ((R11-R12), (R21-R22))/sqrt 2, and the noise limit is independent by the stable martingale CLT.
 - At eta = 1/2 the symmetric ODE from Q = I, R = 0 reaches kappa U_c / 8 = 2.5e-9 of x* only at T_2 = 4,417 (within 1e-3 at t = 1,051, within 1e-6 at t = 2,851). log|l Phi_o(T_2)| = 137.2, against lambda T_2 = 139.6.

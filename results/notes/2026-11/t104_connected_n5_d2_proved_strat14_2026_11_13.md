@@ -13,7 +13,7 @@ T104 (Alon Conj. 1.5), connected five-vertex graphs at D = 2: proved on 13 Nov 2
 five-vertex weighted graph whose top Laplacian eigenvalue has multiplicity exactly 2. Still open in T104: the 5+1 class
 for N >= 7, and connected carriers with n >= 6.
 
-How it closed (Codex STRAT14 on Mac mini 1, 34 minutes from launch to a passing replay):
+How it closed (Codex STRAT14 on worker machine 1, 34 minutes from launch to a passing replay):
 - The n = 5 target is the STRAT10 all-N polynomial at N = 5: C_N(-1) = 2 Cface. N = 6 positivity gives no sign for
   N = 5, so certificates were recomputed against Cface, but every tool transferred: the STRAT8 chart and constraints,
   Bernstein + Farkas certificates (STRAT12), and the STRAT13 collar chart at the two disconnected equality types.

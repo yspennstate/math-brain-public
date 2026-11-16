@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T06:40:51+04:00
   status: provisional
-  evidence: "brain-repo rows/T016/reviews_agent/ADDENDUM_T016_1.md"
+  evidence: "the private repository, rows/T016/reviews_agent/ADDENDUM_T016_1.md"
 ---
 
 When a numerical exponent disagrees between two simulation codes, switch each approximation off one at a time in the faster code, rather than arguing from what each approximation should do.
@@ -17,7 +17,7 @@ Second point: c4 = <cos 4 theta> over the outer half of the cluster rises to 0.4
 
 How to apply: build a mode switch into a copy of the code under review (mode 0 = unchanged and reproducing the row), run equal seeds per mode, and report the shift per approximation with seed-spread errors.
 
-Evidence: brain-repo rows/T016/reviews_agent/ADDENDUM_T016_1.md, diag_1.txt, row_diag.c.
+Evidence: the private repository, rows/T016/reviews_agent/ADDENDUM_T016_1.md, diag_1.txt, row_diag.c.
 Related: [[rerun_the_outlier_point_long_t015_miss_was_n2000_t002_gap_chance_2026_11_03]] - same review round; [[bound_rigor_marks_and_best_seen_bias_t119_2026_11_03]] - same round, the T119 lessons.
 
 

@@ -34,7 +34,7 @@ The proof (Gamma sofic, Q, Q' positive contractions in R(Gamma); same for R(Gamm
 - Why Lyons-Thom missed it: Lemma 7.8 chains three monotone steps but prices each by operator norm; pricing by trace and
   cutting the segment into many comparable steps is the whole difference.
 
-Numerics (scratchpad c0039, w1test.py, transport LP with Hamming cost, random complex Hermitian contractions, small
+Numerics (scratch c0039, w1test.py, transport LP with Hamming cost, random complex Hermitian contractions, small
 non-commuting perturbations, 40-step hill-climb): worst W1/tr|Q-Q'| exactly 1.000000 at N = 3, 4, 5, 6 (hundreds of
 trials), never above; the hill-climb lands on comparable pairs. mono.py: for non-commuting Q1 <= Q2 a coupling supported
 on {A subset of B} exists in every trial (N = 3, 4, 5; 460 trials), cost = tr(Q2 - Q1) to 1e-15.
@@ -49,7 +49,7 @@ doi 10.5281/zenodo.24209165, PDF md5 76581030901c6a6f0e88ef84a27674b1 checked on
 math held each time (Remark determinant -s(1-s)/2 for the two rank-one projections, corollary LP check <= 2e-15). What
 the audits made the paper say: the LT16 Lemma 7.8 route gives 6t >= 2||Q-Q'||, never the trace norm; the one-step
 operator M = Q-(Q'-Q)_- would finish it if it were positive, and it is not (Remark); the commuting case is LS03; BPT26
-and DM21 are cited after the corollary (finite-set optimal transport for DPPs). Paper sources kept at scratchpad
+and DM21 are cited after the corollary (finite-set optimal transport for DPPs). Paper sources kept at scratch area
 c0039/repo (session agent); a Codex referee (C0039R, commit 2498cd2d) was asked of an agent.
 Still open beyond it: the d-bar distance for non-sofic Gamma (no invariant monotone coupling theorem there).
 

@@ -28,6 +28,6 @@ volume obstruction.
 A W1 construction is not evidence for TV.
 **How to apply:** for push-forward depth questions, get the Lipschitz order from isoperimetry on a band between the modes. In a
 coupling construction, make the mode selector odd so that the mode masses balance exactly.
-Locators: brain-repo 06_math_research/frontier/rows/T320/DOSSIER.md section "1 Nov (an agent)",
+Locators: the private repository, 06_math_research/frontier/rows/T320/DOSSIER.md section "1 Nov (an agent)",
 moves m320a (a10900df). Related: [[t363_neurons_gain_activations_single_neuron_fate_ode_gives_1_8_basin_2026_11_01]] (same session).
 

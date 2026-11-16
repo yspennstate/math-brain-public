@@ -38,4 +38,4 @@ itself: a class can lose only what another class's Gittins time pays for.
 Related: [[p0434_gross_loss_stays_under_gittins_time_and_is_tight_2026_11_08]], [[p0434_fixed_law_heavy_traffic_ratio_tends_to_one_2026_11_08]], [[p0434_no_cut_or_class_local_charge_one_class_can_be_111x_slower_2026_11_08]].
 
 
-SUPERSEDED 8 Nov 18:0x: the stall pair and the 0.9917 search are real, but "the lemma survives" is wrong. L+ <= T_G is false (Mac mini 5-atom law, L+/T_G 1.950217761, checked with split.py): [[p0434_gross_loss_lemma_is_false_mac_mini_law_1_95_2026_11_08]].
+SUPERSEDED 8 Nov 18:0x: the stall pair and the 0.9917 search are real, but "the lemma survives" is wrong. L+ <= T_G is false (worker-machine 5-atom law, L+/T_G 1.950217761, checked with split.py): [[p0434_gross_loss_lemma_is_false_mac_mini_law_1_95_2026_11_08]].

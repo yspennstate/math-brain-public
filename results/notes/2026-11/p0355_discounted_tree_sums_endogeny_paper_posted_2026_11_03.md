@@ -9,7 +9,7 @@ metadata:
   evidence: "public repo github.com/yspennstate/discounted-tree-sums-endogeny bf397d4; second read loop_math_agent/t400/r161/SECOND_READ.md"
 ---
 
-P0355 posted 3 Nov 2026 (papers loop T-20261029-025, row 9 of PAPER_CANDIDATES): github.com/yspennstate/discounted-tree-sums-endogeny, head bf397d4, public. Title "Non-endogenous fixed points of the discounted tree sum equation: the regular case", 6 pages, 0 overfull, paper_release_guard ok. Index card in math-brain-public papers/README.md (6eb909f9bf).
+P0355 posted 3 Nov 2026 (papers loop a checklist task, row 9 of PAPER_CANDIDATES): github.com/yspennstate/discounted-tree-sums-endogeny, head bf397d4, public. Title "Non-endogenous fixed points of the discounted tree sum equation: the regular case", 6 pages, 0 overfull, paper_release_guard ok. Index card in math-brain-public papers/README.md (6eb909f9bf).
 
 Result: Aldous-Bandyopadhyay 2005 Conjecture 34 (the mu_a of their Corollary 33, a > 0, are not endogenous). With M = ess sup(Y_root | all innovations): M is an endogenous [0, inf] solution of Y = max xi_i Y_i; endogeny of Y gives mu_a endogenous; P(M = inf) > 0 gives mu_a non-endogenous (coupling a Y <= Z_a <= X + a Y). So the conjecture for all nonzero Y is equivalent to: the homogeneous RDE has no endogenous solution on [0, inf) except delta_0. Condition (39) is not used. Regular case (1 < m(theta0) < inf, m(p) < 1, N finite or E W1 log+ W1 finite): ABM 2012 Theorem 8.3 gives P(1/Y >= t | weights) = exp(-W h(t) t^alpha), so M = inf on {W > 0}; the conjecture holds there, including AB Examples 37 and 38.
 

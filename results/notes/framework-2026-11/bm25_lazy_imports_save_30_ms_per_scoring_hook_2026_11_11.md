@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-11
   created_at: 2026-11-11T08:45:31+02:00
   status: verified
-  evidence: "scratchpad eq.py: 12 rankings, 41 attachment digests, 80 read_doc, _stage_pickle bytes identical"
+  evidence: "scratch area eq.py: 12 rankings, 41 attachment digests, 80 read_doc, _stage_pickle bytes identical"
 ---
 
 Since 11 Nov 2026 08:21 local, ~/.claude/dreaming/bm25.py imports brain_node_documents and tempfile only when they are first used. brain_node_documents pulls in dataclasses, inspect and linecache, about 30 ms of a cold import, yet a scoring hook never touches it: only read_doc and the attachment helpers need it, and only the index writers need tempfile.

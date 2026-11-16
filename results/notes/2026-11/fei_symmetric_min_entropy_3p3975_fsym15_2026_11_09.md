@@ -9,7 +9,7 @@ metadata:
   evidence: "fsym15_check/reproduce.log PASS; frontier/T021/fsym_workers_2026_11_09/FSYM15"
 ---
 
-Yes, computer-assisted (FSYM15, Codex gpt-6.1-sol high, 9 Nov; rerun in full on this Mac at 07:4x, PASS): H_inf(fhat^2) <= 3.3975 I(f) for every symmetric Boolean f. Whether this is new in the literature is unchecked; FSYM33 is checking.
+Yes, computer-assisted (FSYM15, Codex gpt-6.1-sol high, 9 Nov; rerun in full on this worker machine at 07:4x, PASS): H_inf(fhat^2) <= 3.3975 I(f) for every symmetric Boolean f. Whether this is new in the literature is unchecked; FSYM33 is checking.
 
 Exact maxima of H_inf/I for n <= 30: 2 for even n, 2(n-1)/n for odd n >= 3, attained by four functions in each dimension. My independent enumeration for n <= 14 gives the same values.
 

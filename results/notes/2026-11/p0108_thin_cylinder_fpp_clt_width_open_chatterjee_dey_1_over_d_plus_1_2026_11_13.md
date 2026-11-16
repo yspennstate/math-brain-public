@@ -23,7 +23,7 @@ not the sharp value.
 How to apply: skip as a solve target unless a concrete idea beats the slab count; cite Chatterjee-Dey with the moment caveat.
 Related: [[p0107_critical_fpp_z3_log_n_open_needs_theta_pc_zero_2026_11_13]], [[p0098_strict_fpp_comparison_large_atom_d_ge_3_open_marchand_d2_2026_11_13]].
 
-Numerics, 14 Nov 00:10 (an agent, laptop CUDA, iid Exp(1) site weights, periodic width W = n^a, line-to-line passage
+Numerics, 14 Nov 00:10 (an agent, workstation CUDA, iid Exp(1) site weights, periodic width W = n^a, line-to-line passage
 time across n columns, Bellman-Ford to the fixed point; Monte Carlo evidence, not a proof). n = 256, 512, 1024; a = 0.33 ..
 0.85; 67-512 samples a cell (table: ~/gpu_work/p0108_fpp/fpp_agg_cuda_20261114_0010.txt). Standardized skewness
 is within about one se of 0 for every a <= 0.667 at every n (largest |skew| 0.143, se 0.158); at a = 0.75 and 0.85 it turns
@@ -33,10 +33,10 @@ growth per doubling of n sits 0.05-0.08 below the KPZ heuristic n^(1/2 - a/4), s
 n <= 1024. The run continues to n = 2048 and a = 1.0 (4 h budget from 20:44); re-aggregate with fpp_agg.py.
 
 
-Update 14 Nov 00:47 (n = 2048 cells, 126-512 samples): skew +0.20 (1.8 se) at a = 0.33, -0.18 (1.2 se) at a = 0.5, -0.24 (1.1 se) at a = 0.6 - noisy, none decisive, and no cell yet for a >= 0.667 at n = 2048. The reading above stands. Rows, table, code and README on GitHub: brain-repo 06_math_research/p0108_fpp_agent/ (table fpp_agg_cuda_20261114_0047.txt). Next useful step: more samples at n = 2048 for a = 0.6, 0.667, 0.75 (the only cells that can move the threshold reading).
+Update 14 Nov 00:47 (n = 2048 cells, 126-512 samples): skew +0.20 (1.8 se) at a = 0.33, -0.18 (1.2 se) at a = 0.5, -0.24 (1.1 se) at a = 0.6 - noisy, none decisive, and no cell yet for a >= 0.667 at n = 2048. The reading above stands. Rows, table, code and README on GitHub: the private repository, 06_math_research/p0108_fpp_agent/ (table fpp_agg_cuda_20261114_0047.txt). Next useful step: more samples at n = 2048 for a = 0.6, 0.667, 0.75 (the only cells that can move the threshold reading).
 
 
-Update 14 Nov 03:43 (b3c629f8, table fpp_agg_cuda_20261114_0343.txt in 06_math_research/p0108_fpp_agent): a = 0.33 skew within 2 se of zero at every n; a >= 0.667 negative at every n and not shrinking (a = 0.667: -0.16, -0.13, -0.13, -0.54 at n = 256..2048, the last 3.8 se on 300 samples). Open cell: a = 0.5 at n = 2048 is -0.25 (3.4 se, 1,092 samples) against -0.07 at n = 1024; W = 45 << n^(2/3) = 161, so a late Gaussian limit is the likely reading. To decide: more n = 2048 samples at a = 0.5 and an n = 4096 run. The Mac 2 MLX copy of this job was withdrawn (laptop CUDA covers it). Evidence, not proof.
+Update 14 Nov 03:43 (b3c629f8, table fpp_agg_cuda_20261114_0343.txt in 06_math_research/p0108_fpp_agent): a = 0.33 skew within 2 se of zero at every n; a >= 0.667 negative at every n and not shrinking (a = 0.667: -0.16, -0.13, -0.13, -0.54 at n = 256..2048, the last 3.8 se on 300 samples). Open cell: a = 0.5 at n = 2048 is -0.25 (3.4 se, 1,092 samples) against -0.07 at n = 1024; W = 45 << n^(2/3) = 161, so a late Gaussian limit is the likely reading. To decide: more n = 2048 samples at a = 0.5 and an n = 4096 run. The worker machine 2 MLX copy of this job was withdrawn (workstation CUDA covers it). Evidence, not proof.
 
 
 Update 14 Nov 18:03 (three machines merged, 1,490 rows; table fpp_agg_all_20261114_1803.txt in 06_math_research/p0108_fpp_agent): the a = 0.5 n = 2048 outlier is gone (16,107 samples, skew -0.034, 1.8 se; n = 4096 -0.058, 1.9 se), so a = 0.5 looks Gaussian. a = 0.667 sits at -0.13 to -0.18 for every n (256..4096); a >= 0.75 at -0.20 to -0.41. The only cell still moving is a = 0.6: -0.02, -0.07, -0.08, -0.11 for n = 256..2048 (4.5 se), growing; W/n^(2/3) = n^(-1/15) shrinks slowly, so this is the expected crossover, not yet evidence against 2/3. Next useful run: a = 0.6 at n = 4096 and 8192 with >= 2,000 samples (n = 4096 has 184). Evidence, not proof.

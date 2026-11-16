@@ -11,7 +11,7 @@ metadata:
 
 T264's grid5f.py (min-norm ReLU interpolation in d = 2 by column generation over HiGHS, mvn4.py solve(), tol 1e-6, up to 3000 rounds,
 60 units a round) ran 45 h / 35 CPU-h without finishing its first solve. A round log (t264/grid5g_log.txt in an agent's
-scratchpad) shows why: +120 columns a round, max reduced price oscillating 1.01-1.10 for hundreds of rounds (1.19 at round 75, 1.01 at
+scratch area) shows why: +120 columns a round, max reduced price oscillating 1.01-1.10 for hundreds of rounds (1.19 at round 75, 1.01 at
 425), never near 1 + 1e-6 - the usual column-generation tail, worsened by the fine angle refinement around the top directions. 50 rounds
 take 3 s, so it is not slow rounds; one silent stretch was CPU starvation on a loaded box (2.6 CPU-min in 20 min), not an LP hang.
 Fix: the column-generation bound obj / max_price <= OPT <= obj means tol 1e-3 already gives the norm to 0.1%; grid5g.py takes TOL and

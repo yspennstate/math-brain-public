@@ -10,7 +10,7 @@ metadata:
 ---
 
 T013 (FK crossing, rectangle vs disk), Codex worker m5f-T013b, harvested by an agent as move m013f on
-brain-repo 06_math_research/frontier/rows/T013 (moves.jsonl 66b7ff00; files t013b_REPORT.md, t013b_RESULTS.md,
+the private repository, 06_math_research/frontier/rows/T013 (moves.jsonl 66b7ff00; files t013b_REPORT.md, t013b_RESULTS.md,
 t013b_combined.json, t013b_boundary_convention.md, fk_alt.c, t013b_formula_check.py/.json).
 
 What it settled:

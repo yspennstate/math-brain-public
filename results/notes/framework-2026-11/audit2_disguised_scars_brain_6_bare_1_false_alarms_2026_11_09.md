@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-09
   created_at: 2026-11-09T03:56:28+04:00
   status: verified
-  evidence: "brain-repo 12_cognitive_architecture/brain_improvement/audit2_scar_disguised_2026_11_09 (00dd7e8580)"
+  evidence: "the private repository, 12_cognitive_architecture/brain_improvement/audit2_scar_disguised_2026_11_09 (00dd7e8580)"
 ---
 
 Mixed (AUDIT2, Codex gpt-6.1-sol high, 9 Nov). On 12 disguised SCAR plants, each undoing a recorded fix and reading like a tidy edit, BRAIN found and fixed 6 and BARE 1. Paired: 5 brain-only, 0 bare-only, 1 both, 6 neither; sign test p = 0.0625 two-sided. BRAIN also flagged 6 of 12 CLEAN originals, against BARE's 3. On DECOY (safe tidy edits) the false alarms were 0 against 1. The pre-registered primary score, (fixed - 3 x false alarms)/12, came out BRAIN -1.00, BARE -0.92, so no win under the frozen rule. Balanced group accuracy was 0.67 against 0.58. The deleted-memory control showed no advantage, as intended.

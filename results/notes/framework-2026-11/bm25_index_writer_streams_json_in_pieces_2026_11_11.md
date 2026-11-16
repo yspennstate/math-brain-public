@@ -9,7 +9,7 @@ metadata:
   evidence: "brain_improvement/agent_run/bm25_json_stream/landed_20261111 (test.txt, bench.txt, verify.txt)"
 ---
 
-Since 11 Nov 2026 01:06 (laptop clock) `~/.claude/dreaming/bm25.py` (sha256 97dea957dddf3bb3) writes the index text in
+Since 11 Nov 2026 01:06 (workstation clock) `~/.claude/dreaming/bm25.py` (sha256 97dea957dddf3bb3) writes the index text in
 pieces. `_write_json_text` no longer calls `json.dumps(payload)` once; `_json_pieces` hands a large dict or list to the
 same C encoder 256 entries at a time and the writer flushes every 8 MB.
 

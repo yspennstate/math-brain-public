@@ -30,7 +30,7 @@ a 30-45 pct channel that the dossier called "late rotation" and left underived.
 **How to apply:** in small-init two-layer ReLU basin questions, integrate the decoupled single-neuron flow from each
 initial direction to its fate, rather than reading the fate off the initial active set; check monotonicity claims against
 the sign of v.
-Locators: brain-repo 06_math_research/frontier/rows/T363/DOSSIER.md section "1 Nov (an agent)",
+Locators: the private repository, 06_math_research/frontier/rows/T363/DOSSIER.md section "1 Nov (an agent)",
 moves m363a (2f878814), fate.py. Related: [[t262_angle_chain_is_a_perpetuity_u_over_d_flip_var_44_over_15pi_2026_11_01]]
 (the same session's other row).
 

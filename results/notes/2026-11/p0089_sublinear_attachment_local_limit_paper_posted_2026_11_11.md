@@ -11,10 +11,10 @@ metadata:
 
 # P0089 paper posted: "The local limit of sublinear preferential attachment graphs with fixed out-degree"
 
-Posted 11 Nov 2026 06:03 local by an agent (his 10 Nov 17:13 ask, T-20261110-076: solved but unposted problems get audited, written up and posted).
+Posted 11 Nov 2026 06:03 local by an agent (standing rule: solved but unposted problems get audited, written up and posted).
 
 - Public repo: github.com/yspennstate/sublinear-attachment-local-limit, main = 3f3b952c9050034bd852b831fe02d04342ea51f8. 16 pages; code/sim_check.py; data/ four runs of 10^6 vertices (seeds 11, 12, 21, 22).
-- Working copy ~/agent_run/p0089/ (repo/ is the git clone, paper/ the build folder, PLAN.md the notes). Brain mirror: brain-repo 06_math_research/p0089_sublinear_attachment_2026_11_11/.
+- Working copy ~/agent_run/p0089/ (repo/ is the git clone, paper/ the build folder, PLAN.md the notes). Brain mirror: the private repository, 06_math_research/p0089_sublinear_attachment_2026_11_11/.
 - Source of the result: OP15 solo arm, 11 Oct 2026, ~/brain_workers/OP15_PAIRED_20261011/audit/P0089/X/ (ATTEMPT.md, SUBLINEAR.md); second audit in 06_math_research/op15_paired_2026_10_11/second_audits/P0089/.
 - Problem: Aletti et al., Open problems in stochastic reinforcement models (MATRIX-MFO 2023), Open Problem 24 (Deijfen, van der Hofstad): local limits of preferential attachment with a fixed number m >= 2 of out-edges beyond the affine case.
 
@@ -26,7 +26,7 @@ What the paper proves (class E1-E3: inf f > 0, bounded increments, f(k)/k -> 0; 
 
 Proof route, reusable for other non-urn attachment models: (1) empirical degree vector as a stochastic approximation in l1 on the compact set {mean <= m}; tails of the noise controlled by the recursion itself, no l1 martingale theorem; (2) the time change dz/dt = (s(z)/m) F(z) makes the limiting ODE linear, w' = Qw + e_0 s(w)/m, solved by a renewal equation; the key renewal theorem gives attraction uniform over the compact set, with no stability computation; (3) exact change of measure to a process with finitely many forced slots; a maximal coupling shows forcing moves the normaliser by O(1/n); (4) tagged in-degrees become independent birth processes in log-age; (5) embedding count plus a two-root second moment. For unbounded f the uniform edge bound is replaced by a moment bound E(D_i + a)^p <= K (j/i)^{p theta} and the kernel max^{theta-1} min^{-theta}, whose l2 norm is at most 2/(1/2 - theta).
 
-Size of the doubt: partial answer (sublinear class only; f(k)/k -> gamma > 0, affine or not, is not covered, nor other conventions for the m edges). The October audits: blind Codex referee SOLVED_CORRECT; the second audit did not re-derive the forced-slot coupling. On 11 Nov I re-derived every step while writing, and the simulations were repeated on Mac mini 2 (seeds 11 and 12 reproduce the October numbers, seeds 21 and 22 are new): degree laws, mean parent age ratio 0.4452 and the radius-2 ball probability 0.010648 all within about 1.3 standard deviations. No independent read of the manuscript itself yet; a referee read was asked of an agent on 11 Nov.
+Size of the doubt: partial answer (sublinear class only; f(k)/k -> gamma > 0, affine or not, is not covered, nor other conventions for the m edges). The October audits: blind Codex referee SOLVED_CORRECT; the second audit did not re-derive the forced-slot coupling. On 11 Nov I re-derived every step while writing, and the simulations were repeated on worker machine 2 (seeds 11 and 12 reproduce the October numbers, seeds 21 and 22 are new): degree laws, mean parent age ratio 0.4452 and the radius-2 ball probability 0.010648 all within about 1.3 standard deviations. No independent read of the manuscript itself yet; a referee read was asked of an agent on 11 Nov.
 
 What would change it: a gap found by the referee in Lemma 14 (forced process has the same normalisation) or Lemma 15 (tagged degrees), or in the sublinear section's use of the generator domain (Lemma 19); a prior paper with a fixed-m non-affine local limit (web search 11 Nov: none; Banerjee-Deka-Olvera-Cravioto arXiv 2302.00562 is the collapsed-tree model, a different model for non-affine f).
 

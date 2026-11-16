@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-02
   created_at: 2026-11-02T23:27:35+04:00
   status: provisional
-  evidence: "brain-repo main 06_math_research/frontier/rows/T023/moves.jsonl c754236f"
+  evidence: "the private repository, 06_math_research/frontier/rows/T023/moves.jsonl c754236f"
 ---
 
-T023 (Tutte / circle-packing embedding of uniform planar maps converges to sqrt(8/3)-LQG), first move m023a, moves.jsonl c754236f on brain-repo main, 2 Nov 2026. Done by a Codex worker (fleet brief m5f-T023 in ~/codex_fleet/20261102, acc1, about 8 minutes of work) and reviewed by an agent.
+T023 (Tutte / circle-packing embedding of uniform planar maps converges to sqrt(8/3)-LQG), first move m023a, moves.jsonl c754236f on the private repository main, 2 Nov 2026. Done by a Codex worker (fleet brief m5f-T023 in ~/codex_fleet/20261102, acc1, about 8 minutes of work) and reviewed by an agent.
 
 Result: no 2025-2026 theorem solves T023 (bounded search). Two newly found papers. Holden-Yu arXiv:2610.10480 covers circle packing and uniformization of mated-CRT maps for all gamma, sqrt(8/3) included, but for a different map law. Holden-Yu arXiv:2603.06528v2 gives conditional criteria. Holden's Tutte proof (2610.10501) is already general in Sections 3-4, with correlated step laws and any gamma. The uniform-triangulation percolation alphabet has correlation exactly 1/2 = -cos(pi gamma^2/4) at gamma^2 = 8/3. So what is missing is ensemble-specific: cell geometry, overlap moments, line connectivity, law transfer and quenched boundary control.
 

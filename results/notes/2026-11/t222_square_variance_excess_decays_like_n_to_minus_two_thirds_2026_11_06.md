@@ -19,6 +19,6 @@ Why it matters: the square-only fit left the limit anywhere in 0.019-0.040 depen
 
 Status: provisional, an assumption-dependent fit on five points with near-optimal (not optimal) tours. What would change it: an LKH-class solver at n >= 10^4, or a proof that the boundary term's variance is o(1).
 
-Files: brain-repo 06_math_research/frontier/rows/T222/boundary_fit/fixed_a.py and fixed_a.out; frontier move 2026-11-06 06:42 (kind narrowed). Data: research-repo research_pushes/2026-10-30-t222-tsp-variance. Related: [[t222_tsp_variance_is_flat_near_0p037_on_the_torus_2026_10_30]].
+Files: the private repository, 06_math_research/frontier/rows/T222/boundary_fit/fixed_a.py and fixed_a.out; frontier move 2026-11-06 06:42 (kind narrowed). Data: research-repo research_pushes/2026-10-30-t222-tsp-variance. Related: [[t222_tsp_variance_is_flat_near_0p037_on_the_torus_2026_10_30]].
 
 **Condition (6 Nov 17:58, profile fit):** the square table alone leaves the limit free (a in 0..0.0377 at 1 sigma, a = 0 costs dchi2 0.30, the torus value 0.67). Everything above is conditional on the torus value being the square limit; the square data are consistent with that but do not test it. A test: the same point sets under square and torus metrics, Var(L_sq - L_tor), or square runs to n = 6400. rows/T222/boundary_fit/profile_a.py.

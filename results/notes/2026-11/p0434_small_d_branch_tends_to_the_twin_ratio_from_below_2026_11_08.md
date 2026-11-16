@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-P0434 (M-SERPT against Gittins on [1, K], 2 < K <= 9/4), route item 111 (an agent, 8 Nov 2026 21:1x-21:2x), pushed in brain-repo 43ee4010 under 06_math_research/frontier/P0434/route_agent_2026_11_08 (w3cm2tw_agent.py/.out).
+P0434 (M-SERPT against Gittins on [1, K], 2 < K <= 9/4), route item 111 (an agent, 8 Nov 2026 21:1x-21:2x), pushed in the private repository 43ee4010 under 06_math_research/frontier/P0434/route_agent_2026_11_08 (w3cm2tw_agent.py/.out).
 
 The small-d branch of item 110 (a third atom at 1 + d(K - 1), mass m, past m_c) pushed to d 1e-3 / 3e-4 / 1e-4 at K 9/4 and 2.2:
 - (sup - 1)/(S2 - 1) climbs toward the near-twin T ratio and stays below it: 1.05643 / 1.05912 / 1.05989 at 9/4 (m 1e-2), T ratio 1.0606; 1.00405 / 1.00620 / 1.00682 at 2.2 (m 5e-3), T ratio 1.0079.
@@ -31,7 +31,7 @@ Item 115 (8 Nov 22:0x): at item 47's twin maximiser, (sup - T)/d is -0.2032 at K
 
 Item 116 (8 Nov 22:1x, 04f3f478): the d-slope at the twin maximiser is negative at seven K across (K*, 9/4]: -0.150 / -0.158 / -0.165 / -0.173 / -0.187 / -0.195 / -0.203 at K 2.18 / 2.19 / 2.2 / 2.21 / 2.23 / 2.24 / 2.25, equal at d 1e-6 and 1e-5, and about -0.15 as K -> K* while w -> 0. T matches w3tielim. The sign is numerical; no analytic proof yet.
 
-Item 117 (8 Nov 22:4x, brain-repo 7afcf357, w4tw_agent): a fourth atom at t in [1.01, 2.245], mass q 1e-4/1e-3/1e-2, on item 47's twin maximiser at K 9/4 (d 1e-6), re-optimised: all 33 rows below T 1.0606827 (top 1.0606610 at t 2.245, q 1e-4). Loss in R per unit q at q 1e-4 is about 2.0-2.4 (K - t), 2.82 at t 1.01 down to 0.012 at 2.245. T is a first-order local max against a fourth atom on this grid; three nearby starts per row, K 9/4 only.
+Item 117 (8 Nov 22:4x, the private repository 7afcf357, w4tw_agent): a fourth atom at t in [1.01, 2.245], mass q 1e-4/1e-3/1e-2, on item 47's twin maximiser at K 9/4 (d 1e-6), re-optimised: all 33 rows below T 1.0606827 (top 1.0606610 at t 2.245, q 1e-4). Loss in R per unit q at q 1e-4 is about 2.0-2.4 (K - t), 2.82 at t 1.01 down to 0.012 at 2.245. T is a first-order local max against a fourth atom on this grid; three nearby starts per row, K 9/4 only.
 
 Items 117-118b (8 Nov 22:2x-23:4x): against a fourth atom at t in (1,K), mass q, T stays a first-order local max at K 9/4 (33 rows, max 1.0606610 vs T 1.0606827) and at K 2.2 (two independent searches, 33 rows: max 1.0078501 vs T 1.0079243). Loss per unit q is about 2.2 (K - t) at 9/4 and 1.1-1.3 (K - t) at 2.2. Pushed to the P0434 route folder, commits 47f4bca1..b918dd34. Numeric only; analytic sign open.
 

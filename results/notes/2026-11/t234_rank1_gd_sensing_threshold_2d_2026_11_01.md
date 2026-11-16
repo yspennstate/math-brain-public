@@ -14,7 +14,7 @@ full-width U, eta 0.05, 30,000 steps, d 40, 10 trials) on Gaussian matrix sensin
 n = d and 1.5d, 8/10 at 2d, 10/10 at 3d. Below threshold GD is not stuck: it interpolates (loss 1e-32) with a rank 4-5 matrix of smaller
 trace than M* (ratio 0.90 at n = d), the small-trace implicit bias finding another interpolant. So "recovery at n = Cd for any C" is false
 for C <= 1.5; threshold between 1.5d and 2d, same place in units of dr as the r = 3 run. PREREG42 passed.
-Open: compare with the PSD trace-minimisation phase transition on the same instances (sdp.py needs cvxpy, not installed on the Mac mini).
+Open: compare with the PSD trace-minimisation phase transition on the same instances (sdp.py needs cvxpy, not installed on the worker machine).
 Also: the ms.py run spews numpy matmul RuntimeWarnings (divide by zero / overflow) on Apple Accelerate even when the numbers come out
 finite - filter them from the output before pushing (grep -v RuntimeWarning), do not read them as a failed run.
 

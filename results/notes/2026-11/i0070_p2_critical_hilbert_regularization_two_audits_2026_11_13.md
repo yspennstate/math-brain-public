@@ -17,5 +17,5 @@ Proof: at equality the trace exponent rho_j > 0 gives small relative growth of F
 
 Referee fixes for the paper: Portal-Veraar Thm 5.3 on pp. 572-573; Agresti-Veraar Part I (arXiv 2001.00512v5) Thm 4.8 p. 31, Thm 4.7 pp. 30-31; credit (5.5). Not contradicted by Agresti-Veraar arXiv:2509.07803 (C. R. Math. 2026). Novelty plausible, not exhaustively established. Conditional on (all-MR): it does not derive higher maximal regularity from variational coercivity alone.
 
-Status: paper run I0070P staged on Mac mini 1 (repo planned critical-hilbert-time-regularization, claim topic:papers/I0070); reports archived in the brain repo. Same survey's Problem 7 queued as I0071A. Related: [[codex_launch_during_btc_heavy_phase_killed_stretch_lock_gate_added_2026_11_13]], [[paper_from_refereed_result_check_agent_paper_claims_first_2026_11_13]].
+Status: paper run I0070P staged on worker machine 1 (repo planned critical-hilbert-time-regularization, claim topic:papers/I0070); reports archived in the brain repo. Same survey's Problem 7 queued as I0071A. Related: [[codex_launch_during_btc_heavy_phase_killed_stretch_lock_gate_added_2026_11_13]], [[paper_from_refereed_result_check_agent_paper_claims_first_2026_11_13]].
 

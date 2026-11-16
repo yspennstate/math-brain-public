@@ -9,7 +9,7 @@ metadata:
   evidence: "public repo github.com/yspennstate/han-question-read-once-formulas 07dc2aa; code/q31_check_output.txt 60/60 exact"
 ---
 
-T021 posted 3 Nov 2026 (papers loop T-20261029-025, 8th row of PAPER_CANDIDATES): github.com/yspennstate/han-question-read-once-formulas, head 07dc2aa, public. Title "Read-once formulas and a question of Han on the Fourier entropy-influence conjecture". Index card in math-brain-public papers/README.md (dfa6586512). Row 8 marked POSTED.
+T021 posted 3 Nov 2026 (papers loop a checklist task, 8th row of PAPER_CANDIDATES): github.com/yspennstate/han-question-read-once-formulas, head 07dc2aa, public. Title "Read-once formulas and a question of Han on the Fourier entropy-influence conjecture". Index card in math-brain-public papers/README.md (dfa6586512). Row 8 marked POSTED.
 
 Result: Han arXiv:2312.08271 Question 3.1 (a universal c with some k having sum_{S not ni k} |f^(S) f^(S+k)| <= c I_k) is false. Theorem: depth-L monotone read-once AND-OR formulas, fan-in <= 7, n <= 2*7^(L-1), have Q_k >= L at EVERY coordinate (min_k Q_k >= 1 + (log2 n - 1)/log2 7). Tribes give Q_k < 4 with sup 4 (Proposition 1.2); AND gives 2 - 2^(2-n) (Han's example).
 

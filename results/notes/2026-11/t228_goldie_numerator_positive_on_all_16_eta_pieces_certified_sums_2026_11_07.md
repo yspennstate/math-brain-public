@@ -13,7 +13,7 @@ T228 (Top-400 review, rank 10), 7 Nov 2026 23:5x, an agent. Goldie's numerator N
 
 Method: monotone-cell Riemann sums with explicit relative rounding margins. psi1 is tabulated from the cancellation-free form E[|v+Z|^a - v^a - a v^(a-1) Z] (convex in z, min 0 at z=0). psi1 is nonincreasing in v, so a cell is read at its LARGEST v; the plan text that says 'left endpoint' was wrong and is corrected. Interior alpha: g = |y|^a log|y| = convex env + w with 0 <= w <= 1/(ae), so G(a) >= G(s_lo) - (s_hi - s_lo) W.
 
-Files: brain-repo/12_cognitive_architecture/top10_7_10_agent/rank10_T228_review.md Part 5 addendum 3, rank10_T228_certify_plan.md, rank10_t228_{alpha_bracket,alpha_piece_lo,cost_enclose,cost_range,gain_enclose}.py/.json/_out.txt.
+Files: the private repository, 12_cognitive_architecture/top10_7_10_agent/rank10_T228_review.md Part 5 addendum 3, rank10_T228_certify_plan.md, rank10_t228_{alpha_bracket,alpha_piece_lo,cost_enclose,cost_range,gain_enclose}.py/.json/_out.txt.
 
 What would change it: an interval-arithmetic redo (still owed), or a referee finding a flaw in the reduction (the envelope table, the worst-law step). Status provisional until then. Related: [[t228_tail_constant_positive_by_goldie_numerator_second_route_2026_11_07]].
 

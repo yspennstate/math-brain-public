@@ -19,4 +19,4 @@ Result (paired bootstrap s.e.): excess Var(L_sq)-Var(L_tor) = 0.0170+-0.0037 (n1
 
 Size of the doubt: corr(L_sq, L_tor) was only 0.64-0.83, so pairing cut the s.e. about 2x, not 10x (the point sets match but the optimal tours rearrange near the boundary). The preview at 20:40 (without n100) resolved nothing - n100 carries most of the signal. What would change it: coupled n = 1600 at ~100 instances, or exact tours.
 
-Files: brain-repo/06_math_research/frontier/rows/T222/coupled/ (tsp.c, coupled2.py, analyse_coupled.py, fit_excess.py and outputs); move appended to rows/T222/moves.jsonl 21:11. Side lesson from the run: on a saturated box EcoQoS opt-out is inside the noise ([[gist_belownormal_starvation_on_a_busy_box_2026_10_20]]).
+Files: the private repository, 06_math_research/frontier/rows/T222/coupled/ (tsp.c, coupled2.py, analyse_coupled.py, fit_excess.py and outputs); move appended to rows/T222/moves.jsonl 21:11. Side lesson from the run: on a saturated box EcoQoS opt-out is inside the noise ([[gist_belownormal_starvation_on_a_busy_box_2026_10_20]]).

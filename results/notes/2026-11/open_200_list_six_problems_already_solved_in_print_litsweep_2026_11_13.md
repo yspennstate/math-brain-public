@@ -9,7 +9,7 @@ metadata:
   evidence: "abstracts of arXiv 2607.15294, 2610.13940, 1104.3531, 1204.2931, 2609.06818v2 and Theorem 1.2 of 2210.04779 read by an agent; ledger rows appended"
 ---
 
-Is a problem on the 200 list still open, or already solved in print? A Codex literature sweep (LITSWEEP1/2 on Mac mini 1,
+Is a problem on the 200 list still open, or already solved in print? A Codex literature sweep (LITSWEEP1/2 on worker machine 1,
 13 Nov, 63 problems each, one results.jsonl row per problem) found six solved within the first 43 rows; I checked each
 against its paper (abstract, plus the PDF theorem for D0097) and appended resolved_in_literature rows to the intake ledgers:
 - F0010 Vu normality conjecture: Young arXiv 2607.15294, P(normal) = 2^{-binom(n,2)+O(n)} (preprint).
@@ -28,7 +28,7 @@ proved (Fu et al. 2607.23980). Before attacking a list problem, run the sweep pr
 Related: [[f0127_aldous_op2_fast_mixing_uniform_not_enough_2026_11_12]], [[e0081_pitman_tang_first_passage_pattern_n_log_n_proved_2026_11_12]].
 
 
-Update 13 Nov 01:2x +04 (laptop 23:2x): four more, checked the same way and recorded:
+Update 13 Nov 01:2x +04 (workstation 23:2x): four more, checked the same way and recorded:
 - F0080 LPS Q6.13 (FMSF degree depends on the Cayley graph): yes, Thom, Combinatorica 2016.
 - D0019 Khoshnevisan OP4 (random exceptional projection of Brownian-sheet zeros): no, Chen-Woessner JTP 2025.
 - C0122 Chatterjee sec.12 (5) (chaos gives multiple peaks without nonnegative correlations): Ding-Eldan-Zhai AoP 2015.

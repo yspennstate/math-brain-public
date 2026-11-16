@@ -11,7 +11,7 @@ metadata:
 
 Question: bm25.score_postings (the BM25 arm behind brain.py recall, the graph membrane's order and word lookups, and other hooks) - after the 14 Oct fast loop and the 4 Nov heap top-k, what was left?
 
-Measured 10-11 Nov 2026 on the laptop under a ui_freeze alarm. Profiling the graph membrane hook cold (1.4-1.7 s) put about 0.36 s in score_postings: 389 sqlite executes and 49 dict.update calls. The update calls are the fast per-term loop and stay. Most of the executes were the last step: one `select slug from d where pos=?` per top-k hit, and the membrane asks for topk=300.
+Measured 10-11 Nov 2026 on the workstation under a ui_freeze alarm. Profiling the graph membrane hook cold (1.4-1.7 s) put about 0.36 s in score_postings: 389 sqlite executes and 49 dict.update calls. The update calls are the fast per-term loop and stay. Most of the executes were the last step: one `select slug from d where pos=?` per top-k hit, and the membrane asks for topk=300.
 
 Change: the top-k positions go through one `select pos, slug from d where pos in (...)` per 500 into a dict, then the list is built in the same top-k order, skipping a position with no slug exactly as before. Backup ~/.claude/dreaming/bm25.py.bak_slugbatch_20261110; mirror 12_cognitive_architecture/dreaming/bm25.py.
 

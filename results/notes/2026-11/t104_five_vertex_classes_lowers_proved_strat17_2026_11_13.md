@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-13T12:32:49.500Z
 ---
 
-T104 (Alon Conj 1.5), 13 Nov 2026: Codex STRAT17 on Mac mini 1 (~/agent_run/STRAT17, STRAT17_final.tgz sha256 365f57a7...)
+T104 (Alon Conj 1.5), 13 Nov 2026: Codex STRAT17 on worker machine 1 (~/agent_run/STRAT17, STRAT17_final.tgz sha256 365f57a7...)
 PROVED by replay_all.py (24 exact stages):
 - split 2+5 and 3+4 with any number of lower components of any size: T>=0 every N>=7 and infinity; positive lower trace gives T>0.
 - five-vertex double carrier with arbitrary lower components (STRAT15 isolate theorem used as black box at zero lower trace).

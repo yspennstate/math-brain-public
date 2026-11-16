@@ -15,7 +15,7 @@ Conjecture (Kious-Mailler-Schapira, JEP 9 (2022) 505-536): on a finite graph wit
 weights W_n/n converge to a deterministic limit. Reduces to: dw/dt = p(w) - w has a unique attracting zero, where
 p_e(w) = P_w(walk from N crosses e before hitting F).
 
-Search (ants_fp2.py on Mac mini 2, 10-11 Nov 2026): every connected graph in the networkx atlas with 4 to 7 vertices,
+Search (ants_fp2.py on worker machine 2, 10-11 Nov 2026): every connected graph in the networkx atlas with 4 to 7 vertices,
 every ordered (N, F) pair up to automorphism. For each case, 8 starts (4 uniform on (0,1)^m, 4 log-uniform in
 (e^-7, 1)^m), damped iteration w <- max(w + 0.4 (p(w) - w), 1e-12) up to 6000 steps, converged when max |p(w)-w| < 1e-6;
 two limits counted distinct if they differ by more than 2e-3 in some coordinate.

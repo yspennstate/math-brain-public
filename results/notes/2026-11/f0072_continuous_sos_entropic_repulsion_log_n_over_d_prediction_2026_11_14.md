@@ -13,9 +13,9 @@ F0072 = Velenik, Localization and delocalization of random interfaces (Probab. S
 
 Heuristic (an agent, 14 Nov, unproved): in d >= 3 the repulsion height balances N^d P(phi_0 <= -H) against the cost of lifting the field, about H^2 N^{d-2} (surface tension quadratic at slope 0). For the GFF P(phi_0 <= -H) = e^{-H^2/2g} gives H = sqrt(4 g_d log N) (the known answer). For |x| the lower tail is exponential: a single-site spike to depth h costs 2d h, and lowering a neighbour too costs (2d-2) per unit more than it saves, so P(phi_0 <= -h) = e^{-(2d+o(1))h}. Balance: e^{-2dH} ~ H^2 N^{-2}, so H_N ~ (1/d) log N. This is the 'behaviour changes with the tail of V' the source anticipates. FKG holds (convex nearest-neighbour V), which a proof would use for monotonicity; Brascamp-Lieb does not (V not strictly convex).
 Caution: the 8 Sep attempt F0072-A001 reduced |x| to random-conductance GFFs via the Laplace variance mixture; that route hides the exponential tail and would point to sqrt(log N) - check it against this before reusing.
-Next: Monte Carlo of the |x| field with hard wall in d=3 (Mac mini 1, GPU heat-bath; the exact one-site conditional is piecewise exponential) to see log N vs sqrt(log N) growth, and the lower-tail rate 2d. Related: [[e0012_colicin_no_coexistence_open_lanchier_mercer_partial_2026_11_14]].
+Next: Monte Carlo of the |x| field with hard wall in d=3 (worker machine 1, GPU heat-bath; the exact one-site conditional is piecewise exponential) to see log N vs sqrt(log N) growth, and the lower-tail rate 2d. Related: [[e0012_colicin_no_coexistence_open_lanchier_mercer_partial_2026_11_14]].
 
-Numerics 14 Nov 11:0x (Mac mini 1 ~/f0072_20af, sos3.c/tail3.c exact piecewise-exponential heat bath, d=3, zero boundary):
+Numerics 14 Nov 11:0x (worker machine 1 ~/f0072_20af, sos3.c/tail3.c exact piecewise-exponential heat bath, d=3, zero boundary):
 - lower tail, no wall, N=16 centre site, Rao-Blackwell over the exact conditional: log P(phi_0 < -h) = -0.693, -2.48, -5.15,
   -8.10, -11.09, -14.09, -17.09, -20.09, -23.09 at h = 0..4 step 0.5: slope exactly -6 = -2d from h=1.5; P ~ 2.49 e^{-6h}.
 - hard wall on the whole box, centre-block mean height: N=8 0.638, N=16 0.873 (+0.235 per doubling; (1/d) log N predicts

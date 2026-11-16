@@ -30,7 +30,7 @@ Not relevant: Prevost-Rodriguez-Sousi 2309.03192 (the late points of the 2D toru
 then decide whether to write a short note: "Last vertex of cover on vertex-transitive graphs under the diameter
 Next: a GPU Monte Carlo of the last-vertex law on Z_m^2 and Z_m x C_k ladders (fixed start, TV to uniform as m grows),
 
-Monte Carlo, 2D torus Z_m^2 (14 Nov, Mac mini 1 GPU via MLX, 65,536 walks per m, start 0, scratchpad p0247/
+Monte Carlo, 2D torus Z_m^2 (14 Nov, worker machine 1 GPU via MLX, 65,536 walks per m, start 0, scratch area p0247/
 lastvertex_mlx.py + analyze.py): KS distance of the last vertex's torus distance from the start against uniform on the
 other n-1 vertices = 0.0379, 0.0310, 0.0254, 0.0200, 0.0159 at m = 8, 16, 32, 64, 128 (m=128: 32,768 walks, 1.02M
 steps, 4.6 h on the mini-1 GPU; x0.79-0.82 per doubling; sampling noise ~0.005); KS*log m = 0.079, 0.086, 0.088, 0.083,
@@ -40,6 +40,6 @@ consistent with uniformity in the limit at rate ~c/log n, c ~ 0.08, so the torus
 route. Evidence, not proof. Second m=128 seed (run_128b, seed 3, 17,099 s) done 14 Nov: KS 0.0192 alone (seed 2: 0.0159),
 both seeds pooled 65,536 walks KS 0.0172 at r* 39.4, KS*log m 0.083 - the flat ~0.08 holds through m=128. Near-start ratio
 P(d<=m/8) emp/unif = 0.72, 0.68, 0.75, 0.77, 0.80 for m = 8..128 (pooled 0.0390 vs 0.0486): the deficit closes slowly.
-Data stays on mini 1 ~/p0247_20af (last_m*_s*.npy).
+Data stays on worker machine 1 ~/p0247_20af (last_m*_s*.npy).
 Next: decide whether to write a short note: "Last vertex of cover on vertex-transitive graphs under the diameter
-condition", with the torus numbers as a remark; a torus proof would need the near-start deficit ~ Green function / log n. Work files: scratchpad p0247/ of session agent (NOTES.md, the BHT pdf/html, the AF chapter).
+condition", with the torus numbers as a remark; a torus proof would need the near-start deficit ~ Green function / log n. Work files: scratch area p0247/ of session agent (NOTES.md, the BHT pdf/html, the AF chapter).

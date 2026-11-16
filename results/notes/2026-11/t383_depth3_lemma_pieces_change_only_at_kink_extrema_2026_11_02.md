@@ -9,7 +9,7 @@ metadata:
   evidence: "research_pushes/2026-11-02-loop-T383-depth3-route (research-repo 708e3d9); move e179425"
 ---
 
-T383 target 1, depth 3 (two hidden layers, 1-D input, segment [A, B]), 2 Nov. At research-repo research_pushes/2026-11-02-loop-T383-depth3-route/DEPTH3_ROUTE.md (708e3d9); frontier move brain-repo e179425.
+T383 target 1, depth 3 (two hidden layers, 1-D input, segment [A, B]), 2 Nov. At research-repo research_pushes/2026-11-02-loop-T383-depth3-route/DEPTH3_ROUTE.md (708e3d9); frontier move the private repository e179425.
 
 Lemma (proved): N = 1 + K + sum_j Z_j, where K counts first-layer breakpoints and Z_j the zeros of the j-th second-layer pre-activation, which is continuous and piecewise linear with kinks at the breakpoints. Along training N changes only when:
 - a breakpoint or a second-layer zero crosses A or B;

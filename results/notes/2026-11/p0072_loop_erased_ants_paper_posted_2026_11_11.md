@@ -11,10 +11,10 @@ metadata:
 
 # P0072 paper posted: "A non-geodesic edge that survives in the loop-erased ant process"
 
-Posted 11 Nov 2026 04:5x local by an agent (his 10 Nov 17:13 ask, T-20261110-076: solved but unposted problems get audited, written up and posted).
+Posted 11 Nov 2026 04:5x local by an agent (standing rule: solved but unposted problems get audited, written up and posted).
 
 - Public repo: github.com/yspennstate/loop-erased-ants-non-geodesic-edge, main = 0b26867d38f71523555782e642da708a089acd90. 9 pages, code/ (sim_ants.c, check_path_law.py), data/ (13 runs of 10^8 ants, the fixed-weight frequencies, the symbolic check output).
-- Brain mirror: brain-repo 06_math_research/p0072_loop_erased_ants_2026_11_11/ (commit c74723a63a15). Working copy ~/agent_run/p0072/ (repo/ is the git clone).
+- Brain mirror: the private repository, 06_math_research/p0072_loop_erased_ants_2026_11_11/ (commit c74723a63a15). Working copy ~/agent_run/p0072/ (repo/ is the git clone).
 - Ledger: open-problems-repo master f9d6d59d12 ([skip ci]) added the P0072 row and the P0073 row that had been missed. Public table: math-brain-public main dbf75cd3 added both papers (papers/README.md and papers/public/<repo>/).
 - Problem: Kious, Mailler, Schapira, Finding geodesics on graphs using reinforcement learning, Ann. Appl. Probab. 32 (2022), arXiv 2010.04820, Conjecture 1.1(1): for the loop-erased rule an edge keeps a positive share of the weight iff it lies on a geodesic from N to F. Open Problem 1 of Section 2 of the Aletti et al. survey (MATRIX-MFO 2023).
 

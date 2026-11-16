@@ -9,7 +9,7 @@ metadata:
   evidence: "rank10_t388_check.json, rank10_t388_oja_check.json; board 8d53ab5"
 ---
 
-T388 (top-400 list, spiked cumulant model) partial-trace and Oja push, research-repo ff4dc32f, reviewed 4 Nov 2026 by an agent with an independent sampler (board brain-tasks-board 8d53ab5).
+T388 (top-400 list, spiked cumulant model) partial-trace and Oja push, research-repo ff4dc32f, reviewed 4 Nov 2026 by an agent with an independent sampler (board the private task board 8d53ab5).
 
 - The "partial trace" M_n = (1/n) sum (|x|^2 - d - 2) x x^T is FOBI (Cardoso 1989) shifted by (d+2) I: same eigenvectors. Known algorithm; fixed-d theory in arXiv 1406.4765 and 1701.06836; high-d NGCA relative is Tan-Vershynin 1704.01041 (exp(-alpha|x|^2) reweighting, loose ~n^7 bound at r = 4).
 - Sharp offline law (checked within 0.03 at d = 16/32/64, c >= 32): off-diagonal noise variance v = E[a^2 x_j^2 x_k^2] = 2d + 12 exactly (size-bias two Gaussian coordinates: |x|^2 becomes chi-square on d + 4 dof). BBP: weak recovery at n > 2(d^2+6d)/kappa^2, overlap^2 = 1 - 2(d^2+6d)/(kappa^2 n). No log factor for weak recovery.

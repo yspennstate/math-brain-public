@@ -20,7 +20,7 @@ Var(D) at the measured k, five sizes n = 100..1600 (650 + 400 instances): the ex
 
 Doubt to carry: the fit leans on n = 100..400. The last doubling is flat: corrected Var(D) is 0.00716 at n=800 and 0.00695 at n=1600, with about 20 pct s.e. on the n=800 point, so the local exponent over 800..1600 is roughly 0 +- 0.3. A sixth size (n=3200), or more n=800 instances, is what would separate n^-1/2 from a floor. The final k from the full R=8 run is expected to move by under 0.02, which moves a by under 0.01.
 
-Files: brain-repo/06_math_research/frontier/rows/T222/coupled/calib_k_interim_20261107.out, decompose_measured_k_20261107.out, calib_k.py, calib_k_part.py. Runner: brain_math_loop_1e0a/op/t222/src/coupled_r8.py (out_r8/).
+Files: the private repository, 06_math_research/frontier/rows/T222/coupled/calib_k_interim_20261107.out, decompose_measured_k_20261107.out, calib_k.py, calib_k_part.py. Runner: brain_math_loop_1e0a/op/t222/src/coupled_r8.py (out_r8/).
 Related: [[t222_five_size_excess_n_minus_0_6_2026_11_07]] [[t222_coupled_square_torus_excess_real_and_decaying_2026_11_06]] [[t222_square_variance_excess_decays_like_n_to_minus_two_thirds_2026_11_06]]
 
 

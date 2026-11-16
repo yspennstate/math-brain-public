@@ -27,7 +27,7 @@ over reversible chains with at most n states: max(1, floor((n-2)/2)) <= K(n) <= 
 - Hitting times of sets: max_b hat E_b T_{hat A} <= (n - |A|) max_y E_y T_A.
 Open: the order of K(n) between (n-2)/2 and n-1.
 
-Checks: exact rational program in the repo; Codex referee on Mac mini 1, verdict SOUND, with its own programs
+Checks: exact rational program in the repo; Codex referee on worker machine 1, verdict SOUND, with its own programs
 (3,840 comb parameter sets, 600 networks, 21,000 chains); nine wording points applied. Records: ledger master
 affd7c1a164f; math-brain-public main a9d616ac0804; brain repo 06_math_research/p0242_lumping_2026_11_12 (NOTES.md,
 referee/REPORT.md, referee/LOG.md). Not yet on Zenodo or ResearchGate at the time of writing.

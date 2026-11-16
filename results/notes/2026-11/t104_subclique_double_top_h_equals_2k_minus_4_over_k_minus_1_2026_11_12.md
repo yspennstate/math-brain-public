@@ -24,7 +24,7 @@ zero on the others, so M is the scalar 2/D on Top (x) Zero and commutes with the
 Checked on 23 unions, n = 5..8, to 4.9e-15 (t104_degen_family.out).
 
 Minimum on this family: H = 1 at D = 2 (triangle, two disjoint edges). C_5, C_7, K_4 minus an edge measure above 1.
-Mac mini 2 double-top search, n = 5 (dg_n5_s41): 4,036 rounds by 12 Nov 19:1x, no value below 1 on the stratum (least 0.999996, just off it). Hint for the next
+worker machine 2 double-top search, n = 5 (dg_n5_s41): 4,036 rounds by 12 Nov 19:1x, no value below 1 on the stratum (least 0.999996, just off it). Hint for the next
 reader: 1 is a minimum along the stratum only. Joining two disjoint edges by a bridge of weight t gives
 H = 1 - gap12 + O(gap12^2) (t104_2k2_bridge.out, beta up to 1e10), so a stratum bound does not extend to a
 neighbourhood. Also: the search grid stops at beta = 1e6, which reads H slightly low when gap12 < 1e-5.
@@ -51,12 +51,12 @@ circulant (n = 11: 0.4133 against 0.4110 for C_11); eight-start search on the n 
 
 Pushes 123-128 (12 Nov evening, all verified on GitHub): double-top searches n = 6 (301,525 stratum points, least H 1.000009
 at the balanced triangle) and n = 7 (179,303, least 1.000014 at two equal edges), no value below 1. PROVED (push 128, 5165d31f;
-Codex run STRAT on Mac mini 1, audited by an independent script t104_strat_audit.py): D >= 4 gives 2 S5 <= (4/D) X1, so T >= 0;
+Codex run STRAT on worker machine 1, audited by an independent script t104_strat_audit.py): D >= 4 gives 2 S5 <= (4/D) X1, so T >= 0;
 constant diag Pi = D/n with n >= 8 gives tau_e <= 4D/n and T >= 0 (all vertex-transitive graphs); circulants n = 5, 6, 7 by
 nonnegative midpoint certificates (sector a hull of v_i, T = sum alpha_i alpha_j q_ij). That two-line argument supersedes the
 long Fourier proof for odd n >= 21 (push 126) and the face search n = 5..19 (pushes 127-128). Hint for the next reader: before
 a long special-case computation, try the crude bound tau_e <= max over the edge of the projector - it closed every symmetric case.
-Open: D = 2, 3 with nonconstant diag Pi (Codex STRAT2 on Mac mini 1 since 21:43 local, counterexample hunt at n = 8..12 plus
+Open: D = 2, 3 with nonconstant diag Pi (Codex STRAT2 on worker machine 1 since 21:43 local, counterexample hunt at n = 8..12 plus
 proof routes). Status: provisional for the open part; the push-128 theorems have two readers (the Codex run and the audit).
 Row T104: not solved.
 
@@ -68,5 +68,5 @@ standard representation of S_k, and M commutes with the projection onto V_[n-2,2
 S_n-invariant. The eigenvector step is checked to 1e-15 for n = 5..8 (t104_subclique_eig.out).
 Hint: the same "one factor sees only a subgroup" trick may give H on other symmetric configurations (a clique
 plus a pendant, two disjoint cliques). The open part: is the triangle (H = 1) the minimum over the whole
-double-top stratum? Only measured (a short n = 5 search found nothing below 1.0; mini 2 runs dg_n5/6/7).
+double-top stratum? Only measured (a short n = 5 search found nothing below 1.0; worker machine 2 runs dg_n5/6/7).
 Status: provisional, one reader. Row T104: not solved.

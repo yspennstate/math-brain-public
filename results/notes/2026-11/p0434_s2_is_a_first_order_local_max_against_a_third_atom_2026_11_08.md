@@ -10,7 +10,7 @@ metadata:
 ---
 
 P0434 (M-SERPT vs Gittins mean response ratio on laws in [1, K]). For 2 < K <= 9/4, S2(K), the two-atom sup, is a strict
-first-order local max against a small third atom of mass w at any size m in [1, K). Route items 28-29, brain-repo main
+first-order local max against a small third atom of mass w at any size m in [1, K). Route items 28-29, the private repository main
 8c6ebec5, 06_math_research/frontier/P0434/route_agent_2026_11_08/ (w3sym, w3tie, w3T, w3Q, w3res).
 
 - The three-atom branch ends where M-SERPT's age-0 value E X meets its age-1 value e(1) (checked with exact soap.ratio
@@ -42,4 +42,4 @@ Update 8 Nov 11:5xZ (item 37, commit 6c6ae4ab, w3ident_agent.py/.jsonl): all 68 
 
 Update 8 Nov 12:0xZ (item 38, commit 27d4d687): a Nelder-Mead search kept inside each of the 16 above-1 regions got no closer to S2 than -4.0e-4. That point is at m = K = 2.139, nearly the two-atom law the resultant already bounds; next is the near-tie region at -9.3e-4. A local search, not a bound: S2*Gittins - M-SERPT still has to be signed on each region.
 
-- Qualified 8 Nov 08:0x (route item 47, brain-repo 49d03bbe): this holds on the branch followed here, but the joint limit w -> 0, m -> 1 on the demoted side of the M-SERPT tie beats S2 for every K in (K* = 2.175833, 9/4]; see [[p0434_tie_limit_closed_form_crossing_k_star_2_1758_2026_11_08]]. Not a strict local max over all three-atom perturbations there.
+- Qualified 8 Nov 08:0x (route item 47, the private repository 49d03bbe): this holds on the branch followed here, but the joint limit w -> 0, m -> 1 on the demoted side of the M-SERPT tie beats S2 for every K in (K* = 2.175833, 9/4]; see [[p0434_tie_limit_closed_form_crossing_k_star_2_1758_2026_11_08]]. Not a strict local max over all three-atom perturbations there.

@@ -12,7 +12,7 @@ metadata:
 P0434 (M-SERPT vs Gittins, mean response time ratio R on laws supported in [1, K]). On two-atom laws {1, K} the
 finite-load sup is S2(K), the tie-mass value from route item 22, for 2 < K <= 9/4, and the proof is a resultant, not a grid.
 
-How it goes (route_agent.md item 25, brain-repo main 727647c1, 06_math_research/frontier/P0434/route_agent_2026_11_08/):
+How it goes (route_agent.md item 25, the private repository main 727647c1, 06_math_research/frontier/P0434/route_agent_2026_11_08/):
 - Coordinates h = K - 2, s = p/tie, eps = 1 - load. R = 1 on three edges of the box (eps = 0, eps = 1, s = 0); the fourth
   edge (s = 1) is R_tie(eps), with one interior critical point, giving S2.
 - dR/dp ~ P and dR/deps ~ -G, both quadratic in eps with positive leading coefficients. Res_eps(P, G) =
@@ -32,7 +32,7 @@ Related: [[a_finite_load_search_skipped_the_k_range_where_the_bound_fails_2026_1
 [[p0434_heavy_traffic_upper_bound_passed_an_independent_read_2026_11_08]].
 
 
-Update 8 Nov 11:0x: the branch lemma is now proved by hand (route item 26, brain-repo main b82e3c22). The three rank
+Update 8 Nov 11:0x: the branch lemma is now proved by hand (route item 26, the private repository main b82e3c22). The three rank
 comparisons that fix the SOAP structure (M-SERPT's jump at age 1, Gittins' start 1/(1-p) against K-1, and which term of
 Gittins' min is active) all switch at the same p = (K-2)/(K-1). Above it both policies are FCFS in mean, so R = 1; below it
 the structure is fixed, so R(p, eps) is one rational function. The two-atom result now rests only on the SOAP mean formula

@@ -9,7 +9,7 @@ metadata:
   evidence: "research_pushes/2026-11-02-loop-T383-two-layer-crossing (research-repo 2c91222); frontier move 24e1ec6"
 ---
 
-T383 target 1, two-layer case, proved on 2 Nov. It is at research-repo research_pushes/2026-11-02-loop-T383-two-layer-crossing (2c91222: TWO_LAYER.md, two_layer_bound.py, run2.txt), with the frontier move on T383 at brain-repo 24e1ec6.
+T383 target 1, two-layer case, proved on 2 Nov. It is at research-repo research_pushes/2026-11-02-loop-T383-two-layer-crossing (2c91222: TWO_LAYER.md, two_layer_bound.py, run2.txt), with the frontier move on T383 at the private repository 24e1ec6.
 
 Statement: g_t(x) = sum a_i relu(w_i x + b_i) on [A,B], and N_t = 1 + #{i : z_i(A), z_i(B) of opposite sign}, which equals the activation-pattern piece count when the breakpoints are distinct. If each neuron moves at most R_i up to time t, then sup_{s<=t} |N_s - N_0| <= #{i : |z_{i,0}(A)| <= R_i sqrt(1+A^2)} + the same at B. The proof is Cauchy-Schwarz on the endpoint signs: a neuron changes the count only if a sign at an endpoint flips.
 

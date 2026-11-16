@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Independent referee pass (an agent, T-20261112-017) on yspennstate/shuffled-ablq-dominating-pair at f3f538a. Verdict ACCEPT WITH ONE MINOR CORRECTION.
+Independent referee pass (an agent) on yspennstate/shuffled-ablq-dominating-pair at f3f538a. Verdict ACCEPT WITH ONE MINOR CORRECTION.
 
 Reproduced from the paper's statements only (plain scipy quadrature): z1=2.5 I_ANTI/I_SAME to 13 digits; T=2 pair 0.221269, reverse 0.205107, best-of-two 0.223234 (repo independent_check 0.2232343935; my first quadrature said 0.223235 - quadrature error, not the paper's); certificate interval [2.1,2.6] integral 1.51e-3 >= claimed 1.04e-4; T=3 point 1.535260930e-3 exact.
 

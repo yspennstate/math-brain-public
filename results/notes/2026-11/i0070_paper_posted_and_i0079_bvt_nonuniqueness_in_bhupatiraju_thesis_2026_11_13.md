@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Two results from the 13 Nov batch on Mac mini 1.
+Two results from the 13 Nov batch on worker machine 1.
 
 I0070 (Agresti-Veraar survey Problem 6, p = 2 critical time regularization in Hilbert spaces): the paper is posted at https://github.com/yspennstate/critical-hilbert-time-regularization (commit 4754f591f093229241b3fee1943e88afb2bdf41b, 10 pages). Two audits of the claim ([[i0070_p2_critical_hilbert_regularization_two_audits_2026_11_13]]) and an independent paper referee (I0070PR, MINOR: no gap; three wording fixes - qualify Liu-Rockner Thm 4.1 with its (A1)-(A4) hypotheses, say survey page numbers are the published NoDEA ones, and say the cutoff continuation follows AV Part II Thm 4.15's method but is proved from the survey's Thm 5.1(1)). Fixes applied, guard ok, lint 0 MUST. Not yet on ResearchGate or Zenodo.
 

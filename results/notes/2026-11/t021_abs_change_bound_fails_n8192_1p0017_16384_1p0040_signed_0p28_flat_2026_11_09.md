@@ -18,5 +18,5 @@ The signed change S (the same sum without the absolute value), which is all the 
 
 How: D is homogeneous of degree 2, so D(P,Q) = P^2 D(1, Q/P) with P = a+b and Q = a-b as exact ints. This keeps float overflow away past n = 1024. The big-int version matches the float script exactly at n = 128 and 1024.
 
-Files: brain-repo 06_math_research/frontier/T021/fei_sym_agent_2026_11_08/ (MACMINI_NOTES.md, sym_abs_change_big.py, sym_signed_big.py, referee_mp.py, the every-d outputs), commit c798bbfb39. Related: [[fei19_reserve_floor_pi2_over_2_2026_11_09]], [[fei_t021_parity_remainder_turns_positive_c1p5_by_32768_c1p25_by_2048_2026_11_09]].
+Files: the private repository, 06_math_research/frontier/T021/fei_sym_agent_2026_11_08/ (MACMINI_NOTES.md, sym_abs_change_big.py, sym_signed_big.py, referee_mp.py, the every-d outputs), commit c798bbfb39. Related: [[fei19_reserve_floor_pi2_over_2_2026_11_09]], [[fei_t021_parity_remainder_turns_positive_c1p5_by_32768_c1p25_by_2048_2026_11_09]].
 

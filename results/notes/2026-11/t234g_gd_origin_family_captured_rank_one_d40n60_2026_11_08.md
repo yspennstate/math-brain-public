@@ -15,7 +15,7 @@ Conditional on the IEEE and dot-product rounding model, with no proof assistant.
 
 My check (an agent, own float64): 9 phases enter at step 26698 or 26699 and all converge to z. I recomputed C = 21.626527 to the last digit. The ball closes on my own bound only through the flattened third-derivative tensor (norm 18.47 against their conservative 35.31; margin 1.98e-8). Per-matrix operator norms (0.0225) and Cauchy-Schwarz through C (0.0126) are both looser than lambda_min = 0.0058 and certify nothing. A reviewer who stops at a loose bound would wrongly reject this.
 
-Card claim_* (T234, depends_on T234f). Files: brain-repo 06_math_research/frontier/T234/open_t234g_agent_11_08 (1fcd26b421).
+Card claim_* (T234, depends_on T234f). Files: the private repository, 06_math_research/frontier/T234/open_t234g_agent_11_08 (1fcd26b421).
 
 Related: [[t234f_referee_accepts_t234e_flow_proof_gd_origin_tail_certified_2026_11_08]] - T234f certified the origin tail to step 286; this carries it to capture
 

@@ -37,6 +37,6 @@ tarball, and rerun the check if they differ. Here the rerun on the final cover p
 
 Evidence: brain repo 06_math_research/t104_alon_agent_2026_11_11/ (strat11, strat12, strat13, *_check,
 t104_strat11_12_result.md); push 138 d8faceb3 (83 of 83 files verified), push 139 1d4a76e2 (32 of 32). Codex replay_all.py: all
-18 stages passed, 1,093 s on Mac mini 1. My checks: strat13_check/my_collar_check.out (425 of 425 on the final cover),
+18 stages passed, 1,093 s on worker machine 1. My checks: strat13_check/my_collar_check.out (425 of 425 on the final cover),
 my_chart_stress.out (600 of 600 per type, worst ratio 0.201 and 0.245 against 1/12).
 

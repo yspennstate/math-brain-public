@@ -1,6 +1,6 @@
 ---
 name: p0434_l_plus_over_t_g_passes_one_near_critical_load_ratio_1_97_2026_11_09
-description: "P0434 9 Nov 02:5x (+0400, Mac mini c410f4d2 via fleet board): L+ <= T_G FAILS - a 5-atom law at rho 1-1e-6 gives L+/T_G 1.950 and T_MS/T_G 1.9668 (exact rationals, soap_indep.py); so M-SERPT's ratio to Gittins is >= 1.9668"
+description: "P0434 9 Nov 02:5x (+0400, worker-machine c410f4d2 via fleet board): L+ <= T_G FAILS - a 5-atom law at rho 1-1e-6 gives L+/T_G 1.950 and T_MS/T_G 1.9668 (exact rationals, soap_indep.py); so M-SERPT's ratio to Gittins is >= 1.9668"
 metadata:
   type: project
   created: 2026-11-08
@@ -9,7 +9,7 @@ metadata:
   evidence: "a fleet message; research-repo codex-fleet/tools/runs/own_p0434/tg_near_critical/"
 ---
 
-Reported to an agent on the fleet board, a fleet message (it replaces a fleet message, which had said the route survives). Not re-derived on this laptop yet.
+Reported to an agent on the fleet board, a fleet message (it replaces a fleet message, which had said the route survives). Not re-derived on this workstation yet.
 
 - **The law.** s = [1, 1.1425662427309466, 2.190890054519936, 2.1942626527600324, 17258.972792519828], p = [0.6965761184774704, 0.29450875117620223, 0.008878554489750173, 3.6573632642141504e-05, 2.223935047942356e-09].
 - **At rho = 1 - 1e-6:** L+/T_G = 1.950217761, T_MS/T_G = 1.966801 and M/T_G = 0.01658.

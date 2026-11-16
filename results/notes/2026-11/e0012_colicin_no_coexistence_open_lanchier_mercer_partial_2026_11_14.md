@@ -26,9 +26,9 @@ Gaps a new attempt could target:
 (c) d = M = 1 with general gamma, where Thm 2 already gives 'species 1 wins' for large gamma; an interface argument might cover every gamma.
 The 8 Sep intake attempt (E0012-A001) reduced the problem to the sign of an interface speed under fast stirring. That reduction is heuristic only away from the fast-stirring limit.
 
-Correction for the 200 list: the line 'mean-field behaviour is known' is right, and it is now proved in full (LM Section 2). Related: [[e0007_two_type_contact_unequal_death_rates_open_stover_partial_2026_11_14]]. Work files: scratchpad e0012_lm.txt and e0012_dl/lm.pdf of session agent.
+Correction for the 200 list: the line 'mean-field behaviour is known' is right, and it is now proved in full (LM Section 2). Related: [[e0007_two_type_contact_unequal_death_rates_open_stover_partial_2026_11_14]]. Work files: scratch area e0012_lm.txt and e0012_dl/lm.pdf of session agent.
 
-Numerics, d = M = 1 (14 Nov, Mac mini 1 ~/e0012_20af, dl1d.c in the session agent scratchpad).
+Numerics, d = M = 1 (14 Nov, worker machine 1 ~/e0012_20af, dl1d.c in the session agent scratch area).
 - Setup: ring of L = 20000, T = 4000, beta_2 = 5. The 1D nearest-neighbour contact threshold is about 3.30, so beta = 3 dies out here.
 - Each run below: two seeds, gamma in {0, 0.5, 1, 1.5, 2, 3, 4, 6, 10}.
 - beta_1 = 4.0:

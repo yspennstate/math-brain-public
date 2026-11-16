@@ -6,10 +6,10 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T03:11:43+04:00
   status: provisional
-  evidence: "brain-repo T240/cD_s2_agent/cd_s2_bounds.txt (1e6-sample MC at N=12,40)"
+  evidence: "the private repository, T240/cD_s2_agent/cd_s2_bounds.txt (1e6-sample MC at N=12,40)"
 ---
 
-T240, 3 Nov 03:11. The constants c_D and s2, which L3 and E used only as finite numbers, now have explicit values: 06_math_research/frontier/rows/T240/cD_s2_agent on brain-repo main.
+T240, 3 Nov 03:11. The constants c_D and s2, which L3 and E used only as finite numbers, now have explicit values: 06_math_research/frontier/rows/T240/cD_s2_agent on the private repository main.
 
 - The R drift has no finite-N correction. (lambda, nu) is exactly Gaussian at every N.
 - Only the eta^2 |x|^2/N term in the Q equations moves: D_N^{Q_ik} = eta^2 (E[g'g' delta^2 |Px|^2] - 4 E[g'g' delta^2]) / N, with P the projection on span(w_1, w_2, v_1, v_2).

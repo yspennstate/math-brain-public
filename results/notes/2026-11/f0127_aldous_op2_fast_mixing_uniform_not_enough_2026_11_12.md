@@ -12,7 +12,7 @@ metadata:
 Aldous (Bernoulli 2013, 1309.6766 Sec 5.5) Open Problem 2: assuming (5.2), which further conditions give
 E T_coal ~ 2 tau_meet? Candidate "uniform stationary law + worst-start t_mix = o(tau_meet)" is NOT enough.
 
-Counterexample (Codex F0127A on Mac mini 1, checked by hand by an agent, 12 Nov 2026): symmetric rates on
+Counterexample (Codex F0127A on worker machine 1, checked by hand by an agent, 12 Nov 2026): symmetric rates on
 n = k^4 + k states; core F of N = k^4 sites joined pairwise at rate 1/N; k slow sites, each joined to every core
 site at rate r/N with r = sqrt(log k)/N, slow sites not joined to each other. Then tau_meet ~ n/2, every distinct-pair
 meeting time is (1+o(1)) tau_meet, t_mix ~ log4 / r = o(tau_meet), but E T_coal >= (H_k - 1)/r ~ (n/2) sqrt(log n):

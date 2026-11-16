@@ -9,7 +9,7 @@ metadata:
   evidence: "D0004AR referee MINOR 13 Nov; own quantile check min slack -1.7e-14; brain 54d1d025"
 ---
 
-Wang's complete-mixability survey (arXiv 1411.6190), Open Problem 4, asks whether the norm inequalities of its Theorem 5 are sufficient for n-complete mixability. Our D0004A run (Codex, Mac mini 1, 13 Nov 2026) answered the unrestricted converse NO, and the independent referee D0004AR returned MINOR.
+Wang's complete-mixability survey (arXiv 1411.6190), Open Problem 4, asks whether the norm inequalities of its Theorem 5 are sufficient for n-complete mixability. Our D0004A run (Codex, worker machine 1, 13 Nov 2026) answered the unrestricted converse NO, and the independent referee D0004AR returned MINOR.
 
 - Theorem A: for bounded X with mean mu, the Theorem-5 inequalities for every norm in Definition 5 hold iff X <=cx n mu - (n-1) X (convex order).
 - Theorem B: a smooth density counterexample for n = 3 and 4, e.g. f(x) = 1/10 + (27/10)(2x-1)^2 on [0,1] for n = 3. It passes the convex-order test but fails the necessary condition P(1/4 < X < 3/4) >= 1/3 for a 3-CM continuous law with mean 1/2, since that mass is 13/80. My own check, 20,000 quantile atoms in d0004/check/dens.py, gives a minimum slack of -1.7e-14.

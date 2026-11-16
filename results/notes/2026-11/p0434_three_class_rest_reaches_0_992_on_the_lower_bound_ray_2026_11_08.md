@@ -22,7 +22,7 @@ alpha -> K-2: 0.611 / 0.719 / 0.820 / 0.909 at K 5/10/26/101 (alpha K-2.5, gamma
 fail at larger K or have sup exactly 1. Floats stop near K 401 (d 2.5e-11).
 
 How to apply: a three-atom search that misses the light-load near-equal ray says nothing about three atoms. Seed from
-the ray, not from random or Mac mini cuts. Next check: the t -> 0 class shares in closed form with the comparison policy
+the ray, not from random or worker-machine cuts. Next check: the t -> 0 class shares in closed form with the comparison policy
 pi (T_G <= T_pi, so pi-shares bound m_k from below); if that rest passes 1, (b) is false. Files:
 codex_fleet/runs/own_p0434/rest_ray*.py/.out, NOTE.md section 20:2x. Related:
 [[p0434_mserpt_lower_bound_2u_over_1_plus_u_passed_a_second_audit_2026_11_08]],

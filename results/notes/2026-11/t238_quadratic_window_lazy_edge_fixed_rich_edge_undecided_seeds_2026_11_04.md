@@ -17,7 +17,7 @@ T238 (top-400, lazy-to-rich window) second pass, research-repo 11e238fa, reviewe
 - The README's "rich side better with d" numbers were picked seeds (seed 2 at d = 8 and 16); the claim survives in the median (rank correlation -0.39, p 0.04).
 - Lesson for reviewing any seed-variance correction: re-run the source's script on more seeds, normalise every run the same way, and check whether the spread itself shrinks with the size parameter - a shrinking spread turns "noise as large as the trend" into a trend.
 
-Row stays OPEN; the bridge from the matrix flow to the catalog's ReLU row is missing. Review: brain repo 12_cognitive_architecture/top10_7_10_agent/rank10_T238_review.md; board brain-tasks-board 99b7e51.
+Row stays OPEN; the bridge from the matrix flow to the catalog's ReLU row is missing. Review: brain repo 12_cognitive_architecture/top10_7_10_agent/rank10_T238_review.md; board the private task board 99b7e51.
 
 
 Update 4 Nov 15:4x (five more seeds: d = 24 seeds 5-6, d = 32 seeds 2-4; 34 runs): the rich edge is no longer undecided. Without d = 8 the share slope at c = 1e-3 is +0.108 per doubling (se 0.035, 3.1 se) and +0.108 (0.047) at 1e-2; d = 24 and 32 cells read 0.88 sd 0.02 and 0.91 sd 0.01 at c = 1e-3. So: lazy edge fixed in c = alpha/d, rich edge drifts to larger c as d grows. Caveat: all four d = 32, c = 1e-3 runs stopped at the step cap with train 2.9e-10 to 1.1e-9 (target 1e-10). Review addendum in rank10_T238_review.md.

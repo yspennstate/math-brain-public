@@ -13,10 +13,10 @@ metadata:
 
 # P0073 ants paper posted: "Dead branches in the trace-reinforced ant process"
 
-Posted 11 Nov 2026 03:0x local by an agent (his 10 Nov 17:13 ask, T-20261110-076: solved but unposted problems get audited, written up and posted).
+Posted 11 Nov 2026 03:0x local by an agent (standing rule: solved but unposted problems get audited, written up and posted).
 
 - Public repo: github.com/yspennstate/trace-reinforced-ants-dead-branches, main = 227e6bcddc55cd14642a85edb30c753a1e22f7a3. 8 pages, code/, data/ (census n = 3..6).
-- Brain mirror: brain-repo 06_math_research/p0073_ants_2026_11_10/census_agent/ (paper, code, data, NOTES_dead_branches.md, raw/ exploratory scripts). Working copy: ~/agent_run/p0073/ (repo/ is the git clone).
+- Brain mirror: the private repository, 06_math_research/p0073_ants_2026_11_10/census_agent/ (paper, code, data, NOTES_dead_branches.md, raw/ exploratory scripts). Working copy: ~/agent_run/p0073/ (repo/ is the git clone).
 - Problem: Kious, Mailler, Schapira, arXiv 2106.10559, Conjecture 1.1: (a) W(n)/n converges a.s. to a deterministic limit; (b) every edge has a positive limit when dist(N,F) >= 2.
 
 What the paper proves and what it only computes:
@@ -33,7 +33,7 @@ Size of the doubt: the proof of Theorem 2 was audited line by line by its author
 
 Posting scars from this one (apply to the next paper repo):
 1. A new public paper repo is refused at push by ~/.claude/dreaming/paper_release_guard.py unless the tex has: funding section, competing-interest declaration, Declaration of generative AI, acknowledgment naming Claude and Codex with Math Brain cited, links to math-brain-public, brain-framework-public and math-brain-2026-10-24, a code and data availability section, and no Overfull hbox over 1pt. Model block: 06_math_research/fei_papers_agent/p6/main.tex (tail). Write it before `gh repo create --push`; the create succeeds and the push fails otherwise.
-2. `gh` on the laptop has no stored login: export GH_TOKEN from `git credential fill` (never echo it). REST quota can sit at 0 until the hour turns; `gh api rate_limit` is free.
+2. `gh` on the workstation has no stored login: export GH_TOKEN from `git credential fill` (never echo it). REST quota can sit at 0 until the hour turns; `gh api rate_limit` is free.
 3. `git commit` in a fresh clone has no author: pass -c user.name / -c user.email (the noreply address used by the earlier paper repos).
 4. Long URLs in the bibliography overflow the line: put the URL on its own line after `\\`.
 5. Before writing: list every yspennstate repo and check the public papers table for a duplicate (memory duplicate_paper_posted_for_t067_withdrawn_check_public_table_first_2026_11_10).

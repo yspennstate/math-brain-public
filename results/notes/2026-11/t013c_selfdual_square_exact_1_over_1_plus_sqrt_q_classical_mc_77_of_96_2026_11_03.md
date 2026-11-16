@@ -21,7 +21,7 @@ T013c (FK crossing probabilities, q = 2 and 3, rectangle vs disk) was left unrea
   all hit their bounds (0.05 or 4), and the rectangle-minus-disk fits reach chi-square 10 on 1 dof. The staircase disk is
   not self-dual (endpoint gaps 0.0077-0.091 rad).
 - Left to run: 19 + 31 jobs in remaining_runs.json. Run them only on a quiet Mac.
-- Published: brain-repo 06_math_research/frontier/rows/T013/m5f_T013c/ (10 files, REVIEW a020c1f59e24).
+- Published: the private repository, 06_math_research/frontier/rows/T013/m5f_T013c/ (10 files, REVIEW a020c1f59e24).
 
 Same orphaned lead as [[t019c_delta4_q7_five_free_stalled_4_of_745_groups_100_core_hours_2026_11_03]] and
 [[t019b_q5_delta3_glauber_nlogn_pinned_block_certs_pass_2026_11_03]]. The lesson is in

@@ -9,7 +9,7 @@ metadata:
   evidence: ""
 ---
 
-Seen 13 Nov 2026 on T104 STRAT16 (2+5 split carrier, Mac mini 1). rank_two_certificate.py printed 'g 1 ... not PSD 5/9' for 12 subcones and then PROVED. Reading the code: the assert covers only g=0 and g=gmax; g=1 is a diagnostic. That is sound because J/5+g vv^T is a segment inside the convex set K_u, and the separately certified concavity on K_u makes T* concave in g, so the endpoints suffice. Codex's LOG said the same ('certificate insufficiency, not a counterexample'). tree_certificate.py ran in 0.35 s for ~2,100 coefficients; suspicious, but it recomputes in sympy's sparse QQ ring and writes tree_checks.json without ever reading it.
+Seen 13 Nov 2026 on T104 STRAT16 (2+5 split carrier, worker machine 1). rank_two_certificate.py printed 'g 1 ... not PSD 5/9' for 12 subcones and then PROVED. Reading the code: the assert covers only g=0 and g=gmax; g=1 is a diagnostic. That is sound because J/5+g vv^T is a segment inside the convex set K_u, and the separately certified concavity on K_u makes T* concave in g, so the endpoints suffice. Codex's LOG said the same ('certificate insufficiency, not a counterexample'). tree_certificate.py ran in 0.35 s for ~2,100 coefficients; suspicious, but it recomputes in sympy's sparse QQ ring and writes tree_checks.json without ever reading it.
 
 **Why:** a printed failure line looks like a gap and a fast run looks like a cache replay; either misread wastes a tick or, worse, waves through a certificate that never checked anything.
 

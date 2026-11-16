@@ -32,6 +32,6 @@ E xi = 1/(3 pi) on 12/12 side-cells, but phi Var xi is about 0.78 x 44/(15 pi) o
 endpoints moving (side_const.py) gives 0.694 = 0.743 x 44/(15 pi) for that side, which the measurements approach as theta -> 0.
 **How to apply:** for a Markov chain whose state shrinks like 1/l with multiplicative width noise, look for the reciprocal
 variable that makes the step affine with a state-free multiplier, before reaching for Ethier-Kurtz.
-Locators: brain-repo 06_math_research/frontier/rows/T262/DOSSIER.md section "1 Nov (an agent)",
+Locators: the private repository, 06_math_research/frontier/rows/T262/DOSSIER.md section "1 Nov (an agent)",
 moves.jsonl m262a (89acdbda). Related: [[t340_linear_bn_width_floor_exact_n_n1_over_2n1_per_mode_2026_11_01]].
 

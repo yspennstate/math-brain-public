@@ -6,7 +6,7 @@ metadata:
   created: 2026-11-03
   created_at: 2026-11-03T00:55:59+04:00
   status: provisional
-  evidence: "brain-repo rows/T019 moves 43bc761d, t019_literature.md 26b99a05"
+  evidence: "the private repository, rows/T019 moves 43bc761d, t019_literature.md 26b99a05"
   modified: 2026-11-02T21:42:43.421Z
 ---
 
@@ -48,7 +48,7 @@ Lesson: two abstracts were not enough to call a case open; a secondary survey se
 
 T019 (Glauber colourings, O(n log n) mixing for q >= Delta + 2 on every graph), first open case Delta 3, q 5.
 
-Literature, read 3 Nov 2026 from abstracts and surveys only (full texts not yet read; no PDF tools on the Mac):
+Literature, read 3 Nov 2026 from abstracts and surveys only (full texts not yet read; no PDF tools on the worker machine):
 the one rapid-mixing result at q 5 on maximum-degree-3 graphs that may contain triangles is Bubley-Dyer-Greenhill,
 SODA 1998, and it is for their own heat-bath chain, not single-site Glauber. Every single-site Glauber result at or
 below q 5 for Delta 3 assumes triangle-free graphs (Dyer-Goldberg-Greenhill-Jerrum-Mitzenmacher 2001: triangle-free
@@ -64,7 +64,7 @@ computer-assisted attempt has to use a weighted metric, a k-step coupling or a b
 Exact data (m019a): n * gap for heat-bath Glauber at q 5 on 21 cubic graphs up to n 10 lies in 0.30-0.50, so
 relaxation is O(n) with a constant near 3 on every graph checked.
 
-Where it lives: rows/T019/t019_literature.md and moves m019a, m019b in brain-repo 06_math_research/frontier;
+Where it lives: rows/T019/t019_literature.md and moves m019a, m019b in the private repository, 06_math_research/frontier;
 Codex brief ~/codex_fleet/20261102/briefs/m5f-T019.md (queued, held by the disk gate on 3 Nov 00:5x).
 
 How to apply: before claiming any coupling result for Delta 3 q 5, check it is single-site Glauber and that the

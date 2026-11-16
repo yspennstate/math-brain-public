@@ -15,5 +15,5 @@ Method (papers_agent/G0013): semi-discrete W2 between the n grid points and the 
 
 Published: paper Proposition 4.11 (prop:small), 12 pp, 0 Overfull; yspennstate/wasserstein-layered-permutation-copulas c4a5293221ff78e4647123789f8db6cf72ab0679 ("Every permutation for n at most nine"); ledger open-problems-repo master 7058371b62dfa24147813253aeec9c2bc825683d [skip ci] (status still partial: general n open; n >= 10 covered only for permutations made of blocks of length <= 9).
 
-Why it matters for the next step: this route needs no partition or interval proof, only one Newton solve per class, so it is limited by the 9!/8 class count, not by block structure. n = 10 would be ~450k classes (~10x n=9's ~25 min exact run), feasible on the laptop if RAM allows; the margin shrinks like ~0.11/n^2 so 2^-40 rounding stays far below it.
+Why it matters for the next step: this route needs no partition or interval proof, only one Newton solve per class, so it is limited by the 9!/8 class count, not by block structure. n = 10 would be ~450k classes (~10x n=9's ~25 min exact run), feasible on the workstation if RAM allows; the margin shrinks like ~0.11/n^2 so 2^-40 rounding stays far below it.
 

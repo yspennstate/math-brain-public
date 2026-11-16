@@ -27,11 +27,11 @@ How it was checked:
   polynomially, roughly like (log n)^2/n^2, and never reaches zero at a finite n checked.
 - A forecast made before the n = 9 and 10 runs (0.117 and 0.099) held: 0.1177 and 0.0999.
 
-What it does NOT settle: the global inequality. Searches on Mac mini 1 (n = 6, 7, about 300 restarts) found no
+What it does NOT settle: the global inequality. Searches on worker machine 1 (n = 6, 7, about 300 restarts) found no
 counterexample (best gap >= -1.1e-15), but a local minimum plus a search is not a proof. A proof for all n would compute
 lambda(n-2,2) in closed form and then needs a global argument.
 
-Files: brain-repo/12_cognitive_architecture/codex_local_1108/briefs/OPEN3/independent_check_agent/
+Files: the private repository, 12_cognitive_architecture/codex_local_1108/briefs/OPEN3/independent_check_agent/
 (HOLDING_REDUCTION.md, kn_local_min_check.py, kn_irrep_eigs.py, kn_irrep_eigs_n9_12.out); GitHub commits 683d9749 (n=8)
 and d4715b97 (n=9..16). What would change this: a closed form for lambda(n-2,2) going to zero, or a global counterexample.
 

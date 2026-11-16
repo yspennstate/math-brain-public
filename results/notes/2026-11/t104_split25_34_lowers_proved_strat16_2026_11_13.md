@@ -8,7 +8,7 @@ metadata:
   modified: 2026-11-13T11:57:52.264Z
 ---
 
-T104 (Alon Conj 1.5), 13 Nov 2026: Codex STRAT16 on Mac mini 1 (~/agent_run/STRAT16, tarball STRAT16_final.tgz sha256 bc47e675...)
+T104 (Alon Conj 1.5), 13 Nov 2026: Codex STRAT16 on worker machine 1 (~/agent_run/STRAT16, tarball STRAT16_final.tgz sha256 bc47e675...)
 PROVED by replay_all.py (17 exact stages):
 - split 2+5 and split 3+4 (each carrier connected, simple at the top) plus isolates: T>0 for every N>=7 and N->inf;
   closures T>=0, equality only at two equal edges plus isolates.

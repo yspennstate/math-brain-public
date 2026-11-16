@@ -9,7 +9,7 @@ metadata:
   evidence: "06_math_research/referee_reports/2026-11-12/K5/REPORT.md; agent_run/k5/check_fork_comb.py exact recheck"
 ---
 
-How much can lumping raise the stopping-rule mixing time of a reversible chain on n states? K(n) >= floor(n/2) for every n, one better than the floor((n-2)/2) comb in lumping-mixing-time (P0242). With the quotient upper bound K(n) <= max(1, n-2) this gives K(4) = 2, 2 <= K(5) <= 3, 3 <= K(6) <= 4. Found by a Codex research run on Mac mini 1 (12 Nov 2026, 20:38-21:00 +04) started from the K(4) = 2 result.
+How much can lumping raise the stopping-rule mixing time of a reversible chain on n states? K(n) >= floor(n/2) for every n, one better than the floor((n-2)/2) comb in lumping-mixing-time (P0242). With the quotient upper bound K(n) <= max(1, n-2) this gives K(4) = 2, 2 <= K(5) <= 3, 3 <= K(6) <= 4. Found by a Codex research run on worker machine 1 (12 Nov 2026, 20:38-21:00 +04) started from the K(4) = 2 result.
 
 Construction (fork comb, 2N+4 states): a, b, c, spine z_0..z_N, teeth y_0..y_{N-1}; t >= 2, r = t^3, alpha = t. Edges a-z_0 weight 1, z_k-z_{k+1} weight r^{k+1}, y_k-z_{k+1} weight alpha r^{k+1}, b-z_N weight alpha r^{N+1}, c-z_N weight r^{N+2}. Loops: t-1 at a, (t-1) alpha r^{k+1} at y_k, (t-1) alpha r^{N+1} at b, (N+2) r^{N+4} at c. Lump {z_k, y_k} for k < N and {z_N, c}; keep a and b. The quotient is a path from a to a heavy root with b as a second leaf, N+3 states, and tmix(quotient)/tmix(X) -> N+2 = q-1, so every inequality in the quotient upper-bound chain is tight in the limit. It uses N+1 pair merges.
 
@@ -17,5 +17,5 @@ Rechecked independently by an agent with a separate exact solver (Fraction hitti
 
 Not settled: K(5). The run's searches (all ten pair merges, Powell and differential evolution over 15 log-weights) plateau at 1.998 < 2, and the natural equal-leaf generalisation of the K(4) family stays at ratio 2 for every number of leaves (it loses at tmix <= tau0 of the quotient). The run conjectures K(n) = floor(n/2), and in particular that merging a single pair raises tmix by at most a factor 2. Useful exact identity from the run, lifted to original states: Fhat_{f(i)f(j)} = F_ij + W R (h_i - p)(h_j - p), with h the u-before-v harmonic function, R the u-v effective resistance, p = E_pi h; so an increase needs two unmerged states on the same side of p.
 
-Status: provisional until the P0242 author folds it in with a proof read. Report: brain-repo 06_math_research/referee_reports/2026-11-12/K5/REPORT.md. Related: [[lumping_raises_mixing_time_at_most_n_minus_2_and_k4_is_2_2026_11_12]].
+Status: provisional until the P0242 author folds it in with a proof read. Report: the private repository, 06_math_research/referee_reports/2026-11-12/K5/REPORT.md. Related: [[lumping_raises_mixing_time_at_most_n_minus_2_and_k4_is_2_2026_11_12]].
 
