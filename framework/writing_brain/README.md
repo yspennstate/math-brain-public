@@ -1,6 +1,6 @@
 # Writing-brain reader tools (16 November 2026)
 
-Ten standard-library Python tools from the writing brain's tests of 15 and 16 November 2026. Each was kept because a
+Twelve Python tools (standard library, with numpy for the draws in `creative_draw.py`) from the writing brain's tests of 15 and 16 November 2026. Each was kept because a
 rule fixed before the run held against blind readers or blind judges, or is kept as a sheet with its limits stated.
 The notes that record the tests are in `results/notes/framework-2026-11/` (named below).
 
@@ -16,6 +16,8 @@ The notes that record the tests are in `results/notes/framework-2026-11/` (named
 | `turn/numbers_sheet.py` | Lists every number in a chapter by the thing it counts, the clock times, and each number that counts four or more different things, so counts that cannot both be true sit side by side. `numbers_sheet.py chapter.md [--all]`. | `draft_numbers_repeats_openers_against_published_fiction_2026_11_16` (published openings median 1.8 counted numbers per thousand words, drafts about 9.5) |
 | `creative/sentence_repeat_rate.py` | The paper repeat rule moved to prose: a long sentence sharing most of its word pairs with an earlier one in the same chapter, counted beside published novels cut to the same length. Needs the corpus catalogue (`WRITING_BRAIN_DIR`). | same note (no repeats in 2,801 draft sentences; 5 in 33,708 published; not printed on a page) |
 | `creative/paragraph_openers.py` | Runs of three or more prose paragraphs opening on the same word, beside published novels. Needs the corpus catalogue. | same note (drafts 4.7 per 100 paragraphs, novels median 3.3; inside the published range) |
+| `creative/creative_draw.py` | Probability used to keep a writer off the obvious. `refs` hands the writer model passages chosen to differ in manner (a style kernel, a self-repelling memory per agent, optionally an exact k-determinantal draw); `pick` keeps, among the writer's candidate next moves with its own p= guesses, the one whose surprisal is nearest the entropy (the typical set), with `--shelf` dropping stock pairings first; `spent` and `page` list the words a page repeats beyond the shelf's rate and the words that come back in three or more paragraphs. `selftest` runs controls both ways. | mixed: the k-DPP drew no more varied passages than a plain random draw on this shelf (stated in the file); a stock pairing is not where blind readers find weak lines (`stock_word_pairings_are_not_where_readers_find_weak_lines_2026_11_16`); words back in 3+ paragraphs tracked worse judge rank (`writing_recurring_business_tracks_worse_judge_rank_2026_11_14`, a hypothesis) |
+| `creative/phrase_df.py` | Counts in how many literary passages of the shelf each pair of consecutive content words occurs; `build` writes the table `creative_draw.py pick --shelf` reads, `show` prints a sentence's counts. Needs the corpus catalogue. | used by `creative_draw.py`; the table is not in this repository |
 
 `papers/` holds the paper shelf tools (harvest refereed, openly licensed arXiv papers; cut them into the moves a paper
 makes; compare a paragraph with published ones making the same move). See `papers/README.md`.
@@ -33,7 +35,10 @@ makes; compare a paragraph with published ones making the same move). See `paper
 
 The comparison shelves (openings of forty published novels and of 387 works by authors born 1880 to 1945) are public
 domain texts, mostly from Project Gutenberg and Standard Ebooks, whose volunteers transcribed and edited them. The blind-reader protocol follows the usual
-practice of registered reports: the rule and its pass bar are written down before any reading is scored. The
+practice of registered reports: the rule and its pass bar are written down before any reading is scored. The exact
+k-determinantal draw in `creative_draw.py` uses the spectral algorithm of J. B. Hough, M. Krishnapur, Y. Peres and
+B. Virag (Probab. Surv. 3 (2006) 206-229) with the k-DPP step of A. Kulesza and B. Taskar (Found. Trends Mach. Learn.
+5 (2012) 123-286). The
 Mantel-Haenszel stratified odds ratio used in the length check is due to N. Mantel and W. Haenszel (J. Natl. Cancer
 Inst. 22 (1959) 719-748).
 
