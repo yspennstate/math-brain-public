@@ -6,7 +6,7 @@ with a one-line question-and-answer description, a status of `verified` or `prov
 behind it), so the folder can be dropped into a memory directory and recalled like any other note. Links of
 the form `[[name]]` point to other notes; some of them are in this folder, in `results/notes/2026-11/` (the
 mathematics of the same weeks) or in the private brain. Notes about private parts of the deployment are left
-out, and requests are paraphrased. 404 notes.
+out, and requests are paraphrased. 407 notes.
 
 A `provisional` note records a measurement that has not been repeated or a fix that has not yet run live for
 long; read it as a lead. Several notes are negative results kept on purpose: a change that lost, a check that
@@ -590,3 +590,13 @@ A dictionary and word walk for writing agents, the faults found in it and their 
 | [word_walk_dictionary_walk_weighted_to_the_shelf_2026_11_14](word_walk_dictionary_walk_weighted_to_the_shelf_2026_11_14.md) | verified | To move writing agents off their habitual words, the writing brain carries a dictionary (Open English WordNet 2025, 73,530 single words) counted against a shelf of public-domain books and against ... |
 | [word_walk_moves_on_senses_not_words_2026_11_14](word_walk_moves_on_senses_not_words_2026_11_14.md) | verified | A walk on a dictionary's flat neighbour lists drifts from one meaning to another (soot -> c -> cocaine), and the gloss it prints can name a different sense from the example line beside it. Two fixes: ... |
 | [writing_brain_rule_cards_craft_cards_shelf_and_hook_2026_11_13](writing_brain_rule_cards_craft_cards_shelf_and_hook_2026_11_13.md) | verified | How the writing brain is built: about 250 rule cards taken from an editor's notes on writing (each with a pattern that must fire on a bad example and stay silent on a better one), about 80 craft ... |
+
+## Added on 16 November: reading sheets, period shelves and a tar pitfall (3)
+
+Sheets that set related sentences side by side for a reader, style counts measured against a shelf of the draft's own period, and a Git Bash archive-path fault.
+
+| note | status | what it says |
+|---|---|---|
+| [git_bash_tar_reads_drive_letter_as_remote_host_2026_11_16](git_bash_tar_reads_drive_letter_as_remote_host_2026_11_16.md) | verified | In Git Bash on Windows, tar given an archive path with a drive letter (C:/...) reads 'C' as a remote host and fails with 'Cannot connect to C: resolve failed'. Inside a script whose errors are not ... |
+| [reader_sheets_list_places_green_page_checks_miss_2026_11_15](reader_sheets_list_places_green_page_checks_miss_2026_11_15.md) | provisional | A page that passes every machine check is not a read page: on one 10,700-word chapter, 28 pattern checks were silent and a full read then changed 22 sentences. The faults a read finds are mostly ... |
+| [style_counts_need_a_shelf_of_the_drafts_own_period_2026_11_15](style_counts_need_a_shelf_of_the_drafts_own_period_2026_11_15.md) | provisional | A draft standing above published openings on a count of style may be measuring the shelf's date, not the draft. Re-counted on 387 openings by authors born 1880-1945 (about 3 million words of ... |
