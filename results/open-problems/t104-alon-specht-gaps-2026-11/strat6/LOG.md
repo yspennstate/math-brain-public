@@ -1,0 +1,37 @@
+PROVED: Work started 2026-11-13 03:19 +04. Task: prove the rest of the connected n=5, D=2 stratum, checking the ray-to-zero-face reduction first. All writes, computation artifacts and certificates stay in this folder; no network or language-model workers are used. The prior results and formula scripts have been read.
+
+PROVED: For a fixed orthonormal zero-sum frame and fixed r, write T/a=L+aH. The prior moment bound gives L>=7(1+r)/90>0. Each edge weight is 1/10+a[(1+r)/20+u_i u_j+r w_i w_j]. The admissible ray is therefore an interval with finite endpoint at either a=2/(3-r) (disconnected) or a zero weight. Nonnegativity at that endpoint implies nonnegativity along the ray by affine interpolation. A complete derivation and exact replay will be written in RESULT.md.
+
+PROVED: A zero edge is a valid reduction for a fixed frame and r. Iterating by adding more zero edges requires a new deformation inside the first face: the original ray leaves that face immediately. No further face reduction is assumed without proof.
+
+NUMERICAL: Next investigations: stronger exact moment inequalities from nonnegative edge sums, and coordinates for a zero-weight endpoint. Floating optimization, if used, serves only certificate discovery.
+
+PROVED: 2026-11-13 03:28 +04. Seventeen new rational cells have been generated and replayed successfully by verify_strong_cells.py. They use a stronger edge variance bound and positive-semidefinite residual cubic forms, instead of the earlier fixed decomposition. Example: a<=63/125 on r in [1/2,11/20], and a<=267/500 on [13/20,7/10]. Exact coefficients and rational PSD tests are saved in strong_moment_cells.json; the construction is in moment_bounds.py and discover_moment_cells.py.
+
+NUMERICAL: Retaining the actual extreme-u pair and all of R_w leads to ternary sextic coefficient forms. At r=1/5, 440/455 forms certify, with 15 unresolved; at r=3/20, 450/455 certify, with five unresolved. These do not prove a larger ratio strip. The selected extreme-u pair need not be the limiting edge. Partial certificates and logs are retained.
+
+NUMERICAL: A separate test of the proposed second face reduction found negative tangent curvature in all 100,000 sampled zero-edge endpoints and no positive curvature among 1,000,000 frame/edge pairs. This suggests concavity along a fixed-frame zero-edge line, but it has not yet been proved and is not used as a theorem.
+
+PROVED: 2026-11-13 03:42 +04. A further strengthening is now certified: all frames satisfy eight additional linear inequalities in A,C, and their A/B swaps. The most useful upper bound is 2A+C<=11/8; a lower mixed-moment bound is A-C<=5/8. The exact certificates multiply the ordered-cone matrix polynomial by a power of z0+z1+z2+z3 and check every coefficient matrix by rational principal minors. verify_polya_moments.py has replayed all 5,445 coefficient matrices. Adding these inequalities and K0>=4/5 gives a 33-vertex moment polytope.
+
+PROVED: The strengthened equal-gap endpoint is the unique root G in (551/1000,69/125) of 6272 G^3-2989 G^2-1034 G+427=0. verify_equal_gap.py has checked the root isolation, common-zero identities, and rational monotonicity bounds. The final proof uses the new variance lower bound for both N_a and J_a and polynomial monotonicity in g; the initial proposed radial extension was repaired during the final audit below.
+
+PROVED: zero_face.py gives a six-variable rational chart for every rank-two-gap frame with zero edge {4,5}. It symbolically verifies the projector, normalization, and the 1,254-term polynomial numerator 45 D^2 det(M) T. Positivity of that whole face polynomial has not been established.
+
+NUMERICAL: A universal normalized-concavity SOS attempt certified 419 of 455 coefficient forms, leaving 36 unresolved, including pure cone rays. No concavity theorem or second face reduction is claimed from this attempt.
+
+PROVED: 2026-11-13 03:47 +04. The complete 88-cell base-polytope refinement is saved and has replayed successfully. It covers a<=58/125 uniformly, and has substantially larger individual ceilings, including values above 11/20 at many ratios near one. Ten exact integer-frame zero-edge witnesses are saved; verify_rational_witnesses.py confirms that each satisfies all of the old remaining-region conditions and a new nonnegative lower bound.
+
+PROVED: A further exact identity is available for every direction (alpha,beta): apply weighted variance to alpha*u_i*u_j+beta*w_i*w_j. The cubic term is a(alpha^2*d^2+2alpha*beta*e^2+beta^2*f^2)+b(alpha^2*e^2+2alpha*beta*f^2+beta^2*h^2). An initially incorrect expression for that term was rejected by symbolic replay and corrected before any certificate generation. A new conic discovery implementation will optimize these bounds directly through perspective cones; its output will only be used after rational repair and replay.
+
+PROVED: 2026-11-13 04:01 +04. Final moment coverage now consists of 88 base-polytope cells, 44 enhanced-polytope cells and 44 directional-variance cells. verify_all_cells.py has replayed all 176 with exact rational arithmetic. The combined uniform scale ceiling is 103/200. Example combined interval ceilings are 68/125 on r in [1/5,2/5], 289/500 on [2/5,3/5], and 57/100 on [3/5,4/5].
+
+PROVED: Direct zero-face interval certificates have also succeeded. Forty-seven rational six-dimensional boxes enclose exact connected zero-edge endpoints missed by every general moment-cell test. Rational inclusion arithmetic proves the full face numerator strictly positive throughout every box (on its admissible part), with positive normalization denominators. verify_face_boxes.py replays all interval bounds and independently matches three point evaluations against the 1,254-coefficient polynomial. This implements the requested zero-edge-face route beyond the moment cells.
+
+PROVED: The conditional equal-gap basis rotation d=0 implies A<=1/2 by Newton identities and Rolle's theorem. Its extra cell proves only g<=551/1000, weaker than the new cubic endpoint G; it does not enlarge that final interval. Its exact replay is verify_equal_gap_rotation.py.
+
+PROVED: Final audit corrected the extension step in the equal-gap argument. A frame feasible at a small g need not be feasible at G, so applying a weight-dependent theorem at that larger g would not justify radial interpolation. The corrected proof checks that PN and PNJ decrease in g on their respective K ranges. Their algebraic nonnegativity at G therefore extends to the actual g, where the nonnegative-weight hypotheses do hold. verify_equal_gap.py now checks the additional exact derivative bounds. The endpoint G is unchanged.
+
+PROVED: 2026-11-13 04:07 +04. Final replay completed: python3 replay_all.py passed every certificate used in RESULT.md, including all 176 rational moment cells, 47 direct face boxes, 5,445 moment coefficient matrices, ten exact enlargement witnesses, and the isolated cubic-root equal-gap theorem. The face boxes were enlarged by rational binary search, then replayed; exact Gram identities also verify that their source endpoint charts are enclosed. RESULT.md contains the full derivations, commands, and residual domain, including endpoint tests and all zero-face box exclusions. The full connected stratum remains open. No network or language-model workers were used; all writes stayed in this folder.
+
+PROVED: Task: “Prove T >= 0 on the rest of the connected n = 5, D = 2 stratum” — received 2026-11-13, approximately 03:18 +04.

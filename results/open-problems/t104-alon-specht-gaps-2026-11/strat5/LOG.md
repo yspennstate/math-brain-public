@@ -1,0 +1,29 @@
+PROVED: Task received 2026-11-13 at approximately 02:19 +04: “close the rest of the connected n = 5, D = 2 stratum.” Working alone, with each job single-threaded. Priority lowering was attempted but denied by the sandbox.
+
+PROVED: Read GAP_STATE_FORM_context.md and PREVIOUS_RESULT.md before mathematical work. The supplied scripts use the notation of the latter. Shared mesh hello/digest and task checklist writes were attempted; the sandbox rejects their databases as read-only. All task artifacts stay in this folder.
+
+PROVED: Initial plan: measure the constrained connected quotient at edge floors 1/1000 and 1/1000000; then seek sharper exact inequalities and certificates. Previous results are inputs, not a claim that the remaining region is settled.
+
+NUMERICAL: Initial unseeded local runs missed the known sparse basin. A Cayley fit with unrestricted coordinates also exceeded the optimization coordinate box at one floor. Fixed the initialization by fitting inside a smaller box, seeded the previous exact sparse family plus a complete graph, and reran 1,000 starts at each floor. Best raw quotients: 0.0379814199843 at 1e-3, 0.0202946479864 at 1e-6. Both raw points have floor residual about -1e-11, while all weights remain positive. Original trace formulas agree with the frame formulas. The intermediate commentary's 0.0361 was a transcription error; the correct first number is 0.0379814199843.
+
+PROVED: For a zero-sum unit five-vector, the largest product of distinct coordinates is at most 3/10. Hence a(20p-1)<=2+7b. Sharper lower bounds for the quadratic coefficients are P,R>=-34/15 and Q0>=-29/75. Retaining moment dependence rather than applying a uniform absolute-value error gives an ordered-cone matrix certificate up to r=123/2000. Its full derivation and an independent integer verifier are being prepared.
+
+PROVED: sharpen_rank_one.py reproduces the original matrix construction and proves E>=86/125 by 1,155 exact principal minors (the prior constant was 1/2). ratio_certificate.py exports 165 rational coefficient matrices for its new endpoint inequality. These are sufficient certificates, not numerical eigenvalue tests.
+
+PROVED: nice(10) was attempted, but setpriority is also denied by the sandbox. Jobs use one Python process and single-thread BLAS. The searches take about thirteen seconds per floor and small memory; no other workers are launched.
+
+PROVED: The quartic SOS endpoint succeeds at r=3/25. There are 286 ternary quartic coefficient forms, each represented by an exact rational positive semidefinite 6-by-6 Gram matrix. verify_quartic_certificate.py independently reconstructs the full endpoint polynomial from the radial coefficients and checks every coefficient and PSD elimination. The quadratic lower comparison is concave in r: its r^2 coefficient is <=-3/160. This extends the certificate to every ratio below 3/25.
+
+NUMERICAL: Further endpoints 123/1000, 31/250 and 1/8 do not certify with this coefficient decomposition. The respective numbers of unresolved forms are 1, 3 and 5. These are method limitations, not counterexamples. The first symbolic-expression implementation of the quartic polynomial was stopped with Ctrl-C before producing a certificate; sparse polynomial-ring arithmetic replaced it and kept the job small.
+
+PROVED: Upper moment bounds follow from ||diag Z||^2<=(3/5)||Z||_F^2 for trace-zero, row-zero symmetric Z. Lower certificates prove A,B>=7/30 and A+C,B+C>=1/4. Their 84 coefficient matrices are independently verified. The resulting polytope has 19 exactly enumerated vertices, giving A1(r). Its inequalities plus the ratio strip imply the uniform region a<=443/1000.
+
+PROVED: Nonnegative edge sums w_ij Q_ij^2 and w_ij q_i q_j produce two new moment bounds. Their exact identities and the cubic remainder identity are checked in weight_moment_audit.py. These give 40 rational cells on r in [3/5,1], independently replayed by verify_cells.py, and a separate equal-gap proof up to (209+3sqrt(305))/476. The first cell run unnecessarily required its new bound at a=0; the final certificates start at a=4/11, whose lower side is already proved, and optimize multipliers against both scale endpoints.
+
+PROVED: Radial interpolation transfers every disconnected endpoint proof to its segment toward the complete graph. Condition min w_ij >= (lambda-a)/5 suffices, with T>=(7/45)(a+b)(lambda-a). This covers the connected numerical minimizing family without requiring a small gap ratio or a small scale. rational_connected_family.py gives two exact positive-floor witnesses and checks this bound directly.
+
+NUMERICAL: polish_connected.py moves each raw search winner slightly toward the complete graph to make its floor constraint strictly positive in floating arithmetic. Both direct trace and moment evaluations agree. The complete raw records and polished records are saved; no floating point endpoint is presented as an exact certificate.
+
+PROVED: RESULT.md now states the partial theorems, complete derivations, certificate construction and replay commands, numerical limitations, and the explicit remaining region. The full connected stratum has not been closed. Shared brain/checklist updates remain unavailable under this sandbox; the durable result and reproduction paths are recorded here instead.
+
+PROVED: Final replay passed: 84 lower-moment coefficient matrices; all 286 quartic SOS Gram matrices and their full independent polynomial identity; both edge-sum identities and the cubic remainder; independent enumeration of 19 vertices; all 40 rational cells, including their multiplier bounds and exact minima; the uniform a<=443/1000 check; the equal-gap algebraic identities; and both exact connected witnesses. No error appears in the final replay outputs. These checks used no language-model workers and no floating SDP solver.
