@@ -41,6 +41,11 @@ JOB_RE = re.compile(rb'"toolUseResult":\{"id":"([0-9a-f]{6,12})","humanSchedule"
 DEL_RE = re.compile(rb'"name":"CronDelete","input":\{"id":"([0-9a-f]{6,12})"')
 WAKE_RE = re.compile(rb'"name":"ScheduleWakeup","input":(\{.*?\})(?:,"caller"|\}\],|\},\{"type")')
 CRON_IN_RE = re.compile(rb'"name":"CronCreate","input":\{"cron":"([^"]+)"')
+# A CronList result begins with the job id (a grep that quotes one does not). Claude Code restores session crons when a
+# session is resumed (17 Nov: cron 3d80e35e, created 14 Nov, kept firing after the 03:00 laptop restart), so a cron that
+# a CronList printed after the process start is alive whatever its creation time.
+LIST_RE = re.compile(rb'"type":"tool_result","content":"([0-9a-f]{8} \xe2\x80\x94 (?:[^"\\]|\\.)*)"')
+LIST_ID_RE = re.compile(rb'(?:^|\\n)([0-9a-f]{8}) \xe2\x80\x94 ')
 
 
 def _ts(line):
@@ -86,7 +91,8 @@ def scan(path, st):
             fh.readline()                        # skip a partial line
         last_cron = None
         for line in fh:
-            if b"Cron" not in line and b"ScheduleWakeup" not in line and b'"humanSchedule"' not in line:
+            if (b"Cron" not in line and b"ScheduleWakeup" not in line and b'"humanSchedule"' not in line
+                    and b"[session-only]" not in line):
                 continue
             ts = _ts(line)
             if ts is None:
@@ -96,6 +102,11 @@ def scan(path, st):
                 last_cron = m.group(1).decode("utf-8", "replace")
             for m in JOB_RE.finditer(line):
                 crons[m.group(1).decode()] = [ts, last_cron or ""]
+            for m in LIST_RE.finditer(line):
+                for i in LIST_ID_RE.findall(m.group(1)):
+                    k = i.decode()
+                    crons.setdefault(k, [ts, ""])
+                    st.setdefault("listed", {})[k] = ts
             for m in DEL_RE.finditer(line):
                 crons.pop(m.group(1).decode(), None)   # created before the scanned tail still counts as ended
                 st["ended_crons"] = (list(st.get("ended_crons") or []) + [[m.group(1).decode(), ts]])[-20:]
@@ -119,7 +130,9 @@ def scan(path, st):
 def armed(st, now):
     """(state word, detail). word: cron | wake | stopped | lapsed | none."""
     born = st.get("proc_start") or 0
-    live = {k: v for k, v in (st.get("crons") or {}).items() if v[0] >= born - 5 and now - v[0] < CRON_LIFE}
+    listed = st.get("listed") or {}
+    live = {k: v for k, v in (st.get("crons") or {}).items()
+            if (v[0] >= born - 5 or listed.get(k, 0) >= born - 5) and now - v[0] < CRON_LIFE}
     if live:
         k = max(live, key=lambda k: live[k][0])
         return "cron", "cron %s (%s) alive" % (k, live[k][1] or "?")
