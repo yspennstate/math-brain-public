@@ -1,6 +1,5 @@
 """test_math_integrity_api_generations.py - the math hook asks each math_brain package for "a refused card refuses the
-block" in that package's own form, and serves nothing when a package offers neither form (29 Sep 2026, an agent;
-scheduled audit account01/B02 auto11, B02-R78-LEGACY-CHECKOUT-REFUSAL-DOWNGRADE-20260929).
+block" in that package's own form, and serves nothing when a package offers neither form (29 Sep 2026).
 
     python test_math_integrity_api_generations.py [MATH_SENSE.py] [--old OLD_MATH_SENSE.py]
 

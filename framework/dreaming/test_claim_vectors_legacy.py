@@ -1,24 +1,23 @@
-"""test_claim_vectors_legacy.py - a claim vector of unknown text is not bound to its claim (29 Sep 2026, an agent;
-scheduled audits account04/B06 r76 and account04/B14 r8).
+"""test_claim_vectors_legacy.py - a claim vector of unknown text is not bound to its claim (29 Sep 2026).
 
     python test_claim_vectors_legacy.py [--hook MATH_SENSE.py] [--vecs MATH_CLAIM_VECS.py] [--src MATH_BRAIN_SRC]
                                         [--old-hook OLD.py] [--old-vecs OLD.py] [--old-src OLD_SRC]
 
 Fixture stores and vector files live in a temporary folder; the live store and its vectors are never opened.
  L1  a bound file with one legacy row: coverage counts it missing, status is not ok and names it, the hook names nobody
-     and the vouch agrees with nothing (T-R76-LEGACY-CLOSES)
- L2  the same file with that row made from its text: the hook names its winner (T-R76-VERIFIED-OPENS)
- L3  one row made from its text and one legacy row: the whole channel stays closed (T-R76-MIXED)
- L4  a legacy row of a superseded claim closes it too (T-R76-SUPERSESSION)
+     and the vouch agrees with nothing
+ L2  the same file with that row made from its text: the hook names its winner
+ L3  one row made from its text and one legacy row: the whole channel stays closed
+ L4  a legacy row of a superseded claim closes it too
  L5  rebuild(): the legacy row re-embedded from its current text, the other rows byte for byte, digest and source
-     recorded; a second run writes nothing; the hook then names its winner (T-R76-REBUILD)
+     recorded; a second run writes nothing; the hook then names its winner
  L6  rebuild(out=...) writes the rebuilt file there and leaves the live one byte-identical
  L7  rebuild() leaves a file that does not record its row sources for migrate()
  L8  extend() re-embeds a legacy row as it re-embeds a row whose text changed
  L9  migrate() on an unbound file whose vector no text of its claim reproduces records the row legacy, and the hook
-     refuses it (T-R76-DIGEST-COPY, at the writer: a current digest beside another vector does not make it bound)
+     refuses it (at the writer: a current digest beside another vector does not make it bound)
  L10 the loader reads row_source into _sources, and refuses a value outside body/title/title body/legacy and a count
-     that is not the file's (T-R76-LOADER)
+     that is not the file's
 With --old-hook and --old-vecs, the hook and the module before this change pass a file with a legacy row (N1, N2); with
 --old-src, the loader before it does not read row_source (N3). Each shows its check can fail.
 """

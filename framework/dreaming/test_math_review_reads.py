@@ -1,6 +1,5 @@
 """test_math_review_reads.py - the math hook reads a card's recorded review after the selection, for the shown cards only,
-and judges each review row on its own (29 Sep 2026, an agent; scheduled audits account04/B10 r27, account04/B17
-r15 and account02/B19 auto57-58).
+and judges each review row on its own (29 Sep 2026).
 
     python test_math_review_reads.py [MATH_SENSE.py] [--old OLD_MATH_SENSE.py]
 
@@ -8,14 +7,14 @@ Builds throwaway evidence tables (the store's own evidence schema and claim inde
 in a temporary folder and reads them through _review_reads, and _trust_tag renders what it returns.
  V1  a sound human review that passed reads 'human read ...: no gap; provisional'; a sound agent read that failed reads
      'agent read ...: GAP FOUND; unverified'
- V2  a human review edited to pass without its digest (B19-R69 E1): no read shown, the card reads unverified
+ V2  a human review edited to pass without its digest (E1): no read shown, the card reads unverified
  V3  passed given as the string "false", digest consistent (E2): no read shown
  V4  payloads that are a JSON list, null, a string, a number or true (E5, E6): skipped, nothing raised
  V5  a payload that is not JSON (E7): skipped
  V6  two dated reads of one claim: the later one is shown
  V7  a row whose payload names another claim than its column: skipped
- V8  only the three values the tag uses are kept (B17-R24)
- V9  5,000 review rows of other claims: reading three claims decodes only their rows (B10-R45)
+ V8  only the three values the tag uses are kept
+ V9  5,000 review rows of other claims: reading three claims decodes only their rows
 With --old, the reader before this change shows the edited review as a human's pass (V2), reads "false" as a pass (V3),
 raises on a JSON list (V4) and decodes every row (V9): the checks can fail.
 """

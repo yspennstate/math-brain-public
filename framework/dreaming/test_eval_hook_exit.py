@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """The proof-bank and value-in-block evaluators score only a hook call that finished cleanly, and the gate refuses PASS
-when one did not (account03/B01, B01-R79-GATE-PROOFBANK-VIB-FAILED-HOOK-OUTPUT-SCORED-20260929; 30 Sep 2026).
+when one did not (30 Sep 2026).
 
     python test_eval_hook_exit.py
 

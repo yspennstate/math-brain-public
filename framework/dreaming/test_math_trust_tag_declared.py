@@ -1,5 +1,4 @@
-"""The card's trust tag names a revision's declared status apart from its authenticated one (account02/B11,
-B11-R79-OVERLAY-STATUS-CANNOT-APPEND-01, T9; 30 Sep 2026).
+"""The card's trust tag names a revision's declared status apart from its authenticated one (T9; 30 Sep 2026).
 
     python test_math_trust_tag_declared.py [MATH_SENSE_BEFORE_THE_FIX.py]
 

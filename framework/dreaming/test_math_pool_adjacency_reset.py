@@ -1,5 +1,5 @@
 """test_math_pool_adjacency_reset.py - the math hook's pool adjacency does not carry from one prompt to the next in one
-process (28 Sep 2026, an agent; scheduled audit account02/B11 auto37, B11-R31-POOL-ADJ-FALLBACK-STATE-LEAK-01).
+process (28 Sep 2026).
 
     python test_math_pool_adjacency_reset.py [MATH_SENSE.py] [--old OLD_MATH_SENSE.py]
 

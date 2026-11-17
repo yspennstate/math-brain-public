@@ -1,6 +1,5 @@
 """test_math_vouch_seal.py - a block the vouch route opens goes out only if it still leads with the card the word and meaning
-channels agreed on (29 Sep 2026, an agent; scheduled audit account01/B08 auto11,
-B08-R19-VOUCH-FINAL-IDENTITY-NOT-SEALED-079).
+channels agreed on (29 Sep 2026).
 
     python test_math_vouch_seal.py [MATH_SENSE.py] [--old OLD_MATH_SENSE.py]
 

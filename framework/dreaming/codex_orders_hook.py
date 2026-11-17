@@ -1,4 +1,4 @@
-"""codex_orders_hook.py - his standing orders for Codex sessions (27 Sep, an agent).
+"""codex_orders_hook.py - his standing orders for Codex sessions (27 Sep).
 
 Codex sessions run no membrane (~/.codex/hooks.json carries the reflexes, his prompts, the checklist and the math notes),
 so the part of the brain that holds his orders never reached them. This is the standing-orders channel of
@@ -72,9 +72,9 @@ def _classify(payload, scan=None):
     next time) or "response_before_meta" (a response came first, which Codex itself refuses as a rollout header).
     `scan` is the previous call's record for the file (path, offset and line count reached, size and mtime, status):
     a file that has only grown is read on from where the last call stopped, and one unchanged since a call that found
-    nothing is not read at all. Until 28 Sep all three were False and kept for the session's life (account01/B05 r70,
-    B05-R17-CODEX-INTERACTIVE-FALSE-STICKY-26); until 29 Sep only the first eight lines were read, so a header on line
-    nine stayed None and was read again at every evaluation (account02/B05 r72, B05-R55-FIRST8-META-CUTOFF-39), and only
+    nothing is not read at all. Until 28 Sep all three were False and kept for the session's life; until 29 Sep only the
+    first eight lines were read, so a header on line
+    nine stayed None and was read again at every evaluation, and only
     source "cli" counted as his."""
     path = str(payload.get("transcript_path") or "")
     if not path:
@@ -134,7 +134,7 @@ def _interactive(payload):
 def _log_error(kind, exc, payload):
     """One line per failure (the hook still exits 0 so Codex is never broken). Past 2 MB the file is set aside whole
     under a dated name and a fresh one begins, so no failure is dropped: the first version stopped writing at the cap,
-    and a flood of failures past it read as silence (account01/B20 R17, 27 Sep). Nothing here is ever deleted."""
+    and a flood of failures past it read as silence (27 Sep). Nothing here is ever deleted."""
     try:
         if os.path.exists(ERRLOG) and os.path.getsize(ERRLOG) > 2 * 1024 * 1024:
             base, ext = os.path.splitext(ERRLOG)

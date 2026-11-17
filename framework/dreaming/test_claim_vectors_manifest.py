@@ -1,7 +1,5 @@
 """test_claim_vectors_manifest.py - every claim-vector file carries the SHA-256 of its bytes, and bytes their manifest
-does not name are refused (29 Sep 2026, an agent; scheduled audits account03/B11 r90 and account04/B17 r74,
-B11-R77-SEMANTIC-GENERATION-CRC32-COLLISION-20260929-R90 and B17-R74-CRC32-COLLISION-PRESERVES-SEMANTIC-CACHE-
-GENERATION-20260929).
+does not name are refused (29 Sep 2026).
 
     python test_claim_vectors_manifest.py [--hook MATH_SENSE.py] [--vecs MATH_CLAIM_VECS.py] [--src MATH_BRAIN_SRC]
                                           [--old-vecs OLD.py] [--old-src OLD_SRC]

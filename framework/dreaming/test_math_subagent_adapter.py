@@ -1,5 +1,5 @@
 """test_math_subagent_adapter.py - research subagents get the math store's cards, and a held child is not counted as
-served (29 Sep 2026, an agent; job R70, scheduled audits account04/B14 r7, account01/B14 r83, account02/B05).
+served (29 Sep 2026).
 
     python test_math_subagent_adapter.py [--old OLD_MATH_SENSE.py] [--no-live]
 
@@ -9,10 +9,9 @@ served (29 Sep 2026, an agent; job R70, scheduled audits account04/B14 r7, accou
  A1-A10 the adapter with a stand-in hook and a scratch ledger: which calls it answers, what it appends, which arm a
         task falls in, what it writes to the ledger, and that nothing it does can raise
  A11    a math hook that exits with an error is not served, even when it printed a valid block first; an exit 0 with a
-        block is; an empty error exit and bad JSON stay failures (account01/B14 r91, B14-R91-R70-NONZERO-HOOK-EXIT-
-        STILL-INJECTS)
+        block is; an empty error exit and bad JSON stay failures
  A12    the tool call's id: each row records it, two calls of one task are two child sessions in one arm, and a call
-        without one keeps the child id the task alone gives (account01/B05 r91, B05-R70-SUBAGENT-LEDGER-NO-TOOLUSE-JOIN-42)
+        without one keeps the child id the task alone gives
  E1     end to end through a real math_sense.py subprocess in shadow: an answer inside the time limit, and no
         session shard for the child afterwards (skipped with --no-live)
 With --old, the hook before this change ignores MATHBRAIN_SHADOW and records the serve (the check can fail). With

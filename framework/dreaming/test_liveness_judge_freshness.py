@@ -1,6 +1,5 @@
 """test_liveness_judge_freshness.py - the waking liveness report says when the reflex judge or its precision table has
-stopped, on a 36-hour clock (29 Sep 2026, an agent; scheduled audit account04/B04 r6,
-B04-R43-STALE-PRECISION-PRIOR-20260928).
+stopped, on a 36-hour clock (29 Sep 2026).
 
     python test_liveness_judge_freshness.py [--module HOOK_LIVENESS.py] [--old OLD_HOOK_LIVENESS.py]
 

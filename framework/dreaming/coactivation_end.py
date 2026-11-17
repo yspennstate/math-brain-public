@@ -122,7 +122,7 @@ def _load_decayed_weights(path, now=None):
     """Validate the complete prior graph, then return time-decayed weights and applied receipts.
 
     A link whose decayed weight is below MIN_KEEP is left out here, before this fold's increments, not only when the
-    table is written (29 Sep, scheduled audit account01/B10 R45, B10-R45-COACTIVATION-PRUNING-PARTITION-DEPENDENCE-01).
+    table is written (29 Sep).
     Decay only shrinks a weight, so a link below the floor now crossed it at some moment since the last rewrite and has
     been gone since then. Before, it kept its residual until some fold rewrote the table, so whether a later co-read
     started from that residual or from nothing depended on when unrelated sessions ended: a 0.51 link co-read once 14 days
@@ -171,8 +171,8 @@ def _load_decayed_weights(path, now=None):
 def _atomic_write_weights(path, weights, applied, mtime=None):
     """Durably stage and atomically promote weights and their exactly-once receipts.
 
-    FULL PRECISION AND THE DECAY'S OWN INSTANT (2026-09-28, scheduled audit account04/B20 R12,
-    B20-R12-DECAY-QUANTIZATION-20260928). Weights used to be written as %.3f, and the table's mtime was the
+    FULL PRECISION AND THE DECAY'S OWN INSTANT (2026-09-28). Weights used to be written as %.3f, and the table's mtime
+    was the
     moment of the write. A fold less than about 14.5 minutes after the previous one decays a 1.0 weight by
     less than 0.0005, so the rounding put it back at 1.000, fold after fold: with folds every ten minutes an
     unreinforced link never faded, while the same fortnight in one fold halved it. The time between the

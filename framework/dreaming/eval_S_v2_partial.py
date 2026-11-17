@@ -20,7 +20,7 @@ import sys
 
 sys.path.insert(0, r"~/.claude/dreaming")
 sys.path.insert(0, r"~/.claude/brain_graph/bin")
-from quarantine_rows import keep_old  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep; account03/B01 auto31): brain data is never deleted, and an overwrite deletes
+from quarantine_rows import keep_old  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep): brain data is never deleted, and an overwrite deletes
 import numpy as np
 import brain as B
 import spread_recall as sr

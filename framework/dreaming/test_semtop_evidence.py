@@ -1,6 +1,4 @@
-"""test_semtop_evidence.py - the math hook's semantic first claim needs a winner (29 Sep 2026, an agent; scheduled
-audits account01/B10 r24, B10-R68-SEMANTIC-ARGMAX-WITHOUT-EVIDENCE-02, and account04/B11 r5,
-B11-R68-RAW-ARGMAX-UNBOUND-AGREEMENT-20260929-01).
+"""test_semtop_evidence.py - the math hook's semantic first claim needs a winner (29 Sep 2026).
 
     python test_semtop_evidence.py [MATH_SENSE.py] [--old OLD_MATH_SENSE.py]
 

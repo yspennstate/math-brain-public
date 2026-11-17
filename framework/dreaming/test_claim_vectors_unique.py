@@ -1,5 +1,4 @@
-"""test_claim_vectors_unique.py - one claim, one vector row (29 Sep 2026, an agent; scheduled audit account04/B06
-r75, B06-R75-DUPLICATE-CLAIM-ROWS-PASS-BINDING-20260929).
+"""test_claim_vectors_unique.py - one claim, one vector row (29 Sep 2026).
 
     python test_claim_vectors_unique.py [--hook MATH_SENSE.py] [--vecs MATH_CLAIM_VECS.py] [--src MATH_BRAIN_SRC]
                                         [--old-hook OLD.py] [--old-vecs OLD.py]

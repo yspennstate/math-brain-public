@@ -1,6 +1,4 @@
-"""math_subagent_adapter.py - the math store's cards reach research subagents too (29 Sep 2026, job R70; scheduled
-audits account04/B14 r7, account01/B14 r83 and account02/B05; the interactive review MB-IMPROVEMENT-20260929-155540,
-findings MB-I01 to MB-I03).
+"""math_subagent_adapter.py - the math store's cards reach research subagents too (29 Sep 2026).
 
 The math hook runs on prompt events, and a subagent's task never is one: the parent writes it into an Agent tool call,
 and the child starts with that text as its first message. In the week to 29 Sep, 868 Agent calls went out and 113 of
@@ -33,9 +31,9 @@ answer gets its task untouched, and so does every child when anything here fails
 The child's session id is uuid-shaped and derived from the parent's id and the task, so the hook's logs count the
 child as its own session and never as the parent. When the harness gives the tool call's id (tool_use_id, the same id
 its PostToolUse event carries), the child's session id takes it too and the ledger row records it: two calls of one task
-are two sessions and two rows a later event can be joined to, while the arm still comes from the cluster alone
-(account01/B05 r91, B05-R70-SUBAGENT-LEDGER-NO-TOOLUSE-JOIN-42). A math hook that exits with an error is never served,
-whatever it printed (account01/B14 r91, B14-R91-R70-NONZERO-HOOK-EXIT-STILL-INJECTS). The frame that opens a served
+are two sessions and two rows a later event can be joined to, while the arm still comes from the cluster alone. A math
+hook that exits with an error is never served,
+whatever it printed. The frame that opens a served
 block carries the row's delivery id, "(delivery <id>)", so the child's own transcript can show that it got this block.
 
     python math_subagent_adapter.py --summary [--since HOURS]    invocations, clusters and receipt stages per arm
@@ -57,7 +55,7 @@ LEDGER = os.environ.get("MATHBRAIN_SUBAGENT_LEDGER") or os.path.join(
 RECEIPTS = os.environ.get("MATHBRAIN_SUBAGENT_RECEIPTS") or os.path.join(os.path.dirname(LEDGER),
                                                                          "math_subagent_receipts.jsonl")
 FAULTS = os.environ.get("MATHBRAIN_SUBAGENT_FAULTS") or os.path.join(HERE, "logs", "math_subagent_faults.jsonl")
-# SERVE BY DEFAULT (30 Sep 2026, an agent, the author's 14:09 order to get relevant knowledge to agents as fast as
+# SERVE BY DEFAULT (30 Sep 2026, the author's 14:09 order to get relevant knowledge to agents as fast as
 # possible). Shadow saw 273 tasks, all film or helper work the math gate rightly refused, so it measured nothing. Replayed
 # in shadow, the 24 research-subagent tasks of 22-24 Sep (FEI, QFORM; 41 subagents that got no card then) would get a
 # block on 20, mostly on their subject: the LTF-FEI task gets the proven 14.22 bound, the monotone task the failed routes.

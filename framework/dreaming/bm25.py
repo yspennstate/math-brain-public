@@ -115,7 +115,7 @@ _DECIMAL = re.compile(r"^[0-9]+_[0-9]+$")                             # 0_65, 0_
 # added terms appear in exactly one memory. His laws are full of numbers he types back at the brain (x=0.65,
 # k 0.30, WIDTH 0.0048), so the lane is not obviously waste - it is measured, not assumed, below.
 _V3_DECIMALS = os.environ.get("BRAIN_TOKENS_V3_DECIMAL", "1") != "0"
-# DATES (2026-09-27, an agent; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
+# DATES (2026-09-27; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
 # month and day however written - "september 2", "2 Sep", "2026-09-02", a slug's 2026_09_02 - gains one shared token
 # md0902 on both sides; nothing is removed, so an exact match keeps its weight. A memory's head gets the tokens of the
 # dates in its first 12,000 characters (the slug's creation date among them), after the head budget, so they never
@@ -223,7 +223,7 @@ class _SidecarDF:
         # p keeps each term's postings blob in its row, so a df lookup by the primary key lands on leaf pages that hold
         # a few terms each: about 35 ms for the 200-odd words of a tool output. The covering index p_df(term, df) has
         # the same rows and answers in 2-4 ms, but the planner keeps choosing the primary key, so it is named. A sidecar
-        # built before the index existed has none and is read the old way (11 Nov, an agent).
+        # built before the index existed has none and is read the old way (11 Nov).
         try:
             ix = con.execute("select 1 from sqlite_master where type='index' and name='p_df'").fetchone()
         except Exception:
@@ -323,7 +323,7 @@ class QueryNormalizer:
         return " ".join(self._correct(t) for t in tokens(query))
 
 
-# DOC EXPANSION (2026-09-26, an agent). The index sees a memory in its own words, and he asks in his: measured on
+# DOC EXPANSION (2026-09-26). The index sees a memory in its own words, and he asks in his: measured on
 # 968 reworded questions, the answer memory is in a plain search's top five a third of the time. Each memory now also
 # carries three questions a person might ask whose answer is in it, written once in ordinary words by Haiku 4.5 from the
 # memory's own description and opening (doc_expand.py; it never sees a test question). They are appended after the
@@ -374,7 +374,7 @@ def _indexable(fn):
 
 ATTACHMENT_FAILURES = []     # (slug, error type) of every bundle read_doc could not verify in this process
 
-# read_doc's tokeniser output kept by the text's own hash (3 Nov 2026, RECALL-10X lever 11, an agent). In the
+# read_doc's tokeniser output kept by the text's own hash (3 Nov 2026, RECALL-10X lever 11). In the
 # resident recall server every call merges the memories newer than the published index (refresh_in_memory), and each
 # call re-read and re-tokenised the same twenty or thirty files: about 1 s of a 4 s warm recall went to _tokens_v3.
 # The key is the exact text, so a changed file gives a new key; the tokens are the tokeniser's own. BRAIN_BM25_TOKMEMO=0
@@ -423,7 +423,7 @@ def read_doc(mem_dir, slug):
         attachment_text = node_docs.search_text_for_node(mem_dir, slug)
     except Exception as exc:
         # A bundle that fails verification adds nothing to its parent's entry, and the rest of the index is read (28 Sep,
-        # scheduled audit account03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001). Until then one broken
+        # Until then one broken
         # bundle stopped the whole build and emptied recall's BM25 block: the live lane reads a fresh parent here, and a
         # damaged file is fresh by its mtime. The parent's own text is still indexed; the bundle is named on stderr.
         attachment_text = ""
@@ -448,7 +448,7 @@ def _read_threads():
 
 def read_many(mem_dir, slugs):
     """[read_doc(mem_dir, s) for s in slugs], in the same order, on a small thread pool.
-    Why (4 Nov 2026, TOP10 rank 3, an agent): a refresh's merge is file reads, not arithmetic - on a shadow
+    Why (4 Nov 2026, TOP10 rank 3): a refresh's merge is file reads, not arithmetic - on a shadow
     copy the merge loop for 1,000 notes took 0.4 s and their read_doc 4-31 s. Interleaved A/B on 4,000 older notes
     (100-note chunks, ABAB): serial 7.3 ms/note median, 8 threads 2.8, tokens identical. The open and read release
     the GIL; tokenising does not, so more threads buy little. BRAIN_BM25_READ_THREADS=1 restores the serial loop."""
@@ -951,7 +951,7 @@ def _publish_payload(payload, out, expected_signature, scan_t0, added, removed,
                 pkl_tmp = _stage_pickle(payload, pkl, staged, fresh_docs) if staged is not None else None
             except Exception:
                 pkl_tmp = staged = None
-        # THE POSTINGS SIDECAR GOES IN WITH THE INDEX TOO (7 Nov 2026, an agent, TOP10 rank 3). It was built by
+        # THE POSTINGS SIDECAR GOES IN WITH THE INDEX TOO (7 Nov 2026, TOP10 rank 3). It was built by
         # the refresh after the publish, 38-53 s later on the loaded laptop, and every BM25() in that gap - the recall
         # server and each prompt hook's spread_recall - unpickled the 104 MB payload instead (py-spy on the live server:
         # 2.2 s in 10 min). It is built here from the payload in hand under the name of the generation the staged file
@@ -1218,7 +1218,7 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
         # A caller's listing (the recall server's resident one) keeps an unchanged file's entry object and replaces it
         # when the folder watcher reports that name, so an entry object we have seen has the stat we already read:
         # name -> (entry, slug, fresh), reset when the index's scan reference moves. Same answer as the loop below on
-        # 22 of 22 forced folder drops, 0.3 s off the median served call (4 Nov 2026, an agent, TOP10 rank 3,
+        # 22 of 22 forced folder drops, 0.3 s off the median served call (4 Nov 2026, TOP10 rank 3,
         # recall_10x_2026_10_29/folder_drop_2026_11_04/incr_parity.py). BM25_FM_IDCACHE=0 turns it off.
         if _FM_IDC["since"] != since:
             _FM_IDC["since"], _FM_IDC["c"] = since, {}
@@ -1257,7 +1257,7 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
                 except OSError:
                     continue
     # A memory whose attachments changed after the last scan is fresh too: read_doc indexes their text, so what the
-    # index should hold for it changed (28 Sep, account02/B02 R1, B02-R1-ATTACHMENT-REFRESH-DROPS-LIVE-PROMOTION-001:
+    # index should hold for it changed (28 Sep:
     # until then an incremental refresh never re-read an attachment-only change, and its newer index then switched off
     # brain.py's live promotion of that attachment while the index still lacked the text).
     have = set(fresh)
@@ -1265,7 +1265,7 @@ def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
         if t >= since and slug in present and slug not in have:
             fresh.append(slug)
     # ...and so is one whose bundle manifest differs from the one recorded when its text was read, whatever the mtimes
-    # say (28 Sep, account03/B02 r71, B02-R23-ATTACHMENT-STALE-BM25-DIGEST-BYPASS-001: a bundle replaced with its old
+    # say (28 Sep: a bundle replaced with its old
     # mtimes kept was never re-read, so its old text went on ranking the parent). A parent with no recorded digest is
     # left to the mtime test above.
     recorded = _marker_manifests(index_path)
@@ -1600,7 +1600,7 @@ def scrub_in_memory(slugs, mem_dir=MEM, out=INDEX, payload=None):
     written. For a parent whose attachment bundle just failed verification: read_doc indexes its own text and nothing
     from the bundle, so this recall does not rank it on text the verifier rejected. The published index may still hold
     that text when the damage kept the bundle's mtime (the incremental refresh never sees it); the next full build
-    re-reads every parent (28 Sep, account03/B02 r71, B02-R23-ATTACHMENT-STALE-BM25-DIGEST-BYPASS-001).
+    re-reads every parent (28 Sep).
     Returns None when there is nothing to scrub or no index to scrub."""
     slugs = sorted(set(slugs or ()))
     if not slugs:
@@ -2298,7 +2298,7 @@ class _LengthNorm(dict):
 _PRUNE = os.environ.get("BRAIN_BM25_PRUNE", "1") == "1"
 _PRUNE_REL = 1e-9
 
-# NUMPY SCORER (13 Nov 2026, an agent). The pruned loop below still decodes every term into arrays and walks
+# NUMPY SCORER (13 Nov 2026). The pruned loop below still decodes every term into arrays and walks
 # them in Python dict updates; on a 600-character prompt that was 2.1 s a call on the loaded laptop. The same sum on a
 # dense float64 array: each posting's ((idf*f)*(K1+1))/(f+norm) in IEEE double with the loop's operands in the loop's
 # order, added per document in sorted-term order starting from 0.0, ties broken by position - so every score is the
@@ -2759,8 +2759,8 @@ class BM25:
         return self.__dict__[name]
 
     def df_view(self):
-        """What a QueryNormalizer needs from df, without unpickling the whole vocabulary (5 Nov 2026, an agent,
-        RECALL-10X rank 3). The first touch of `df` on a sidecar instance loads the 590,989-term blob: 0.9-1.3 s of
+        """What a QueryNormalizer needs from df, without unpickling the whole vocabulary (5 Nov 2026, RECALL-10X rank
+        3). The first touch of `df` on a sidecar instance loads the 590,989-term blob: 0.9-1.3 s of
         every prompt hook, which then looks up about six words. The sidecar's table p(term, df) holds the same counts
         (590,989 terms, 0 differ, checked on the live index), so a view that asks the table per word gives the same
         normalized query. A loaded df is returned as is; BRAIN_BM25_DFVIEW=0 always loads it, as before."""

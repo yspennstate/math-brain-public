@@ -6,7 +6,7 @@ respected instead of exceeded. Endpoints pinned once up front; the push targets
 the exact scanned tip. Fails closed on any slice not printing the clean line.
 The lower bound comes from a fetch made here, the tip must be a fast-forward of it, and the push holds the remote to
 it (--force-with-lease): before 28 Sep the base was whatever the tracking ref last saw, and after a rewind of the
-remote a push from it made commits reachable that no slice had scanned (account02/B06 r63/r64)."""
+remote a push from it made commits reachable that no slice had scanned."""
 import os
 import subprocess
 import sys

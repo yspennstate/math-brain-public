@@ -1,6 +1,6 @@
 """test_refill_ab_symmetry.py - the refill A/B's two arms are recorded the same way whatever happens after the arm is
 chosen, the bookkeeping after the context goes out says when it fails, and the precision table is read once per call
-(29 Sep 2026, an agent; scheduled audits account04/B04 r6 and r5, account04/B16 r11).
+(29 Sep 2026).
 
     python test_refill_ab_symmetry.py [--module INSTINCT_PRIME.py] [--old OLD_INSTINCT_PRIME.py]
 

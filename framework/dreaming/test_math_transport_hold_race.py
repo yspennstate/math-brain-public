@@ -1,5 +1,4 @@
-"""A study hold set while a transport run is under way stops that run before its next write (29 Sep 2026; scheduled audit
-account04/B19, B19-R79-TRANSPORT-HOLD-CHECK-TOCTOU-20260929).
+"""A study hold set while a transport run is under way stops that run before its next write (29 Sep 2026).
 
     python test_math_transport_hold_race.py [TRANSPORT.py] [--old OLD_TRANSPORT.py]
 

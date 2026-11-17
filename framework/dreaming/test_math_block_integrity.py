@@ -1,5 +1,4 @@
-"""A served math card counts only when it arrives whole: a claim id and a trust tag (account04/B07,
-B07-R79-INCOMPLETE-CARD-PASSES-REGRESSION-GATES, 29 Sep 2026; fixed 30 Sep).
+"""A served math card counts only when it arrives whole: a claim id and a trust tag (29 Sep 2026; fixed 30 Sep).
 
     python test_math_block_integrity.py [--old DIR]
 

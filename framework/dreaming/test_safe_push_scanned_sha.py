@@ -1,5 +1,4 @@
-"""test_safe_push_scanned_sha.py - safe_push.py publishes the commit it scanned (28 Sep, an agent; scheduled audit
-account02/B06 r62, R24-B06-SAFE-PUSH-SCANS-HEAD-BUT-PUSHES-BRANCH-20260928).
+"""test_safe_push_scanned_sha.py - safe_push.py publishes the commit it scanned (28 Sep).
 
     python test_safe_push_scanned_sha.py [OLD_SAFE_PUSH.py]
 

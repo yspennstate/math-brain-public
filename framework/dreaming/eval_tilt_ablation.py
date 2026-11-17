@@ -20,7 +20,7 @@ import time
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "bin"))
-from quarantine_rows import keep_old  # noqa: E402  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep; account03/B01 auto31): brain data is never deleted, and an overwrite deletes
+from quarantine_rows import keep_old  # noqa: E402  # a rerun keeps the previous run's output (R13 trap 1, 27 Sep): brain data is never deleted, and an overwrite deletes
 import eval_prompt_recall_fullstack as em  # noqa: E402
 import eval_fusion_live as fl  # noqa: E402
 import spread_recall as sr  # noqa: E402

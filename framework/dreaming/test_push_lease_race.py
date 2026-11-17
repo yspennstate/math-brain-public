@@ -1,5 +1,5 @@
 """test_push_lease_race.py - a push helper publishes nothing its scan did not cover, even when the remote is rewound
-under it (28 Sep 2026, an agent; scheduled audit account02/B06 r63/r64, R24-B06-GATED-PUSH-REMOTE-REWIND-RACE).
+under it (28 Sep 2026).
 
     python test_push_lease_race.py [--dir DIR_WITH_THE_TOOLS] [--old DIR_WITH_THE_OLD_TOOLS]
 

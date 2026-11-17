@@ -60,7 +60,7 @@ def _lenient_target(body, memory_dir):
 
 def _lenient_candidate(body):
     """The prose pointer's leading slug before the existence test: what the frontmatter cache keeps, so the test is
-    made again on every call against the current directory (28 Sep, interactive audit IA-20260928-04: the cache kept
+    made again on every call against the current directory (28 Sep: the cache kept
     the tested result, and a pointer whose target appeared after the predecessor was cached stayed unrouted until the
     predecessor itself changed)."""
     match = FRONTMATTER_RX.search(body or "")
@@ -452,8 +452,8 @@ _FM_CACHE_NAME = "supersession_frontmatter_cache.json"
 # Bump this whenever the PARSE changes, or the fix does not reach the corpus: a cache entry is keyed by
 # (size, mtime_ns), so every unchanged file would keep serving the empty target the old parse recorded.
 # 3 (28 Sep): an entry holds the strict target and the prose pointer's candidate apart, and the candidate's target is
-# looked for in this call's own directory listing, never taken from the cache (IA-20260928-04).
-# 4 (29 Sep, account03/B19 r75 and account02/B11 auto46): an entry is keyed by size, mtime, ctime and birth time,
+# looked for in this call's own directory listing, never taken from the cache.
+# 4 (29 Sep): an entry is keyed by size, mtime, ctime and birth time,
 # so a file replaced by rename with its old size and mtime is read again (Windows gives the renamed file a new creation
 # time; POSIX changes ctime on any write or utime). The one case still read from the cache is an in-place write of the
 # same size whose mtime is then set back to the same 100 ns on Windows; no writer here does that. Targets resolve
@@ -464,8 +464,8 @@ _FM_CACHE_VERSION = 5   # 5 (4 Oct 2026): a qualified pointer no longer routes -
 
 def _md_files(memory_dir):
     """The folder's memory files: .md names that are FILES (a directory named *.md is not a memory; a file symlink is),
-    as DirEntry objects. One enumeration for every reader here, so the targets, the known slugs and the audit agree
-    (account03/B19 r75, B19-R64-DIRECTORY-MD-COUNTED-AS-KNOWN-MEMORY). [] when the folder cannot be read."""
+    as DirEntry objects. One enumeration for every reader here, so the targets, the known slugs and the audit agree. []
+    when the folder cannot be read."""
     try:
         with os.scandir(memory_dir) as it:
             return [e for e in it if e.name.endswith(".md") and e.is_file()]
@@ -660,7 +660,7 @@ def active_supersessions(memory_dir, index_path=None, known_slugs=None,
                       include_frontmatter=include_frontmatter, entries=entries,
                       listed_ns=listed_ns)
     active = {}
-    # 5 Nov 2026 (RECALL-10X, an agent): resolve() returns a slug with no route of its own unchanged on its
+    # 5 Nov 2026 (RECALL-10X): resolve() returns a slug with no route of its own unchanged on its
     # first step, so only slugs that ARE routes can enter `active`. Walking those alone (626 of 52,727 on the live
     # folder) gives the same dict, 0.37-0.69 s -> 0.002-0.023 s a call (scratchpad sup_split.py, copied to
     # recall_10x_2026_10_29/served_profile_20261104/). BRAIN_SUP_ROUTED=0 walks every slug as before.

@@ -72,8 +72,8 @@ PATTERNS = [
     ("RunPod/HF/Groq key", r"\b(?:rpa_|rpk_|hf_|gsk_)[A-Za-z0-9_\-]{16,}\b"),
     ("JWT", r"\beyJ[A-Za-z0-9_-]{5,}\.[A-Za-z0-9_-]{5,}\.[A-Za-z0-9_-]{8,}\b"),
     # An opaque bearer token has no prefix to key on, so no rule above saw one: an Authorization header carrying 32
-    # mixed characters passed clean while the same header carrying a JWT was caught (scheduled audit account04/B17 r12,
-    # B17-R24-OPAQUE-BEARER-BLIND-SPOT-20260929). The word "bearer", then 20 or more token characters holding both a
+    # mixed characters passed clean while the same header carrying a JWT was caught.
+    # The word "bearer", then 20 or more token characters holding both a
     # digit and a letter. A variable ($TOKEN), a template ({token}) or a placeholder (<token>) starts with a character
     # outside that alphabet, prose ("Bearer tokens are ...") is too short, and a JWT is left to the JWT rule above.
     # Measured before landing: in the brain repository's tracked files it matched real bearer credentials only, no
@@ -95,7 +95,7 @@ PATTERNS = [
     # that way: 0 of 5000 missed in each of those contexts, and a word-chain key anywhere else still flags. The
     # checksum exclusion now also takes the bare "SHA" prefix, still exactly 64 lowercase hex. Controls in
     # test_scan_secrets_citekeys.py (2026-11-03).
-    # A token made ONLY of hex digits is a hash, not a key of this rule's kind (5 Nov 2026, an agent). A math
+    # A token made ONLY of hex digits is a hash, not a key of this rule's kind (5 Nov 2026). A math
     # referee report quoted two statement hashes written as "A" + hex; the leading capital gave the token both cases,
     # the per-commit scan flagged it, and the nightly brain push stayed local from 27 Oct to 5 Nov. A random base62
     # key of 40+ characters is all hex with odds about (22/62)^40, 1 in 10^18, and single-case hex never matched this

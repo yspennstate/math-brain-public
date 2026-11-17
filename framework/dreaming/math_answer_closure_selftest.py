@@ -1,6 +1,5 @@
-"""math_answer_closure_selftest.py - the math hook's answer closure never serves an old revision as current.
-
-account03/B07 (27 Sep): math_sense._prefilter_revision_nodes walked revisions, then added proof/refutation sources for
+"""math_answer_closure_selftest.py - the math hook's answer closure never serves an old revision as current. 27 Sep:
+math_sense._prefilter_revision_nodes walked revisions, then added proof/refutation sources for
 the lexical questions, and never walked again. An old answer added there arrived without its newer revision and
 without the SUPERSEDES edge that marks it historical, so retrieve() ranked it as current. The 24 Sep export had 7
 such edges, 5 with no current relation, four of them REFUTED cards whose revisions say CANDIDATE REFUTATION. The

@@ -1,20 +1,20 @@
 """test_coactivation_partition.py - an unreinforced coactivation link decays by elapsed time alone, however that time is
-cut into folds (scheduled audit account04/B20 R12, B20-R12-DECAY-QUANTIZATION-20260928; 28 Sep, an agent).
+cut into folds (28 Sep).
 
     python test_coactivation_partition.py [OLD_COACTIVATION_END.py]
 
 Every table lives in a temporary folder; the live table is never read or written. Folds are driven the way the hook
 meets them: before each fold the table's mtime is set that many seconds before the real clock, and the module's own
 fold_targets rewrites it (a fresh two-memory log each time, so every fold is a decaying rewrite).
- P1 T-B20-DECAY-PARTITION: edges at 1.0 and 2.0; one fold after 14 days against 2,016 folds ten minutes apart. The 2.0
+ P1: edges at 1.0 and 2.0; one fold after 14 days against 2,016 folds ten minutes apart. The 2.0
     edge ends near 1.0 in both arms and the arms agree within 1e-4 relative; the 1.0 edge is pruned in both.
- P2 T-B20-DECAY-GRID: edges at 0.6, 1.1, 2.0, 5.0 and 9.0 (none lands on the 0.5 floor at a span's end); folds every minute for a day, every ten minutes for three
+ P2: edges at 0.6, 1.1, 2.0, 5.0 and 9.0 (none lands on the 0.5 floor at a span's end); folds every minute for a day, every ten minutes for three
     days and every two hours for fourteen, each against one fold over the same span: the same edges survive, every
     survivor agrees within 1e-4 relative, and the one-fold arm is within 1e-4 of 0.5 ** (span / half-life).
- P3 T-B20-ROUNDING: 10,000 random weights written by _atomic_write_weights read back as the same floats.
+ P3: 10,000 random weights written by _atomic_write_weights read back as the same floats.
  P4 after a fold the table's mtime is the instant the fold decayed for, so with the clock pinned two folds of 100 s and
     600 s decay a weight by exactly 0.5 ** (700 s / half-life) (skipped for a module without a pinned clock).
- P5 T-B10-PRUNE-REINFORCE-PARTITION (scheduled audit account01/B10 R45, 29 Sep): a 0.51 link co-read once in a focused
+ P5 (29 Sep): a 0.51 link co-read once in a focused
     session 14 days later ends at 1.0 whether or not an unrelated fold on day 1 rewrote the table in between (it fell
     below the 0.5 floor on day 0.4, so the co-read starts from nothing either way).
  P6 five links over 30 days - co-read after they crossed the floor, before it, in a 20-memory session (a 0.3 increment,

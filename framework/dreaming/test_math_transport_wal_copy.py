@@ -1,6 +1,5 @@
 """test_math_transport_wal_copy.py - the math transport's restore point and its selftest copy hold the store's committed
-state, write-ahead log included (29 Sep 2026, an agent; the class of account04/B13 r4,
-B13-R58-WAL-SIDECAR-OMITTED-BY-DRYRUN-COPY-20260929-01).
+state, write-ahead log included (29 Sep 2026).
 
     python test_math_transport_wal_copy.py [MATH_TRANSPORT.py]
 

@@ -1,4 +1,4 @@
-"""Controls for instinct_prime._refill_after_backoff (28 Sep, an agent).
+"""Controls for instinct_prime._refill_after_backoff (28 Sep).
 
 The cap takes the top MAX_FIRE ranked reflexes before the session backoff runs, so a reflex the backoff then silences
 used to keep its slot empty while the next ranked reflexes stayed held by the cap. These controls pin the refill:
@@ -184,7 +184,7 @@ class Refill(unittest.TestCase):
         rows = self.log_rows() if os.path.exists(self.ip.REFILL_LOG) else []
         self.assertNotIn(self.AB, [r[2] for r in rows])               # cut the same way as a shown arm
         self.assertIn((self.AB, "backoff"), self.ip._SUPPRESSED)
-        # not an A/B opportunity: never 'ab_held', and its 'cap' is gone (29 Sep, account01/B04, B04-F203)
+        # not an A/B opportunity: never 'ab_held', and its 'cap' is gone (29 Sep)
         self.assertNotIn((self.AB, "ab_held"), self.ip._SUPPRESSED)
         self.assertNotIn((self.AB, "cap"), self.ip._SUPPRESSED)
 

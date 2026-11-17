@@ -1,6 +1,5 @@
 """test_claim_vectors_bound.py - the meaning channel's claim vectors must cover the store it serves, and each vector must
-have been made from the text its claim holds now (29 Sep 2026, an agent; scheduled audits account01/B09 r31, the
-store-binding caveat of R68, and account03/B12 r56).
+have been made from the text its claim holds now (29 Sep 2026).
 
     python test_claim_vectors_bound.py [--old HOOK_BEFORE_THE_ID_CHECK.py] [--old-ids HOOK_WITH_THE_ID_CHECK_ONLY.py]
 

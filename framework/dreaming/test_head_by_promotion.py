@@ -1,6 +1,5 @@
 """test_head_by_promotion.py - a boosted ordinary hit stays in recall's body and a fresh attachment keeps its place above it
-(28 Sep 2026, an agent; scheduled audit account03/B01 auto63, B01-R1-BOOSTED-BM25-CROSSES-PROTECTED-HEAD-
-BOUNDARY-20260928).
+(28 Sep 2026).
 
     python test_head_by_promotion.py [--brain BRAIN.py] [--old OLD_BRAIN.py]
 

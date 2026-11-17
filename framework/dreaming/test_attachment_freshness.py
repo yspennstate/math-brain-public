@@ -1,6 +1,5 @@
 """test_attachment_freshness.py - an attachment-only change reaches the BM25 index at the next refresh, and brain.py's
-live promotion of that attachment lasts until it does (28 Sep 2026, an agent; scheduled audit account02/B02
-auto54, B02-R1-ATTACHMENT-REFRESH-DROPS-LIVE-PROMOTION-001).
+live promotion of that attachment lasts until it does (28 Sep 2026).
 
     python test_attachment_freshness.py [BM25.py] [--brain BRAIN.py] [--old OLD_BM25.py]
 

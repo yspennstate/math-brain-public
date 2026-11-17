@@ -1,5 +1,5 @@
 """test_unconscious_demotion.py - recall shows an unconscious-tier stub on its own lexical evidence, last, and nothing
-else moves (28 Sep 2026, an agent; scheduled audit account03/B02 r67, B02-R1-UNCONSCIOUS-TIER-LEXICAL-SUPPRESSION-001).
+else moves (28 Sep 2026).
 
     python test_unconscious_demotion.py [--old OLD_BRAIN.py] [--new NEW_BRAIN.py] [--probes 40] [--real 60] [--json OUT]
 
@@ -14,7 +14,7 @@ displayed sequence of every other memory is identical between the versions. The 
  C3 on every query the non-stub rows are displayed identically, in the same order, at 8 rows and at 60
  C4 BRAIN_RECALL_UNCONSCIOUS=gate reproduces the old display on the probes
 
-NOT THE LIVE CONTRACT (13 Nov 2026, an agent): the demotion this test was written for did not land. brain.py keeps
+NOT THE LIVE CONTRACT (13 Nov 2026): the demotion this test was written for did not land. brain.py keeps
 the gate (see the comment at `if tier.get(slug) == "unconscious"` in recall): a stub found only by its words is not shown,
 so C1 fails on today's brain.py by design (3 of 3 probes, 13 Nov). This is an A/B of two files, not a check to rerun
 against the live code; with --old and --new the same file its own pass rule (`not old_c1`) cannot hold either.

@@ -1,5 +1,4 @@
-"""eval_math_hookpath scores a block only from a hook call that finished and exited 0 (account02/B07,
-B07-R79-MATH-HOOKPATH-EVALUATOR-IGNORES-CHILD-EXIT-056, 30 Sep 2026).
+"""eval_math_hookpath scores a block only from a hook call that finished and exited 0 (30 Sep 2026).
 
     python test_eval_math_hookpath_exit.py [EVALUATOR_BEFORE_THE_FIX.py]
 

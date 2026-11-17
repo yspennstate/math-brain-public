@@ -1,5 +1,5 @@
-"""test_math_integrity_refusal.py - a selected card the integrity read refuses refuses the math hook's block (29 Sep 2026,
-an agent; scheduled audit account04/B04 r69).
+"""test_math_integrity_refusal.py - a selected card the integrity read refuses refuses the math hook's block
+(29 Sep 2026).
 
     python test_math_integrity_refusal.py [MATH_SENSE.py] [--old OLD_MATH_SENSE.py]
 
@@ -11,7 +11,7 @@ store is only read.
  R3 the last card refused: nothing is served
  R4 the integrity budget runs out and the grace read refuses the top card: nothing is served
  R5 the budget runs out and the top card reads back sound: the top card alone is served, as before
-    (R4 and R5 are the grace path, account04/B20, B20-R69-STRICT-INTEGRITY-FIX-NOT-ACTIVATED-20260929)
+    (R4 and R5 are the grace path)
 With --old, the hook before this change serves a block when its first card is refused - the runner-up, moved first
 (the check can fail).
 """

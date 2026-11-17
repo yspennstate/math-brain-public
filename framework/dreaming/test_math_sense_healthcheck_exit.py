@@ -1,5 +1,4 @@
-"""The health check fails when the hook itself fails, whatever it printed (scheduled audit
-B19-R79-HEALTHCHECK-IGNORES-HOOK-EXIT-20260929).
+"""The health check fails when the hook itself fails, whatever it printed (scheduled audit).
 
     python test_math_sense_healthcheck_exit.py [OLD_HEALTHCHECK.py]
 
