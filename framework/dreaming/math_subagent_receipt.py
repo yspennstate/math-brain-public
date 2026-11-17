@@ -12,8 +12,8 @@ tool call's id, in ~/.claude/brain_graph/live/math_subagent_receipts.jsonl (appe
     child_received   the child's first message carries this row's delivery mark
     block_complete   every claim id of a served block reached the child's first message (null when nothing was sent)
     block_exact      the text after the frame in the child's first message has the sha256 prefix the adapter recorded for
-                     the block: ids surviving while a hypothesis is lost reads false here (the 1000-page report's
-                     D12-T04, to the brain dot's specification of 30 Sep); null for a row with no recorded digest, or
+                     the block: ids surviving while a hypothesis is lost reads false here
+                     (specification of 30 Sep); null for a row with no recorded digest, or
                      when the frame is not in the message
     source_opened    one of the child's tool calls names a claim id the block carried (for a held or shadow child: a
                      claim the block would have carried, which the child found by itself)

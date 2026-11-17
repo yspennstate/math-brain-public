@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""THE 200 OPEN PROBLEMS HOOK (his order, 10 Oct 2026 18:42 his clock).
+"""THE 200 OPEN PROBLEMS HOOK (10 Oct 2026).
 
 Written at the author's request..
 
 What it does: on a prompt about open problems (solving, conjectures, problem ids such as P0359, the directive), it says
 once per session per 45 minutes where the list is and the rules that go with it; and when a prompt names problem ids
 that are not on the list it says so, once per session per id per 45 minutes. Silent after the directive ends (16 Oct
-2026, 19:08 his clock). Never blocks or edits; swallows its own errors; ASCII output. Switch file:
+2026, 19:08). Never blocks or edits; swallows its own errors; ASCII output. Switch file:
 ~/.claude/dreaming/OPEN_PROBLEMS_200_HOOK_OFF. State: open_problems_200_hook_state.json beside this file.
 
     python open_problems_200_hook.py                     Claude (plain text)
