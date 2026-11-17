@@ -32,7 +32,7 @@ from collections.abc import Mapping
 
 FORMAT = 1
 #: the retrieve() / _channel_scores() this module mirrors (math-brain-build src/math_brain/retrieval.py, 12 Oct 2026)
-PIN_RETRIEVAL = "350904078336b15b89ae71cf3e57678c360fdb85949402dd42ea592e883d0a79"
+PIN_RETRIEVAL = "4930c1b233d8f8ad0b90dc131b1fc8712794e2f3c4e0b62bf92a132847464565"
 #: the query encoder whose ONNX session the Encoder thread builds ahead of time
 PIN_QUERY_EMBED = "855b962e6c462ef151ce9c9417208214bd13750af26ee35bb5c5d6dd3cae57d8"
 KEEP_FILES = 4   # prepared states kept at most; an evaluation arm with other dials is one more

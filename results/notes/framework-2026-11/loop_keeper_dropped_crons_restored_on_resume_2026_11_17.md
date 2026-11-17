@@ -1,6 +1,6 @@
 ---
 name: loop_keeper_dropped_crons_restored_on_resume_2026_11_17
-description: "[VERIFIED] loop-keeper says 'none armed' after a restart while CronList shows the cron? Claude Code restores session crons on resume; keeper assumed they die. Fixed 17 Nov: a CronList result after proc_start marks the id alive"
+description: "[PROVISIONAL] loop-keeper says 'none armed' after a restart while CronList shows the cron? Claude Code restores session crons on resume; keeper assumed they die. Fixed 17 Nov: a CronList result after proc_start marks the id alive"
 metadata:
   type: feedback
   created: 2026-11-17
