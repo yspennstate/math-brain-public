@@ -48,16 +48,20 @@ with an exact CPU Dijkstra. These are Monte Carlo estimates, not proofs.
    drift by 4^(2/3 - b) between n = 1024 and 4096, 10 percent for b = 0.6, which is too small to see here. The collapse
    supports a scale near n^(2/3) but fixes the exponent only to about 0.6 to 0.73.
 
-4. **Collapse at n = 8192 and 16384** (`fpp_cyl_k.py`, rows `fpp_rows_mac2_n8192k.jsonl`,
-   `fpp_rows_mac2_n8192k_b2.jsonl`, `fpp_rows_mac1_n16384k.jsonl` and `fpp_rows_mac1_n16384k_b2.jsonl`, table
-   `collapse_table_n8192_16384_20261116.txt`). `fpp_cyl_k.py` does the relaxation step as one Metal kernel; its
+4. **Collapse at n = 8192 and 16384** (`fpp_cyl_k.py`, rows `fpp_rows_mac2_n8192k.jsonl` and
+   `fpp_rows_mac2_n8192k_b2.jsonl` at n = 8192; `fpp_rows_mac1_n16384k.jsonl`, `fpp_rows_mac1_n16384k_b2.jsonl`,
+   `_b3`, `_b5`, `fpp_rows_mac2_n16384k_b4.jsonl` and `_b6` at n = 16384; table
+   `collapse_table_n8192_16384_20261117.txt`). `fpp_cyl_k.py` does the relaxation step as one Metal kernel; its
    `--selftest` gives passage times bit-identical to `fpp_cyl_c.py`, and it holds far fewer arrays in memory at once,
    which is what made these sizes fit. At n = 8192 the skewness is -0.135 (se 0.085, 840 samples) at c = 0.5, -0.235
    (0.074, 1092) at c = 1 and -0.292 (0.114, 465) at c = 2, each within about one standard error of the n = 4096 value
-   for the same c, and still ordered by c. At n = 16384 it is -0.207 (0.158, 240), -0.036 (0.145, 286) and -0.184
-   (0.205, 143). Every cell is negative and within 1.3 combined standard errors of n = 8192, but at this size the sign is not
-   resolved in any cell. The two n = 16384 batches have independent seeds and agree in mean (7512.1 and 7511.1 at
-   c = 1, 7505.0 and 7504.4 at c = 2) and in spread.
+   for the same c. At n = 16384 it is -0.235 (0.075, 1064), -0.168 (0.093, 692) and -0.127 (0.132, 346). The passage
+   times of one row share a random key, so the table also gives a bootstrap that resamples whole rows; its standard
+   errors (0.085, 0.094 and 0.124 at n = 16384) are close to sqrt(6/N). Every cell is negative, and at each c the
+   n = 8192 and n = 16384 values differ by about one combined standard error or less. At n = 16384 the cells are not
+   ordered by c as they are at n = 8192, so the ordering is not a stable feature at these sizes. The six n = 16384
+   batches have independent seeds and agree in mean and spread at each c: the mean passage time is 7524.7 to 7526.9
+   at c = 0.5, 7511.1 to 7514.2 at c = 1 and 7502.6 to 7505.1 at c = 2.
 
 The data are consistent with a threshold at 2/3 and with n^(2/3) as the transversal scale. They cannot separate 2/3
 from nearby exponents, because finite-size corrections are large at n <= 4096: the growth of the standard deviation
@@ -72,6 +76,7 @@ per doubling of n sits 0.05 to 0.08 below the KPZ heuristic n^(1/2 - a/4).
 - `fpp_rows_*.jsonl`: raw rows. Each row holds n, a or c, W, the batch of passage times T and the seed.
   `fpp_rows_mac1_n16384k_interim_20261116.jsonl` is the first 77 rows of `fpp_rows_mac1_n16384k.jsonl`; leave it
   out of any merge.
+  `fpp_rows_mac1_n16384k_b3.jsonl` is a run of 25 rows that ended early; its rows are complete and are pooled.
 
 ## Credits
 
