@@ -201,6 +201,21 @@ def _plain(*values):
 
 
 # ----------------------------------------------------------------------------------------------------------- build
+def _nodes_in_table_order(con):
+    """The cards in iter_nodes' order (created_at, id), read by one pass over the table.
+
+    iter_nodes asks SQLite for ORDER BY created_at, id, which it answers by walking idx_nodes_created_at and fetching
+    every row by a random lookup: about 94k scattered page reads, most of the 15-27 min cold build (5 Nov profile:
+    12 s of CPU in 21 min). Reading the table in storage order and sorting here gives the same list: id is the primary
+    key, so (created_at, id) is a total order, and Python's str order is SQLite's BINARY order (code points = UTF-8 bytes).
+    """
+    from math_brain.models import GraphNode, NodeKind
+    rows = con.execute("SELECT id, kind, title, body, metadata_json, created_at FROM nodes").fetchall()
+    rows.sort(key=lambda r: (r[5], r[0]))
+    return [GraphNode(id=r[0], kind=NodeKind(r[1]), title=r[2], body=r[3], metadata=json.loads(r[4]), created_at=r[5])
+            for r in rows]
+
+
 def _read_store(store_path):
     import warnings
     from math_brain.store import ResearchStore
@@ -214,7 +229,7 @@ def _read_store(store_path):
             if began:
                 con.execute("BEGIN")
             try:
-                nodes = list(store.iter_nodes())
+                nodes = _nodes_in_table_order(con)
                 edges = list(store.iter_edges(skip_unknown=True))
             finally:
                 if began and con.in_transaction:
