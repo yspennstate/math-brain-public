@@ -21,7 +21,7 @@ python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --o
 python agent_tools/math_recall.py --id <card id from the output>
 ```
 
-You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install a newer one there first. No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 5 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 49 seconds with no row failing its digest, and the first search took 56 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
+You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install a newer one there first. No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 18 November 2026 these commands ran on a Mac mini from a fresh sparse clone (three minutes to clone, about 610 MB on disk) with an empty home directory and Python 3.14: the import rebuilt 313,487 rows, every row counted in `MANIFEST.json`, in 19 seconds with no row failing its digest, and the first search took 32 seconds because it builds the prepared fast-recall state; later searches took about a second.
 
 On Windows the sparse checkout above works as it is. A full checkout does not: a few paths under `papers/` are longer than 260 characters and git stops with "Filename too long". Before `git sparse-checkout disable`, run `git config core.longpaths true` in the clone, or clone with `git clone -c core.longpaths=true ...`.
 
