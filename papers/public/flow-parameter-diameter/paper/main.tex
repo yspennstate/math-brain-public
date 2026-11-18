@@ -27,6 +27,7 @@
 \title[Multicommodity flow, the relaxation time and the diameter]{Multicommodity flow, the relaxation time and the diameter}
 \author{Yitzchak Shmalo}
 \address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
 \date{11 October 2026}
 \subjclass[2020]{60J10, 05C81, 05C50, 05C21}
 \keywords{Markov chains, relaxation time, multicommodity flow, diameter, Ramanujan graphs, projective planes}
@@ -42,7 +43,7 @@ For a finite reversible Markov chain on $n$ states let $\inf_{\bfF}\psi(\bfF)$ b
 
 \section{Introduction}
 
-Let $P$ be an irreducible reversible transition matrix on a finite state space $V$ of size $n$ with stationary distribution $\pi$, and let $1=\lambda_1>\lambda_2\ge\dots\ge\lambda_n\ge-1$ be its eigenvalues. The relaxation time is $\tau_2=(1-\lambda_2)^{-1}$. Following \cite[Chapter~3]{AF}, a flow is an antisymmetric function $f_{ij}=-f_{ji}$ on ordered pairs, supported on the pairs with $p_{ij}>0$; its net outflow at $i$ is $f_{(i)}=\sum_jf_{ij}$. A unit flow from $a$ to $\pi$ is a flow with $f_{(i)}=1_{(i=a)}-\pi_i$ for every $i$ \cite[(3.98)]{AF}. For a family $\bfF=(\bfF^{(a)})_{a\in V}$ of unit flows from each $a$ to $\pi$, Lemma 4.21 of \cite{AF} considers the quantity
+Let $P$ be an irreducible reversible transition matrix on a finite state space $V$ of size $n$ with stationary distribution $\pi$, and let $1=\lambda_1>\lambda_2\ge\dots\ge\lambda_n\ge-1$ be its eigenvalues. The relaxation time is $\tau_2=(1-\lambda_2)^{-1}$. Following Aldous and Fill \cite[Chapter~3]{AF}, a flow is an antisymmetric function $f_{ij}=-f_{ji}$ on ordered pairs, supported on the pairs with $p_{ij}>0$; its net outflow at $i$ is $f_{(i)}=\sum_jf_{ij}$. A unit flow from $a$ to $\pi$ is a flow with $f_{(i)}=1_{(i=a)}-\pi_i$ for every $i$ \cite[(3.98)]{AF}. For a family $\bfF=(\bfF^{(a)})_{a\in V}$ of unit flows from each $a$ to $\pi$, Lemma 4.21 of \cite{AF} considers the quantity
 \begin{equation}\label{eq:psi}
 \psi(\bfF)=\max_{(i,j)}\ \sum_{a\in V}\pi_a\,\frac{|f^{(a)}_{ij}|}{\pi_ip_{ij}},
 \end{equation}
@@ -87,7 +88,7 @@ In particular $\inf_{\bfF}\psi(\bfF)\to2(d+1)$ along any sequence of connected $
 \]
 \end{theorem}
 
-Ramanujan graphs \cite{LPS,Morgenstern,MSS} have $\mu_2\le2\sqrt{d-1}$, and by the Alon--Boppana bound \cite{Nilli} no $d$-regular family does better, so within cones over regular graphs the limiting ratio is at most $d+1-2\sqrt{d-1}$ and Ramanujan bases attain it. This is $1.17$ for $d=3$, $2$ for $d=5$, $5$ for $d=10$ and $10$ for $d=17$; it tends to infinity with $d$, which is \cref{thm:main}. Random regular graphs give the same conclusion through Friedman's theorem \cite{Friedman,Bordenave}.
+The Ramanujan graphs of Lubotzky, Phillips and Sarnak \cite{LPS}, of Morgenstern \cite{Morgenstern} and of Marcus, Spielman and Srivastava \cite{MSS} have $\mu_2\le2\sqrt{d-1}$, and by the Alon--Boppana bound \cite{Nilli} no $d$-regular family does better, so within cones over regular graphs the limiting ratio is at most $d+1-2\sqrt{d-1}$ and Ramanujan bases attain it. This is $1.17$ for $d=3$, $2$ for $d=5$, $5$ for $d=10$ and $10$ for $d=17$; it tends to infinity with $d$, which is \cref{thm:main}. Random regular graphs give the same conclusion through Friedman's theorem \cite{Friedman,Bordenave}.
 
 For one family the flow parameter can be computed exactly. On the cone over the incidence graph of a projective plane of order $s$ an explicit family of flows attains $\inf_{\bfF}\psi(\bfF)$: it sends part of the traffic between the most distant pairs of base vertices through the hub and spreads the rest evenly over their shortest paths in the base (\cref{prop:pg}). The ratio of the flow parameter to $\tau_2\Delta$ then increases with $s$ to $5/2$ and exceeds $2$ exactly when $s\ge38$; the first Desarguesian example is $\PG(2,41)$, whose cone has $3447$ vertices.
 
@@ -396,9 +397,7 @@ innovation programme (grant agreement No.~101041711), by the Simons
 Foundation as part of the Collaboration on the Mathematical and Scientific
 Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
-Science Foundation (ISF Grant 4101/25). Computational resources were
-provided in part by Google Cloud through its education credits program
-(credit 530550103).
+Science Foundation (ISF Grant 4101/25).
 
 This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
 
@@ -408,7 +407,7 @@ has a management role at Convex Nexus Capital. These entities are included
 in the funding declaration above.
 
 \section*{Declaration of generative AI and AI-assisted technologies}
-The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 an agent running OpenAI GPT-5.6 selected the question from the open problems of \cite{AF} and identified the cone $K_1\vee\Inc(\PG(2,49))$ as a counterexample to the diameter form of \eqref{eq:449} with $K=2$. The construction of \cref{sec:cones}, the proofs, the computations and the text were then produced with Anthropic's Claude Fable~5.1 in Claude Code. In October 2026 Claude Opus~5.5, also in Claude Code, found the routing in the proof of \cref{prop:pg}, the argument of \cref{rem:general}, the bound on cut certificates after \cref{lem:dual}, the certificates on other generalized polygons in \cref{sec:pg} and the argument for edge-transitive graphs in \cref{sec:remain}, and revised the text. The proofs were checked by further runs of these systems, and the algebraic identities and numerical inequalities listed in the repository were verified in Lean~4 with Mathlib; the counting arguments and the spectral facts that feed them were not formalized. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 an agent running OpenAI GPT-5.6 selected the question from the open problems of \cite{AF} and identified the cone $K_1\vee\Inc(\PG(2,49))$ as a counterexample to the diameter form of \eqref{eq:449} with $K=2$. The construction of \cref{sec:cones}, the proofs, the computations and the text were then produced with Anthropic's Claude Fable~5.1 in Claude Code. In October 2026 Claude Opus~5.5, also in Claude Code, found the routing in the proof of \cref{prop:pg}, the argument of \cref{rem:general}, the bound on cut certificates after \cref{lem:dual}, the certificates on other generalized polygons in \cref{sec:pg} and the argument for edge-transitive graphs in \cref{sec:remain}, and revised the text. The proofs were checked by further runs of these systems, and the algebraic identities and numerical inequalities listed in the repository were verified in Lean~4 with Mathlib; the counting arguments and the spectral facts that feed them were not formalized. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination. The results rest on the work of others. The question is Open Problem~4.49 of Aldous and Fill~\cite{AF}, posed by Sinclair~\cite{Sinclair}, whose bound \eqref{eq:449} comes from the multicommodity flow theorem of Leighton and Rao~\cite{LR}; Lemma~4.21 and Corollary~4.37 of~\cite{AF} are used as stated. The expanders in the proof of \cref{thm:main} are the Ramanujan graphs of Lubotzky, Phillips and Sarnak~\cite{LPS} and of Morgenstern~\cite{Morgenstern}. These results are theirs. The new steps are the edge-length lower bound of \cref{lem:dual}, the cone construction and the two-sided estimate of \cref{thm:cone}, the exact computation on projective planes in \cref{prop:pg} and the bounded-degree estimate of \cref{prop:degree}.
 
 \section*{Data availability}
 The code that produces the tables (the linear programs, the exact certificates and the construction of the Lubotzky--Phillips--Sarnak graphs), an exact check of the routing in the proof of \cref{prop:pg}, and the Lean verification are available at \url{https://github.com/yspennstate/flow-parameter-diameter}.
