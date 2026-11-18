@@ -49,3 +49,13 @@ RESULT PASS
 ```
 
 The finite census is auxiliary; the theorem itself is proved analytically and does not depend on enumeration.
+
+## Credits
+
+The question is Open Problem 7.30 of Aldous and Fill, "Reversible Markov Chains and Random Walks on Graphs" (Chapter 7,
+Section 7.3.3), and the theorem sits beside their Proposition 7.29(ii) on distance-regular graphs. The stronger
+all-pairs property studied in the later literature fails on a Cayley graph found by Regev and Shinkar
+(arXiv:1506.08631), and is proved for finite weighted Abelian Cayley graphs by Price (2017), for graphs with three
+distinct Laplacian eigenvalues by Nica (2020), for regular bipartite graphs with four eigenvalues by Kubo and Namba
+(arXiv:2103.08149), and for a class of diameter-three distance-regular graphs with classical parameters by Liu and
+Zhang (2025). Full references are in `main.tex`.

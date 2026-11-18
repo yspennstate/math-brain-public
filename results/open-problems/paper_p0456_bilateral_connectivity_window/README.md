@@ -74,3 +74,10 @@ A fresh bounded source/literature check on 19--20 September 2026 re-opened the C
 ## Lifecycle note
 
 The mathematical/source gate is audit-complete and this paper package has now been created. Under the repository protocol, P26 alone edits shared fleet ledgers; the owner-side run report requests final shared-ledger closure through `ledger_delta` rather than editing root ledgers directly.
+
+## Credits
+
+The question is from Section 1.1 of Dabirian and Subramanian, "Connectivity of a family of bilateral preference random
+graphs" (Journal of Applied Probability 63 (2026), 552-579, DOI 10.1017/jpr.2025.10051), which leaves open the band
+around k = log n and notes that sharper or exact sufficient conditions could close the gap. Full reference in
+`main.tex`.
