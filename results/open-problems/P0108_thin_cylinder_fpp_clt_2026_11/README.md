@@ -50,18 +50,20 @@ with an exact CPU Dijkstra. These are Monte Carlo estimates, not proofs.
 
 4. **Collapse at n = 8192 and 16384** (`fpp_cyl_k.py`, rows `fpp_rows_mac2_n8192k.jsonl` and
    `fpp_rows_mac2_n8192k_b2.jsonl` at n = 8192; `fpp_rows_mac1_n16384k.jsonl`, `fpp_rows_mac1_n16384k_b2.jsonl`,
-   `_b3`, `_b5`, `fpp_rows_mac2_n16384k_b4.jsonl` and `_b6` at n = 16384; table
-   `collapse_table_n8192_16384_20261117.txt`). `fpp_cyl_k.py` does the relaxation step as one Metal kernel; its
+   `_b3`, `_b5`, `_b7`, `fpp_rows_mac2_n16384k_b4.jsonl` and `_b6` at n = 16384; table
+   `collapse_table_n8192_16384_20261118.txt`). `fpp_cyl_k.py` does the relaxation step as one Metal kernel; its
    `--selftest` gives passage times bit-identical to `fpp_cyl_c.py`, and it holds far fewer arrays in memory at once,
    which is what made these sizes fit. At n = 8192 the skewness is -0.135 (se 0.085, 840 samples) at c = 0.5, -0.235
    (0.074, 1092) at c = 1 and -0.292 (0.114, 465) at c = 2, each within about one standard error of the n = 4096 value
-   for the same c. At n = 16384 it is -0.235 (0.075, 1064), -0.168 (0.093, 692) and -0.127 (0.132, 346). The passage
+   for the same c. At n = 16384 it is -0.204 (0.069, 1260), -0.151 (0.087, 790) and -0.174 (0.123, 394). The passage
    times of one row share a random key, so the table also gives a bootstrap that resamples whole rows; its standard
-   errors (0.085, 0.094 and 0.124 at n = 16384) are close to sqrt(6/N). Every cell is negative, and at each c the
-   n = 8192 and n = 16384 values differ by about one combined standard error or less. At n = 16384 the cells are not
-   ordered by c as they are at n = 8192, so the ordering is not a stable feature at these sizes. The six n = 16384
-   batches have independent seeds and agree in mean and spread at each c: the mean passage time is 7524.7 to 7526.9
-   at c = 0.5, 7511.1 to 7514.2 at c = 1 and 7502.6 to 7505.1 at c = 2.
+   errors (0.075, 0.085 and 0.113 at n = 16384) are close to sqrt(6/N). Every cell is negative, and at each c the
+   n = 8192 and n = 16384 values differ by less than one combined standard error. At n = 16384 the cells are not
+   ordered by c as they are at n = 8192, so the ordering is not a stable feature at these sizes. The seven n = 16384
+   batches (six of them at c = 0.5) have independent seeds and agree in mean and spread at each c they cover,
+   within two standard errors of the mean:
+   the mean passage time is 7524.7 to 7528.3 at c = 0.5, 7511.1 to 7514.2 at c = 1 and 7502.6 to 7507.1 at c = 2.
+   The earlier table `collapse_table_n8192_16384_20261117.txt` holds the first six batches.
 
 The data are consistent with a threshold at 2/3 and with n^(2/3) as the transversal scale. They cannot separate 2/3
 from nearby exponents, because finite-size corrections are large at n <= 4096: the growth of the standard deviation
