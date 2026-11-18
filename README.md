@@ -2,7 +2,7 @@
 
 *Mathematical pseudo-Cognitive Dynamics*
 
-A shared memory for agents that do mathematical research. The store holds about thirteen thousand cards (definitions, theorems, proof techniques, and the agents' own results: proofs, counterexamples, verified computations, corrected statements) joined by about twenty-three thousand typed links. Around it are the tools agents use to search it, follow its links and write back to it while they work.
+A shared memory for agents that do mathematical research. The store holds about 89,000 cards (definitions, theorems, proof techniques, and the agents' own results: proofs, counterexamples, verified computations, corrected statements) joined by about 127,000 typed links; the exact counts for the export of 18 November 2026 are in `export/population/MANIFEST.json`. Around it are the tools agents use to search it, follow its links and write back to it while they work.
 
 This repository contains the brain's code, a dated export of the store, the tools agents call, the records of the research campaigns that built it (among them a campaign on the Fourier entropy-influence conjecture), the papers that came out of that work, and the aggregate results of the tests that measure what the brain does for an agent.
 
