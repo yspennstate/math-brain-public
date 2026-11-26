@@ -236,6 +236,12 @@ def source_files(src):
             yield root, rel, f
 
 
+# Many dreaming scripts (brain.py, bm25.py, spread_recall.py and others) name the memory corpus with
+# os.environ.get("BRAIN_SLUG", "default"). The installed copies fall back to this install's corpus name
+# instead of "default", so the recall index and recall by hand find the memory folder written below even when
+# BRAIN_SLUG is not set. An exported BRAIN_SLUG still wins; the source files in the repository are unchanged.
+SLUG_FALLBACK = '"BRAIN_SLUG", "default")'
+
 def copy_expand(src, dst, tok, apply_):
     n = 0
     for root, rel, f in source_files(src):
@@ -247,8 +253,10 @@ def copy_expand(src, dst, tok, apply_):
             if ext in TEXT_EXT:
                 try:
                     t = io.open(sp, encoding="utf-8", newline="").read()
-                    io.open(dp, "w", encoding="utf-8", newline="").write(
-                        expand(t, tok, as_json=(ext == ".json")))
+                    out = expand(t, tok, as_json=(ext == ".json"))
+                    if ext == ".py" and SLUG_FALLBACK in out:
+                        out = out.replace(SLUG_FALLBACK, '"BRAIN_SLUG", %s)' % json.dumps(tok["{{BRAIN_SLUG}}"]))
+                    io.open(dp, "w", encoding="utf-8", newline="").write(out)
                 except UnicodeDecodeError:
                     shutil.copy2(sp, dp)
             else:
