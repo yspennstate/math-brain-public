@@ -40,7 +40,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LIVE = os.path.join(HERE, "hook_dispatch.py")
 ALLOW = os.path.join(HERE, "hook_dispatch_allow.json")
 LOG = r"~\.claude\compute\hook_dispatch.log"
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 BREAK_OLD = '    if not os.path.exists(ENABLED) and "--force" not in sys.argv:'
 BREAK_NEW = '    _arm_deadline_gone_for_the_landing_test()\n' + BREAK_OLD
 PAYLOAD = '{"hook_event_name": "PreToolUse", "tool_name": "Read", "session_id": "land-test", "note": "\u05e9\u05dc\u05d5\u05dd"}'
