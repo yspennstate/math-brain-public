@@ -1,7 +1,7 @@
 # How a paper of his is written
 
 Read this before the first sentence of a paper and again before it is posted or submitted.
-The checks W01..W56 (`pw_run.py --list`, by hand `paper_lint.py <tex or folder>`) look for the
+The checks W01..W73 (`pw_run.py --list`, by hand `paper_lint.py <tex or folder>`) look for the
 faults below. A clean lint is the floor. It is not a reading: on three rounds of the same faults put
 in new words the checks caught 0 of 38, then 2 of 24, then 5 of 14. Only a reader who did not write
 the paper (`paper_audit.py run <tex>`) can say it is ready.
@@ -117,6 +117,9 @@ When the earlier paper is his own, this is the first thing an editor checks.
   for one"; the later words are the stricter and are the ones the check (W51) follows. A paper he
   has ruled should carry none gets a file `NO_AI_DECLARATION` beside its .tex.
 - The finished grant NSF OISE-2401227 is not acknowledged in new work (W53).
+- The Google Cloud education-credits sentence comes out of the acknowledgements
+  and funding text (rule of 18 Nov 2026; W73, reported, not a MUST). A posted paper gets its source
+  and public repository fixed now and its hosted PDF at the next version.
 - No overfull line, no "??", no undefined reference, no TODO, a fresh log from the final source.
 - His name and affiliation, and the data and code line with the repository that really holds
   them. [house style]
@@ -145,3 +148,25 @@ When the earlier paper is his own, this is the first thing an editor checks.
 3. The PDF looked at page by page, not only the source.
 4. For a journal: the journal's own scope and recent papers read; the cover letter states the
    advance against the closest prior work in two sentences.
+
+### Who read the paper
+- Every paper carries the standing sentence: "The author directed the work and is responsible for
+  the content of the paper and for decisions concerning its dissemination."
+- "The author has read the paper and the proofs" (or that he checked, verified or reviewed them) is
+  written only into a paper he named for a journal. That paper has a file `AUTHOR_READ_OK.txt`
+  beside its .tex with the date and his words naming it. No agent writes that file on its own
+  judgment; a paper with no such file does not carry the sentence anywhere: not in the abstract,
+  the introduction, the declaration, the README, the hosting description or the cover letter.
+- When the .tex of a named paper changes after the record, he is told in one line what changed.
+- Checks: W57 to W66.
+
+### Where a paper has been submitted
+- The record is `SUBMISSIONS.jsonl` in a private folder (`PW_SUBMISSIONS_DIR`, by default
+  `~/.claude/paper_submissions`; view: SUBMISSIONS.md; commands: submissions.py check | add | status | looked | list).
+- Before a submission: `submissions.py check "<title>"`. Exit 3 means a row is open and the paper
+  goes nowhere else. A journal with a closed row for the paper does not get it again.
+- The minute a submission goes through, `add` it with the journal, the day, the manuscript number,
+  the login used and your agent id. A draft started and left in a journal's system is a row too.
+- The day a decision arrives, `status` it. A row is "in process" only as of its last-looked date.
+- The record stays private: nothing of it in a paper's repository, README or hosting page.
+- Checks: W67 to W72.
