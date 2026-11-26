@@ -1,6 +1,6 @@
 """hook_dispatch.py - run every hook of one event in ONE python process instead of one process per hook.
 
-WHY (measured 2026-09-15 on MATH-ROSS20): a Bash tool call fires 12 PreToolUse + 5 PostToolUse hooks, each a separate
+WHY (measured 2026-09-15 on a Windows laptop): a Bash tool call fires 12 PreToolUse + 5 PostToolUse hooks, each a separate
 python start. On a quiet box that set costs 4.7 s of CPU; under the day's real load the same set measured 70.8 s, with
 single hooks at 4-6 s. Nearly all of it is interpreter startup and re-importing the same modules (json, psutil, the brain
 libraries) seventeen times. One process imports them once.
@@ -67,7 +67,7 @@ SETTINGS = r"~\.claude\settings.json"
 ENABLED = r"~\.claude\dreaming\HOOK_DISPATCH_ENABLED"
 LOG = os.environ.get("HOOK_DISPATCH_LOG") or r"~\.claude\compute\hook_dispatch.log"
 SELF = os.path.basename(__file__).lower()
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 PER_HOOK_BUDGET_S = 120.0
 
 # THE BUDGET IS PER EVENT, BECAUSE THE EVENTS ARE NOT COMPARABLE (2026-09-18). One flat 120 s governed a
