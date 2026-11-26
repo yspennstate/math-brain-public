@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Runs the citation hooks C01..C26 on one hook payload (an agent, 11 Nov 2026, his 07:1x order; the credit
-hooks C17..C26 an agent, his 14 Nov 23:34 order).
+"""Runs the citation hooks C01..C62 on one hook payload (an agent, 11 Nov 2026; the credit hooks C17..C26,
+14 Nov 2026).
 
 Wired in hook_dispatch_list.json on UserPromptSubmit and PreToolUse (Bash, PowerShell, Write, Edit, MultiEdit and the
 browser tools). Reads the payload from stdin and prints what fires. Warns, never blocks.
@@ -61,7 +61,7 @@ def selftest():
         ("C01", _prompt("open the zendo website, get a api key and push all of the new papers onto that website")),
         ("C02", _prompt("publish the p0245 paper on github and researchgate")),
         ("C10", _prompt("post the new paper to zenodo")),
-        # his 14 Nov order: credit the mathematicians in development, writing and acknowledgment
+        # credit the mathematicians in development, writing and acknowledgment
         ("C17", _pre("python ~/.claude/dreaming/problem_recall.py P0072")),
         ("C19", _tool("Edit", {"file_path": "C:/p/main.tex", "old_string": "a",
                                "new_string": "\\begin{lemma}\\label{l1} x \\end{lemma}"})),
@@ -90,7 +90,7 @@ def selftest():
         ("*", _prompt("agents are working on improving the brian ... remove bugs, solve math problem, publish papers, solve "
                       "kaggle, solve bitxion, imprvoe trading simualtions, and so on. make youtubevideos")),
         ("*", _prompt("Stop hook feedback: post the paper to zenodo")),
-        # a heredoc writing "papers" into a board row is not a paper being pushed (an agent, 11 Nov 08:2x)
+        # a heredoc writing "papers" into a board row is not a paper being pushed
         ("*", _pre("cd " + plain + " && cat > s.py <<'EOF'\nrow = 'final papers 15 Jan'\nEOF\npython s.py && git push origin main")),
         ("C14", _pre("cd " + paper + " && git push origin main")),
         ("C15", _tool("mcp__claude-in-chrome__navigate", {"url": "https://zenodo.org/uploads/new", "tabId": 3})),
@@ -105,8 +105,9 @@ def selftest():
         ("*", _prompt("hello")),
     ]
     hooks = C.load_hooks()
-    ok = 10 <= len(hooks) <= 30
-    print("loaded %d hooks %s" % (len(hooks), "ok" if ok else "WANT 10-30"))
+    ok = 10 <= len(hooks) <= 70
+    print("loaded %d hooks %s" % (len(hooks), "ok" if ok else "WANT 10-70"))
+    keep, C.BUDGET = C.BUDGET, 10 ** 9  # which hooks match, not how many fit
     for want, p in fire:
         got, ch, _ = C.decide(p, hooks, now=1000.0, state={})
         ids = [h["id"] for h in got]
@@ -121,13 +122,19 @@ def selftest():
         ok &= good
         print("QUIET %s %s ch=%s got=%s  %s" % (notwant, "ok  " if good else "LOUD", ",".join(sorted(ch)), ",".join(ids),
                                                 json.dumps(p)[:70]))
+    C.BUDGET = keep
     st = {}
-    a, _, _ = C.decide(_pre("cd " + paper + " && git push"), hooks, now=1000.0, state=st)
-    b, _, _ = C.decide(_pre("cd " + paper + " && git push"), hooks, now=1300.0, state=st)
-    c, _, _ = C.decide(_pre("cd " + paper + " && git push"), hooks, now=1000.0 + 1900, state=st)
-    cool = len(a) >= 10 and not b and len(c) >= 10
-    print("COOLDOWN (silent on a second push within 10 min, all back after 30) %s  a=%d b=%d c=%d"
-          % ("ok" if cool else "FAIL", len(a), len(b), len(c)))
+    batches = []
+    for k in range(8):  # since 19 Nov a firing holds ~3.5k chars; the rest come at the next publish steps
+        got, _, _ = C.decide(_pre("cd " + paper + " && git push"), hooks, now=1000.0 + 60 * k, state=st)
+        if not got:
+            break
+        batches.append([h["id"] for h in got])
+    flat = [x for b in batches for x in b]
+    back, _, _ = C.decide(_pre("cd " + paper + " && git push"), hooks, now=1000.0 + 60 * len(batches) + 1900, state=st)
+    cool = (2 <= len(batches) <= 6 and len(flat) == len(set(flat)) and len(flat) >= 10 and len(back) >= 5)
+    print("COOLDOWN (overflow rotates over the next pushes, then silent, back after 30 min) %s  batches=%s back=%d"
+          % ("ok" if cool else "FAIL", [len(b) for b in batches], len(back)))
     ok &= cool
     print("ALL PASS" if ok else "FAILED")
     return 0 if ok else 1
