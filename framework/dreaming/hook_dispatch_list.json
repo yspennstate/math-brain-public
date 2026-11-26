@@ -137,6 +137,20 @@
           "timeout": 10
         }
       ]
+    },
+    {
+      "matcher": "mcp__claude-in-chrome__.*|Bash|PowerShell",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\submission_capture_hook.py"
+          ],
+          "timeout": 15
+        }
+      ]
     }
   ],
   "PreToolUse": [
@@ -677,6 +691,19 @@
             "{{DREAMING}}\\verify_gate.py"
           ],
           "timeout": 600
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\submission_capture_hook.py"
+          ],
+          "timeout": 15
         }
       ]
     }
