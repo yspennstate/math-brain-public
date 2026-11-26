@@ -18,7 +18,7 @@ ENDPOINT = HERE / 'endpoint.json'
 PYTHON = os.environ.get('RECALL_KEEPER_PYTHON') or sys.executable
 WINDOWS = os.name == 'nt'
 MAX_AGE = 6 * 3600
-NO_WINDOW, BELOW_NORMAL = 0x08000000, 0x00004000
+NO_WINDOW, BELOW_NORMAL = (0x08000000, 0x00004000) if os.name == "nt" else (0, 0)
 # one keeper per install folder, so a second install or a test copy does not wait on the first
 TAG = hashlib.sha256(os.path.normcase(str(HERE)).encode('utf-8')).hexdigest()[:16]
 
