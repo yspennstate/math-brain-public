@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Core of the citation hooks C01..C26 (an agent, 11 Nov 2026; C17..C26 an agent, 14 Nov).
+"""Core of the citation hooks C01..C62 (an agent, 11 Nov 2026; C17..C26 an agent, 14 Nov).
 
-Written at the author's request..
+Written at the author's request.
 
 Each hook is one file C01_*.py .. C16_*.py holding a HOOK dict (and optionally check(ctx)). cite_hooks_run.py loads them
 all and runs them on one hook payload. A call is sorted into CHANNELS:
@@ -29,13 +29,16 @@ STATE_DIR = os.path.join(HERE, "state")
 FIRES = os.path.join(HERE, "fires.jsonl")
 BANNER = "!" * 100
 PUBLISH = ("github", "zenodo", "researchgate")
+BUDGET = 3500  # chars of rule text per firing (the dispatcher shares ~9.8k); the rest wait for the next publish step
+LAST_HELD = []
+PRIORITY = {"C11", "C43", "C44"}  # see decide()
 
 PAPERISH = re.compile(r"\.tex\b|\.pdf\b|\.bib\b|\bpapers?\b|preprint|manuscript|open[-_ ]?problems|_paper\b|paper_|"
                       r"arxiv|zenodo|researchgate", re.I)
 GIT_PUB = re.compile(r"\bgit\s+(?:-C\s+\S+\s+)?push\b|\bgh\s+(?:release\s+(?:create|upload)|repo\s+create)\b|"
                      r"\bgh\s+api\b[^;|&]{0,200}/contents/", re.I)
 RUNS = r"(?:curl|wget|Invoke-WebRequest|Invoke-RestMethod|iwr|irm|requests\.\w+|(?:py|python)\S*\s+(?:-\S+\s+)*\S*)"
-ZEN_ACT = re.compile(RUNS + r"[^;|&\n]{0,300}zenodo|zenodo\.org/api", re.I)
+ZEN_ACT = re.compile(RUNS + r"[^;|&\n]{0,300}(?:zenodo|zen_api\w*\.py)|zenodo\.org/api", re.I)  # zen_api.py added 19 Nov: the real posting tool never said "zenodo"
 RG_ACT = re.compile(r"(?:py|python)\S*\s+(?:-\S+\s+)*\S*researchgate\w*\.py", re.I)
 HEREDOC = re.compile(r"<<-?\s*(['\"]?)(\w+)\1[^\n]*\n.*?\n\s*\2\b", re.S)
 CD = re.compile(r"(?:^|[;&|]\s*)cd\s+(\"[^\"]+\"|'[^']+'|[^\s;&|]+)")
@@ -43,7 +46,7 @@ CD = re.compile(r"(?:^|[;&|]\s*)cd\s+(\"[^\"]+\"|'[^']+'|[^\s;&|]+)")
 ABOUT = re.compile(r"brain\.py\s+(?:remember|recall|dream-about|node)|fleet_board\.py|checklist(?:_hook)?\.py|"
                    r"agent_mesh\.py|send_\w*mail\w*\.py|\bmail\.py|math_recall\.py|problem_recall\.py|"
                    r"citation_hooks[/\\]", re.I)
-# His 14 Nov 2026 order (23:34): credit the mathematicians in the development, writing and acknowledgment phases.
+# Credit the mathematicians in the development, writing and acknowledgment phases.
 DEVELOP_CMD = re.compile(r"(?:py|python)\S*\s+(?:-\S+\s+)*\S*problem_recall\.py", re.I)
 TEX_DEVELOP = re.compile(r"\\begin\{(?:theorem|lemma|proposition|corollary|proof|conjecture)\*?\}", re.I)
 TEX_WRITING = re.compile(r"\\begin\{abstract\}|\\section\*?\{\s*(?:Introduction|Background|Main results|"
@@ -107,7 +110,7 @@ def channels(p):
                                   "Loop tick", "<task-notification>")):
             return ch, ""
         if t.lstrip().lower().startswith(("/loop", "fire this every", "fire thsi every", "fire this evey")):
-            return ch, ""  # his standing loop orders say "publish papers" without posting one (an agent, 07:40)
+            return ch, ""  # a standing loop order can say "publish papers" without posting one
         # a publishing ask names where it goes or which paper: a bare "publish papers" in a long work list is not one
         if PROMPT_PUB.search(t) and PROMPT_WHERE.search(t):
             ch.add("prompt")
@@ -115,7 +118,7 @@ def channels(p):
     command = str(ti.get("command") or "")
     if tool in ("Bash", "PowerShell"):
         if DEVELOP_CMD.search(HEREDOC.sub(" ", command)):
-            ch.add("develop")  # work on an open problem starts: the credit ledger starts here (his 14 Nov order)
+            ch.add("develop")  # work on an open problem starts: the credit ledger starts here
             return ch, command[:200]
         if ABOUT.search(command):
             return ch, command[:200]
@@ -182,7 +185,9 @@ def decide(p, hooks, now=None, state=None):
     if not ch:
         return [], ch, text
     session = str(p.get("session_id") or p.get("sessionId") or "unknown")
-    out = []
+    global LAST_HELD
+    LAST_HELD = []
+    elig = []
     for h in sorted(hooks, key=lambda h: h["id"]):
         if not ch.intersection(h["on"]):
             continue
@@ -197,7 +202,24 @@ def decide(p, hooks, now=None, state=None):
         last = state.get(key)
         if isinstance(last, (int, float)) and now - last < h.get("cool", 1800):
             continue
-        state[key] = now
+        elig.append(h)
+    # Budget (19 Nov, when C33-C62 took one push to 10.7k chars): this hook runs inside the
+    # dispatcher, which shares about 9.8k chars among all hooks. The banner hook comes first, then hooks that found
+    # a fault in the text ('detect'), then reminders. A hook past the budget is named on one line, keeps no
+    # cool-down, and comes back in full at the next publish step.
+    # C11/C43/C44 (result already published, in-preparation entries, the group's talks and theses) are the checks that
+    # would have caught an unpublished prior result: they ride right behind the detected faults, not in push 3.
+    elig.sort(key=lambda h: (0 if h.get("massive") else 1 if h.get("detect") else 2 if h["id"] in PRIORITY else 3,
+                             h["id"]))
+    out = []
+    used = 0
+    for h in elig:
+        size = len(h.get("title", "")) + len(h.get("rule", "")) + 12
+        if out and used + size > BUDGET:
+            LAST_HELD.append(h["id"])
+            continue
+        used += size
+        state[h["id"] + "|" + session] = now
         out.append(h)
     # The banner only ever prints with at least one checklist line under it, and never alone.
     if out and all(h.get("massive") for h in out):
@@ -217,6 +239,8 @@ def render(hooks, ch):
     for h in hooks:
         if not h.get("massive"):
             lines.append("  [%s | %s] %s" % (h["id"], h["title"], h["rule"]))
+    if LAST_HELD:
+        lines.append("  +%d more checks at your next publish step: %s" % (len(LAST_HELD), " ".join(LAST_HELD)))
     if big:
         lines.append(BANNER)
     return "\n".join(lines)
@@ -269,10 +293,9 @@ def run_payload(raw):
                                 "ids": [h["id"] for h in fired], "text": text[:160]}, ensure_ascii=False) + "\n")
     except Exception:  # noqa: BLE001
         pass
-    head = ("[citation hooks] %d of the %d citation hooks fired (his order 11 Nov: every relevant source is cited before "
+    head = ("[citation hooks] %d of the %d citation hooks fired (every relevant source is cited before "
             "a paper goes to GitHub, ResearchGate or Zenodo; 14 Nov: the introduction and the AI declaration credit the "
             "mathematicians whose work matters most and say what was known, what is new and how they relate). "
             "Do each check now, not after the upload. "
-            "List: python ~/.claude/dreaming/citation_hooks/cite_hooks_run.py --list"
-            % (len(fired), len(hooks)))
+            % (len(fired), len(hooks))) + "List: python " + os.path.join(HERE, "cite_hooks_run.py").replace("\\", "/") + " --list"
     return head + "\n" + render(fired, ch)
