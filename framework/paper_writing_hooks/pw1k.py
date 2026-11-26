@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """pw1k: one thousand paper-writing rules, P0001..P1000 (an agent, 12 Nov 2026).
 
-Written at the author's request..
+Written at the author's request.
 
 Beside pw_core.py / pw_hooks.py (W01..W50, an agent); nothing of theirs is imported or changed.
 Tables: pw1k_terms.py (word clusters, math-notation clusters), pw1k_rules.py (text rules, detectors, event lines).
@@ -651,6 +651,27 @@ def run_rx(r, doc):
     return (ms[0].start(), r["text"] + (" (%dx)" % n if n > 1 else ""))
 
 
+_APP_DOC = re.compile(r"\b(?:research|teaching|diversity|mentoring)\s+statement\b|\bstatement of (?:teaching|research)|"
+                      r"\bcover letter\b|\bDear (?:Members|Hiring|Search|Selection|Committee|Professor|Dr)\b", re.I)
+_APP_PATH = re.compile(r"statement|cover[_-]?letter|(?:^|/)cl[_\d.]", re.I)
+# Rules about the shape of a journal paper. A research or teaching statement or a cover letter has no roadmap, notation
+# appendix, keywords, funding paragraph or theorem in its introduction, and it is about future and ongoing work (24 Nov:
+# P1021, P1026, P1000 fired on the 10-page mathematics research statement). Line-level rules still run on it.
+_APP_SKIP_FN = {"fn_roadmap", "fn_intro_no_statement", "fn_notation_table_missing", "fn_numbered_definition",
+                "fn_ack_position", "fn_msc_missing", "fn_funding_complete", "fn_data_availability"}
+_APP_SKIP_TEXT = ("The text calls itself preliminary", "Three or more deferrals to future work",
+                  "A companion or forthcoming paper with no", "The source names where the paper is unde")
+
+
+def application_doc(doc):
+    """True for a research, teaching or diversity statement or a cover letter (same test as pw_hooks.application_doc).
+    A file with an abstract is always a paper."""
+    if doc.abstract:
+        return False
+    where = (doc.path or doc.name or "").replace("\\", "/")
+    return bool(_APP_PATH.search(where) or _APP_DOC.search(doc.raw[:doc.d0 + 4000]))
+
+
 def lint(doc, chapter=None, budget=None):
     """[(weight, offset, rule id, chapter, message)] sorted by weight then position.
     With a budget in seconds the heavier rules run first and the rest are left out once the time is spent;
@@ -658,6 +679,8 @@ def lint(doc, chapter=None, budget=None):
     import pw1k_detect as D
     out = []
     todo = rules()
+    if application_doc(doc):
+        todo = [r for r in todo if r.get("fn") not in _APP_SKIP_FN and not str(r.get("text", "")).startswith(_APP_SKIP_TEXT)]
     lint.left_out = 0
     t0 = time.time()
     if budget:
