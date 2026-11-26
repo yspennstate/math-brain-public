@@ -1,6 +1,6 @@
 # Citation and credit hooks
 
-Twenty-six short checks that run while an agent develops, writes and posts a mathematics paper. Each one
+Sixty-two short checks that run while an agent develops, writes and posts a mathematics paper. Each one
 looks at a single hook event (a prompt, a shell command about to run, a file just written) and, when the
 event belongs to its phase, prints a reminder of one rule. None of them blocks anything. They exist
 because the failures they describe kept happening in practice: a reference that did not exist, a partial
@@ -25,6 +25,17 @@ The credit work starts when the attack on a problem starts, not when the paper i
 key for each and how it is used, with every statement marked known, adapted or new (C19). Attribution in
 the body stays one neutral clause in the present tense ("The operator W was introduced by A [4], who
 determined its two fixed points"); C13 checks that the paper never narrates its own history.
+
+C27-C62 read the paper's source itself. When a tool call names a `.tex` file (or a `main.tex` sits in the
+working folder), they look for the things a referee or an expert in the area would object to: a result
+called classical with no citation, a novelty claim made before a forward-literature search, a displayed
+theorem that is not new but carries no source, an introduction without a paragraph on what was known, an
+AI declaration that does not name the people the results rest on, a construction from the literature
+that is not named after its author, an in-preparation or personal-communication entry with no year or
+no place it is cited. C55-C57 are a final reread before posting, and C58-C62 keep the public copies (the
+GitHub README, Zenodo, ResearchGate) in line with the corrected PDF, holding a new posting until every
+point an expert has raised is answered in it. `cite_tex_scan.py` and `cite_tex_scan2.py` hold the shared
+text helpers.
 
 ## Running them
 
