@@ -72,7 +72,7 @@ CLAIM_ID = re.compile(r"\bclaim_[0-9a-f]{16,64}\b")
 # the block opens with its own "leads, not verdicts" line; the frame marks where the task ends and names the delivery
 FRAME_TEXT = "The math hook attached these cards from the math store to your task"
 NEWLINE = b"\r\n" if os.name == "nt" else b"\n"      # what the text-mode writer before 29 Sep put in the ledger
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 STAGES = ("harness_applied", "frame_seen", "child_received", "block_complete", "block_exact", "source_opened",
           "cited_in_answer")
 
