@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The fifty paper-writing hooks W01..W50 (an agent, 12 Nov 2026). Engine: pw_core.py.
+"""The paper-writing hooks W01..W73 (W01..W50 an agent, 12 Nov 2026; W57..W73 17-18 Nov). Engine: pw_core.py.
 
 W01..W38 read the LaTeX and fire only on something found in it. W39..W50 are one line each at a moment that matters.
 A text hook is a dict: id, kind ("line" runs on any text, "doc" only on a whole document), title, rule (what to do),
@@ -12,6 +12,8 @@ labels nobody outside the paper knows, old proofs carried over, "does not appear
 process"), an earlier referee's "generic and mechanical", and his own orders on papers (10 Jun, 15 Sep, 4 Oct, 1 Nov,
 2 Nov, 11 Nov, 12 Nov 2026).
 """
+import datetime
+import sys
 import glob
 import json
 import os
@@ -108,7 +110,8 @@ P10 = (r"\b(?:clearly|obviously|trivially|evidently|of course|needless to say|it
        r"immediate|elementary|routine) to (?:see|check|verify|show|prove))\b")
 PARTS = r"(?:sections?|appendix|appendices|remarks?|proofs?|paragraphs?|discussion|references?|examples?|figures?|tables?)"
 P20 = (r"\b(?:these|the above) (?:additions|modifications|(?:new|additional|novel|extra) (?:ingredients|additions|"
-       r"components|inputs|elements|features))\b|\bwhat is (?:added|new|changed) (?:here|in this|relative to)\b|"
+       r"components|inputs|elements|features))\b|\bwhat is (?:added|changed) (?:here|in this|relative to)\b|"
+       r"\bwhat is new (?:in this (?:version|revision|draft)|(?:here )?(?:relative to|compared (?:with|to)) (?:the |an? |our )?(?:previous|earlier|first|old|original) (?:version|draft|manuscript|preprint))\b|"
        r"\bwhat (?:has )?changed (?:relative to|since|from|compared)\b|"
        r"\bthe old (?:section|lemma|theorem|proof|appendix|argument|statement)\b[^.;\n]{0,40}\b(?:was|were|has been) "
        r"(?:dropped|removed|replaced|cut|rewritten)\b|"
@@ -117,7 +120,7 @@ P20 = (r"\b(?:these|the above) (?:additions|modifications|(?:new|additional|nove
        r"reorgani[sz]ed|replaced)\b|"
        r"\bwe (?:have )?(?:added|removed|expanded|rewrote|rewritten|reorgani[sz]ed) (?:a |an |the |new )?" + PARTS + r"\b|"
        r"\bcompared (?:with|to) (?:the )?(?:previous|earlier|first) version\b|\bin (?:this|the) (?:revision|revised version)\b|"
-       r"\bthe main changes are\b|\bwhat is new here\b")
+       r"\bthe main changes are\b")
 P24 = (r"\bTODO\b|\bFIXME\b|\bXXX+\b|\bTBD\b|\?\?\?|\[citation needed\]|\[cite\]|\[ref\]|\\(?:ref|eqref|cref|cite\w*)\{\s*\}|"
        r"\[\?+\]|\bto be (?:added|written|filled in|completed|inserted)\b|\blorem ipsum\b|\bplaceholder\b|"
        r"\binsert (?:reference|citation|figure|proof) here\b")
@@ -152,13 +155,54 @@ AI_TOPIC = re.compile(r"\b(?:agents?|language models?|llm|artificial intelligenc
                       r"copilot|machine learning|deep learning|transformer)\b", re.I)
 
 
+# Words that name the AI ("AI agents", "language models") are treated like a model's name; the rest of P04 narrates the
+# process (sessions, audit agents, sub-agents, "the agents found") and is MUST everywhere.
+P04_AI = r"\b(?:large )?language models?\b|\bAI (?:system|assistant|tool|model|agent)s?\b"
+assert P04_AI + "|" in P04
+P04_PROC = P04.replace(P04_AI + "|", "")
+# A cited work whose author is a company ("a 2026 preprint of OpenAI proves it") names the source, not the process.
+CITED_ORG = re.compile(r"\b(?:preprints?|papers?|reports?|articles?|notes?|surveys?|works?|results?)\s+(?:of|by|from)\s+"
+                       r"(?:the\s+)?(?:OpenAI|Anthropic|Google(?:\s+DeepMind)?|DeepMind)\b(?!['’]s\s+[A-Z])")
+
+
+APP_DOC = re.compile(r"\b(?:research|teaching|diversity|mentoring)\s+statement\b|\bstatement of (?:teaching|research)|"
+                     r"\bcover letter\b|\bDear (?:Members|Hiring|Search|Selection|Committee|Professor|Dr)\b", re.I)
+APP_PATH = re.compile(r"statement|cover[_-]?letter|(?:^|/)cl[_\d.]", re.I)
+
+
+def application_doc(d):
+    """A research, teaching or diversity statement or a cover letter, not a paper: AI work is its subject there, and it
+    carries no declaration section or funding line (24 Nov: W04 and W51 fired on a teaching statement's paragraph on
+    checking AI-written proofs). A file with an abstract is always a paper."""
+    if re.search(r"\\begin\{abstract\}", d.nc):
+        return False
+    return bool(APP_PATH.search(d.path or "") or APP_DOC.search(d.nc[:4000]))
+
+
 def f04(d):
+    """MUST, except a model named outside the declaration in a paper he named (AUTHOR_READ_OK holds the date and his
+    words): there the AI sentence in the abstract and introduction is the author's rule (14 Nov), so it is a note that the
+    sentence must also credit the mathematicians. Process words (sessions, audit agents) stay MUST everywhere.
+    Not applied to a statement or cover letter (application_doc)."""
     if AI_TOPIC.search(d.title()):
         return []
     skip = d.decl_lines()
-    got = dict(C.line_hits(d, P04, skip))
-    for ln, ex in C.line_hits(d, P04N, skip, 0):
-        got.setdefault(ln, ex)
+    got = {ln: C.MUST_TAG + ex for ln, ex in C.line_hits(d, P04_PROC, skip)}
+    if application_doc(d):      # AI as the statement's subject is allowed; the process words stay MUST
+        return sorted(got.items())
+    cited = set(d.line_of(m.start()) for src in (d.prose, d.flat) for m in CITED_ORG.finditer(src))
+    names = sorted(dict(C.line_hits(d, P04_AI, skip) + C.line_hits(d, P04N, skip, 0)).items())
+    nam = named(d.path) if names else False
+    for ln, ex in names:
+        if ln in got:
+            continue
+        if ln in cited and not re.search(r"\b(?:Claude|ChatGPT|GPT|Codex|Gemini|Copilot|Grok|LLMs?|Opus|Sonnet|Fable|"
+                                         r"Mythos)\b", ex):
+            continue
+        # 18 Nov: no AI statement in the abstract or the introduction; it stays in the declaration at the end.
+        # The 14 Nov exception for papers he named is withdrawn: outside the declaration it is a MUST.
+        got[ln] = C.MUST_TAG + ("the AI statement goes only in the declaration at the end, never in the abstract or "
+                                "the introduction (rule of 18 Nov 2026): " + ex)
     return sorted(got.items())
 
 
@@ -614,6 +658,11 @@ def f25(d):
         over.sort(reverse=True)
         out.append((0, "the log has %d overfull lines (text running into the margin); the worst: %s"
                     % (len(over), ", ".join("%.0fpt at source l.%s" % x for x in over[:4]))))
+        # 16 Nov: an abstract placed in the preamble made every line of a short amsart paper overflow (200+ lines)
+        a, b = d.raw.find("\\begin{abstract}"), d.raw.find("\\begin{document}")
+        if len(over) > 30 and 0 <= a < b:
+            out.append((0, "the abstract sits before \\begin{document}; move it after \\begin{document} (amsart: before "
+                           "\\maketitle) - that alone makes nearly every line overflow"))
     return out
 
 
@@ -632,7 +681,7 @@ CODE_LINE = re.compile(r"\b(?:code|data|scripts?|computations?|notebooks?|softwa
 def f51(d):
     """What every posted paper carries (his 2 Nov order; PAPER_RULES.md): a funding statement and an AI declaration
     (MUST), the author's affiliation and a data-and-code line."""
-    if d.words < 800:
+    if d.words < 800 or application_doc(d):
         return []
     at = max(0, d.nc.find("\\begin{document}"))
     ln = d.nc_line(at)
@@ -669,13 +718,84 @@ BYKIND = re.compile(r"\b(Theorem|Lemma|Proposition|Corollary|Definition|Remark|C
                     r"[^}]*\}", re.I)
 
 
+# The label's prefix is the writer's guess at the kind; the environment the \label sits in is the kind the reader sees
+# (paper16 labels a corollary prop:fs-uniform and cites it as "Corollary" correctly and as "Proposition" wrongly). So a
+# label is judged by its innermost theorem-like environment, named as the paper's own \newtheorem lines name it; the
+# prefix decides only for a label that is not in the file read (an \input that was not followed, an edit fragment).
+STDKIND = {"theorem": "Theorem", "thm": "Theorem", "lemma": "Lemma", "lem": "Lemma", "proposition": "Proposition",
+           "prop": "Proposition", "corollary": "Corollary", "cor": "Corollary", "definition": "Definition",
+           "defn": "Definition", "remark": "Remark", "conjecture": "Conjecture", "conj": "Conjecture"}
+WORDS52 = ("Theorem", "Lemma", "Proposition", "Corollary", "Definition", "Remark", "Conjecture")
+SAID52 = re.compile(r"\b(Theorem|Lemma|Proposition|Corollar(?:y|ies)|Definition|Remark|Conjecture)s?(?=[~\s]*\\(?:ref|cref|"
+                    r"autoref)\{)", re.I)
+REFRUN52 = re.compile(r"(?:[~\s]|\\,|\\ )*\\(?:ref|cref|autoref)\{[^}]*\}(?:(?:\s*,\s*|\band\b|~|\s)+"
+                      r"\\(?:ref|cref|autoref)\{[^}]*\}){0,6}")
+REF52 = re.compile(r"\\(?:ref|cref|autoref)\{([^}]*)\}")
+PFX52 = re.compile(r"(thm|theorem|lem|lemma|prop|proposition|cor|corollary|def|defn|definition|rem|remark|conj)[:._-]", re.I)
+
+
+def _env_kinds(src):
+    """env name -> the word it prints, from the paper's own declarations (the class defaults when it has none)."""
+    m = {}
+    for g in re.finditer(r"\\(?:newtheorem|spnewtheorem)\*?\{(\w+)\}(?:\[[^\]]*\])?\{([^}]*)\}", src):
+        m[g.group(1)] = g.group(2).strip()
+    for g in re.finditer(r"\\declaretheorem\[([^\]]*)\]\{(\w+)\}", src):
+        n = re.search(r"name\s*=\s*\{?([A-Za-z ]+)", g.group(1))
+        m[g.group(2)] = n.group(1).strip() if n else g.group(2).capitalize()
+    for g in re.finditer(r"\\declaretheorem\{(\w+)\}", src):
+        m.setdefault(g.group(1), g.group(1).capitalize())
+    for k, v in STDKIND.items():
+        m.setdefault(k, v)
+    return m
+
+
+def label_kinds(d):
+    """label -> the kind word of its innermost theorem-like environment; built once per Doc."""
+    got = getattr(d, "_label_kinds52", None)
+    if got is not None:
+        return got
+    src, names, out, stack = d.nc, None, {}, []
+    names = _env_kinds(src)
+    for m in re.finditer(r"\\begin\{([^}]*)\}|\\end\{([^}]*)\}|\\label\{([^}]*)\}", src):
+        if m.group(1):
+            stack.append(m.group(1))
+        elif m.group(2):
+            if m.group(2) in stack:
+                while stack and stack.pop() != m.group(2):
+                    pass
+        elif stack:
+            e = stack[-1]
+            k = names.get(e, names.get(e.rstrip("*")))
+            if k:
+                out.setdefault(m.group(3).strip(), k)
+    d._label_kinds52 = out
+    return out
+
+
 def f52(d):
-    out = []
-    for m in BYKIND.finditer(d.nc):
-        said, real = m.group(1).capitalize(), KIND[m.group(2).lower()]
-        if said != real:
-            out.append((d.nc_line(m.start()), "\"%s\" in front of a label that is a %s: %s"
-                        % (said, real.lower(), C.excerpt(m.group(0), 60))))
+    out, kinds = [], None
+    for m in SAID52.finditer(d.nc):
+        r = REFRUN52.match(d.nc, m.end())
+        if not r:
+            continue
+        said = m.group(1).capitalize()
+        said = "Corollary" if said.startswith("Corollar") else said
+        if kinds is None:
+            kinds = label_kinds(d)
+        for lab in REF52.findall(r.group(0)):
+            for one in lab.split(","):
+                one = one.strip()
+                real = kinds.get(one)
+                if real is None:
+                    p = PFX52.match(one)
+                    real = KIND.get(p.group(1).lower()) if p else None
+                    how = "a label named as a %s"
+                else:
+                    how = "a label that sits in a %s"
+                if not real or said.lower() in real.lower().split() or real.split()[-1] not in WORDS52:
+                    continue
+                out.append((d.nc_line(m.start()), ("\"%s\" in front of " + how + ": %s")
+                            % (said, real.lower(), C.excerpt(d.nc[m.start(): r.end()], 70))))
     return out[:6]
 
 
@@ -735,7 +855,7 @@ def f26(d):
     # a label may live in the part that was not read
     if d.unresolved or d.cut or (d.unresolved is None and re.search(r"\\(?:input|include|subfile|import)\b", d.nc)):
         return []
-    labels = set(re.findall(r"\\label\{([^}]+)\}", d.nc))
+    labels = set(re.findall(r"\\label(?:\[[^\]]*\])?\{([^}]+)\}", d.nc))   # cleveref: \label[lemma]{key}
     out, seen = [], set()
     for m in re.finditer(r"\\(?:ref|eqref|cref|Cref|autoref|pageref)\*?\{([^}]+)\}", d.nc):
         for k in m.group(1).split(","):
@@ -884,6 +1004,362 @@ def f37(d):
 
 
 # ---------------------------------------------------------------- the table
+# ---------------------------------------------------------------- W57..W66: "the author has read the paper" (17 Nov)
+# Most papers that go out have not been read by the author: they carry the standing sentence, unless the author
+# named the paper as one being made ready for a journal.
+# A paper he named carries a file AUTHOR_READ_OK beside its .tex holding the date and his words naming it. Every other
+# paper carries the standing sentence and no claim that he read, checked or verified it.
+READ_OK = ("AUTHOR_READ_OK", "AUTHOR_READ_OK.txt", "AUTHOR_READ_OK.md")
+STANDING = ("The author directed the work and is responsible for the content of the paper and for decisions concerning "
+            "its dissemination.")
+_NOTAI = (r"(?:(?!Claude|Codex|GPT|Gemini|models?\b|agents?\b|systems?\b|who\b|whom\b|whose\b|thank\w*|grateful|acknowledg\w*|referees?\b|reviewers?\b|"
+          r"colleagues?\b)"
+          r"(?:\b[A-Z]\.(?=\s)|[^.;]))")  # an initial ("A. B.") does not end the sentence
+# 18 Nov: "the authors of [5] verified the conjecture" is someone else's check, not the author's.
+_AUTH = r"(?<!\bits\s)(?<!\btheir\s)(?<!\bwhose\s)\bauthors?\b(?!\s+(?:of|in)\s+(?!this\b|the\s+present\b|the\s+current\b))(?!\s*~?\\cite)"
+A_READ = re.compile(
+    _AUTH + _NOTAI + r"{0,120}?\b(?:has\s+|have\s+|had\s+)?read\s+(?:through\s+)?(?:the|all|every|each|this|it\b)"
+    r"[^.;]{0,40}|\bread\s+(?:and\s+\w+\s+)?by\s+the\s+authors?\b|"
+    r"(?<![A-Za-z.\\])I\s+(?:have\s+)?read\s+(?:the|all|every|each)\b[^.;]{0,40}\b(?:proofs?|paper|manuscript)", re.I)
+# 18 Nov: "the author ... reviewed the mathematics" was missed (no noun), and "the author set the objective of extending
+# the verified capacity results" fired on an adjective; the verb must not follow an article, and the nouns include the
+# mathematics itself (a recall pass over 42 papers).
+_ADJ = r"(?<!\bthe\s)(?<!\ba\s)(?<!\ban\s)"
+_WHAT = (r"\b(?:papers?|(?:all\s+of\s+)?the\s+above|proofs?|manuscript|arguments?|content|text|results?|steps?|statements?|computations?|mathematics|"
+         r"maths?|theory|derivations?|calculations?|analysis)\b")
+A_CHECK = re.compile(
+    _AUTH + _NOTAI + r"{0,120}?\b" + _ADJ + r"(?:has\s+|have\s+|had\s+)?(?:checked|verified|reviewed|proofread|"
+    r"examined|validated|confirmed|went\s+through|gone\s+through)\b[^.;]{0,70}" + _WHAT + r"|\b(?:checked|verified|"
+    r"reviewed|proofread)\s+(?:and\s+\w+\s+)?by\s+the\s+authors?\b", re.I)
+
+
+A_STRONG = re.compile(
+    _AUTH + _NOTAI + r"{0,120}?\b" + _ADJ + r"(?:has\s+|have\s+|had\s+)?(?:checked|verified|proofread|examined|"
+    r"validated|confirmed|went\s+through|gone\s+through)\b[^.;]{0,70}" + _WHAT + r"|\b(?:checked|verified|proofread)\s+"
+    r"(?:and\s+\w+\s+)?by\s+the\s+authors?\b", re.I)
+
+
+def read_ok_file(path):
+    """The marker beside the .tex (or one folder up, for a paper kept in a paper/ subfolder), or ''."""
+    if not path:
+        return ""
+    folder = os.path.dirname(path)
+    up = os.path.dirname(folder) if os.path.basename(folder).lower() in ("paper", "tex", "latex", "src", "manuscript") else ""
+    for f in (folder, up):
+        for n in READ_OK:
+            p = os.path.join(f, n)
+            if f and os.path.isfile(p):
+                return p
+    return ""
+
+
+def named(path):
+    """He named this paper: the record is there and holds a date and his words."""
+    mk = read_ok_file(path)
+    return bool(mk and read_ok_good(mk))
+
+
+def read_ok_good(marker):
+    """A marker counts when it holds a date and at least a few of his words; a bare touched file does not."""
+    try:
+        t = open(marker, encoding="utf-8", errors="replace").read()
+    except OSError:
+        return False
+    return bool(re.search(r"20\d\d", t)) and len(re.findall(r"[A-Za-z]{2,}", t)) >= 6
+
+
+def _claims(d, pat):
+    out, seen = [], set()
+    try:
+        sents = list(d.sentences())
+    except Exception:
+        sents = []
+    if not sents:
+        sents = [(i, l) for i, l in enumerate(d.nc.split("\n"), 1)]
+    for ln, sn in sents:
+        m = pat.search(C.plain(sn))
+        if m and ln not in seen:
+            seen.add(ln)
+            out.append((ln, C.excerpt(C.plain(sn), 110)))
+    return out
+
+
+def f57(d):
+    if named(d.path):
+        return []
+    return [(ln, "says the author read it, and he has not named this paper: %s" % ex) for ln, ex in _claims(d, A_READ)][:5]
+
+
+def f58(d):
+    if named(d.path):
+        return []
+    strong = _claims(d, A_STRONG)
+    hard = set(ln for ln, _ in strong)
+    out = [(ln, C.MUST_TAG + "says the author checked or verified it, and he has not named this paper: %s" % ex)
+           for ln, ex in strong]
+    out += [(ln, "says the author reviewed it (the publishers' \"reviewed and edited by the author\" too); in a paper "
+                 "going out now that he has not read, write the standing sentence instead: %s" % ex)
+            for ln, ex in _claims(d, A_CHECK) if ln not in hard]
+    return out[:5]
+
+
+CREDIT = re.compile(r"education[\s~]+credits?[\s~]+program(?:me)?", re.I)
+
+
+def f73(d):
+    """W73 (18 Nov 2026): the cloud education-credits sentence comes out of the papers."""
+    out, seen = [], set()
+    for m in CREDIT.finditer(d.nc):
+        ln = d.nc_line(m.start())
+        if ln in seen or (ln - 1) in seen:  # the number and the phrase sit in one sentence: report it once
+            continue
+        seen.add(ln)
+        out.append((ln, "the Google Cloud education-credits sentence: %s"
+                    % C.excerpt(d.nc[max(0, m.start() - 90): m.end() + 20], 120)))
+    return out[:3]
+
+
+def f59(d):
+    mk = read_ok_file(d.path)
+    if mk and not read_ok_good(mk):
+        return [(1, "%s is empty or carries no date and none of his words: write the date and the words in which he named "
+                    "this paper, or delete the file and the sentence" % mk.replace("\\", "/"))]
+    return []
+
+
+def f60(d):
+    mk = read_ok_file(d.path)
+    if not (mk and read_ok_good(mk)) or d.words < 800:
+        return []
+    if _claims(d, A_READ):
+        return []
+    return [(1, "he named this paper (%s) and no sentence says he read it: add it to the AI declaration at the end "
+                "(never the abstract or introduction)" % os.path.basename(mk))]
+
+
+def f61(d):
+    mk = read_ok_file(d.path)
+    if not mk or not d.path or not os.path.exists(d.path):
+        return []
+    try:
+        late = os.path.getmtime(d.path) - os.path.getmtime(mk)
+    except OSError:
+        return []
+    if late > 3600 and _claims(d, A_READ):
+        return [(1, "the .tex changed %.0f h after %s was written: he read an earlier text, so tell him in one line what "
+                    "changed since, and write the new date into the file when he has seen it"
+                 % (late / 3600.0, os.path.basename(mk)))]
+    return []
+
+
+SIDE = ("README*", "readme*", "rg_description*", "*description*.txt", "*cover*letter*", "*cover_letter*", "zenodo*.md",
+        "zenodo*.txt", "zenodo*.json", ".zenodo.json", "abstract*.txt", "ABSTRACT*")
+
+
+def f62(d):
+    """The same claim on the hosting page, the README or the cover letter is made in his name as much as in the paper."""
+    if not d.path or not d.whole or named(d.path):
+        return []
+    folder = os.path.dirname(d.path)
+    if not folder:
+        return []
+    out, seen = [], set()
+    for f in (folder,):
+        for pat in SIDE:
+            for p in glob.glob(os.path.join(f, pat))[:6]:
+                if p in seen or not os.path.isfile(p) or os.path.getsize(p) > 400000:
+                    continue
+                seen.add(p)
+                try:
+                    t = open(p, encoding="utf-8", errors="replace").read()
+                except OSError:
+                    continue
+                m = A_READ.search(t) or A_STRONG.search(t)
+                if m:
+                    out.append((1, "%s says it too: %s" % (os.path.basename(p), C.excerpt(m.group(0), 90))))
+    return out[:4]
+
+
+def _read_state(ctx):
+    """[(name, has marker, claims in the .tex)] for the whole documents of this call."""
+    rows = []
+    for d in [x for x in ctx.get("docs") or [] if x.whole and x.path][:4]:
+        mk = read_ok_file(d.path)
+        n = len(_claims(d, A_READ)) + len(_claims(d, A_CHECK))
+        rows.append((os.path.basename(os.path.dirname(d.path)) + "/" + os.path.basename(d.path), bool(mk and read_ok_good(mk)), n))
+    return rows
+
+
+def c64(ch, p, ctx):
+    bad = ["%s (%d sentences)" % (n, k) for n, ok, k in _read_state(ctx) if k and not ok]
+    return ("a paper he has not named says he read or checked it: %s. Replace each with: \"%s\"" % ("; ".join(bad), STANDING)) \
+        if bad else None
+
+
+def c65(ch, p, ctx):
+    rows = _read_state(ctx)
+    if not rows:
+        return ("the .tex is not known from this call; before it is submitted, a paper that says he read it has "
+                "AUTHOR_READ_OK beside it with the date and his words")
+    out = []
+    for n, ok, k in rows:
+        if k and not ok:
+            out.append("%s says he read it and has no AUTHOR_READ_OK: take the sentence out, or ask him by email" % n)
+        elif ok and k:
+            out.append("%s: he named it; the email that goes with it says the sentence is a statement in his name" % n)
+        elif ok and not k:
+            out.append("%s: he named it and the sentence is missing" % n)
+    return "; ".join(out) or None
+
+
+def _fitz():
+    """PyMuPDF, or None. Hooks run "python -s", which leaves out the user site where it lives; try that once."""
+    try:
+        import fitz
+        return fitz
+    except ImportError:
+        import site
+        site.addsitedir(site.getusersitepackages())
+        try:
+            import fitz
+            return fitz
+        except ImportError:
+            return None
+
+
+def c66(ch, p, ctx):
+    """The compiled pages: a claim that sits in an \\input file, a macro or the title page is in the PDF and not in main.tex."""
+    out, unread = [], []
+    for d in [x for x in ctx.get("docs") or [] if x.whole and x.path][:3]:
+        if named(d.path):
+            continue
+        pdf = d.path[:-4] + ".pdf"
+        if not os.path.isfile(pdf) or os.path.getsize(pdf) > 30000000:
+            continue
+        fitz = _fitz()
+        if fitz is None:
+            unread.append("%s (PyMuPDF is not importable)" % os.path.basename(pdf))
+            continue
+        try:
+            t = re.sub(r"\s+", " ", " ".join(pg.get_text() for pg in fitz.open(pdf)))
+        except Exception as e:
+            unread.append("%s (%s)" % (os.path.basename(pdf), type(e).__name__))
+            continue
+        m = A_READ.search(t) or A_CHECK.search(t)
+        if m:
+            out.append("%s: \"%s\"" % (os.path.basename(pdf), C.excerpt(m.group(0), 90)))
+    msg = []
+    if out:
+        msg.append("the compiled PDF of a paper he has not named says he read or checked it - %s" % "; ".join(out))
+    if unread:
+        msg.append("the compiled PDF was NOT read, so this check did not run: %s" % "; ".join(unread))
+    return ". ".join(msg) or None
+
+
+
+# ---------------------------------------------------------------- W67..W72: the private record of submissions (17 Nov)
+# A private record of where each paper was submitted and when, and whether it is still in process, so that no
+# paper is submitted twice. The folder holds submissions.py and SUBMISSIONS.jsonl.
+SUB_DIR = (os.environ.get("PW_SUBMISSIONS_DIR") or os.path.expanduser("~/.claude/paper_submissions")).replace("\\", "/")
+# The tool itself: the private folder's copy when there is one, else the copy shipped beside these hooks.
+SUB_CODE = SUB_DIR if os.path.isfile(os.path.join(SUB_DIR, "submissions.py")) else \
+    os.path.join(HERE, "paper_submissions").replace("\\", "/")
+SUB_TOOL = "python " + SUB_CODE + "/submissions.py"
+TITLE = re.compile(r"\\title\s*(?:\[[^\]]*\])?\s*\{((?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*)\}")
+
+
+def _subs():
+    """(the submissions module, its rows) or (None, [])."""
+    try:
+        if SUB_CODE not in sys.path:
+            sys.path.insert(0, SUB_CODE)
+        import submissions as S
+        return S, S.load(os.environ.get("PW_SUBMISSIONS") or None)
+    except Exception:  # noqa: BLE001
+        return None, []
+
+
+def _titles(ctx):
+    out = []
+    for d in [x for x in ctx.get("docs") or [] if x.whole][:3]:
+        m = TITLE.search(d.nc)
+        if m:
+            t = re.sub(r"\s+", " ", C.plain(re.sub(r"\\(?:thanks|footnote)\s*\{[^{}]*\}", " ", m.group(1)))).strip()
+            if len(t) > 8:
+                out.append(t)
+    return out
+
+
+def _short(r):
+    return "%s at %s%s (%s, %s)" % (r.get("title", "?")[:46], r.get("journal", "?")[:34], (" " + r["ms_id"]) if r.get("ms_id") else "",
+                                   r.get("status", "?"), r.get("submitted") or "no date")
+
+
+def c67(ch, p, ctx):
+    S, rows = _subs()
+    if S is None:
+        return "the submissions tool could not be loaded (%s/submissions.py): find out why before anything is submitted" % SUB_CODE
+    out = []  # an empty record is a fresh install: every paper is a first submission
+    for t in _titles(ctx):
+        op, cl = S.verdict(rows, t)
+        if op:
+            out.append("STOP: \"%s\" matches a row that is open - %s. If it is this paper it goes nowhere else until that "
+                       "journal decides or the author withdraws it" % (t[:60], "; ".join(_short(r) for r in op[:3])))
+        elif cl:
+            out.append("\"%s\" is free on this record; it does not go again to: %s"
+                       % (t[:60], ", ".join(sorted(set(r.get("journal", "?") for r in cl)))))
+        else:
+            out.append("\"%s\" has no row: a first submission. Record it the minute it goes through" % t[:60])
+    if out:
+        return "; ".join(out)
+    op = [r for r in rows if r.get("status") in S.OPEN]
+    if not op:
+        return "nothing is open on the record. After the submission goes through: %s add --title \"...\" --journal \"...\"" \
+               " --date <day>" % SUB_TOOL
+    names ="; ".join("%s @ %s" % (r.get("title", "?")[:34], r.get("journal", "?")[:26]) for r in op[:16])
+    return "%d rows are open now: %s. Before this one: %s check \"<title>\"" % (len(op), names, SUB_TOOL)
+
+
+def c70(ch, p, ctx):
+    S, rows = _subs()
+    dr = [r for r in rows if r.get("status") == "draft_started"]
+    return ("%d drafts were started in journal systems and never finished: %s. Each is finished or deleted in that system "
+            "and its row closed (status <row> draft_deleted)" % (len(dr), "; ".join(
+                "%s %s @ %s" % (r.get("rid"), r.get("title", "?")[:30], r.get("journal", "?")[:30]) for r in dr[:6]))) if dr else None
+
+
+def c71(ch, p, ctx):
+    S, rows = _subs()
+    if S is None:
+        return None
+    old = []
+    for r in rows:
+        if r.get("status") in S.OPEN:
+            try:
+                age = (datetime.date.today() - datetime.date.fromisoformat(str(r.get("checked"))[:10])).days
+            except ValueError:
+                age = 999
+            if age > 30:
+                old.append((age, r))
+    old.sort(key=lambda x: -x[0])
+    return ("%d open rows have not been looked at for a month: %s. Read the author's mail and the journal's page, then write the "
+            "status, or `looked <row>` when nothing moved" % (len(old), "; ".join(
+                "%s %s @ %s (%d d)" % (r.get("rid"), r.get("title", "?")[:28], r.get("journal", "?")[:24], a) for a, r in old[:5]))) if old else None
+
+
+def c72(ch, p, ctx):
+    d = ctx.get("dir") or ""
+    if not d or os.path.normcase(os.path.abspath(d)).startswith(os.path.normcase(os.path.abspath(SUB_DIR))):
+        return None
+    try:
+        hit = [f for f in os.listdir(d) if re.match(r"(?i)submissions?[._-]|submission_(?:log|record|history)|where_submitted", f)]
+    except OSError:
+        return None
+    return ("%s holds %s: where a paper was sent and what a journal answered stay in the private record, not beside the "
+            "paper" % (os.path.basename(d.rstrip("/\\")), ", ".join(hit[:3]))) if hit else None
+
+
+
 def T(i, kind, title, rule, must=False, **kw):
     h = {"id": "W%02d" % i, "kind": kind, "title": title, "rule": rule, "must": must}
     h.update(kw)
@@ -900,7 +1376,7 @@ TEXT = [
       "attribution is one neutral clause in the present tense (\"introduced by X [4], who ...\"); never what was looked "
       "for and not found", True, pat=P03, skip_decl=True),
     T(4, "line", "a model, an agent or a session is named outside the declaration",
-      "the AI declaration is the only place the process is named, in one short factual record", True, fn=f04),
+      "the AI declaration is the only place the process is named, in one short factual record", fn=f04, tagged=True),
     T(5, "line", "checking is narrated",
       "say what is proved; how often it was checked belongs nowhere in a paper (a computer-assisted step names the "
       "computation and where the code is)", True, pat=P05, skip_ack=True),
@@ -999,6 +1475,28 @@ TEXT = [
     T(55, "line", "a sentence about the paper's own history (read each one)",
       "a wide net, so some hits are ordinary; where the sentence tells what was changed, checked, asked for or found "
       "out along the way, delete it or state the mathematics", fn=f55),
+    T(57, "line", "\"the author has read the paper\" in a paper he has not named",
+      "delete the sentence and keep the standing one: \"" + STANDING + "\" He has not read most papers that go out. The "
+      "sentence stays only when a file AUTHOR_READ_OK beside the .tex holds the date and his words naming this paper",
+      True, fn=f57),
+    T(58, "line", "\"the author checked / verified the proofs\" in a paper he has not named",
+      "the same rule as W57: nothing is said in his name that he did not do. Say which system checked what, and that "
+      "the author directed the work and is responsible for it. \"Checked\", \"verified\" and \"proofread\" are a MUST; "
+      "the publishers' template \"reviewed and edited by the author\" is reported", fn=f58),
+    T(59, "doc", "an AUTHOR_READ_OK file with nothing in it",
+      "the file is a record, not a switch: it holds the date and his own words naming this paper; no agent writes it "
+      "on its own judgment", True, fn=f59),
+    T(60, "doc", "a paper he named that does not say he read it",
+      "for a paper he asked to be made ready for a journal, the sentence that the author has read the paper and the "
+      "proofs goes in the AI declaration at the end (never the abstract or introduction; rule of 18 Nov 2026)", fn=f60),
+    T(61, "doc", "the text changed after he read it",
+      "the sentence is about the text as it stands; when the .tex moves after the record, tell him what changed", fn=f61),
+    T(62, "doc", "the README, hosting description or cover letter says he read it",
+      "the page beside the paper follows the paper: without AUTHOR_READ_OK it does not say he read, checked or "
+      "verified anything", True, fn=f62),
+    T(73, "line", "the Google Cloud education-credits sentence (rule of 18 Nov 2026)",
+      "delete it from the acknowledgements or funding text. A posted paper: fix the source and its public repository now, the "
+      "hosted PDF at its next version", fn=f73),
 ]
 
 
@@ -1056,7 +1554,7 @@ def must_count(docs):
     """(MUST findings, their hooks, introduction-group findings that are not MUST, their hooks)."""
     n, ids, n2, ids2 = 0, [], 0, []
     for h in TEXT:
-        if not h.get("must") and h["id"] not in C.INTRO_GROUP:
+        if not h.get("must") and not h.get("tagged") and h["id"] not in C.INTRO_GROUP:
             continue
         got = C.scan(h, docs)
         m = C.must_n(h, got)
@@ -1162,6 +1660,40 @@ EVENT = [
     T(56, "event", "the commit message of a paper's repository",
       "short and plain (\"fix section heading\", \"add appendix B\"): no chain of clauses, nothing about how the text "
       "was edited or by whom", on=("commit",), check=c56, cool=0),
+    T(63, "event", "who read the paper",
+      "the default for every paper is the standing sentence (\"" + STANDING + "\"). \"The author has read the paper and "
+      "the proofs\" is written only into a paper he named for publication, recorded in AUTHOR_READ_OK beside the .tex "
+      "(rule of 17 Nov)", on=("start",), cool=7200),
+    T(64, "event", "a posted paper does not say he read it",
+      "papers going to GitHub, Zenodo or ResearchGate are the ones he has mostly not read: no sentence that he read, "
+      "checked or verified them", on=("publish",), check=c64, cool=900),
+    T(65, "event", "a submitted paper says he read it only on his word",
+      "before a journal submission, the sentence and AUTHOR_READ_OK agree, and he is told the sentence is made in his "
+      "name", on=("submit",), check=c65, cool=900),
+    T(66, "event", "the compiled PDF and the sentence that he read it",
+      "search the PDF text, not only main.tex: the abstract, a title-page note or an \\input file can carry it",
+      on=("compile", "publish", "submit"), check=c66, cool=1800),
+    T(67, "event", "is this paper already at a journal",
+      "one paper is at one journal at a time. Before a submission page is opened or filled, look the paper up in the "
+      "private record: " + SUB_TOOL + " check \"<title>\" (exit 3: it is in process, do not submit)", True, on=("submit",), check=c67, cool=600),
+    T(68, "event", "record the submission the minute it goes through",
+      SUB_TOOL + " add --title \"...\" --journal \"...\" --date <day> --id <manuscript number> --account <the login "
+      "used> --agent <you>. A submission that is on a journal's site and not in SUBMISSIONS.jsonl is the one that "
+      "gets sent twice", on=("submit",), cool=900),
+    T(69, "event", "record the journal's answer the day it arrives",
+      SUB_TOOL + " status <row> declined|desk_returned|revision|accepted|withdrawn --date <day> --note \"...\". A "
+      "paper is free to go elsewhere only when its open row is closed, and a journal with a closed row does not get "
+      "that paper again", on=("reject",), cool=900),
+    T(70, "event", "a draft left in a journal's system",
+      "a submission started and not finished is recorded too (--status draft_started): it sits there in his name "
+      "and the next agent takes the paper for unsubmitted", on=("submit",), check=c70, cool=3600),
+    T(71, "event", "open rows nobody has looked at",
+      "the record says \"still in process\" only as of the day someone last looked", on=("submit", "reject"),
+      check=c71, cool=3600),
+    T(72, "event", "the record of submissions is private",
+      "journals, manuscript numbers and decisions live in " + SUB_DIR + " (a private folder) and nowhere "
+      "else: not in the paper's repository, its README, a hosting page or a public board",
+      on=("publish", "commit"), check=c72, cool=900),
 ]
 
 HOOKS = TEXT + EVENT
