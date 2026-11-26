@@ -213,6 +213,26 @@ def run():
                     name="brk.tex")
         check("prose rule matches across a line break", E.run_rx(p813[0], brk) is not None)
 
+    # 24 Nov: a research statement is not a paper - no roadmap / notation appendix / theorem-in-intro demand on it;
+    # the same text with an abstract, or named like a paper, still gets them.
+    secs = "".join("\\section{Part %s}\nThe argument in this part is about random matrices.\n" % c for c in "BCDEF")
+    stmt = ("\\documentclass{article}\\newtheorem{theorem}{Theorem}\\title{Research Statement}\\begin{document}\\maketitle\n"
+            "\\section{Introduction}\nMy work is on random matrices and the stability of fixed points.\n" + secs.replace(
+                "Part B}\n", "Part B}\n\\begin{theorem}Every orbit converges.\\end{theorem}\n", 1) + "\\end{document}\n")
+    want = {"fn_roadmap", "fn_intro_no_statement"}
+
+    def _fns(doc):
+        return {r.get("fn") for r in R if r["id"] in {f[2] for f in E.lint(doc)}} & want
+    sd = E.Doc(text=stmt, name="main.tex")
+    check("statement is an application doc", E.application_doc(sd))
+    check("statement gets no paper-structure rules", not _fns(sd), ",".join(sorted(_fns(sd))))
+    pd = E.Doc(text=stmt.replace("Research Statement", "Fixed points of random maps").replace(
+        "\\maketitle", "\\maketitle\\begin{abstract}We prove a bound.\\end{abstract}"), name="main.tex")
+    check("paper with an abstract is not an application doc", not E.application_doc(pd))
+    check("the same text as a paper gets them (control)", _fns(pd) == want, ",".join(sorted(_fns(pd))))
+    pp = E.Doc(text=stmt.replace("Research Statement", "Fixed points of random maps"), name="paper.tex")
+    check("paper without an abstract is not an application doc", not E.application_doc(pp))
+
     rows = E.notation_rows(docs["clean"])
     check("notation rows", any(r[1] == "h" for r in rows), "%d rows: %s" % (len(rows), ", ".join(r[1] for r in rows[:6])))
 
