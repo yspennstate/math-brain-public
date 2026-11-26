@@ -242,6 +242,54 @@ def source_files(src):
 # BRAIN_SLUG is not set. An exported BRAIN_SLUG still wins; the source files in the repository are unchanged.
 SLUG_FALLBACK = '"BRAIN_SLUG", "default")'
 
+def home_literals(text, home):
+    """Rewrite Python string literals whose value is a home-relative Windows path ("~" then a
+    backslash, e.g. r"~\\.claude\\dreaming") to the absolute path of this install.
+
+    The scripts that hold such a literal never expand it. On macOS (measured on a fresh install)
+    os.path.exists() on it is False, so the hook dispatcher finds neither its on-switch nor its list
+    and exits without running a hook. Only whole path-shaped literals are replaced; f-strings, byte
+    strings, values with spaces or quotes, and anything literal_eval cannot read are left alone.
+    Returns (text, count)."""
+    import ast, tokenize
+    bs = chr(92)
+    edits = []
+    try:
+        toks = list(tokenize.generate_tokens(io.StringIO(text).readline))
+    except (tokenize.TokenError, IndentationError, SyntaxError):
+        return text, 0
+    for t in toks:
+        if t.type != tokenize.STRING:
+            continue
+        s = t.string
+        prefix = s[:len(s) - len(s.lstrip("rRuUbBfF"))].lower()
+        if "f" in prefix or "b" in prefix:
+            continue
+        try:
+            v = ast.literal_eval(s)
+        except Exception:  # noqa: BLE001
+            continue
+        if not isinstance(v, str) or not v.startswith("~" + bs):
+            continue
+        if re.search(r"[\s\"'*?<>|]", v):        # a command or a pattern, not a path: leave it
+            continue
+        parts = [p for p in v[2:].split(bs) if p]
+        new = os.path.join(home, *parts)
+        if v.endswith(bs):                       # keep the separator a caller appends a name to
+            new = os.path.join(new, "")
+        edits.append((t.start, t.end, json.dumps(new)))
+    if not edits:
+        return text, 0
+    offs = [0]                      # tokenize rows break on "\n" only, so must these offsets
+    for ln in text.split("\n"):
+        offs.append(offs[-1] + len(ln) + 1)
+    out = text
+    for (sr, sc), (er, ec), new in reversed(edits):
+        a, b = offs[sr - 1] + sc, offs[er - 1] + ec
+        out = out[:a] + new + out[b:]
+    return out, len(edits)
+
+
 def copy_expand(src, dst, tok, apply_):
     n = 0
     for root, rel, f in source_files(src):
@@ -256,6 +304,14 @@ def copy_expand(src, dst, tok, apply_):
                     out = expand(t, tok, as_json=(ext == ".json"))
                     if ext == ".py" and SLUG_FALLBACK in out:
                         out = out.replace(SLUG_FALLBACK, '"BRAIN_SLUG", %s)' % json.dumps(tok["{{BRAIN_SLUG}}"]))
+                    if ext == ".py":
+                        fixed, k = home_literals(out, tok["{{USERPROFILE}}"])
+                        if k:
+                            try:
+                                compile(fixed, dp, "exec")
+                                out = fixed
+                            except (SyntaxError, ValueError):
+                                pass
                     io.open(dp, "w", encoding="utf-8", newline="").write(out)
                 except UnicodeDecodeError:
                     shutil.copy2(sp, dp)
