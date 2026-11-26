@@ -12,8 +12,12 @@ introspection, are being followed".
                                             check the report, record it. Start it hidden and detached:
       Start-Process pythonw -ArgumentList '<this file>','run','<file.tex>' -WindowStyle Hidden
   python paper_audit.py status              runs in flight and the last ten finished
+  python paper_audit.py import <file.tex> <dir>   record an audit read on another machine: <dir> holds the
+                                            run's REPORT.md + RESULT.json; refused unless the laptop file is byte-
+                                            identical to what the Mac read and every runner check passed
 
-A run refuses to start when free memory is under 6 GB, when MAX_RUNNING audits are already in flight, when the
+A run refuses to start when free memory is under PAPER_AUDIT_MIN_FREE_GB (default 2.5 GB), when MAX_RUNNING audits
+are already in flight (only one while free memory is under 6 GB), when the
 owner's hold on Claude agents is set, or when no pool account has room. The auditor never edits the paper; its
 report goes to the audits home (12_cognitive_architecture/audits/reports/<date>/paper_audit_<slug>/REPORT.md) and
 audit_index.json here records it, which is what hook W43 reads.  (an agent, 12 Nov 2026)
@@ -21,6 +25,7 @@ audit_index.json here records it, which is what hook W43 reads.  (an agent, 12 N
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -34,9 +39,26 @@ AUDITS = "~/brain-repo/12_cognitive_architecture/audits/reports"
 INDEX = os.path.join(HERE, "audit_index.json")
 RUNS = os.path.join(HERE, "audit_runs.jsonl")
 STOP = os.path.join(HERE, "STOP_AUDITS")
-MODEL = "claude-fable-5-2"
+MODEL = os.environ.get("PAPER_AUDIT_MODEL", "claude-fable-5-2")  # PAPER_AUDIT_MODEL runs the same read on another model
 MAX_RUNNING = 2
-MIN_FREE_GB = 6.0
+# 17 Nov: a 6 GB floor stopped every paper read fleet-wide for hours with RAM at 1.9-3.1 GB; one read is one
+# claude -p of about 0.5 GB. The floor is now PAPER_AUDIT_MIN_FREE_GB (default 2.5), and under LOW_FREE_GB only
+# one audit may run at a time.
+try:
+    MIN_FREE_GB = float(os.environ.get("PAPER_AUDIT_MIN_FREE_GB", "2.5"))
+except ValueError:
+    MIN_FREE_GB = 2.5
+LOW_FREE_GB = 6.0
+
+
+def gate(free, n_flying):
+    """Why a new audit may not start at this free memory (GB) with n_flying already running, or None."""
+    if free < MIN_FREE_GB:
+        return "free memory %.1f GB is under %.1f GB" % (free, MIN_FREE_GB)
+    cap = MAX_RUNNING if free >= LOW_FREE_GB else 1
+    if n_flying >= cap:
+        return "%d audits already in flight (cap %d at %.1f GB free)" % (n_flying, cap, free)
+    return None
 TIMEOUT_S = 150 * 60  # 80 min cut two of three high-effort reads of a 1300-line paper (12 Nov)
 
 for _s in (sys.stdout, sys.stderr):
@@ -96,7 +118,7 @@ def in_flight():
     import psutil
     started, ended = {}, set()
     for r in runs():
-        if r.get("event") == "start":
+        if r.get("event") in ("reserve", "start"):     # a reserve row holds the slot until its start row lands
             started[r["run"]] = r
         elif r.get("event") in ("end", "refused"):
             ended.add(r.get("run"))
@@ -107,6 +129,14 @@ def in_flight():
         try:
             p = psutil.Process(r["wrapper_pid"])
             if p.is_running() and "python" in p.name().lower():
+                # A PID is reused: the wrapper was created before its run id's timestamp, so a process created
+                # well after it is someone else (20 Nov: a 19 Nov run held a slot through a 13:28 hook process).
+                try:
+                    t0 = time.mktime(time.strptime(str(rid)[:15], "%Y%m%dT%H%M%S"))
+                    if p.create_time() > t0 + 120:
+                        continue
+                except ValueError:
+                    pass
                 live.append(r)
         except Exception:  # noqa: BLE001
             pass
@@ -171,6 +201,10 @@ Then read the paper yourself, the first six pages twice, and write the report. W
    paper, the draft, a version, the writing, a search, a check, a computation's "sanity", an agent or the author's
    care ("we are careful", "an honest account", "the present paper does not", "was corrected", "we found no").
    Line number, the sentence, and the replacement: either delete, or the mathematical statement it stands for.
+   The Acknowledgments paragraph saying the work was done by Claude and Codex agents with Math Brain and the Brain
+   framework, with its three citations, must STAY in the Acknowledgments: the author's declaration standard (8 Nov,
+   paper_declarations/AI_DECLARATION_STANDARD.md) requires it and the pre-push guard refuses a paper without it. Never
+   ask to move it. A shorter one-line form that keeps Claude, Codex and the three citations may be suggested (SHOULD).
 3. NAMES. Every term coined in the paper: where it is first used, where it is defined, and whether the first use
    comes before the definition (abstract and introduction count). Every object that carries more than one name.
    Every symbol used before it is introduced or defined more than once.
@@ -221,13 +255,38 @@ def run(tex):
         return refuse("STOP_AUDITS is set")
     free = psutil.virtual_memory().available / 2 ** 30
     if free < MIN_FREE_GB:
-        return refuse("free memory %.1f GB is under %.0f GB" % (free, MIN_FREE_GB))
-    flying = in_flight()
-    if len(flying) >= MAX_RUNNING:
-        return refuse("%d audits already in flight" % len(flying))
-    if any(key(r["tex"]) == key(tex) for r in flying):
-        return refuse("this paper is being audited now")
-    sys.path.insert(0, "~/claude_pool")
+        return refuse(gate(free, 0))
+    # Check and reserve under one exclusive lock: nine audits launched seconds apart all passed the bare check
+    # (17 Nov 00:32), because none had written its start row yet. A lock older than two minutes is a dead holder's.
+    lock = RUNS + ".lock"
+    for _ in range(600):
+        try:
+            os.close(os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY))
+            break
+        except FileExistsError:
+            try:
+                if time.time() - os.path.getmtime(lock) > 120:
+                    os.remove(lock)
+                    continue
+            except OSError:
+                pass
+            time.sleep(0.1)
+    else:
+        return refuse("in-flight lock busy for a minute")
+    try:
+        flying = in_flight()
+        why = gate(free, len(flying))
+        if why:
+            return refuse(why)
+        if any(key(r["tex"]) == key(tex) for r in flying):
+            return refuse("this paper is being audited now")
+        log_run(dict(base, event="reserve"))
+    finally:
+        try:
+            os.remove(lock)
+        except OSError:
+            pass
+    sys.path.insert(0, os.path.expanduser("~/claude_pool"))
     try:
         import claude_pool
         env, account = claude_pool.env_for("auto", fallback="main")   # pool accounts full -> his main login
@@ -257,7 +316,14 @@ def run(tex):
             open(os.path.join(out, "session.json"), "wb") as fout, \
             open(os.path.join(out, "session.err"), "wb") as ferr:
         p = subprocess.Popen([exe, "-p", "--output-format", "json", "--dangerously-skip-permissions",
-                              "--model", MODEL, "--effort", "high", "--disallowedTools",
+                              "--model", MODEL, "--effort", "high",
+                              # 17 Nov: with CLAUDE_CODE_SUBPROCESS_ENV_SCRUB set the skip-permissions flag is
+                              # dropped to default mode and the reader could not open the paper (audits NOT RUN).
+                              # Grant what the reading needs explicitly.
+                              "--add-dir", os.path.dirname(os.path.abspath(tex)), "--add-dir", HERE,
+                              "--allowedTools", "Read", "Glob", "Grep", "Write", "Edit",
+                              "Bash(python:*)", "Bash(pdftotext:*)", "Bash(ls:*)", "Bash(grep:*)",
+                              "--disallowedTools",
                               "Bash(taskkill:*)", "Bash(pkill:*)", "Bash(killall:*)", "Bash(wmic:*)",
                               "Bash(git push:*)", "Bash(git commit:*)", "Agent", "Task"],
                              stdin=fin, stdout=fout, stderr=ferr, env=env, creationflags=flags,
@@ -295,12 +361,77 @@ def run(tex):
     return 0 if ok else 1
 
 
+def import_mac(tex, src):
+    """Record an audit read on another machine by a remote audit runner (for when headless agents do not run
+    on the machine that holds the paper). src is a local copy of the run's folder: REPORT.md + RESULT.json. Refused unless
+    every runner check passed and the laptop file is byte-identical to the file the Mac read. An earlier record for
+    the same text is kept under "earlier", so two independent audits of one text stay visible."""
+    tex = os.path.abspath(tex)
+    try:
+        res = json.load(open(os.path.join(src, "RESULT.json"), encoding="utf-8"))
+        first = open(os.path.join(src, "REPORT.md"), encoding="utf-8", errors="replace").readline().strip()
+    except (OSError, ValueError) as e:
+        print("refused: %s" % e)
+        return 2
+    with open(tex, "rb") as f:
+        raw = hashlib.sha256(f.read()).hexdigest()
+    bad = [k for k, v in (res.get("checks") or {}).items() if not v]
+    if not res.get("ok") or not res.get("checks") or bad:
+        print("refused: runner checks failed %s" % (bad or "(no checks recorded)"))
+        return 2
+    if raw != res.get("queued_sha256") or raw != res.get("tex_sha256_after"):
+        print("refused: laptop %s sha256 %s is not the text the Mac read (%s)" % (tex, raw[:16], str(res.get("queued_sha256"))[:16]))
+        return 2
+    if first != res.get("first_line") or not first.startswith("VERDICT:"):
+        print("refused: REPORT.md first line does not match RESULT.json")
+        return 2
+    dst = os.path.join(AUDITS, time.strftime("%Y/%m/%d"), "paper_audit_%s_mac2_a%s" % (slug(tex), res.get("audit")))
+    os.makedirs(dst, exist_ok=True)
+    for f in ("REPORT.md", "RESULT.json", "STATUS.md", "PROMPT.md"):
+        if os.path.isfile(os.path.join(src, f)):
+            with open(os.path.join(src, f), "rb") as a, open(os.path.join(dst, f), "wb") as b:
+                b.write(a.read())
+    rep = os.path.join(dst, "REPORT.md").replace("\\", "/")
+    tex_sha = C.paper_sha(tex)
+    idx = load_index()
+    old = idx.get(key(tex))
+    rec = {"report": rep, "tex_mtime": os.path.getmtime(tex), "tex_sha": tex_sha, "when": time.strftime("%Y-%m-%dT%H:%M:%S"),
+           "verdict": first, "session": res.get("session", ""), "served": res.get("served", ""),
+           "source": "remote audit %s (raw sha256 %s)" % (res.get("audit"), raw)}
+    if isinstance(old, dict) and old.get("tex_sha") == tex_sha:
+        prior = [{k: v for k, v in old.items() if k != "earlier"}] + list(old.get("earlier") or [])
+        if rec["session"] and rec["session"] in [p.get("session") for p in prior]:
+            print("refused: session %s is already on record for this text" % rec["session"])
+            return 2
+        rec["earlier"] = prior
+        # W43 reads only the top record: the worst verdict on this text stays on top, so a later clean read never
+        # hides an earlier MUST-FIX (two audits must both pass)
+        def _bad(r):
+            v = str(r.get("verdict") or "")
+            return not ("SEND AS IS" in v and re.search(r"MUST-FIX:\s*0\b", v))
+        worst = next((p for p in prior if _bad(p)), None)
+        if worst is not None and not _bad(rec):
+            others = [p for p in prior if p is not worst]
+            rec = dict(worst, earlier=[{k: v for k, v in rec.items() if k != "earlier"}] + others)
+    idx[key(tex)] = rec
+    save_index(idx)
+    for p in [rec] + list(rec.get("earlier") or []):
+        print("  on record: %s  (%s)" % (p.get("verdict"), p.get("source") or p.get("session")))
+    log_run({"run": "import-%s" % time.strftime("%Y%m%dT%H%M%S"), "tex": tex.replace("\\", "/"), "event": "end",
+             "rc": 0, "report_ok": True, "verdict": first, "session": rec["session"], "served": rec["served"],
+             "out": dst.replace("\\", "/"), "source": rec["source"]})
+    print("recorded %s -> %s (%d audits of this text on record)" % (first, rep, 1 + len(rec.get("earlier") or [])))
+    return 0
+
+
 def main(argv):
     if not argv or argv[0] in ("-h", "--help"):
         print(__doc__)
         return 0
     if argv[0] == "run":
         return run(argv[1])
+    if argv[0] == "import" and len(argv) == 3:
+        return import_mac(argv[1], argv[2])
     if argv[0] in ("roster", "next"):
         n = int(argv[1]) if len(argv) > 1 else (40 if argv[0] == "roster" else 3)
         rows = roster()
