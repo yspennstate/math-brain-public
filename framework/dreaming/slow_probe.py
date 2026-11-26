@@ -21,7 +21,7 @@ SCANNED_TREE = r"C:\Windows\WinSxS"
 CONTRACT_CACHE = r"~\.brain-framework\state\project_memory\hot-contract-cache.json"
 EXCLUDED_TREE = r"~\brain-repo"
 SCRATCH = os.path.join(os.environ.get("LOCALAPPDATA", r"~\AppData\Local"), "Temp", "claude")
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = 0x08000000 if os.name == "nt" else 0
 
 
 # MEASURED UNTHROTTLED (2026-09-25). This probe runs as a windowless scheduled task at BelowNormal, the profile Windows
