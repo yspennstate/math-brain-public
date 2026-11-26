@@ -151,6 +151,19 @@
           "timeout": 15
         }
       ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\advisor_nudge.py"
+          ],
+          "timeout": 10
+        }
+      ]
     }
   ],
   "PreToolUse": [
@@ -1009,6 +1022,19 @@
           "args": [
             "-s",
             "{{DREAMING}}/test_rigor_hook.py"
+          ],
+          "timeout": 10
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\advisor_nudge.py"
           ],
           "timeout": 10
         }
