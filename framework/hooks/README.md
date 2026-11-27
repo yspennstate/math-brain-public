@@ -63,3 +63,12 @@ transcript records a plain-stdout hook's context as an attachment of type `hook_
 before committing to an approach and before reporting anything done, and counts advisor calls in the transcript every
 twelve tool calls. The nudge ships off, because a stock install has no advisor tool: turn it on by creating
 `~/.claude/advisor_nudge/ENABLED` or setting `ADVISOR_NUDGE=1`. `--selftest` runs its controls both ways.
+
+`dreaming/here_and_now_hook.py` (PreToolUse, advisory) speaks when outward text (a paper, a README, an email
+script) quotes a dated state of your own work more than a week old, or when a Read opens a dated folder
+whose parent holds a later one: read the live source first. `dreaming/motivation_hooks.py` (UserPromptSubmit)
+gives an agent one short line when it is stuck, has said it cannot do something, or has just been corrected,
+chosen from the 1,000 lines in `motivation_hooks.jsonl` by what the prompt and the last message show; its
+hourly pieces come from `motivation_hourly.py` and `motivation_hourly.jsonl`. It never tells an agent to push
+past a rule. Here it is wired on prompts only; brain-framework-public also wires it on failed tool calls
+(PostToolUseFailure). Create `~/.claude/motivation_hooks/OFF` to silence it. Both take `--selftest`.
