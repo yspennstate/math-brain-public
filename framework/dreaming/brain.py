@@ -5062,7 +5062,7 @@ def _recall_body(query, n=8):
                 seen_rank.update(_qcos)
         _bx = _substage("bm.qfuse", _bx)
         # USE-GROWN GRAPH LANE (2026-09-26, his 04:28 order: build the edge and diffusion part now "and then put a
-        # paramter that will tune this vs the simple work thing that is working now"). graph_lane.py walks the graph grown
+        # parameter that will tune this vs the simple work thing that is working now"). graph_lane.py walks the graph grown
         # from every touch agents make (an agent's capture and store: words, tools, files, folders, memories read
         # and written, notes served, reflexes, errors) by personalised PageRank (diffusion.py) from the query's words and
         # bm25's top memories, and blends its ranking into the bm25 body the way the query-semantic lane is blended: a
