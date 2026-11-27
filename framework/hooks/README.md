@@ -58,3 +58,8 @@ The builder reads the ledger incrementally through a small cache and falls back 
 a synthetic corpus without touching live state. To check delivery, look at the receiver, never the sender's log: a Claude
 transcript records a plain-stdout hook's context as an attachment of type `hook_success`, and a content that starts with
 `<persisted-output>` means the model saw 2 KB of it.
+
+`dreaming/advisor_nudge.py` (UserPromptSubmit and PostToolUse) reminds a session that has an advisor tool to call it
+before committing to an approach and before reporting anything done, and counts advisor calls in the transcript every
+twelve tool calls. The nudge ships off, because a stock install has no advisor tool: turn it on by creating
+`~/.claude/advisor_nudge/ENABLED` or setting `ADVISOR_NUDGE=1`. `--selftest` runs its controls both ways.
