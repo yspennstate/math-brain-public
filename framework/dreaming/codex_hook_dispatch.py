@@ -1,10 +1,10 @@
 """codex_hook_dispatch.py - run every Codex hook of one event in ONE python process instead of one process per hook.
 
-WHY (measured 11 Nov 2026 on MATH-ROSS20): both Codex homes on the laptop carry 46 hook commands and no dispatcher:
-27 python starts on every prompt, 9 before and 4 after every tool call, 6 at every stop, 42 of them with the user
-site loaded (0.26-0.33 s a start that morning; 13 one after another 4.75 s). The 8 Nov brief workers managed 2
-commands in 50 minutes with the hooks on against 3 in 6 minutes with them off. The Claude side has had one process
-per event since 15 Sep (hook_dispatch.py); this file gives Codex the same, by importing that dispatcher as a module
+WHY: Codex starts every hook command as its own process. A Codex home with 46 hook commands and no dispatcher
+makes 27 python starts on every prompt, 9 before and 4 after every tool call and 6 at every stop, most of them with
+the user site loaded (0.26-0.33 s a start; 13 one after another took 4.75 s), and an agent with the hooks on got
+through far fewer commands an hour than with them off. The Claude side runs one process per event
+(hook_dispatch.py); this file gives Codex the same, by importing that dispatcher as a module
 and handing its dispatch() the Codex hook list. hook_dispatch.py itself is not changed.
 
 WIRING (a changed hook command line needs the author's /hooks review in each Codex home; trust hashes are never
@@ -51,7 +51,7 @@ SELF = "codex_hook_dispatch.py"
 
 def _user_site_on_path():
     """This file starts with `python -s` (no user site: the start is about 0.1 s cheaper). Today's Codex hook lines
-    start WITHOUT -s, so a hook may import a package that lives only in the user site (psutil does on this laptop).
+    start WITHOUT -s, so a hook may import a package that lives only in the user site (psutil does on some installs).
     Such a hook, run inside this process, would fail on the import, and a hook that fails open would then stop
     guarding without a word (11 Nov, running_script_edit_guard.py). So the user site directory goes on the END of
     sys.path: its packages import, nothing in it runs at start, and anything the standard places hold wins."""
