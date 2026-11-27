@@ -167,8 +167,8 @@ MW_SEV_BIG = 0.8
 MW_MARGIN_BIG = 1.075   # big-scar standout margin; excess halved with MARGIN on 2026-07-25
 MW_HABIT_FLOOR = 0.9
 MW_SCORE_TILT = 0.10   # score x(1 + tilt*sev): a big scar wins ties, never floods
-# CONNECTION STRENGTH x2 (owner, 2026-07-25 evening: "strengthen connections by 2x so that
-# things trigger faster"). Two candidate mechanisms, both MEASURED on the 177-prompt replay:
+# CONNECTION STRENGTH x2 (owner request, 2026-07-25: make connections twice as strong so that
+# notes fire sooner). Two candidate mechanisms, both MEASURED on the 177-prompt replay:
 #   (1) walk-conductance x2 (flow *= 2 per hop): REJECTED - it densifies the candidate pool
 #       (more runners-up clear CAND_FLOOR), the standout margin tightens, and baseline fires
 #       DROPPED 74 -> 65. Stronger connections, slower triggering - the opposite of the ask.
@@ -182,8 +182,8 @@ MW_SCORE_TILT = 0.10   # score x(1 + tilt*sev): a big scar wins ties, never floo
 #       neutral-or-better). Combined with mistake-first surfacing, the session's total vs the
 #       morning baseline on the same prompts: 68 -> 138 fires = 2.03x triggering. SHIPPED.
 CONNECTION_GAIN = 2.0   # divides ACT_FLOOR at the speak gate; 1.0 restores pre-07-25 behaviour
-# OWNER TOPIC NODES x3 (owner, 2026-07-25: the words he uses - "microsoft volume", "aws",
-# "levrage" - are nodes, and when he is on one of them the mistakes and information under it
+# OWNER TOPIC NODES x3 (owner request, 2026-07-25: the words the owner uses for a topic -
+# a storage volume, a provider, a term of art - are nodes, and when he is on one of them the mistakes and information under it
 # should surface ~3x more). keyword_nodes.tsv maps his vocabulary to member memories and maps
 # his misspellings to the corpus spelling (levrage -> leverage), so the boost survives his
 # typing. The gain is differential, never global: only members of a topic the CURRENT text
