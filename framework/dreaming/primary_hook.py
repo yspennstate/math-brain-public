@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
-"""THE PRIMARY HOOK (his PRIMARY DIRECTIVE, dictated 6 Oct 2026, 18:0x-18:4x local time, transcript segment 8).
-
-Written at the author's request.
+"""THE PRIMARY HOOK (the primary directive, 6 Oct 2026).
 
 What it does: on every prompt of every Claude and Codex session on this machine (they are all connected to the brain),
-prints his line once per session per three minutes. Nothing else: it never blocks, never edits, swallows its own
+prints the line once per session per three minutes. Nothing else: it never blocks, never edits, swallows its own
 exceptions, and its output is ASCII so no capture layer can choke on it. One switch turns it off for everyone:
-~/.claude/dreaming/PRIMARY_HOOK_OFF (his word only). State: one file per session under primary_hook_state.json.d beside this file.
+~/.claude/dreaming/PRIMARY_HOOK_OFF (the partner's call only). State: one file per session under primary_hook_state.json.d beside this file.
 
     python primary_hook.py                     Claude (the dispatcher runs it in-process; plain text is appended)
     python primary_hook.py --runtime codex     Codex (JSON hookSpecificOutput; Codex discards plain stdout)
@@ -26,9 +24,8 @@ OFF = os.path.join(HERE, "PRIMARY_HOOK_OFF")
 EVERY_S = 180
 LINE = ("[primary-hook] Work faster, be more efficient, finish the job faster. The timeline is soon. Communicate faster, "
         "build faster, give a deliverable: agents are waiting on you. Find the nearest bottleneck and clear it; speed "
-        "things up. Focus on what you are supposed to do and finish your deliverable. (His PRIMARY DIRECTIVE of 6 Oct "
-        "2026, for every agent on the brain or the math brain; repeats every three minutes.) SAVE AS YOU GO (his order, "
-        "7 Oct 02:44-03:0x): write every result to disk the moment you have it and keep a NEXT line current, so a "
+        "things up. Focus on what you are supposed to do and finish your deliverable. (The primary directive, "
+        "for every agent on the brain or the math brain; repeats every three minutes.) SAVE AS YOU GO: write every result to disk the moment you have it and keep a NEXT line current, so a "
         "crash never costs more than ten minutes of work; a headless session you launch gets its id at launch "
         "(claude --session-id / the codex thread id) and is resumed in that session after a crash, never restarted cold.")
 
@@ -151,7 +148,7 @@ def due(key, now, state_path=STATE, every=EVERY_S):
     return True
 
 
-# THE PRIME DIRECTIVE HOOK (his 7 Oct 20:4x order, "and write a prime directive hook as well"): the directive's own
+# THE PRIME DIRECTIVE HOOK (added 7 Oct 2026): the directive's own
 # rules, fired by what the prompt is about (test material, credits, fleet size, store writes, the timeline ...), each at
 # most once per session per 45 minutes and at most two a prompt, plus a stage clock once per session per hour. Rules and
 # selector: ~/primary_directive/directive_hooks (DIRECTIVE_HOOKS_v1.jsonl, directive_hooks.py --selftest).
@@ -179,7 +176,7 @@ def directive_lines(key, text, now, state_path=STATE):
         return []
 
 
-# THE USAGE WATCH (his 7 Oct 22:3x order: "you should have been paying closer attention to this, make a hook about it"):
+# THE USAGE WATCH (added 7 Oct 2026, after usage ran high unnoticed):
 # the Claude meters, the directive fleet's last hour and this session's own re-read per turn (usage_watch.py beside this
 # file, --selftest). Measured at most once per session per 5 minutes, said at most once per 30, only when something is off.
 USAGE_CHECK_S = 300
