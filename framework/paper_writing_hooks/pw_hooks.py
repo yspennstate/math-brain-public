@@ -651,7 +651,7 @@ def f25(d):
         got = sorted(set(re.findall(pat, t)))
         if got:
             out.append((0, "the log has %d %s: %s" % (len(got), name, ", ".join(got[:5]))))
-    # his 2 Nov words about a posted paper: "one line is overflow ... this is not how we write paper"
+    # owner, 2 Nov, on a posted paper: an overfull line is not acceptable in a finished paper
     over = [(float(a), b) for a, b in re.findall(r"Overfull \\hbox \(([\d.]+)pt too wide\)[^\n]*?lines? (\d+)", t)
             if float(a) > 1.0]
     if over:
@@ -1435,8 +1435,8 @@ TEXT = [
     T(27, "doc", "\"I\" and \"we\" mixed",
       "choose one voice for the whole paper", fn=f27),
     T(28, "line", "filler",
-      "cut \"in order to\", \"the fact that\", \"it is worth noting that\", \"plays a key role\"; his 1 Nov words: less wordy, "
-      "stronger and more to the point", pat=P28, min=3),
+      "cut \"in order to\", \"the fact that\", \"it is worth noting that\", \"plays a key role\"; the owner's 1 Nov rule: fewer words, "
+      "stronger sentences, straight to the point", pat=P28, min=3),
     T(29, "line", "sentences too long to follow",
       "one statement per sentence; split at the second \"which\" or \"and\"", fn=f29),
     T(30, "doc", "sentences opening with Moreover, Furthermore, Additionally",
@@ -1462,8 +1462,8 @@ TEXT = [
       min=3, skip_decl=True),
     T(51, "doc", "what every posted paper carries",
       "a funding statement, an AI declaration in its own short section, the author's affiliation, and a line saying "
-      "where the code and data are (his 2 Nov order: \"it does not include funding statement, or AI acknowledgment, "
-      "this is not how we write paper\")", fn=f51),
+      "where the code and data are (owner rule, 2 Nov: a paper without these is not finished"
+      ")", fn=f51),
     T(52, "line", "a lemma cited as a theorem",
       "write the kind the statement has: Lemma~\\ref{lem:...}, Proposition~\\ref{prop:...}; or use \\cref and let the "
       "label decide", fn=f52),
@@ -1631,7 +1631,7 @@ EVENT = [
       "page) and the log's warnings", on=("compile",), cool=7200),
     T(43, "event", "an independent audit before the paper leaves",
       "a second reader who has not seen your reasoning reads the PDF as a referee and writes AUDIT_<date>.md beside the "
-      ".tex; the author's own reread is not an audit (his 12 Nov words: \"more auditing\")", on=("publish", "submit"),
+      ".tex; the author's own reread is not an audit (owner rule, 12 Nov: audit more)", on=("publish", "submit"),
       check=c43, cool=1800),
     T(44, "event", "the journal is his decision",
       "where a paper is submitted is his: one short email with the proposed journal, the two closest papers it printed "
@@ -1654,7 +1654,7 @@ EVENT = [
       "the lint must come back with no MUST and no open finding of W08 W09 W11 W12 W16 W17 W19 W21 on the .tex being "
       "sent", on=("publish", "submit"), check=c49, cool=900),
     T(50, "event", "publishable as is",
-      "his 12 Nov words: \"make sure that the papers we are writing are publishable as is\". That means, for this paper: "
+      "owner rule, 12 Nov: every paper must be publishable as is. That means, for this paper: "
       "the lint clean (%s <tex>), an audit report newer than the text, no sentences shared with his earlier papers, "
       "the citation hooks answered, and the PDF read page by page" % LINT, on=("publish", "submit", "start"), cool=7200),
     T(56, "event", "the commit message of a paper's repository",
