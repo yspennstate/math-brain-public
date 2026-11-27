@@ -1,8 +1,8 @@
 """fleet_inbox_hook.py - put the author's fleet-wide messages in front of every Claude session, on every computer.
 
 The messages live in one place: yspennstate/brain-tasks-board FLEET_INBOX.md, posted with
-`fleet_board.py broadcast` (his 30 Oct 06:0x order: a message to "the whole flet in all 3 compputers ... goes to
-everyone quickly and their is no ambigutiyt where agents should be looking"). This hook reads that file over the GitHub
+`fleet_board.py broadcast` (owner order, 30 Oct 06:0x: a message to the whole fleet on all three computers goes to
+everyone quickly, with no doubt about where agents should look). This hook reads that file over the GitHub
 API at most once a minute per computer (a shared cache), and shows each session every message it has not yet seen,
 once. SessionStart and UserPromptSubmit (headless sessions too); a new session sees the last 48 hours. Silent inside subagents.
 Fail-open: no network, no gh token or any error prints nothing.
@@ -82,7 +82,7 @@ def main():
     sid = str(p.get("session_id") or "")
     if not sid:
         return
-    if "--midturn" in sys.argv:          # PostToolUse: his 3 Nov 00:3x "respond to messages faster", so look within a
+    if "--midturn" in sys.argv:          # PostToolUse: owner order 3 Nov 00:3x to answer faster, so look within a
         import time                      # turn too, but at most once a minute per session
         # the stamp is checked before fleet_board is imported (urllib, subprocess, socket): 59 of 60 tool calls stop
         # here, and on 3 Nov they paid that import in a fresh process each time, 304 calls over 1 s, 20 at the 15 s cap
