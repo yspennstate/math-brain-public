@@ -58,7 +58,7 @@ def selftest():
         ("C05", _tool("mcp__claude-in-chrome__computer", {"action": "left_click", "text": "researchgate.net Publish"})),
         ("C08", _tool("Write", {"file_path": "C:/p/refs.bib", "content": "@article{a, title={x}}"})),
         ("C07", _tool("Edit", {"file_path": "C:/p/main.tex", "old_string": "a", "new_string": "as in \\cite{kms}"})),
-        ("C01", _prompt("open the zendo website, get a api key and push all of the new papers onto that website")),
+        ("C01", _prompt("upload the two new preprints to zendo before the weekend")),
         ("C02", _prompt("publish the p0245 paper on github and researchgate")),
         ("C10", _prompt("post the new paper to zenodo")),
         # credit the mathematicians in development, writing and acknowledgment
