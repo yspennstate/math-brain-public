@@ -971,7 +971,7 @@ def starvation(st):
     and a PowerShell start that waits many seconds while using almost no processor. The 2026-09-15 case was
     starvation: an eight-core reservation nothing was using, TEN CORES IDLE while six ran flat out. The
     2026-09-16 02:5x case looked identical on those three signals and was the opposite - every usable core at
-    100 per cent with the author away, which is what he asked for ("use the whole card and all the cores",
+    100 per cent with the author away, which is what he asked for (the whole GPU and every core in use,
     2026-09-09) and what the governor itself calls owner_away_open.
 
     The difference is IDLE CAPACITY sitting beside the saturation, and it costs one line to measure. Cores 14
@@ -1324,8 +1324,8 @@ def main():
     # fine: measured in the same minute by hand, a cold open cost 0.26 ms. A latency taken behind a full run queue
     # measures the queue, not the thing being timed. The tell is a PowerShell start that is slow in WALL time while
     # its own CPU time stays small: waiting, not working.
-    # A CPU RESERVATION IS NOW A STANDING ALARM, by his order of 2026-09-15 20:2x ("fix this permanently so that this
-    # problem does not keep happening"). One was applied on 2026-09-05, became effective at the 09-13 restart, and cost
+    # A CPU RESERVATION IS NOW A STANDING ALARM, by his order of 2026-09-15 20:2x (fix it for good, so that the
+    # problem does not come back). One was applied on 2026-09-05, became effective at the 09-13 restart, and cost
     # him half his machine for two days before anyone measured it - because nothing watched. Now something does: any
     # logical processor held out of the default scheduler is reported every ten minutes, whoever put it there.
     try:
