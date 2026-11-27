@@ -14,8 +14,8 @@ PreToolUse (Bash, PowerShell, Write, Edit, MultiEdit) refuses:
     CLAUDE_CODE_EXTRA_BODY carrying an effort (the cap does not see it);
   - a write to a launcher, script or settings file (.ps1 .py .cmd .bat .vbs .sh .json .toml) whose new text does
     any of the above or sets maxEffortLevel to anything but high.
-Since his order of 2 Nov 2026 23:3x ("all the cluade tmerinals here and headless agents work on opu 5.5 hgh thinking
-nothing mroe then that, and all codex work on 6.1 high thinking nothing more then that") it also refuses a claude
+Since his order of 2 Nov 2026 23:3x (every Claude terminal and headless agent on Opus 5.5 at high thinking,
+every Codex worker on 6.1 at high, nothing above) it also refuses a claude
 launch with --model fable, and a Codex launch or launcher/config write that names a model outside gpt-6.1-* or sets
 model_reasoning_effort to xhigh, max or ultra. The Codex homes default to gpt-6.1-sol at high. Markdown is not checked,
 so notes and memories may quote the old values. Refusals are logged to ~/.claude/brain_graph/logs/effort_guard.log.
@@ -41,7 +41,7 @@ ENV_ABOVE = re.compile(r"(?i)CLAUDE_CODE_EFFORT_LEVEL[\"']?\s*(?:=|:|,)\s*[\"']?
 SOURCES = re.compile(r"(?i)--setting-sources(?:\s+|=)[\"']?([a-z,]+)")
 EXTRA_BODY = re.compile(r"(?i)CLAUDE_CODE_EXTRA_BODY[^\n]*effort")
 CAP_WRONG = re.compile(r"(?i)[\"']maxEffortLevel[\"']\s*:\s*[\"'](?!high[\"'])\w+")
-# 2 Nov 2026 23:3x his order: Claude on Opus 5.5 at high, Codex on 6.1 at high, "nothing more then that".
+# 2 Nov 2026 23:3x his order: Claude on Opus 5.5 at high, Codex on 6.1 at high, nothing above.
 CLAUDE_MODEL_ABOVE = re.compile(r"(?i)--model(?:\s+|=|[\"']\s*,\s*)[\"']?(?:claude-)?fable")
 CODEX_WORD = re.compile(r"(?i)(?:^|[\s\"'`;&|(\\/])codex(?:\.exe|\.cmd)?(?=[\s\"'`;&|)]|$)")
 CODEX_EFFORT_ABOVE = re.compile(r"(?i)model_reasoning_effort[\"']?\s*=\s*\\?[\"']?(?:xhigh|max|ultra)\b")
@@ -149,7 +149,7 @@ def main():
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
         return
-    # 14 Oct 23:4x his order: "don't use any cluade agent, only codex" (about a day). While ~/claude_pool/NO_CLAUDE_AGENTS
+    # 14 Oct 23:4x owner order: no Claude agents, Codex only (about a day). While ~/claude_pool/NO_CLAUDE_AGENTS
     # holds, an Agent-tool subagent is refused in every session; headless launches are refused by claude_pool itself.
     if data.get("tool_name") in ("Agent", "Task"):
         try:
@@ -160,8 +160,8 @@ def main():
             why = None
         if why:
             sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
-                "permissionDecisionReason": "NO CLAUDE AGENTS (his order, 14 Oct 23:4x: 'don't use any cluade agent, only "
-                "codex'). Start a Codex worker instead. " + why}}))
+                "permissionDecisionReason": "NO CLAUDE AGENTS (his order, 14 Oct 23:4x: no Claude agents, Codex "
+                "only). Start a Codex worker instead. " + why}}))
         return
     text, launches, path = tool_text(data)
     if not text:
@@ -171,13 +171,13 @@ def main():
     if codex_hit:
         sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
             "permissionDecisionReason": "EVERY CODEX AGENT RUNS gpt-6.1-sol AT HIGH, NOTHING ABOVE (his order, 2 Nov 2026 "
-            "23:3x: 'all codex work on 6.1 high thinking nothing more then that'). This %s %s. Use -m gpt-6.1-sol with "
+            "23:3x: Codex work runs on 6.1 at high reasoning and nothing above). This %s %s. Use -m gpt-6.1-sol with "
             "model_reasoning_effort high, medium or low." % ("write" if path else "command", "; ".join(codex_hit + hit))}}))
         return
     if not hit:
         return
-    reason = ("EVERY CLAUDE AGENT RUNS AT HIGH EFFORT, NOT MAX (his order, 14 Oct 2026 22:26: 'make sure all agents "
-              "running on claude in terminals or subagent from now on are high mode'). This %s %s. Use --effort high "
+    reason = ("EVERY CLAUDE AGENT RUNS AT HIGH EFFORT, NOT MAX (his order, 14 Oct 2026 22:26: every Claude agent, "
+              "in a terminal or as a subagent, at high from now on). This %s %s. Use --effort high "
               "(or no flag: settings.json caps every session at high through maxEffortLevel). Codex is not covered."
               % ("write" if path else "command", "; ".join(hit)))
     try:
