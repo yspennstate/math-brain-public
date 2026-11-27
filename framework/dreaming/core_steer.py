@@ -1,6 +1,6 @@
 """core_steer.py - put the agents' work on the cores Windows leaves idle.
 
-MEASURED 2026-09-15 15:1x-15:4x on MATH-ROSS20 (Core Ultra 9 285H, 16 logical: P-cores 0,1,10-13; E-cores 2-9; LP-E 14,15):
+MEASURED 2026-09-15 15:1x-15:4x on one laptop (Core Ultra 9 285H, 16 logical: P-cores 0,1,10-13; E-cores 2-9; LP-E 14,15):
 since the 09-13 21:43 boot the scheduler places EVERY free thread on E-cores 4-9 only - renders, hooks, Claude sessions,
 the author's apps - while the six P-cores and E-cores 2,3 sit at 0 pct with the CPU-set flags Allocated|RealTime. A thread
 pinned to core 0 runs (52 Miter/s vs 33 shared on the E-cores, 6 when they are saturated), so the cores are usable; the
