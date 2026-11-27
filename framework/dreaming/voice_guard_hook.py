@@ -61,7 +61,7 @@ META_TELLS = [
     r"\bwhen (?:a|the) \w+ is (?:recorded|added|ready),? the card becomes\b",
     r"\bin this (?:section|page),? (?:we|I) (?:will )?(?:describe|discuss|present|explain)\b",
 ]
-# A paper never narrates its own history (owner, 2026-09-15, "for the love of god").
+# A paper never narrates its own history (owner rule, 2026-09-15).
 # It states mathematics and attributions; a correction to a citation is silent, the corrected
 # citation simply appears. The AI declaration is the ONE place the process may be named, so
 # "prepared the first draft of this manuscript" stays legal - see the selftest's negative control.
