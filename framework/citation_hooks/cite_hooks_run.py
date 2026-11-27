@@ -87,8 +87,8 @@ def selftest():
         ("*", _tool("mcp__claude-in-chrome__navigate", {"url": "https://www.kaggle.com/competitions", "tabId": 3})),
         ("*", _prompt("keep working on the trading simulations")),
         ("*", _prompt("fire this every 3 minutes for the next 10 days. ... solve math problem, publish papers, solve kaggle")),
-        ("*", _prompt("agents are working on improving the brian ... remove bugs, solve math problem, publish papers, solve "
-                      "kaggle, solve bitxion, imprvoe trading simualtions, and so on. make youtubevideos")),
+        ("*", _prompt("agents are working on improving the notes ... remove bugs, solve a puzzle, publish papers, enter "
+                      "a contest, tidy the garden plan, and so on. record some videos")),
         ("*", _prompt("Stop hook feedback: post the paper to zenodo")),
         # a heredoc writing "papers" into a board row is not a paper being pushed
         ("*", _pre("cd " + plain + " && cat > s.py <<'EOF'\nrow = 'final papers 15 Jan'\nEOF\npython s.py && git push origin main")),
