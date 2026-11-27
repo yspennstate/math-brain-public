@@ -11,8 +11,8 @@ metadata:
 
 Does the dream write methods (what to do next time), or only what happened?
 Until 10 Nov 2026 only what happened. The brain held 45 method_* memories among about 59,000 files, the newest from
-29 Oct, and no dream prompt asked for one. Written at the author's request.; and 11 Jul: "make sure that all the memeoires and methodologies and so
-on from all the agents that were working dungin the night is deeply embeded in the brain".
+29 Oct, and no dream prompt asked for one. Written at the author's request.; and 11 Jul: "make sure that all the memories and methodologies and so
+on from all the agents that were working during the night is deeply embedded in the brain".
 
 What exists now (dream_methods.py, live and on GitHub):
 - PRODUCER  dream.py calls agenda_section(mems, recent, kind) while it writes DREAM_AGENDA.md, section K. It ranks
