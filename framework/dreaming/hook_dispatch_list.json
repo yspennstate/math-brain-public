@@ -381,6 +381,20 @@
           "timeout": 600
         }
       ]
+    },
+    {
+      "matcher": "Write|Edit|Read|Bash|PowerShell",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\here_and_now_hook.py"
+          ],
+          "timeout": 15
+        }
+      ]
     }
   ],
   "SessionStart": [
@@ -1037,6 +1051,19 @@
             "{{DREAMING}}\\advisor_nudge.py"
           ],
           "timeout": 10
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\motivation_hooks.py"
+          ],
+          "timeout": 20
         }
       ]
     }
