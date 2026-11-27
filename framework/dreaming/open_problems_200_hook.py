@@ -101,8 +101,8 @@ def lines_for(key, text, now, state_path=STATE, ids_path=IDS):
     return out
 
 
-# THE ROW'S BRIEF FOR A CODEX WORKER (15 Oct 2026, an agent; his 14 Oct 23:25 order, T-20261014-145: "i don't
-# want agents wasting time resolving the same stuff ... make sure that the codex agent ... push forward like this").
+# THE ROW'S BRIEF FOR A CODEX WORKER (15 Oct 2026, an agent; owner order 14 Oct 23:25, T-20261014-145: agents should not spend time
+# resolving the same things twice, and the Codex worker should push forward the same way).
 # frontier_hook.py gives the brief to Claude sessions only (through the dispatcher), and a new Codex hook would need his
 # trust; this hook is already trusted on every Codex profile. A Codex session whose cwd is a worker folder that
 # frontier/STAFF.json assigns to a top-200 row (or the parent of one: w675 for w675/T067, since the pool runs a worker
