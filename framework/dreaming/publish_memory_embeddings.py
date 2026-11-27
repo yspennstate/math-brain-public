@@ -185,7 +185,7 @@ def _warm_corpus(mem_dir):
     read, and the publish hit its 1800 s cap holding the lock). The locked audits still decide."""
     if not hasattr(builder, "enable_read_cache"):
         # the read cache lives in the Mac's builder (dreaming/macmini); a machine whose builder lacks it skips the warm
-        # pass, which only saves time, rather than failing the publish (4 Nov, math-ross20)
+        # pass, which only saves time, rather than failing the publish (4 Nov)
         return
     builder.enable_read_cache()
     try:
