@@ -86,7 +86,7 @@ def selftest():
         ("*", _tool("Write", {"file_path": "C:/p/main.tex", "content": "\\section{Intro} no references here"})),
         ("*", _tool("mcp__claude-in-chrome__navigate", {"url": "https://www.kaggle.com/competitions", "tabId": 3})),
         ("*", _prompt("keep working on the trading simulations")),
-        ("*", _prompt("fire this every 3 minutes for the next 10 days. ... solve math problem, publish papers, solve kaggle")),
+        ("*", _prompt("fire this every 3 minutes for the next week. ... water the plants, publish papers, read a good book")),
         ("*", _prompt("agents are working on improving the notes ... remove bugs, solve a puzzle, publish papers, enter "
                       "a contest, tidy the garden plan, and so on. record some videos")),
         ("*", _prompt("Stop hook feedback: post the paper to zenodo")),
