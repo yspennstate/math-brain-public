@@ -160,7 +160,7 @@ def upload(rel, name):
 
 README = """# Brain graph, full store ({date})
 
-The whole brain_graph store from math-ross20, built {built} (Asia/Jerusalem) from {events:,} events over {sessions:,}
+The whole brain_graph store from the source machine, built {built} (local time) from {events:,} events over {sessions:,}
 sessions. It is the release `{tag}` of this repository; the store files are release assets because edges.npz is
 over GitHub's 100 MB file limit. A new release like this one is published every day by the task BrainGraphRelease
 (~/.claude/dreaming/brain_graph_release.py); older releases are kept.
