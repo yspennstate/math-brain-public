@@ -235,8 +235,8 @@ def selftest():
                          "tool_input": {"url": "https://arxiv.org/submit/123/start"}})
     ok("FIRE arXiv submission page (W44 the journal is his)", "submit" in ch and "W44" in got, str(sorted(got)))
     got, ch, _, _ = ids({"hook_event_name": "UserPromptSubmit", "session_id": "t11",
-                         "prompt": "take a look at the regection email i got today from a publication"})
-    ok("FIRE his prompt about a rejection (W47, and W69 the answer is recorded)", ch == {"reject"} and
+                         "prompt": "please read the regection letter that came back from the journal this morning"})
+    ok("FIRE a prompt about a rejection, misspelled (W47, and W69 the answer is recorded)", ch == {"reject"} and
        got == {"W47", "W69"}, str(sorted(got)))
     got, ch, _, _ = ids({"hook_event_name": "UserPromptSubmit", "session_id": "t12",
                          "prompt": "write a paper on the new singular value result and post it"})
