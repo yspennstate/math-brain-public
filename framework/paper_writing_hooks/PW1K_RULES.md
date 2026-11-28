@@ -2,7 +2,7 @@
 
 The fault these rules catch most often is one object called by several names.
 
-1101 rules. Check a paper: `python ~/.claude/dreaming/paper_writing_hooks/pw1k.py lint <file.tex>`.
+1221 rules. Check a paper: `python ~/.claude/dreaming/paper_writing_hooks/pw1k.py lint <file.tex>`.
 
 
 ## terms (634)
@@ -1171,3 +1171,126 @@ The fault these rules catch most often is one object called by several names.
 - P1099 Run python pw1k.py lint FILE once more on the exact file being pushed; a rule of weight 7 or more is fixed before the push.
 - P1100 The abstract on the hosting page (GitHub, Zenodo, ResearchGate) is the abstract of the paper, with formulas written so that they read as plain text.
 - P1101 Check the code in the repository runs from a clean clone and prints the numbers in the paper.
+
+## readable (120)
+
+- P1102 The table of symbols is not the last section before the references; keep it at the very end, where a reader looks for it
+- P1103 The list of symbols sits in the body; move it to an appendix at the end, just before the references
+- P1104 Nothing in the paper sends the reader to the table of symbols; say in the introduction where it is (Appendix~\ref{...})
+- P1105 The table of symbols has no \label, so the introduction cannot point to it
+- P1106 Two sections list notation; keep one table of symbols, at the end
+- P1107 The table of symbols has no header row; give it columns Symbol, Meaning, Where defined
+- P1108 A Definition does not mark the word it defines; set the new word in \emph so the eye finds it
+- P1109 A term is introduced with 'is called' but not marked; put the new word in \emph (or a Definition)
+- P1110 'The usual notation' leaves the reader to guess; write the notation out once and list it in the table of symbols
+- P1111 A 'well-known' fact with no citation and no statement; state it and cite where it is proved
+- P1112 The paper assumes the reader knows something and names no source; cite a textbook or a survey where it can be learned
+- P1113 'In the sense of X' with no citation; cite X and say in a clause what that sense is
+- P1114 A notion is defined inside a proof, where nobody will look for it; move it to a numbered Definition before the statement
+- P1115 Definitions without a \label; label every definition so later uses can say 'Definition~\ref{...}'
+- P1116 A definition is hidden in a footnote; give it a sentence or a Definition in the text
+- P1117 A remark defines a term; definitions belong in numbered Definitions, where they can be found again
+- P1118 A definition is recalled by position ('defined above'); point to it: 'Definition~\ref{...}'
+- P1119 'Recall that' with no pointer; say where it was defined or cite it, so the reader can look it up
+- P1120 Three or more displays in a row with no words between them; say what each line does and why it follows
+- P1121 A long aligned derivation with no justification anywhere; mark each step (\text{by ...}) or explain them after it
+- P1122 'After some algebra' hides the derivation; give the intermediate line, or put the computation in an appendix
+- P1123 'One easily checks' asks the reader to do the work; show the check in a line or two
+- P1124 A proof made only of displays; a reader needs a sentence for each step saying what is done
+- P1125 'Combining these estimates' without naming them; cite each one by its number
+- P1126 A chain of inequalities with no reason for any step; say which fact gives each inequality
+- P1127 A result is used by kind with no number ('by Lemma'); give its number
+- P1128 A proof that only says 'similarly'; write out what changes from the other proof
+- P1129 'Clearly' or 'obviously' three or more times in the proofs; each one is a step a reader may not see, say why it holds
+- P1130 'The rest is similar' leaves the end of the argument out; finish it
+- P1131 'It suffices to show' with no reason why it suffices; add the clause that says why
+- P1132 The introduction cites fewer than three works; tell the history of the problem, who asked it and what was known, with citations
+- P1133 A named problem or theorem in the introduction with no citation; cite where it was posed or proved
+- P1134 'Was posed by' with no citation; cite the paper where it was posed
+- P1135 'It is known that' with no citation; cite where it is proved
+- P1136 A year is given for an earlier result with no citation; cite the paper
+- P1137 'The best known bound' with no citation; say whose bound it is
+- P1138 A \cite key has no entry in the bibliography; the reference prints as '?'
+- P1139 A bibliography entry is never cited; cite it where it is used or remove it
+- P1140 The same work appears twice in the bibliography
+- P1141 An arXiv entry with no arXiv number; give the identifier so the reader can find it
+- P1142 A 'to appear' or 'preprint' entry with no arXiv number, DOI or link; the reader cannot find it
+- P1143 'et al.' in the bibliography; list every author there
+- P1144 The main theorem is not followed by a sentence in plain words saying what it means
+- P1145 No informal explanation anywhere (the idea, intuitively, in words); give the reader the picture before the details
+- P1146 Parentheses inside parentheses in running text; make the inner aside a sentence
+- P1147 A sentence of more than seventy words; a reader loses the thread, split it
+- P1148 'Respectively' four or more times; each one makes the reader pair lists by position, write the cases out
+- P1149 A double negative ('not uncommon'); say it directly
+- P1150 Definitions with no example after them; give the simplest object that satisfies each one
+- P1151 The paper has no example at all; one worked example makes the definitions and the theorem concrete
+- P1152 The first theorem is not followed by a special case or an example; show what it says in the simplest case
+- P1153 The paper is about objects that can be drawn and has no figure; one picture saves a page of description
+- P1154 Nothing says whether the hypotheses of the theorems are needed; give an example that fails without them, or say it is open
+- P1155 A definition with three or more conditions and no example; show an object that meets them and one that does not
+- P1156 A section opens with a statement or a formula; open with a sentence saying what the section does and why
+- P1157 A subsection opens with a statement or a formula; give it a sentence of purpose first
+- P1158 A heading followed at once by a lower heading; say what the section contains before dividing it
+- P1159 A long proof stops without saying what has been shown; end with the sentence that closes the argument
+- P1160 No closing section; end with what was found, what it means and what is still open
+- P1161 A subsection of fewer than forty words; merge it or say more
+- P1162 The introduction never says in a sentence what this paper proves; say it early: 'We prove that ...'
+- P1163 The introduction does not say what is new; say how the result compares with what was known
+- P1164 A theorem in the introduction with no word on where it is proved; add 'proved in Section~\ref{...}'
+- P1165 'The main theorem' by name with no number; point to it
+- P1166 The closing section names no open question; a reader wants to know where the subject goes next
+- P1167 'Interesting' with no reason; say why
+- P1168 Symbols come back many sections after their definition with no reminder; add a few words ('the constant c_0 of (2.3)')
+- P1169 An abuse of notation; give the second object its own symbol and add it to the table
+- P1170 A letter is reused for a new object; use a new letter, one symbol for one thing
+- P1171 A quantity 'to be chosen later' with no pointer; say where it is chosen and list it in the table of symbols
+- P1172 Constants that change from line to line; where a constant matters, name it (C_1, C_2) so a reader can follow it
+- P1173 A 'where' clause defines four or more symbols at once after a display; introduce them before the display, one at a time
+- P1174 Many symbols and no section near the front that sets them up; add a short Notation or Preliminaries section
+- P1175 The natural numbers are used without saying whether they start at 0 or 1
+- P1176 Both \log and \ln appear; use one and say which base
+- P1177 An asymptotic sign (\lesssim, \ll, \asymp) is used and never explained; say what it means and what the constant depends on
+- P1178 Both \subset and \subseteq appear; say whether \subset is strict, or use one
+- P1179 Two forms of one Greek letter (\epsilon and \varepsilon); a reader takes them for two objects
+- P1180 A long proof with no sentence first on how it goes; give the idea in two or three sentences before the details
+- P1181 A very long proof that rests on no lemma; move self-contained parts into lemmas a reader can check one at a time
+- P1182 A proof inside a proof; state the inner fact as a lemma or a claim
+- P1183 A proof far from its statement with no header; write \begin{proof}[Proof of Lemma~\ref{...}]
+- P1184 'This completes the proof of the lemma' without saying which; give its number
+- P1185 Four or more cases with no sentence first that lists them; say how the cases split before the first one
+- P1186 The abstract opens with a hypothesis ('Let ...'); open with what was found, in words
+- P1187 The abstract is under forty words; say what was proved and why it matters
+- P1188 The abstract's first sentence has more than forty-five words
+- P1189 The abstract never says what was found ('we prove', 'we show', 'we determine')
+- P1190 The abstract refers to a numbered part of the paper; the abstract is read alone
+- P1191 The abstract hedges; state what is proved, and say plainly what is only conjectured
+- P1192 Two or more headings that name nothing ('Proofs', 'Auxiliary results'); name what each section proves
+- P1193 The paper does not open with an introduction; a reader needs one before the first definition
+- P1194 A heading in capitals; set headings in ordinary case
+- P1195 A heading that starts with a lower-case letter
+- P1196 An appendix headed only 'Appendix'; say what it contains
+- P1197 An abbreviation in a heading; a heading is read before the abbreviation is defined
+- P1198 Four or more results in the introduction and no table of them; a table (result, hypotheses, where proved) helps the reader
+- P1199 A caption sends the reader to the text; a caption should say what is shown on its own
+- P1200 A caption that is mostly formula; say in words what the figure or table shows
+- P1201 A table of nine or more columns; split it
+- P1202 Table entries with seven or more decimals; round to what the reader needs and say the precision
+- P1203 A caption that starts with a lower-case letter
+- P1204 Equations cited from three or more sections back with no reminder; restate the formula or recall what it says
+- P1205 A proof uses a lemma stated later; state the lemma first, or say it is proved later and that the argument is not circular
+- P1206 A bare \ref with no word before it ('by \ref{x}'); write 'by Lemma~\ref{x}' so the reader knows what kind of thing it is
+- P1207 'Earlier in the paper' with no pointer; give the section or the statement number
+- P1208 Labelled statements and not one cross-reference; refer to results by number so a reader can turn to them
+- P1209 A theorem of the introduction whose proof no heading or proof header names; write \begin{proof}[Proof of Theorem~\ref{...}]
+- P1210 'Note that' eight or more times; most can go, and the rest can say why the fact matters
+- P1211 'We have that' five or more times; write 'we have' or state the fact
+- P1212 Intensifiers (very, quite, rather) six or more times; give the number or the reason instead
+- P1213 Four or more sentences open with a bare 'This' or 'These'; say what: 'This bound shows'
+- P1214 'The fact that' four or more times; say the fact
+- P1215 'And/or'; say which is meant
+- P1216 A statement uses a symbol first introduced inside an earlier proof; a statement must be readable without the proofs
+- P1217 A named theorem from the literature in a header with no citation; put \cite in the header
+- P1218 A statement opens with a formula; open with a word ('For every ...')
+- P1219 A statement points to an equation that lives inside a proof; a statement must stand alone
+- P1220 A statement narrates ('we have'); a statement states
+- P1221 A theorem with five or more parts; split it into a theorem and corollaries a reader can cite one by one

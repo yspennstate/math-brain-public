@@ -94,6 +94,7 @@ def run():
     import pw1k as E
     import pw1k_detect as D
     import pw1k_rules as Rm
+    import pw1k_readable as Rr  # the 120 readability rules (28 Nov) keep their rd_* detectors in their own module
     fails, notes = [], []
 
     def check(name, ok, detail=""):
@@ -115,6 +116,12 @@ def run():
     check("detectors exist", not missing, ", ".join(missing[:6]))
     extra = [n for n in dir(D) if n.startswith("fn_") and n not in set(x[0] for x in Rm.FN)]
     check("no orphan detectors", not extra, ", ".join(extra[:6]))
+    rd_fn = [x[2] for x in Rr.READ if x[1] == "fn"]
+    rd_missing = [n for n in rd_fn if not callable(getattr(Rr, n, None))]
+    rd_extra = [n for n in dir(Rr) if n.startswith("rd_") and n not in set(rd_fn)]
+    rd_rules = [r for r in R if r["chapter"] == "readable"]
+    check("readable rules wired", len(rd_rules) == len(Rr.READ) and not rd_missing and not rd_extra,
+          "%d of %d in rules(); missing %s; orphan %s" % (len(rd_rules), len(Rr.READ), rd_missing[:4], rd_extra[:4]))
     chans = set(c for c, _ in Rm.EVENTS)
     check("event channels", chans <= {"draft", "bib", "compile", "publish"}, ",".join(sorted(chans)))
 
@@ -132,7 +139,7 @@ def run():
                 elif r["kind"] == "gloss":
                     E.run_gloss(r, doc)
                 elif r["kind"] == "fn":
-                    h = getattr(D, r["fn"])(doc)
+                    h = (getattr(D, r["fn"], None) or getattr(Rr, r["fn"]))(doc)
                     if h is not None and not (isinstance(h, tuple) and len(h) == 2 and isinstance(h[0], int)):
                         raised.append("%s on %s returned %r" % (r["fn"], dn, h))
             except Exception as e:

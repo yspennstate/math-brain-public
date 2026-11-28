@@ -18,8 +18,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 STATE_DIR = os.path.join(HERE, "state")
 FIRES = os.path.join(HERE, "pw1k_fires.jsonl")
-MAX_OUT, COOL_S, TOP = 1200, 2700, 5
+MAX_OUT, COOL_S, TOP = 2000, 2700, 5   # 1200 cut the second readable finding and the 'all of them' line (seen 28 Nov)
 HOOK_S = 6.0       # seconds the hook spends on one file; the heavier rules run first
+READ_S = 3.5       # of which the readability chapter (P1102-P1221) may take at most this much, heavier rules first
 MAX_DOC = 400000  # bytes; a larger file is data pasted into a paper, and the hook leaves it to the command line
 SELF = "python ~/.claude/dreaming/paper_writing_hooks/pw1k.py"
 
@@ -524,6 +525,18 @@ def rules():
         add("fn", chapter, fn=name, text=text, w=w)
     for ch, text in Rm.EVENTS:
         add("event", "events", channel=ch, text=text, w=1)
+    # the 120 readability rules (28 Nov 2026), appended last so no older id moves: P1102 onward
+    try:
+        import pw1k_readable as Rr
+        for cid, kind, spec, text, w in Rr.READ:
+            if kind == "rx":
+                m = re.match(r"([A-Za-z])(\d*)$", spec[0])
+                add("rx", "readable", scope=m.group(1), minc=int(m.group(2) or 1), rx=spec[1], text=text, w=w, rid=cid)
+            else:
+                add("fn", "readable", fn=spec, text=text, w=w, rid=cid)
+    except Exception as e:
+        if os.environ.get("PW1K_DEBUG"):
+            sys.stderr.write("pw1k_readable not loaded: %r\n" % (e,))
     _RULES = out
     return out
 
@@ -699,7 +712,11 @@ def lint(doc, chapter=None, budget=None):
             elif r["kind"] == "gloss":
                 h = run_gloss(r, doc)
             elif r["kind"] == "fn":
-                h = getattr(D, r["fn"])(doc)
+                f = getattr(D, r["fn"], None)
+                if f is None:
+                    import pw1k_readable as Rr
+                    f = getattr(Rr, r["fn"])
+                h = f(doc)
                 if h:
                     h = (h[0], r["text"] + ": " + h[1] if h[1] else r["text"])
             else:
@@ -894,7 +911,14 @@ def hook(raw, codex=False, now=None):
         return ""
     sp, st = _state(p.get("session_id") or os.environ.get("CLAUDE_SESSION_ID") or "")
     if doc is not None:
-        F = lint(doc, budget=HOOK_S)
+        # the readability chapter runs on its own first with its own share of the time: appended last, it sorted behind every
+        # older rule of its weight and the 6 s budget left all 120 out on 8 of our 31 papers (measured 28 Nov). Under a loaded
+        # CPU it takes 2-7 s on our largest papers (0.5 s on the short ones), so it gets READ_S and the older rules the rest
+        t_rd = time.time()
+        FR = lint(doc, chapter="readable", budget=READ_S)
+        F = lint(doc, budget=max(1.5, HOOK_S - (time.time() - t_rd)))
+        seen_f = set((f[1], f[2]) for f in F)
+        F = sorted(F + [f for f in FR if (f[1], f[2]) not in seen_f], key=lambda f: (-f[0], f[1]))
         key = lambda f: "%s|%s" % (os.path.basename(path), f[2])
         fresh = [f for f in F if now - st.get(key(f), 0) > COOL_S]
         if fresh:
@@ -905,6 +929,13 @@ def hook(raw, codex=False, now=None):
             for f in fresh[:TOP]:
                 st[key(f)] = now
                 lines.append("  %s %s %s" % (f[2], doc.line(f[1]), f[4][:230]))
+            # readability chapter: up to two more, so a reader-facing finding is never crowded out by the 1,101 others
+            rd = [f for f in fresh[TOP:] if f[3] == "readable"][:2]
+            if rd:
+                lines.append("[paper-readable] can a person read this and enjoy it:")
+                for f in rd:
+                    st[key(f)] = now
+                    lines.append("  %s %s %s" % (f[2], doc.line(f[1]), f[4][:200]))
             lines.append("  all of them: %s lint \"%s\"   notation table: %s notation \"%s\"" % (SELF, path, SELF, path))
     ev = _events(channel, st, now, 1 if lines else 2)
     if ev and not lines:

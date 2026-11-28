@@ -1,0 +1,116 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\title{Balanced colourings of finite sets}
+\author{A. Writer}
+\begin{abstract}
+We prove that every finite set of real numbers can be split into two halves whose sums differ by at most the largest
+element, and we show that this bound cannot be improved in general. The proof is a greedy argument, and the paper ends
+with two open questions about the same problem for vectors in the plane.
+\end{abstract}
+\begin{document}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+How evenly can a set of numbers be shared between two people? The question goes back to the partition problem studied by
+Karp~\cite{karp}, who showed that deciding whether an exact split exists is hard in general. Graham~\cite{graham} gave a
+simple rule that is never far from the best split, and Spencer~\cite{spencer} studied the same question for many sets at
+once under the name of discrepancy. We prove that the greedy rule always gives a split whose two sums differ by at most the
+largest number in the set.
+
+\begin{theorem}\label{thm:main}
+For every finite set $A$ of positive real numbers there is a split of $A$ into two parts whose sums differ by at most
+$\max A$.
+\end{theorem}
+
+In words, no number has to be cut in half: the error of the best split is never more than one element. For example, the
+set $\{1,1,1\}$ cannot be split into equal sums, and the best split differs by exactly $1$, which is the largest element,
+so the bound of Theorem~\ref{thm:main} is attained. The theorem is proved in Section~\ref{sec:proof}. Compared with the
+bound of Graham~\cite{graham}, which is stated for the ratio of the two sums, our bound is new in that it concerns their
+difference and holds for every set, not only for large ones. Section~\ref{sec:prelim} fixes the words we use, and every
+symbol of the paper is listed in Appendix~\ref{app:notation}, the table at the end.
+
+\section{Preliminaries}\label{sec:prelim}
+
+This section fixes the language of splits and gives a small example of each notion. Throughout, $\mathbb{N}=\{1,2,3,\dots\}$
+denotes the positive integers, so the natural numbers start at one.
+
+\begin{definition}\label{def:split}
+A \emph{split} of a finite set $A$ is a pair $(B,C)$ of disjoint sets whose union is $A$.
+\end{definition}
+
+\begin{example}\label{ex:split}
+The set $\{1,2,3\}$ has the split $(\{1,2\},\{3\})$, whose two sums are both equal to three.
+\end{example}
+
+\begin{definition}\label{def:gap}
+The \emph{gap} of a split $(B,C)$ is the absolute difference of the sum of $B$ and the sum of $C$.
+\end{definition}
+
+\begin{example}\label{ex:gap}
+The split $(\{1\},\{1,1\})$ of the set $\{1,1,1\}$ has gap one, since its two sums are one and two.
+\end{example}
+
+The idea behind everything below is simple: put each number on the lighter side, and the sides can never drift far apart.
+Figure~\ref{fig:greedy} shows the rule at work on a small set.
+
+\begin{figure}
+\centering
+\fbox{greedy rule on the set of three ones}
+\caption{The greedy rule places each element on the side whose sum is smaller at that moment.}\label{fig:greedy}
+\end{figure}
+
+\section{Proof of the splitting bound}\label{sec:proof}
+
+This section proves Theorem~\ref{thm:main} by following the greedy rule one element at a time.
+
+\begin{lemma}\label{lem:step}
+Suppose a split of a set has gap at most $m$ and a number $a$ with $0<a\le m$ is added to the side with the smaller sum.
+Then the new split also has gap at most $m$.
+\end{lemma}
+
+\begin{proof}
+Write $s\le t$ for the two sums before the step, so that $t-s\le m$. After the step the sums are $s+a$ and $t$. If $s+a\le t$
+the new gap is $t-s-a$, which is smaller than the old gap. Otherwise the new gap is $s+a-t$, and this is at most $a$, hence at
+most $m$. In both cases the gap stays at most $m$, which is what the lemma claims.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The plan is to add the elements of $A$ one at a time, each to the lighter side, and to check that the gap never passes
+$\max A$. Start with two empty sides, whose gap is zero. Each step adds a number $a\le \max A$, so Lemma~\ref{lem:step} applies
+with $m=\max A$ and the gap stays at most $\max A$. When every element has been placed, the two sides form a split of $A$
+whose gap is at most $\max A$. This proves Theorem~\ref{thm:main}.
+\end{proof}
+
+The hypothesis that the numbers are positive is needed for the rule as stated: with the numbers $5$ and $-5$ the lighter
+side changes meaning, and the example in the introduction shows that the bound itself cannot be lowered.
+
+\section{Conclusion}\label{sec:conclusion}
+
+We have shown that a split with gap at most the largest element always exists and that the greedy rule finds one. Two
+questions remain open. First, does the same bound hold for vectors in the plane, with the largest length in place of the
+largest element? Second, how often does the greedy rule find the best split when the numbers are chosen at random?
+
+\appendix
+\section{Table of symbols}\label{app:notation}
+
+\begin{tabular}{lll}
+Symbol & Meaning & Where defined \\
+$A$ & a finite set of positive real numbers & Theorem~\ref{thm:main} \\
+$(B,C)$ & a split of $A$ & Definition~\ref{def:split} \\
+$\max A$ & the largest element of $A$ & Theorem~\ref{thm:main} \\
+$m$ & a bound on the gap & Lemma~\ref{lem:step} \\
+$\mathbb{N}$ & the positive integers & Section~\ref{sec:prelim} \\
+\end{tabular}
+
+\begin{thebibliography}{9}
+\bibitem{graham} R. L. Graham, Bounds on multiprocessing timing anomalies, SIAM J. Appl. Math. 17 (1969), 416--429.
+\bibitem{karp} R. M. Karp, Reducibility among combinatorial problems, in Complexity of Computer Computations, Plenum, New York, 1972, 85--103.
+\bibitem{spencer} J. Spencer, Six standard deviations suffice, Trans. Amer. Math. Soc. 289 (1985), 679--706.
+\end{thebibliography}
+\end{document}
